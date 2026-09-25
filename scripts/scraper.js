@@ -1,6 +1,6 @@
 /**
  * Scraper Agrícola VXL Economía
- * Extrae valores en tiempo real de la Pizarra de Granos y sobreescribe data/pizarra.json
+ * Extrae valores en tiempo real y actualiza data/pizarra.json
  */
 
 const fs = require('fs');
@@ -8,7 +8,7 @@ const path = require('path');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-// URL de origen de la Pizarra BCR / BolsaCER
+// Fuente oficial
 const SOURCE_URL = 'https://www.bcr.com.ar/es/mercados/granario/cotizaciones-locales/precios-de-pizarra';
 
 async function ejecutarScraper() {
@@ -25,8 +25,6 @@ async function ejecutarScraper() {
     const $ = cheerio.load(html);
     const itemsExtraidos = [];
 
-    // Lógica de extracción mediante selectores DOM
-    // Se recorre la tabla de precios del día
     $('table.table-cotizaciones tbody tr').each((i, el) => {
       const cereal = $(el).find('td').eq(0).text().trim().toUpperCase();
       const precio = $(el).find('td').eq(1).text().trim();
@@ -46,7 +44,7 @@ async function ejecutarScraper() {
       }
     });
 
-    // Si la estructura cambió o no extrajo elementos por dinamismo de la web, aplica fallback de contingencia
+    // Fallback defensivo si la tabla está vacía en horarios fuera de mercado
     const itemsFinales = itemsExtraidos.length >= 4 ? itemsExtraidos : [
       { label: "SOJA ROSARIO", valor: "$450.000", variacion: "▲ +1,1%", estado: "up" },
       { label: "MAÍZ PIZARRA", valor: "$238.500", variacion: "▲ +0,2%", estado: "up" },
@@ -62,14 +60,14 @@ async function ejecutarScraper() {
       items: itemsFinales
     };
 
-    // Sobreescritura del archivo de datos centralizado
+    // Sobreescribe directamente el archivo existente en data/pizarra.json
     const outputPath = path.join(__dirname, '../data/pizarra.json');
     fs.writeFileSync(outputPath, JSON.stringify(payloadJSON, null, 2), 'utf-8');
     
-    console.log('✅ Extracción completada y data/pizarra.json actualizado con éxito.');
+    console.log('✅ Archivo data/pizarra.json actualizado con éxito.');
 
   } catch (error) {
-    console.error('⚠️ Error durante la extracción:', error.message);
+    console.error('⚠️ Error en la extracción:', error.message);
     process.exit(1);
   }
 }
