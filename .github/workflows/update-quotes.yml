@@ -2,26 +2,29 @@ name: Actualizador de Cotizaciones VXL Economía
 
 on:
   schedule:
-    # Se ejecuta cada 1 minuto
-    - cron: '* * * * *'
-  workflow_dispatch: # Permite ejecución manual desde GitHub UI
+    - cron: '* * * * *' # Ejecución cada 1 minuto
+  workflow_dispatch:
+
+# PERMISO OBLIGATORIO PARA EVITAR EL EXIT CODE 128 (PERMITIR PUSH EN EL REPO)
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repositorio
-        uses: actions/checkout@v3
+      - name: Checkout del Repositorio
+        uses: actions/checkout@v4 # Actualizado a v4 para corregir warning de Node.js
 
       - name: Configurar Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4 # Actualizado a v4
         with:
-          node-version: '18'
+          node-version: '20'
 
-      - name: Ejecutar script de cotizaciones
+      - name: Ejecutar Script de Actualización
         run: node ./scripts/update-quotes.js
 
-      - name: Commit y Push del JSON actualizado a /data/quotes.json
+      - name: Commit y Push a GitHub
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
