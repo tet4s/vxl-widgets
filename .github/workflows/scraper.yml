@@ -1,0 +1,37 @@
+name: Executar Scraper de Cotizaciones
+
+on:
+  schedule:
+    # Se ejecuta cada 30 minutos de Lunes a Viernes entre las 09:00 y las 18:00 UTC
+    - cron: '*/30 12-21 * * 1-5'
+  workflow_dispatch: # Permite ejecución manual desde GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del Repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar Dependencias
+        run: |
+          npm init -y
+          npm install axios cheerio
+
+      - name: Ejecutar Script Scraper
+        run: node scripts/scraper.js
+
+      - name: Commit y Push de Datos Actualizados
+        run: |
+          git config --global user.name 'vxl-bot'
+          git config --global user.email 'bot@vxl.com.ar'
+          git add data/pizarra.json
+          git status
+          git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de cotizaciones [skip ci]"
+          git push
