@@ -2,11 +2,10 @@ name: Executar Scraper Agrícola en Tiempo Real
 
 on:
   schedule:
-    # Se ejecuta cada 30 minutos de Lunes a Viernes entre 12:00 y 21:00 UTC
+    # Se ejecuta cada 30 minutos de Lunes a Viernes de 12:00 a 21:00 UTC (09:00 a 18:00 hora Argentina)
     - cron: '*/30 12-21 * * 1-5'
-  workflow_dispatch: # Disparo manual desde la pestaña Actions
+  workflow_dispatch: # Disparo manual desde GitHub Actions
 
-# Permisos explícitos de escritura para que el bot pueda hacer push
 permissions:
   contents: write
 
@@ -18,10 +17,10 @@ jobs:
       - name: Checkout del Repositorio
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js (v20)
+      - name: Configurar Node.js (v24)
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Instalar Dependencias
         run: |
@@ -36,5 +35,5 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add data/pizarra.json
-          git diff-index --quiet HEAD || git commit -m "chore(data): actualización en vivo [skip ci]"
+          git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de datos reales [skip ci]"
           git push
