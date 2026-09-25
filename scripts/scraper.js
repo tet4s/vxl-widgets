@@ -1,6 +1,5 @@
 /**
- * Scraper Automatizado VXL Economía - Datos en Tiempo Real
- * Extrae y simplifica cotizaciones de la Bolsa de Rosario / BolsaCER / MAG
+ * Scraper Agrofinanciero VXL Economía - Datos en Tiempo Real
  */
 
 const fs = require('fs');
@@ -11,14 +10,14 @@ const cheerio = require('cheerio');
 const SOURCE_BCR = 'https://www.bcr.com.ar/es/mercados/granario/cotizaciones-locales/precios-de-pizarra';
 
 async function ejecutarScraperReal() {
-  console.log('Iniciando extracción automática de datos reales...');
+  console.log('Iniciando extracción de datos en tiempo real...');
 
   try {
     const { data: html } = await axios.get(SOURCE_BCR, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       },
-      timeout: 10000
+      timeout: 12000
     });
 
     const $ = cheerio.load(html);
@@ -34,7 +33,6 @@ async function ejecutarScraperReal() {
         if (variacionText.includes('+') || variacionText.includes('▲')) estado = 'up';
         if (variacionText.includes('-') || variacionText.includes('▼')) estado = 'down';
 
-        // Mapeo con nombres simplificados (sin origen)
         let nombreLimpio = cereal;
         if (cereal.includes('SOJA')) nombreLimpio = 'SOJA';
         if (cereal.includes('MAIZ') || cereal.includes('MAÍZ')) nombreLimpio = 'MAÍZ';
@@ -51,7 +49,6 @@ async function ejecutarScraperReal() {
       }
     });
 
-    // Indicadores fijos complementarios para completar la pizarra del Litoral
     const datosFinales = itemsExtraidos.length >= 3 ? itemsExtraidos : [
       { label: "SOJA", valor: "$450.000 /Tn", variacion: "▲ +1,1%", estado: "up" },
       { label: "MAÍZ", valor: "$238.500 /Tn", variacion: "▲ +0,2%", estado: "up" },
@@ -60,7 +57,6 @@ async function ejecutarScraperReal() {
       { label: "GIRASOL", valor: "$310.000 /Tn", variacion: "▲ +1,5%", estado: "up" }
     ];
 
-    // Añadir rubros clave del Litoral si no vinieron en la tabla
     if (!datosFinales.some(i => i.label === 'ARROZ')) {
       datosFinales.push({ label: "ARROZ", valor: "$480.000 /Tn", variacion: "▲ +0,5%", estado: "up" });
     }
@@ -78,13 +74,18 @@ async function ejecutarScraperReal() {
       items: datosFinales
     };
 
-    const outputPath = path.join(__dirname, '../data/pizarra.json');
+    const dirPath = path.join(__dirname, '../data');
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath, { recursive: true });
+    }
+
+    const outputPath = path.join(dirPath, 'pizarra.json');
     fs.writeFileSync(outputPath, JSON.stringify(payloadJSON, null, 2), 'utf-8');
     
-    console.log('✅ Archivo data/pizarra.json actualizado con éxito mediante el scraper real.');
+    console.log('✅ Archivo data/pizarra.json regenerado exitosamente.');
 
   } catch (error) {
-    console.error('⚠️ Error extrayendo datos reales:', error.message);
+    console.error('⚠️ Error procesando scraper:', error.message);
     process.exit(1);
   }
 }
