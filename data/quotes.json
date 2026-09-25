@@ -1,6 +1,8 @@
 {
-  "last_updated": "2026-09-25T23:10:16.468Z",
-  "timestamp_epoch": 1790377816,
+  "last_updated": "2026-09-25T23:42:29.186Z",
+  "timestamp_epoch": 1790379749,
+  "status": "ok",
+  "refresh_interval_minutes": 1,
   "dolares": [
     {
       "moneda": "USD",
@@ -65,42 +67,54 @@
       "val": "1.845.200 pts",
       "var": "▲ +2,10%",
       "class": "up",
-      "volume": 150000
+      "volume_ars": 5200000000,
+      "slot": 1,
+      "categoria": "Índice General"
     },
     {
       "label": "YPF (ADR)",
       "val": "USD 24,50",
       "var": "▲ +3,45%",
       "class": "up",
-      "volume": 120000
+      "volume_ars": 4100000000,
+      "slot": 2,
+      "categoria": "Acción Líder #1 Volumen"
     },
     {
       "label": "GRP FIN GALICIA",
       "val": "USD 31,20",
       "var": "▼ -0,80%",
       "class": "down",
-      "volume": 98000
+      "volume_ars": 3800000000,
+      "slot": 3,
+      "categoria": "Acción Líder #2 Volumen"
     },
     {
       "label": "AL30 (BONO)",
       "val": "USD 58,90",
       "var": "▼ -0,25%",
       "class": "down",
-      "volume": 85000
+      "volume_ars": 4500000000,
+      "slot": 4,
+      "categoria": "Bono #1 Liquidez"
+    },
+    {
+      "label": "TXAR (ACERO STFE)",
+      "val": "$665,50",
+      "var": "▲ +0,80%",
+      "class": "up",
+      "volume_ars": 2100000000,
+      "slot": 5,
+      "categoria": "Litoral #1 Volumen"
     },
     {
       "label": "CRESUD (AGRO)",
       "val": "$1.280,00",
       "var": "▲ +1,85%",
       "class": "up",
-      "volume": 45000
-    },
-    {
-      "label": "MOLINOS AGRO",
-      "val": "$4.520,00",
-      "var": "▲ +0,90%",
-      "class": "up",
-      "volume": 32000
+      "volume_ars": 1800000000,
+      "slot": 6,
+      "categoria": "Litoral #2 Volumen"
     }
   ]
 }
