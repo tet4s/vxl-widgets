@@ -2,9 +2,13 @@ name: Executar Scraper Agrícola en Tiempo Real
 
 on:
   schedule:
-    # Se ejecuta cada 30 minutos de Lunes a Viernes entre 12:00 y 21:00 UTC (09:00 a 18:00 Argentina)
+    # Se ejecuta cada 30 minutos de Lunes a Viernes entre 12:00 y 21:00 UTC
     - cron: '*/30 12-21 * * 1-5'
-  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub cuando quieras
+  workflow_dispatch: # Disparo manual desde la pestaña Actions
+
+# Permisos explícitos de escritura para que el bot pueda hacer push
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -12,12 +16,12 @@ jobs:
 
     steps:
       - name: Checkout del Repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Configurar Node.js
-        uses: actions/setup-node@v3
+      - name: Configurar Node.js (v20)
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Instalar Dependencias
         run: |
@@ -29,8 +33,8 @@ jobs:
 
       - name: Commit y Push de Datos Actualizados
         run: |
-          git config --global user.name 'vxl-bot'
-          git config --global user.email 'bot@vxl.com.ar'
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add data/pizarra.json
-          git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de datos reales [skip ci]"
+          git diff-index --quiet HEAD || git commit -m "chore(data): actualización en vivo [skip ci]"
           git push
