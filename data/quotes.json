@@ -1,99 +1,106 @@
 {
-  "last_updated": "2026-09-25T19:46:00Z",
-  "timestamp_epoch": 1790376360,
-  "status": "ok",
-  "refresh_interval_minutes": 1,
+  "last_updated": "2026-09-25T22:57:36.504Z",
+  "timestamp_epoch": 1790377056,
   "dolares": [
     {
+      "moneda": "USD",
       "casa": "oficial",
       "nombre": "Oficial",
-      "compra": 1505.00,
-      "venta": 1545.00,
-      "fechaActualizacion": "2026-09-25T19:40:00.000Z"
+      "compra": 1495,
+      "venta": 1545,
+      "fechaActualizacion": "2026-09-25T18:00:00.000Z"
     },
     {
-      "casa": "tarjeta",
-      "nombre": "Tarjeta",
-      "compra": 1505.00,
-      "venta": 2008.50,
-      "fechaActualizacion": "2026-09-25T19:40:00.000Z"
-    },
-    {
+      "moneda": "USD",
       "casa": "blue",
       "nombre": "Blue",
-      "compra": 1540.00,
-      "venta": 1560.00,
-      "fechaActualizacion": "2026-09-25T19:42:00.000Z"
+      "compra": 1540,
+      "venta": 1560,
+      "fechaActualizacion": "2026-09-25T20:58:00.000Z"
     },
     {
+      "moneda": "USD",
       "casa": "bolsa",
-      "nombre": "Bolsa (MEP)",
-      "compra": 1550.10,
-      "venta": 1553.70,
-      "fechaActualizacion": "2026-09-25T19:45:00.000Z"
+      "nombre": "Bolsa",
+      "compra": 1544.3,
+      "venta": 1557.3,
+      "fechaActualizacion": "2026-09-25T20:58:00.000Z"
     },
     {
+      "moneda": "USD",
       "casa": "contadoconliqui",
-      "nombre": "Contado con Liqui",
-      "compra": 1615.00,
-      "venta": 1620.80,
-      "fechaActualizacion": "2026-09-25T19:45:00.000Z"
+      "nombre": "Contado con liquidación",
+      "compra": 1615.3,
+      "venta": 1616.6,
+      "fechaActualizacion": "2026-09-25T20:58:00.000Z"
+    },
+    {
+      "moneda": "USD",
+      "casa": "mayorista",
+      "nombre": "Mayorista",
+      "compra": 1516.5,
+      "venta": 1525.5,
+      "fechaActualizacion": "2026-09-25T16:06:00.000Z"
+    },
+    {
+      "moneda": "USD",
+      "casa": "cripto",
+      "nombre": "Cripto",
+      "compra": 1609.84,
+      "venta": 1612.51,
+      "fechaActualizacion": "2026-09-25T20:58:00.000Z"
+    },
+    {
+      "moneda": "USD",
+      "casa": "tarjeta",
+      "nombre": "Tarjeta",
+      "compra": 1943.5,
+      "venta": 2008.5,
+      "fechaActualizacion": "2026-09-25T18:00:00.000Z"
     }
   ],
   "bursatil": [
     {
-      "slot": 1,
-      "categoria": "Nacional - Liquidez Top 1",
       "label": "S&P MERVAL",
       "val": "1.845.200 pts",
       "var": "▲ +2,10%",
       "class": "up",
-      "volume_ars": 4500000000
+      "volume": 150000
     },
     {
-      "slot": 2,
-      "categoria": "Nacional - Liquidez Top 2",
       "label": "YPF (ADR)",
       "val": "USD 24,50",
       "var": "▲ +3,45%",
       "class": "up",
-      "volume_ars": 3800000000
+      "volume": 120000
     },
     {
-      "slot": 3,
-      "categoria": "Nacional - Liquidez Top 3",
       "label": "GRP FIN GALICIA",
       "val": "USD 31,20",
       "var": "▼ -0,80%",
       "class": "down",
-      "volume_ars": 3100000000
+      "volume": 98000
     },
     {
-      "slot": 4,
-      "categoria": "Nacional - Liquidez Top 4",
       "label": "AL30 (BONO)",
       "val": "USD 58,90",
       "var": "▼ -0,25%",
       "class": "down",
-      "volume_ars": 2900000000
+      "volume": 85000
     },
     {
-      "slot": 5,
-      "categoria": "Litoral Agro - Top 1",
       "label": "CRESUD (AGRO)",
       "val": "$1.280,00",
       "var": "▲ +1,85%",
       "class": "up",
-      "volume_ars": 1200000000
+      "volume": 45000
     },
     {
-      "slot": 6,
-      "categoria": "Litoral Agro - Top 2",
       "label": "MOLINOS AGRO",
       "val": "$4.520,00",
       "var": "▲ +0,90%",
       "class": "up",
-      "volume_ars": 950000000
+      "volume": 32000
     }
   ]
 }
