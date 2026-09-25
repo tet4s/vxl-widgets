@@ -1,10 +1,10 @@
-name: Executar Scraper de Cotizaciones
+name: Executar Scraper Agrícola en Tiempo Real
 
 on:
   schedule:
-    # Se ejecuta cada 30 minutos de Lunes a Viernes entre las 09:00 y las 18:00 UTC
+    # Se ejecuta cada 30 minutos de Lunes a Viernes entre 12:00 y 21:00 UTC (09:00 a 18:00 Argentina)
     - cron: '*/30 12-21 * * 1-5'
-  workflow_dispatch: # Permite ejecución manual desde GitHub
+  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub cuando quieras
 
 jobs:
   build:
@@ -32,6 +32,5 @@ jobs:
           git config --global user.name 'vxl-bot'
           git config --global user.email 'bot@vxl.com.ar'
           git add data/pizarra.json
-          git status
-          git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de cotizaciones [skip ci]"
+          git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de datos reales [skip ci]"
           git push
