@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-09-25T00:00:00Z",
+  "fuente": "Cámara Arbitral de Cereales / BolsaCER / SENASA",
+  "items": [
+    { "label": "SOJA ROSARIO", "valor": "$449.500", "variacion": "▲ +1,2%", "estado": "up" },
+    { "label": "MAÍZ PIZARRA", "valor": "$238.000", "variacion": "▼ -0,4%", "estado": "down" },
+    { "label": "TRIGO CÁMARA", "valor": "$264.000", "variacion": "▲ +0,8%", "estado": "up" },
+    { "label": "SORGO LITORAL", "valor": "$225.000", "variacion": "= 0,00%", "estado": "neutral" },
+    { "label": "CALADO HIDROVÍA", "valor": "32.5 ft", "variacion": "Pto. Rosario", "estado": "up" },
+    { "label": "CAJÓN DE HUEVOS", "valor": "$30.500", "variacion": "▲ +2,1%", "estado": "up" },
+    { "label": "KG DE POLLO", "valor": "$1.600", "variacion": "= 0,00%", "estado": "neutral" }
+  ]
+}
