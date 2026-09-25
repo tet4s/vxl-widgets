@@ -1,0 +1,29 @@
+name: Actualizador de Cotizaciones VXL Economía
+
+on:
+  schedule:
+    # Se ejecuta cada 1 minuto
+    - cron: '* * * * *'
+  workflow_dispatch: # Permite ejecución manual desde GitHub UI
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Ejecutar script de cotizaciones
+        run: node ./scripts/update-quotes.js
+
+      - name: Commit y Push del JSON actualizado a /data/quotes.json
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add ./data/quotes.json
+          git diff-index --quiet HEAD || (git commit -m 'Auto-update: cotizaciones cada 1 min [skip ci]' && git push)
