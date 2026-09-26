@@ -1,11 +1,9 @@
 // /scripts/update-bolsillo.js
-// Script Node.js que procesa alertas económicas de bolsillo para el Litoral (ejecutado por GitHub Actions)
 const fs = require('fs');
 const path = require('path');
 
 async function processBolsilloData() {
   try {
-    // Simulación estructurada de comunicados oficiales y medidas de impacto cotidiano en Santa Fe y Entre Ríos
     const payload = {
       last_updated: new Date().toISOString(),
       timestamp_epoch: Math.floor(Date.now() / 1000),
@@ -42,7 +40,7 @@ async function processBolsilloData() {
     }
 
     fs.writeFileSync(path.join(outputDir, 'bolsillo.json'), JSON.stringify(payload, null, 2));
-    console.log('[OK] /data/bolsillo.json actualizado exitosamente para la gente de a pie.');
+    console.log('[OK] /data/bolsillo.json actualizado con éxito.');
   } catch (error) {
     console.error('[ERROR] Fallo al procesar economía de bolsillo:', error);
     process.exit(1);
