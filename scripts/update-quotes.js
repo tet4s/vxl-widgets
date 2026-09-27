@@ -8,7 +8,13 @@ async function processMarketData() {
     // 1. Obtención de cotizaciones cambiarias en vivo (DolarAPI)
     const dolarRes = await fetch('https://dolarapi.com/v1/dolares');
     if (!dolarRes.ok) throw new Error('Error al consultar DolarAPI');
-    const dolares = await dolarRes.json();
+    const dolaresRaw = await dolarRes.json();
+
+    // Mapeo defensivo: se garantiza que cada objeto en 'dolares' contenga el campo 'variacion'
+    const dolares = dolaresRaw.map(d => ({
+      ...d,
+      variacion: typeof d.variacion === 'number' ? d.variacion : 0
+    }));
 
     // 2. UNIVERSO COMPLETO Y EXTENDIDO DE ACCIONES LÍDERES NACIONALES
     const apiAccionesLideresCompleto = [
