@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-27T13:32:58.800Z",
-  "timestamp_epoch": 1790515978,
+  "last_updated": "2026-09-27T17:30:38.934Z",
+  "timestamp_epoch": 1790530238,
   "timeframe": "1h",
   "status": "ok",
   "dolares": [
@@ -19,7 +19,7 @@
       "nombre": "Blue",
       "compra": 1540,
       "venta": 1560,
-      "fechaActualizacion": "2026-09-27T11:57:00.000Z",
+      "fechaActualizacion": "2026-09-27T14:57:00.000Z",
       "variacion": 0
     },
     {
@@ -28,7 +28,7 @@
       "nombre": "Bolsa",
       "compra": 1544.3,
       "venta": 1557.3,
-      "fechaActualizacion": "2026-09-27T11:57:00.000Z",
+      "fechaActualizacion": "2026-09-27T14:57:00.000Z",
       "variacion": 0
     },
     {
@@ -37,7 +37,7 @@
       "nombre": "Contado con liquidación",
       "compra": 1615.3,
       "venta": 1616.6,
-      "fechaActualizacion": "2026-09-27T11:57:00.000Z",
+      "fechaActualizacion": "2026-09-27T14:57:00.000Z",
       "variacion": 0
     },
     {
@@ -53,9 +53,9 @@
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1611.4,
-      "venta": 1614.85,
-      "fechaActualizacion": "2026-09-27T11:57:00.000Z",
+      "compra": 1608.41,
+      "venta": 1612.24,
+      "fechaActualizacion": "2026-09-27T14:57:00.000Z",
       "variacion": 0
     },
     {
@@ -71,48 +71,105 @@
   "bursatil": [
     {
       "label": "S&P MERVAL",
-      "val": 1845200,
-      "variacion": 2.1,
-      "volume_ars": 5000000000,
-      "trend": [],
+      "val": "1.845.200 pts",
+      "var": "▲ +10,2%",
+      "class": "up",
+      "volume_ars": 5200000000,
+      "trend": [
+        1810000,
+        1825000,
+        1830000,
+        1838000,
+        1842000,
+        1845200
+      ],
       "slot": 1,
       "categoria": "Índice General"
     },
     {
       "label": "YPF",
-      "val": 24.5,
-      "variacion": 3.45,
+      "val": "USD 24,50",
+      "var": "▲ +3,45%",
+      "class": "up",
+      "volume_ars": 4100000000,
+      "trend": [
+        23.5,
+        23.8,
+        24.1,
+        23.9,
+        24.2,
+        24.5
+      ],
       "slot": 2,
       "categoria": "Acción #1 Volumen"
     },
     {
-      "label": "GALICIA",
-      "val": 31.2,
-      "variacion": -0.8,
+      "label": "GRP FIN GALICIA",
+      "val": "USD 31,20",
+      "var": "▼ -0,80%",
+      "class": "down",
+      "volume_ars": 3800000000,
+      "trend": [
+        31.8,
+        31.5,
+        31.6,
+        31.4,
+        31.3,
+        31.2
+      ],
       "slot": 3,
       "categoria": "Acción #2 Volumen"
     },
     {
       "label": "AL30",
-      "val": 58.9,
-      "variacion": -0.25,
+      "val": "USD 58,90",
+      "var": "▼ -0,25%",
+      "class": "down",
+      "volume_ars": 4500000000,
+      "trend": [
+        59.2,
+        59.1,
+        59,
+        58.95,
+        58.92,
+        58.9
+      ],
       "slot": 4,
       "categoria": "Bono #1 Liquidez"
     },
     {
-      "label": "CRESUD",
-      "val": 1280,
-      "variacion": 1.85,
+      "label": "TXAR",
+      "val": "$665,50",
+      "var": "▲ +0,80%",
+      "class": "up",
+      "volume_ars": 2100000000,
+      "trend": [
+        658,
+        660,
+        662,
+        661,
+        664,
+        665.5
+      ],
       "slot": 5,
       "categoria": "Litoral #1 Volumen"
     },
     {
-      "label": "MOLINOS AGRO",
-      "val": 4520,
-      "variacion": 0.9,
+      "label": "CRESUD",
+      "val": "$1.280,00",
+      "var": "▲ +1,85%",
+      "class": "up",
+      "volume_ars": 1800000000,
+      "trend": [
+        1250,
+        1260,
+        1270,
+        1265,
+        1275,
+        1280
+      ],
       "slot": 6,
       "categoria": "Litoral #2 Volumen"
     }
-  ],
-  "universo_litoral_completo": []
+  ]
 }
