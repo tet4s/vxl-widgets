@@ -1,22 +1,46 @@
 // /scripts/update-quotes.js
-// Script Node.js ejecutado por GitHub Actions cada 1 minuto (Actualización sin recortar universos)
 const fs = require('fs');
 const path = require('path');
 
 async function processMarketData() {
   try {
-    // 1. Obtención de cotizaciones cambiarias en vivo (DolarAPI)
+    // 1. Cotizaciones de Dólares (DolarAPI)
     const dolarRes = await fetch('https://dolarapi.com/v1/dolares');
     if (!dolarRes.ok) throw new Error('Error al consultar DolarAPI');
     const dolaresRaw = await dolarRes.json();
 
-    // Mapeo defensivo: se garantiza que cada objeto en 'dolares' contenga el campo 'variacion'
+    // 2. OBTENCIÓN REAL DEL RIESGO PAÍS (Sin hardcodear)
+    let riesgoPaisObj = null;
+    try {
+      const riesgoRes = await fetch('https://dolarapi.com/v1/ambitos/riesgo-pais');
+      if (riesgoRes.ok) {
+        const riesgoData = await riesgoRes.json();
+        // Construimos el objeto dinámico con el valor posta de la API
+        riesgoPaisObj = {
+          casa: "riesgopais",
+          nombre: "Riesgo País",
+          compra: null,
+          venta: riesgoData.valor, // Ej: 1420
+          variacion: riesgoData.variacion || 0,
+          fechaActualizacion: riesgoData.fecha
+        };
+      }
+    } catch (e) {
+      console.warn('No se pudo obtener el Riesgo País en vivo, omitiendo...');
+    }
+
+    // Mapeo defensivo de dólares
     const dolares = dolaresRaw.map(d => ({
       ...d,
       variacion: typeof d.variacion === 'number' ? d.variacion : 0
     }));
 
-    // 2. UNIVERSO COMPLETO Y EXTENDIDO DE ACCIONES LÍDERES NACIONALES
+    // Si obtuvimos el Riesgo País de la API, lo inyectamos al listado de dólares
+    if (riesgoPaisObj) {
+      dolares.push(riesgoPaisObj);
+    }
+
+    // 3. UNIVERSO DE ACCIONES LÍDERES
     const apiAccionesLideresCompleto = [
       { label: 'YPF', val: 'USD 24,50', var: '▲ +3,45%', class: 'up', volume_ars: 4100000000, trend: [23.5, 23.8, 24.1, 23.9, 24.2, 24.5] },
       { label: 'GRP FIN GALICIA', val: 'USD 31,20', var: '▼ -0,80%', class: 'down', volume_ars: 3800000000, trend: [31.8, 31.5, 31.6, 31.4, 31.3, 31.2] },
@@ -26,7 +50,7 @@ async function processMarketData() {
       { label: 'TELECOM ARG', val: 'USD 6,80', var: '▼ -1,20%', class: 'down', volume_ars: 1200000000, trend: [6.9, 6.88, 6.85, 6.82, 6.81, 6.8] }
     ];
 
-    // 3. UNIVERSO COMPLETO Y EXTENDIDO DE BONOS SOBERANOS
+    // 4. UNIVERSO DE BONOS SOBERANOS
     const apiBonosCompleto = [
       { label: 'AL30', val: 'USD 58,90', var: '▼ -0,25%', class: 'down', volume_ars: 4500000000, trend: [59.2, 59.1, 59.0, 58.95, 58.92, 58.9] },
       { label: 'GD30', val: 'USD 62,10', var: '▲ +0,40%', class: 'up', volume_ars: 3100000000, trend: [61.5, 61.7, 61.8, 61.9, 62.0, 62.1] },
@@ -38,7 +62,7 @@ async function processMarketData() {
       { label: 'S&P MERVAL', val: '1.845.200 pts', var: '▲ +10,2%', class: 'up', volume_ars: 5200000000, trend: [1810000, 1825000, 1830000, 1838000, 1842000, 1845200] }
     ];
 
-    // 4. UNIVERSO COMPLETO Y EXTENDIDO DE EMPRESAS COTIZANTES DEL LITORAL (Sin paréntesis)
+    // 5. EMPRESAS DEL LITORAL
     const candidatosRegionalesLitoral = [
       { label: 'TXAR', val: '$665,50', var: '▲ +0,80%', class: 'up', volume_ars: 2100000000, trend: [658, 660, 662, 661, 664, 665.5] },
       { label: 'CRESUD', val: '$1.280,00', var: '▲ +1,85%', class: 'up', volume_ars: 1800000000, trend: [1250, 1260, 1270, 1265, 1275, 1280] },
@@ -49,7 +73,7 @@ async function processMarketData() {
       { label: 'SAN MIGUEL', val: '$1.150,00', var: '▲ +0,30%', class: 'up', volume_ars: 190000000, trend: [1130, 1140, 1145, 1142, 1148, 1150] }
     ];
 
-    // 5. SELECCIÓN AUTOMÁTICA POR MAYOR VOLUMEN OPERADO
+    // Selección por volumen
     const slot1Indice = apiIndiceGeneral[0];
     const top2Acciones = apiAccionesLideresCompleto.sort((a, b) => b.volume_ars - a.volume_ars).slice(0, 2);
     const top1Bono = apiBonosCompleto.sort((a, b) => b.volume_ars - a.volume_ars)[0];
@@ -77,7 +101,7 @@ async function processMarketData() {
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
     fs.writeFileSync(path.join(outputDir, 'quotes.json'), JSON.stringify(payload, null, 2));
-    console.log(`[OK] quotes.json actualizado exitosamente preservando todos los universos de control.`);
+    console.log(`[OK] quotes.json actualizado incluyendo Riesgo País en vivo.`);
   } catch (error) {
     console.error('[ERROR] Fallo al procesar cotizaciones:', error);
     process.exit(1);
