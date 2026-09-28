@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-28T15:56:12.632Z",
-  "timestamp_epoch": 1790610972,
+  "last_updated": "2026-09-28T21:35:45.251Z",
+  "timestamp_epoch": 1790631345,
   "timeframe": "1h",
   "status": "ok",
   "dolares": [
@@ -8,9 +8,9 @@
       "moneda": "USD",
       "casa": "oficial",
       "nombre": "Oficial",
-      "compra": 1500,
-      "venta": 1550,
-      "fechaActualizacion": "2026-09-28T12:00:00.000Z",
+      "compra": 1495,
+      "venta": 1545,
+      "fechaActualizacion": "2026-09-28T18:00:00.000Z",
       "variacion": 0
     },
     {
@@ -19,52 +19,52 @@
       "nombre": "Blue",
       "compra": 1545,
       "venta": 1565,
-      "fechaActualizacion": "2026-09-28T14:58:00.000Z",
+      "fechaActualizacion": "2026-09-28T20:58:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "bolsa",
       "nombre": "Bolsa",
-      "compra": 1552.8,
-      "venta": 1554.1,
-      "fechaActualizacion": "2026-09-28T14:58:00.000Z",
+      "compra": 1544,
+      "venta": 1556.5,
+      "fechaActualizacion": "2026-09-28T20:58:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "contadoconliqui",
       "nombre": "Contado con liquidación",
-      "compra": 1625.1,
-      "venta": 1625.8,
-      "fechaActualizacion": "2026-09-28T14:58:00.000Z",
+      "compra": 1618.2,
+      "venta": 1619.6,
+      "fechaActualizacion": "2026-09-28T20:58:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "mayorista",
       "nombre": "Mayorista",
-      "compra": 1521,
-      "venta": 1530,
-      "fechaActualizacion": "2026-09-28T10:24:00.000Z",
+      "compra": 1515.5,
+      "venta": 1524.5,
+      "fechaActualizacion": "2026-09-28T16:17:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1619.29,
-      "venta": 1623.44,
-      "fechaActualizacion": "2026-09-28T14:58:00.000Z",
+      "compra": 1613.38,
+      "venta": 1616.06,
+      "fechaActualizacion": "2026-09-28T20:58:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "tarjeta",
       "nombre": "Tarjeta",
-      "compra": 1950,
-      "venta": 2015,
-      "fechaActualizacion": "2026-09-28T12:00:00.000Z",
+      "compra": 1943.5,
+      "venta": 2008.5,
+      "fechaActualizacion": "2026-09-28T18:00:00.000Z",
       "variacion": 0
     }
   ],
