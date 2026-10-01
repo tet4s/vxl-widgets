@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-01T15:42:31.128Z",
-  "timestamp_epoch": 1790869351,
+  "last_updated": "2026-10-01T20:32:05.611Z",
+  "timestamp_epoch": 1790886725,
   "timeframe": "1h",
   "status": "ok",
   "dolares": [
@@ -10,7 +10,7 @@
       "nombre": "Oficial",
       "compra": 1495,
       "venta": 1545,
-      "fechaActualizacion": "2026-10-01T12:00:00.000Z",
+      "fechaActualizacion": "2026-10-01T17:00:00.000Z",
       "variacion": 0
     },
     {
@@ -19,25 +19,25 @@
       "nombre": "Blue",
       "compra": 1535,
       "venta": 1555,
-      "fechaActualizacion": "2026-10-01T14:54:00.000Z",
+      "fechaActualizacion": "2026-10-01T20:01:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "bolsa",
       "nombre": "Bolsa",
-      "compra": 1547.2,
-      "venta": 1548.9,
-      "fechaActualizacion": "2026-10-01T14:54:00.000Z",
+      "compra": 1547,
+      "venta": 1556,
+      "fechaActualizacion": "2026-10-01T20:01:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "contadoconliqui",
       "nombre": "Contado con liquidación",
-      "compra": 1616.4,
-      "venta": 1617.7,
-      "fechaActualizacion": "2026-10-01T14:54:00.000Z",
+      "compra": 1623.3,
+      "venta": 1624.8,
+      "fechaActualizacion": "2026-10-01T20:01:00.000Z",
       "variacion": 0
     },
     {
@@ -46,16 +46,16 @@
       "nombre": "Mayorista",
       "compra": 1514,
       "venta": 1523,
-      "fechaActualizacion": "2026-10-01T11:19:00.000Z",
+      "fechaActualizacion": "2026-10-01T14:08:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1611.76,
-      "venta": 1613.96,
-      "fechaActualizacion": "2026-10-01T14:54:00.000Z",
+      "compra": 1609.48,
+      "venta": 1617.4,
+      "fechaActualizacion": "2026-10-01T20:01:00.000Z",
       "variacion": 0
     },
     {
@@ -64,7 +64,7 @@
       "nombre": "Tarjeta",
       "compra": 1943.5,
       "venta": 2008.5,
-      "fechaActualizacion": "2026-10-01T12:00:00.000Z",
+      "fechaActualizacion": "2026-10-01T17:00:00.000Z",
       "variacion": 0
     }
   ],
