@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-02T11:16:38.280Z",
-  "timestamp_epoch": 1790939798,
+  "last_updated": "2026-10-02T16:41:09.957Z",
+  "timestamp_epoch": 1790959269,
   "timeframe": "1h",
   "status": "ok",
   "dolares": [
@@ -10,34 +10,34 @@
       "nombre": "Oficial",
       "compra": 1495,
       "venta": 1545,
-      "fechaActualizacion": "2026-10-01T18:00:00.000Z",
+      "fechaActualizacion": "2026-10-02T13:00:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "blue",
       "nombre": "Blue",
-      "compra": 1535,
-      "venta": 1555,
-      "fechaActualizacion": "2026-10-01T20:56:00.000Z",
+      "compra": 1540,
+      "venta": 1560,
+      "fechaActualizacion": "2026-10-02T15:56:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "bolsa",
       "nombre": "Bolsa",
-      "compra": 1547,
-      "venta": 1556,
-      "fechaActualizacion": "2026-10-01T20:56:00.000Z",
+      "compra": 1550.1,
+      "venta": 1553.2,
+      "fechaActualizacion": "2026-10-02T15:56:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "contadoconliqui",
       "nombre": "Contado con liquidación",
-      "compra": 1623.3,
-      "venta": 1624.8,
-      "fechaActualizacion": "2026-10-01T20:56:00.000Z",
+      "compra": 1621.3,
+      "venta": 1621.8,
+      "fechaActualizacion": "2026-10-02T15:56:00.000Z",
       "variacion": 0
     },
     {
@@ -46,16 +46,16 @@
       "nombre": "Mayorista",
       "compra": 1514,
       "venta": 1523,
-      "fechaActualizacion": "2026-10-01T14:08:00.000Z",
+      "fechaActualizacion": "2026-10-02T11:31:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1613.51,
-      "venta": 1616.29,
-      "fechaActualizacion": "2026-10-01T20:56:00.000Z",
+      "compra": 1617.85,
+      "venta": 1620.91,
+      "fechaActualizacion": "2026-10-02T15:56:00.000Z",
       "variacion": 0
     },
     {
@@ -64,7 +64,7 @@
       "nombre": "Tarjeta",
       "compra": 1943.5,
       "venta": 2008.5,
-      "fechaActualizacion": "2026-10-01T18:00:00.000Z",
+      "fechaActualizacion": "2026-10-02T13:00:00.000Z",
       "variacion": 0
     }
   ],
