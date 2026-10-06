@@ -1,0 +1,6 @@
+# Dependencias locales (se instalan en cada run de Actions)
+node_modules/
+
+# Credenciales — NUNCA en este repo público
+.env
+.env.*

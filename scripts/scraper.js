@@ -7,7 +7,64 @@ const path = require('path');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const SOURCE_BCR = 'https://www.bcr.com.ar/es/mercados/granario/cotizaciones-locales/precios-de-pizarra';
+// Fuente: BCR rediseñó el sitio (2026). La URL vieja de "precios-de-pizarra" ahora
+// redirige a una página de búsqueda → se apunta directo a la página final "Cotizaciones Locales".
+const SOURCE_BCR = 'https://www.bcr.com.ar/es/mercados/mercado-de-granos/cotizaciones/cotizaciones-locales-2';
+
+// Extrae precio de la tabla nueva BCR. Formatos reales vistos (10/06/2026):
+//   "u$s 220,000"  → USD, coma decimal
+//   "555.000,00"   → ARS, punto = miles, coma = decimal
+//   "S/C"          → sin cotización → null
+function parsePrecio(txt) {
+  const t = (txt || '').trim();
+  if (!t || /^s\/c$/i.test(t)) return null;
+
+  const usd = t.match(/^u\$s\s*(\d+(?:,\d+)?)$/i);
+  if (usd) {
+    const v = parseFloat(usd[1].replace(',', '.'));
+    if (!v) return null;
+    return { moneda: 'USD', valor: v, display: `u$s ${v.toLocaleString('es-AR', { maximumFractionDigits: 2 })} /Tn` };
+  }
+
+  const ars = t.match(/^[$]?\s*(\d{1,3}(?:\.\d{3})+(?:,\d{1,2})?|\d+,\d{2})$/);
+  if (ars) {
+    const v = parseFloat(ars[1].replace(/\./g, '').replace(',', '.'));
+    if (!v) return null;
+    return { moneda: 'ARS', valor: v, display: `$${v.toLocaleString('es-AR', { maximumFractionDigits: 0 })} /Tn` };
+  }
+
+  return null;
+}
+
+// Variación REAL: compara contra el último pizarra.json commiteado (solo si coincide la moneda).
+function calcularVariaciones(items, outputPath) {
+  const resultado = {};
+  try {
+    const previo = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
+    const mapa = {};
+    (previo.items || []).forEach(i => {
+      if (i.valorNumerico && i.moneda) mapa[i.label] = i;
+    });
+    items.forEach(it => {
+      const ant = mapa[it.label];
+      if (!ant || ant.moneda !== it.moneda || !ant.valorNumerico) return;
+      const pct = ((it.valorNumerico - ant.valorNumerico) / ant.valorNumerico) * 100;
+      const pctRed = Math.round(pct * 100) / 100;
+      if (pctRed === 0) {
+        resultado[it.label] = { variacion: '= 0,00%', estado: 'neutral' };
+      } else {
+        const flecha = pct > 0 ? '▲' : '▼';
+        const signo = pct > 0 ? '+' : '-';
+        const numero = Math.abs(pct).toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        resultado[it.label] = { variacion: `${flecha} ${signo}${numero}%`, estado: pct > 0 ? 'up' : 'down' };
+      }
+    });
+  } catch (e) {
+    // Sin JSON previo: los items quedan con '= n/d'
+  }
+  return resultado;
+}
+
 
 async function ejecutarScraperReal() {
   console.log('Iniciando extracción de datos en tiempo real...');
@@ -21,35 +78,54 @@ async function ejecutarScraperReal() {
     });
 
     const $ = cheerio.load(html);
-    const itemsExtraidos = [];
 
-    $('table.table-cotizaciones tbody tr').each((i, el) => {
-      const cereal = $(el).find('td').eq(0).text().trim().toUpperCase();
-      const precio = $(el).find('td').eq(1).text().trim();
-      const variacionText = $(el).find('td').eq(2).text().trim();
+    // Estructura de la tabla nueva (2026): filas de SECCIÓN con 1 sola celda encabezan
+    // cada grano; filas de DATOS traen 5 celdas: [Destino, Entrega, (vacía), Calidad, Precio].
+    const GRUPOS = ['soja', 'maiz', 'trigo', 'sorgo', 'girasol', 'cebada'];
+    const LABELS = { soja: 'SOJA', maiz: 'MAÍZ', trigo: 'TRIGO', sorgo: 'SORGO', girasol: 'GIRASOL', cebada: 'CEBADA' };
+    const encontrados = {};
+    let grupoActual = null;
 
-      if (['SOJA', 'MAIZ', 'TRIGO', 'SORGO', 'GIRASOL', 'CEBADA'].some(g => cereal.includes(g))) {
-        let estado = 'neutral';
-        if (variacionText.includes('+') || variacionText.includes('▲')) estado = 'up';
-        if (variacionText.includes('-') || variacionText.includes('▼')) estado = 'down';
-
-        let nombreLimpio = cereal;
-        if (cereal.includes('SOJA')) nombreLimpio = 'SOJA';
-        if (cereal.includes('MAIZ') || cereal.includes('MAÍZ')) nombreLimpio = 'MAÍZ';
-        if (cereal.includes('TRIGO')) nombreLimpio = 'TRIGO';
-        if (cereal.includes('SORGO')) nombreLimpio = 'SORGO';
-        if (cereal.includes('GIRASOL')) nombreLimpio = 'GIRASOL';
-
-        itemsExtraidos.push({
-          label: nombreLimpio,
-          valor: precio.startsWith('$') ? precio : `$${precio} /Tn`,
-          variacion: variacionText || '= 0,00%',
-          estado: estado
-        });
+    $('table tr').each((i, el) => {
+      const celdas = $(el).find('td');
+      if (celdas.length === 1) {
+        const txt = celdas.text().trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const key = GRUPOS.find(g => txt.includes(g));
+        grupoActual = key || null;
+        return;
+      }
+      if (celdas.length >= 5 && grupoActual && !encontrados[grupoActual]) {
+        const precio = parsePrecio(celdas.eq(4).text());
+        if (precio) {
+          encontrados[grupoActual] = {
+            label: LABELS[grupoActual],
+            valor: precio.display,
+            moneda: precio.moneda,
+            valorNumerico: precio.valor,
+            variacion: '= n/d',
+            estado: 'neutral'
+          };
+        }
       }
     });
 
-    const datosFinales = itemsExtraidos.length >= 3 ? itemsExtraidos : [
+    // Orden de visualización histórico: SOJA primero
+    const orden = ['SOJA', 'MAÍZ', 'TRIGO', 'SORGO', 'GIRASOL', 'CEBADA'];
+    const itemsExtraidos = Object.values(encontrados)
+      .sort((a, b) => orden.indexOf(a.label) - orden.indexOf(b.label));
+
+    // Rutas de data/ resueltas ANTES (se necesita el JSON previo para la variación)
+    const dirPath = path.join(__dirname, '../data');
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath, { recursive: true });
+    }
+    const outputPath = path.join(dirPath, 'pizarra.json');
+
+    // Variación real contra la corrida anterior (si la moneda coincide)
+    const variaciones = calcularVariaciones(itemsExtraidos, outputPath);
+    const conVariacion = itemsExtraidos.map(it => ({ ...it, ...(variaciones[it.label] || {}) }));
+
+    const datosFinales = conVariacion.length >= 3 ? conVariacion : [
       { label: "SOJA", valor: "$450.000 /Tn", variacion: "▲ +1,1%", estado: "up" },
       { label: "MAÍZ", valor: "$238.500 /Tn", variacion: "▲ +0,2%", estado: "up" },
       { label: "TRIGO", valor: "$264.000 /Tn", variacion: "▲ +0,8%", estado: "up" },
@@ -75,12 +151,7 @@ async function ejecutarScraperReal() {
       items: datosFinales
     };
 
-    const dirPath = path.join(__dirname, '../data');
-    if (!fs.existsSync(dirPath)) {
-      fs.mkdirSync(dirPath, { recursive: true });
-    }
-
-    const outputPath = path.join(dirPath, 'pizarra.json');
+    // (dirPath y outputPath ya se definieron antes de calcular las variaciones)
     fs.writeFileSync(outputPath, JSON.stringify(payloadJSON, null, 2), 'utf-8');
     
     console.log('✅ Archivo data/pizarra.json regenerado exitosamente.');

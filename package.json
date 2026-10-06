@@ -1,0 +1,25 @@
+{
+  "name": "vxl-widgets",
+  "version": "1.0.0",
+  "description": "Widgets y Cotizaciones para VXL Economía",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tet4s/vxl-widgets.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tet4s/vxl-widgets/issues"
+  },
+  "homepage": "https://github.com/tet4s/vxl-widgets#readme",
+  "dependencies": {
+    "axios": "^1.20.0",
+    "cheerio": "^1.2.0"
+  }
+}
