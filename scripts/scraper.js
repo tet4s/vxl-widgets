@@ -9,7 +9,8 @@ const cheerio = require('cheerio');
 
 // Fuente: BCR rediseñó el sitio (2026). La URL vieja de "precios-de-pizarra" ahora
 // redirige a una página de búsqueda → se apunta directo a la página final "Cotizaciones Locales".
-const SOURCE_BCR = 'https://www.bcr.com.ar/es/mercados/mercado-de-granos/cotizaciones/cotizaciones-locales-2';
+// (BCR_URL permite simular fallos en local: BCR_URL=https://example.com node scripts/scraper.js)
+const SOURCE_BCR = process.env.BCR_URL || 'https://www.bcr.com.ar/es/mercados/mercado-de-granos/cotizaciones/cotizaciones-locales-2';
 
 // Extrae precio de la tabla nueva BCR. Formatos reales vistos (10/06/2026):
 //   "u$s 220,000"  → USD, coma decimal
@@ -121,17 +122,19 @@ async function ejecutarScraperReal() {
     }
     const outputPath = path.join(dirPath, 'pizarra.json');
 
+    // SIN FALLBACK HARDCODEADO (decisión 10/06): si la fuente falla, NO se escribe el JSON.
+    // El "fallback" es el último dato capturado, que ya vive commiteado en data/pizarra.json
+    // (y el widget además tiene su propio localStorage). El workflow queda en ROJO a propósito:
+    // es la alarma de que la fuente volvió a cambiar.
+    if (itemsExtraidos.length < 3) {
+      console.error(`❌ Scraping devolvió solo ${itemsExtraidos.length} ítem(s) (<3).`);
+      console.error('   No se escribe pizarra.json: se conserva el último dato capturado.');
+      process.exit(1);
+    }
+
     // Variación real contra la corrida anterior (si la moneda coincide)
     const variaciones = calcularVariaciones(itemsExtraidos, outputPath);
-    const conVariacion = itemsExtraidos.map(it => ({ ...it, ...(variaciones[it.label] || {}) }));
-
-    const datosFinales = conVariacion.length >= 3 ? conVariacion : [
-      { label: "SOJA", valor: "$450.000 /Tn", variacion: "▲ +1,1%", estado: "up" },
-      { label: "MAÍZ", valor: "$238.500 /Tn", variacion: "▲ +0,2%", estado: "up" },
-      { label: "TRIGO", valor: "$264.000 /Tn", variacion: "▲ +0,8%", estado: "up" },
-      { label: "SORGO", valor: "$225.000 /Tn", variacion: "= 0,00%", estado: "neutral" },
-      { label: "GIRASOL", valor: "$310.000 /Tn", variacion: "▲ +1,5%", estado: "up" }
-    ];
+    const datosFinales = itemsExtraidos.map(it => ({ ...it, ...(variaciones[it.label] || {}) }));
 
     if (!datosFinales.some(i => i.label === 'ARROZ')) {
       datosFinales.push({ label: "ARROZ", valor: "$480.000 /Tn", variacion: "▲ +0,5%", estado: "up" });
