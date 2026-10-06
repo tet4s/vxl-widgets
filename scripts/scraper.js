@@ -73,28 +73,41 @@ async function ejecutarScraperReal() {
   try {
     const { data: html } = await axios.get(SOURCE_BCR, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
       },
+      params: { _nocache: Date.now() }, // cache-buster: GitHub Actions recibió variantes cacheadas
       timeout: 12000
     });
 
     const $ = cheerio.load(html);
 
-    // Estructura de la tabla nueva (2026): filas de SECCIÓN con 1 sola celda encabezan
-    // cada grano; filas de DATOS traen 5 celdas: [Destino, Entrega, (vacía), Calidad, Precio].
+    // Estructura de la tabla nueva (2026): filas de SECCIÓN encabezan cada grano
+    // (normalmente 1 celda, pero variantes de caché/anti-bot las traen con más celdas
+    //  o con filas vacías intercaladas → se detecta por el TEXTO de la primera celda
+    //  y NUNCA se resetea el grupo ante filas vacías/desconocidas).
     const GRUPOS = ['soja', 'maiz', 'trigo', 'sorgo', 'girasol', 'cebada'];
     const LABELS = { soja: 'SOJA', maiz: 'MAÍZ', trigo: 'TRIGO', sorgo: 'SORGO', girasol: 'GIRASOL', cebada: 'CEBADA' };
     const encontrados = {};
+    const seccionesVistas = [];
     let grupoActual = null;
+
+    const normalizar = t => t.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
     $('table tr').each((i, el) => {
       const celdas = $(el).find('td');
-      if (celdas.length === 1) {
-        const txt = celdas.text().trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        const key = GRUPOS.find(g => txt.includes(g));
-        grupoActual = key || null;
+      if (celdas.length === 0) return;
+
+      // ¿Es fila de sección? (el nombre del grano está en la 1ª celda, sea cual sea el largo)
+      const primera = normalizar(celdas.eq(0).text());
+      const seccion = GRUPOS.find(g => primera.includes(g));
+      if (seccion) {
+        grupoActual = seccion;
+        seccionesVistas.push(seccion);
         return;
       }
+
+      // Fila de datos: 5 celdas [Destino, Entrega, (vacía), Calidad, Precio]
       if (celdas.length >= 5 && grupoActual && !encontrados[grupoActual]) {
         const precio = parsePrecio(celdas.eq(4).text());
         if (precio) {
@@ -109,6 +122,8 @@ async function ejecutarScraperReal() {
         }
       }
     });
+
+    console.log(`[debug] tr vistos: ${$('table tr').length} | secciones: [${seccionesVistas.join(', ')}]`);
 
     // Orden de visualización histórico: SOJA primero
     const orden = ['SOJA', 'MAÍZ', 'TRIGO', 'SORGO', 'GIRASOL', 'CEBADA'];
