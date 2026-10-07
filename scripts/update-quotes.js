@@ -1,40 +1,162 @@
 // /scripts/update-quotes.js
-// Script Node.js que corre en GitHub Actions cada 1 minuto
+// Script Node.js que corre en GitHub Actions cada minuto
+// Obtiene datos reales de IOL API (acciones, bonos, cotizaciones) con refresco automático del access token
+
 const fs = require('fs');
 const path = require('path');
+const axios = require('axios');
+// Cargar variables de entorno local (.env privado) como fallback para ejecución local
+// GitHub Actions define IOL_ACCESS_TOKEN e IOL_REFRESH_TOKEN en variables de entorno
+require('dotenv').config({ path: path.resolve(__dirname, '../vxl-secrets/.env') });
 
+// ==================== CONFIGURACIÓN ====================
+const IOL_BASE_URL = 'https://api.invertironline.com';
+const IOL_TOKEN_URL = IOL_BASE_URL + '/token';
+const IOL_DATA_URL = IOL_BASE_URL + '/api/v2/titulos/panelCotizaciones';
+
+// Tokens desde variables de entorno (GitHub Actions Secrets o local, con fallback al .env local)
+const IOL_ACCESS_TOKEN = process.env.IOL_ACCESS_TOKEN || '';
+const IOL_REFRESH_TOKEN = process.env.IOL_REFRESH_TOKEN || '';
+
+// Últimos almacenados
+let accessToken = process.env.IOL_ACCESS_TOKEN || '';
+let expiresAt = Date.now() + 14 * 60 * 1000; // 14 min (aguantamiento seguro)
+
+// ==================== FUNCIÓN: REFRESCAR ACCESS TOKEN ====================
+async function refreshAccessToken() {
+  console.log('[IOL] Refresh token solicitado...');
+  
+  try {
+    const response = await axios.post(IOL_TOKEN_URL, new URLSearchParams({
+      refresh_token: IOL_REFRESH_TOKEN,
+      grant_type: 'refresh_token'
+    }).toString(), {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      }
+    });
+
+    const data = response.data;
+    accessToken = data.access_token;
+    expiresAt = Date.now() + (data.expires_in * 1000);
+    
+    // Guardar el nuevo refresh token si viene en la respuesta
+    if (data.refresh_token) {
+      IOL_REFRESH_TOKEN = data.refresh_token;
+      console.log('[IOL] Nuevo refresh token recibido');
+    }
+    
+    console.log('[IOL] Access token renovado exitosamente');
+    return accessToken;
+  } catch (error) {
+    console.error('[IOL] Error al refrescar el access token:', error.message);
+    throw error;
+  }
+}
+
+// ==================== FUNCIÓN: OBTENER ACCESS TOKEN VÁLIDO ====================
+async function getValidAccessToken() {
+  // Si el token no ha expirado aún, usarlo directamente
+  if (accessToken && Date.now() < expiresAt - 60000) {
+    return accessToken;
+  }
+  
+  // Si no hay token o ya venció → refrescar
+  if (!IOL_ACCESS_TOKEN) {
+    throw new Error('No se encontró IOL_ACCESS_TOKEN en variables de entorno');
+  }
+  
+  console.log('[IOL] Access token vencido o próximo a expirar → renovando...');
+  return refreshAccessToken();
+}
+
+// ==================== FUNCIÓN: OBTENER DATOS DE IOL API ====================
+async function fetchIolData(accessToken) {
+  const headers = {
+    'Authorization': 'Bearer ' + accessToken,
+    'Accept': 'application/json'
+  };
+
+  console.log('[IOL] Consultando panel de cotizaciones...');
+  
+  const response = await axios.get(IOL_DATA_URL, { headers });
+  
+  if (response.status !== 200) {
+    throw new Error('Error HTTP ' + response.status + ' al consultar panel de cotizaciones');
+  }
+  
+  const data = response.data;
+  console.log('[IOL] Datos obtenidos:', data);
+  
+  // Transformar el formato de IOL a nuestro formato (bursatil)
+  const bursatilFinal = transformIolDataToUniverse(data);
+  
+  return bursatilFinal;
+}
+
+// ==================== FUNCIÓN: TRANSFORMAR DATOS IOL ====================
+function transformIolDataToUniverse(iolData) {
+  // El formato exacto depende de la respuesta de IOL API
+  // Por defecto, devolvemos un array de objetos con las propiedades básicas
+  if (!iolData || !Array.isArray(iolData.titulos)) {
+    console.warn('[IOL] Formato inesperado, intentando usar datos genéricos');
+    return iolData || [];
+  }
+  
+  // Mapeo simple: titulos → titulo, cotizacion, volumen, dia
+  return iolData.titulos.map(titulo => ({
+    label: titulo.titulo || 'Desconocido',
+    val: titulo.cotizacion || 'Valor',
+    var: titulo.tendencia || 'Pendiente',
+    class: titulo.cambio === 'up' ? 'up' : 'down',
+    volume_ars: titulo.volumen || 0,
+    trend: titulo.dia || [],
+    slot: titulo.slot || 0,
+    categoria: 'Cotización IOL'
+  }));
+}
+
+// ==================== PROCESO PRINCIPAL ====================
 async function processMarketData() {
   try {
-    // 1. OBTENCIÓN DE DÓLARES EN VIVO (DolarAPI)
+    // 1. OBTENER ACCESS TOKEN VÁLIDO (con auto-refresh)
+    const token = await getValidAccessToken();
+    console.log('[IOL] Access token listo, consultando datos...');
+    
+    // 2. CONSULTAR DATOS REALES DE IOL
+    const bursatil = await fetchIolData(token);
+    
+    // 3. OBTENER DÓLARES EN VIVO (DolarAPI) - mantiene la funcionalidad anterior
+    console.log('[IOL] Consultando DolarAPI...');
     const dolarRes = await fetch('https://dolarapi.com/v1/dolares');
     if (!dolarRes.ok) throw new Error('Error al consultar DolarAPI');
     const dolaresRaw = await dolarRes.json();
-
-    // 2. OBTENCIÓN REAL DE RIESGO PAÍS (ArgentinaDatos API)
+    
+    // 4. OBTENER RIESGO PAÍS (ArgentinaDatos) - mantiene la funcionalidad anterior
     let riesgoPaisObj = null;
     try {
       const riesgoRes = await fetch('https://api.argentinadatos.com/v1/finanzas/rendimientos/riesgoPais');
       if (riesgoRes.ok) {
         const riesgoDataArray = await riesgoRes.json();
-        // Tomamos el último registro de la serie temporal de ArgentinaDatos
         const ultimoRiesgo = riesgoDataArray[riesgoDataArray.length - 1];
         const penultimoRiesgo = riesgoDataArray[riesgoDataArray.length - 2] || ultimoRiesgo;
-        
         const difPuntos = ultimoRiesgo.valor - penultimoRiesgo.valor;
 
         riesgoPaisObj = {
-          casa: "riesgopais",
-          nombre: "Riesgo País",
+          casa: 'riesgopais',
+          nombre: 'Riesgo País',
           compra: null,
-          venta: ultimoRiesgo.valor, // Valor real en puntos (ej: 1420)
-          variacion: difPuntos,       // Variación en puntos acumulados
+          venta: ultimoRiesgo.valor,
+          variacion: difPuntos,
           fechaActualizacion: ultimoRiesgo.fecha
         };
       }
     } catch (e) {
-      console.warn('[WARNING] No se pudo sincronizar Riesgo País desde ArgentinaDatos:', e);
+      console.warn('[WARNING] No se pudo sincronizar Riesgo País:', e);
     }
-
+    
+    // 5. CONSTRUIR PAYLOAD FINAL
     const dolares = dolaresRaw.map(d => ({
       ...d,
       variacion: typeof d.variacion === 'number' ? d.variacion : 0
@@ -44,70 +166,56 @@ async function processMarketData() {
       dolares.push(riesgoPaisObj);
     }
 
-    // 3. UNIVERSO DE ACCIONES LÍDERES NACIONALES (Bolsa General)
-    const apiAccionesLideresCompleto = [
-      { label: 'YPF', val: 'USD 24,50', var: '▲ +3,45%', class: 'up', volume_ars: 4100000000, trend: [23.5, 23.8, 24.1, 23.9, 24.2, 24.5] },
-      { label: 'GRP FIN GALICIA', val: 'USD 31,20', var: '▼ -0,80%', class: 'down', volume_ars: 3800000000, trend: [31.8, 31.5, 31.6, 31.4, 31.3, 31.2] },
-      { label: 'BCO MACRO', val: 'USD 48,10', var: '▲ +1,15%', class: 'up', volume_ars: 2900000000, trend: [47.2, 47.5, 47.8, 47.6, 47.9, 48.1] },
-      { label: 'PAMPA ENERGÍA', val: 'USD 52,40', var: '▲ +0,95%', class: 'up', volume_ars: 2400000000, trend: [51.5, 51.8, 52.0, 51.9, 52.2, 52.4] },
-      { label: 'BBVA ARGENTINA', val: 'USD 12,30', var: '▲ +0,10%', class: 'up', volume_ars: 1900000000, trend: [12.1, 12.2, 12.25, 12.2, 12.28, 12.3] },
-      { label: 'TELECOM ARG', val: 'USD 6,80', var: '▼ -1,20%', class: 'down', volume_ars: 1200000000, trend: [6.9, 6.88, 6.85, 6.82, 6.81, 6.8] }
-    ];
-
-    // 4. UNIVERSO DE BONOS SOBERANOS
-    const apiBonosCompleto = [
-      { label: 'AL30', val: 'USD 58,90', var: '▼ -0,25%', class: 'down', volume_ars: 4500000000, trend: [59.2, 59.1, 59.0, 58.95, 58.92, 58.9] },
-      { label: 'GD30', val: 'USD 62,10', var: '▲ +0,40%', class: 'up', volume_ars: 3100000000, trend: [61.5, 61.7, 61.8, 61.9, 62.0, 62.1] },
-      { label: 'AL35', val: 'USD 44,50', var: '▲ +0,15%', class: 'up', volume_ars: 1500000000, trend: [43.0, 43.5, 44.0, 44.2, 44.1, 44.5] },
-      { label: 'AE38', val: 'USD 51,20', var: '▼ -0,50%', class: 'down', volume_ars: 1100000000, trend: [52.0, 51.8, 51.5, 51.4, 51.3, 51.2] }
-    ];
-
-    const apiIndiceGeneral = [
-      { label: 'S&P MERVAL', val: '1.845.200 pts', var: '▲ +10,2%', class: 'up', volume_ars: 5200000000, trend: [1810000, 1825000, 1830000, 1838000, 1842000, 1845200] }
-    ];
-
-    // 5. UNIVERSO COMPLETO Y EXTENDIDO DEL LITORAL
-    const candidatosRegionalesLitoral = [
-      { label: 'TXAR', val: '$665,50', var: '▲ +0,80%', class: 'up', volume_ars: 2100000000, trend: [658, 660, 662, 661, 664, 665.5] },
-      { label: 'CRESUD', val: '$1.280,00', var: '▲ +1,85%', class: 'up', volume_ars: 1800000000, trend: [1250, 1260, 1270, 1265, 1275, 1280] },
-      { label: 'MOLINOS AGRO', val: '$4.520,00', var: '▲ +0,90%', class: 'up', volume_ars: 950000000, trend: [4480, 4490, 4500, 4510, 4515, 4520] },
-      { label: 'CELULOSA', val: '$890,00', var: '▼ -0,45%', class: 'down', volume_ars: 410000000, trend: [870, 880, 885, 895, 888, 890] },
-      { label: 'AGROMETAL', val: '$410,00', var: '▲ +2,10%', class: 'up', volume_ars: 350000000, trend: [395, 400, 405, 402, 408, 410] },
-      { label: 'MORIXE', val: '$320,00', var: '▲ +1,10%', class: 'up', volume_ars: 280000000, trend: [310, 312, 315, 314, 318, 320] },
-      { label: 'SAN MIGUEL', val: '$1.150,00', var: '▲ +0,30%', class: 'up', volume_ars: 190000000, trend: [1130, 1140, 1145, 1142, 1148, 1150] }
-    ];
-
-    // SELECCIÓN AUTOMÁTICA POR MAYOR VOLUMEN
-    const slot1Indice = apiIndiceGeneral[0];
-    const top2Acciones = apiAccionesLideresCompleto.sort((a, b) => b.volume_ars - a.volume_ars).slice(0, 2);
-    const top1Bono = apiBonosCompleto.sort((a, b) => b.volume_ars - a.volume_ars)[0];
-    const top2Litoral = candidatosRegionalesLitoral.sort((a, b) => b.volume_ars - a.volume_ars).slice(0, 2);
-
-    const bursatilFinal = [
-      { ...slot1Indice, slot: 1, categoria: 'Índice General' },
-      { ...top2Acciones[0], slot: 2, categoria: 'Acción #1 Volumen' },
-      { ...top2Acciones[1], slot: 3, categoria: 'Acción #2 Volumen' },
-      { ...top1Bono, slot: 4, categoria: 'Bono #1 Liquidez' },
-      { ...top2Litoral[0], slot: 5, categoria: 'Litoral #1 Volumen' },
-      { ...top2Litoral[1], slot: 6, categoria: 'Litoral #2 Volumen' }
-    ];
-
     const payload = {
       last_updated: new Date().toISOString(),
       timestamp_epoch: Math.floor(Date.now() / 1000),
-      timeframe: "1h",
-      status: "ok",
+      timeframe: '1m', // Actualizado a 1 minuto para datos en tiempo real
+      status: 'ok',
+      source: 'IOL API + DolarAPI + ArgentinaDatos',
       dolares,
-      bursatil: bursatilFinal
+      bursatil: bursatil || []
     };
 
+    // 6. GUARDAR EN data/quotes.json
     const outputDir = path.join(__dirname, '../data');
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
     fs.writeFileSync(path.join(outputDir, 'quotes.json'), JSON.stringify(payload, null, 2));
-    console.log('[OK] quotes.json actualizado con éxito e incluyendo Riesgo País desde ArgentinaDatos.');
+    console.log('[OK] quotes.json actualizado con datos de IOL API, DolarAPI y ArgentinaDatos');
+    console.log('[OK] Bolsa: ' + payload.bursatil.length + ' activos', payload.bursatil.map(b => b.label).join(', '));
+    
   } catch (error) {
-    console.error('[ERROR] Fallo en la ejecución del pipeline:', error);
+    console.error('[ERROR] Fallo en la ejecución del pipeline:', error.message);
+    // Siempre guardar algo, incluso los datos anteriores
+    const outputDir = path.join(__dirname, '../data');
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+    
+    // Solo guardar los datos de dolarapi como fallback
+    try {
+      const dolarRes = await fetch('https://dolarapi.com/v1/dolares');
+      if (dolarRes.ok) {
+        const dolaresRaw = await dolarRes.json();
+        const payload = {
+          last_updated: new Date().toISOString(),
+          timestamp_epoch: Math.floor(Date.now() / 1000),
+          timeframe: '1m',
+          status: 'fallback',
+          source: 'DolarAPIonly',
+          dolares: dolaresRaw.map(d => ({
+            ...d,
+            variacion: typeof d.variacion === 'number' ? d.variacion : 0
+          })),
+          bursatil: []
+        };
+        fs.writeFileSync(path.join(outputDir, 'quotes.json'), JSON.stringify(payload, null, 2));
+        console.log('[OK] quotes.json guardado con datos de fallback (DolarAPI)');
+      }
+    } catch (fallbackError) {
+      console.error('[ERROR] No se pudieron obtener datos de fallback:', fallbackError.message);
+    }
+    
     process.exit(1);
   }
 }
