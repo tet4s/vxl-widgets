@@ -15,12 +15,13 @@ const IOL_TOKEN_URL = IOL_BASE_URL + '/token';
 const IOL_DATA_URL = IOL_BASE_URL + '/api/v2/titulos/panelCotizaciones';
 
 // Tokens desde variables de entorno (GitHub Actions Secrets o local, con fallback al .env local)
-const IOL_ACCESS_TOKEN = process.env.IOL_ACCESS_TOKEN || '';
-const IOL_REFRESH_TOKEN = process.env.IOL_REFRESH_TOKEN || '';
+// NOTA: deben ser `let` porque el refresh puede rotar el refresh token en memoria.
+let IOL_ACCESS_TOKEN = process.env.IOL_ACCESS_TOKEN || '';
+let IOL_REFRESH_TOKEN = process.env.IOL_REFRESH_TOKEN || '';
 
 // Últimos almacenados
 let accessToken = process.env.IOL_ACCESS_TOKEN || '';
-let expiresAt = Date.now() + 14 * 60 * 1000; // 14 min (aguantamiento seguro)
+let expiresAt = 0; // No asumir frescura: cada run de Actions es un proceso nuevo.
 
 // ==================== FUNCIÓN: REFRESCAR ACCESS TOKEN ====================
 async function refreshAccessToken() {
@@ -57,18 +58,23 @@ async function refreshAccessToken() {
 
 // ==================== FUNCIÓN: OBTENER ACCESS TOKEN VÁLIDO ====================
 async function getValidAccessToken() {
-  // Si el token no ha expirado aún, usarlo directamente
-  if (accessToken && Date.now() < expiresAt - 60000) {
+  // Estrategia optimista: cada run de Actions es un proceso nuevo, así que no se puede
+  // confiar en `expiresAt` en memoria. Se prueba con el token disponible y, si IOL
+  // responde 401, el llamador refresca una sola vez con IOL_REFRESH_TOKEN.
+  if (accessToken) {
     return accessToken;
   }
-  
-  // Si no hay token o ya venció → refrescar
+
+  if (IOL_REFRESH_TOKEN) {
+    console.log('[IOL] Sin access token en memoria → intentando refresh con IOL_REFRESH_TOKEN...');
+    return refreshAccessToken();
+  }
+
   if (!IOL_ACCESS_TOKEN) {
     throw new Error('No se encontró IOL_ACCESS_TOKEN en variables de entorno');
   }
-  
-  console.log('[IOL] Access token vencido o próximo a expirar → renovando...');
-  return refreshAccessToken();
+
+  return IOL_ACCESS_TOKEN;
 }
 
 // ==================== FUNCIÓN: OBTENER DATOS DE IOL API ====================
@@ -120,13 +126,25 @@ function transformIolDataToUniverse(iolData) {
 // ==================== PROCESO PRINCIPAL ====================
 async function processMarketData() {
   try {
-    // 1. OBTENER ACCESS TOKEN VÁLIDO (con auto-refresh)
-    const token = await getValidAccessToken();
+    // 1. OBTENER ACCESS TOKEN (optimista) — si IOL responde 401 se refresca una vez
+    let token = await getValidAccessToken();
     console.log('[IOL] Access token listo, consultando datos...');
-    
-    // 2. CONSULTAR DATOS REALES DE IOL
-    const bursatil = await fetchIolData(token);
-    
+
+    // 2. CONSULTAR DATOS REALES DE IOL (con un único reintento tras refresh ante 401)
+    let bursatil;
+    try {
+      bursatil = await fetchIolData(token);
+    } catch (iolError) {
+      const status = iolError && iolError.response ? iolError.response.status : null;
+      if (status === 401 && IOL_REFRESH_TOKEN) {
+        console.log('[IOL] 401 con el token actual → refrescando una vez y reintentando...');
+        token = await refreshAccessToken();
+        bursatil = await fetchIolData(token);
+      } else {
+        throw iolError;
+      }
+    }
+
     // 3. OBTENER DÓLARES EN VIVO (DolarAPI) - mantiene la funcionalidad anterior
     console.log('[IOL] Consultando DolarAPI...');
     const dolarRes = await fetch('https://dolarapi.com/v1/dolares');
@@ -214,9 +232,12 @@ async function processMarketData() {
       }
     } catch (fallbackError) {
       console.error('[ERROR] No se pudieron obtener datos de fallback:', fallbackError.message);
+      process.exit(1);
     }
-    
-    process.exit(1);
+
+    // El fallback ya dejó quotes.json actualizado: no marcar el run en rojo,
+    // para que el step de commit+push suba el JSON fresco.
+    return;
   }
 }
 
