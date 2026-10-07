@@ -1,8 +1,9 @@
 {
-  "last_updated": "2026-10-07T05:09:47.815Z",
-  "timestamp_epoch": 1791349787,
-  "timeframe": "1h",
-  "status": "ok",
+  "last_updated": "2026-10-07T20:37:22.062Z",
+  "timestamp_epoch": 1791405442,
+  "timeframe": "1m",
+  "status": "fallback",
+  "source": "DolarAPIonly",
   "dolares": [
     {
       "moneda": "USD",
@@ -10,52 +11,52 @@
       "nombre": "Oficial",
       "compra": 1490,
       "venta": 1540,
-      "fechaActualizacion": "2026-10-06T18:00:00.000Z",
+      "fechaActualizacion": "2026-10-07T16:00:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "blue",
       "nombre": "Blue",
-      "compra": 1530,
-      "venta": 1550,
-      "fechaActualizacion": "2026-10-06T20:56:00.000Z",
+      "compra": 1535,
+      "venta": 1555,
+      "fechaActualizacion": "2026-10-07T18:58:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "bolsa",
       "nombre": "Bolsa",
-      "compra": 1539.6,
-      "venta": 1544.4,
-      "fechaActualizacion": "2026-10-06T20:56:00.000Z",
+      "compra": 1537.8,
+      "venta": 1539,
+      "fechaActualizacion": "2026-10-07T18:58:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "contadoconliqui",
       "nombre": "Contado con liquidación",
-      "compra": 1609.3,
-      "venta": 1610.8,
-      "fechaActualizacion": "2026-10-06T20:56:00.000Z",
+      "compra": 1608,
+      "venta": 1608.7,
+      "fechaActualizacion": "2026-10-07T18:58:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "mayorista",
       "nombre": "Mayorista",
-      "compra": 1511,
-      "venta": 1520,
-      "fechaActualizacion": "2026-10-06T16:02:00.000Z",
+      "compra": 1508,
+      "venta": 1517,
+      "fechaActualizacion": "2026-10-07T15:08:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1599.91,
-      "venta": 1603.31,
-      "fechaActualizacion": "2026-10-06T20:56:00.000Z",
+      "compra": 1606.05,
+      "venta": 1608.29,
+      "fechaActualizacion": "2026-10-07T18:58:00.000Z",
       "variacion": 0
     },
     {
@@ -64,112 +65,9 @@
       "nombre": "Tarjeta",
       "compra": 1937,
       "venta": 2002,
-      "fechaActualizacion": "2026-10-06T18:00:00.000Z",
+      "fechaActualizacion": "2026-10-07T16:00:00.000Z",
       "variacion": 0
     }
   ],
-  "bursatil": [
-    {
-      "label": "S&P MERVAL",
-      "val": "1.845.200 pts",
-      "var": "▲ +10,2%",
-      "class": "up",
-      "volume_ars": 5200000000,
-      "trend": [
-        1810000,
-        1825000,
-        1830000,
-        1838000,
-        1842000,
-        1845200
-      ],
-      "slot": 1,
-      "categoria": "Índice General"
-    },
-    {
-      "label": "YPF",
-      "val": "USD 24,50",
-      "var": "▲ +3,45%",
-      "class": "up",
-      "volume_ars": 4100000000,
-      "trend": [
-        23.5,
-        23.8,
-        24.1,
-        23.9,
-        24.2,
-        24.5
-      ],
-      "slot": 2,
-      "categoria": "Acción #1 Volumen"
-    },
-    {
-      "label": "GRP FIN GALICIA",
-      "val": "USD 31,20",
-      "var": "▼ -0,80%",
-      "class": "down",
-      "volume_ars": 3800000000,
-      "trend": [
-        31.8,
-        31.5,
-        31.6,
-        31.4,
-        31.3,
-        31.2
-      ],
-      "slot": 3,
-      "categoria": "Acción #2 Volumen"
-    },
-    {
-      "label": "AL30",
-      "val": "USD 58,90",
-      "var": "▼ -0,25%",
-      "class": "down",
-      "volume_ars": 4500000000,
-      "trend": [
-        59.2,
-        59.1,
-        59,
-        58.95,
-        58.92,
-        58.9
-      ],
-      "slot": 4,
-      "categoria": "Bono #1 Liquidez"
-    },
-    {
-      "label": "TXAR",
-      "val": "$665,50",
-      "var": "▲ +0,80%",
-      "class": "up",
-      "volume_ars": 2100000000,
-      "trend": [
-        658,
-        660,
-        662,
-        661,
-        664,
-        665.5
-      ],
-      "slot": 5,
-      "categoria": "Litoral #1 Volumen"
-    },
-    {
-      "label": "CRESUD",
-      "val": "$1.280,00",
-      "var": "▲ +1,85%",
-      "class": "up",
-      "volume_ars": 1800000000,
-      "trend": [
-        1250,
-        1260,
-        1270,
-        1265,
-        1275,
-        1280
-      ],
-      "slot": 6,
-      "categoria": "Litoral #2 Volumen"
-    }
-  ]
+  "bursatil": []
 }
