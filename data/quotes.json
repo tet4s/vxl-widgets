@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-10T09:01:28.341Z",
-  "timestamp_epoch": 1791622888,
+  "last_updated": "2026-10-10T15:14:02.880Z",
+  "timestamp_epoch": 1791645242,
   "timeframe": "1m",
   "status": "fallback",
   "source": "DolarAPIonly",
@@ -11,7 +11,7 @@
       "nombre": "Oficial",
       "compra": 1485,
       "venta": 1535,
-      "fechaActualizacion": "2026-10-09T18:00:00.000Z",
+      "fechaActualizacion": "2026-10-09T18:55:00.000Z",
       "variacion": 0
     },
     {
@@ -20,7 +20,7 @@
       "nombre": "Blue",
       "compra": 1520,
       "venta": 1540,
-      "fechaActualizacion": "2026-10-09T21:00:00.000Z",
+      "fechaActualizacion": "2026-10-10T15:00:00.000Z",
       "variacion": 0
     },
     {
@@ -29,7 +29,7 @@
       "nombre": "Bolsa",
       "compra": 1535.9,
       "venta": 1542.9,
-      "fechaActualizacion": "2026-10-09T21:00:00.000Z",
+      "fechaActualizacion": "2026-10-10T15:00:00.000Z",
       "variacion": 0
     },
     {
@@ -38,7 +38,7 @@
       "nombre": "Contado con liquidación",
       "compra": 1605.5,
       "venta": 1606.6,
-      "fechaActualizacion": "2026-10-09T21:00:00.000Z",
+      "fechaActualizacion": "2026-10-10T15:00:00.000Z",
       "variacion": 0
     },
     {
@@ -54,9 +54,9 @@
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1601.81,
-      "venta": 1606.88,
-      "fechaActualizacion": "2026-10-09T21:00:00.000Z",
+      "compra": 1601.21,
+      "venta": 1603.42,
+      "fechaActualizacion": "2026-10-10T15:00:00.000Z",
       "variacion": 0
     },
     {
@@ -65,7 +65,7 @@
       "nombre": "Tarjeta",
       "compra": 1930.5,
       "venta": 1995.5,
-      "fechaActualizacion": "2026-10-09T18:00:00.000Z",
+      "fechaActualizacion": "2026-10-09T18:55:00.000Z",
       "variacion": 0
     }
   ],
