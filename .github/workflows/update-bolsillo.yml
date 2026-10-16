@@ -1,0 +1,34 @@
+name: Actualizador de Bolsillo VXL
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # Cada 30 minutos
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: npm install rss-parser
+
+      - name: Ejecutar script de bolsillo
+        run: node ./scripts/update-bolsillo.js
+
+      - name: Commit y Push
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add ./data/bolsillo.json
+          git diff-index --quiet HEAD || (git commit -m 'Auto-update: bolsillo noticias [skip ci]' && git push)
