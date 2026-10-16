@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-10-16T16:57:03.156Z",
-  "timestamp_epoch": 1792169823,
+  "last_updated": "2026-10-16T16:59:44.937Z",
+  "timestamp_epoch": 1792169984,
   "timeframe": "1m",
-  "status": "fallback",
-  "source": "DolarAPIonly",
+  "status": "ok",
+  "source": "IOL API + DolarAPI + ArgentinaDatos",
   "dolares": [
     {
       "moneda": "USD",
@@ -69,5 +69,42 @@
       "variacion": 0
     }
   ],
-  "bursatil": []
+  "bursatil": [
+    {
+      "label": "—",
+      "val": "—",
+      "var": "—",
+      "class": "neutral"
+    },
+    {
+      "label": "—",
+      "val": "—",
+      "var": "—",
+      "class": "neutral"
+    },
+    {
+      "label": "—",
+      "val": "—",
+      "var": "—",
+      "class": "neutral"
+    },
+    {
+      "label": "—",
+      "val": "—",
+      "var": "—",
+      "class": "neutral"
+    },
+    {
+      "label": "—",
+      "val": "—",
+      "var": "—",
+      "class": "neutral"
+    },
+    {
+      "label": "—",
+      "val": "—",
+      "var": "—",
+      "class": "neutral"
+    }
+  ]
 }
