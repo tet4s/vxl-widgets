@@ -295,7 +295,7 @@ async function processMarketData() {
     bursatil = leerBursatilPrevio();
   }
 
-  // === HISTORIAL DE PRECIOS (cierres de vela 1h) ===
+  // === HISTORIAL DE PRECIOS (cierres de vela 4h, 1 mes = 180 puntos) ===
   // Cargar historial previo del JSON
   let historial = {};
   try {
@@ -307,8 +307,8 @@ async function processMarketData() {
     }
   } catch (e) { console.warn('No se pudo cargar historial previo:', e.message); }
 
-  // Agregar punto de cierre de vela 1h:
-  // Si la última actualización fue hace >= 1 hora (o no existe), agregar nuevo punto
+  // Agregar punto de cierre de vela 4h:
+  // Si la última actualización fue hace >= 4 horas (o no existe), agregar nuevo punto
   const ahora = Date.now();
   let lastHora = 0;
   try {
@@ -319,19 +319,19 @@ async function processMarketData() {
     }
   } catch (e) {}
 
-  if (ahora - lastHora >= 3600 || lastHora === 0) {
+  if (ahora - lastHora >= 4 * 3600 || lastHora === 0) {
     // Agregar cierre de cada activo bursátil al historial
     for (const item of bursatil) {
       const simbolo = item.label;
       const precio = parseFloat(String(item.val).replace(/[^0-9.]/g, '')) || 0;
       if (!historial[simbolo]) historial[simbolo] = [];
       historial[simbolo].push(precio);
-      // Mantener solo los últimos 24 puntos (24 horas)
-      if (historial[simbolo].length > 24) {
-        historial[simbolo] = historial[simbolo].slice(-24);
+      // Mantener solo los últimos 180 puntos (1 mes en velas de 4h)
+      if (historial[simbolo].length > 180) {
+        historial[simbolo] = historial[simbolo].slice(-180);
       }
     }
-    console.log('[HISTORIAL] Cierre de vela 1h agregado para', Object.keys(historial).length, 'activos');
+    console.log('[HISTORIAL] Cierre de vela 4h agregado para', Object.keys(historial).length, 'activos');
   } else {
     console.log('[HISTORIAL] No corresponde agregar cierre (último hace ' + Math.floor((ahora - lastHora) / 60) + ' min)');
   }
