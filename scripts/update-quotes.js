@@ -34,7 +34,7 @@ let IOL_REFRESH_TOKEN = process.env.IOL_REFRESH_TOKEN || '';
 // Símbolos buscados en IOL; si alguno no aparece se rellena con el siguiente
 // del panel por volumen operado (para no romper la regla de 6).
 const WIDGET_SLOTS = [
-  { simbolo: 'IMV',   label: 'S&P MERVAL',      formato: 'puntos', instrumento: 'acciones' },
+  { simbolo: 'PAMP',  label: 'PAMPA ENERGÍA',   formato: 'pesos',  instrumento: 'acciones' },
   { simbolo: 'YPFD',  label: 'YPF',             formato: 'pesos',  instrumento: 'acciones' },
   { simbolo: 'GGAL',  label: 'GRP FIN GALICIA', formato: 'pesos',  instrumento: 'acciones' },
   { simbolo: 'AL30',  label: 'AL30 (BONO)',     formato: 'pesos',  instrumento: 'bonos' },
@@ -139,7 +139,7 @@ async function fetchIolData(accessToken) {
     try {
       const data = await fetchCotizacion(accessToken, slot.simbolo);
       resultados[slot.simbolo] = data;
-      console.log(`[IOL] ${slot.simbolo}: ultimoPrecio=${data.ultimoPrecio}, variacion=${data.variacionPorcentual}%`);
+      console.log(`[IOL] ${slot.simbolo}: ultimoPrecio=${data.ultimoPrecio}, variacion=${data.variacion}%`);
     } catch (e) {
       console.warn(`[IOL] No se pudo obtener ${slot.simbolo}: ${e.message}`);
       resultados[slot.simbolo] = null;
@@ -164,7 +164,7 @@ function fmtNumero(n, decimales = 2) {
 
 function toWidgetItem(titulo, slot) {
   const precio = Number(titulo.ultimoPrecio) || 0;
-  const variacion = Number(titulo.variacionPorcentual) || 0;
+  const variacion = Number(titulo.variacion) || 0;
   const val =
     slot.formato === 'puntos'
       ? `${fmtNumero(precio, 0)} pts`
