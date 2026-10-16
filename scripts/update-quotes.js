@@ -108,8 +108,9 @@ async function getValidAccessToken() {
 
 // ==================== OBTENCIÓN DE DATOS ====================
 
-async function fetchPanel(accessToken, instrumento) {
-  const url = IOL_PANEL_URL(instrumento);
+// Consulta la cotización de un símbolo individual (endpoint robusto, no depende de paneles)
+async function fetchCotizacion(accessToken, simbolo, mercado = 'bCBA') {
+  const url = `${IOL_BASE_URL}/api/v2/${mercado}/Titulos/${simbolo}/Cotizacion`;
   const response = await axios.get(url, {
     headers: {
       'Authorization': 'Bearer ' + accessToken,
@@ -117,20 +118,25 @@ async function fetchPanel(accessToken, instrumento) {
     }
   });
   if (response.status !== 200) {
-    throw new Error('HTTP ' + response.status + ' en panel ' + instrumento);
+    throw new Error('HTTP ' + response.status + ' en ' + simbolo);
   }
-  const titulos = (response.data && response.data.titulos) || [];
-  console.log(`[IOL] Panel ${instrumento}: ${titulos.length} títulos`);
-  return titulos;
+  return response.data;
 }
 
 async function fetchIolData(accessToken) {
-  // Traer los dos paneles que necesita el widget
-  const [acciones, bonos] = await Promise.all([
-    fetchPanel(accessToken, 'acciones'),
-    fetchPanel(accessToken, 'bonos')
-  ]);
-  return { acciones, bonos };
+  // Consultar cada símbolo del universo del widget individualmente
+  const resultados = {};
+  for (const slot of WIDGET_SLOTS) {
+    try {
+      const data = await fetchCotizacion(accessToken, slot.simbolo);
+      resultados[slot.simbolo] = data;
+      console.log(`[IOL] ${slot.simbolo}: ultimoPrecio=${data.ultimoPrecio}, variacion=${data.variacionPorcentual}%`);
+    } catch (e) {
+      console.warn(`[IOL] No se pudo obtener ${slot.simbolo}: ${e.message}`);
+      resultados[slot.simbolo] = null;
+    }
+  }
+  return resultados;
 }
 
 // ==================== TRANSFORMACIÓN AL SHAPE DEL WIDGET ====================
@@ -155,38 +161,22 @@ function toWidgetItem(titulo, slot) {
   return { label: slot.label, val, var: varStr, class: clase };
 }
 
-function transformIolDataToUniverse(paneles) {
+function transformIolDataToUniverse(resultados) {
   const items = [];
-  const usados = new Set();
 
-  // 1) Buscar cada símbolo objetivo en su panel
+  // 1) Mapear cada símbolo consultado a su slot del widget
   for (const slot of WIDGET_SLOTS) {
-    const panel = slot.instrumento === 'bonos' ? paneles.bonos : paneles.acciones;
-    const encontrado = panel.find(t => (t.simbolo || '').toUpperCase() === slot.simbolo);
-    if (encontrado) {
-      items.push(toWidgetItem(encontrado, slot));
-      usados.add(slot.simbolo);
+    const data = resultados[slot.simbolo];
+    if (data) {
+      items.push(toWidgetItem(data, slot));
     } else {
-      console.warn(`[IOL] Símbolo no encontrado en el panel: ${slot.simbolo}`);
+      console.warn(`[IOL] Sin datos para ${slot.simbolo} (${slot.label})`);
     }
   }
 
-  // 2) Rellenar huecos (si faltó algún símbolo) con lo más operado del panel de acciones
-  if (items.length < WIDGET_SLOTS.length) {
-    const faltantes = WIDGET_SLOTS.length - items.length;
-    const extra = paneles.acciones
-      .filter(t => !usados.has((t.simbolo || '').toUpperCase()))
-      .sort((a, b) => (Number(b.volumen) || 0) - (Number(a.volumen) || 0))
-      .slice(0, faltantes);
-    for (const t of extra) {
-      const simbolo = (t.simbolo || '').toUpperCase();
-      items.push(toWidgetItem(t, {
-        label: t.descripcion || simbolo,
-        formato: 'pesos'
-      }));
-      usados.add(simbolo);
-      console.warn(`[IOL] Relleno con ${simbolo} (por volumen)`);
-    }
+  // 2) Si faltan símbolos, rellenar con placeholders (el widget exige exactamente 6)
+  while (items.length < WIDGET_SLOTS.length) {
+    items.push({ label: '—', val: '—', var: '—', class: 'neutral' });
   }
 
   // 3) Nunca más de 6 (el widget descarta el payload si no son exactamente 6)
