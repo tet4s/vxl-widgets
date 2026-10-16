@@ -295,6 +295,47 @@ async function processMarketData() {
     bursatil = leerBursatilPrevio();
   }
 
+  // === HISTORIAL DE PRECIOS (cierres de vela 1h) ===
+  // Cargar historial previo del JSON
+  let historial = {};
+  try {
+    const outputDir2 = path.join(__dirname, '../data');
+    const prevPath = path.join(outputDir2, 'quotes.json');
+    if (fs.existsSync(prevPath)) {
+      const prev = JSON.parse(fs.readFileSync(prevPath, 'utf8'));
+      if (prev.historial) historial = prev.historial;
+    }
+  } catch (e) { console.warn('No se pudo cargar historial previo:', e.message); }
+
+  // Agregar punto de cierre de vela 1h:
+  // Si la última actualización fue hace >= 1 hora (o no existe), agregar nuevo punto
+  const ahora = Date.now();
+  let lastHora = 0;
+  try {
+    const prevPath2 = path.join(__dirname, '../data', 'quotes.json');
+    if (fs.existsSync(prevPath2)) {
+      const prev = JSON.parse(fs.readFileSync(prevPath2, 'utf8'));
+      lastHora = prev.timestamp_epoch || 0;
+    }
+  } catch (e) {}
+
+  if (ahora - lastHora >= 3600 || lastHora === 0) {
+    // Agregar cierre de cada activo bursátil al historial
+    for (const item of bursatil) {
+      const simbolo = item.label;
+      const precio = parseFloat(String(item.val).replace(/[^0-9.]/g, '')) || 0;
+      if (!historial[simbolo]) historial[simbolo] = [];
+      historial[simbolo].push(precio);
+      // Mantener solo los últimos 24 puntos (24 horas)
+      if (historial[simbolo].length > 24) {
+        historial[simbolo] = historial[simbolo].slice(-24);
+      }
+    }
+    console.log('[HISTORIAL] Cierre de vela 1h agregado para', Object.keys(historial).length, 'activos');
+  } else {
+    console.log('[HISTORIAL] No corresponde agregar cierre (último hace ' + Math.floor((ahora - lastHora) / 60) + ' min)');
+  }
+
   const payload = {
     last_updated: new Date().toISOString(),
     timestamp_epoch: Math.floor(Date.now() / 1000),
@@ -302,7 +343,8 @@ async function processMarketData() {
     status,
     source,
     dolares,
-    bursatil
+    bursatil,
+    historial
   };
 
   fs.writeFileSync(path.join(outputDir, 'quotes.json'), JSON.stringify(payload, null, 2));
