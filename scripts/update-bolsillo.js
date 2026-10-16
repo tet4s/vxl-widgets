@@ -108,7 +108,7 @@ async function procesarFuente(parser, fuente) {
 
 async function main() {
   const parser = new Parser({
-    timeout: 10000,
+    timeout: 8000,
     headers: { 'User-Agent': 'VXL-Widgets/1.0' }
   });
 

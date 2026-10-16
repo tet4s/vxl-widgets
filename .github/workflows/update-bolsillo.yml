@@ -21,7 +21,7 @@ jobs:
           node-version: '20'
 
       - name: Instalar dependencias
-        run: npm install rss-parser
+        run: npm install
 
       - name: Ejecutar script de bolsillo
         run: node ./scripts/update-bolsillo.js
