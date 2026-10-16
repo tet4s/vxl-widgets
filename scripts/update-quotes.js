@@ -99,10 +99,18 @@ async function refreshAccessToken() {
   }
 }
 
-// Cascada: token actual → refresh → login. Devuelve un access token válido.
+// Cascada: refresh → login. Devuelve un access token válido.
+// NOTA: el access token guardado en secrets puede estar muerto; no se confía en él.
 async function getValidAccessToken() {
-  if (IOL_ACCESS_TOKEN) return IOL_ACCESS_TOKEN;
-  if (IOL_REFRESH_TOKEN) return refreshAccessToken();
+  // Intentar refresh primero (más barato que login)
+  if (IOL_REFRESH_TOKEN) {
+    try {
+      return await refreshAccessToken();
+    } catch (e) {
+      console.warn('[IOL] Refresh no funcionó, intentando login completo...');
+    }
+  }
+  // Fallback: login con usuario/contraseña
   return loginWithPassword();
 }
 
@@ -126,6 +134,7 @@ async function fetchCotizacion(accessToken, simbolo, mercado = 'bCBA') {
 async function fetchIolData(accessToken) {
   // Consultar cada símbolo del universo del widget individualmente
   const resultados = {};
+  let errores401 = 0;
   for (const slot of WIDGET_SLOTS) {
     try {
       const data = await fetchCotizacion(accessToken, slot.simbolo);
@@ -134,7 +143,12 @@ async function fetchIolData(accessToken) {
     } catch (e) {
       console.warn(`[IOL] No se pudo obtener ${slot.simbolo}: ${e.message}`);
       resultados[slot.simbolo] = null;
+      if (e.response && e.response.status === 401) errores401++;
     }
+  }
+  // Si TODOS fallaron con 401, propagar error para disparar el fallback a login
+  if (errores401 === WIDGET_SLOTS.length) {
+    throw Object.assign(new Error('Todos los símbolos devolvieron 401 — token muerto'), { response: { status: 401 } });
   }
   return resultados;
 }
