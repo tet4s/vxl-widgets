@@ -18,8 +18,11 @@ require('dotenv').config({ path: path.resolve(__dirname, '../vxl-secrets/.env') 
 const IOL_BASE_URL = 'https://api.invertironline.com';
 const IOL_TOKEN_URL = IOL_BASE_URL + '/token';
 // Endpoint real del panel (path correcto según doc oficial iol.apidocs.ar)
+// Nota: el panel "todas" solo existe para bonos; para acciones es "general"
 const IOL_PANEL_URL = (instrumento) =>
-  `${IOL_BASE_URL}/api/v2/Cotizaciones/${instrumento}/todas/argentina`;
+  instrumento === 'acciones'
+    ? `${IOL_BASE_URL}/api/v2/Cotizaciones/acciones/general/argentina`
+    : `${IOL_BASE_URL}/api/v2/Cotizaciones/${instrumento}/todas/argentina`;
 
 let IOL_USERNAME = process.env.IOL_USERNAME || '';
 let IOL_PASSWORD = process.env.IOL_PASSWORD || '';
