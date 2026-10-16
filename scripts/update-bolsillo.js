@@ -1,12 +1,13 @@
 // /scripts/update-bolsillo.js
 // Corre en GitHub Actions cada 30 minutos.
-// Obtiene noticias de RSS feeds de noticias argentinas y las clasifica
-// en 4 categorías: PODER ADQUISITIVO, SERVICIOS Y HOGAR, CONSUMO MASIVO, GOBIERNO.
-// La categoría GOBIERNO es opcional: solo aparece si hay noticias.
+// Obtiene noticias haciendo scraping directo de páginas de noticias argentinas
+// y las clasifica en 4 categorías: PODER ADQUISITIVO, SERVICIOS Y HOGAR,
+// CONSUMO MASIVO, GOBIERNO. La categoría GOBIERNO es opcional.
 
 const fs = require('fs');
 const path = require('path');
-const Parser = require('rss-parser');
+const axios = require('axios');
+const cheerio = require('cheerio');
 
 const CATEGORIAS = [
   {
@@ -31,26 +32,24 @@ const CATEGORIAS = [
   }
 ];
 
-const FUENTES_RSS = [
-  { nombre: 'Clarín', url: 'https://www.clarin.com/rss/' },
-  { nombre: 'La Nación', url: 'https://www.lanacion.com.ar/arcio/rss/' },
-  { nombre: 'Página/12', url: 'https://www.pagina12.com.ar/rss/' },
-  { nombre: 'Infobae', url: 'https://www.infobae.com/feeds/rss/' },
-  { nombre: 'El Litoral (Santa Fe)', url: 'https://www.ellitoral.com/rss/' },
-  { nombre: 'El Entre Ríos', url: 'https://www.elentrerios.com/rss/' },
-  { nombre: 'Rosario3', url: 'https://www.rosario3.com/rss/' },
-  { nombre: 'El Día (La Plata)', url: 'https://www.eldia.com/rss/' }
+const FUENTES = [
+  { nombre: 'Clarín', url: 'https://www.clarin.com/economia/', selector: 'article h2, article h3, .title, [class*="title"]' },
+  { nombre: 'La Nación', url: 'https://www.lanacion.com.ar/economia/', selector: 'h2 a, h3 a, [class*="title"] a, .com-title a' },
+  { nombre: 'Página/12', url: 'https://www.pagina12.com.ar/secciones/economia', selector: 'h2 a, h3 a, [class*="title"] a, .article-title a' },
+  { nombre: 'Infobae', url: 'https://www.infobae.com/economia/', selector: 'h2 a, h3 a, [class*="title"] a, .headline a' },
+  { nombre: 'El Litoral (Santa Fe)', url: 'https://www.ellitoral.com/seccion/economia', selector: 'h2 a, h3 a, [class*="title"] a, .article-title a' },
+  { nombre: 'El Entre Ríos', url: 'https://www.elentrerios.com/seccion/economia', selector: 'h2 a, h3 a, [class*="title"] a, .article-title a' }
 ];
 
 function normalizarTexto(texto) {
   return (texto || '')
     .toLowerCase()
     .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '');
+    .replace(/[\u0300-\u036f]/g, '');
 }
 
-function clasificarNoticia(titulo, descripcion) {
-  const texto = normalizarTexto(titulo + ' ' + descripcion);
+function clasificarNoticia(titulo) {
+  const texto = normalizarTexto(titulo);
   const categorias = [];
   for (const cat of CATEGORIAS) {
     if (cat.keywords.some(kw => texto.includes(normalizarTexto(kw)))) {
@@ -68,75 +67,65 @@ function formatearFecha(fechaISO) {
     const diffMin = Math.floor(diffMs / 60000);
     const diffHs = Math.floor(diffMs / 3600000);
     const diffDias = Math.floor(diffMs / 86400000);
-
     if (diffMin < 1) return 'Ahora';
     if (diffMin < 60) return 'Hace ' + diffMin + ' min';
     if (diffHs < 24) return 'Hace ' + diffHs + ' hs';
     if (diffDias < 7) return 'Hace ' + diffDias + ' día' + (diffDias > 1 ? 's' : '');
     return fecha.toLocaleDateString('es-AR', { day: 'numeric', month: 'short' });
-  } catch {
-    return '';
-  }
+  } catch { return ''; }
 }
 
-async function procesarFuente(parser, fuente) {
+async function procesarFuente(fuente) {
   try {
-    const feed = await parser.parseURL(fuente.url);
+    const response = await axios.get(fuente.url, {
+      timeout: 10000,
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+    });
+    const $ = cheerio.load(response.data);
     const noticias = [];
-    for (const item of feed.items.slice(0, 20)) {
-      const titulo = item.title || '';
-      const descripcion = item.contentSnippet || item.content || item.summary || '';
-      const categorias = clasificarNoticia(titulo, descripcion);
-      if (categorias.length > 0) {
-        noticias.push({
-          titulo: titulo.trim(),
-          descripcion: descripcion.trim().slice(0, 200),
-          url: item.link || '',
-          fecha: item.pubDate || item.isoDate || '',
-          fuente: fuente.nombre,
-          categorias
-        });
+    const titulosVistos = new Set();
+    $(fuente.selector).each((i, el) => {
+      const $el = $(el);
+      const titulo = $el.text().trim();
+      const link = $el.attr('href') || $el.closest('a').attr('href') || '';
+      if (titulo.length > 15 && !titulosVistos.has(titulo)) {
+        titulosVistos.add(titulo);
+        const categorias = clasificarNoticia(titulo);
+        if (categorias.length > 0) {
+          noticias.push({
+            titulo: titulo,
+            descripcion: '',
+            url: link.startsWith('http') ? link : fuente.url.replace(/\/$/, '') + '/' + link.replace(/^\//, ''),
+            fecha: new Date().toISOString(),
+            fuente: fuente.nombre,
+            categorias
+          });
+        }
       }
-    }
-    console.log('[RSS] ' + fuente.nombre + ': ' + noticias.length + ' noticias relevantes de ' + feed.items.length);
+    });
+    console.log('[SCRAPING] ' + fuente.nombre + ': ' + noticias.length + ' noticias relevantes');
     return noticias;
   } catch (e) {
-    console.warn('[RSS] Error en ' + fuente.nombre + ': ' + e.message);
+    console.warn('[SCRAPING] Error en ' + fuente.nombre + ': ' + e.message);
     return [];
   }
 }
 
 async function main() {
-  const parser = new Parser({
-    timeout: 8000,
-    headers: { 'User-Agent': 'VXL-Widgets/1.0' }
-  });
-
-  const resultados = await Promise.all(
-    FUENTES_RSS.map(f => procesarFuente(parser, f))
-  );
-
+  const resultados = await Promise.all(FUENTES.map(f => procesarFuente(f)));
   const todasLasNoticias = [];
-  const urlsVistas = new Set();
+  const titulosVistos = new Set();
   for (const noticias of resultados) {
     for (const n of noticias) {
-      if (!urlsVistas.has(n.url)) {
-        urlsVistas.add(n.url);
+      const key = normalizarTexto(n.titulo);
+      if (!titulosVistos.has(key)) {
+        titulosVistos.add(key);
         todasLasNoticias.push(n);
       }
     }
   }
-
-  todasLasNoticias.sort((a, b) => {
-    const fa = new Date(a.fecha).getTime() || 0;
-    const fb = new Date(b.fecha).getTime() || 0;
-    return fb - fa;
-  });
-
   const porCategoria = {};
-  for (const cat of CATEGORIAS) {
-    porCategoria[cat.id] = [];
-  }
+  for (const cat of CATEGORIAS) { porCategoria[cat.id] = []; }
   for (const n of todasLasNoticias) {
     for (const catId of n.categorias) {
       if (porCategoria[catId]) {
@@ -151,30 +140,22 @@ async function main() {
       }
     }
   }
-
   const categoriasOutput = [];
   for (const cat of CATEGORIAS) {
     const noticias = porCategoria[cat.id];
     if (noticias.length > 0) {
-      categoriasOutput.push({
-        id: cat.id,
-        nombre: cat.nombre,
-        noticias: noticias.slice(0, 5)
-      });
+      categoriasOutput.push({ id: cat.id, nombre: cat.nombre, noticias: noticias.slice(0, 5) });
     }
   }
-
   const payload = {
     last_updated: new Date().toISOString(),
     timestamp_epoch: Math.floor(Date.now() / 1000),
     total_noticias: todasLasNoticias.length,
     categorias: categoriasOutput
   };
-
   const outputDir = path.join(__dirname, '../data');
   if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(path.join(outputDir, 'bolsillo.json'), JSON.stringify(payload, null, 2));
-
   console.log('[OK] bolsillo.json guardado — ' + todasLasNoticias.length + ' noticias, ' + categoriasOutput.length + ' categorías activas');
   for (const cat of categoriasOutput) {
     console.log('  ' + cat.nombre + ': ' + cat.noticias.length + ' noticias');
