@@ -35,10 +35,10 @@ const CATEGORIAS = [
 const FUENTES = [
   { nombre: 'Clarín', url: 'https://www.clarin.com/economia/', selector: 'article h2, article h3, .title, [class*="title"]' },
   { nombre: 'La Nación', url: 'https://www.lanacion.com.ar/economia/', selector: 'h2 a, h3 a, [class*="title"] a, .com-title a' },
-  { nombre: 'Página/12', url: 'https://www.pagina12.com.ar/secciones/economia', selector: 'h2 a, h3 a, [class*="title"] a, .article-title a' },
-  { nombre: 'Infobae', url: 'https://www.infobae.com/economia/', selector: 'h2 a, h3 a, [class*="title"] a, .headline a' },
-  { nombre: 'El Litoral (Santa Fe)', url: 'https://www.ellitoral.com/seccion/economia', selector: 'h2 a, h3 a, [class*="title"] a, .article-title a' },
-  { nombre: 'El Entre Ríos', url: 'https://www.elentrerios.com/seccion/economia', selector: 'h2 a, h3 a, [class*="title"] a, .article-title a' }
+  { nombre: 'Página/12', url: 'https://www.pagina12.com.ar/secciones/economia', selector: '.title, h2, h3, h4' },
+  { nombre: 'Infobae', url: 'https://www.infobae.com/economia/', selector: '[class*="headline"], h2, h3' },
+  { nombre: 'El Litoral (Santa Fe)', url: 'https://www.ellitoral.com/seccion/economia', selector: '[class*="titulo"], h2' },
+  { nombre: 'El Entre Ríos', url: 'https://www.elentrerios.com/', selector: 'h2, h3, [class*="title"], [class*="titulo"]' }
 ];
 
 function normalizarTexto(texto) {
