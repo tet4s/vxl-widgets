@@ -147,11 +147,29 @@ async function main() {
       categoriasOutput.push({ id: cat.id, nombre: cat.nombre, noticias: noticias.slice(0, 5) });
     }
   }
+  // Formato de salida: alertas (para la maqueta del front)
+  // Cada alerta es la noticia más reciente de cada categoría
+  const alertas = [];
+  for (const cat of CATEGORIAS) {
+    const noticias = porCategoria[cat.id];
+    if (noticias.length > 0) {
+      const n = noticias[0]; // la más reciente
+      alertas.push({
+        titulo: n.titulo,
+        impacto: cat.nombre,
+        tiempo: n.fechaFormateada,
+        url: n.url,
+        fuente: n.fuente
+      });
+    }
+  }
+
   const payload = {
     last_updated: new Date().toISOString(),
     timestamp_epoch: Math.floor(Date.now() / 1000),
     total_noticias: todasLasNoticias.length,
-    categorias: categoriasOutput
+    categorias: categoriasOutput,
+    alertas: alertas
   };
   const outputDir = path.join(__dirname, '../data');
   if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
