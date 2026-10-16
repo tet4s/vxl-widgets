@@ -1,244 +1,305 @@
 // /scripts/update-quotes.js
-// Script Node.js que corre en GitHub Actions cada minuto
-// Obtiene datos reales de IOL API (acciones, bonos, cotizaciones) con refresco automático del access token
+// Corre en GitHub Actions cada minuto.
+// Fuentes: IOL API (bolsa: acciones + bonos), DolarAPI (dólares), ArgentinaDatos (riesgo país).
+//
+// Autenticación IOL (estrategia en cascada):
+//   1) Access token guardado        → probar directo
+//   2) 401 → refresh_token          → renovar y reintentar una vez
+//   3) refresh falla → LOGIN        → username + password (grant_type=password)
+// Así el pipeline sobrevive al vencimiento del refresh token (que SÍ vence).
 
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
-// Cargar variables de entorno local (.env privado) como fallback para ejecución local
-// GitHub Actions define IOL_ACCESS_TOKEN e IOL_REFRESH_TOKEN en variables de entorno
+// Fallback local: GitHub Actions define las variables como secrets.
 require('dotenv').config({ path: path.resolve(__dirname, '../vxl-secrets/.env') });
 
 // ==================== CONFIGURACIÓN ====================
 const IOL_BASE_URL = 'https://api.invertironline.com';
 const IOL_TOKEN_URL = IOL_BASE_URL + '/token';
-const IOL_DATA_URL = IOL_BASE_URL + '/api/v2/titulos/panelCotizaciones';
+// Endpoint real del panel (path correcto según doc oficial iol.apidocs.ar)
+const IOL_PANEL_URL = (instrumento) =>
+  `${IOL_BASE_URL}/api/v2/Cotizaciones/${instrumento}/todas/argentina`;
 
-// Tokens desde variables de entorno (GitHub Actions Secrets o local, con fallback al .env local)
-// NOTA: deben ser `let` porque el refresh puede rotar el refresh token en memoria.
+let IOL_USERNAME = process.env.IOL_USERNAME || '';
+let IOL_PASSWORD = process.env.IOL_PASSWORD || '';
 let IOL_ACCESS_TOKEN = process.env.IOL_ACCESS_TOKEN || '';
 let IOL_REFRESH_TOKEN = process.env.IOL_REFRESH_TOKEN || '';
 
-// Últimos almacenados
-let accessToken = process.env.IOL_ACCESS_TOKEN || '';
-let expiresAt = 0; // No asumir frescura: cada run de Actions es un proceso nuevo.
+// ==================== UNIVERSO DEL WIDGET (exactamente 6) ====================
+// El widget flipboard SOLO acepta bursatil si tiene exactamente 6 elementos.
+// Símbolos buscados en IOL; si alguno no aparece se rellena con el siguiente
+// del panel por volumen operado (para no romper la regla de 6).
+const WIDGET_SLOTS = [
+  { simbolo: 'IMV',   label: 'S&P MERVAL',      formato: 'puntos', instrumento: 'acciones' },
+  { simbolo: 'YPFD',  label: 'YPF',             formato: 'pesos',  instrumento: 'acciones' },
+  { simbolo: 'GGAL',  label: 'GRP FIN GALICIA', formato: 'pesos',  instrumento: 'acciones' },
+  { simbolo: 'AL30',  label: 'AL30 (BONO)',     formato: 'pesos',  instrumento: 'bonos' },
+  { simbolo: 'CRES',  label: 'CRESUD (AGRO)',   formato: 'pesos',  instrumento: 'acciones' },
+  { simbolo: 'MOLI',  label: 'MOLINOS AGRO',    formato: 'pesos',  instrumento: 'acciones' }
+];
 
-// ==================== FUNCIÓN: REFRESCAR ACCESS TOKEN ====================
-async function refreshAccessToken() {
-  console.log('[IOL] Refresh token solicitado...');
-  
-  try {
-    const response = await axios.post(IOL_TOKEN_URL, new URLSearchParams({
-      refresh_token: IOL_REFRESH_TOKEN,
-      grant_type: 'refresh_token'
-    }).toString(), {
+// ==================== AUTENTICACIÓN IOL ====================
+
+// Login completo con usuario y contraseña (último recurso, pero el más robusto)
+async function loginWithPassword() {
+  if (!IOL_USERNAME || !IOL_PASSWORD) {
+    throw new Error('No hay IOL_USERNAME/IOL_PASSWORD para hacer login completo');
+  }
+  console.log('[IOL] Login con usuario/contraseña (grant_type=password)...');
+  const response = await axios.post(
+    IOL_TOKEN_URL,
+    new URLSearchParams({
+      username: IOL_USERNAME,
+      password: IOL_PASSWORD,
+      grant_type: 'password'
+    }).toString(),
+    {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Accept': 'application/json'
       }
-    });
-
-    const data = response.data;
-    accessToken = data.access_token;
-    expiresAt = Date.now() + (data.expires_in * 1000);
-    
-    // Guardar el nuevo refresh token si viene en la respuesta
-    if (data.refresh_token) {
-      IOL_REFRESH_TOKEN = data.refresh_token;
-      console.log('[IOL] Nuevo refresh token recibido');
     }
-    
-    console.log('[IOL] Access token renovado exitosamente');
-    return accessToken;
+  );
+  const data = response.data;
+  IOL_ACCESS_TOKEN = data.access_token;
+  if (data.refresh_token) IOL_REFRESH_TOKEN = data.refresh_token;
+  console.log('[IOL] Login OK, access token obtenido');
+  return IOL_ACCESS_TOKEN;
+}
+
+async function refreshAccessToken() {
+  if (!IOL_REFRESH_TOKEN) throw new Error('No hay IOL_REFRESH_TOKEN para refrescar');
+  console.log('[IOL] Refresh token solicitado...');
+  try {
+    const response = await axios.post(
+      IOL_TOKEN_URL,
+      new URLSearchParams({
+        refresh_token: IOL_REFRESH_TOKEN,
+        grant_type: 'refresh_token'
+      }).toString(),
+      {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
+        }
+      }
+    );
+    const data = response.data;
+    IOL_ACCESS_TOKEN = data.access_token;
+    if (data.refresh_token) IOL_REFRESH_TOKEN = data.refresh_token;
+    console.log('[IOL] Access token renovado por refresh');
+    return IOL_ACCESS_TOKEN;
   } catch (error) {
-    console.error('[IOL] Error al refrescar el access token:', error.message);
+    console.warn('[IOL] Refresh falló:', error.message);
     throw error;
   }
 }
 
-// ==================== FUNCIÓN: OBTENER ACCESS TOKEN VÁLIDO ====================
+// Cascada: token actual → refresh → login. Devuelve un access token válido.
 async function getValidAccessToken() {
-  // Estrategia optimista: cada run de Actions es un proceso nuevo, así que no se puede
-  // confiar en `expiresAt` en memoria. Se prueba con el token disponible y, si IOL
-  // responde 401, el llamador refresca una sola vez con IOL_REFRESH_TOKEN.
-  if (accessToken) {
-    return accessToken;
-  }
-
-  if (IOL_REFRESH_TOKEN) {
-    console.log('[IOL] Sin access token en memoria → intentando refresh con IOL_REFRESH_TOKEN...');
-    return refreshAccessToken();
-  }
-
-  if (!IOL_ACCESS_TOKEN) {
-    throw new Error('No se encontró IOL_ACCESS_TOKEN en variables de entorno');
-  }
-
-  return IOL_ACCESS_TOKEN;
+  if (IOL_ACCESS_TOKEN) return IOL_ACCESS_TOKEN;
+  if (IOL_REFRESH_TOKEN) return refreshAccessToken();
+  return loginWithPassword();
 }
 
-// ==================== FUNCIÓN: OBTENER DATOS DE IOL API ====================
-async function fetchIolData(accessToken) {
-  const headers = {
-    'Authorization': 'Bearer ' + accessToken,
-    'Accept': 'application/json'
-  };
+// ==================== OBTENCIÓN DE DATOS ====================
 
-  console.log('[IOL] Consultando panel de cotizaciones...');
-  
-  const response = await axios.get(IOL_DATA_URL, { headers });
-  
+async function fetchPanel(accessToken, instrumento) {
+  const url = IOL_PANEL_URL(instrumento);
+  const response = await axios.get(url, {
+    headers: {
+      'Authorization': 'Bearer ' + accessToken,
+      'Accept': 'application/json'
+    }
+  });
   if (response.status !== 200) {
-    throw new Error('Error HTTP ' + response.status + ' al consultar panel de cotizaciones');
+    throw new Error('HTTP ' + response.status + ' en panel ' + instrumento);
   }
-  
-  const data = response.data;
-  console.log('[IOL] Datos obtenidos:', data);
-  
-  // Transformar el formato de IOL a nuestro formato (bursatil)
-  const bursatilFinal = transformIolDataToUniverse(data);
-  
-  return bursatilFinal;
+  const titulos = (response.data && response.data.titulos) || [];
+  console.log(`[IOL] Panel ${instrumento}: ${titulos.length} títulos`);
+  return titulos;
 }
 
-// ==================== FUNCIÓN: TRANSFORMAR DATOS IOL ====================
-function transformIolDataToUniverse(iolData) {
-  // El formato exacto depende de la respuesta de IOL API
-  // Por defecto, devolvemos un array de objetos con las propiedades básicas
-  if (!iolData || !Array.isArray(iolData.titulos)) {
-    console.warn('[IOL] Formato inesperado, intentando usar datos genéricos');
-    return iolData || [];
+async function fetchIolData(accessToken) {
+  // Traer los dos paneles que necesita el widget
+  const [acciones, bonos] = await Promise.all([
+    fetchPanel(accessToken, 'acciones'),
+    fetchPanel(accessToken, 'bonos')
+  ]);
+  return { acciones, bonos };
+}
+
+// ==================== TRANSFORMACIÓN AL SHAPE DEL WIDGET ====================
+
+function fmtNumero(n, decimales = 2) {
+  return Number(n).toLocaleString('es-AR', {
+    minimumFractionDigits: decimales,
+    maximumFractionDigits: decimales
+  });
+}
+
+function toWidgetItem(titulo, slot) {
+  const precio = Number(titulo.ultimoPrecio) || 0;
+  const variacion = Number(titulo.variacionPorcentual) || 0;
+  const val =
+    slot.formato === 'puntos'
+      ? `${fmtNumero(precio, 0)} pts`
+      : `$${fmtNumero(precio, 2)}`;
+  const signo = variacion > 0 ? '▲ +' : variacion < 0 ? '▼ ' : '= ';
+  const varStr = `${signo}${fmtNumero(Math.abs(variacion), 2)}%`;
+  const clase = variacion > 0 ? 'up' : variacion < 0 ? 'down' : 'neutral';
+  return { label: slot.label, val, var: varStr, class: clase };
+}
+
+function transformIolDataToUniverse(paneles) {
+  const items = [];
+  const usados = new Set();
+
+  // 1) Buscar cada símbolo objetivo en su panel
+  for (const slot of WIDGET_SLOTS) {
+    const panel = slot.instrumento === 'bonos' ? paneles.bonos : paneles.acciones;
+    const encontrado = panel.find(t => (t.simbolo || '').toUpperCase() === slot.simbolo);
+    if (encontrado) {
+      items.push(toWidgetItem(encontrado, slot));
+      usados.add(slot.simbolo);
+    } else {
+      console.warn(`[IOL] Símbolo no encontrado en el panel: ${slot.simbolo}`);
+    }
   }
-  
-  // Mapeo simple: titulos → titulo, cotizacion, volumen, dia
-  return iolData.titulos.map(titulo => ({
-    label: titulo.titulo || 'Desconocido',
-    val: titulo.cotizacion || 'Valor',
-    var: titulo.tendencia || 'Pendiente',
-    class: titulo.cambio === 'up' ? 'up' : 'down',
-    volume_ars: titulo.volumen || 0,
-    trend: titulo.dia || [],
-    slot: titulo.slot || 0,
-    categoria: 'Cotización IOL'
-  }));
+
+  // 2) Rellenar huecos (si faltó algún símbolo) con lo más operado del panel de acciones
+  if (items.length < WIDGET_SLOTS.length) {
+    const faltantes = WIDGET_SLOTS.length - items.length;
+    const extra = paneles.acciones
+      .filter(t => !usados.has((t.simbolo || '').toUpperCase()))
+      .sort((a, b) => (Number(b.volumen) || 0) - (Number(a.volumen) || 0))
+      .slice(0, faltantes);
+    for (const t of extra) {
+      const simbolo = (t.simbolo || '').toUpperCase();
+      items.push(toWidgetItem(t, {
+        label: t.descripcion || simbolo,
+        formato: 'pesos'
+      }));
+      usados.add(simbolo);
+      console.warn(`[IOL] Relleno con ${simbolo} (por volumen)`);
+    }
+  }
+
+  // 3) Nunca más de 6 (el widget descarta el payload si no son exactamente 6)
+  return items.slice(0, WIDGET_SLOTS.length);
+}
+
+// ==================== FALLBACK ====================
+
+// Lee el quotes.json ya commiteado para no perder el bursátil si IOL falla.
+function leerBursatilPrevio() {
+  try {
+    const p = path.join(__dirname, '../data', 'quotes.json');
+    if (fs.existsSync(p)) {
+      const previo = JSON.parse(fs.readFileSync(p, 'utf8'));
+      if (Array.isArray(previo.bursatil) && previo.bursatil.length === 6) {
+        return previo.bursatil;
+      }
+    }
+  } catch (e) {
+    console.warn('[WARN] No se pudo leer bursátil previo:', e.message);
+  }
+  return [];
 }
 
 // ==================== PROCESO PRINCIPAL ====================
+
 async function processMarketData() {
+  const outputDir = path.join(__dirname, '../data');
+  if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
+
+  // --- Dólares (DolarAPI) ---
+  console.log('[DolarAPI] Consultando...');
+  const dolarRes = await fetch('https://dolarapi.com/v1/dolares');
+  if (!dolarRes.ok) throw new Error('Error al consultar DolarAPI');
+  const dolaresRaw = await dolarRes.json();
+
+  // --- Riesgo país (ArgentinaDatos) ---
+  let riesgoPaisObj = null;
   try {
-    // 1. OBTENER ACCESS TOKEN (optimista) — si IOL responde 401 se refresca una vez
-    let token = await getValidAccessToken();
-    console.log('[IOL] Access token listo, consultando datos...');
-
-    // 2. CONSULTAR DATOS REALES DE IOL (con un único reintento tras refresh ante 401)
-    let bursatil;
-    try {
-      bursatil = await fetchIolData(token);
-    } catch (iolError) {
-      const status = iolError && iolError.response ? iolError.response.status : null;
-      if (status === 401 && IOL_REFRESH_TOKEN) {
-        console.log('[IOL] 401 con el token actual → refrescando una vez y reintentando...');
-        token = await refreshAccessToken();
-        bursatil = await fetchIolData(token);
-      } else {
-        throw iolError;
-      }
+    const riesgoRes = await fetch('https://api.argentinadatos.com/v1/finanzas/rendimientos/riesgoPais');
+    if (riesgoRes.ok) {
+      const arr = await riesgoRes.json();
+      const ultimo = arr[arr.length - 1];
+      const penultimo = arr[arr.length - 2] || ultimo;
+      riesgoPaisObj = {
+        casa: 'riesgopais',
+        nombre: 'Riesgo País',
+        compra: null,
+        venta: ultimo.valor,
+        variacion: ultimo.valor - penultimo.valor,
+        fechaActualizacion: ultimo.fecha
+      };
     }
-
-    // 3. OBTENER DÓLARES EN VIVO (DolarAPI) - mantiene la funcionalidad anterior
-    console.log('[IOL] Consultando DolarAPI...');
-    const dolarRes = await fetch('https://dolarapi.com/v1/dolares');
-    if (!dolarRes.ok) throw new Error('Error al consultar DolarAPI');
-    const dolaresRaw = await dolarRes.json();
-    
-    // 4. OBTENER RIESGO PAÍS (ArgentinaDatos) - mantiene la funcionalidad anterior
-    let riesgoPaisObj = null;
-    try {
-      const riesgoRes = await fetch('https://api.argentinadatos.com/v1/finanzas/rendimientos/riesgoPais');
-      if (riesgoRes.ok) {
-        const riesgoDataArray = await riesgoRes.json();
-        const ultimoRiesgo = riesgoDataArray[riesgoDataArray.length - 1];
-        const penultimoRiesgo = riesgoDataArray[riesgoDataArray.length - 2] || ultimoRiesgo;
-        const difPuntos = ultimoRiesgo.valor - penultimoRiesgo.valor;
-
-        riesgoPaisObj = {
-          casa: 'riesgopais',
-          nombre: 'Riesgo País',
-          compra: null,
-          venta: ultimoRiesgo.valor,
-          variacion: difPuntos,
-          fechaActualizacion: ultimoRiesgo.fecha
-        };
-      }
-    } catch (e) {
-      console.warn('[WARNING] No se pudo sincronizar Riesgo País:', e);
-    }
-    
-    // 5. CONSTRUIR PAYLOAD FINAL
-    const dolares = dolaresRaw.map(d => ({
-      ...d,
-      variacion: typeof d.variacion === 'number' ? d.variacion : 0
-    }));
-
-    if (riesgoPaisObj) {
-      dolares.push(riesgoPaisObj);
-    }
-
-    const payload = {
-      last_updated: new Date().toISOString(),
-      timestamp_epoch: Math.floor(Date.now() / 1000),
-      timeframe: '1m', // Actualizado a 1 minuto para datos en tiempo real
-      status: 'ok',
-      source: 'IOL API + DolarAPI + ArgentinaDatos',
-      dolares,
-      bursatil: bursatil || []
-    };
-
-    // 6. GUARDAR EN data/quotes.json
-    const outputDir = path.join(__dirname, '../data');
-    if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
-
-    fs.writeFileSync(path.join(outputDir, 'quotes.json'), JSON.stringify(payload, null, 2));
-    console.log('[OK] quotes.json actualizado con datos de IOL API, DolarAPI y ArgentinaDatos');
-    console.log('[OK] Bolsa: ' + payload.bursatil.length + ' activos', payload.bursatil.map(b => b.label).join(', '));
-    
-  } catch (error) {
-    console.error('[ERROR] Fallo en la ejecución del pipeline:', error.message);
-    // Siempre guardar algo, incluso los datos anteriores
-    const outputDir = path.join(__dirname, '../data');
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-    
-    // Solo guardar los datos de dolarapi como fallback
-    try {
-      const dolarRes = await fetch('https://dolarapi.com/v1/dolares');
-      if (dolarRes.ok) {
-        const dolaresRaw = await dolarRes.json();
-        const payload = {
-          last_updated: new Date().toISOString(),
-          timestamp_epoch: Math.floor(Date.now() / 1000),
-          timeframe: '1m',
-          status: 'fallback',
-          source: 'DolarAPIonly',
-          dolares: dolaresRaw.map(d => ({
-            ...d,
-            variacion: typeof d.variacion === 'number' ? d.variacion : 0
-          })),
-          bursatil: []
-        };
-        fs.writeFileSync(path.join(outputDir, 'quotes.json'), JSON.stringify(payload, null, 2));
-        console.log('[OK] quotes.json guardado con datos de fallback (DolarAPI)');
-      }
-    } catch (fallbackError) {
-      console.error('[ERROR] No se pudieron obtener datos de fallback:', fallbackError.message);
-      process.exit(1);
-    }
-
-    // El fallback ya dejó quotes.json actualizado: no marcar el run en rojo,
-    // para que el step de commit+push suba el JSON fresco.
-    return;
+  } catch (e) {
+    console.warn('[WARNING] No se pudo sincronizar Riesgo País:', e.message);
   }
+
+  const dolares = dolaresRaw.map(d => ({
+    ...d,
+    variacion: typeof d.variacion === 'number' ? d.variacion : 0
+  }));
+  if (riesgoPaisObj) dolares.push(riesgoPaisObj);
+
+  // --- Bolsa (IOL) con cascada de auth ---
+  let bursatil = [];
+  let status = 'fallback';
+  let source = 'DolarAPIonly';
+
+  try {
+    let token = await getValidAccessToken();
+    let paneles;
+    try {
+      paneles = await fetchIolData(token);
+    } catch (err) {
+      const httpStatus = err && err.response ? err.response.status : null;
+      if (httpStatus === 401) {
+        // 401 → probar refresh
+        try {
+          token = await refreshAccessToken();
+          paneles = await fetchIolData(token);
+        } catch (refreshErr) {
+          // refresh muerto → login completo
+          token = await loginWithPassword();
+          paneles = await fetchIolData(token);
+        }
+      } else {
+        throw err;
+      }
+    }
+    bursatil = transformIolDataToUniverse(paneles);
+    if (bursatil.length === 6) {
+      status = 'ok';
+      source = 'IOL API + DolarAPI + ArgentinaDatos';
+      console.log('[OK] Bolsa: ' + bursatil.map(b => b.label).join(' | '));
+    } else {
+      console.warn(`[IOL] Solo ${bursatil.length} de 6 activos → se conserva el previo`);
+      bursatil = leerBursatilPrevio();
+      source = 'DolarAPIonly (IOL incompleto)';
+    }
+  } catch (iolError) {
+    console.error('[ERROR] IOL no disponible:', iolError.message);
+    bursatil = leerBursatilPrevio();
+  }
+
+  const payload = {
+    last_updated: new Date().toISOString(),
+    timestamp_epoch: Math.floor(Date.now() / 1000),
+    timeframe: '1m',
+    status,
+    source,
+    dolares,
+    bursatil
+  };
+
+  fs.writeFileSync(path.join(outputDir, 'quotes.json'), JSON.stringify(payload, null, 2));
+  console.log(`[OK] quotes.json guardado — status: ${status}, bursátil: ${bursatil.length} items`);
 }
 
 processMarketData();

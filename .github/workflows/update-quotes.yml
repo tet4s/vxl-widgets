@@ -26,6 +26,8 @@ jobs:
 
       - name: Ejecutar Script de Actualización
         env:
+          IOL_USERNAME: ${{ secrets.IOL_USERNAME }}
+          IOL_PASSWORD: ${{ secrets.IOL_PASSWORD }}
           IOL_ACCESS_TOKEN: ${{ secrets.IOL_ACCESS_TOKEN }}
           IOL_REFRESH_TOKEN: ${{ secrets.IOL_REFRESH_TOKEN }}
         run: node ./scripts/update-quotes.js
