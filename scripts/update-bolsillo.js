@@ -247,11 +247,7 @@ async function main() {
   };
   for (const n of nuevas) add(n);
   for (const n of historico) add(n);
-  // --- dedupe por similitud de título (misma noticia, distinto título/fuente) ---
-  const todas = [];
-  for (const n of Object.values(merged)) {
-    if (!todas.some(k => jaccard(n.titulo, k.titulo) > 0.85)) todas.push(n);
-  }
+  const todas = Object.values(merged);
 
   // --- ventana 7 días (más recientes) ---
   const AHORA = Date.now();
@@ -262,6 +258,13 @@ async function main() {
   });
   recientes.sort((a, b) => parseFechaIso(b.fecha) - parseFechaIso(a.fecha)); /* más reciente primero */
   await reescribirConLLM(recientes); /* a voz VXL vía Gemini (gratis); fallback al heurístico */
+
+  // --- dedupe post-LLM (misma noticia, distinto título/fuente → LLM la unifica → título idéntico → dup) ---
+  const sinDup = [];
+  for (const n of recientes) {
+    if (!sinDup.some(k => jaccard(n.titulo, k.titulo) > 0.85)) sinDup.push(n);
+  }
+  recientes = sinDup;
 
   // --- categorías completas (sin recortar a 5) ---
   const porCategoria = {};
