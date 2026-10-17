@@ -91,6 +91,23 @@ function extraerFecha($el, fuente) {
   if (raw) { var d = new Date(raw); if (!isNaN(d.getTime())) return d.toISOString(); }
   return new Date().toISOString();
 }
+function reescribirTitulo(t) {
+  var n = t;
+  n = n.replace(/[\u{1F300}-\u{1FAFF}]/gu, '');
+  n = n.replace(/\b(en vivo|live)\b/gi, '');
+  n = n.replace(/minuto a minuto/gi, '');
+  n = n.replace(/,\s*d\u00f3lar hoy:/gi, ': ');
+  n = n.replace(/a cu\u00e1nto cotizan el /gi, 'cotizaci\u00f3n del ');
+  n = n.replace(/\s+/g, ' ').trim();
+  n = n.replace(/,\s*:/g, ': ');
+  n = n.replace(/^[\s.,;:¡?\-_|'"()+«»*]+/, '').trim();
+  n = n.replace(/[\s.,;:¡?\-_|'"()+«»*]+$/, '').trim();
+  if (!n) return t;
+  n = n.charAt(0).toUpperCase() + n.slice(1);
+  if (n.length > 130) n = n.slice(0, 127) + '\u2026';
+  return n;
+}
+
 async function procesarFuente(fuente) {
   try {
     const response = await axios.get(fuente.url, {
@@ -102,10 +119,11 @@ async function procesarFuente(fuente) {
     const titulosVistos = new Set();
     $(fuente.selector).each((i, el) => {
       const $el = $(el);
-      const titulo = $el.text().trim();
+      const tituloRaw = $el.text().trim();
+      const titulo = reescribirTitulo(tituloRaw);
       const link = $el.attr('href') || $el.closest('a').attr('href') || '';
-      if (titulo.length > 15 && !titulosVistos.has(titulo) && !esGancho(titulo)) {
-        titulosVistos.add(titulo);
+      if (tituloRaw.length > 15 && !titulosVistos.has(tituloRaw) && !esGancho(tituloRaw)) {
+        titulosVistos.add(tituloRaw);
         const categorias = clasificarNoticia(titulo);
         if (categorias.length > 0) {
           noticias.push({
@@ -132,6 +150,38 @@ function parseFechaIso(f) {
   return isNaN(d) ? 0 : d;
 }
 
+async function enriquecerFechas(items) {
+  const urls = Array.from(new Set((items || []).map(n => n.url).filter(Boolean)));
+  const mapa = {};
+  const CONC = 8; let i = 0;
+  async function worker() {
+    while (i < urls.length) {
+      const u = urls[i++];
+      try {
+        const r = await axios.get(u, { timeout: 8000, headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' } });
+        const $ = cheerio.load(r.data);
+        let raw = $('time[datetime]').attr('datetime')
+          || $('meta[name="date"]').attr('content')
+          || $('meta[property="article:published_time"]').attr('content')
+          || $('[data-timestamp]').attr('data-timestamp');
+        if (!raw) {
+          $('script[type="application/ld+json"]').each(function () {
+            if (raw) return;
+            try { var j = JSON.parse($(this).html()); var d2 = j.datePublished || (j['@graph'] && j['@graph'][0] && j['@graph'][0].datePublished); if (d2) raw = d2; } catch (e) {}
+          });
+        }
+        if (!raw) raw = $('time').first().attr('datetime');
+        if (raw) { const d = new Date(raw); if (!isNaN(d.getTime())) mapa[u] = d.toISOString(); }
+      } catch (e) { /* skip */ }
+    }
+  }
+  const workers = [];
+  for (let k = 0; k < CONC; k++) workers.push(worker());
+  await Promise.all(workers);
+  for (const n of items) { if (n.url && mapa[n.url]) n.fecha = mapa[n.url]; }
+  return items;
+}
+
 async function main() {
   // --- hoy ---
   const resultados = await Promise.all(FUENTES.map(f => procesarFuente(f)));
@@ -144,7 +194,9 @@ async function main() {
     }
   }
 
-  // --- acumular histórico previo (últimos ~7 días) ---
+  await enriquecerFechas(nuevas);
+
+    // --- acumular histórico previo (últimos ~7 días) ---
   const dataFile = path.join(__dirname, '../data/bolsillo.json');
   let historico = [];
   if (fs.existsSync(dataFile)) {
@@ -169,8 +221,10 @@ async function main() {
   // --- merge + dedupe conservando la fecha más nueva ---
   const merged = {};
   const add = (n) => {
+    n.titulo = reescribirTitulo(n.titulo);
     const k = normalizarTexto(n.titulo);
     if (!k || !n.titulo || esGancho(n.titulo)) return;
+    n.titulo = reescribirTitulo(n.titulo);
     if (!n.categorias || !n.categorias.length) n.categorias = clasificarNoticia(n.titulo);
     if (merged[k]) { if (parseFechaIso(n.fecha) > parseFechaIso(merged[k].fecha)) merged[k] = n; }
     else { merged[k] = n; }
