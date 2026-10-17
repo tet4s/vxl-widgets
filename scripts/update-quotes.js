@@ -467,9 +467,9 @@ async function processMarketData() {
         if (velas.length >= 2) {
           historial[slot.label] = velas;
           actualizados++;
-          const f0 = crudos[0].fechaHora || crudos[0].fecha;
-          const fN = crudos[crudos.length - 1].fechaHora || crudos[crudos.length - 1].fecha;
-          console.log(`[HISTORIAL] ${slot.label}: ${crudos.length} crudos (${f0} -> ${fN}) -> ${velas.length} velas`);
+          const dias = new Set(crudos.map(pt => String(pt.fechaHora || pt.fecha || '').slice(0, 10)));
+          const horas = new Set(crudos.map(pt => String(pt.fechaHora || pt.fecha || '').slice(11, 13)));
+          console.log(`[HISTORIAL] ${slot.label}: ${crudos.length} crudos | ${dias.size} dias distintos | ${horas.size} horas distintas | -> ${velas.length} velas`);
         } else {
           console.warn(`[HISTORIAL] ${slot.label}: no se pudieron armar velas (se conserva el previo)`);
         }
