@@ -443,18 +443,33 @@ async function processMarketData() {
     for (const slot of WIDGET_SLOTS) {
       try {
         const data = await fetchSerieHistorica(iolToken, slot.simbolo, fechaDesde, fechaHasta);
-        const serie = data && Array.isArray(data.serie) ? data.serie : null;
-        if (!serie || serie.length < 2) {
-          console.warn(`[HISTORIAL] ${slot.label}: serie vacía. Keys: ${Object.keys(data || {}).join(',')} | crudo: ${JSON.stringify(data).substring(0, 300)}`);
+
+        // La API devuelve un ARRAY de puntos intradiarios (NO un objeto con la clave "serie")
+        const crudos = Array.isArray(data) ? data : (data && Array.isArray(data.serie) ? data.serie : []);
+        if (crudos.length < 2) {
+          console.warn(`[HISTORIAL] ${slot.label}: la API devolvió ${crudos.length} puntos (se conserva el previo)`);
           continue;
         }
-        const puntos = serie
-          .map(pt => Number(pt.ultimoPrecio))
-          .filter(v => Number.isFinite(v) && v > 0);
-        if (puntos.length >= 2) {
-          historial[slot.label] = puntos.slice(-180);
+
+        // Agrupar en velas de 4h: nos quedamos con el ÚLTIMO precio de cada bloque de 4 horas
+        const porVela = new Map();
+        for (const pt of crudos) {
+          const precio = Number(pt.ultimoPrecio);
+          const fh = String(pt.fechaHora || pt.fecha || '');
+          if (!Number.isFinite(precio) || precio <= 0 || !fh.includes('T')) continue;
+          const partes = fh.split('T');
+          const hora = parseInt(partes[1].slice(0, 2), 10);
+          if (isNaN(hora)) continue;
+          porVela.set(`${partes[0]}T${String(Math.floor(hora / 4) * 4).padStart(2, '0')}`, precio);
+        }
+
+        const velas = Array.from(porVela.values()).slice(-180);
+        if (velas.length >= 2) {
+          historial[slot.label] = velas;
           actualizados++;
-          console.log(`[HISTORIAL] ${slot.label}: ${puntos.length} puntos (${serie[0].fecha} → ${serie[serie.length - 1].fecha})`);
+          console.log(`[HISTORIAL] ${slot.label}: ${crudos.length} puntos crudos -> ${velas.length} velas de 4h`);
+        } else {
+          console.warn(`[HISTORIAL] ${slot.label}: no se pudieron armar velas (se conserva el previo)`);
         }
       } catch (e) {
         console.warn(`[HISTORIAL] ${slot.label}: error al traer la serie (${e.message}) — se conserva el previo`);
