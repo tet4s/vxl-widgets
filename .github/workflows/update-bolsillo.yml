@@ -2,7 +2,7 @@ name: Actualizador de Bolsillo VXL
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Cada 30 minutos
+    - cron: '*/10 * * * *' # Cada 10 minutos
   workflow_dispatch:
 
 permissions:
@@ -25,6 +25,8 @@ jobs:
 
       - name: Ejecutar script de bolsillo
         run: node ./scripts/update-bolsillo.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Commit y Push
         run: |

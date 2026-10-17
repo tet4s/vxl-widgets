@@ -1,5 +1,5 @@
 // /scripts/update-bolsillo.js
-// Corre en GitHub Actions cada 30 minutos.
+// Corre en GitHub Actions cada 10 minutos.
 // Obtiene noticias haciendo scraping directo de páginas de noticias argentinas
 // y las clasifica en 4 categorías: PODER ADQUISITIVO, SERVICIOS Y HOGAR,
 // CONSUMO MASIVO, GOBIERNO. La categoría GOBIERNO es opcional.
@@ -122,7 +122,7 @@ async function procesarFuente(fuente) {
       const tituloRaw = $el.text().trim();
       const titulo = reescribirTitulo(tituloRaw);
       const link = $el.attr('href') || $el.closest('a').attr('href') || '';
-      if (tituloRaw.length > 15 && !titulosVistos.has(tituloRaw) && !esGancho(tituloRaw)) {
+      if (tituloRaw.length > 15 && !titulosVistos.has(tituloRaw) && !esGancho(tituloRaw) && !esOffTopic(tituloRaw)) {
         titulosVistos.add(tituloRaw);
         const categorias = clasificarNoticia(titulo);
         if (categorias.length > 0) {
@@ -150,35 +150,54 @@ function parseFechaIso(f) {
   return isNaN(d) ? 0 : d;
 }
 
-async function enriquecerFechas(items) {
-  const urls = Array.from(new Set((items || []).map(n => n.url).filter(Boolean)));
-  const mapa = {};
-  const CONC = 8; let i = 0;
-  async function worker() {
-    while (i < urls.length) {
-      const u = urls[i++];
-      try {
-        const r = await axios.get(u, { timeout: 8000, headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' } });
-        const $ = cheerio.load(r.data);
-        let raw = $('time[datetime]').attr('datetime')
-          || $('meta[name="date"]').attr('content')
-          || $('meta[property="article:published_time"]').attr('content')
-          || $('[data-timestamp]').attr('data-timestamp');
-        if (!raw) {
-          $('script[type="application/ld+json"]').each(function () {
-            if (raw) return;
-            try { var j = JSON.parse($(this).html()); var d2 = j.datePublished || (j['@graph'] && j['@graph'][0] && j['@graph'][0].datePublished); if (d2) raw = d2; } catch (e) {}
-          });
-        }
-        if (!raw) raw = $('time').first().attr('datetime');
-        if (raw) { const d = new Date(raw); if (!isNaN(d.getTime())) mapa[u] = d.toISOString(); }
-      } catch (e) { /* skip */ }
+const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash-8b:generateContent?key=' + encodeURIComponent(process.env.GEMINI_API_KEY || '');
+const OFF_TOPIC = ['policia','policial','droga','drogadicc','narc','narcotr','confisc','detenc','detenido','allanamiento','homicid','victim','victima','violencia','tiroteo','accidente','accidental','fallec','muerte','omicid','delito','delincuencia','cauta','inyectable','prisión','prision','incendio','incendiado'];
+function esOffTopic(t) {
+  var n = normalizarTexto(t);
+  for (var i = 0; i < OFF_TOPIC.length; i++) { if (n.indexOf(OFF_TOPIC[i]) !== -1) return true; }
+  return false;
+}
+var STOP = new Set(['de','el','la','los','las','en','por','un','una','unas','unos','para','con','y','o','del','al','se','que','más','hoy','ayer','horas','min','hs','fecha','cotiz','precio','valor','subió','bajó','alza','caída']);
+function simTokens(t) {
+  return normalizarTexto(t).replace(/[\d.,;%$()+]/g, '').split(/[^a-záéíóúñü]+/i).filter(function(w) { return w.length > 3 && !STOP.has(w); });
+}
+function jaccard(a, b) {
+  var sa = new Set(simTokens(a));
+  var sb = new Set(simTokens(b));
+  if (!sa.size && !sb.size) return 0;
+  var inter = 0;
+  sa.forEach(function(x) { if (sb.has(x)) inter++; });
+  return inter / (sa.size + sb.size - inter);
+}
+function delay(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
+async function reescribirLote(titulos) {
+  if (!process.env.GEMINI_API_KEY) return titulos;
+  var prompt = 'Reescribí los siguientes titulares en español rioplatense, tono VXL: claro, conciso, sin clickbait ni ganchos, conservando el sentido económico. Devolvé SOLO un JSON válido con la forma {"rewrites":["título 1","título 2",...]} con exactamente la misma cantidad de ítems recibidos y en el mismo orden. NO agregues numeración ni texto extra. Titulares: ' + JSON.stringify(titulos);
+  var body = { contents: [{ role: 'user', parts: [{ text: prompt }] }] };
+  for (var attempt = 0; attempt < 3; attempt++) {
+    try {
+      await delay(4000);
+      var r = await axios.post(GEMINI_URL, body, { timeout: 20000, headers: { 'Content-Type': 'application/json' } });
+      var cand = (r.data && r.data.candidates && r.data.candidates[0]);
+      var txt = (cand && cand.content && cand.content.parts && cand.content.parts[0] && cand.content.parts[0].text) || '';
+      var m = txt.match(/\{[\s\S]*\}/);
+      if (m) {
+        try { var parsed = JSON.parse(m[0]); if (Array.isArray(parsed.rewrites) && parsed.rewrites.length === titulos.length) return parsed.rewrites; } catch (e) {}
+        try { var p2 = JSON.parse(txt.trim()); if (Array.isArray(p2.rewrites) && p2.rewrites.length === titulos.length) return p2.rewrites; } catch (e2) {}
+      }
+    } catch (e) {
+      if (attempt < 2) await delay(2000);
     }
   }
-  const workers = [];
-  for (let k = 0; k < CONC; k++) workers.push(worker());
-  await Promise.all(workers);
-  for (const n of items) { if (n.url && mapa[n.url]) n.fecha = mapa[n.url]; }
+  return titulos;
+}
+async function reescribirConLLM(items) {
+  if (!process.env.GEMINI_API_KEY || !items.length) return;
+  for (var i = 0; i < items.length; i += 25) {
+    var chunk = items.slice(i, i + 25);
+    var rw = await reescribirLote(chunk.map(function(c) { return c.titulo; }));
+    for (var j = 0; j < chunk.length; j++) { if (rw[j] && rw[j].length) chunk[j].titulo = rw[j]; }
+  }
   return items;
 }
 
@@ -194,9 +213,7 @@ async function main() {
     }
   }
 
-  await enriquecerFechas(nuevas);
-
-    // --- acumular histórico previo (últimos ~7 días) ---
+  // --- acumular histórico previo (últimos ~7 días) ---
   const dataFile = path.join(__dirname, '../data/bolsillo.json');
   let historico = [];
   if (fs.existsSync(dataFile)) {
@@ -223,15 +240,18 @@ async function main() {
   const add = (n) => {
     n.titulo = reescribirTitulo(n.titulo);
     const k = normalizarTexto(n.titulo);
-    if (!k || !n.titulo || esGancho(n.titulo)) return;
-    n.titulo = reescribirTitulo(n.titulo);
+    if (!k || !n.titulo || esGancho(n.titulo) || esOffTopic(n.titulo)) return;
     if (!n.categorias || !n.categorias.length) n.categorias = clasificarNoticia(n.titulo);
     if (merged[k]) { if (parseFechaIso(n.fecha) > parseFechaIso(merged[k].fecha)) merged[k] = n; }
     else { merged[k] = n; }
   };
   for (const n of nuevas) add(n);
   for (const n of historico) add(n);
-  const todas = Object.values(merged);
+  // --- dedupe por similitud de título (misma noticia, distinto título/fuente) ---
+  const todas = [];
+  for (const n of Object.values(merged)) {
+    if (!todas.some(k => jaccard(n.titulo, k.titulo) > 0.85)) todas.push(n);
+  }
 
   // --- ventana 7 días (más recientes) ---
   const AHORA = Date.now();
@@ -241,6 +261,7 @@ async function main() {
     return t > 0 && t >= AHORA - CORTE_MS && t <= AHORA + 60000;
   });
   recientes.sort((a, b) => parseFechaIso(b.fecha) - parseFechaIso(a.fecha)); /* más reciente primero */
+  await reescribirConLLM(recientes); /* a voz VXL vía Gemini (gratis); fallback al heurístico */
 
   // --- categorías completas (sin recortar a 5) ---
   const porCategoria = {};
