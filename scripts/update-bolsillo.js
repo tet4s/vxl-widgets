@@ -111,73 +111,101 @@ async function procesarFuente(fuente) {
   }
 }
 
+function parseFechaIso(f) {
+  var d = Date.parse(f);
+  return isNaN(d) ? 0 : d;
+}
+
 async function main() {
+  // --- hoy ---
   const resultados = await Promise.all(FUENTES.map(f => procesarFuente(f)));
-  const todasLasNoticias = [];
+  const nuevas = [];
   const titulosVistos = new Set();
   for (const noticias of resultados) {
     for (const n of noticias) {
       const key = normalizarTexto(n.titulo);
-      if (!titulosVistos.has(key)) {
-        titulosVistos.add(key);
-        todasLasNoticias.push(n);
-      }
+      if (!titulosVistos.has(key)) { titulosVistos.add(key); nuevas.push(n); }
     }
   }
+
+  // --- acumular histórico previo (últimos ~7 días) ---
+  const dataFile = path.join(__dirname, '../data/bolsillo.json');
+  let historico = [];
+  if (fs.existsSync(dataFile)) {
+    try {
+      const prev = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+      if (Array.isArray(prev.noticias)) historico = prev.noticias.slice();
+      else {
+        for (const cat of (prev.categorias || [])) {
+          for (const n of (cat.noticias || [])) {
+            historico.push({
+              titulo: n.titulo, descripcion: n.descripcion || '', url: n.url,
+              fecha: n.fecha || new Date().toISOString(),
+              fuente: n.fuente,
+              categorias: cat.id ? [cat.id] : clasificarNoticia(n.titulo)
+            });
+          }
+        }
+      }
+    } catch (e) { console.warn('[WARN] no se pudo leer el histórico previo:', e.message); }
+  }
+
+  // --- merge + dedupe conservando la fecha más nueva ---
+  const merged = {};
+  const add = (n) => {
+    const k = normalizarTexto(n.titulo);
+    if (!k || !n.titulo) return;
+    if (!n.categorias || !n.categorias.length) n.categorias = clasificarNoticia(n.titulo);
+    if (merged[k]) { if (parseFechaIso(n.fecha) > parseFechaIso(merged[k].fecha)) merged[k] = n; }
+    else { merged[k] = n; }
+  };
+  for (const n of nuevas) add(n);
+  for (const n of historico) add(n);
+  const todas = Object.values(merged);
+
+  // --- ventana 7 días (más recientes) ---
+  const AHORA = Date.now();
+  const CORTE_MS = 7 * 24 * 60 * 60 * 1000;
+  let recientes = todas.filter(n => {
+    const t = parseFechaIso(n.fecha);
+    return t > 0 && t >= AHORA - CORTE_MS && t <= AHORA + 60000;
+  });
+  recientes.sort((a, b) => parseFechaIso(b.fecha) - parseFechaIso(a.fecha)); /* más reciente primero */
+
+  // --- categorías completas (sin recortar a 5) ---
   const porCategoria = {};
-  for (const cat of CATEGORIAS) { porCategoria[cat.id] = []; }
-  for (const n of todasLasNoticias) {
+  for (const cat of CATEGORIAS) porCategoria[cat.id] = { id: cat.id, nombre: cat.nombre, noticias: [] };
+  for (const n of recientes) {
     for (const catId of n.categorias) {
       if (porCategoria[catId]) {
-        porCategoria[catId].push({
-          titulo: n.titulo,
-          descripcion: n.descripcion,
-          url: n.url,
-          fecha: n.fecha,
-          fechaFormateada: formatearFecha(n.fecha),
-          fuente: n.fuente
+        porCategoria[catId].noticias.push({
+          titulo: n.titulo, descripcion: n.descripcion || '', url: n.url,
+          fecha: n.fecha, fechaFormateada: formatearFecha(n.fecha), fuente: n.fuente
         });
       }
     }
   }
   const categoriasOutput = [];
-  for (const cat of CATEGORIAS) {
-    const noticias = porCategoria[cat.id];
-    if (noticias.length > 0) {
-      categoriasOutput.push({ id: cat.id, nombre: cat.nombre, noticias: noticias.slice(0, 5) });
-    }
-  }
-  // Formato de salida: alertas (para la maqueta del front)
-  // Cada alerta es la noticia más reciente de cada categoría
+  for (const cat of CATEGORIAS) { const not = porCategoria[cat.id].noticias; if (not.length) categoriasOutput.push({ id: cat.id, nombre: cat.nombre, noticias: not }); }
+
+  // --- alertas (destacada: la más reciente de cada categoría) ---
   const alertas = [];
-  for (const cat of CATEGORIAS) {
-    const noticias = porCategoria[cat.id];
-    if (noticias.length > 0) {
-      const n = noticias[0]; // la más reciente
-      alertas.push({
-        titulo: n.titulo,
-        impacto: cat.nombre,
-        tiempo: n.fechaFormateada,
-        url: n.url,
-        fuente: n.fuente
-      });
-    }
-  }
+  for (const cat of CATEGORIAS) { const not = porCategoria[cat.id].noticias; if (not.length) { const top = not[0]; alertas.push({ titulo: top.titulo, impacto: cat.nombre, tiempo: top.fechaFormateada, fuente: top.fuente }); } }
 
   const payload = {
     last_updated: new Date().toISOString(),
     timestamp_epoch: Math.floor(Date.now() / 1000),
-    total_noticias: todasLasNoticias.length,
+    total_noticias: recientes.length,
+    window_days: 7,
     categorias: categoriasOutput,
+    noticias: recientes,          /* archivo plano completo (7d), más reciente primero */
     alertas: alertas
   };
   const outputDir = path.join(__dirname, '../data');
   if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(path.join(outputDir, 'bolsillo.json'), JSON.stringify(payload, null, 2));
-  console.log('[OK] bolsillo.json guardado — ' + todasLasNoticias.length + ' noticias, ' + categoriasOutput.length + ' categorías activas');
-  for (const cat of categoriasOutput) {
-    console.log('  ' + cat.nombre + ': ' + cat.noticias.length + ' noticias');
-  }
+  console.log('[OK] bolsillo.json guardado — ' + recientes.length + ' noticias (ventana 7d), ' + categoriasOutput.length + ' categorías activas');
+  for (const cat of categoriasOutput) console.log('  ' + cat.nombre + ': ' + cat.noticias.length + ' noticias');
 }
 
 main().catch(e => {

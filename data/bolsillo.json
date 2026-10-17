@@ -1,17 +1,18 @@
 {
-  "last_updated": "2026-10-17T13:07:15.616Z",
-  "timestamp_epoch": 1792242435,
-  "total_noticias": 60,
+  "last_updated": "2026-10-17T19:09:25.671Z",
+  "timestamp_epoch": 1792264165,
+  "total_noticias": 64,
+  "window_days": 7,
   "categorias": [
     {
       "id": "poder_adquisitivo",
       "nombre": "PODER ADQUISITIVO",
       "noticias": [
         {
-          "titulo": "Impulsada por el petróleo, la inflación mayorista subió en septiembre un 3,2% y en lo que va del año creció 22,8%",
+          "titulo": "Efecto Súper Niño: se esperan subas en el precio del carne hasta fin de año y presionará a la inflación",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.231Z",
+          "fecha": "2026-10-17T19:09:25.365Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -19,7 +20,7 @@
           "titulo": "La carrera contra la inflación: cómo le fue al salario de cada gremio desde que comenzó la era Milei, según un informe oficial",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.232Z",
+          "fecha": "2026-10-17T19:09:25.364Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -27,24 +28,96 @@
           "titulo": "Menos empleo formal y salarios en baja: la participación del trabajo en la economía cayó al 42,9%",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.232Z",
+          "fecha": "2026-10-17T19:09:25.364Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
         {
-          "titulo": "Efecto Súper Niño: se esperan subas en el precio del carne hasta fin de año y presionará a la inflación",
+          "titulo": "Impulsada por el petróleo, la inflación mayorista subió en septiembre un 3,2% y en lo que va del año creció 22,8%",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.233Z",
+          "fecha": "2026-10-17T19:09:25.324Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
+        },
+        {
+          "titulo": "Criar a un hijo volvió a encarecerse por encima de la inflación por el aumento en las tareas de cuidado",
+          "descripcion": "",
+          "url": "https://www.ellitoral.com/seccion/economia/",
+          "fecha": "2026-10-17T19:09:25.213Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "La inflación mayorista aceleró en septiembre y superó el IPC por el salto de la energía",
+          "descripcion": "",
+          "url": "https://www.ellitoral.com/seccion/economia/",
+          "fecha": "2026-10-17T19:09:25.213Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "Por la fuerte suba del petróleo, la inflación mayorista se aceleró a 3,2% en septiembre",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/economia/2026/10/16/por-la-fuerte-suba-del-petroleo-la-inflacion-mayorista-se-acelero-a-32-en-septiembre/",
+          "fecha": "2026-10-17T19:09:25.164Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Salario y empleo: en qué segmentos de ingreso el trabajo informal remunera mejor que el trabajo registrado",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/economia/2026/10/17/salario-y-empleo-cuales-son-los-segmentos-de-ingreso-en-los-que-el-trabajo-informal-remunera-mejor-que-el-trabajo-registrado/",
+          "fecha": "2026-10-17T19:09:25.162Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Las expensas en CABA aumentaron más que el doble de la inflación en septiembre: cuánto paga un departamento promedio",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/economia/2026/10/17/las-expensas-en-caba-aumentaron-mas-que-el-doble-de-la-inflacion-en-septiembre-cuanto-paga-un-departamento-promedio/",
+          "fecha": "2026-10-17T19:09:25.162Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Cuánto cobran los empleados bancarios tras el nuevo aumento definido en paritarias",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/economia/2026/10/17/cuanto-cobran-los-empleados-bancarios-tras-el-nuevo-aumento-definido-en-paritarias/",
+          "fecha": "2026-10-17T19:09:25.162Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "La inflación en modo “serrucho”: por qué alterna subas y bajas, y cuáles son los factores que complican su desaceleración",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/economia/2026/10/17/la-inflacion-en-modo-serrucho-por-que-alterna-subas-y-bajas-y-cuales-son-los-factores-que-complican-su-desaceleracion/",
+          "fecha": "2026-10-17T19:09:25.162Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
+          "fecha": "2026-10-17T19:09:25.122Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Las razones del fuerte salto. Se aceleró la inflación mayorista y en septiembre subió al 3,2%",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/la-inflacion-mayorista-se-acelero-al-32-en-septiembre-impulsada-por-el-petroleo-y-el-gas-nid16102026/",
+          "fecha": "2026-10-17T19:09:25.121Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
         },
         {
           "titulo": "Fuerte salto. La inflación mayorista se aceleró al 3,2% en septiembre impulsada por el petróleo y el gas",
           "descripcion": "",
           "url": "https://www.lanacion.com.ar/economia/economia/la-inflacion-mayorista-se-acelero-al-32-en-septiembre-impulsada-por-el-petroleo-y-el-gas-nid16102026/",
           "fecha": "2026-10-17T13:07:14.837Z",
-          "fechaFormateada": "Ahora",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "La Nación"
         }
       ]
@@ -57,7 +130,7 @@
           "titulo": "Polémica por el Belgrano Cargas: el Gobierno salió a responder las críticas por la falta de obras en el Norte",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.233Z",
+          "fecha": "2026-10-17T19:09:25.366Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -65,33 +138,89 @@
           "titulo": "Estados Unidos lanzó una dura advertencia al FMI: exige que controle más a los países deudores y que ajuste sus gastos",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.233Z",
+          "fecha": "2026-10-17T19:09:25.366Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
         {
-          "titulo": "Fuerte salto. La inflación mayorista se aceleró al 3,2% en septiembre impulsada por el petróleo y el gas",
+          "titulo": "Fuga, persecución y drogas: abandonó más de 5 kilos tras evadir control policial",
           "descripcion": "",
-          "url": "https://www.lanacion.com.ar/economia/economia/la-inflacion-mayorista-se-acelero-al-32-en-septiembre-impulsada-por-el-petroleo-y-el-gas-nid16102026/",
-          "fecha": "2026-10-17T13:07:14.837Z",
+          "url": "https://www.elentrerios.com/",
+          "fecha": "2026-10-17T19:09:25.248Z",
           "fechaFormateada": "Ahora",
-          "fuente": "La Nación"
+          "fuente": "El Entre Ríos"
         },
         {
-          "titulo": "“El agua viene fuerte”. La crecida acecha y el éxodo de animales y de pobladores en el Litoral entró en su hora más crítica",
+          "titulo": "El bolsillo no descansa en Panamá: gasolina, luz y comida empujaron el costo de vida en septiembre",
           "descripcion": "",
-          "url": "https://www.lanacion.com.ar/economia/economia/campo/el-agua-viene-fuerte-en-las-islas-del-litoral-se-profundiza-el-exodo-de-miles-de-animales-y-de-nid16102026/",
-          "fecha": "2026-10-17T13:07:14.839Z",
+          "url": "https://www.infobae.com/economia/panama/2026/10/17/el-bolsillo-no-descansa-en-panama-gasolina-luz-y-comida-empujaron-el-costo-de-vida-en-septiembre/",
+          "fecha": "2026-10-17T19:09:25.165Z",
           "fechaFormateada": "Ahora",
-          "fuente": "La Nación"
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Miles de estudiantes cubanos siguen con clases virtuales por los apagones y la falta de transporte",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/cuba/2026/10/17/miles-de-estudiantes-cubanos-siguen-con-clases-virtuales-por-los-apagones-y-la-falta-de-transporte/",
+          "fecha": "2026-10-17T19:09:25.165Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Habló la reportera que se hizo viral por la llamativa “lucha” de un entrenador cuando lo entrevistó: “Destaco su fuerza de voluntad”",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/deportes/2026/10/17/hablo-la-reportera-que-se-hizo-viral-por-la-llamativa-lucha-de-un-entrenador-cuando-lo-entrevisto-destaco-su-fuerza-de-voluntad/",
+          "fecha": "2026-10-17T19:09:25.165Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Riego solar: una innovación para llevar agua a los lotes donde no llega la electricidad",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/revista-chacra/2026/10/15/riego-solar-una-innovacion-para-llevar-agua-a-los-lotes-donde-no-llega-la-electricidad/",
+          "fecha": "2026-10-17T19:09:25.164Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "¿Qué es la logística agéntica y qué funciones puede asumir en el transporte y el comercio exterior?",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/movant/2026/10/17/que-es-la-logistica-agentica-y-que-funciones-puede-asumir-en-el-transporte-y-el-comercio-exterior/",
+          "fecha": "2026-10-17T19:09:25.164Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
         },
         {
           "titulo": "Gastó $200.000 y llenó el freezer: mostró su compra de comida para todo el mes y se viralizó",
           "descripcion": "",
           "url": "https://www.infobae.com/economia/economia/2026/10/17/gasto-200000-y-lleno-el-freezer-mostro-su-compra-de-comida-para-todo-el-mes-y-se-viralizo/",
-          "fecha": "2026-10-17T13:07:15.258Z",
+          "fecha": "2026-10-17T19:09:25.163Z",
           "fechaFormateada": "Ahora",
           "fuente": "Infobae"
+        },
+        {
+          "titulo": "Las expensas en CABA aumentaron más que el doble de la inflación en septiembre: cuánto paga un departamento promedio",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/economia/2026/10/17/las-expensas-en-caba-aumentaron-mas-que-el-doble-de-la-inflacion-en-septiembre-cuanto-paga-un-departamento-promedio/",
+          "fecha": "2026-10-17T19:09:25.162Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "“El agua viene fuerte”. La crecida acecha y el éxodo de animales y de pobladores en el Litoral entró en su hora más crítica",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/campo/el-agua-viene-fuerte-en-las-islas-del-litoral-se-profundiza-el-exodo-de-miles-de-animales-y-de-nid16102026/",
+          "fecha": "2026-10-17T19:09:25.123Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Ganarle al agua. Así es el dramático operativo de los ganaderos de las islas entrerrianas donde nada puede fallar para salvar a las vacas",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/campo/ganarle-al-agua-asi-es-el-dramatico-operativo-de-los-ganaderos-de-las-islas-entrerrianas-donde-nada-nid17102026/",
+          "fecha": "2026-10-17T19:09:25.122Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
         }
       ]
     },
@@ -103,15 +232,31 @@
           "titulo": "Lanzan una plataforma para que importadores Pymes hagan pagos al exterior en pesos y con acreditación instantánea",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.234Z",
+          "fecha": "2026-10-17T19:09:25.366Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
+        },
+        {
+          "titulo": "¿Qué es la logística agéntica y qué funciones puede asumir en el transporte y el comercio exterior?",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/movant/2026/10/17/que-es-la-logistica-agentica-y-que-funciones-puede-asumir-en-el-transporte-y-el-comercio-exterior/",
+          "fecha": "2026-10-17T19:09:25.164Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "La indumentaria, en crisis: más ropa importada, menos ventas y una fecha clave para intentar la reactivación",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/economia/2026/10/17/la-indumentaria-en-crisis-mas-ropa-importada-menos-ventas-y-una-fecha-clave-para-intentar-la-reactivacion/",
+          "fecha": "2026-10-17T19:09:25.162Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
         },
         {
           "titulo": "Comercio exterior",
           "descripcion": "",
           "url": "https://www.lanacion.com.ar/economia/comercio-exterior/",
-          "fecha": "2026-10-17T13:07:14.838Z",
+          "fecha": "2026-10-17T19:09:25.122Z",
           "fechaFormateada": "Ahora",
           "fuente": "La Nación"
         },
@@ -119,17 +264,9 @@
           "titulo": "Comercio. La Unión Europea lidera una iniciativa para sostener el sistema de intercambio global",
           "descripcion": "",
           "url": "https://www.lanacion.com.ar/economia/economia/la-union-europea-lidera-una-iniciativa-para-sostener-el-sistema-de-comercio-global-nid11022026/",
-          "fecha": "2026-10-17T13:07:14.838Z",
+          "fecha": "2026-10-17T19:09:25.122Z",
           "fechaFormateada": "Ahora",
           "fuente": "La Nación"
-        },
-        {
-          "titulo": "La indumentaria, en crisis: más ropa importada, menos ventas y una fecha clave para intentar la reactivación",
-          "descripcion": "",
-          "url": "https://www.infobae.com/economia/economia/2026/10/17/la-indumentaria-en-crisis-mas-ropa-importada-menos-ventas-y-una-fecha-clave-para-intentar-la-reactivacion/",
-          "fecha": "2026-10-17T13:07:15.258Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Infobae"
         }
       ]
     },
@@ -138,26 +275,74 @@
       "nombre": "GOBIERNO",
       "noticias": [
         {
-          "titulo": "El Gobierno tuvo otro mes de superávit y quedó más cerca de la meta fiscal con el FMI",
+          "titulo": "La titular del FMI comparó Argentina con Grecia",
+          "descripcion": "",
+          "url": "https://www.pagina12.com.ar/secciones/economia/2026/10/16/la-titular-del-fmi-comparo-argentina-con-grecia/",
+          "fecha": "2026-10-17T19:09:25.668Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "Dólar blue, dólar hoy: a cuánto cotizan el viernes 16 de octubre de 2026",
+          "descripcion": "",
+          "url": "https://www.pagina12.com.ar/secciones/economia/2026/10/16/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-viernes-16-de-octubre-de-2026/",
+          "fecha": "2026-10-17T19:09:25.668Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "Dólar blue, dólar hoy: a cuánto cotizan el jueves 15 de octubre de 2026",
+          "descripcion": "",
+          "url": "https://www.pagina12.com.ar/secciones/economia/2026/10/15/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-jueves-15-de-octubre-de-2026/",
+          "fecha": "2026-10-17T19:09:25.668Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "El flanco débil de Caputo, refinanciar la deuda",
+          "descripcion": "",
+          "url": "https://www.pagina12.com.ar/secciones/economia/2026/10/14/el-flanco-debil-de-caputo-refinanciar-la-deuda/",
+          "fecha": "2026-10-17T19:09:25.668Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "Polémica por el Belgrano Cargas: el Gobierno salió a responder las críticas por la falta de obras en el Norte",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.231Z",
+          "fecha": "2026-10-17T19:09:25.366Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
         {
-          "titulo": "El dólar se mantuvo estable, pero el riesgo país volvió a subir: por qué el mercado se mueve a dos velocidades",
+          "titulo": "Estados Unidos lanzó una dura advertencia al FMI: exige que controle más a los países deudores y que ajuste sus gastos",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.231Z",
+          "fecha": "2026-10-17T19:09:25.366Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
         {
-          "titulo": "Por las emisiones de bonos en pesos, la deuda pública creció US$ 31.500 millones en lo que va del año",
+          "titulo": "Dólar hoy y dólar blue, EN VIVO: a cuánto cotizó el oficial y cuál fue el precio del paralelo, minuto a minuto, este 15 de octubre",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.231Z",
+          "fecha": "2026-10-17T19:09:25.366Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "“Les dimos coraje”: el comentario que recibió Caputo cuando la jefa del FMI comparó el ajuste fiscal en la Argentina y en Grecia",
+          "descripcion": "",
+          "url": "https://www.clarin.com/economia/",
+          "fecha": "2026-10-17T19:09:25.365Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "“Es elegida como la mejor”: el Gobierno impulsó una misión comercial en uno de los principales mercados para la carne vacuna argentina",
+          "descripcion": "",
+          "url": "https://www.clarin.com/economia/",
+          "fecha": "2026-10-17T19:09:25.365Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -165,7 +350,7 @@
           "titulo": "Dólar hoy y dólar blue, EN VIVO: a cuánto cotizó el oficial y cuál fue el precio del paralelo, minuto a minuto, este 16 de octubre",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.232Z",
+          "fecha": "2026-10-17T19:09:25.364Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -173,41 +358,900 @@
           "titulo": "El FMI insiste con su pedido para que la Argentina baje más los subsidios",
           "descripcion": "",
           "url": "https://www.clarin.com/economia/",
-          "fecha": "2026-10-17T13:07:15.232Z",
+          "fecha": "2026-10-17T19:09:25.364Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
+        },
+        {
+          "titulo": "El Gobierno tuvo otro mes de superávit y quedó más cerca de la meta fiscal con el FMI",
+          "descripcion": "",
+          "url": "https://www.clarin.com/economia/",
+          "fecha": "2026-10-17T19:09:25.324Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "El dólar se mantuvo estable, pero el riesgo país volvió a subir: por qué el mercado se mueve a dos velocidades",
+          "descripcion": "",
+          "url": "https://www.clarin.com/economia/",
+          "fecha": "2026-10-17T19:09:25.324Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Por las emisiones de bonos en pesos, la deuda pública creció US$ 31.500 millones en lo que va del año",
+          "descripcion": "",
+          "url": "https://www.clarin.com/economia/",
+          "fecha": "2026-10-17T19:09:25.324Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "El gobierno provincial reporta que varios ríos registran una tendencia en baja",
+          "descripcion": "",
+          "url": "https://www.elentrerios.com/",
+          "fecha": "2026-10-17T19:09:25.249Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Entre Ríos"
+        },
+        {
+          "titulo": "La senadora que rompió con el bloque del PJ explicó por qué hay que suspender las PASO",
+          "descripcion": "",
+          "url": "https://www.elentrerios.com/",
+          "fecha": "2026-10-17T19:09:25.248Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Entre Ríos"
+        },
+        {
+          "titulo": "Obra inconclusa en escuela de Concordia: Cresto llevó el reclamo a Diputados y propone recuperar un programa",
+          "descripcion": "",
+          "url": "https://www.elentrerios.com/",
+          "fecha": "2026-10-17T19:09:25.243Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Entre Ríos"
+        },
+        {
+          "titulo": "Hay 4 detenidos y 6800 dólares secuestrados por estafa a consorcio caminero",
+          "descripcion": "",
+          "url": "https://www.elentrerios.com/",
+          "fecha": "2026-10-17T19:09:25.242Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Entre Ríos"
+        },
+        {
+          "titulo": "Así cerró el dólar en bancos, blue y MEP este viernes 16 de octubre",
+          "descripcion": "",
+          "url": "https://www.ellitoral.com/seccion/economia/",
+          "fecha": "2026-10-17T19:09:25.213Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "En vivo: así cotiza el dólar hoy, viernes 16 de octubre, en Argentina",
+          "descripcion": "",
+          "url": "https://www.ellitoral.com/seccion/economia/",
+          "fecha": "2026-10-17T19:09:25.213Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "De principal deudor a “alumno ejemplar”: el nuevo rol que el FMI le asigna a la Argentina",
+          "descripcion": "",
+          "url": "https://www.ellitoral.com/seccion/economia/",
+          "fecha": "2026-10-17T19:09:25.213Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "Así cerró el dólar en bancos, blue y MEP este jueves 15 de octubre",
+          "descripcion": "",
+          "url": "https://www.ellitoral.com/seccion/economia/",
+          "fecha": "2026-10-17T19:09:25.213Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "Cómo cerró el atraso en el pago de deudas de familias y empresas en agosto",
+          "descripcion": "",
+          "url": "https://www.ellitoral.com/seccion/economia/",
+          "fecha": "2026-10-17T19:09:25.212Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "Caputo defendió el rumbo económico del Gobierno y aseguró que la Argentina tiene un “excedente de dólares”",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/economia/2026/10/17/caputo-defendio-el-rumbo-economico-del-gobierno-y-aseguro-que-la-argentina-tiene-un-excedente-de-dolares/",
+          "fecha": "2026-10-17T19:09:25.163Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "El Banco Central cerró su mejor semana de compra de dólares desde julio y acumula casi USD 1.000 millones en octubre",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/economia/2026/10/16/el-banco-central-cerro-su-mejor-semana-de-compra-de-dolares-desde-julio-y-acumula-casi-usd-1000-millones-en-octubre/",
+          "fecha": "2026-10-17T19:09:25.163Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Scott Bessent, Japón y la Argentina: ¿cuánto puede aportar Estados Unidos a la “bazuca” de dólares del gobierno de Milei?",
+          "descripcion": "",
+          "url": "https://www.infobae.com/economia/economia/2026/10/17/scott-bessent-japon-y-la-argentina-cuanto-puede-aportar-estados-unidos-a-la-bazuca-de-dolares-del-gobierno-de-milei/",
+          "fecha": "2026-10-17T19:09:25.162Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Últimos registros. A cuánto abre el dólar el lunes 19 de octubre",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/dolar/a-cuanto-abre-el-dolar-el-lunes-19-de-octubre-nid17102026/",
+          "fecha": "2026-10-17T19:09:25.123Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Últimos registros. ¿A cuánto cotiza el dólar oficial y el blue hoy?",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/dolar/dolar-hoy-y-dolar-blue-hoy-a-cuanto-cotiza-este-sabado-17-de-octubre-nid17102026/",
+          "fecha": "2026-10-17T19:09:25.123Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "“Hay apoyo\". Los países que quieren que emprendas: dan dinero, bajan impuestos y te ayudan a conseguir clientes",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/negocios/los-paises-que-quieren-que-emprendas-dan-dinero-bajan-impuestos-y-te-ayudan-a-conseguir-clientes-nid30092026/",
+          "fecha": "2026-10-17T19:09:25.122Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
+          "fecha": "2026-10-17T19:09:25.122Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "En Tailandia. Caputo aseguró que hay “un excedente de dólares” y que el rumbo del RIGI permitiría levantar restricciones cambiarias",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/luis-caputo-aseguro-que-hay-un-excedente-de-dolares-y-que-el-rumbo-del-rigi-permitiria-levantar-nid17102026/",
+          "fecha": "2026-10-17T19:09:25.121Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "\"Jamás van a entender\". El Banco Central volvió a comprar a pesar de que el dólar estuvo más demandado",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/el-banco-central-volvio-a-comprar-a-pesar-de-que-el-dolar-estuvo-mas-demandado-nid16102026/",
+          "fecha": "2026-10-17T19:09:25.121Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Dato oficial. El Banco Central confirmó que el crecimiento de la mora comenzó a frenarse",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/el-banco-central-confirmo-que-el-crecimiento-de-la-mora-comenzo-a-frenarse-nid16102026/",
+          "fecha": "2026-10-17T19:09:25.121Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Mercados y dólar. El riesgo país cerró la semana con otra suba y rozó los 650 puntos",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/el-riesgo-pais-cierra-la-semana-con-otra-suba-y-supera-los-640-puntos-nid16102026/",
+          "fecha": "2026-10-17T19:09:25.121Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Récord de US$10.000 millones. El sector de la economía que solía \"explotar\" con un dólar alto y que hoy es un boom",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/la-economia-del-conocimiento-cruzo-los-us10000-millones-en-exportaciones-las-razones-y-los-desafios-nid16102026/",
+          "fecha": "2026-10-17T19:09:25.121Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "En septiembre. El Gobierno mostró superávit y dijo que “cumplió” con la ley de financiamiento universitario",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/el-gobierno-mostro-superavit-en-septiembre-y-dijo-que-cumplio-con-los-acuerdos-alcanzados-con-las-nid16102026/",
+          "fecha": "2026-10-17T19:09:25.121Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Dólares y algo más. ¿Qué tan fuerte llegará el Gobierno a las elecciones de 2027?",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/cuan-fuerte-estara-el-gobierno-de-cara-a-las-elecciones-de-2027-nid11102026/",
+          "fecha": "2026-10-17T19:09:25.121Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Del plazo fijo a los cedears. El mapa de las inversiones que pagan impuestos",
+          "descripcion": "",
+          "url": "https://www.lanacion.com.ar/economia/economia/negocios/el-mapa-de-las-inversiones-que-pagan-impuestos-nid17102026/",
+          "fecha": "2026-10-17T19:09:25.118Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
         }
+      ]
+    }
+  ],
+  "noticias": [
+    {
+      "titulo": "La titular del FMI comparó Argentina con Grecia",
+      "descripcion": "",
+      "url": "https://www.pagina12.com.ar/secciones/economia/2026/10/16/la-titular-del-fmi-comparo-argentina-con-grecia/",
+      "fecha": "2026-10-17T19:09:25.668Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Dólar blue, dólar hoy: a cuánto cotizan el viernes 16 de octubre de 2026",
+      "descripcion": "",
+      "url": "https://www.pagina12.com.ar/secciones/economia/2026/10/16/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-viernes-16-de-octubre-de-2026/",
+      "fecha": "2026-10-17T19:09:25.668Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Dólar blue, dólar hoy: a cuánto cotizan el jueves 15 de octubre de 2026",
+      "descripcion": "",
+      "url": "https://www.pagina12.com.ar/secciones/economia/2026/10/15/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-jueves-15-de-octubre-de-2026/",
+      "fecha": "2026-10-17T19:09:25.668Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El flanco débil de Caputo, refinanciar la deuda",
+      "descripcion": "",
+      "url": "https://www.pagina12.com.ar/secciones/economia/2026/10/14/el-flanco-debil-de-caputo-refinanciar-la-deuda/",
+      "fecha": "2026-10-17T19:09:25.668Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Polémica por el Belgrano Cargas: el Gobierno salió a responder las críticas por la falta de obras en el Norte",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.366Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "servicios_hogar",
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Estados Unidos lanzó una dura advertencia al FMI: exige que controle más a los países deudores y que ajuste sus gastos",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.366Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "servicios_hogar",
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Dólar hoy y dólar blue, EN VIVO: a cuánto cotizó el oficial y cuál fue el precio del paralelo, minuto a minuto, este 15 de octubre",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.366Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Lanzan una plataforma para que importadores Pymes hagan pagos al exterior en pesos y con acreditación instantánea",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.366Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "“Les dimos coraje”: el comentario que recibió Caputo cuando la jefa del FMI comparó el ajuste fiscal en la Argentina y en Grecia",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.365Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "“Es elegida como la mejor”: el Gobierno impulsó una misión comercial en uno de los principales mercados para la carne vacuna argentina",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.365Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Efecto Súper Niño: se esperan subas en el precio del carne hasta fin de año y presionará a la inflación",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.365Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Dólar hoy y dólar blue, EN VIVO: a cuánto cotizó el oficial y cuál fue el precio del paralelo, minuto a minuto, este 16 de octubre",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.364Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "La carrera contra la inflación: cómo le fue al salario de cada gremio desde que comenzó la era Milei, según un informe oficial",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.364Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "El FMI insiste con su pedido para que la Argentina baje más los subsidios",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.364Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Menos empleo formal y salarios en baja: la participación del trabajo en la economía cayó al 42,9%",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.364Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Impulsada por el petróleo, la inflación mayorista subió en septiembre un 3,2% y en lo que va del año creció 22,8%",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.324Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "El Gobierno tuvo otro mes de superávit y quedó más cerca de la meta fiscal con el FMI",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.324Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El dólar se mantuvo estable, pero el riesgo país volvió a subir: por qué el mercado se mueve a dos velocidades",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.324Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Por las emisiones de bonos en pesos, la deuda pública creció US$ 31.500 millones en lo que va del año",
+      "descripcion": "",
+      "url": "https://www.clarin.com/economia/",
+      "fecha": "2026-10-17T19:09:25.324Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El gobierno provincial reporta que varios ríos registran una tendencia en baja",
+      "descripcion": "",
+      "url": "https://www.elentrerios.com/",
+      "fecha": "2026-10-17T19:09:25.249Z",
+      "fuente": "El Entre Ríos",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Fuga, persecución y drogas: abandonó más de 5 kilos tras evadir control policial",
+      "descripcion": "",
+      "url": "https://www.elentrerios.com/",
+      "fecha": "2026-10-17T19:09:25.248Z",
+      "fuente": "El Entre Ríos",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "La senadora que rompió con el bloque del PJ explicó por qué hay que suspender las PASO",
+      "descripcion": "",
+      "url": "https://www.elentrerios.com/",
+      "fecha": "2026-10-17T19:09:25.248Z",
+      "fuente": "El Entre Ríos",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Obra inconclusa en escuela de Concordia: Cresto llevó el reclamo a Diputados y propone recuperar un programa",
+      "descripcion": "",
+      "url": "https://www.elentrerios.com/",
+      "fecha": "2026-10-17T19:09:25.243Z",
+      "fuente": "El Entre Ríos",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Hay 4 detenidos y 6800 dólares secuestrados por estafa a consorcio caminero",
+      "descripcion": "",
+      "url": "https://www.elentrerios.com/",
+      "fecha": "2026-10-17T19:09:25.242Z",
+      "fuente": "El Entre Ríos",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Criar a un hijo volvió a encarecerse por encima de la inflación por el aumento en las tareas de cuidado",
+      "descripcion": "",
+      "url": "https://www.ellitoral.com/seccion/economia/",
+      "fecha": "2026-10-17T19:09:25.213Z",
+      "fuente": "El Litoral (Santa Fe)",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "La inflación mayorista aceleró en septiembre y superó el IPC por el salto de la energía",
+      "descripcion": "",
+      "url": "https://www.ellitoral.com/seccion/economia/",
+      "fecha": "2026-10-17T19:09:25.213Z",
+      "fuente": "El Litoral (Santa Fe)",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Así cerró el dólar en bancos, blue y MEP este viernes 16 de octubre",
+      "descripcion": "",
+      "url": "https://www.ellitoral.com/seccion/economia/",
+      "fecha": "2026-10-17T19:09:25.213Z",
+      "fuente": "El Litoral (Santa Fe)",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "En vivo: así cotiza el dólar hoy, viernes 16 de octubre, en Argentina",
+      "descripcion": "",
+      "url": "https://www.ellitoral.com/seccion/economia/",
+      "fecha": "2026-10-17T19:09:25.213Z",
+      "fuente": "El Litoral (Santa Fe)",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "De principal deudor a “alumno ejemplar”: el nuevo rol que el FMI le asigna a la Argentina",
+      "descripcion": "",
+      "url": "https://www.ellitoral.com/seccion/economia/",
+      "fecha": "2026-10-17T19:09:25.213Z",
+      "fuente": "El Litoral (Santa Fe)",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Así cerró el dólar en bancos, blue y MEP este jueves 15 de octubre",
+      "descripcion": "",
+      "url": "https://www.ellitoral.com/seccion/economia/",
+      "fecha": "2026-10-17T19:09:25.213Z",
+      "fuente": "El Litoral (Santa Fe)",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Cómo cerró el atraso en el pago de deudas de familias y empresas en agosto",
+      "descripcion": "",
+      "url": "https://www.ellitoral.com/seccion/economia/",
+      "fecha": "2026-10-17T19:09:25.212Z",
+      "fuente": "El Litoral (Santa Fe)",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El bolsillo no descansa en Panamá: gasolina, luz y comida empujaron el costo de vida en septiembre",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/panama/2026/10/17/el-bolsillo-no-descansa-en-panama-gasolina-luz-y-comida-empujaron-el-costo-de-vida-en-septiembre/",
+      "fecha": "2026-10-17T19:09:25.165Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "Miles de estudiantes cubanos siguen con clases virtuales por los apagones y la falta de transporte",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/cuba/2026/10/17/miles-de-estudiantes-cubanos-siguen-con-clases-virtuales-por-los-apagones-y-la-falta-de-transporte/",
+      "fecha": "2026-10-17T19:09:25.165Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "Habló la reportera que se hizo viral por la llamativa “lucha” de un entrenador cuando lo entrevistó: “Destaco su fuerza de voluntad”",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/deportes/2026/10/17/hablo-la-reportera-que-se-hizo-viral-por-la-llamativa-lucha-de-un-entrenador-cuando-lo-entrevisto-destaco-su-fuerza-de-voluntad/",
+      "fecha": "2026-10-17T19:09:25.165Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "Por la fuerte suba del petróleo, la inflación mayorista se aceleró a 3,2% en septiembre",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/economia/2026/10/16/por-la-fuerte-suba-del-petroleo-la-inflacion-mayorista-se-acelero-a-32-en-septiembre/",
+      "fecha": "2026-10-17T19:09:25.164Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Riego solar: una innovación para llevar agua a los lotes donde no llega la electricidad",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/revista-chacra/2026/10/15/riego-solar-una-innovacion-para-llevar-agua-a-los-lotes-donde-no-llega-la-electricidad/",
+      "fecha": "2026-10-17T19:09:25.164Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "¿Qué es la logística agéntica y qué funciones puede asumir en el transporte y el comercio exterior?",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/movant/2026/10/17/que-es-la-logistica-agentica-y-que-funciones-puede-asumir-en-el-transporte-y-el-comercio-exterior/",
+      "fecha": "2026-10-17T19:09:25.164Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "servicios_hogar",
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "Gastó $200.000 y llenó el freezer: mostró su compra de comida para todo el mes y se viralizó",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/economia/2026/10/17/gasto-200000-y-lleno-el-freezer-mostro-su-compra-de-comida-para-todo-el-mes-y-se-viralizo/",
+      "fecha": "2026-10-17T19:09:25.163Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "Caputo defendió el rumbo económico del Gobierno y aseguró que la Argentina tiene un “excedente de dólares”",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/economia/2026/10/17/caputo-defendio-el-rumbo-economico-del-gobierno-y-aseguro-que-la-argentina-tiene-un-excedente-de-dolares/",
+      "fecha": "2026-10-17T19:09:25.163Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El Banco Central cerró su mejor semana de compra de dólares desde julio y acumula casi USD 1.000 millones en octubre",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/economia/2026/10/16/el-banco-central-cerro-su-mejor-semana-de-compra-de-dolares-desde-julio-y-acumula-casi-usd-1000-millones-en-octubre/",
+      "fecha": "2026-10-17T19:09:25.163Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Salario y empleo: en qué segmentos de ingreso el trabajo informal remunera mejor que el trabajo registrado",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/economia/2026/10/17/salario-y-empleo-cuales-son-los-segmentos-de-ingreso-en-los-que-el-trabajo-informal-remunera-mejor-que-el-trabajo-registrado/",
+      "fecha": "2026-10-17T19:09:25.162Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Las expensas en CABA aumentaron más que el doble de la inflación en septiembre: cuánto paga un departamento promedio",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/economia/2026/10/17/las-expensas-en-caba-aumentaron-mas-que-el-doble-de-la-inflacion-en-septiembre-cuanto-paga-un-departamento-promedio/",
+      "fecha": "2026-10-17T19:09:25.162Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "poder_adquisitivo",
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "Scott Bessent, Japón y la Argentina: ¿cuánto puede aportar Estados Unidos a la “bazuca” de dólares del gobierno de Milei?",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/economia/2026/10/17/scott-bessent-japon-y-la-argentina-cuanto-puede-aportar-estados-unidos-a-la-bazuca-de-dolares-del-gobierno-de-milei/",
+      "fecha": "2026-10-17T19:09:25.162Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Cuánto cobran los empleados bancarios tras el nuevo aumento definido en paritarias",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/economia/2026/10/17/cuanto-cobran-los-empleados-bancarios-tras-el-nuevo-aumento-definido-en-paritarias/",
+      "fecha": "2026-10-17T19:09:25.162Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "La inflación en modo “serrucho”: por qué alterna subas y bajas, y cuáles son los factores que complican su desaceleración",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/economia/2026/10/17/la-inflacion-en-modo-serrucho-por-que-alterna-subas-y-bajas-y-cuales-son-los-factores-que-complican-su-desaceleracion/",
+      "fecha": "2026-10-17T19:09:25.162Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "La indumentaria, en crisis: más ropa importada, menos ventas y una fecha clave para intentar la reactivación",
+      "descripcion": "",
+      "url": "https://www.infobae.com/economia/economia/2026/10/17/la-indumentaria-en-crisis-mas-ropa-importada-menos-ventas-y-una-fecha-clave-para-intentar-la-reactivacion/",
+      "fecha": "2026-10-17T19:09:25.162Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "Últimos registros. A cuánto abre el dólar el lunes 19 de octubre",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/dolar/a-cuanto-abre-el-dolar-el-lunes-19-de-octubre-nid17102026/",
+      "fecha": "2026-10-17T19:09:25.123Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Últimos registros. ¿A cuánto cotiza el dólar oficial y el blue hoy?",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/dolar/dolar-hoy-y-dolar-blue-hoy-a-cuanto-cotiza-este-sabado-17-de-octubre-nid17102026/",
+      "fecha": "2026-10-17T19:09:25.123Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "“El agua viene fuerte”. La crecida acecha y el éxodo de animales y de pobladores en el Litoral entró en su hora más crítica",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/campo/el-agua-viene-fuerte-en-las-islas-del-litoral-se-profundiza-el-exodo-de-miles-de-animales-y-de-nid16102026/",
+      "fecha": "2026-10-17T19:09:25.123Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "“Hay apoyo\". Los países que quieren que emprendas: dan dinero, bajan impuestos y te ayudan a conseguir clientes",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/negocios/los-paises-que-quieren-que-emprendas-dan-dinero-bajan-impuestos-y-te-ayudan-a-conseguir-clientes-nid30092026/",
+      "fecha": "2026-10-17T19:09:25.122Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
+      "fecha": "2026-10-17T19:09:25.122Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo",
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Ganarle al agua. Así es el dramático operativo de los ganaderos de las islas entrerrianas donde nada puede fallar para salvar a las vacas",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/campo/ganarle-al-agua-asi-es-el-dramatico-operativo-de-los-ganaderos-de-las-islas-entrerrianas-donde-nada-nid17102026/",
+      "fecha": "2026-10-17T19:09:25.122Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "Comercio exterior",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/comercio-exterior/",
+      "fecha": "2026-10-17T19:09:25.122Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "Comercio. La Unión Europea lidera una iniciativa para sostener el sistema de intercambio global",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/la-union-europea-lidera-una-iniciativa-para-sostener-el-sistema-de-comercio-global-nid11022026/",
+      "fecha": "2026-10-17T19:09:25.122Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "En Tailandia. Caputo aseguró que hay “un excedente de dólares” y que el rumbo del RIGI permitiría levantar restricciones cambiarias",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/luis-caputo-aseguro-que-hay-un-excedente-de-dolares-y-que-el-rumbo-del-rigi-permitiria-levantar-nid17102026/",
+      "fecha": "2026-10-17T19:09:25.121Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "\"Jamás van a entender\". El Banco Central volvió a comprar a pesar de que el dólar estuvo más demandado",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/el-banco-central-volvio-a-comprar-a-pesar-de-que-el-dolar-estuvo-mas-demandado-nid16102026/",
+      "fecha": "2026-10-17T19:09:25.121Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Dato oficial. El Banco Central confirmó que el crecimiento de la mora comenzó a frenarse",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/el-banco-central-confirmo-que-el-crecimiento-de-la-mora-comenzo-a-frenarse-nid16102026/",
+      "fecha": "2026-10-17T19:09:25.121Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Mercados y dólar. El riesgo país cerró la semana con otra suba y rozó los 650 puntos",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/el-riesgo-pais-cierra-la-semana-con-otra-suba-y-supera-los-640-puntos-nid16102026/",
+      "fecha": "2026-10-17T19:09:25.121Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Récord de US$10.000 millones. El sector de la economía que solía \"explotar\" con un dólar alto y que hoy es un boom",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/la-economia-del-conocimiento-cruzo-los-us10000-millones-en-exportaciones-las-razones-y-los-desafios-nid16102026/",
+      "fecha": "2026-10-17T19:09:25.121Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Las razones del fuerte salto. Se aceleró la inflación mayorista y en septiembre subió al 3,2%",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/la-inflacion-mayorista-se-acelero-al-32-en-septiembre-impulsada-por-el-petroleo-y-el-gas-nid16102026/",
+      "fecha": "2026-10-17T19:09:25.121Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "En septiembre. El Gobierno mostró superávit y dijo que “cumplió” con la ley de financiamiento universitario",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/el-gobierno-mostro-superavit-en-septiembre-y-dijo-que-cumplio-con-los-acuerdos-alcanzados-con-las-nid16102026/",
+      "fecha": "2026-10-17T19:09:25.121Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Dólares y algo más. ¿Qué tan fuerte llegará el Gobierno a las elecciones de 2027?",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/cuan-fuerte-estara-el-gobierno-de-cara-a-las-elecciones-de-2027-nid11102026/",
+      "fecha": "2026-10-17T19:09:25.121Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Del plazo fijo a los cedears. El mapa de las inversiones que pagan impuestos",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/negocios/el-mapa-de-las-inversiones-que-pagan-impuestos-nid17102026/",
+      "fecha": "2026-10-17T19:09:25.118Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Fuerte salto. La inflación mayorista se aceleró al 3,2% en septiembre impulsada por el petróleo y el gas",
+      "descripcion": "",
+      "url": "https://www.lanacion.com.ar/economia/economia/la-inflacion-mayorista-se-acelero-al-32-en-septiembre-impulsada-por-el-petroleo-y-el-gas-nid16102026/",
+      "fecha": "2026-10-17T13:07:14.837Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo"
       ]
     }
   ],
   "alertas": [
     {
-      "titulo": "Impulsada por el petróleo, la inflación mayorista subió en septiembre un 3,2% y en lo que va del año creció 22,8%",
+      "titulo": "Efecto Súper Niño: se esperan subas en el precio del carne hasta fin de año y presionará a la inflación",
       "impacto": "PODER ADQUISITIVO",
       "tiempo": "Ahora",
-      "url": "https://www.clarin.com/economia/",
       "fuente": "Clarín"
     },
     {
       "titulo": "Polémica por el Belgrano Cargas: el Gobierno salió a responder las críticas por la falta de obras en el Norte",
       "impacto": "SERVICIOS Y HOGAR",
       "tiempo": "Ahora",
-      "url": "https://www.clarin.com/economia/",
       "fuente": "Clarín"
     },
     {
       "titulo": "Lanzan una plataforma para que importadores Pymes hagan pagos al exterior en pesos y con acreditación instantánea",
       "impacto": "CONSUMO MASIVO",
       "tiempo": "Ahora",
-      "url": "https://www.clarin.com/economia/",
       "fuente": "Clarín"
     },
     {
-      "titulo": "El Gobierno tuvo otro mes de superávit y quedó más cerca de la meta fiscal con el FMI",
+      "titulo": "La titular del FMI comparó Argentina con Grecia",
       "impacto": "GOBIERNO",
       "tiempo": "Ahora",
-      "url": "https://www.clarin.com/economia/",
-      "fuente": "Clarín"
+      "fuente": "Página/12"
     }
   ]
 }
