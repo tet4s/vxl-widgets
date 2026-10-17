@@ -467,7 +467,9 @@ async function processMarketData() {
         if (velas.length >= 2) {
           historial[slot.label] = velas;
           actualizados++;
-          console.log(`[HISTORIAL] ${slot.label}: ${crudos.length} puntos crudos -> ${velas.length} velas de 4h`);
+          const f0 = crudos[0].fechaHora || crudos[0].fecha;
+          const fN = crudos[crudos.length - 1].fechaHora || crudos[crudos.length - 1].fecha;
+          console.log(`[HISTORIAL] ${slot.label}: ${crudos.length} crudos (${f0} -> ${fN}) -> ${velas.length} velas`);
         } else {
           console.warn(`[HISTORIAL] ${slot.label}: no se pudieron armar velas (se conserva el previo)`);
         }
