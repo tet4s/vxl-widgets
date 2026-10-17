@@ -215,6 +215,112 @@ function leerBursatilPrevio() {
   return [];
 }
 
+// ==================== VARIACIÓN DE DÓLARES (cierre del día anterior) ====================
+// DolarAPI no manda variación intradía. La calculamos nosotros:
+//   - Se guarda el ÚLTIMO valor de cada dólar en el día en curso ("ultimo_del_dia").
+//   - Cuando cambia el día, ese último valor pasa a ser el "cierre_anterior".
+//   - Cada corrida del día actual calcula: variacion = (venta - cierre_anterior) / cierre_anterior * 100
+// El estado se persiste dentro de quotes.json (campo "dolares_cierre"), que se commitea.
+
+// Fecha en zona Argentina (UTC-3) con formato YYYY-MM-DD
+function fechaART(date = new Date()) {
+  const d = new Date(date.getTime() - 3 * 3600 * 1000);
+  return d.toISOString().slice(0, 10);
+}
+
+// Lee el estado de cierre de dólares guardado en la corrida anterior
+function leerEstadoDolares() {
+  try {
+    const p = path.join(__dirname, '../data', 'quotes.json');
+    if (fs.existsSync(p)) {
+      const prev = JSON.parse(fs.readFileSync(p, 'utf8'));
+      if (prev.dolares_cierre) return prev.dolares_cierre;
+    }
+  } catch (e) {
+    console.warn('[WARN] No se pudo leer dolares_cierre previo:', e.message);
+  }
+  return null;
+}
+
+// Calcula la variación de cada dólar contra el cierre del día anterior.
+// Devuelve { dolares, estado }. El estado se guarda en el JSON.
+function aplicarVariacionDolares(dolaresRaw, estadoPrevio) {
+  const hoy = fechaART();
+
+  // Último valor conocido hoy de cada casa (lo que mañana será el cierre)
+  const valoresHoy = {};
+  for (const d of dolaresRaw) {
+    if (d.venta != null) valoresHoy[d.casa] = Number(d.venta);
+  }
+
+  let estado;
+  if (!estadoPrevio || !estadoPrevio.fecha_ultimo) {
+    // Primera corrida: puede venir un cierre_anterior ya sembrado desde el histórico
+    estado = {
+      fecha_ultimo: hoy,
+      ultimo_del_dia: valoresHoy,
+      fecha_cierre: (estadoPrevio && estadoPrevio.fecha_cierre) || null,
+      cierre_anterior: (estadoPrevio && estadoPrevio.cierre_anterior) || null
+    };
+    console.log('[DOLARES] Primera corrida. Referencia:',
+      estado.cierre_anterior ? 'sembrada del histórico' : 'sin cierre anterior aún');
+  } else if (estadoPrevio.fecha_ultimo !== hoy) {
+    // Cambió el día → el último valor del día anterior pasa a ser el cierre de referencia
+    estado = {
+      fecha_ultimo: hoy,
+      ultimo_del_dia: valoresHoy,
+      fecha_cierre: estadoPrevio.fecha_ultimo,
+      cierre_anterior: estadoPrevio.ultimo_del_dia || null
+    };
+    console.log(`[DOLARES] Día nuevo. Cierre anterior tomado del ${estado.fecha_cierre}.`);
+  } else {
+    // Mismo día → mantener el cierre anterior, actualizar el último valor del día
+    estado = {
+      fecha_ultimo: hoy,
+      ultimo_del_dia: valoresHoy,
+      fecha_cierre: estadoPrevio.fecha_cierre || null,
+      cierre_anterior: estadoPrevio.cierre_anterior || null
+    };
+  }
+
+  const dolares = dolaresRaw.map(d => {
+    const venta = d.venta != null ? Number(d.venta) : null;
+    const ref = estado.cierre_anterior ? estado.cierre_anterior[d.casa] : null;
+    let variacion = null;
+    if (venta != null && ref != null && Number(ref) > 0) {
+      variacion = Number((((venta - Number(ref)) / Number(ref)) * 100).toFixed(2));
+    }
+    return { ...d, variacion };
+  });
+
+  return { dolares, estado };
+}
+
+// ==================== SIEMBRA DEL CIERRE ANTERIOR (ArgentinaDatos) ====================
+// DolarAPI no expone histórico. ArgentinaDatos sí: de ahí se toma el último cierre
+// de cada casa de un día ANTERIOR a hoy, para que la variación funcione desde la primera corrida.
+// Una vez guardado en quotes.json, no se vuelve a consultar.
+async function fetchCierreAnteriorArgentinaDatos() {
+  try {
+    const res = await fetch('https://api.argentinadatos.com/v1/cotizaciones/dolares/');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const arr = await res.json();
+    const hoy = fechaART();
+    const porCasa = {};
+    // El array viene ordenado por fecha ascendente: el último que pase el filtro es el cierre más reciente
+    for (const item of arr) {
+      if (!item.fecha || item.fecha >= hoy) continue;   // solo días anteriores a hoy
+      if (item.venta != null) porCasa[item.casa] = Number(item.venta);
+    }
+    if (!Object.keys(porCasa).length) return null;
+    console.log('[DOLARES] Cierre anterior sembrado desde ArgentinaDatos:', JSON.stringify(porCasa));
+    return porCasa;
+  } catch (e) {
+    console.warn('[DOLARES] No se pudo sembrar el cierre anterior:', e.message);
+    return null;
+  }
+}
+
 // ==================== PROCESO PRINCIPAL ====================
 
 async function processMarketData() {
@@ -248,10 +354,16 @@ async function processMarketData() {
     console.warn('[WARNING] No se pudo sincronizar Riesgo País:', e.message);
   }
 
-  const dolares = dolaresRaw.map(d => ({
-    ...d,
-    variacion: typeof d.variacion === 'number' ? d.variacion : 0
-  }));
+  // Variación de cada dólar contra el cierre del día anterior (persistido en quotes.json)
+  let estadoPrevioDolares = leerEstadoDolares();
+  // Si todavía no hay referencia de cierre, sembrarla con el último cierre disponible
+  if (!estadoPrevioDolares || !estadoPrevioDolares.cierre_anterior) {
+    const cierreSemilla = await fetchCierreAnteriorArgentinaDatos();
+    if (cierreSemilla) {
+      estadoPrevioDolares = Object.assign({}, estadoPrevioDolares || {}, { cierre_anterior: cierreSemilla });
+    }
+  }
+  const { dolares, estado: estadoDolares } = aplicarVariacionDolares(dolaresRaw, estadoPrevioDolares);
   if (riesgoPaisObj) dolares.push(riesgoPaisObj);
 
   // --- Bolsa (IOL) con cascada de auth ---
@@ -343,6 +455,7 @@ async function processMarketData() {
     status,
     source,
     dolares,
+    dolares_cierre: estadoDolares,
     bursatil,
     historial
   };
