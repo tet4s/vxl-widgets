@@ -75,6 +75,22 @@ function formatearFecha(fechaISO) {
   } catch { return ''; }
 }
 
+function esGancho(t) {
+  var n = normalizarTexto(t);
+  var g = ['viral','se hizo viral','lleno su','hizo viral','tendr','vas a','no creer','sorpres','imposible','asqueroso','increible','escandal','te vas a','no vas a','haz click','haga click','click aqui','ver video','este video','trending','sabias que','sabia que','esto del','esto de','mira esto','top 10','lista de','10 cosas','curiosidad','dato curioso'];
+  for (var i = 0; i < g.length; i++) { if (n.indexOf(g[i]) !== -1) return true; }
+  if (/[!]{2,}/.test(t)) return true;
+  if (/[\u{1F300}-\u{1FAFF}]/u.test(t)) return true;
+  return false;
+}
+function extraerFecha($el, fuente) {
+  var cand = $el.closest('time[datetime]');
+  if (!cand || !cand.attr('datetime')) cand = $el.parents('article').find('time[datetime]').first();
+  if (!cand || !cand.attr('datetime')) cand = $el.siblings('time[datetime]').first();
+  var raw = cand && cand.attr('datetime');
+  if (raw) { var d = new Date(raw); if (!isNaN(d.getTime())) return d.toISOString(); }
+  return new Date().toISOString();
+}
 async function procesarFuente(fuente) {
   try {
     const response = await axios.get(fuente.url, {
@@ -88,7 +104,7 @@ async function procesarFuente(fuente) {
       const $el = $(el);
       const titulo = $el.text().trim();
       const link = $el.attr('href') || $el.closest('a').attr('href') || '';
-      if (titulo.length > 15 && !titulosVistos.has(titulo)) {
+      if (titulo.length > 15 && !titulosVistos.has(titulo) && !esGancho(titulo)) {
         titulosVistos.add(titulo);
         const categorias = clasificarNoticia(titulo);
         if (categorias.length > 0) {
@@ -96,7 +112,7 @@ async function procesarFuente(fuente) {
             titulo: titulo,
             descripcion: '',
             url: link.startsWith('http') ? link : fuente.url.replace(/\/$/, '') + '/' + link.replace(/^\//, ''),
-            fecha: new Date().toISOString(),
+            fecha: extraerFecha($el, fuente),
             fuente: fuente.nombre,
             categorias
           });
@@ -154,7 +170,7 @@ async function main() {
   const merged = {};
   const add = (n) => {
     const k = normalizarTexto(n.titulo);
-    if (!k || !n.titulo) return;
+    if (!k || !n.titulo || esGancho(n.titulo)) return;
     if (!n.categorias || !n.categorias.length) n.categorias = clasificarNoticia(n.titulo);
     if (merged[k]) { if (parseFechaIso(n.fecha) > parseFechaIso(merged[k].fecha)) merged[k] = n; }
     else { merged[k] = n; }
