@@ -153,6 +153,20 @@ async function fetchIolData(accessToken) {
   return resultados;
 }
 
+// Serie histórica de un símbolo — para los sparklines del widget.
+// Endpoint: GET /api/v2/{mercado}/Titulos/{simbolo}/Cotizacion/seriehistorica/{desde}/{hasta}/{ajustada}
+// Devuelve { serie: [ { fecha, ultimoPrecio, ... }, ... ] }
+async function fetchSerieHistorica(accessToken, simbolo, fechaDesde, fechaHasta, ajustada = 'sinAjustar', mercado = 'bCBA') {
+  const url = `${IOL_BASE_URL}/api/v2/${mercado}/Titulos/${simbolo}/Cotizacion/seriehistorica/${fechaDesde}/${fechaHasta}/${ajustada}`;
+  const response = await axios.get(url, {
+    headers: {
+      'Authorization': 'Bearer ' + accessToken,
+      'Accept': 'application/json'
+    }
+  });
+  return response.data;
+}
+
 // ==================== TRANSFORMACIÓN AL SHAPE DEL WIDGET ====================
 
 function fmtNumero(n, decimales = 2) {
@@ -370,6 +384,7 @@ async function processMarketData() {
   let bursatil = [];
   let status = 'fallback';
   let source = 'DolarAPIonly';
+  let iolToken = null;   // se reusa despues para traer el historico
 
   try {
     let token = await getValidAccessToken();
@@ -392,6 +407,7 @@ async function processMarketData() {
         throw err;
       }
     }
+    iolToken = token;
     bursatil = transformIolDataToUniverse(paneles);
     if (bursatil.length === 6) {
       status = 'ok';
@@ -407,45 +423,46 @@ async function processMarketData() {
     bursatil = leerBursatilPrevio();
   }
 
-  // === HISTORIAL DE PRECIOS (cierres de vela 4h, 1 mes = 180 puntos) ===
-  // Cargar historial previo del JSON
+  // === HISTORIAL DE PRECIOS (serie histórica real de IOL) ===
+  // Se pide la serie del último mes a IOL y se REEMPLAZA el historial (no se acumula de a un punto).
+  // Si IOL falla, se conserva el historial previo (nunca se pierde).
   let historial = {};
   try {
-    const outputDir2 = path.join(__dirname, '../data');
-    const prevPath = path.join(outputDir2, 'quotes.json');
+    const prevPath = path.join(__dirname, '../data', 'quotes.json');
     if (fs.existsSync(prevPath)) {
       const prev = JSON.parse(fs.readFileSync(prevPath, 'utf8'));
       if (prev.historial) historial = prev.historial;
     }
   } catch (e) { console.warn('No se pudo cargar historial previo:', e.message); }
 
-  // Agregar punto de cierre de vela 4h:
-  // Si la última actualización fue hace >= 4 horas (o no existe), agregar nuevo punto
-  const ahora = Date.now();
-  let lastHora = 0;
-  try {
-    const prevPath2 = path.join(__dirname, '../data', 'quotes.json');
-    if (fs.existsSync(prevPath2)) {
-      const prev = JSON.parse(fs.readFileSync(prevPath2, 'utf8'));
-      lastHora = prev.timestamp_epoch || 0;
-    }
-  } catch (e) {}
+  if (iolToken && bursatil.length === 6) {
+    const fechaHasta = fechaART();
+    const fechaDesde = fechaART(new Date(Date.now() - 35 * 24 * 3600 * 1000));
+    let actualizados = 0;
 
-  if (ahora - lastHora >= 4 * 3600 || lastHora === 0) {
-    // Agregar cierre de cada activo bursátil al historial
-    for (const item of bursatil) {
-      const simbolo = item.label;
-      const precio = parseFloat(String(item.val).replace(/[^0-9.]/g, '')) || 0;
-      if (!historial[simbolo]) historial[simbolo] = [];
-      historial[simbolo].push(precio);
-      // Mantener solo los últimos 180 puntos (1 mes en velas de 4h)
-      if (historial[simbolo].length > 180) {
-        historial[simbolo] = historial[simbolo].slice(-180);
+    for (const slot of WIDGET_SLOTS) {
+      try {
+        const data = await fetchSerieHistorica(iolToken, slot.simbolo, fechaDesde, fechaHasta);
+        const serie = data && Array.isArray(data.serie) ? data.serie : null;
+        if (!serie || serie.length < 2) {
+          console.warn(`[HISTORIAL] ${slot.label}: la serie vino vacía o con menos de 2 puntos`);
+          continue;
+        }
+        const puntos = serie
+          .map(pt => Number(pt.ultimoPrecio))
+          .filter(v => Number.isFinite(v) && v > 0);
+        if (puntos.length >= 2) {
+          historial[slot.label] = puntos.slice(-180);
+          actualizados++;
+          console.log(`[HISTORIAL] ${slot.label}: ${puntos.length} puntos (${serie[0].fecha} → ${serie[serie.length - 1].fecha})`);
+        }
+      } catch (e) {
+        console.warn(`[HISTORIAL] ${slot.label}: error al traer la serie (${e.message}) — se conserva el previo`);
       }
     }
-    console.log('[HISTORIAL] Cierre de vela 4h agregado para', Object.keys(historial).length, 'activos');
+    console.log(`[HISTORIAL] Actualizados ${actualizados}/${WIDGET_SLOTS.length} activos`);
   } else {
-    console.log('[HISTORIAL] No corresponde agregar cierre (último hace ' + Math.floor((ahora - lastHora) / 60) + ' min)');
+    console.log('[HISTORIAL] Sin token de IOL o sin bursátil completo — se conserva el historial previo');
   }
 
   const payload = {
