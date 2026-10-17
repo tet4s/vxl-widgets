@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-16T23:50:34.808Z",
-  "timestamp_epoch": 1792194634,
+  "last_updated": "2026-10-17T00:28:19.180Z",
+  "timestamp_epoch": 1792196899,
   "timeframe": "1m",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -21,7 +21,7 @@
       "compra": 1535,
       "venta": 1555,
       "fechaActualizacion": "2026-10-16T20:58:00.000Z",
-      "variacion": 0
+      "variacion": 0.32
     },
     {
       "moneda": "USD",
@@ -30,7 +30,7 @@
       "compra": 1534.3,
       "venta": 1542.5,
       "fechaActualizacion": "2026-10-16T20:58:00.000Z",
-      "variacion": 0
+      "variacion": 0.18
     },
     {
       "moneda": "USD",
@@ -39,7 +39,7 @@
       "compra": 1618.4,
       "venta": 1620.5,
       "fechaActualizacion": "2026-10-16T20:58:00.000Z",
-      "variacion": 0
+      "variacion": 0.2
     },
     {
       "moneda": "USD",
@@ -48,7 +48,7 @@
       "compra": 1509,
       "venta": 1518,
       "fechaActualizacion": "2026-10-16T15:44:00.000Z",
-      "variacion": 0
+      "variacion": 0.33
     },
     {
       "moneda": "USD",
@@ -57,7 +57,7 @@
       "compra": 1615.45,
       "venta": 1617.8,
       "fechaActualizacion": "2026-10-16T20:58:00.000Z",
-      "variacion": 0
+      "variacion": 0.12
     },
     {
       "moneda": "USD",
@@ -69,6 +69,29 @@
       "variacion": 0
     }
   ],
+  "dolares_cierre": {
+    "fecha_ultimo": "2026-10-16",
+    "ultimo_del_dia": {
+      "oficial": 1535,
+      "blue": 1555,
+      "bolsa": 1542.5,
+      "contadoconliqui": 1620.5,
+      "mayorista": 1518,
+      "cripto": 1617.8,
+      "tarjeta": 1995.5
+    },
+    "fecha_cierre": null,
+    "cierre_anterior": {
+      "blue": 1550,
+      "mayorista": 1513,
+      "oficial": 1535,
+      "contadoconliqui": 1617.3,
+      "bolsa": 1539.7,
+      "tarjeta": 1995.5,
+      "solidario": 700.88,
+      "cripto": 1615.8
+    }
+  },
   "bursatil": [
     {
       "label": "PAMPA ENERGÍA",
@@ -112,9 +135,11 @@
       5.24,
       5.24,
       5.24,
+      5.24,
       5.24
     ],
     "YPF": [
+      8.43,
       8.43,
       8.43,
       8.43,
@@ -124,9 +149,11 @@
       5.805,
       5.805,
       5.805,
+      5.805,
       5.805
     ],
     "AL30 (BONO)": [
+      85.35,
       85.35,
       85.35,
       85.35,
@@ -136,9 +163,11 @@
       1.86,
       1.86,
       1.86,
+      1.86,
       1.86
     ],
     "MOLINOS AGRO": [
+      2.285,
       2.285,
       2.285,
       2.285,
