@@ -451,27 +451,30 @@ async function processMarketData() {
           continue;
         }
 
-        // Agrupar en velas de 4h: nos quedamos con el ÚLTIMO precio de cada bloque de 4 horas
-        const porVela = new Map();
-        for (const pt of crudos) {
+        // Ordenar por fecha ascendente, para que el último punto de cada día sea el CIERRE
+        const ordenados = [...crudos].sort((a, b) => {
+          const fa = String(a.fechaHora || a.fecha || '');
+          const fb = String(b.fechaHora || b.fecha || '');
+          return fa < fb ? -1 : (fa > fb ? 1 : 0);
+        });
+
+        // Agrupar por DÍA: se guarda el cierre de cada jornada (la API trae puntos intradiarios).
+        // El cierre diario es lo que mejor ilustra la tendencia general del activo.
+        const porDia = new Map();
+        for (const pt of ordenados) {
           const precio = Number(pt.ultimoPrecio);
           const fh = String(pt.fechaHora || pt.fecha || '');
-          if (!Number.isFinite(precio) || precio <= 0 || !fh.includes('T')) continue;
-          const partes = fh.split('T');
-          const hora = parseInt(partes[1].slice(0, 2), 10);
-          if (isNaN(hora)) continue;
-          porVela.set(`${partes[0]}T${String(Math.floor(hora / 4) * 4).padStart(2, '0')}`, precio);
+          if (!Number.isFinite(precio) || precio <= 0 || fh.length < 10) continue;
+          porDia.set(fh.slice(0, 10), precio);
         }
 
-        const velas = Array.from(porVela.values()).slice(-180);
+        const velas = Array.from(porDia.values()).slice(-180);
         if (velas.length >= 2) {
           historial[slot.label] = velas;
           actualizados++;
-          const dias = new Set(crudos.map(pt => String(pt.fechaHora || pt.fecha || '').slice(0, 10)));
-          const horas = new Set(crudos.map(pt => String(pt.fechaHora || pt.fecha || '').slice(11, 13)));
-          console.log(`[HISTORIAL] ${slot.label}: ${crudos.length} crudos | ${dias.size} dias distintos | ${horas.size} horas distintas | -> ${velas.length} velas`);
+          console.log(`[HISTORIAL] ${slot.label}: ${crudos.length} crudos -> ${velas.length} cierres diarios`);
         } else {
-          console.warn(`[HISTORIAL] ${slot.label}: no se pudieron armar velas (se conserva el previo)`);
+          console.warn(`[HISTORIAL] ${slot.label}: no se pudieron armar los cierres (se conserva el previo)`);
         }
       } catch (e) {
         console.warn(`[HISTORIAL] ${slot.label}: error al traer la serie (${e.message}) — se conserva el previo`);
