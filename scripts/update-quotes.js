@@ -445,7 +445,7 @@ async function processMarketData() {
         const data = await fetchSerieHistorica(iolToken, slot.simbolo, fechaDesde, fechaHasta);
         const serie = data && Array.isArray(data.serie) ? data.serie : null;
         if (!serie || serie.length < 2) {
-          console.warn(`[HISTORIAL] ${slot.label}: la serie vino vacía o con menos de 2 puntos`);
+          console.warn(`[HISTORIAL] ${slot.label}: serie vacía. Keys: ${Object.keys(data || {}).join(',')} | crudo: ${JSON.stringify(data).substring(0, 300)}`);
           continue;
         }
         const puntos = serie
