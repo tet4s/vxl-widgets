@@ -153,19 +153,22 @@ async function fetchIolData(accessToken) {
   return resultados;
 }
 
-// Serie histórica de un símbolo — para los sparklines del widget.
-// Endpoint: GET /api/v2/{mercado}/Titulos/{simbolo}/Cotizacion/seriehistorica/{desde}/{hasta}/{ajustada}
-// Devuelve { serie: [ { fecha, ultimoPrecio, ... }, ... ] }
-async function fetchSerieHistorica(accessToken, simbolo, fechaDesde, fechaHasta, ajustada = 'sinAjustar', mercado = 'bCBA') {
-  const url = `${IOL_BASE_URL}/api/v2/${mercado}/Titulos/${simbolo}/Cotizacion/seriehistorica/${fechaDesde}/${fechaHasta}/${ajustada}`;
+// ==================== SERIE HISTÓRICA (para los sparklines) ====================
+// Endpoint real (confirmado en los wrappers de la comunidad):
+//   GET /api/v2/{mercado}/Titulos/{simbolo}/Cotizacion/serieHistorica/{desde}/{hasta}/{ajuste}
+// Devuelve la serie DIARIA: la API de IOL no expone velas intradiarias de 4h.
+// ~1 mes de cierres diarios alcanza y sobra para el sparkline del widget.
+async function fetchSerieHistorica(accessToken, simbolo, desde, hasta, ajuste = 'ajustada') {
+  const url = `${IOL_BASE_URL}/api/v2/bCBA/Titulos/${simbolo}/Cotizacion/serieHistorica/${desde}/${hasta}/${ajuste}`;
   const response = await axios.get(url, {
     headers: {
       'Authorization': 'Bearer ' + accessToken,
       'Accept': 'application/json'
     }
   });
-  return response.data;
+  return Array.isArray(response.data) ? response.data : [];
 }
+
 
 // ==================== TRANSFORMACIÓN AL SHAPE DEL WIDGET ====================
 
@@ -384,8 +387,7 @@ async function processMarketData() {
   let bursatil = [];
   let status = 'fallback';
   let source = 'DolarAPIonly';
-  let iolToken = null;   // se reusa despues para traer el historico
-
+  let iolToken = null;   // se reutiliza para traer la serie histórica
   try {
     let token = await getValidAccessToken();
     let paneles;
@@ -488,7 +490,7 @@ async function processMarketData() {
   const payload = {
     last_updated: new Date().toISOString(),
     timestamp_epoch: Math.floor(Date.now() / 1000),
-    timeframe: '1m',
+    timeframe: '1d',
     status,
     source,
     dolares,
