@@ -77,9 +77,10 @@ function formatearFecha(fechaISO) {
 
 function esGancho(t) {
   var n = normalizarTexto(t);
-  var g = ['viral','se hizo viral','lleno su','hizo viral','tendr','vas a','no creer','sorpres','imposible','asqueroso','increible','escandal','te vas a','no vas a','haz click','haga click','click aqui','ver video','este video','trending','sabias que','sabia que','esto del','esto de','mira esto','top 10','lista de','10 cosas','curiosidad','dato curioso','no es cuento','no es un cuento','no es real','más que un cuento','más que una historia','el secreto de','todo cambió','no es casualidad'];
+  var g = ['viral','se hizo viral','lleno su','hizo viral','tendr','vas a','no creer','sorpres','imposible','asqueroso','increible','escandal','te vas a','no vas a','haz click','haga click','click aqui','ver video','este video','trending','sabias que','sabia que','esto del','esto de','mira esto','top 10','lista de','10 cosas','curiosidad','dato curioso','no es cuento','no es un cuento','no es real','más que un cuento','más que una historia','el secreto de','todo cambió','no es casualidad','minuto a minuto','triunfo que llev','en vivo','live'];
   for (var i = 0; i < g.length; i++) { if (n.indexOf(g[i]) !== -1) return true; }
   if (/[!]{2,}/.test(t)) return true;
+  if (/tiene \d+ años/i.test(t)) return true;
   if (/[\u{1F300}-\u{1FAFF}]/u.test(t)) return true;
   return false;
 }
@@ -260,7 +261,7 @@ function aplicarGuardrail(rewrites, items) {
 function delay(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
 async function reescribirLote(items) {
   if (!process.env.GEMINI_API_KEY) return items.map(i => tituloDescriptivo(i.titulo, i.descripcion));
-  const prompt = 'Reescribí los siguientes titulares en español rioplatense. Para CADA uno escribí un titular DESCRIPTIVO (máximo 2 líneas) que cuente la NOTICIA EN SÍ: un resumen del hecho, usando el titular original y el "resumen" (lead) del artículo como fuente. Tono VXL: informal, como hablás con un amigo al coffee, interés para una persona normal. NO inventes, NO ganchos, NO clickbait, NO emojis, NO jerga policial/judicial. Si el resumen está vacío, devolvés el titular original limpio (no inventes). Devolvé SOLO JSON {"rewrites":["título 1","título 2",...]} con la misma cantidad de ítems y orden. Entradas: ' + JSON.stringify(items.map(i => ({ titulo: i.titulo, resumen: i.descripcion })));
+  const prompt = 'Reescribí los siguientes titulares en español rioplatense. Para CADA uno escribí un titular DESCRIPTIVO (máximo 2 líneas) que cuente la NOTICIA EN SÍ: un resumen del hecho, usando el titular original y el "resumen" (lead) del artículo como fuente. Tono VXL: informal, como hablás con un amigo al coffee, interés para una persona normal. Prioridad: el título debe ser un DATO económico concreto (precio, %, monto, medida). Si el titular lleva encuadre político-partidista o gancho metafórico (ej. triunfo de, tiene N años, minuto a minuto) y el lead tiene el dato, reescribilo priorizando el DATO económico y sacando el encuadre político. NO inventes, NO ganchos, NO clickbait, NO emojis, NO jergla policial/judicial. Si el resumen está vacío, devolvés el titular original limpio (no inventes). Devolvé SOLO JSON {"rewrites":["título 1","título 2",...]} con la misma cantidad de ítems y orden. Entradas: ' + JSON.stringify(items.map(i => ({ titulo: i.titulo, resumen: i.descripcion })));
   var body = { contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.2, maxOutputTokens: 200 } };
   for (var attempt = 0; attempt < 3; attempt++) {
     try {
