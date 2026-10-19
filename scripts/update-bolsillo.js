@@ -173,7 +173,7 @@ function delay(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
 async function reescribirLote(titulos) {
   if (!process.env.GEMINI_API_KEY) return titulos;
   var prompt = 'Reescribí los siguientes titulares en español rioplatense, tono VXL (informal pero respetuoso, como hablás con un amigo al coffee): descriptivo y de interés para una persona normal, conservando TODA la información del titular original sin inventar ni agregar datos. Sin clickbait, sin ganchos, sin emojis, sin jerga policial ni temas drogas/accidentes/violencia (el filtro esOffTopic los descarta). Devolvé SOLO un JSON válido con la forma {"rewrites":["título 1","título 2",...]} con exactamente la misma cantidad de ítems recibidos y en el mismo orden. NO agregues numeración ni texto extra. Titulares: ' + JSON.stringify(titulos);
-  var body = { contents: [{ role: 'user', parts: [{ text: prompt }] }] };
+  var body = { contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.2, maxOutputTokens: 200 } };
   for (var attempt = 0; attempt < 3; attempt++) {
     try {
       await delay(4000);
