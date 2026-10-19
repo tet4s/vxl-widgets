@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-19T14:02:58.698Z",
-  "timestamp_epoch": 1792418578,
+  "last_updated": "2026-10-19T19:48:15.134Z",
+  "timestamp_epoch": 1792439295,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -9,76 +9,76 @@
       "moneda": "USD",
       "casa": "oficial",
       "nombre": "Oficial",
-      "compra": 1485,
-      "venta": 1535,
-      "fechaActualizacion": "2026-10-19T10:00:00.000Z",
-      "variacion": 0
+      "compra": 1490,
+      "venta": 1540,
+      "fechaActualizacion": "2026-10-19T16:00:00.000Z",
+      "variacion": 0.33
     },
     {
       "moneda": "USD",
       "casa": "blue",
       "nombre": "Blue",
-      "compra": 1535,
-      "venta": 1555,
-      "fechaActualizacion": "2026-10-19T12:57:00.000Z",
-      "variacion": 0
+      "compra": 1540,
+      "venta": 1560,
+      "fechaActualizacion": "2026-10-19T18:57:00.000Z",
+      "variacion": 0.32
     },
     {
       "moneda": "USD",
       "casa": "bolsa",
       "nombre": "Bolsa",
-      "compra": 1534.3,
-      "venta": 1542.5,
-      "fechaActualizacion": "2026-10-19T12:57:00.000Z",
-      "variacion": 0
+      "compra": 1539.4,
+      "venta": 1540.2,
+      "fechaActualizacion": "2026-10-19T18:57:00.000Z",
+      "variacion": -0.15
     },
     {
       "moneda": "USD",
       "casa": "contadoconliqui",
       "nombre": "Contado con liquidación",
-      "compra": 1618.4,
-      "venta": 1620.5,
-      "fechaActualizacion": "2026-10-19T12:57:00.000Z",
-      "variacion": 0
+      "compra": 1623.6,
+      "venta": 1624.6,
+      "fechaActualizacion": "2026-10-19T18:57:00.000Z",
+      "variacion": 0.25
     },
     {
       "moneda": "USD",
       "casa": "mayorista",
       "nombre": "Mayorista",
-      "compra": 1509,
-      "venta": 1518,
-      "fechaActualizacion": "2026-10-16T15:44:00.000Z",
-      "variacion": 0
+      "compra": 1514,
+      "venta": 1523,
+      "fechaActualizacion": "2026-10-19T11:27:00.000Z",
+      "variacion": 0.33
     },
     {
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1615.26,
-      "venta": 1617.45,
-      "fechaActualizacion": "2026-10-19T12:57:00.000Z",
-      "variacion": -0.28
+      "compra": 1619.61,
+      "venta": 1622.01,
+      "fechaActualizacion": "2026-10-19T18:57:00.000Z",
+      "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "tarjeta",
       "nombre": "Tarjeta",
-      "compra": 1930.5,
-      "venta": 1995.5,
-      "fechaActualizacion": "2026-10-19T10:00:00.000Z",
-      "variacion": 0
+      "compra": 1937,
+      "venta": 2002,
+      "fechaActualizacion": "2026-10-19T16:00:00.000Z",
+      "variacion": 0.33
     }
   ],
   "dolares_cierre": {
     "fecha_ultimo": "2026-10-19",
     "ultimo_del_dia": {
-      "oficial": 1535,
-      "blue": 1555,
-      "bolsa": 1542.5,
-      "contadoconliqui": 1620.5,
-      "mayorista": 1518,
-      "cripto": 1617.45,
-      "tarjeta": 1995.5
+      "oficial": 1540,
+      "blue": 1560,
+      "bolsa": 1540.2,
+      "contadoconliqui": 1624.6,
+      "mayorista": 1523,
+      "cripto": 1622.01,
+      "tarjeta": 2002
     },
     "fecha_cierre": "2026-10-18",
     "cierre_anterior": {
@@ -94,38 +94,38 @@
   "bursatil": [
     {
       "label": "PAMPA ENERGÍA",
-      "val": "$5.270,00",
-      "var": "▲ +0,57%",
-      "class": "up"
+      "val": "$5.170,00",
+      "var": "▼ 1,33%",
+      "class": "down"
     },
     {
       "label": "YPF",
-      "val": "$8.365,00",
-      "var": "▼ 0,77%",
+      "val": "$8.245,00",
+      "var": "▼ 2,19%",
       "class": "down"
     },
     {
       "label": "GRP FIN GALICIA",
-      "val": "$5.825,00",
-      "var": "▲ +0,34%",
-      "class": "up"
+      "val": "$5.725,00",
+      "var": "▼ 1,37%",
+      "class": "down"
     },
     {
       "label": "AL30 (BONO)",
-      "val": "$85.290,00",
-      "var": "▼ 0,07%",
+      "val": "$85.230,00",
+      "var": "▼ 0,14%",
       "class": "down"
     },
     {
       "label": "CRESUD (AGRO)",
-      "val": "$1.866,00",
-      "var": "▲ +0,32%",
-      "class": "up"
+      "val": "$1.849,00",
+      "var": "▼ 0,59%",
+      "class": "down"
     },
     {
       "label": "MOLINOS AGRO",
-      "val": "$2.265,00",
-      "var": "▼ 0,87%",
+      "val": "$2.220,00",
+      "var": "▼ 2,84%",
       "class": "down"
     }
   ],
