@@ -151,7 +151,7 @@ function parseFechaIso(f) {
 }
 
 const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash-8b:generateContent?key=' + encodeURIComponent(process.env.GEMINI_API_KEY || '');
-const OFF_TOPIC = ['policia','policial','droga','drogadicc','narc','narcotr','confisc','detenc','detenido','allanamiento','homicid','victim','victima','violencia','tiroteo','accidente','accidental','fallec','muerte','omicid','delito','delincuencia','cauta','inyectable','prisión','prision','incendio','incendiado'];
+const OFF_TOPIC = ['policia','policial','droga','drogadicc','narc','narcotr','confisc','detenc','detenido','allanamiento','homicid','victim','victima','violencia','tiroteo','accidente','accidental','fallec','muerte','omicid','delito','delincuencia','cauta','inyectable','prisión','prision','incendio','incendiado','enriquecimien','patrimoni','acusacion','corrupcion','fiscalia','fiscales'];
 function esOffTopic(t) {
   var n = normalizarTexto(t);
   for (var i = 0; i < OFF_TOPIC.length; i++) { if (n.indexOf(OFF_TOPIC[i]) !== -1) return true; }
@@ -216,16 +216,17 @@ async function reescribirLote(titulos) {
 }
 async function reescribirConLLM(items) {
   if (!process.env.GEMINI_API_KEY || !items.length) return;
-  var aplicados = 0, rechazados = 0;
+  var aplicados = 0, rechazados = 0, filtPost = 0;
   for (var i = 0; i < items.length; i += 25) {
     var chunk = items.slice(i, i + 25);
     var rw = await reescribirLote(chunk.map(function(c) { return c.titulo; }));
     for (var j = 0; j < chunk.length; j++) {
-      if (rw[j] && rw[j].length) { chunk[j].titulo = rw[j]; aplicados++; }
+      if (rw[j] && rw[j].length && !esOffTopic(rw[j])) { chunk[j].titulo = rw[j]; aplicados++; }
+      else if (rw[j] && esOffTopic(rw[j])) { filtPost++; }
       else { rechazados++; }
     }
   }
-  console.log('[bolsillo] rewrites LLM aplicados:', aplicados, '| rechazados por invención (conserva heurístico):', rechazados);
+  console.log('[bolsillo] rewrites LLM aplicados:', aplicados, '| rechazados por invención (conserva heurístico):', rechazados, '| filtrados judiciales/post-LLM:', filtPost);
   return items;
 }
 
