@@ -157,6 +157,17 @@ function esOffTopic(t) {
   for (var i = 0; i < OFF_TOPIC.length; i++) { if (n.indexOf(OFF_TOPIC[i]) !== -1) return true; }
   return false;
 }
+
+// WHITELIST temático (filtro primario, pre-LLM): un titular entra SOLO si menciona
+// algún concepto de consumo-masiva / poder adquisitivo. MÁS RIGUROSO que OFF_TOPIC:
+// no deja pasar lo desconocido (ej "fiscalía expuso viajes y consumos de la familia").
+// Matching accent-foldeado (NFD) para que "DÓLAR"/"dolar" matcheen.
+const ECONOMIA = ['dolar','inflacion','precio','precios','supermercado','super','salario','sueldo','tasa','interes','hipoteca','credito','prestamo','bolsa','merval','accion','tarifa','luz','agua','gas','internet','celular','combustible','nafta','empleo','desempleo','afip','impuesto','ganancia','capital','bcra','bcr','alquiler','vivienda','auto','seguro','pension','jubilacion','prevision','cepo','uva','cer','retail','pasaje','transporte','banco','bancario','ahorro','deposito','plazo fijo','descuento','importacion','exportacion','empresa','empresas','pyme','pymes','mercado','costo','consumo','gasto','remuneracion','nomina','subsidio','arancel','licitacion','obra publica','infraestructura','logistica','suministro','inversion','inversiones','produccion','mano de obra','mayorista','comercio','gremio','mercantil','industria','industrial'];
+function esNoticiaEconomica(t) {
+  var n = String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u0306\u0308\u0303]/g, '');
+  for (var i = 0; i < ECONOMIA.length; i++) { if (n.indexOf(ECONOMIA[i]) !== -1) return true; }
+  return false;
+}
 var STOP = new Set(['de','el','la','los','las','en','por','un','una','unas','unos','para','con','y','o','del','al','se','que','más','hoy','ayer','horas','min','hs','fecha','cotiz','precio','valor','subió','bajó','alza','caída']);
 function simTokens(t) {
   return normalizarTexto(t).replace(/[\d.,;%$()+]/g, '').split(/[^a-záéíóúñü]+/i).filter(function(w) { return w.length > 3 && !STOP.has(w); });
@@ -266,20 +277,21 @@ async function main() {
 
   // --- merge + dedupe conservando la fecha más nueva ---
   const merged = {};
-  let cntGancho = 0, cntOffTopic = 0;
+  let cntGancho = 0, cntOffTopic = 0, cntNoEcon = 0;
   const add = (n) => {
     n.titulo = reescribirTitulo(n.titulo);
     const k = normalizarTexto(n.titulo);
     if (!k || !n.titulo) return;
     if (esGancho(n.titulo)) { cntGancho++; return; }
     if (esOffTopic(n.titulo)) { cntOffTopic++; return; }
+    if (!esNoticiaEconomica(n.titulo)) { cntNoEcon++; return; }   // whitelist: debe mencionar consumo-masiva
     if (!n.categorias || !n.categorias.length) n.categorias = clasificarNoticia(n.titulo);
     if (merged[k]) { if (parseFechaIso(n.fecha) > parseFechaIso(merged[k].fecha)) merged[k] = n; }
     else { merged[k] = n; }
   };
   for (const n of nuevas) add(n);
   for (const n of historico) add(n);
-  console.log('[bolsillo] filtrados gancho:', cntGancho, '| off-topic (policiales/drogas/etc):', cntOffTopic);
+  console.log('[bolsillo] filtrados gancho:', cntGancho, '| off-topic (policiales/drogas/etc):', cntOffTopic, '| no-econ (sin término consumo-masiva):', cntNoEcon);
   const todas = Object.values(merged);
 
   // --- ventana 7 días (más recientes) ---
