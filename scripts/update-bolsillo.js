@@ -42,7 +42,7 @@ const FUENTES = [
 ];
 
 function normalizarTexto(texto) {
-  return (texto || '')
+  return String(texto || '')
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '');
@@ -277,7 +277,8 @@ async function reescribirLote(items) {
       if (attempt < 2) await delay(2000);
     }
   }
-  return items;
+  console.warn('[bolsillo] LLM parse no match (fallback): conserva heurístico para chunk de', items.length);
+  return items.map(function () { return null; });
 }
 async function reescribirConLLM(items) {
   if (!process.env.GEMINI_API_KEY || !items.length) return;
@@ -286,7 +287,7 @@ async function reescribirConLLM(items) {
     var chunk = items.slice(i, i + 25);
     var rw = await reescribirLote(chunk);   // chunk: {titulo, descripcion, ...} -> orig con lead
     for (var j = 0; j < chunk.length; j++) {
-      if (rw[j] && rw[j].length && !esOffTopic(rw[j])) { chunk[j].titulo = rw[j]; aplicados++; }
+      if (rw[j] && typeof rw[j] === 'string' && rw[j].length && !esOffTopic(rw[j])) { chunk[j].titulo = rw[j]; aplicados++; }
       else if (rw[j] && esOffTopic(rw[j])) { filtPost++; }
       else { rechazados++; }
     }
