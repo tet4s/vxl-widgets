@@ -77,7 +77,7 @@ function formatearFecha(fechaISO) {
 
 function esGancho(t) {
   var n = normalizarTexto(t);
-  var g = ['viral','se hizo viral','lleno su','hizo viral','tendr','vas a','no creer','sorpres','imposible','asqueroso','increible','escandal','te vas a','no vas a','haz click','haga click','click aqui','ver video','este video','trending','sabias que','sabia que','esto del','esto de','mira esto','top 10','lista de','10 cosas','curiosidad','dato curioso'];
+  var g = ['viral','se hizo viral','lleno su','hizo viral','tendr','vas a','no creer','sorpres','imposible','asqueroso','increible','escandal','te vas a','no vas a','haz click','haga click','click aqui','ver video','este video','trending','sabias que','sabia que','esto del','esto de','mira esto','top 10','lista de','10 cosas','curiosidad','dato curioso','no es cuento','no es un cuento','no es real','más que un cuento','más que una historia','el secreto de','todo cambió','no es casualidad'];
   for (var i = 0; i < g.length; i++) { if (n.indexOf(g[i]) !== -1) return true; }
   if (/[!]{2,}/.test(t)) return true;
   if (/[\u{1F300}-\u{1FAFF}]/u.test(t)) return true;
@@ -91,6 +91,46 @@ function extraerFecha($el, fuente) {
   if (raw) { var d = new Date(raw); if (!isNaN(d.getTime())) return d.toISOString(); }
   return new Date().toISOString();
 }
+async function extraerDescripcion(link, timeout = 4000) {
+  if (!link || !/^https?:\/\//i.test(link)) return '';
+  try {
+    // curl bypassa CF (fingerprint CLI != axios Node); async para concurrencia real en los batches
+    const { execFile } = require('child_process');
+    const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36';
+    let html = '';
+    try {
+      html = await new Promise((resolve, reject) => {
+        execFile('curl', ['-sL', '--max-time', '8', '-A', UA, '-w', '\n__HTTP__%{http_code}', link], { maxBuffer: 1024 * 1024 }, function (err, stdout) { if (err) reject(err); else resolve(stdout); });
+      });
+      const m = html && html.match(/__HTTP__(\d{3})$/);
+      if (m) {
+        const status = Number(m[1]);
+        html = html.slice(0, m.index);
+        if ([401, 403, 404, 429, 500, 502, 503].includes(status)) return '';
+      }
+    } catch { return ''; }
+    const $ = cheerio.load(typeof html === 'string' ? html : '');
+    let desc = $('meta[property="og:description"]').attr('content') || $('meta[name="description"]').attr('content') || '';
+    if (!desc) {
+      const $p = $('article p, .nota p, .contenido p, .entry-content p, .cuerpo-nota p, .cuerpo p, .story-content p, [itemprop="articleBody"] p, main p, .text p, .lead p').filter(function () {
+        return $(this).text().trim().length > 60;
+      });
+      desc = $p.first().text().trim();
+    }
+    return String(desc || '').slice(0, 320).replace(/\s+/g, ' ').trim();
+  } catch { return ''; }
+}
+
+// titular descriptivo (path sin key / fallback): si el headline es vago/gancho usa el lead
+function tituloDescriptivo(t, desc) {
+  let n = reescribirTitulo(t);
+  if (!desc) return n;
+  if (/[%$\d]|(subir|bajar|aumentar|anunciar|elevar|reducir|crecer|decir|señalar|confirmar|presentar|publicar|registrar)/i.test(n)) return n;
+  let d = String(desc || '').replace(/\s+/g, ' ').trim();
+  if (d.length > 130) d = d.slice(0, 127) + '\u2026';
+  return d || n;
+}
+
 function reescribirTitulo(t) {
   var n = t;
   n = n.replace(/[\u{1F300}-\u{1FAFF}]/gu, '');
@@ -126,10 +166,17 @@ async function procesarFuente(fuente) {
         titulosVistos.add(tituloRaw);
         const categorias = clasificarNoticia(titulo);
         if (categorias.length > 0) {
+          // teaser de la página de sección (CF-safe): <p> del card, o hermano del headline
+          let teaser = '';
+          const $card = $el.closest('article, figure, [class*="card"], [class*="item"], [class*="news"]');
+          const $p = $card.find('p').filter(function () { const t = $(this).text().trim(); return t.length > 60 && t.length < 340; });
+          teaser = $p.first().text().trim();
+          if (!teaser) teaser = ($el.siblings('p').first().text() || '').trim();
+          if (!teaser) teaser = ($el.parent().siblings('p').first().text() || '').trim();
           noticias.push({
             titulo: titulo,
-            descripcion: '',
-            url: link.startsWith('http') ? link : fuente.url.replace(/\/$/, '') + '/' + link.replace(/^\//, ''),
+            descripcion: teaser.slice(0, 320),
+            url: (function () { if (link.startsWith('http')) return link; let L = link; if (!L.startsWith('/')) L = '/' + L; try { return new URL(L, fuente.url).href; } catch { return link; } })(),
             fecha: extraerFecha($el, fuente),
             fuente: fuente.nombre,
             categorias
@@ -137,6 +184,12 @@ async function procesarFuente(fuente) {
         }
       }
     });
+    // fallback: nota sin teaser de sección -> intenta el lead de la nota (CF-puede-bloquear)
+    const sinTeaser = noticias.filter(c => !c.descripcion);
+    for (let i = 0; i < sinTeaser.length; i += 8) {
+      const batch = sinTeaser.slice(i, i + 8);
+      await Promise.all(batch.map(c => extraerDescripcion(c.url).then(d => { if (d) c.descripcion = d; })));
+    }
     console.log('[SCRAPING] ' + fuente.nombre + ': ' + noticias.length + ' noticias relevantes');
     return noticias;
   } catch (e) {
@@ -193,20 +246,21 @@ function nuevasEn(llm, orig) {
 // guardrail "no inventar": el LLM solo puede reordenar/sinonimizar el titular original.
 // Si el rewrite introduce >2 tokens novedosos (no en el original) => se rechaza
 // y se conserva el rewrite heurístico. Así "a nuestra manera" sí, pero NUNCA inventa.
-function aplicarGuardrail(rewrites, orig) {
+function aplicarGuardrail(rewrites, items) {
   return rewrites.map(function (r, i) {
     if (!r || typeof r !== 'string') return null;
-    var base = new Set(simTokens(orig[i] || ''));
-    var dif = 0;
-    var tl = simTokens(r);
-    for (var j = 0; j < tl.length; j++) { if (!base.has(tl[j])) dif++; }
-    return dif <= 1 ? r : null; // <=1 content-word novedoso (sinónimo) ok; >1 = posible invención -> conserva heurístico
+    const src = (items[i] && ((items[i].titulo || '') + ' ' + (items[i].descripcion || ''))) || '';
+    const base = new Set(simTokens(src));
+    let dif = 0;
+    const tl = simTokens(r);
+    for (let j = 0; j < tl.length; j++) { if (!base.has(tl[j])) dif++; }
+    return dif <= 1 ? r : null; // <=1 content-word novedoso (sinónimo) ok; >1 = invención -> conserva heurístico
   });
 }
 function delay(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
-async function reescribirLote(titulos) {
-  if (!process.env.GEMINI_API_KEY) return titulos;
-  var prompt = 'Reescribí los siguientes titulares en español rioplatense, tono VXL (informal pero respetuoso, como hablás con un amigo al coffee): descriptivo y de interés para una persona normal, conservando TODA la información del titular original sin inventar ni agregar datos. Sin clickbait, sin ganchos, sin emojis, sin jerga policial ni temas drogas/accidentes/violencia (el filtro esOffTopic los descarta). Devolvé SOLO un JSON válido con la forma {"rewrites":["título 1","título 2",...]} con exactamente la misma cantidad de ítems recibidos y en el mismo orden. NO agregues numeración ni texto extra. Titulares: ' + JSON.stringify(titulos);
+async function reescribirLote(items) {
+  if (!process.env.GEMINI_API_KEY) return items.map(i => tituloDescriptivo(i.titulo, i.descripcion));
+  const prompt = 'Reescribí los siguientes titulares en español rioplatense. Para CADA uno escribí un titular DESCRIPTIVO (máximo 2 líneas) que cuente la NOTICIA EN SÍ: un resumen del hecho, usando el titular original y el "resumen" (lead) del artículo como fuente. Tono VXL: informal, como hablás con un amigo al coffee, interés para una persona normal. NO inventes, NO ganchos, NO clickbait, NO emojis, NO jerga policial/judicial. Si el resumen está vacío, devolvés el titular original limpio (no inventes). Devolvé SOLO JSON {"rewrites":["título 1","título 2",...]} con la misma cantidad de ítems y orden. Entradas: ' + JSON.stringify(items.map(i => ({ titulo: i.titulo, resumen: i.descripcion })));
   var body = { contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.2, maxOutputTokens: 200 } };
   for (var attempt = 0; attempt < 3; attempt++) {
     try {
@@ -230,7 +284,7 @@ async function reescribirConLLM(items) {
   var aplicados = 0, rechazados = 0, filtPost = 0;
   for (var i = 0; i < items.length; i += 25) {
     var chunk = items.slice(i, i + 25);
-    var rw = await reescribirLote(chunk.map(function(c) { return c.titulo; }));
+    var rw = await reescribirLote(chunk);   // chunk: {titulo, descripcion, ...} -> orig con lead
     for (var j = 0; j < chunk.length; j++) {
       if (rw[j] && rw[j].length && !esOffTopic(rw[j])) { chunk[j].titulo = rw[j]; aplicados++; }
       else if (rw[j] && esOffTopic(rw[j])) { filtPost++; }
@@ -279,7 +333,7 @@ async function main() {
   const merged = {};
   let cntGancho = 0, cntOffTopic = 0, cntNoEcon = 0;
   const add = (n) => {
-    n.titulo = reescribirTitulo(n.titulo);
+    n.titulo = tituloDescriptivo(n.titulo, n.descripcion);   // <-- usa lead si el headline es vago/gancho
     const k = normalizarTexto(n.titulo);
     if (!k || !n.titulo) return;
     if (esGancho(n.titulo)) { cntGancho++; return; }
