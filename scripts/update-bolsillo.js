@@ -172,7 +172,7 @@ function jaccard(a, b) {
 function delay(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
 async function reescribirLote(titulos) {
   if (!process.env.GEMINI_API_KEY) return titulos;
-  var prompt = 'Reescribí los siguientes titulares en español rioplatense, tono VXL: claro, conciso, sin clickbait ni ganchos, conservando el sentido económico. Devolvé SOLO un JSON válido con la forma {"rewrites":["título 1","título 2",...]} con exactamente la misma cantidad de ítems recibidos y en el mismo orden. NO agregues numeración ni texto extra. Titulares: ' + JSON.stringify(titulos);
+  var prompt = 'Reescribí los siguientes titulares en español rioplatense, tono VXL (informal pero respetuoso, como hablás con un amigo al coffee): descriptivo y de interés para una persona normal, conservando TODA la información del titular original sin inventar ni agregar datos. Sin clickbait, sin ganchos, sin emojis, sin jerga policial ni temas drogas/accidentes/violencia (el filtro esOffTopic los descarta). Devolvé SOLO un JSON válido con la forma {"rewrites":["título 1","título 2",...]} con exactamente la misma cantidad de ítems recibidos y en el mismo orden. NO agregues numeración ni texto extra. Titulares: ' + JSON.stringify(titulos);
   var body = { contents: [{ role: 'user', parts: [{ text: prompt }] }] };
   for (var attempt = 0; attempt < 3; attempt++) {
     try {
@@ -237,16 +237,20 @@ async function main() {
 
   // --- merge + dedupe conservando la fecha más nueva ---
   const merged = {};
+  let cntGancho = 0, cntOffTopic = 0;
   const add = (n) => {
     n.titulo = reescribirTitulo(n.titulo);
     const k = normalizarTexto(n.titulo);
-    if (!k || !n.titulo || esGancho(n.titulo) || esOffTopic(n.titulo)) return;
+    if (!k || !n.titulo) return;
+    if (esGancho(n.titulo)) { cntGancho++; return; }
+    if (esOffTopic(n.titulo)) { cntOffTopic++; return; }
     if (!n.categorias || !n.categorias.length) n.categorias = clasificarNoticia(n.titulo);
     if (merged[k]) { if (parseFechaIso(n.fecha) > parseFechaIso(merged[k].fecha)) merged[k] = n; }
     else { merged[k] = n; }
   };
   for (const n of nuevas) add(n);
   for (const n of historico) add(n);
+  console.log('[bolsillo] filtrados gancho:', cntGancho, '| off-topic (policiales/drogas/etc):', cntOffTopic);
   const todas = Object.values(merged);
 
   // --- ventana 7 días (más recientes) ---
