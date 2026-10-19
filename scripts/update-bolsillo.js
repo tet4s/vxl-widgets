@@ -185,7 +185,11 @@ function nuevasEn(llm, orig) {
 function aplicarGuardrail(rewrites, orig) {
   return rewrites.map(function (r, i) {
     if (!r || typeof r !== 'string') return null;
-    return nuevasEn(r, orig[i]) <= 2 ? r : null;
+    var base = new Set(simTokens(orig[i] || ''));
+    var dif = 0;
+    var tl = simTokens(r);
+    for (var j = 0; j < tl.length; j++) { if (!base.has(tl[j])) dif++; }
+    return dif <= 1 ? r : null; // <=1 content-word novedoso (sinónimo) ok; >1 = posible invención -> conserva heurístico
   });
 }
 function delay(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
