@@ -270,14 +270,14 @@ async function reescribirLote(items) {
       var txt = (cand && cand.content && cand.content.parts && cand.content.parts[0] && cand.content.parts[0].text) || '';
       var m = txt.match(/\{[\s\S]*\}/);
       if (m) {
-        try { var parsed = JSON.parse(m[0]); if (Array.isArray(parsed.rewrites) && parsed.rewrites.length === titulos.length) return aplicarGuardrail(parsed.rewrites, titulos); } catch (e) {}
-        try { var p2 = JSON.parse(txt.trim()); if (Array.isArray(p2.rewrites) && p2.rewrites.length === titulos.length) return aplicarGuardrail(p2.rewrites, titulos); } catch (e2) {}
+        try { var parsed = JSON.parse(m[0]); if (Array.isArray(parsed.rewrites) && parsed.rewrites.length === items.length) return aplicarGuardrail(parsed.rewrites, items); } catch (e) {}
+        try { var p2 = JSON.parse(txt.trim()); if (Array.isArray(p2.rewrites) && p2.rewrites.length === items.length) return aplicarGuardrail(p2.rewrites, items); } catch (e2) {}
       }
     } catch (e) {
       if (attempt < 2) await delay(2000);
     }
   }
-  return titulos;
+  return items;
 }
 async function reescribirConLLM(items) {
   if (!process.env.GEMINI_API_KEY || !items.length) return;
