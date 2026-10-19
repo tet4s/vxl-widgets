@@ -169,6 +169,25 @@ function jaccard(a, b) {
   sa.forEach(function(x) { if (sb.has(x)) inter++; });
   return inter / (sa.size + sb.size - inter);
 }
+function tokensDe(t) {
+  return String(t || '').toLowerCase().replace(/[^a-záéíóñü0-9]+/gi, ' ').split(/\s+/).filter(function (w) { return w.length > 3; });
+}
+function nuevasEn(llm, orig) {
+  var base = {}; var to = tokensDe(orig);
+  for (var i = 0; i < to.length; i++) base[to[i]] = true;
+  var dif = 0; var tl = tokensDe(llm);
+  for (var j = 0; j < tl.length; j++) { if (!base[tl[j]]) dif++; }
+  return dif;
+}
+// guardrail "no inventar": el LLM solo puede reordenar/sinonimizar el titular original.
+// Si el rewrite introduce >2 tokens novedosos (no en el original) => se rechaza
+// y se conserva el rewrite heurístico. Así "a nuestra manera" sí, pero NUNCA inventa.
+function aplicarGuardrail(rewrites, orig) {
+  return rewrites.map(function (r, i) {
+    if (!r || typeof r !== 'string') return null;
+    return nuevasEn(r, orig[i]) <= 2 ? r : null;
+  });
+}
 function delay(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
 async function reescribirLote(titulos) {
   if (!process.env.GEMINI_API_KEY) return titulos;
@@ -182,8 +201,8 @@ async function reescribirLote(titulos) {
       var txt = (cand && cand.content && cand.content.parts && cand.content.parts[0] && cand.content.parts[0].text) || '';
       var m = txt.match(/\{[\s\S]*\}/);
       if (m) {
-        try { var parsed = JSON.parse(m[0]); if (Array.isArray(parsed.rewrites) && parsed.rewrites.length === titulos.length) return parsed.rewrites; } catch (e) {}
-        try { var p2 = JSON.parse(txt.trim()); if (Array.isArray(p2.rewrites) && p2.rewrites.length === titulos.length) return p2.rewrites; } catch (e2) {}
+        try { var parsed = JSON.parse(m[0]); if (Array.isArray(parsed.rewrites) && parsed.rewrites.length === titulos.length) return aplicarGuardrail(parsed.rewrites, titulos); } catch (e) {}
+        try { var p2 = JSON.parse(txt.trim()); if (Array.isArray(p2.rewrites) && p2.rewrites.length === titulos.length) return aplicarGuardrail(p2.rewrites, titulos); } catch (e2) {}
       }
     } catch (e) {
       if (attempt < 2) await delay(2000);
@@ -193,11 +212,16 @@ async function reescribirLote(titulos) {
 }
 async function reescribirConLLM(items) {
   if (!process.env.GEMINI_API_KEY || !items.length) return;
+  var aplicados = 0, rechazados = 0;
   for (var i = 0; i < items.length; i += 25) {
     var chunk = items.slice(i, i + 25);
     var rw = await reescribirLote(chunk.map(function(c) { return c.titulo; }));
-    for (var j = 0; j < chunk.length; j++) { if (rw[j] && rw[j].length) chunk[j].titulo = rw[j]; }
+    for (var j = 0; j < chunk.length; j++) {
+      if (rw[j] && rw[j].length) { chunk[j].titulo = rw[j]; aplicados++; }
+      else { rechazados++; }
+    }
   }
+  console.log('[bolsillo] rewrites LLM aplicados:', aplicados, '| rechazados por invención (conserva heurístico):', rechazados);
   return items;
 }
 
