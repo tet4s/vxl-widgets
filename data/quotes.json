@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-20T01:46:54.570Z",
-  "timestamp_epoch": 1792460814,
+  "last_updated": "2026-10-20T06:42:22.131Z",
+  "timestamp_epoch": 1792478542,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -12,7 +12,7 @@
       "compra": 1490,
       "venta": 1540,
       "fechaActualizacion": "2026-10-19T18:00:00.000Z",
-      "variacion": 0.33
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -21,7 +21,7 @@
       "compra": 1540,
       "venta": 1560,
       "fechaActualizacion": "2026-10-19T21:00:00.000Z",
-      "variacion": 0.32
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -30,7 +30,7 @@
       "compra": 1536.7,
       "venta": 1544.1,
       "fechaActualizacion": "2026-10-19T21:00:00.000Z",
-      "variacion": 0.1
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -39,7 +39,7 @@
       "compra": 1623.6,
       "venta": 1625.6,
       "fechaActualizacion": "2026-10-19T21:00:00.000Z",
-      "variacion": 0.31
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -48,7 +48,7 @@
       "compra": 1515.5,
       "venta": 1524.5,
       "fechaActualizacion": "2026-10-19T16:01:00.000Z",
-      "variacion": 0.43
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -66,11 +66,11 @@
       "compra": 1937,
       "venta": 2002,
       "fechaActualizacion": "2026-10-19T18:00:00.000Z",
-      "variacion": 0.33
+      "variacion": 0
     }
   ],
   "dolares_cierre": {
-    "fecha_ultimo": "2026-10-19",
+    "fecha_ultimo": "2026-10-20",
     "ultimo_del_dia": {
       "oficial": 1540,
       "blue": 1560,
@@ -80,15 +80,15 @@
       "cripto": 1622.01,
       "tarjeta": 2002
     },
-    "fecha_cierre": "2026-10-18",
+    "fecha_cierre": "2026-10-19",
     "cierre_anterior": {
-      "oficial": 1535,
-      "blue": 1555,
-      "bolsa": 1542.5,
-      "contadoconliqui": 1620.5,
-      "mayorista": 1518,
-      "cripto": 1622.02,
-      "tarjeta": 1995.5
+      "oficial": 1540,
+      "blue": 1560,
+      "bolsa": 1544.1,
+      "contadoconliqui": 1625.6,
+      "mayorista": 1524.5,
+      "cripto": 1622.01,
+      "tarjeta": 2002
     }
   },
   "bursatil": [
@@ -131,7 +131,6 @@
   ],
   "historial": {
     "PAMPA ENERGÍA": [
-      5525,
       5545,
       5360,
       5335,
@@ -154,10 +153,10 @@
       5235,
       5220,
       5210,
-      5240
+      5240,
+      5165
     ],
     "YPF": [
-      8980,
       9180,
       8740,
       8690,
@@ -180,10 +179,10 @@
       8330,
       8460,
       8290,
-      8430
+      8430,
+      8235
     ],
     "GRP FIN GALICIA": [
-      6865,
       6720,
       6745,
       6810,
@@ -206,7 +205,8 @@
       5940,
       5750,
       5905,
-      5805
+      5805,
+      5690
     ],
     "AL30 (BONO)": [
       85250,
@@ -235,7 +235,6 @@
       85350
     ],
     "CRESUD (AGRO)": [
-      1927,
       1888,
       1921,
       2040,
@@ -258,10 +257,10 @@
       1851,
       1793,
       1840,
-      1860
+      1860,
+      1842
     ],
     "MOLINOS AGRO": [
-      2730,
       2705,
       2700,
       2630,
@@ -284,7 +283,8 @@
       2290,
       2265,
       2350,
-      2285
+      2285,
+      2245
     ]
   }
 }
