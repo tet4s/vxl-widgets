@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-21T17:24:43.112Z",
-  "timestamp_epoch": 1792603483,
+  "last_updated": "2026-10-21T20:46:35.964Z",
+  "timestamp_epoch": 1792615595,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -11,53 +11,53 @@
       "nombre": "Oficial",
       "compra": 1495,
       "venta": 1545,
-      "fechaActualizacion": "2026-10-21T14:00:00.000Z",
+      "fechaActualizacion": "2026-10-21T17:00:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "blue",
       "nombre": "Blue",
-      "compra": 1550,
-      "venta": 1570,
-      "fechaActualizacion": "2026-10-21T16:57:00.000Z",
-      "variacion": 0
+      "compra": 1545,
+      "venta": 1565,
+      "fechaActualizacion": "2026-10-21T19:58:00.000Z",
+      "variacion": -0.32
     },
     {
       "moneda": "USD",
       "casa": "bolsa",
       "nombre": "Bolsa",
-      "compra": 1546.5,
-      "venta": 1548.1,
-      "fechaActualizacion": "2026-10-21T16:57:00.000Z",
-      "variacion": -0.05
+      "compra": 1547.8,
+      "venta": 1553.8,
+      "fechaActualizacion": "2026-10-21T19:58:00.000Z",
+      "variacion": 0.32
     },
     {
       "moneda": "USD",
       "casa": "contadoconliqui",
       "nombre": "Contado con liquidación",
-      "compra": 1632.5,
-      "venta": 1633.7,
-      "fechaActualizacion": "2026-10-21T16:57:00.000Z",
-      "variacion": 0.17
+      "compra": 1635.1,
+      "venta": 1638,
+      "fechaActualizacion": "2026-10-21T19:58:00.000Z",
+      "variacion": 0.44
     },
     {
       "moneda": "USD",
       "casa": "mayorista",
       "nombre": "Mayorista",
-      "compra": 1518,
-      "venta": 1527,
-      "fechaActualizacion": "2026-10-21T11:59:00.000Z",
-      "variacion": 0.13
+      "compra": 1519,
+      "venta": 1526,
+      "fechaActualizacion": "2026-10-21T16:15:00.000Z",
+      "variacion": 0.07
     },
     {
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1626.84,
-      "venta": 1630.97,
-      "fechaActualizacion": "2026-10-21T16:57:00.000Z",
-      "variacion": 0.3
+      "compra": 1628.84,
+      "venta": 1632.26,
+      "fechaActualizacion": "2026-10-21T19:58:00.000Z",
+      "variacion": 0.38
     },
     {
       "moneda": "USD",
@@ -65,7 +65,7 @@
       "nombre": "Tarjeta",
       "compra": 1943.5,
       "venta": 2008.5,
-      "fechaActualizacion": "2026-10-21T14:00:00.000Z",
+      "fechaActualizacion": "2026-10-21T17:00:00.000Z",
       "variacion": 0
     }
   ],
@@ -73,11 +73,11 @@
     "fecha_ultimo": "2026-10-21",
     "ultimo_del_dia": {
       "oficial": 1545,
-      "blue": 1570,
-      "bolsa": 1548.1,
-      "contadoconliqui": 1633.7,
-      "mayorista": 1527,
-      "cripto": 1630.97,
+      "blue": 1565,
+      "bolsa": 1553.8,
+      "contadoconliqui": 1638,
+      "mayorista": 1526,
+      "cripto": 1632.26,
       "tarjeta": 2008.5
     },
     "fecha_cierre": "2026-10-20",
@@ -94,38 +94,38 @@
   "bursatil": [
     {
       "label": "PAMPA ENERGÍA",
-      "val": "$5.050,00",
-      "var": "▼ 0,59%",
-      "class": "down"
+      "val": "$5.100,00",
+      "var": "▲ +0,39%",
+      "class": "up"
     },
     {
       "label": "YPF",
-      "val": "$8.145,00",
-      "var": "▼ 0,91%",
-      "class": "down"
+      "val": "$8.240,00",
+      "var": "▲ +0,24%",
+      "class": "up"
     },
     {
       "label": "GRP FIN GALICIA",
-      "val": "$5.900,00",
-      "var": "▲ +2,34%",
+      "val": "$6.015,00",
+      "var": "▲ +4,34%",
       "class": "up"
     },
     {
       "label": "AL30 (BONO)",
-      "val": "$85.890,00",
-      "var": "▲ +0,33%",
-      "class": "up"
+      "val": "$85.360,00",
+      "var": "▼ 0,28%",
+      "class": "down"
     },
     {
       "label": "CRESUD (AGRO)",
-      "val": "$1.814,00",
-      "var": "▲ +0,16%",
+      "val": "$1.818,00",
+      "var": "▲ +0,39%",
       "class": "up"
     },
     {
       "label": "MOLINOS AGRO",
-      "val": "$2.250,00",
-      "var": "▼ 0,88%",
+      "val": "$2.215,00",
+      "var": "▼ 2,42%",
       "class": "down"
     }
   ],
