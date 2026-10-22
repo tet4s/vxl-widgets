@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-22T20:26:37.059Z",
-  "timestamp_epoch": 1792700797,
+  "timestamp": "2026-10-22T23:31:25.781Z",
+  "timestamp_epoch": 1792711885,
   "categoria": "Pizarra Agroexportadora y Litoral",
   "fuente": "Bolsa de Comercio de Rosario / BolsaCER / MAG",
   "items": [
@@ -22,19 +22,11 @@
     },
     {
       "label": "TRIGO",
-      "valor": "u$s 215 /Tn",
+      "valor": "u$s 212 /Tn",
       "moneda": "USD",
-      "valorNumerico": 215,
-      "variacion": "= 0,00%",
-      "estado": "neutral"
-    },
-    {
-      "label": "SORGO",
-      "valor": "u$s 185 /Tn",
-      "moneda": "USD",
-      "valorNumerico": 185,
-      "variacion": "= 0,00%",
-      "estado": "neutral"
+      "valorNumerico": 212,
+      "variacion": "▼ -1,40%",
+      "estado": "down"
     },
     {
       "label": "GIRASOL",
