@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-23T20:34:14.010Z",
-  "timestamp_epoch": 1792787654,
+  "last_updated": "2026-10-23T23:26:55.896Z",
+  "timestamp_epoch": 1792798015,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -11,7 +11,7 @@
       "nombre": "Oficial",
       "compra": 1500,
       "venta": 1550,
-      "fechaActualizacion": "2026-10-23T17:05:00.000Z",
+      "fechaActualizacion": "2026-10-23T18:00:00.000Z",
       "variacion": 0
     },
     {
@@ -20,7 +20,7 @@
       "nombre": "Blue",
       "compra": 1545,
       "venta": 1565,
-      "fechaActualizacion": "2026-10-23T20:02:00.000Z",
+      "fechaActualizacion": "2026-10-23T20:57:00.000Z",
       "variacion": 0
     },
     {
@@ -29,7 +29,7 @@
       "nombre": "Bolsa",
       "compra": 1557.4,
       "venta": 1563.9,
-      "fechaActualizacion": "2026-10-23T20:02:00.000Z",
+      "fechaActualizacion": "2026-10-23T20:57:00.000Z",
       "variacion": 0.66
     },
     {
@@ -38,7 +38,7 @@
       "nombre": "Contado con liquidación",
       "compra": 1649.2,
       "venta": 1654,
-      "fechaActualizacion": "2026-10-23T20:02:00.000Z",
+      "fechaActualizacion": "2026-10-23T20:57:00.000Z",
       "variacion": 0.88
     },
     {
@@ -54,10 +54,10 @@
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1635.71,
-      "venta": 1640.34,
-      "fechaActualizacion": "2026-10-23T20:02:00.000Z",
-      "variacion": -0.03
+      "compra": 1638.33,
+      "venta": 1644.34,
+      "fechaActualizacion": "2026-10-23T20:57:00.000Z",
+      "variacion": 0.22
     },
     {
       "moneda": "USD",
@@ -65,7 +65,7 @@
       "nombre": "Tarjeta",
       "compra": 1950,
       "venta": 2015,
-      "fechaActualizacion": "2026-10-23T17:05:00.000Z",
+      "fechaActualizacion": "2026-10-23T18:00:00.000Z",
       "variacion": 0
     }
   ],
@@ -77,7 +77,7 @@
       "bolsa": 1563.9,
       "contadoconliqui": 1654,
       "mayorista": 1529.5,
-      "cripto": 1640.34,
+      "cripto": 1644.34,
       "tarjeta": 2015
     },
     "fecha_cierre": "2026-10-22",
@@ -101,7 +101,7 @@
     {
       "label": "YPF",
       "val": "$8.350,00",
-      "var": "▲ +3,86%",
+      "var": "▲ +3,85%",
       "class": "up"
     },
     {
@@ -113,7 +113,7 @@
     {
       "label": "AL30 (BONO)",
       "val": "$86.050,00",
-      "var": "▲ +0,54%",
+      "var": "▲ +0,53%",
       "class": "up"
     },
     {
