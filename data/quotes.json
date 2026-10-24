@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-24T11:31:54.994Z",
-  "timestamp_epoch": 1792841514,
+  "last_updated": "2026-10-24T14:48:49.362Z",
+  "timestamp_epoch": 1792853329,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -11,7 +11,7 @@
       "nombre": "Oficial",
       "compra": 1500,
       "venta": 1550,
-      "fechaActualizacion": "2026-10-23T18:00:00.000Z",
+      "fechaActualizacion": "2026-10-23T18:55:00.000Z",
       "variacion": 0
     },
     {
@@ -20,7 +20,7 @@
       "nombre": "Blue",
       "compra": 1545,
       "venta": 1565,
-      "fechaActualizacion": "2026-10-23T20:57:00.000Z",
+      "fechaActualizacion": "2026-10-24T11:56:00.000Z",
       "variacion": 0
     },
     {
@@ -29,7 +29,7 @@
       "nombre": "Bolsa",
       "compra": 1557.4,
       "venta": 1563.9,
-      "fechaActualizacion": "2026-10-23T20:57:00.000Z",
+      "fechaActualizacion": "2026-10-24T11:56:00.000Z",
       "variacion": 0
     },
     {
@@ -38,7 +38,7 @@
       "nombre": "Contado con liquidación",
       "compra": 1649.2,
       "venta": 1654,
-      "fechaActualizacion": "2026-10-23T20:57:00.000Z",
+      "fechaActualizacion": "2026-10-24T11:56:00.000Z",
       "variacion": 0
     },
     {
@@ -54,10 +54,10 @@
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1638.33,
-      "venta": 1644.34,
-      "fechaActualizacion": "2026-10-23T20:57:00.000Z",
-      "variacion": 0
+      "compra": 1643.57,
+      "venta": 1649.28,
+      "fechaActualizacion": "2026-10-24T11:56:00.000Z",
+      "variacion": 0.3
     },
     {
       "moneda": "USD",
@@ -65,7 +65,7 @@
       "nombre": "Tarjeta",
       "compra": 1950,
       "venta": 2015,
-      "fechaActualizacion": "2026-10-23T18:00:00.000Z",
+      "fechaActualizacion": "2026-10-23T18:55:00.000Z",
       "variacion": 0
     }
   ],
@@ -77,7 +77,7 @@
       "bolsa": 1563.9,
       "contadoconliqui": 1654,
       "mayorista": 1529.5,
-      "cripto": 1644.34,
+      "cripto": 1649.28,
       "tarjeta": 2015
     },
     "fecha_cierre": "2026-10-23",
