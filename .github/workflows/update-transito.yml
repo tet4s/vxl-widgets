@@ -1,0 +1,38 @@
+name: Actualizar Alertas de Tránsito
+
+on:
+  schedule:
+    # Cada 15 minutos, de lunes a viernes (horario Argentina ~08:00-20:00)
+    - cron: '*/15 11-23 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del Repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js (v24)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Instalar Dependencias
+        run: |
+          npm install
+
+      - name: Ejecutar Update de Tránsito
+        run: node scripts/update-transito.js
+
+      - name: Commit y Push de Datos Actualizados
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/transito.json
+          git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de alertas de tránsito [skip ci]"
+          git push
