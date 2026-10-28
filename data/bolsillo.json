@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-28T07:34:51.522Z",
-  "timestamp_epoch": 1793172891,
-  "total_noticias": 273,
+  "last_updated": "2026-10-28T14:29:42.634Z",
+  "timestamp_epoch": 1793197782,
+  "total_noticias": 269,
   "window_days": 7,
   "categorias": [
     {
@@ -9,26 +9,50 @@
       "nombre": "PODER ADQUISITIVO",
       "noticias": [
         {
-          "titulo": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, pre…",
-          "descripcion": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, presiona las cuentas públicas y reduce el margen del ejecutivo para financiar sus prioridades sin incumplir las reglas fiscales",
-          "url": "https://www.infobae.com/america/mundo/2026/10/28/el-gobierno-de-burnham-presenta-su-primer-presupuesto-en-reino-unido-en-medio-de-presiones-por-la-inflacion-la-deuda-y-el-gasto-militar/",
-          "fecha": "2026-10-28T07:31:42.802Z",
+          "titulo": "La actualización mensual llevará la prestación mínima a $ 444.158,46. La medida alcanza a jubilados, pensionados, titulares de …",
+          "descripcion": "La actualización mensual llevará la prestación mínima a $ 444.158,46. La medida alcanza a jubilados, pensionados, titulares de la PUAM y beneficiarios de asignaciones familiares",
+          "url": "https://www.infobae.com/economia/2026/10/28/el-gobierno-aumento-las-jubilaciones-y-asignaciones-de-cuanto-sera-la-minima-en-noviembre/",
+          "fecha": "2026-10-28T14:26:39.555Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "Infobae"
         },
         {
-          "titulo": "Las fábricas de Fiat y Peugeot terminan el año con vacaciones adelantadas y suspensiones",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-10-28T07:31:41.523Z",
+          "titulo": "Los haberes previsionales ya tienen establecido el cronograma de pagos para el penúltimo mes del año, cómo es la entrega diaria…",
+          "descripcion": "Los haberes previsionales ya tienen establecido el cronograma de pagos para el penúltimo mes del año, cómo es la entrega diaria según el DNI",
+          "url": "https://www.lanacion.com.ar/economia/calendario-de-jubilaciones-de-la-anses-cuando-cobro-en-noviembre-2026-con-el-bono-oficial-y-el-nid28102026/",
+          "fecha": "2026-10-28T14:26:39.069Z",
           "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Las pensiones se ajustan según el último índice inflacionario, pero el bono se mantiene sin cambios; cuáles son las cifras del …",
+          "descripcion": "Las pensiones se ajustan según el último índice inflacionario, pero el bono se mantiene sin cambios; cuáles son las cifras del penúltimo mes del año",
+          "url": "https://www.lanacion.com.ar/economia/pnc-de-anses-cual-es-el-monto-de-las-pensiones-no-contributivas-en-noviembre-de-2026-nid19102026/",
+          "fecha": "2026-10-28T14:26:39.068Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "El aumento automático para esta prestación es del 1,93%; cuál es el valor que perciben las familias",
+          "descripcion": "El aumento automático para esta prestación es del 1,93%; cuál es el valor que perciben las familias",
+          "url": "https://www.lanacion.com.ar/economia/monto-de-la-asignacion-universal-por-hijo-de-cuanto-es-la-auh-en-noviembre-2026-con-el-aumento-nid15102026/",
+          "fecha": "2026-10-28T14:26:39.068Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Para la actualización de haberes se toma el último índice de inflación que publicó el Indec; cuáles son las cifras para el penú…",
+          "descripcion": "Para la actualización de haberes se toma el último índice de inflación que publicó el Indec; cuáles son las cifras para el penúltimo mes del año",
+          "url": "https://www.lanacion.com.ar/economia/jubilaciones-de-anses-cuanto-cobro-en-noviembre-2026-con-el-bono-oficial-y-el-aumento-confirmado-nid14102026/",
+          "fecha": "2026-10-28T14:26:39.068Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
         },
         {
           "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
           "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
           "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
-          "fecha": "2026-10-28T07:31:41.141Z",
+          "fecha": "2026-10-28T14:26:39.065Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
         },
@@ -36,16 +60,32 @@
           "titulo": "¿El sueldo alcanza? Trabajar por el 38% de un buen salario: el boom del empleo low cost",
           "descripcion": "Desde que llegó Milei, hay más ocupados, pero la mayoría son cuentapropistas informales, que ganan unos $700.000 mensuales; cruje además la caja del Estado",
           "url": "https://www.lanacion.com.ar/economia/crece-el-trabajo-low-cost-hay-mas-trabajadores-pero-con-peores-salarios-nid27102026/",
-          "fecha": "2026-10-28T07:31:41.137Z",
+          "fecha": "2026-10-28T14:26:39.064Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
+        },
+        {
+          "titulo": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, pre…",
+          "descripcion": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, presiona las cuentas públicas y reduce el margen del ejecutivo para financiar sus prioridades sin incumplir las reglas fiscales",
+          "url": "https://www.infobae.com/america/mundo/2026/10/28/el-gobierno-de-burnham-presenta-su-primer-presupuesto-en-reino-unido-en-medio-de-presiones-por-la-inflacion-la-deuda-y-el-gasto-militar/",
+          "fecha": "2026-10-28T07:31:42.802Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Las fábricas de Fiat y Peugeot terminan el año con vacaciones adelantadas y suspensiones",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-10-28T07:31:41.523Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "Clarín"
         },
         {
           "titulo": "Para las consultoras, el aumento de los precios minoristas solo desaceleraría a 1,8%. La justificación del presidente sobre la …",
           "descripcion": "Para las consultoras, el aumento de los precios minoristas solo desaceleraría a 1,8%. La justificación del presidente sobre la lenta desaceleración del IPC",
           "url": "https://www.infobae.com/economia/2026/10/27/a-cuanto-llegara-el-indice-de-inflacion-de-octubre-segun-las-consultoras-privadas/",
           "fecha": "2026-10-28T01:49:09.770Z",
-          "fechaFormateada": "Hace 5 hs",
+          "fechaFormateada": "Hace 12 hs",
           "fuente": "Infobae"
         },
         {
@@ -53,39 +93,15 @@
           "descripcion": "Un estudio del economista Nadín Argañaraz muestra que, desde 2023, la mano de obra aumentó 18% en relación con los precios industriales, mientras que el equipamiento productivo cayó 14%. La diferencia modifica los incentivos para invertir y producir",
           "url": "https://www.infobae.com/economia/2026/10/27/los-salarios-se-encarecen-y-las-maquinas-se-abaratan-que-revela-un-informe-sobre-los-costos-de-la-industria-argentina/",
           "fecha": "2026-10-27T18:56:28.901Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Infobae"
-        },
-        {
-          "titulo": "Las pensiones se ajustan según el último índice inflacionario, pero el bono se mantiene sin cambios; cuáles son las cifras del …",
-          "descripcion": "Las pensiones se ajustan según el último índice inflacionario, pero el bono se mantiene sin cambios; cuáles son las cifras del penúltimo mes del año",
-          "url": "https://www.lanacion.com.ar/economia/pnc-de-anses-cual-es-el-monto-de-las-pensiones-no-contributivas-en-noviembre-de-2026-nid19102026/",
-          "fecha": "2026-10-27T13:37:49.536Z",
-          "fechaFormateada": "Hace 17 hs",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "El aumento automático para esta prestación es del 1,93%; cuál es el valor que perciben las familias",
-          "descripcion": "El aumento automático para esta prestación es del 1,93%; cuál es el valor que perciben las familias",
-          "url": "https://www.lanacion.com.ar/economia/monto-de-la-asignacion-universal-por-hijo-de-cuanto-es-la-auh-en-noviembre-2026-con-el-aumento-nid15102026/",
-          "fecha": "2026-10-27T13:37:49.536Z",
-          "fechaFormateada": "Hace 17 hs",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "Para la actualización de haberes se toma el último índice de inflación que publicó el Indec; cuáles son las cifras para el penú…",
-          "descripcion": "Para la actualización de haberes se toma el último índice de inflación que publicó el Indec; cuáles son las cifras para el penúltimo mes del año",
-          "url": "https://www.lanacion.com.ar/economia/jubilaciones-de-anses-cuanto-cobro-en-noviembre-2026-con-el-bono-oficial-y-el-aumento-confirmado-nid14102026/",
-          "fecha": "2026-10-27T13:37:49.536Z",
-          "fechaFormateada": "Hace 17 hs",
-          "fuente": "La Nación"
         },
         {
           "titulo": "Prorrogan la emergencia previsional en Villa Elisa y condonan una deuda de la Caja de Jubilaciones",
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-10-27T13:37:03.000Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "El Entre Ríos"
         },
         {
@@ -101,7 +117,7 @@
           "descripcion": "Las empresas y el Gobierno coincidieron entonces que era necesario normalizar las tarifas, que acumulaban varios años de atraso. Pero los aumentos fueron mucho mayores en el distrito que gobierna Axel Kicillof",
           "url": "https://www.infobae.com/economia/2026/10/25/desde-diciembre-de-2023-el-boleto-minimo-de-colectivo-en-la-provincia-de-buenos-aires-aumento-seis-veces-mas-que-la-inflacion/",
           "fecha": "2026-10-26T13:45:06.033Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Infobae"
         },
         {
@@ -109,7 +125,7 @@
           "descripcion": "Según un relevamiento, en la mayoría de los casos el sueldo se agota antes de fin de mes, el ahorro es una excepción y las deudas ganan terreno, con el alquiler y los alimentos como principales gastos",
           "url": "https://www.infobae.com/economia/2026/10/26/casi-9-de-cada-10-argentinos-consideran-que-su-salario-es-insuficiente-para-cubrir-sus-necesidades-basicas/",
           "fecha": "2026-10-26T13:45:06.029Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Infobae"
         },
         {
@@ -125,7 +141,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-23T10:33:24.894Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Clarín"
         },
         {
@@ -133,7 +149,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-23T10:33:24.887Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Clarín"
         },
         {
@@ -141,7 +157,7 @@
           "descripcion": "Los haberes de octubre incluyen una actualización del 1,66 % y un bono extraordinario de hasta $70.000 para jubilados y pensionados que cumplan con los requisitos",
           "url": "https://www.infobae.com/economia/2026/10/23/anses-quienes-cobran-hoy-viernes-23-de-octubre-de-2026/",
           "fecha": "2026-10-23T10:33:22.866Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -173,7 +189,7 @@
           "descripcion": "Óscar López confirma que el 1 de enero se subirá el sueldo a los funcionarios",
           "url": "https://www.infobae.com/espana/agencias/2026/10/22/oscar-lopez-confirma-que-el-1-de-enero-se-subira-el-sueldo-a-los-funcionarios/",
           "fecha": "2026-10-22T10:40:41.241Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "Infobae"
         },
         {
@@ -181,7 +197,7 @@
           "descripcion": "Tanto los empleados del sector privado como los dependientes del Estado tuvieron una recuperación de su poder adquisitivo en el octavo mes del año",
           "url": "https://www.infobae.com/economia/2026/10/21/los-salarios-registrados-subieron-26-en-agosto-y-le-ganaron-a-la-inflacion-por-tercer-mes-consecutivo/",
           "fecha": "2026-10-22T10:40:41.240Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "Infobae"
         },
         {
@@ -207,14 +223,6 @@
           "fecha": "2026-10-21T15:55:28.868Z",
           "fechaFormateada": "Hace 6 días",
           "fuente": "Infobae"
-        },
-        {
-          "titulo": "La canasta de crianza porteña aumentó por encima de la inflación: cuánto cuesta tener un hijo en la Ciudad de Buenos Aires",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-10-21T11:04:18.884Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Clarín"
         }
       ]
     },
@@ -223,27 +231,43 @@
       "nombre": "SERVICIOS Y HOGAR",
       "noticias": [
         {
+          "titulo": "Una obra de US$ 40 millones permitirá conexión a gas residencial a 12 mil usuarios en tres provincias de la Patagonia",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-10-28T14:26:40.766Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
           "titulo": "El gobierno desvió la plata del fondo fiduciario destinado a reforzar la infraestructura hídrica, mientras el Super Niño avanza.",
           "descripcion": "El gobierno desvió la plata del fondo fiduciario destinado a reforzar la infraestructura hídrica, mientras el Super Niño avanza.",
           "url": "https://www.pagina12.com.ar/2026/10/27/el-agua-sube-y-las-obras-hidricas-nunca-llegaron/",
-          "fecha": "2026-10-28T07:31:42.932Z",
+          "fecha": "2026-10-28T14:26:40.508Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "Página/12"
+        },
+        {
+          "titulo": "El combustible profesional superará los dos euros por litro en algunas estaciones. El sector advierte que el incremento reduce …",
+          "descripcion": "El combustible profesional superará los dos euros por litro en algunas estaciones. El sector advierte que el incremento reduce el efecto de las ayudas y vuelve a tensionar la estructura de costos",
+          "url": "https://www.infobae.com/movant/2026/10/27/el-transporte-de-cargas-en-espana-enfrenta-una-nueva-escalada-del-precio-del-diesel/",
+          "fecha": "2026-10-28T14:26:39.557Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Cuba quisiera que se reanuden los \"envíos\" de combustible de México a la isla",
+          "descripcion": "Cuba quisiera que se reanuden los \"envíos\" de combustible de México a la isla",
+          "url": "https://www.infobae.com/america/agencias/2026/10/28/cuba-quisiera-que-se-reanuden-los-envios-de-combustible-de-mexico-a-la-isla/",
+          "fecha": "2026-10-28T14:26:39.557Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
         },
         {
           "titulo": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, pre…",
           "descripcion": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, presiona las cuentas públicas y reduce el margen del ejecutivo para financiar sus prioridades sin incumplir las reglas fiscales",
           "url": "https://www.infobae.com/america/mundo/2026/10/28/el-gobierno-de-burnham-presenta-su-primer-presupuesto-en-reino-unido-en-medio-de-presiones-por-la-inflacion-la-deuda-y-el-gasto-militar/",
           "fecha": "2026-10-28T07:31:42.802Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "El combustible profesional superará los dos euros por litro en algunas estaciones. El sector advierte que el incremento reduce …",
-          "descripcion": "El combustible profesional superará los dos euros por litro en algunas estaciones. El sector advierte que el incremento reduce el efecto de las ayudas y vuelve a tensionar la estructura de costos",
-          "url": "https://www.infobae.com/movant/2026/10/27/el-transporte-de-cargas-en-espana-enfrenta-una-nueva-escalada-del-precio-del-diesel/",
-          "fecha": "2026-10-28T07:31:42.800Z",
-          "fechaFormateada": "Hace 3 min",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "Infobae"
         },
         {
@@ -251,7 +275,7 @@
           "descripcion": "El aval sanitario alcanza cortes deshuesados y madurados, abre un cupo de 70.000 toneladas sin arancel y exige a las plantas sostener trazabilidad y cadena de frío para los primeros embarques",
           "url": "https://www.infobae.com/movant/2026/10/27/paraguay-suma-un-nuevo-destino-para-su-carne-bovina-con-diez-frigorificos-habilitados/",
           "fecha": "2026-10-28T07:31:42.800Z",
-          "fechaFormateada": "Hace 3 min",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "Infobae"
         },
         {
@@ -259,7 +283,7 @@
           "descripcion": "Desde noviembre y hasta abril, en las zonas muy cálidas se aplicará la bonificación en la boleta de luz en bloques de consumo de hasta 500 kWh. Se calcula un gasto anual entre USD 71 y 95 millones. Cuánto buscaba ahorrar el Gobierno con los cambios",
           "url": "https://www.infobae.com/economia/2026/10/27/menos-subsidios-al-gas-y-mas-a-la-electricidad-cuanto-ahorrara-el-gobierno-con-el-nuevo-regimen-de-zona-fria/",
           "fecha": "2026-10-28T07:31:42.798Z",
-          "fechaFormateada": "Hace 3 min",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "Infobae"
         },
         {
@@ -267,15 +291,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-28T07:31:41.523Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Una obra de US$ 40 millones permitirá conexión a gas residencial a 12 mil usuarios en tres provincias de la Patagonia",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-10-28T07:31:41.494Z",
-          "fechaFormateada": "Hace 3 min",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "Clarín"
         },
         {
@@ -283,7 +299,7 @@
           "descripcion": "Las víctimas fueron interceptadas por varios sujetos que viajaban en otro automóvil. El OIJ investiga las circunstancias del ataque y busca identificar a los responsables.",
           "url": "https://www.infobae.com/costa-rica/2026/10/28/hombre-de-24-anos-fue-asesinado-a-balazos-y-otros-tres-resultaron-heridos-mientras-empujaban-un-vehiculo-sin-combustible-en-costa-rica/",
           "fecha": "2026-10-28T01:49:09.772Z",
-          "fechaFormateada": "Hace 5 hs",
+          "fechaFormateada": "Hace 12 hs",
           "fuente": "Infobae"
         },
         {
@@ -291,7 +307,7 @@
           "descripcion": "Casi 2 millones de hogares del AMBA podrían enfrentar aumentos promedio del 22,6 por ciento en sus facturas de agua y cloacas.",
           "url": "https://www.pagina12.com.ar/2026/10/26/ahora-se-viene-la-suba-de-tarifas/",
           "fecha": "2026-10-27T22:49:34.790Z",
-          "fechaFormateada": "Hace 8 hs",
+          "fechaFormateada": "Hace 15 hs",
           "fuente": "Página/12"
         },
         {
@@ -299,7 +315,7 @@
           "descripcion": "Desde Amigos del Riel apuntaron contra la falta de inversión y mantenimiento del servicio, que tarda más de siete horas en hacer el recorrido.",
           "url": "https://www.pagina12.com.ar/2026/10/27/aumentan-los-pasajes-del-tren-rosario-buenos-aires/",
           "fecha": "2026-10-27T18:56:30.909Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Página/12"
         },
         {
@@ -307,7 +323,7 @@
           "descripcion": "El Gobierno lleva a la audiencia pública el nuevo cuadro tarifario para la empresa recientemente privatizada.",
           "url": "https://www.pagina12.com.ar/2026/10/26/los-nuevos-duenos-de-aysa-arrancan-con-un-tarifazo-a-la-carta/",
           "fecha": "2026-10-27T18:56:30.907Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Página/12"
         },
         {
@@ -315,7 +331,7 @@
           "descripcion": "El dirigente Edgardo Menéndez atribuyó la convocatoria a los sobrecostos por carburantes y al incumplimiento de pagos por distancia, sin precisar las rutas, la fecha exacta ni la duración de la protesta.",
           "url": "https://www.infobae.com/honduras/2026/10/27/transportistas-de-carga-en-honduras-anuncian-paro-por-precio-de-combustibles/",
           "fecha": "2026-10-27T18:56:28.903Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Infobae"
         },
         {
@@ -323,7 +339,7 @@
           "descripcion": "La resolución publicada en el Boletín Oficial establece requisitos, montos y un padrón para otorgar reducciones en el componente energético de las facturas",
           "url": "https://www.infobae.com/economia/2026/10/27/el-gobierno-definio-como-se-aplicaran-el-nuevo-regimen-de-zona-fria-descuentos-de-50-y-20-sobre-el-precio-del-gas/",
           "fecha": "2026-10-27T18:56:28.901Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Infobae"
         },
         {
@@ -331,7 +347,7 @@
           "descripcion": "La cotización del real en pesos cayó 7,38% tras la reelección de Lula. Cuánto bajan los gastos cotidianos en Brasil y qué rubros del viaje seguirán atados al dólar",
           "url": "https://www.infobae.com/economia/2026/10/27/cuanto-costaran-una-cerveza-el-alojamiento-y-la-nafta-para-los-turistas-argentinos-tras-la-devaluacion-del-real-brasileno/",
           "fecha": "2026-10-27T18:56:28.900Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Infobae"
         },
         {
@@ -339,7 +355,7 @@
           "descripcion": "Rodrigo de la Serna encarna al ladrón y represor de la dictadura en una producción basada en dos novelas históricas de Marcelo Larraquy.",
           "url": "https://www.pagina12.com.ar/2026/10/27/netflix-estreno-el-trailer-de-gordon/",
           "fecha": "2026-10-27T13:37:50.533Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Página/12"
         },
         {
@@ -347,7 +363,7 @@
           "descripcion": "El llamado fue emitido después de que soldados localizaran proyectiles y bombas de mortero expuestos por el retroceso del hielo, algunos de los cuales permanecieron sellados desde el conflicto alpino de 1915 a 1918",
           "url": "https://www.infobae.com/america/mundo/2026/10/27/el-deshielo-de-los-glaciares-italianos-saco-a-la-luz-250-explosivos-de-la-primera-guerra-mundial-ocultos-durante-un-siglo/",
           "fecha": "2026-10-27T13:37:50.324Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -355,7 +371,7 @@
           "descripcion": "La escudería cerró su programa de desarrollo por la cercanía del límite presupuestario y no llevará evoluciones al A526 en las cinco fechas restantes",
           "url": "https://www.infobae.com/deportes/2026/10/27/la-decision-de-alpine-que-podria-complicar-el-final-de-la-temporada-de-franco-colapinto-y-pierre-gasly-en-la-formula-1/",
           "fecha": "2026-10-27T13:37:50.324Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -363,7 +379,7 @@
           "descripcion": "La repotenciación del Sistema Cordillerano-Patagónico conectó a 25 localidades de Chubut, Río Negro y Neuquén con el Gasoducto General San Martín. Ciudades como Bariloche, Esquel y San Martín de los Andes podrán sumar 12.500 nuevos usuarios tras años sin poder habilitar conexiones",
           "url": "https://www.infobae.com/economia/2026/10/26/el-gas-de-vaca-muerta-ya-abastece-a-la-patagonia-se-inauguro-una-obra-de-usd-40-millones-que-se-licito-en-2017-y-estuvo-parada-cuatro-anos/",
           "fecha": "2026-10-27T13:37:50.294Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -371,7 +387,7 @@
           "descripcion": "Puso en marcha la repotenciación del Sistema Cordillerano-Patagónico, un proyecto que aumenta la capacidad de transporte de gas y permite incorporar hasta 12.000 nuevos usuarios en Chubut, Río Negro y Neuquén",
           "url": "https://www.lanacion.com.ar/economia/camuzzi-inauguro-una-obra-para-ampliar-el-abastecimiento-de-gas-en-la-patagonia-nid26102026/",
           "fecha": "2026-10-27T13:37:49.518Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "La Nación"
         },
         {
@@ -379,7 +395,7 @@
           "descripcion": "A la hora de comprar un departamento para ponerlo en alquiler, es importante saber cuántos ingresos genera para elegir si ofrecerlo como tradicional o temporario",
           "url": "https://www.lanacion.com.ar/propiedades/inversiones/airbnb-vs-alquiler-tradicional-en-buenos-aires-cuanto-gana-realmente-cada-uno-en-octubre-2026-nid24102026/",
           "fecha": "2026-10-27T07:45:35.599Z",
-          "fechaFormateada": "Hace 23 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "La Nación"
         },
         {
@@ -387,7 +403,7 @@
           "descripcion": "La moneda brasileña se derrumbó hasta 12% frente al dólar y los gastos cotidianos en destino se volverán más económicos para quienes planean cruzar la frontera este verano",
           "url": "https://www.infobae.com/economia/2026/10/26/brasil-mas-barato-que-gastos-pueden-bajar-para-los-argentinos-que-viajen-este-verano/",
           "fecha": "2026-10-27T07:45:35.069Z",
-          "fechaFormateada": "Hace 23 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -395,7 +411,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-27T07:45:34.895Z",
-          "fechaFormateada": "Hace 23 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Clarín"
         },
         {
@@ -443,7 +459,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-26T13:45:09.203Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -451,7 +467,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-26T13:45:09.203Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -459,7 +475,7 @@
           "descripcion": "La comuna que conduce Mauro Poletti, referente del espacio de Axel Kicillof, sumó un registro de transporte a la tasa vial que cobra a los camiones; las cámaras empresarias hablan de una aduana interior",
           "url": "https://www.lanacion.com.ar/economia/un-municipio-kirchnerista-cobra-hasta-62000-a-los-camiones-por-circular-5-kilometros-y-ahora-les-nid23102026/",
           "fecha": "2026-10-26T13:45:06.279Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "La Nación"
         },
         {
@@ -467,7 +483,7 @@
           "descripcion": "Las empresas y el Gobierno coincidieron entonces que era necesario normalizar las tarifas, que acumulaban varios años de atraso. Pero los aumentos fueron mucho mayores en el distrito que gobierna Axel Kicillof",
           "url": "https://www.infobae.com/economia/2026/10/25/desde-diciembre-de-2023-el-boleto-minimo-de-colectivo-en-la-provincia-de-buenos-aires-aumento-seis-veces-mas-que-la-inflacion/",
           "fecha": "2026-10-26T13:45:06.033Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Infobae"
         },
         {
@@ -475,7 +491,7 @@
           "descripcion": "La demanda de combustibles creció 1,96% en septiembre y cortó la racha negativa, pero la mejora se explica por el diésel. La nafta súper, el producto de mayor volumen en los surtidores, volvió a caer",
           "url": "https://www.infobae.com/economia/2026/10/25/la-venta-de-combustibles-subio-tras-siete-meses-en-rojo-pero-la-nafta-todavia-no-da-senales-de-recuperacion/",
           "fecha": "2026-10-26T13:45:06.032Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Infobae"
         },
         {
@@ -635,7 +651,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-23T10:33:24.895Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Clarín"
         },
         {
@@ -643,7 +659,7 @@
           "descripcion": "La petrolera busca reconvertir sus puntos de venta en espacios de consumo y servicios, más allá de la carga de combustible; la apertura en Vicente López marca el inicio de una estrategia que suma gastronomía, conveniencia y alianzas con grandes marcas",
           "url": "https://www.lanacion.com.ar/economia/negocios/ypf-y-mcdonalds-estrenan-su-alianza-y-aceleran-la-transformacion-de-las-estaciones-de-servicio-nid22102026/",
           "fecha": "2026-10-23T10:33:24.035Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "La Nación"
         },
         {
@@ -651,7 +667,7 @@
           "descripcion": "Ricardo Cardozo, CEO de una empresa automotriz de camiones en Argentina, explica el impacto de la apertura del mercado, la profesionalización de las flotas y la tecnología en el transporte de cargas",
           "url": "https://www.infobae.com/movant/2026/10/22/resiliencia-sobre-ruedas-los-desafios-del-transporte-de-cargas-en-un-mercado-en-transformacion/",
           "fecha": "2026-10-23T10:33:22.880Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -659,7 +675,7 @@
           "descripcion": "Ayer, Grupo México, la única empresa extranjera interesada, se bajó del esquema. Fuentes oficiales aseguraron que el conglomerado conocía las condiciones y que pidió cambiarlas sin éxito. Según fuentes oficiales, la postergación la pidieron otras empresas semanas atrás",
           "url": "https://www.infobae.com/economia/2026/10/22/privatizacion-del-belgrano-cargas-el-gobierno-esta-a-un-paso-de-posponer-el-proceso-de-licitacion/",
           "fecha": "2026-10-23T10:33:22.878Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -667,7 +683,7 @@
           "descripcion": "No siempre la falta de ahorro responde a una mala administración financiera, pero en muchos casos sí",
           "url": "https://www.infobae.com/opinion/2026/10/22/el-ahorro-invisible-por-que-cuesta-guardar-dinero-incluso-cuando-los-gastos-estan-ordenados/",
           "fecha": "2026-10-23T10:33:22.877Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -747,7 +763,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-10-22T13:11:03.000Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "El Entre Ríos"
         },
         {
@@ -755,7 +771,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-10-22T12:28:00.000Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "El Entre Ríos"
         },
         {
@@ -763,7 +779,7 @@
           "descripcion": "Además, el frutero explica qué es ese pequeño trozo de cera que encontramos a veces en los tallos de esta fruta",
           "url": "https://www.infobae.com/espana/2026/10/22/raul-cardaba-frutero-para-encontrar-una-pera-que-este-buena-fijate-en-las-que-son-mas-largas-que-anchas-porque-suelen-ser-mas-dulces/",
           "fecha": "2026-10-22T10:40:41.241Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "Infobae"
         },
         {
@@ -771,7 +787,7 @@
           "descripcion": "Aunque mantengas tu cocina impecable, estos insectos encuentran en un aparato específico el refugio perfecto para sobrevivir",
           "url": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/los-expertos-en-plagas-coinciden-lo-primero-que-hay-que-hacer-en-casa-antes-de-que-llegue-el-calor-nid19102026/",
           "fecha": "2026-10-22T10:40:40.948Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "La Nación"
         },
         {
@@ -853,62 +869,6 @@
           "fecha": "2026-10-21T15:55:28.102Z",
           "fechaFormateada": "Hace 6 días",
           "fuente": "La Nación"
-        },
-        {
-          "titulo": "El Gobierno dio luz verde a una inversión de Mindlin y Sielecki por más de US$ 3.200 millones en Vaca Muerta",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-10-21T11:04:18.885Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Las primeras restricciones se implementarán de forma escalonada en los servicios nocturnos a partir de este lunes.",
-          "descripcion": "Las primeras restricciones se implementarán de forma escalonada en los servicios nocturnos a partir de este lunes.",
-          "url": "https://www.pagina12.com.ar/2026/10/19/menos-frecuencia-de-colectivos/",
-          "fecha": "2026-10-21T11:04:18.249Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "Día de la Madre 2026: las ventas volvieron a caer y el gasto promedio sorprendió",
-          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-          "url": "https://www.ellitoral.com/",
-          "fecha": "2026-10-21T11:04:16.913Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "El Litoral (Santa Fe)"
-        },
-        {
-          "titulo": "Juan Pablo Fernández, CEO de una empresa gastronómica enfocada en alimentos y bebidas, explica por qué la logística debe estar …",
-          "descripcion": "Juan Pablo Fernández, CEO de una empresa gastronómica enfocada en alimentos y bebidas, explica por qué la logística debe estar en la mesa de decisiones y cómo evitar quiebres de stock y desvíos",
-          "url": "https://www.infobae.com/movant/2026/10/20/producto-correcto-en-el-momento-correcto-la-logistica-como-eje-del-negocio-gastronomico/",
-          "fecha": "2026-10-21T11:04:16.829Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "Fue a uno de los bodegones más destacados de Palermo, pidió un almuerzo para 6 y mostró cuánto gastó",
-          "descripcion": "Un cliente compartió el comprobante de un almuerzo para seis personas, en un contexto de subas de precios del consumo fuera del hogar según datos oficiales",
-          "url": "https://www.infobae.com/economia/2026/10/20/fue-a-uno-de-los-bodegones-mas-destacados-de-palermo-pidio-un-almuerzo-para-6-y-mostro-cuanto-gasto/",
-          "fecha": "2026-10-21T11:04:16.828Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "El descenso mensual estuvo impulsado por la menor demanda de gas tras el invierno, aunque el gasto en servicios acumuló una sub…",
-          "descripcion": "El descenso mensual estuvo impulsado por la menor demanda de gas tras el invierno, aunque el gasto en servicios acumuló una suba interanual del 56%",
-          "url": "https://www.infobae.com/economia/2026/10/20/por-menor-consumo-cayo-el-gasto-de-la-canasta-de-servicios-en-el-amba-cuanto-debio-destinar-una-familia-en-octubre/",
-          "fecha": "2026-10-21T11:04:16.827Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "Polémica. El Senasa se desligó del accionar de una empresa de software, evitó dar nombres y ya gastó más de $726 millones en un…",
-          "descripcion": "A raíz de una investigación de LA NACION sobre una firma que ofrecía servicios privados vinculados con una plataforma oficial de trazabilidad veterinaria, el organismo respondió a un pedido de acceso a la información pública de este medio",
-          "url": "https://www.lanacion.com.ar/economia/campo/polemica-el-senasa-se-desligo-del-accionar-de-una-empresa-de-software-evito-dar-nombres-y-ya-gasto-nid20102026/",
-          "fecha": "2026-10-21T11:04:16.718Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "La Nación"
         }
       ]
     },
@@ -917,19 +877,43 @@
       "nombre": "CONSUMO MASIVO",
       "noticias": [
         {
-          "titulo": "Gonzalo Tizón, licenciado en comercio internacional, explica cómo la congestión global, la posición geográfica y la infraestruc…",
-          "descripcion": "Gonzalo Tizón, licenciado en comercio internacional, explica cómo la congestión global, la posición geográfica y la infraestructura argentina condicionan hoy las operaciones de comercio exterior",
-          "url": "https://www.infobae.com/movant/2026/10/27/previsibilidad-la-nueva-moneda-del-comercio-exterior-en-un-mundo-impredecible/",
-          "fecha": "2026-10-28T07:31:42.800Z",
+          "titulo": "Daniela Aguiar, asesora de comercio exterior, explica cómo se anticipan controles, costos y tiempos antes de embarcar, y por qu…",
+          "descripcion": "Daniela Aguiar, asesora de comercio exterior, explica cómo se anticipan controles, costos y tiempos antes de embarcar, y por qué una decisión postergada puede significar un mes de demora en la carga",
+          "url": "https://www.infobae.com/movant/2026/10/27/lo-compre-lo-pague-lo-quiero-el-desafio-de-explicar-los-tiempos-reales-del-comercio-exterior/",
+          "fecha": "2026-10-28T14:26:39.557Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "Infobae"
         },
         {
-          "titulo": "Daniela Aguiar, asesora de comercio exterior, explica cómo se anticipan controles, costos y tiempos antes de embarcar, y por qu…",
-          "descripcion": "Daniela Aguiar, asesora de comercio exterior, explica cómo se anticipan controles, costos y tiempos antes de embarcar, y por qué una decisión postergada puede significar un mes de demora en la carga",
-          "url": "https://www.infobae.com/movant/2026/10/27/lo-compre-lo-pague-lo-quiero-el-desafio-de-explicar-los-tiempos-reales-del-comercio-exterior/",
-          "fecha": "2026-10-28T07:31:42.799Z",
+          "titulo": "Últimas Noticias de Comercio Exterior: Las exportaciones mineras crecieron un 84% en el primer cuatrimestre, El documento de Ha…",
+          "descripcion": "Últimas Noticias de Comercio Exterior: Las exportaciones mineras crecieron un 84% en el primer cuatrimestre, El documento de Harvard que usó Sturzenegger para ampliar los negocios con EE.UU.",
+          "url": "https://www.lanacion.com.ar/economia/comercio-exterior/",
+          "fecha": "2026-10-28T14:26:39.066Z",
           "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "El bloqueo del mecanismo de apelaciones de la Organización Mundial del Comercio (OMC) por la postura de Estados Unidos llevó a …",
+          "descripcion": "El bloqueo del mecanismo de apelaciones de la Organización Mundial del Comercio (OMC) por la postura de Estados Unidos llevó a un grupo de países a crear el Acuerdo Provisional Multilateral de Arbitraje de Apelación (MPIA) como vía alternativa para resolver disputas comerciales internacionales",
+          "url": "https://www.lanacion.com.ar/economia/la-union-europea-lidera-una-iniciativa-para-sostener-el-sistema-de-comercio-global-nid11022026/",
+          "fecha": "2026-10-28T14:26:39.066Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Tras la victoria del presidente brasileño y la devaluación de la moneda, creció el interés de los argentinos por pasar el veran…",
+          "descripcion": "Tras la victoria del presidente brasileño y la devaluación de la moneda, creció el interés de los argentinos por pasar el verano en el país vecino",
+          "url": "https://www.lanacion.com.ar/economia/se-disparan-las-ventas-de-pasajes-a-brasil-por-la-caida-del-real-nid28102026/",
+          "fecha": "2026-10-28T14:26:39.062Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Gonzalo Tizón, licenciado en comercio internacional, explica cómo la congestión global, la posición geográfica y la infraestruc…",
+          "descripcion": "Gonzalo Tizón, licenciado en comercio internacional, explica cómo la congestión global, la posición geográfica y la infraestructura argentina condicionan hoy las operaciones de comercio exterior",
+          "url": "https://www.infobae.com/movant/2026/10/27/previsibilidad-la-nueva-moneda-del-comercio-exterior-en-un-mundo-impredecible/",
+          "fecha": "2026-10-28T07:31:42.800Z",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "Infobae"
         },
         {
@@ -937,39 +921,15 @@
           "descripcion": "Los precios se mantienen estables respecto de 2025 y hay opciones para armar un disfraz infantil por menos de $8.000",
           "url": "https://www.infobae.com/economia/2026/10/27/canasta-halloween-cuanto-cuestan-los-disfraces-las-calabazas-para-ninos-y-la-decoracion/",
           "fecha": "2026-10-28T07:31:42.786Z",
-          "fechaFormateada": "Hace 3 min",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "Infobae"
-        },
-        {
-          "titulo": "El bloqueo del mecanismo de apelaciones de la Organización Mundial del Comercio (OMC) por la postura de Estados Unidos llevó a …",
-          "descripcion": "El bloqueo del mecanismo de apelaciones de la Organización Mundial del Comercio (OMC) por la postura de Estados Unidos llevó a un grupo de países a crear el Acuerdo Provisional Multilateral de Arbitraje de Apelación (MPIA) como vía alternativa para resolver disputas comerciales internacionales",
-          "url": "https://www.lanacion.com.ar/economia/la-union-europea-lidera-una-iniciativa-para-sostener-el-sistema-de-comercio-global-nid11022026/",
-          "fecha": "2026-10-28T07:31:41.142Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "Últimas Noticias de Comercio Exterior: Las exportaciones mineras crecieron un 84% en el primer cuatrimestre, El documento de Ha…",
-          "descripcion": "Últimas Noticias de Comercio Exterior: Las exportaciones mineras crecieron un 84% en el primer cuatrimestre, El documento de Harvard que usó Sturzenegger para ampliar los negocios con EE.UU.",
-          "url": "https://www.lanacion.com.ar/economia/comercio-exterior/",
-          "fecha": "2026-10-28T07:31:41.141Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "El exministro de Economía criticó la intervención oficial en el dólar y la comparó con la gestión del exsecretario de Comercio;…",
-          "descripcion": "El exministro de Economía criticó la intervención oficial en el dólar y la comparó con la gestión del exsecretario de Comercio; Emmanuel Álvarez Agis propuso endurecer nuevamente las restricciones cambiarias para las personas; otros especialistas dieron sus puntos de vista críticos con la actual gestión",
-          "url": "https://www.lanacion.com.ar/economia/cavallo-dijo-que-manejan-el-tipo-de-cambio-como-moreno-y-un-economista-kirchnerista-pidio-volver-al-nid27102026/",
-          "fecha": "2026-10-28T07:31:41.135Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
         },
         {
           "titulo": "Dos empresas presentaron ofertas para la pavimentación de calles de la zona norte de Concordia",
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-10-27T20:24:17.000Z",
-          "fechaFormateada": "Hace 11 hs",
+          "fechaFormateada": "Hace 18 hs",
           "fuente": "El Entre Ríos"
         },
         {
@@ -977,7 +937,7 @@
           "descripcion": "La resolución publicada en el Boletín Oficial establece requisitos, montos y un padrón para otorgar reducciones en el componente energético de las facturas",
           "url": "https://www.infobae.com/economia/2026/10/27/el-gobierno-definio-como-se-aplicaran-el-nuevo-regimen-de-zona-fria-descuentos-de-50-y-20-sobre-el-precio-del-gas/",
           "fecha": "2026-10-27T18:56:28.901Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Infobae"
         },
         {
@@ -985,7 +945,7 @@
           "descripcion": "La Secretaría de Industria y las entidades empresariales coordinarán controles con plataformas y cadenas para detectar comercio ilegal y subfacturación; afirman que la informalidad genera una pérdida anual de US$2300 millones",
           "url": "https://www.lanacion.com.ar/economia/contrabando-el-gobierno-la-uia-y-mercado-libre-sellaron-un-acuerdo-para-controlar-el-comercio-nid26102026/",
           "fecha": "2026-10-27T18:56:28.723Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "La Nación"
         },
         {
@@ -1017,7 +977,7 @@
           "descripcion": "Las compras de argentinos al exterior mediante courier sumaron 960 millones de dólares entre enero y septiembre. Récord anual.",
           "url": "https://www.pagina12.com.ar/2026/10/22/boom-de-las-ventas-puerta-a-puerta/",
           "fecha": "2026-10-26T13:45:08.116Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Página/12"
         },
         {
@@ -1025,7 +985,7 @@
           "descripcion": "Diarios, libros, shoppings ¿y autos? Profecías incumplidas en la era digital",
           "url": "https://www.lanacion.com.ar/economia/diarios-libros-shoppings-y-autos-profecias-incumplidas-en-la-era-digital-nid26102026/",
           "fecha": "2026-10-26T13:45:06.289Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "La Nación"
         },
         {
@@ -1033,7 +993,7 @@
           "descripcion": "Laura Medina, consultora internacional y directora ejecutiva de la Cámara de Comercio Argentino Congoleña, repasa sinergias productivas y desafíos operativos de abrir un mercado nuevo en África",
           "url": "https://www.infobae.com/movant/2026/10/25/el-congo-un-mercado-donde-esta-todo-por-hacer-para-el-comercio-exterior-argentino/",
           "fecha": "2026-10-26T13:45:06.033Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Infobae"
         },
         {
@@ -1065,7 +1025,7 @@
           "descripcion": "El organismo impulsa un repositorio global de requisitos de información anticipada, nuevas directrices para comercio electrónico y herramientas tecnológicas orientadas a mejorar la trazabilidad",
           "url": "https://www.infobae.com/movant/2026/10/24/la-oma-avanza-con-nuevas-herramientas-para-simplificar-el-comercio-y-reforzar-la-seguridad/",
           "fecha": "2026-10-25T12:13:08.899Z",
-          "fechaFormateada": "Hace 2 días",
+          "fechaFormateada": "Hace 3 días",
           "fuente": "Infobae"
         },
         {
@@ -1081,7 +1041,7 @@
           "descripcion": "Emiliano Cantarella, licenciado en comercio internacional con experiencia en múltiples rubros, explica cómo la planificación anticipada y la gestión integral definen la rentabilidad de lo importado",
           "url": "https://www.infobae.com/movant/2026/10/23/la-logistica-de-punta-a-punta-que-define-que-producto-importado-llega-a-la-gondola/",
           "fecha": "2026-10-24T13:33:57.264Z",
-          "fechaFormateada": "Hace 3 días",
+          "fechaFormateada": "Hace 4 días",
           "fuente": "Infobae"
         },
         {
@@ -1145,7 +1105,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-10-23T10:33:24.190Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "El Entre Ríos"
         },
         {
@@ -1153,7 +1113,7 @@
           "descripcion": "Fue en la medida interanual; las ventas disminuyeron 1% respecto de agosto, según datos de la consultora especializada Scentia; acumulan una baja de 2,7% en el año",
           "url": "https://www.lanacion.com.ar/economia/el-consumo-masivo-cayo-12-en-septiembre-nid22102026/",
           "fecha": "2026-10-23T10:33:24.035Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "La Nación"
         },
         {
@@ -1161,7 +1121,7 @@
           "descripcion": "Boratos, litio y cobre consolidan el perfil exportador del NOA y ponen al comercio exterior en el centro de una cadena que moviliza producción, logística, empleo, proveedores e inversiones en toda la región",
           "url": "https://www.infobae.com/movant/2026/10/22/las-exportaciones-mineras-y-la-importancia-del-comercio-exterior-para-nuestra-region/",
           "fecha": "2026-10-23T10:33:22.881Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -1169,7 +1129,7 @@
           "descripcion": "Ambos canales de ventas mostraron una contracción en relación a julio y en la comparación interanual. Cuáles fueron los productos más afectados",
           "url": "https://www.infobae.com/economia/2026/10/22/consumo-en-baja-cayeron-las-ventas-de-supermercados-y-mayoristas-en-agosto-y-profundizaron-su-retroceso-en-el-ano/",
           "fecha": "2026-10-23T10:33:22.879Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -1233,7 +1193,7 @@
           "descripcion": "El financiamiento en el mercado de capitales mostró más volumen y plazos extendidos en septiembre",
           "url": "https://www.infobae.com/economia/2026/10/21/cuales-son-las-condiciones-que-enfrentan-las-pymes-para-financiarse-en-el-mercado-de-capitales/",
           "fecha": "2026-10-22T10:40:41.240Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "Infobae"
         },
         {
@@ -1267,46 +1227,6 @@
           "fecha": "2026-10-21T15:55:28.103Z",
           "fechaFormateada": "Hace 6 días",
           "fuente": "La Nación"
-        },
-        {
-          "titulo": "La canasta de crianza porteña aumentó por encima de la inflación: cuánto cuesta tener un hijo en la Ciudad de Buenos Aires",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-10-21T11:04:18.884Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Crecen hasta 40% las ventas de café: radiografía del nuevo mapa de los canales de consumo",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-10-21T11:04:18.877Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Día de la Madre 2026: las ventas volvieron a caer y el gasto promedio sorprendió",
-          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-          "url": "https://www.ellitoral.com/",
-          "fecha": "2026-10-21T11:04:16.913Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "El Litoral (Santa Fe)"
-        },
-        {
-          "titulo": "El descenso mensual estuvo impulsado por la menor demanda de gas tras el invierno, aunque el gasto en servicios acumuló una sub…",
-          "descripcion": "El descenso mensual estuvo impulsado por la menor demanda de gas tras el invierno, aunque el gasto en servicios acumuló una suba interanual del 56%",
-          "url": "https://www.infobae.com/economia/2026/10/20/por-menor-consumo-cayo-el-gasto-de-la-canasta-de-servicios-en-el-amba-cuanto-debio-destinar-una-familia-en-octubre/",
-          "fecha": "2026-10-21T11:04:16.827Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "“La Semana de los 0 km”: la nueva apuesta de una automotriz para acelerar las ventas de autos antes de fin de año",
-          "descripcion": "Volkswagen lanzó una campaña de seis días con financiación a tasa cero, bonificaciones y beneficios adicionales en sus concesionarios. La iniciativa busca reducir stocks en un mercado que resultó más chico de lo previsto",
-          "url": "https://www.infobae.com/economia/2026/10/20/la-semana-de-los-0-km-la-nueva-apuesta-de-una-automotriz-para-acelerar-las-ventas-de-autos-antes-de-fin-de-ano/",
-          "fecha": "2026-10-21T11:04:16.827Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
         }
       ]
     },
@@ -1315,106 +1235,10 @@
       "nombre": "GOBIERNO",
       "noticias": [
         {
-          "titulo": "Dólar blue: cotización del martes 27 de octubre de 2026",
-          "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
-          "url": "https://www.pagina12.com.ar/2026/10/27/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-martes-27-de-octubre-de-2026/",
-          "fecha": "2026-10-28T07:31:42.933Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "Mientras el mercado demuestra tener dudas respecto del programa económico, Milei y Caputo recibieron un guiño del FMI.",
-          "descripcion": "Mientras el mercado demuestra tener dudas respecto del programa económico, Milei y Caputo recibieron un guiño del FMI.",
-          "url": "https://www.pagina12.com.ar/2026/10/27/nuevo-desembolso-del-fmi-a-cambio-de-seguir-con-el-ajuste/",
-          "fecha": "2026-10-28T07:31:42.932Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, pre…",
-          "descripcion": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, presiona las cuentas públicas y reduce el margen del ejecutivo para financiar sus prioridades sin incumplir las reglas fiscales",
-          "url": "https://www.infobae.com/america/mundo/2026/10/28/el-gobierno-de-burnham-presenta-su-primer-presupuesto-en-reino-unido-en-medio-de-presiones-por-la-inflacion-la-deuda-y-el-gasto-militar/",
-          "fecha": "2026-10-28T07:31:42.802Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "Desde noviembre y hasta abril, en las zonas muy cálidas se aplicará la bonificación en la boleta de luz en bloques de consumo d…",
-          "descripcion": "Desde noviembre y hasta abril, en las zonas muy cálidas se aplicará la bonificación en la boleta de luz en bloques de consumo de hasta 500 kWh. Se calcula un gasto anual entre USD 71 y 95 millones. Cuánto buscaba ahorrar el Gobierno con los cambios",
-          "url": "https://www.infobae.com/economia/2026/10/27/menos-subsidios-al-gas-y-mas-a-la-electricidad-cuanto-ahorrara-el-gobierno-con-el-nuevo-regimen-de-zona-fria/",
-          "fecha": "2026-10-28T07:31:42.798Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "La divisa mayorista cedió a $1.538, a pesar del recorte en el volumen de operaciones. Al público permaneció a $1.560 para la ve…",
-          "descripcion": "La divisa mayorista cedió a $1.538, a pesar del recorte en el volumen de operaciones. Al público permaneció a $1.560 para la venta en el Banco Nación",
-          "url": "https://www.infobae.com/economia/2026/10/27/el-dolar-bajo-y-corto-una-racha-de-siete-sesiones-consecutiva-de-avances/",
-          "fecha": "2026-10-28T07:31:42.786Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "El staff del FMI aprobó la tercera revisión del acuerdo con la Argentina y allanó el camino para un desembolso de USD 900 millones",
-          "descripcion": "El organismo y el Gobierno alcanzaron un acuerdo técnico por la tercera revisión del programa. Si el Directorio Ejecutivo lo convalida, el país podrá acceder al financiamiento programado",
-          "url": "https://www.infobae.com/economia/2026/10/27/el-staff-del-fmi-aprobo-la-tercera-revision-del-acuerdo-con-la-argentina-y-allano-el-camino-para-un-desembolso-de-usd-900-millones/",
-          "fecha": "2026-10-28T07:31:42.785Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "La autoridad monetaria volvió a mantenerse al margen del mercado de cambios, en una rueda en la que el dólar mayorista bajó a $…",
-          "descripcion": "La autoridad monetaria volvió a mantenerse al margen del mercado de cambios, en una rueda en la que el dólar mayorista bajó a $1.538 y las reservas subieron a USD 50.580 millones. Ayer ya había interrumpido las compras ante la volatilidad cambiaria posterior al balotaje de Brasil",
-          "url": "https://www.infobae.com/economia/2026/10/27/por-primera-vez-en-el-ano-el-bcra-no-compro-divisas-por-dos-ruedas-consecutivas/",
-          "fecha": "2026-10-28T07:31:42.785Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "El empresario reclama una estrategia productiva duradera, financiamiento accesible y reglas estables para que las pequeñas y me…",
-          "descripcion": "El empresario reclama una estrategia productiva duradera, financiamiento accesible y reglas estables para que las pequeñas y medianas compañías puedan invertir, preservar empleos y afrontar costos financieros, tributarios, energéticos y logísticos",
-          "url": "https://www.infobae.com/opinion/2026/10/27/una-fabrica-que-cierra-no-se-recupera-con-un-decreto/",
-          "fecha": "2026-10-28T07:31:42.784Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "Bajó el riesgo país y el dólar se estabilizó pero sigue el viento de frente: vuelven a subir las tasas en EEUU",
-          "descripcion": "Una licitación de deuda del Tesoro argentino deberá renovar $10,8 billones, mientras Brasil enfrenta su propio frente fiscal y las exportaciones argentinas apuntan a superar los USD 100.000 millones en 2026",
-          "url": "https://www.infobae.com/economia/2026/10/28/bajo-el-riesgo-pais-y-el-dolar-se-estabilizo-pero-sigue-el-viento-de-frente-vuelven-a-subir-las-tasas-en-eeuu/",
-          "fecha": "2026-10-28T07:31:42.783Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "Bajaron los dólares financieros y el riesgo país, pero los bonos todavía marcan sólo un 50% de chances de reelección de Milei",
-          "descripcion": "Gracias a una jornada más tranquila en Brasil, los indicadores financieros mejoraron pero aún muestran dudas sobre la continuidad de políticas que no se condicen con lo que sugieren las encuestas",
-          "url": "https://www.infobae.com/economia/2026/10/28/bajaron-los-dolares-financieros-y-el-riesgo-pais-pero-los-bonos-todavia-marcan-solo-un-50-de-chances-de-reeleccion-de-milei/",
-          "fecha": "2026-10-28T07:31:42.782Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "El Gobierno debe afrontar un pago de USD 800 millones al FMI y analiza dos caminos: usar dólares propios o comprarlos al BCRA",
-          "descripcion": "El lunes el equipo económico tiene que afrontar un nuevo pago con el organismo internacionales en concepto de intereses, para los analistas hay dos opciones y una suma presión a la compra de reservas del Banco Central. El desembolso pendiente",
-          "url": "https://www.infobae.com/economia/2026/10/28/el-gobierno-debe-afrontar-un-pago-de-usd-800-millones-al-fmi-y-analiza-dos-caminos-usar-dolares-propios-o-comprarlos-al-bcra/",
-          "fecha": "2026-10-28T07:31:42.782Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "Subas del dólar y el riesgo país en Argentina por el efecto del “cisne negro” de la victoria de Lula",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-10-28T07:31:41.522Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
-        },
-        {
           "titulo": "El Gobierno aprobó un nuevo RIGI minero: prevé una inversión total por más de US$ 6.300 millones en Catamarca",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-10-28T07:31:41.492Z",
+          "fecha": "2026-10-28T14:26:40.766Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "Clarín"
         },
@@ -1422,15 +1246,7 @@
           "titulo": "¿Por qué el Gobierno de EE.UU. paga solo un dólar por la IA más avanzada",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-10-28T07:31:41.488Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Efecto “Lula 4”: el Gobierno reaccionó a la devaluación del real y la city espera definiciones",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-10-28T07:31:41.487Z",
+          "fecha": "2026-10-28T14:26:40.765Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "Clarín"
         },
@@ -1438,7 +1254,7 @@
           "titulo": "El vice del Banco Central rindió examen sobre el crédito y las soluciones a la mora ante estudiantes",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-10-28T07:31:41.485Z",
+          "fecha": "2026-10-28T14:26:40.763Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "Clarín"
         },
@@ -1446,39 +1262,135 @@
           "titulo": "El dólar mayorista bajó, pero el Banco Central no compró dólares en el mercado de cambios por segundo día consecutivo",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-10-28T07:31:41.485Z",
+          "fecha": "2026-10-28T14:26:40.763Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "Clarín"
         },
         {
-          "titulo": "Así cerró el dólar en bancos, blue y MEP este lunes 26 de octubre",
-          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-          "url": "https://www.ellitoral.com/",
-          "fecha": "2026-10-28T07:31:41.283Z",
+          "titulo": "Efecto “Lula 4”: el Gobierno reaccionó a la devaluación del real y la city espera definiciones",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-10-28T14:26:40.763Z",
           "fechaFormateada": "Hace 3 min",
-          "fuente": "El Litoral (Santa Fe)"
+          "fuente": "Clarín"
         },
         {
-          "titulo": "Así cerró el dólar en bancos, blue y MEP este martes 27 de octubre",
-          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-          "url": "https://www.ellitoral.com/",
-          "fecha": "2026-10-28T07:31:41.281Z",
+          "titulo": "Privatizaciones: cinco de las ocho empresas públicas que serán vendidas por el Gobierno ganaron plata este año",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-10-28T14:26:40.762Z",
           "fechaFormateada": "Hace 3 min",
-          "fuente": "El Litoral (Santa Fe)"
+          "fuente": "Clarín"
         },
         {
-          "titulo": "Dólar blue hoy: a cuánto cotiza el martes 27 de octubre",
-          "descripcion": "La cotización de la moneda estadounidense ronda los $1527,75 para la compra y $1575 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 27 de octubre de 2026",
-          "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-martes-27-de-octubre-nid27102026/",
-          "fecha": "2026-10-28T07:31:41.160Z",
+          "titulo": "Mientras el mercado demuestra tener dudas respecto del programa económico, Milei y Caputo recibieron un guiño del FMI.",
+          "descripcion": "Mientras el mercado demuestra tener dudas respecto del programa económico, Milei y Caputo recibieron un guiño del FMI.",
+          "url": "https://www.pagina12.com.ar/2026/10/27/nuevo-desembolso-del-fmi-a-cambio-de-seguir-con-el-ajuste/",
+          "fecha": "2026-10-28T14:26:40.509Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "Dólar blue: cotización del martes 27 de octubre de 2026",
+          "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
+          "url": "https://www.pagina12.com.ar/2026/10/27/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-martes-27-de-octubre-de-2026/",
+          "fecha": "2026-10-28T14:26:40.509Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "Dólar blue: cotización del miércoles 28 de octubre de 2026",
+          "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
+          "url": "https://www.pagina12.com.ar/2026/10/28/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-martes-28-de-octubre-de-2026/",
+          "fecha": "2026-10-28T14:26:40.508Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "El país caribeño recibió 2,19 millones de pasajeros entre enero y julio de 2026, por debajo de España y por encima de Japón en …",
+          "descripcion": "El país caribeño recibió 2,19 millones de pasajeros entre enero y julio de 2026, por debajo de España y por encima de Japón en la clasificación internacional de destinos preferidos",
+          "url": "https://www.infobae.com/republica-dominicana/2026/10/28/republica-dominicana-se-ubico-como-el-sexto-destino-internacional-mas-elegido-por-viajeros-de-estados-unidos-anuncia-el-gobierno/",
+          "fecha": "2026-10-28T14:26:39.558Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "El Gobierno debe afrontar un pago de USD 800 millones al FMI y analiza dos caminos: usar dólares propios o comprarlos al BCRA",
+          "descripcion": "El lunes el equipo económico tiene que afrontar un nuevo pago con el organismo internacionales en concepto de intereses, para los analistas hay dos opciones y una suma presión a la compra de reservas del Banco Central. El desembolso pendiente",
+          "url": "https://www.infobae.com/economia/2026/10/28/el-gobierno-debe-afrontar-un-pago-de-usd-800-millones-al-fmi-y-analiza-dos-caminos-usar-dolares-propios-o-comprarlos-al-bcra/",
+          "fecha": "2026-10-28T14:26:39.556Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Bajó el riesgo país y el dólar se estabilizó pero sigue el viento de frente: vuelven a subir las tasas en EEUU",
+          "descripcion": "Una licitación de deuda del Tesoro argentino deberá renovar $10,8 billones, mientras Brasil enfrenta su propio frente fiscal y las exportaciones argentinas apuntan a superar los USD 100.000 millones en 2026",
+          "url": "https://www.infobae.com/economia/2026/10/28/bajo-el-riesgo-pais-y-el-dolar-se-estabilizo-pero-sigue-el-viento-de-frente-vuelven-a-subir-las-tasas-en-eeuu/",
+          "fecha": "2026-10-28T14:26:39.556Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "La autoridad monetaria volvió a mantenerse al margen del mercado de cambios, en una rueda en la que el dólar mayorista bajó a $…",
+          "descripcion": "La autoridad monetaria volvió a mantenerse al margen del mercado de cambios, en una rueda en la que el dólar mayorista bajó a $1.538 y las reservas subieron a USD 50.580 millones. Ayer ya había interrumpido las compras ante la volatilidad cambiaria posterior al balotaje de Brasil",
+          "url": "https://www.infobae.com/economia/2026/10/27/por-primera-vez-en-el-ano-el-bcra-no-compro-divisas-por-dos-ruedas-consecutivas/",
+          "fecha": "2026-10-28T14:26:39.556Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "La actualización mensual llevará la prestación mínima a $ 444.158,46. La medida alcanza a jubilados, pensionados, titulares de …",
+          "descripcion": "La actualización mensual llevará la prestación mínima a $ 444.158,46. La medida alcanza a jubilados, pensionados, titulares de la PUAM y beneficiarios de asignaciones familiares",
+          "url": "https://www.infobae.com/economia/2026/10/28/el-gobierno-aumento-las-jubilaciones-y-asignaciones-de-cuanto-sera-la-minima-en-noviembre/",
+          "fecha": "2026-10-28T14:26:39.555Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Bajaron los dólares financieros y el riesgo país, pero la cotización de los bonos despierta incertidumbre rumbo a 2027",
+          "descripcion": "Gracias a una jornada más tranquila en Brasil, los indicadores financieros mejoraron pero aún muestran dudas sobre la continuidad de políticas que no se condicen con lo que sugieren las encuestas",
+          "url": "https://www.infobae.com/economia/2026/10/28/bajaron-los-dolares-financieros-y-el-riesgo-pais-pero-los-bonos-todavia-marcan-solo-un-50-de-chances-de-reeleccion-de-milei/",
+          "fecha": "2026-10-28T14:26:39.555Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "El ex ministro de Economía criticó las restricciones cambiarias para las empresas y reclamó una liberalización integral. Dijo q…",
+          "descripcion": "El ex ministro de Economía criticó las restricciones cambiarias para las empresas y reclamó una liberalización integral. Dijo que Milei tiene “una confusión conceptual muy grande”",
+          "url": "https://www.infobae.com/economia/2026/10/28/cavallo-cuestiono-al-gobierno-y-su-intervencion-sobre-el-dolar-manejan-el-tipo-de-cambio-como-lo-hacia-moreno/",
+          "fecha": "2026-10-28T14:26:39.554Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "La Fed anunciará su decisión a las 15 de la Argentina. Los analistas esperan que mantenga la tasa en el rango de 3,75% a 4%, pe…",
+          "descripcion": "La Fed anunciará su decisión a las 15 de la Argentina. Los analistas esperan que mantenga la tasa en el rango de 3,75% a 4%, pero el mercado descuenta una suba en diciembre",
+          "url": "https://www.infobae.com/economia/2026/10/28/la-reserva-federal-de-estados-unidos-decidira-hoy-el-rumbo-de-la-tasa-de-interes-como-afecta-a-la-argentina/",
+          "fecha": "2026-10-28T14:26:39.554Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Dólar quieto y menos empleo. Por qué Milei enfrenta un escenario inédito en los últimos 20 años, según un especialista",
+          "descripcion": "El economista sostiene que el empleo registrado privado cae hace 14 meses como en una crisis devaluatoria, pero con el dólar estable y un superávit comercial récord",
+          "url": "https://www.lanacion.com.ar/economia/federico-pastrana-el-gobierno-domina-el-dolar-pero-el-riesgo-pais-sube-la-popularidad-cae-y-hay-una-nid25102026/",
+          "fecha": "2026-10-28T14:26:39.068Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
         },
         {
-          "titulo": "Dólar tarjeta hoy: a cuánto cotiza el dólar turista el 27 de octubre",
-          "descripcion": "La cotización del dólar tarjeta presenta martes un precio de $2028; se trata del valor que se utiliza para las compras con tarjetas en el exterior o el pago de servicios",
-          "url": "https://www.lanacion.com.ar/economia/dolar/dolar-tarjeta-hoy-a-cuanto-cotiza-el-dolar-turista-el-27-de-octubre-nid27102026/",
-          "fecha": "2026-10-28T07:31:41.160Z",
+          "titulo": "Plazo fijo. Cuál es la tasa de interés banco por banco este miércoles 28 de octubre",
+          "descripcion": "El Banco Central de la República Argentina (BCRA) permite a los ahorristas conocer el rendimiento de estos instrumentos de inversión en pesos con una tabla comparativa de tasas",
+          "url": "https://www.lanacion.com.ar/economia/plazo-fijo-cual-es-la-tasa-de-interes-banco-por-banco-este-miercoles-28-de-octubre-nid28102026/",
+          "fecha": "2026-10-28T14:26:39.067Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Dólar tarjeta hoy: a cuánto cotiza el dólar turista el 28 de octubre",
+          "descripcion": "La cotización del dólar tarjeta presenta miércoles un precio de $2028; se trata del valor que se utiliza para las compras con tarjetas en el exterior o el pago de servicios",
+          "url": "https://www.lanacion.com.ar/economia/dolar/dolar-tarjeta-hoy-a-cuanto-cotiza-el-dolar-turista-el-28-de-octubre-nid28102026/",
+          "fecha": "2026-10-28T14:26:39.067Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
         },
@@ -1486,15 +1398,7 @@
           "titulo": "Dólar blue hoy: a cuánto cotiza el miércoles 28 de octubre",
           "descripcion": "La cotización de la moneda estadounidense ronda los $1527,75 para la compra y $1575 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 28 de octubre de 2026",
           "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-miercoles-28-de-octubre-nid28102026/",
-          "fecha": "2026-10-28T07:31:41.144Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
-          "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
-          "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
-          "fecha": "2026-10-28T07:31:41.141Z",
+          "fecha": "2026-10-28T14:26:39.067Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
         },
@@ -1502,7 +1406,15 @@
           "titulo": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como…",
           "descripcion": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como Irlanda, España, Australia, Estados Unidos y Chile",
           "url": "https://www.lanacion.com.ar/economia/negocios/los-paises-que-quieren-que-emprendas-dan-dinero-bajan-impuestos-y-te-ayudan-a-conseguir-clientes-nid30092026/",
-          "fecha": "2026-10-28T07:31:41.140Z",
+          "fecha": "2026-10-28T14:26:39.065Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
+          "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
+          "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
+          "fecha": "2026-10-28T14:26:39.065Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
         },
@@ -1510,15 +1422,7 @@
           "titulo": "Lo aseguró su vicepresendente, Wladimir Werning, en una presentación en la que destacó que la mora en empresas es menor que en …",
           "descripcion": "Lo aseguró su vicepresendente, Wladimir Werning, en una presentación en la que destacó que la mora en empresas es menor que en tiempos de la pandemia",
           "url": "https://www.lanacion.com.ar/economia/para-el-bcra-la-morosidad-ya-toco-el-maximo-y-se-viene-un-repunte-del-credito-nid27102026/",
-          "fecha": "2026-10-28T07:31:41.137Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "El directorio aún debe dar luz verde al acuerdo a nivel técnico, que habilitaría el envío de unos US$900 millones",
-          "descripcion": "El directorio aún debe dar luz verde al acuerdo a nivel técnico, que habilitaría el envío de unos US$900 millones",
-          "url": "https://www.lanacion.com.ar/economia/el-fmi-aprobo-la-tercera-revision-del-acuerdo-con-la-argentina-y-allana-el-camino-para-un-nuevo-nid27102026/",
-          "fecha": "2026-10-28T07:31:41.136Z",
+          "fecha": "2026-10-28T14:26:39.064Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
         },
@@ -1526,8 +1430,96 @@
           "titulo": "El exministro de Economía criticó la intervención oficial en el dólar y la comparó con la gestión del exsecretario de Comercio;…",
           "descripcion": "El exministro de Economía criticó la intervención oficial en el dólar y la comparó con la gestión del exsecretario de Comercio; Emmanuel Álvarez Agis propuso endurecer nuevamente las restricciones cambiarias para las personas; otros especialistas dieron sus puntos de vista críticos con la actual gestión",
           "url": "https://www.lanacion.com.ar/economia/cavallo-dijo-que-manejan-el-tipo-de-cambio-como-moreno-y-un-economista-kirchnerista-pidio-volver-al-nid27102026/",
-          "fecha": "2026-10-28T07:31:41.135Z",
+          "fecha": "2026-10-28T14:26:39.063Z",
           "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "El directorio aún debe dar luz verde al acuerdo a nivel técnico, que habilitaría el envío de unos US$900 millones",
+          "descripcion": "El directorio aún debe dar luz verde al acuerdo a nivel técnico, que habilitaría el envío de unos US$900 millones",
+          "url": "https://www.lanacion.com.ar/economia/el-fmi-aprobo-la-tercera-revision-del-acuerdo-con-la-argentina-y-allana-el-camino-para-un-nuevo-nid27102026/",
+          "fecha": "2026-10-28T14:26:39.063Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Así cerró el dólar en bancos, blue y MEP este martes 27 de octubre",
+          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
+          "url": "https://www.ellitoral.com/",
+          "fecha": "2026-10-28T14:26:38.964Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, pre…",
+          "descripcion": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, presiona las cuentas públicas y reduce el margen del ejecutivo para financiar sus prioridades sin incumplir las reglas fiscales",
+          "url": "https://www.infobae.com/america/mundo/2026/10/28/el-gobierno-de-burnham-presenta-su-primer-presupuesto-en-reino-unido-en-medio-de-presiones-por-la-inflacion-la-deuda-y-el-gasto-militar/",
+          "fecha": "2026-10-28T07:31:42.802Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Desde noviembre y hasta abril, en las zonas muy cálidas se aplicará la bonificación en la boleta de luz en bloques de consumo d…",
+          "descripcion": "Desde noviembre y hasta abril, en las zonas muy cálidas se aplicará la bonificación en la boleta de luz en bloques de consumo de hasta 500 kWh. Se calcula un gasto anual entre USD 71 y 95 millones. Cuánto buscaba ahorrar el Gobierno con los cambios",
+          "url": "https://www.infobae.com/economia/2026/10/27/menos-subsidios-al-gas-y-mas-a-la-electricidad-cuanto-ahorrara-el-gobierno-con-el-nuevo-regimen-de-zona-fria/",
+          "fecha": "2026-10-28T07:31:42.798Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "La divisa mayorista cedió a $1.538, a pesar del recorte en el volumen de operaciones. Al público permaneció a $1.560 para la ve…",
+          "descripcion": "La divisa mayorista cedió a $1.538, a pesar del recorte en el volumen de operaciones. Al público permaneció a $1.560 para la venta en el Banco Nación",
+          "url": "https://www.infobae.com/economia/2026/10/27/el-dolar-bajo-y-corto-una-racha-de-siete-sesiones-consecutiva-de-avances/",
+          "fecha": "2026-10-28T07:31:42.786Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "El staff del FMI aprobó la tercera revisión del acuerdo con la Argentina y allanó el camino para un desembolso de USD 900 millones",
+          "descripcion": "El organismo y el Gobierno alcanzaron un acuerdo técnico por la tercera revisión del programa. Si el Directorio Ejecutivo lo convalida, el país podrá acceder al financiamiento programado",
+          "url": "https://www.infobae.com/economia/2026/10/27/el-staff-del-fmi-aprobo-la-tercera-revision-del-acuerdo-con-la-argentina-y-allano-el-camino-para-un-desembolso-de-usd-900-millones/",
+          "fecha": "2026-10-28T07:31:42.785Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "El empresario reclama una estrategia productiva duradera, financiamiento accesible y reglas estables para que las pequeñas y me…",
+          "descripcion": "El empresario reclama una estrategia productiva duradera, financiamiento accesible y reglas estables para que las pequeñas y medianas compañías puedan invertir, preservar empleos y afrontar costos financieros, tributarios, energéticos y logísticos",
+          "url": "https://www.infobae.com/opinion/2026/10/27/una-fabrica-que-cierra-no-se-recupera-con-un-decreto/",
+          "fecha": "2026-10-28T07:31:42.784Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Bajaron los dólares financieros y el riesgo país, pero los bonos todavía marcan sólo un 50% de chances de reelección de Milei",
+          "descripcion": "Gracias a una jornada más tranquila en Brasil, los indicadores financieros mejoraron pero aún muestran dudas sobre la continuidad de políticas que no se condicen con lo que sugieren las encuestas",
+          "url": "https://www.infobae.com/economia/2026/10/28/bajaron-los-dolares-financieros-y-el-riesgo-pais-pero-los-bonos-todavia-marcan-solo-un-50-de-chances-de-reeleccion-de-milei/",
+          "fecha": "2026-10-28T07:31:42.782Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Subas del dólar y el riesgo país en Argentina por el efecto del “cisne negro” de la victoria de Lula",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-10-28T07:31:41.522Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Así cerró el dólar en bancos, blue y MEP este lunes 26 de octubre",
+          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
+          "url": "https://www.ellitoral.com/",
+          "fecha": "2026-10-28T07:31:41.283Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "Dólar blue hoy: a cuánto cotiza el martes 27 de octubre",
+          "descripcion": "La cotización de la moneda estadounidense ronda los $1527,75 para la compra y $1575 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 27 de octubre de 2026",
+          "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-martes-27-de-octubre-nid27102026/",
+          "fecha": "2026-10-28T07:31:41.160Z",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "La Nación"
         },
         {
@@ -1535,7 +1527,7 @@
           "descripcion": "La iniciativa de la empresa suiza Glencore apunta a la producción de cobre, oro, plata y molibdeno. Se estima que generará 8.200 empleos",
           "url": "https://www.infobae.com/economia/2026/10/27/el-gobierno-aprobo-el-ingreso-al-rigi-de-un-proyecto-minero-en-catamarca-que-preve-inversiones-por-usd-6394-millones/",
           "fecha": "2026-10-28T01:49:09.770Z",
-          "fechaFormateada": "Hace 5 hs",
+          "fechaFormateada": "Hace 12 hs",
           "fuente": "Infobae"
         },
         {
@@ -1543,7 +1535,7 @@
           "descripcion": "El S&P Merval cedió un 2,4% y siguió asimilando el efecto negativo del desplome de los activos brasileños. El indicador de JP Morgan bajó a 753 puntos básicos",
           "url": "https://www.infobae.com/economia/2026/10/27/suben-los-bonos-argentinos-en-dolares-y-el-riesgo-pais-muestra-una-leve-caida/",
           "fecha": "2026-10-28T01:49:09.769Z",
-          "fechaFormateada": "Hace 5 hs",
+          "fechaFormateada": "Hace 12 hs",
           "fuente": "Infobae"
         },
         {
@@ -1551,7 +1543,7 @@
           "descripcion": "Las cotizaciones de las compañías más relevantes mostraron leves caídas en Wall Street. El índice Bovespa cedió 0,4%. El dólar cayó 1,1%, a 5,35 reales",
           "url": "https://www.infobae.com/economia/2026/10/27/las-acciones-brasilenas-rebotan-tras-el-colapso-post-electoral-y-el-real-recupera-terreno-frente-al-dolar/",
           "fecha": "2026-10-28T01:49:09.769Z",
-          "fechaFormateada": "Hace 5 hs",
+          "fechaFormateada": "Hace 12 hs",
           "fuente": "Infobae"
         },
         {
@@ -1559,7 +1551,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-27T22:49:34.997Z",
-          "fechaFormateada": "Hace 8 hs",
+          "fechaFormateada": "Hace 15 hs",
           "fuente": "Clarín"
         },
         {
@@ -1567,7 +1559,7 @@
           "descripcion": "Estados Unidos paga un dólar por Claude, lo que entra implica una contradicción dentro del propio gobierno",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-27T18:56:31.136Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Clarín"
         },
         {
@@ -1575,7 +1567,7 @@
           "descripcion": "El número desarma la promesa de Caputo y Milei sobre que las cuentas del año próximo cerrarían sin sobresaltos. Clima de desconfianza para inversiones.",
           "url": "https://www.pagina12.com.ar/2026/10/25/faltan-22700-millones-de-dolares/",
           "fecha": "2026-10-27T18:56:30.908Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Página/12"
         },
         {
@@ -1583,7 +1575,7 @@
           "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
           "url": "https://www.pagina12.com.ar/2026/10/26/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-lunes-26-de-octubre-de-2026/",
           "fecha": "2026-10-27T18:56:30.907Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Página/12"
         },
         {
@@ -1591,7 +1583,7 @@
           "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
           "url": "https://www.ellitoral.com/",
           "fecha": "2026-10-27T18:56:29.529Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "El Litoral (Santa Fe)"
         },
         {
@@ -1599,7 +1591,7 @@
           "descripcion": "La resolución publicada en el Boletín Oficial establece requisitos, montos y un padrón para otorgar reducciones en el componente energético de las facturas",
           "url": "https://www.infobae.com/economia/2026/10/27/el-gobierno-definio-como-se-aplicaran-el-nuevo-regimen-de-zona-fria-descuentos-de-50-y-20-sobre-el-precio-del-gas/",
           "fecha": "2026-10-27T18:56:28.901Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Infobae"
         },
         {
@@ -1607,7 +1599,7 @@
           "descripcion": "La reacción al resultado electoral en Brasil impulsó el riesgo país y golpeó a las acciones argentinas en Wall Street, mientras el contado con liquidación cerró en $1.681 por dólar",
           "url": "https://www.infobae.com/economia/2026/10/27/efecto-lula-los-dolares-financieros-se-acercan-a-los-1700-y-la-brecha-cambiaria-subio-a-75-por-ciento/",
           "fecha": "2026-10-27T18:56:28.901Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Infobae"
         },
         {
@@ -1615,7 +1607,7 @@
           "descripcion": "Las cotizaciones de las compañías más relevantes muestran leves caídas en Wall Street. El índice Bovespa cede 0,4%. El dólar cae 1,1%, a 5,35 reales",
           "url": "https://www.infobae.com/economia/2026/10/27/las-acciones-brasilenas-rebotan-tras-el-colapso-post-electoral-y-el-real-recupera-terreno-frente-al-dolar/",
           "fecha": "2026-10-27T18:56:28.900Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Infobae"
         },
         {
@@ -1623,7 +1615,7 @@
           "descripcion": "El S&P Merval cede un 1,8% y sigue asimilando el efecto negativo del desplome de los activos brasileños. El indicador de JP Morgan cede a 748 puntos básicos",
           "url": "https://www.infobae.com/economia/2026/10/27/suben-los-bonos-argentinos-en-dolares-y-el-riesgo-pais-muestra-una-leve-caida/",
           "fecha": "2026-10-27T18:56:28.898Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Infobae"
         },
         {
@@ -1631,7 +1623,7 @@
           "descripcion": "El Banco Central de la República Argentina (BCRA) permite a los ahorristas conocer el rendimiento de estos instrumentos de inversión en pesos con una tabla comparativa de tasas",
           "url": "https://www.lanacion.com.ar/economia/plazo-fijo-cual-es-la-tasa-de-interes-banco-por-banco-este-martes-27-de-octubre-nid27102026/",
           "fecha": "2026-10-27T18:56:28.756Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "La Nación"
         },
         {
@@ -1639,7 +1631,7 @@
           "descripcion": "La Secretaría de Industria y las entidades empresariales coordinarán controles con plataformas y cadenas para detectar comercio ilegal y subfacturación; afirman que la informalidad genera una pérdida anual de US$2300 millones",
           "url": "https://www.lanacion.com.ar/economia/contrabando-el-gobierno-la-uia-y-mercado-libre-sellaron-un-acuerdo-para-controlar-el-comercio-nid26102026/",
           "fecha": "2026-10-27T18:56:28.723Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "La Nación"
         },
         {
@@ -1647,7 +1639,7 @@
           "descripcion": "El billete estadounidense abrió en alza y se mantuvo estable durante toda la rueda; en el mercado creen que hubo ventas para evitar que el tipo de cambio subiera",
           "url": "https://www.lanacion.com.ar/economia/el-banco-central-no-compro-reservas-y-el-tesoro-habria-vendido-dolares-nid26102026/",
           "fecha": "2026-10-27T18:56:28.722Z",
-          "fechaFormateada": "Hace 12 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "La Nación"
         },
         {
@@ -1655,7 +1647,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-27T13:37:51.560Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Clarín"
         },
         {
@@ -1663,7 +1655,7 @@
           "descripcion": "Con opciones de hasta 40 por ciento de descuento",
           "url": "https://www.pagina12.com.ar/2026/10/23/arba-lanzo-un-plan-para-regularizar-deudas/",
           "fecha": "2026-10-27T13:37:50.533Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Página/12"
         },
         {
@@ -1671,7 +1663,7 @@
           "descripcion": "La autoridad monetaria interrumpió una racha de 19 ruedas con compras netas, mientras el dólar mayorista cerró en $1.540 y las reservas quedaron en USD 50.481 millones. Es apenas la quinta vez en el año que la entidad no suma divisas a sus arcas",
           "url": "https://www.infobae.com/economia/2026/10/26/el-bcra-decidio-no-comprar-reservas-hoy-ante-la-tension-cambiaria-generada-tras-las-elecciones-en-brasil/",
           "fecha": "2026-10-27T13:37:50.294Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -1679,7 +1671,7 @@
           "descripcion": "Detrás de la drástica caída de la bolsa brasileña y la devaluación del real, las acciones y los bonos argentinos exhibieron amplias bajas y el riesgo país subió al máximo en un año",
           "url": "https://www.infobae.com/economia/2026/10/26/dolar-riesgo-pais-y-acciones-uno-por-uno-cuales-fueron-los-efectos-del-ballotage-de-brasil-en-el-mercado-financiero-argentino/",
           "fecha": "2026-10-27T13:37:50.293Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -1687,7 +1679,7 @@
           "descripcion": "El economista sostiene que el empleo registrado privado cae hace 14 meses como en una crisis devaluatoria, pero con el dólar estable y un superávit comercial récord",
           "url": "https://www.lanacion.com.ar/economia/federico-pastrana-el-gobierno-domina-el-dolar-pero-el-riesgo-pais-sube-la-popularidad-cae-y-hay-una-nid25102026/",
           "fecha": "2026-10-27T13:37:49.519Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "La Nación"
         },
         {
@@ -1695,7 +1687,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-10-27T13:37:03.000Z",
-          "fechaFormateada": "Hace 17 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "El Entre Ríos"
         },
         {
@@ -1703,7 +1695,7 @@
           "descripcion": "La cotización de la moneda estadounidense ronda los $1527,75 para la compra y $1575 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 26 de octubre de 2026",
           "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-lunes-26-de-octubre-nid26102026/",
           "fecha": "2026-10-27T07:45:35.605Z",
-          "fechaFormateada": "Hace 23 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "La Nación"
         },
         {
@@ -1711,7 +1703,7 @@
           "descripcion": "La divisa mayorista subió a $1.541, en la séptima sesión en alza, con influencia de la devaluación del real brasileño. Al público cerró a $1.560 en el Banco Nación",
           "url": "https://www.infobae.com/economia/2026/10/26/el-dolar-avanzo-a-precios-record-en-todas-las-franjas-del-mercado-de-cambios-por-la-suba-del-real-brasileno/",
           "fecha": "2026-10-27T07:45:35.068Z",
-          "fechaFormateada": "Hace 23 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -1719,7 +1711,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-27T07:45:34.894Z",
-          "fechaFormateada": "Hace 23 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Clarín"
         },
         {
@@ -1727,7 +1719,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-27T07:45:34.885Z",
-          "fechaFormateada": "Hace 23 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Clarín"
         },
         {
@@ -1815,7 +1807,7 @@
           "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
           "url": "https://www.ellitoral.com/",
           "fecha": "2026-10-26T13:45:07.597Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "El Litoral (Santa Fe)"
         },
         {
@@ -1943,7 +1935,7 @@
           "descripcion": "La demora en abrir la licitación para el cupo de autos híbridos y eléctricos del año próximo generó especulaciones. Una nueva posición oficial podría impactar en las condiciones para los oferentes",
           "url": "https://www.infobae.com/economia/2026/10/24/golpe-a-los-autos-chinos-que-puede-pasar-tras-el-acuerdo-del-gobierno-con-eeuu-para-combatir-ciertas-practicas-comerciales/",
           "fecha": "2026-10-25T12:13:08.898Z",
-          "fechaFormateada": "Hace 2 días",
+          "fechaFormateada": "Hace 3 días",
           "fuente": "Infobae"
         },
         {
@@ -1951,7 +1943,7 @@
           "descripcion": "Mientras que las acciones argentinas tuvieron más resiliencia a la toma de ganancias de Wall Street, los títulos públicos cayeron 2 por ciento. El dólar subió a máximos nominales y el BCRA compró USD 270 millones en el mercado",
           "url": "https://www.infobae.com/economia/2026/10/24/el-riesgo-pais-volvio-a-superar-los-700-puntos-y-la-volatilidad-internacional-golpeo-a-los-bonos-argentinos/",
           "fecha": "2026-10-25T12:13:08.898Z",
-          "fechaFormateada": "Hace 2 días",
+          "fechaFormateada": "Hace 3 días",
           "fuente": "Infobae"
         },
         {
@@ -1959,7 +1951,7 @@
           "descripcion": "El especialista explicó que la incertidumbre electoral eleva el riesgo país y condiciona el financiamiento del gobierno, afectando la confianza de los inversores y a la actividad productiva",
           "url": "https://www.infobae.com/economia/2026/10/25/camilo-tiscornia-de-ct-asesores-economicos-el-mayor-riesgo-es-el-politico-y-de-el-se-derivan-las-demas-consecuencias/",
           "fecha": "2026-10-25T12:13:08.894Z",
-          "fechaFormateada": "Hace 2 días",
+          "fechaFormateada": "Hace 3 días",
           "fuente": "Infobae"
         },
         {
@@ -2007,7 +1999,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-24T13:33:58.371Z",
-          "fechaFormateada": "Hace 3 días",
+          "fechaFormateada": "Hace 4 días",
           "fuente": "Clarín"
         },
         {
@@ -2015,7 +2007,7 @@
           "descripcion": "Un proyecto de ley en la Cámara de Diputados propone declarar de Interés Histórico Nacional el edificio de la emblemática disquería porteña para evitar su demolición por la construcción de la Línea F del subte.",
           "url": "https://www.pagina12.com.ar/2026/10/24/buscan-salvar-a-zivals-con-una-ley-del-congreso-nacional/",
           "fecha": "2026-10-24T13:33:57.997Z",
-          "fechaFormateada": "Hace 3 días",
+          "fechaFormateada": "Hace 4 días",
           "fuente": "Página/12"
         },
         {
@@ -2023,7 +2015,7 @@
           "descripcion": "La cotización de la moneda estadounidense ronda los $1513,20 para la compra y $1560 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 23 de octubre de 2026",
           "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-viernes-23-de-octubre-nid23102026/",
           "fecha": "2026-10-24T13:33:56.082Z",
-          "fechaFormateada": "Hace 3 días",
+          "fechaFormateada": "Hace 4 días",
           "fuente": "La Nación"
         },
         {
@@ -2119,7 +2111,7 @@
           "descripcion": "La cotización de la moneda estadounidense ronda los $1518,05 para la compra y $1565 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 22 de octubre de 2026",
           "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-jueves-22-de-octubre-nid22102026/",
           "fecha": "2026-10-23T10:33:24.040Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "La Nación"
         },
         {
@@ -2127,7 +2119,7 @@
           "descripcion": "La divisa mayorista cerró a $1.528, en la quinta suba seguida con leve alza. Al público avanzó a $1.550 para la venta en el Banco Nación, también un récord",
           "url": "https://www.infobae.com/economia/2026/10/22/el-dolar-volvio-a-subir-y-anoto-un-nuevo-maximo-nominal/",
           "fecha": "2026-10-23T10:33:22.879Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -2135,7 +2127,7 @@
           "descripcion": "Ayer, Grupo México, la única empresa extranjera interesada, se bajó del esquema. Fuentes oficiales aseguraron que el conglomerado conocía las condiciones y que pidió cambiarlas sin éxito. Según fuentes oficiales, la postergación la pidieron otras empresas semanas atrás",
           "url": "https://www.infobae.com/economia/2026/10/22/privatizacion-del-belgrano-cargas-el-gobierno-esta-a-un-paso-de-posponer-el-proceso-de-licitacion/",
           "fecha": "2026-10-23T10:33:22.878Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -2143,7 +2135,7 @@
           "descripcion": "Las ideas que Argentina debería tomar de Robert E. Hall y Alvin Rabushka",
           "url": "https://www.infobae.com/opinion/2026/10/22/150-impuestos-y-un-nobel-de-economia/",
           "fecha": "2026-10-23T10:33:22.877Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -2201,14 +2193,6 @@
           "fecha": "2026-10-22T19:32:36.142Z",
           "fechaFormateada": "Hace 5 días",
           "fuente": "La Nación"
-        },
-        {
-          "titulo": "Dólar blue: cotización del miércoles 21 de octubre de 2026",
-          "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
-          "url": "https://www.pagina12.com.ar/2026/10/21/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-miercoles-21-de-octubre-de-2026/",
-          "fecha": "2026-10-22T19:32:35.979Z",
-          "fechaFormateada": "Hace 5 días",
-          "fuente": "Página/12"
         },
         {
           "titulo": "El brent sube un 4 %, hasta 113,17 dólares, por la escalada en Oriente Medio",
@@ -2287,7 +2271,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-10-22T10:40:41.416Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "Clarín"
         },
         {
@@ -2295,7 +2279,7 @@
           "descripcion": "La divisa mayorista avanzó por cuarta jornada y cerró a un récord $1.526. Al público siguió a $1.545 en el Banco Nación",
           "url": "https://www.infobae.com/economia/2026/10/21/el-dolar-subio-por-cuarto-dia-consecutivo-y-marco-un-nuevo-record-nominal/",
           "fecha": "2026-10-22T10:40:41.240Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "Infobae"
         },
         {
@@ -2303,7 +2287,7 @@
           "descripcion": "Se trata de un papel que se ajusta por el billete estadounidense; es la mitad del compromiso que Economía enfrentará la semana que viene",
           "url": "https://www.lanacion.com.ar/economia/el-gobierno-canjeo-73-de-una-letra-que-vencia-a-fin-de-mes-y-evitara-presion-extra-sobre-el-dolar-nid20102026/",
           "fecha": "2026-10-22T10:40:40.946Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "La Nación"
         },
         {
@@ -2311,7 +2295,7 @@
           "descripcion": "El indicador elaborado por JP Morgan llegó a tocar los 710 puntos, pero luego cedió y cerró a 672; el dólar oficial minorista sumó $5 hasta los $1545",
           "url": "https://www.lanacion.com.ar/economia/el-riesgo-pais-salta-hasta-los-710-puntos-y-alcanza-el-valor-mas-alto-en-casi-un-ano-nid20102026/",
           "fecha": "2026-10-22T10:40:40.946Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "La Nación"
         },
         {
@@ -2363,70 +2347,112 @@
           "fuente": "Infobae"
         },
         {
-          "titulo": "Plazo fijo. Cuál es la tasa de interés banco por banco este miércoles 21 de octubre",
-          "descripcion": "El Banco Central de la República Argentina (BCRA) permite a los ahorristas conocer el rendimiento de estos instrumentos de inversión en pesos con una tabla comparativa de tasas",
-          "url": "https://www.lanacion.com.ar/economia/plazo-fijo-cual-es-la-tasa-de-interes-banco-por-banco-este-miercoles-21-de-octubre-nid21102026/",
-          "fecha": "2026-10-21T15:55:28.102Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "La Nación"
-        },
-        {
           "titulo": "El director del BCRA destacó que, por el crecimiento de las exportaciones, hay divisas para importaciones, pago de dividendos y…",
           "descripcion": "El director del BCRA destacó que, por el crecimiento de las exportaciones, hay divisas para importaciones, pago de dividendos y deudas, y atesoramiento; dijo que dos tercios del ahorro en dólares queda en cuentas locales",
           "url": "https://www.lanacion.com.ar/economia/lo-que-era-una-restriccion-pasa-a-ser-una-abundancia-el-cambio-estructural-del-pais-con-el-dolar-nid20102026/",
           "fecha": "2026-10-21T15:55:28.083Z",
           "fechaFormateada": "Hace 6 días",
           "fuente": "La Nación"
-        },
-        {
-          "titulo": "El Gobierno dio luz verde a una inversión de Mindlin y Sielecki por más de US$ 3.200 millones en Vaca Muerta",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-10-21T11:04:18.885Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Martín Vauthier, director del Banco Central, expuso en el 31° Simposio de Economía de la Universidad de Tel Aviv en Argentina y…",
-          "descripcion": "Martín Vauthier, director del Banco Central, expuso en el 31° Simposio de Economía de la Universidad de Tel Aviv en Argentina y detalló cómo se compraron casi USD 40.000 millones pese a la apertura del mercado cambiario. Además, aseguró que las condiciones están dadas para que la inflación siga bajando",
-          "url": "https://www.infobae.com/economia/2026/10/20/un-asesor-de-caputo-defendio-la-acumulacion-de-reservas-se-logro-aun-eliminando-restricciones/",
-          "fecha": "2026-10-21T11:04:16.827Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "El Banco Central sumó otros USD 100 millones y ya compró más del doble que en septiembre",
-          "descripcion": "La autoridad monetaria hilvanó 16 jornadas consecutivas con saldo positivo en el mercado cambiario y las reservas brutas se consolidan por encima de los USD 50.000 millones",
-          "url": "https://www.infobae.com/economia/2026/10/20/el-banco-central-sumo-otros-usd-100-millones-y-ya-compro-mas-del-doble-que-en-septiembre/",
-          "fecha": "2026-10-21T11:04:16.822Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "Jornada financiera: el riesgo país cerró a la baja tras superar los 700 puntos y el dólar subió por tercer día consecutivo",
-          "descripcion": "Los títulos públicos revirtieron las bajas iniciales y el indicador de JP Morgan descontó posiciones tras haber superado los 700 puntos por la mañana. La Bolsa porteña bajó 0,3%. El dólar subió a $1.545 en el Banco Nación y el BCRA compró USD 103 millones en el mercado",
-          "url": "https://www.infobae.com/economia/2026/10/20/jornada-financiera-el-riesgo-pais-cerro-a-la-baja-tras-superar-los-700-puntos-y-el-dolar-subio-por-tercer-dia-consecutivo/",
-          "fecha": "2026-10-21T11:04:16.822Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "La divisa mayorista cerró a $1.525, el mayor valor en un mes, con USD 673 millones ofertados. Al público subió a $1.545 para la…",
-          "descripcion": "La divisa mayorista cerró a $1.525, el mayor valor en un mes, con USD 673 millones ofertados. Al público subió a $1.545 para la venta en el Banco Nación",
-          "url": "https://www.infobae.com/economia/2026/10/20/el-dolar-subio-por-tercer-dia-consecutivo-y-alcanzo-el-nivel-mas-alto-de-octubre/",
-          "fecha": "2026-10-21T11:04:16.822Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
         }
       ]
     }
   ],
   "noticias": [
     {
+      "titulo": "El Gobierno aprobó un nuevo RIGI minero: prevé una inversión total por más de US$ 6.300 millones en Catamarca",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-10-28T14:26:40.766Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Una obra de US$ 40 millones permitirá conexión a gas residencial a 12 mil usuarios en tres provincias de la Patagonia",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-10-28T14:26:40.766Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "¿Por qué el Gobierno de EE.UU. paga solo un dólar por la IA más avanzada",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-10-28T14:26:40.765Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El vice del Banco Central rindió examen sobre el crédito y las soluciones a la mora ante estudiantes",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-10-28T14:26:40.763Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El dólar mayorista bajó, pero el Banco Central no compró dólares en el mercado de cambios por segundo día consecutivo",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-10-28T14:26:40.763Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Efecto “Lula 4”: el Gobierno reaccionó a la devaluación del real y la city espera definiciones",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-10-28T14:26:40.763Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Privatizaciones: cinco de las ocho empresas públicas que serán vendidas por el Gobierno ganaron plata este año",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-10-28T14:26:40.762Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Mientras el mercado demuestra tener dudas respecto del programa económico, Milei y Caputo recibieron un guiño del FMI.",
+      "descripcion": "Mientras el mercado demuestra tener dudas respecto del programa económico, Milei y Caputo recibieron un guiño del FMI.",
+      "url": "https://www.pagina12.com.ar/2026/10/27/nuevo-desembolso-del-fmi-a-cambio-de-seguir-con-el-ajuste/",
+      "fecha": "2026-10-28T14:26:40.509Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
       "titulo": "Dólar blue: cotización del martes 27 de octubre de 2026",
       "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
       "url": "https://www.pagina12.com.ar/2026/10/27/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-martes-27-de-octubre-de-2026/",
-      "fecha": "2026-10-28T07:31:42.933Z",
+      "fecha": "2026-10-28T14:26:40.509Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Dólar blue: cotización del miércoles 28 de octubre de 2026",
+      "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
+      "url": "https://www.pagina12.com.ar/2026/10/28/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-martes-28-de-octubre-de-2026/",
+      "fecha": "2026-10-28T14:26:40.508Z",
       "fuente": "Página/12",
       "categorias": [
         "gobierno"
@@ -2436,18 +2462,300 @@
       "titulo": "El gobierno desvió la plata del fondo fiduciario destinado a reforzar la infraestructura hídrica, mientras el Super Niño avanza.",
       "descripcion": "El gobierno desvió la plata del fondo fiduciario destinado a reforzar la infraestructura hídrica, mientras el Super Niño avanza.",
       "url": "https://www.pagina12.com.ar/2026/10/27/el-agua-sube-y-las-obras-hidricas-nunca-llegaron/",
-      "fecha": "2026-10-28T07:31:42.932Z",
+      "fecha": "2026-10-28T14:26:40.508Z",
       "fuente": "Página/12",
       "categorias": [
         "servicios_hogar"
       ]
     },
     {
-      "titulo": "Mientras el mercado demuestra tener dudas respecto del programa económico, Milei y Caputo recibieron un guiño del FMI.",
-      "descripcion": "Mientras el mercado demuestra tener dudas respecto del programa económico, Milei y Caputo recibieron un guiño del FMI.",
-      "url": "https://www.pagina12.com.ar/2026/10/27/nuevo-desembolso-del-fmi-a-cambio-de-seguir-con-el-ajuste/",
-      "fecha": "2026-10-28T07:31:42.932Z",
-      "fuente": "Página/12",
+      "titulo": "El país caribeño recibió 2,19 millones de pasajeros entre enero y julio de 2026, por debajo de España y por encima de Japón en …",
+      "descripcion": "El país caribeño recibió 2,19 millones de pasajeros entre enero y julio de 2026, por debajo de España y por encima de Japón en la clasificación internacional de destinos preferidos",
+      "url": "https://www.infobae.com/republica-dominicana/2026/10/28/republica-dominicana-se-ubico-como-el-sexto-destino-internacional-mas-elegido-por-viajeros-de-estados-unidos-anuncia-el-gobierno/",
+      "fecha": "2026-10-28T14:26:39.558Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Daniela Aguiar, asesora de comercio exterior, explica cómo se anticipan controles, costos y tiempos antes de embarcar, y por qu…",
+      "descripcion": "Daniela Aguiar, asesora de comercio exterior, explica cómo se anticipan controles, costos y tiempos antes de embarcar, y por qué una decisión postergada puede significar un mes de demora en la carga",
+      "url": "https://www.infobae.com/movant/2026/10/27/lo-compre-lo-pague-lo-quiero-el-desafio-de-explicar-los-tiempos-reales-del-comercio-exterior/",
+      "fecha": "2026-10-28T14:26:39.557Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "El combustible profesional superará los dos euros por litro en algunas estaciones. El sector advierte que el incremento reduce …",
+      "descripcion": "El combustible profesional superará los dos euros por litro en algunas estaciones. El sector advierte que el incremento reduce el efecto de las ayudas y vuelve a tensionar la estructura de costos",
+      "url": "https://www.infobae.com/movant/2026/10/27/el-transporte-de-cargas-en-espana-enfrenta-una-nueva-escalada-del-precio-del-diesel/",
+      "fecha": "2026-10-28T14:26:39.557Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "Cuba quisiera que se reanuden los \"envíos\" de combustible de México a la isla",
+      "descripcion": "Cuba quisiera que se reanuden los \"envíos\" de combustible de México a la isla",
+      "url": "https://www.infobae.com/america/agencias/2026/10/28/cuba-quisiera-que-se-reanuden-los-envios-de-combustible-de-mexico-a-la-isla/",
+      "fecha": "2026-10-28T14:26:39.557Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "El Gobierno debe afrontar un pago de USD 800 millones al FMI y analiza dos caminos: usar dólares propios o comprarlos al BCRA",
+      "descripcion": "El lunes el equipo económico tiene que afrontar un nuevo pago con el organismo internacionales en concepto de intereses, para los analistas hay dos opciones y una suma presión a la compra de reservas del Banco Central. El desembolso pendiente",
+      "url": "https://www.infobae.com/economia/2026/10/28/el-gobierno-debe-afrontar-un-pago-de-usd-800-millones-al-fmi-y-analiza-dos-caminos-usar-dolares-propios-o-comprarlos-al-bcra/",
+      "fecha": "2026-10-28T14:26:39.556Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Bajó el riesgo país y el dólar se estabilizó pero sigue el viento de frente: vuelven a subir las tasas en EEUU",
+      "descripcion": "Una licitación de deuda del Tesoro argentino deberá renovar $10,8 billones, mientras Brasil enfrenta su propio frente fiscal y las exportaciones argentinas apuntan a superar los USD 100.000 millones en 2026",
+      "url": "https://www.infobae.com/economia/2026/10/28/bajo-el-riesgo-pais-y-el-dolar-se-estabilizo-pero-sigue-el-viento-de-frente-vuelven-a-subir-las-tasas-en-eeuu/",
+      "fecha": "2026-10-28T14:26:39.556Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "La autoridad monetaria volvió a mantenerse al margen del mercado de cambios, en una rueda en la que el dólar mayorista bajó a $…",
+      "descripcion": "La autoridad monetaria volvió a mantenerse al margen del mercado de cambios, en una rueda en la que el dólar mayorista bajó a $1.538 y las reservas subieron a USD 50.580 millones. Ayer ya había interrumpido las compras ante la volatilidad cambiaria posterior al balotaje de Brasil",
+      "url": "https://www.infobae.com/economia/2026/10/27/por-primera-vez-en-el-ano-el-bcra-no-compro-divisas-por-dos-ruedas-consecutivas/",
+      "fecha": "2026-10-28T14:26:39.556Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "La actualización mensual llevará la prestación mínima a $ 444.158,46. La medida alcanza a jubilados, pensionados, titulares de …",
+      "descripcion": "La actualización mensual llevará la prestación mínima a $ 444.158,46. La medida alcanza a jubilados, pensionados, titulares de la PUAM y beneficiarios de asignaciones familiares",
+      "url": "https://www.infobae.com/economia/2026/10/28/el-gobierno-aumento-las-jubilaciones-y-asignaciones-de-cuanto-sera-la-minima-en-noviembre/",
+      "fecha": "2026-10-28T14:26:39.555Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "poder_adquisitivo",
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Bajaron los dólares financieros y el riesgo país, pero la cotización de los bonos despierta incertidumbre rumbo a 2027",
+      "descripcion": "Gracias a una jornada más tranquila en Brasil, los indicadores financieros mejoraron pero aún muestran dudas sobre la continuidad de políticas que no se condicen con lo que sugieren las encuestas",
+      "url": "https://www.infobae.com/economia/2026/10/28/bajaron-los-dolares-financieros-y-el-riesgo-pais-pero-los-bonos-todavia-marcan-solo-un-50-de-chances-de-reeleccion-de-milei/",
+      "fecha": "2026-10-28T14:26:39.555Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El ex ministro de Economía criticó las restricciones cambiarias para las empresas y reclamó una liberalización integral. Dijo q…",
+      "descripcion": "El ex ministro de Economía criticó las restricciones cambiarias para las empresas y reclamó una liberalización integral. Dijo que Milei tiene “una confusión conceptual muy grande”",
+      "url": "https://www.infobae.com/economia/2026/10/28/cavallo-cuestiono-al-gobierno-y-su-intervencion-sobre-el-dolar-manejan-el-tipo-de-cambio-como-lo-hacia-moreno/",
+      "fecha": "2026-10-28T14:26:39.554Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "La Fed anunciará su decisión a las 15 de la Argentina. Los analistas esperan que mantenga la tasa en el rango de 3,75% a 4%, pe…",
+      "descripcion": "La Fed anunciará su decisión a las 15 de la Argentina. Los analistas esperan que mantenga la tasa en el rango de 3,75% a 4%, pero el mercado descuenta una suba en diciembre",
+      "url": "https://www.infobae.com/economia/2026/10/28/la-reserva-federal-de-estados-unidos-decidira-hoy-el-rumbo-de-la-tasa-de-interes-como-afecta-a-la-argentina/",
+      "fecha": "2026-10-28T14:26:39.554Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Los haberes previsionales ya tienen establecido el cronograma de pagos para el penúltimo mes del año, cómo es la entrega diaria…",
+      "descripcion": "Los haberes previsionales ya tienen establecido el cronograma de pagos para el penúltimo mes del año, cómo es la entrega diaria según el DNI",
+      "url": "https://www.lanacion.com.ar/economia/calendario-de-jubilaciones-de-la-anses-cuando-cobro-en-noviembre-2026-con-el-bono-oficial-y-el-nid28102026/",
+      "fecha": "2026-10-28T14:26:39.069Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Dólar quieto y menos empleo. Por qué Milei enfrenta un escenario inédito en los últimos 20 años, según un especialista",
+      "descripcion": "El economista sostiene que el empleo registrado privado cae hace 14 meses como en una crisis devaluatoria, pero con el dólar estable y un superávit comercial récord",
+      "url": "https://www.lanacion.com.ar/economia/federico-pastrana-el-gobierno-domina-el-dolar-pero-el-riesgo-pais-sube-la-popularidad-cae-y-hay-una-nid25102026/",
+      "fecha": "2026-10-28T14:26:39.068Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Las pensiones se ajustan según el último índice inflacionario, pero el bono se mantiene sin cambios; cuáles son las cifras del …",
+      "descripcion": "Las pensiones se ajustan según el último índice inflacionario, pero el bono se mantiene sin cambios; cuáles son las cifras del penúltimo mes del año",
+      "url": "https://www.lanacion.com.ar/economia/pnc-de-anses-cual-es-el-monto-de-las-pensiones-no-contributivas-en-noviembre-de-2026-nid19102026/",
+      "fecha": "2026-10-28T14:26:39.068Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "El aumento automático para esta prestación es del 1,93%; cuál es el valor que perciben las familias",
+      "descripcion": "El aumento automático para esta prestación es del 1,93%; cuál es el valor que perciben las familias",
+      "url": "https://www.lanacion.com.ar/economia/monto-de-la-asignacion-universal-por-hijo-de-cuanto-es-la-auh-en-noviembre-2026-con-el-aumento-nid15102026/",
+      "fecha": "2026-10-28T14:26:39.068Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Para la actualización de haberes se toma el último índice de inflación que publicó el Indec; cuáles son las cifras para el penú…",
+      "descripcion": "Para la actualización de haberes se toma el último índice de inflación que publicó el Indec; cuáles son las cifras para el penúltimo mes del año",
+      "url": "https://www.lanacion.com.ar/economia/jubilaciones-de-anses-cuanto-cobro-en-noviembre-2026-con-el-bono-oficial-y-el-aumento-confirmado-nid14102026/",
+      "fecha": "2026-10-28T14:26:39.068Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Plazo fijo. Cuál es la tasa de interés banco por banco este miércoles 28 de octubre",
+      "descripcion": "El Banco Central de la República Argentina (BCRA) permite a los ahorristas conocer el rendimiento de estos instrumentos de inversión en pesos con una tabla comparativa de tasas",
+      "url": "https://www.lanacion.com.ar/economia/plazo-fijo-cual-es-la-tasa-de-interes-banco-por-banco-este-miercoles-28-de-octubre-nid28102026/",
+      "fecha": "2026-10-28T14:26:39.067Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Dólar tarjeta hoy: a cuánto cotiza el dólar turista el 28 de octubre",
+      "descripcion": "La cotización del dólar tarjeta presenta miércoles un precio de $2028; se trata del valor que se utiliza para las compras con tarjetas en el exterior o el pago de servicios",
+      "url": "https://www.lanacion.com.ar/economia/dolar/dolar-tarjeta-hoy-a-cuanto-cotiza-el-dolar-turista-el-28-de-octubre-nid28102026/",
+      "fecha": "2026-10-28T14:26:39.067Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Dólar blue hoy: a cuánto cotiza el miércoles 28 de octubre",
+      "descripcion": "La cotización de la moneda estadounidense ronda los $1527,75 para la compra y $1575 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 28 de octubre de 2026",
+      "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-miercoles-28-de-octubre-nid28102026/",
+      "fecha": "2026-10-28T14:26:39.067Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Últimas Noticias de Comercio Exterior: Las exportaciones mineras crecieron un 84% en el primer cuatrimestre, El documento de Ha…",
+      "descripcion": "Últimas Noticias de Comercio Exterior: Las exportaciones mineras crecieron un 84% en el primer cuatrimestre, El documento de Harvard que usó Sturzenegger para ampliar los negocios con EE.UU.",
+      "url": "https://www.lanacion.com.ar/economia/comercio-exterior/",
+      "fecha": "2026-10-28T14:26:39.066Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "El bloqueo del mecanismo de apelaciones de la Organización Mundial del Comercio (OMC) por la postura de Estados Unidos llevó a …",
+      "descripcion": "El bloqueo del mecanismo de apelaciones de la Organización Mundial del Comercio (OMC) por la postura de Estados Unidos llevó a un grupo de países a crear el Acuerdo Provisional Multilateral de Arbitraje de Apelación (MPIA) como vía alternativa para resolver disputas comerciales internacionales",
+      "url": "https://www.lanacion.com.ar/economia/la-union-europea-lidera-una-iniciativa-para-sostener-el-sistema-de-comercio-global-nid11022026/",
+      "fecha": "2026-10-28T14:26:39.066Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como…",
+      "descripcion": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como Irlanda, España, Australia, Estados Unidos y Chile",
+      "url": "https://www.lanacion.com.ar/economia/negocios/los-paises-que-quieren-que-emprendas-dan-dinero-bajan-impuestos-y-te-ayudan-a-conseguir-clientes-nid30092026/",
+      "fecha": "2026-10-28T14:26:39.065Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
+      "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
+      "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
+      "fecha": "2026-10-28T14:26:39.065Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo",
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Lo aseguró su vicepresendente, Wladimir Werning, en una presentación en la que destacó que la mora en empresas es menor que en …",
+      "descripcion": "Lo aseguró su vicepresendente, Wladimir Werning, en una presentación en la que destacó que la mora en empresas es menor que en tiempos de la pandemia",
+      "url": "https://www.lanacion.com.ar/economia/para-el-bcra-la-morosidad-ya-toco-el-maximo-y-se-viene-un-repunte-del-credito-nid27102026/",
+      "fecha": "2026-10-28T14:26:39.064Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "¿El sueldo alcanza? Trabajar por el 38% de un buen salario: el boom del empleo low cost",
+      "descripcion": "Desde que llegó Milei, hay más ocupados, pero la mayoría son cuentapropistas informales, que ganan unos $700.000 mensuales; cruje además la caja del Estado",
+      "url": "https://www.lanacion.com.ar/economia/crece-el-trabajo-low-cost-hay-mas-trabajadores-pero-con-peores-salarios-nid27102026/",
+      "fecha": "2026-10-28T14:26:39.064Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "El exministro de Economía criticó la intervención oficial en el dólar y la comparó con la gestión del exsecretario de Comercio;…",
+      "descripcion": "El exministro de Economía criticó la intervención oficial en el dólar y la comparó con la gestión del exsecretario de Comercio; Emmanuel Álvarez Agis propuso endurecer nuevamente las restricciones cambiarias para las personas; otros especialistas dieron sus puntos de vista críticos con la actual gestión",
+      "url": "https://www.lanacion.com.ar/economia/cavallo-dijo-que-manejan-el-tipo-de-cambio-como-moreno-y-un-economista-kirchnerista-pidio-volver-al-nid27102026/",
+      "fecha": "2026-10-28T14:26:39.063Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El directorio aún debe dar luz verde al acuerdo a nivel técnico, que habilitaría el envío de unos US$900 millones",
+      "descripcion": "El directorio aún debe dar luz verde al acuerdo a nivel técnico, que habilitaría el envío de unos US$900 millones",
+      "url": "https://www.lanacion.com.ar/economia/el-fmi-aprobo-la-tercera-revision-del-acuerdo-con-la-argentina-y-allana-el-camino-para-un-nuevo-nid27102026/",
+      "fecha": "2026-10-28T14:26:39.063Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Tras la victoria del presidente brasileño y la devaluación de la moneda, creció el interés de los argentinos por pasar el veran…",
+      "descripcion": "Tras la victoria del presidente brasileño y la devaluación de la moneda, creció el interés de los argentinos por pasar el verano en el país vecino",
+      "url": "https://www.lanacion.com.ar/economia/se-disparan-las-ventas-de-pasajes-a-brasil-por-la-caida-del-real-nid28102026/",
+      "fecha": "2026-10-28T14:26:39.062Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "Así cerró el dólar en bancos, blue y MEP este martes 27 de octubre",
+      "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
+      "url": "https://www.ellitoral.com/",
+      "fecha": "2026-10-28T14:26:38.964Z",
+      "fuente": "El Litoral (Santa Fe)",
       "categorias": [
         "gobierno"
       ]
@@ -2462,16 +2770,6 @@
         "poder_adquisitivo",
         "servicios_hogar",
         "gobierno"
-      ]
-    },
-    {
-      "titulo": "El combustible profesional superará los dos euros por litro en algunas estaciones. El sector advierte que el incremento reduce …",
-      "descripcion": "El combustible profesional superará los dos euros por litro en algunas estaciones. El sector advierte que el incremento reduce el efecto de las ayudas y vuelve a tensionar la estructura de costos",
-      "url": "https://www.infobae.com/movant/2026/10/27/el-transporte-de-cargas-en-espana-enfrenta-una-nueva-escalada-del-precio-del-diesel/",
-      "fecha": "2026-10-28T07:31:42.800Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "servicios_hogar"
       ]
     },
     {
@@ -2492,16 +2790,6 @@
       "fuente": "Infobae",
       "categorias": [
         "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "Daniela Aguiar, asesora de comercio exterior, explica cómo se anticipan controles, costos y tiempos antes de embarcar, y por qu…",
-      "descripcion": "Daniela Aguiar, asesora de comercio exterior, explica cómo se anticipan controles, costos y tiempos antes de embarcar, y por qué una decisión postergada puede significar un mes de demora en la carga",
-      "url": "https://www.infobae.com/movant/2026/10/27/lo-compre-lo-pague-lo-quiero-el-desafio-de-explicar-los-tiempos-reales-del-comercio-exterior/",
-      "fecha": "2026-10-28T07:31:42.799Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "consumo_masivo"
       ]
     },
     {
@@ -2546,16 +2834,6 @@
       ]
     },
     {
-      "titulo": "La autoridad monetaria volvió a mantenerse al margen del mercado de cambios, en una rueda en la que el dólar mayorista bajó a $…",
-      "descripcion": "La autoridad monetaria volvió a mantenerse al margen del mercado de cambios, en una rueda en la que el dólar mayorista bajó a $1.538 y las reservas subieron a USD 50.580 millones. Ayer ya había interrumpido las compras ante la volatilidad cambiaria posterior al balotaje de Brasil",
-      "url": "https://www.infobae.com/economia/2026/10/27/por-primera-vez-en-el-ano-el-bcra-no-compro-divisas-por-dos-ruedas-consecutivas/",
-      "fecha": "2026-10-28T07:31:42.785Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
       "titulo": "El empresario reclama una estrategia productiva duradera, financiamiento accesible y reglas estables para que las pequeñas y me…",
       "descripcion": "El empresario reclama una estrategia productiva duradera, financiamiento accesible y reglas estables para que las pequeñas y medianas compañías puedan invertir, preservar empleos y afrontar costos financieros, tributarios, energéticos y logísticos",
       "url": "https://www.infobae.com/opinion/2026/10/27/una-fabrica-que-cierra-no-se-recupera-con-un-decreto/",
@@ -2566,29 +2844,9 @@
       ]
     },
     {
-      "titulo": "Bajó el riesgo país y el dólar se estabilizó pero sigue el viento de frente: vuelven a subir las tasas en EEUU",
-      "descripcion": "Una licitación de deuda del Tesoro argentino deberá renovar $10,8 billones, mientras Brasil enfrenta su propio frente fiscal y las exportaciones argentinas apuntan a superar los USD 100.000 millones en 2026",
-      "url": "https://www.infobae.com/economia/2026/10/28/bajo-el-riesgo-pais-y-el-dolar-se-estabilizo-pero-sigue-el-viento-de-frente-vuelven-a-subir-las-tasas-en-eeuu/",
-      "fecha": "2026-10-28T07:31:42.783Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
       "titulo": "Bajaron los dólares financieros y el riesgo país, pero los bonos todavía marcan sólo un 50% de chances de reelección de Milei",
       "descripcion": "Gracias a una jornada más tranquila en Brasil, los indicadores financieros mejoraron pero aún muestran dudas sobre la continuidad de políticas que no se condicen con lo que sugieren las encuestas",
       "url": "https://www.infobae.com/economia/2026/10/28/bajaron-los-dolares-financieros-y-el-riesgo-pais-pero-los-bonos-todavia-marcan-solo-un-50-de-chances-de-reeleccion-de-milei/",
-      "fecha": "2026-10-28T07:31:42.782Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "El Gobierno debe afrontar un pago de USD 800 millones al FMI y analiza dos caminos: usar dólares propios o comprarlos al BCRA",
-      "descripcion": "El lunes el equipo económico tiene que afrontar un nuevo pago con el organismo internacionales en concepto de intereses, para los analistas hay dos opciones y una suma presión a la compra de reservas del Banco Central. El desembolso pendiente",
-      "url": "https://www.infobae.com/economia/2026/10/28/el-gobierno-debe-afrontar-un-pago-de-usd-800-millones-al-fmi-y-analiza-dos-caminos-usar-dolares-propios-o-comprarlos-al-bcra/",
       "fecha": "2026-10-28T07:31:42.782Z",
       "fuente": "Infobae",
       "categorias": [
@@ -2626,80 +2884,10 @@
       ]
     },
     {
-      "titulo": "Una obra de US$ 40 millones permitirá conexión a gas residencial a 12 mil usuarios en tres provincias de la Patagonia",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-10-28T07:31:41.494Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "El Gobierno aprobó un nuevo RIGI minero: prevé una inversión total por más de US$ 6.300 millones en Catamarca",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-10-28T07:31:41.492Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "¿Por qué el Gobierno de EE.UU. paga solo un dólar por la IA más avanzada",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-10-28T07:31:41.488Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Efecto “Lula 4”: el Gobierno reaccionó a la devaluación del real y la city espera definiciones",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-10-28T07:31:41.487Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "El vice del Banco Central rindió examen sobre el crédito y las soluciones a la mora ante estudiantes",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-10-28T07:31:41.485Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "El dólar mayorista bajó, pero el Banco Central no compró dólares en el mercado de cambios por segundo día consecutivo",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-10-28T07:31:41.485Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
       "titulo": "Así cerró el dólar en bancos, blue y MEP este lunes 26 de octubre",
       "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
       "url": "https://www.ellitoral.com/",
       "fecha": "2026-10-28T07:31:41.283Z",
-      "fuente": "El Litoral (Santa Fe)",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Así cerró el dólar en bancos, blue y MEP este martes 27 de octubre",
-      "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-      "url": "https://www.ellitoral.com/",
-      "fecha": "2026-10-28T07:31:41.281Z",
       "fuente": "El Litoral (Santa Fe)",
       "categorias": [
         "gobierno"
@@ -2712,108 +2900,6 @@
       "fecha": "2026-10-28T07:31:41.160Z",
       "fuente": "La Nación",
       "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Dólar tarjeta hoy: a cuánto cotiza el dólar turista el 27 de octubre",
-      "descripcion": "La cotización del dólar tarjeta presenta martes un precio de $2028; se trata del valor que se utiliza para las compras con tarjetas en el exterior o el pago de servicios",
-      "url": "https://www.lanacion.com.ar/economia/dolar/dolar-tarjeta-hoy-a-cuanto-cotiza-el-dolar-turista-el-27-de-octubre-nid27102026/",
-      "fecha": "2026-10-28T07:31:41.160Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Dólar blue hoy: a cuánto cotiza el miércoles 28 de octubre",
-      "descripcion": "La cotización de la moneda estadounidense ronda los $1527,75 para la compra y $1575 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 28 de octubre de 2026",
-      "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-miercoles-28-de-octubre-nid28102026/",
-      "fecha": "2026-10-28T07:31:41.144Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "El bloqueo del mecanismo de apelaciones de la Organización Mundial del Comercio (OMC) por la postura de Estados Unidos llevó a …",
-      "descripcion": "El bloqueo del mecanismo de apelaciones de la Organización Mundial del Comercio (OMC) por la postura de Estados Unidos llevó a un grupo de países a crear el Acuerdo Provisional Multilateral de Arbitraje de Apelación (MPIA) como vía alternativa para resolver disputas comerciales internacionales",
-      "url": "https://www.lanacion.com.ar/economia/la-union-europea-lidera-una-iniciativa-para-sostener-el-sistema-de-comercio-global-nid11022026/",
-      "fecha": "2026-10-28T07:31:41.142Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
-      "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
-      "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
-      "fecha": "2026-10-28T07:31:41.141Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "poder_adquisitivo",
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Últimas Noticias de Comercio Exterior: Las exportaciones mineras crecieron un 84% en el primer cuatrimestre, El documento de Ha…",
-      "descripcion": "Últimas Noticias de Comercio Exterior: Las exportaciones mineras crecieron un 84% en el primer cuatrimestre, El documento de Harvard que usó Sturzenegger para ampliar los negocios con EE.UU.",
-      "url": "https://www.lanacion.com.ar/economia/comercio-exterior/",
-      "fecha": "2026-10-28T07:31:41.141Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como…",
-      "descripcion": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como Irlanda, España, Australia, Estados Unidos y Chile",
-      "url": "https://www.lanacion.com.ar/economia/negocios/los-paises-que-quieren-que-emprendas-dan-dinero-bajan-impuestos-y-te-ayudan-a-conseguir-clientes-nid30092026/",
-      "fecha": "2026-10-28T07:31:41.140Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Lo aseguró su vicepresendente, Wladimir Werning, en una presentación en la que destacó que la mora en empresas es menor que en …",
-      "descripcion": "Lo aseguró su vicepresendente, Wladimir Werning, en una presentación en la que destacó que la mora en empresas es menor que en tiempos de la pandemia",
-      "url": "https://www.lanacion.com.ar/economia/para-el-bcra-la-morosidad-ya-toco-el-maximo-y-se-viene-un-repunte-del-credito-nid27102026/",
-      "fecha": "2026-10-28T07:31:41.137Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "¿El sueldo alcanza? Trabajar por el 38% de un buen salario: el boom del empleo low cost",
-      "descripcion": "Desde que llegó Milei, hay más ocupados, pero la mayoría son cuentapropistas informales, que ganan unos $700.000 mensuales; cruje además la caja del Estado",
-      "url": "https://www.lanacion.com.ar/economia/crece-el-trabajo-low-cost-hay-mas-trabajadores-pero-con-peores-salarios-nid27102026/",
-      "fecha": "2026-10-28T07:31:41.137Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "El directorio aún debe dar luz verde al acuerdo a nivel técnico, que habilitaría el envío de unos US$900 millones",
-      "descripcion": "El directorio aún debe dar luz verde al acuerdo a nivel técnico, que habilitaría el envío de unos US$900 millones",
-      "url": "https://www.lanacion.com.ar/economia/el-fmi-aprobo-la-tercera-revision-del-acuerdo-con-la-argentina-y-allana-el-camino-para-un-nuevo-nid27102026/",
-      "fecha": "2026-10-28T07:31:41.136Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "El exministro de Economía criticó la intervención oficial en el dólar y la comparó con la gestión del exsecretario de Comercio;…",
-      "descripcion": "El exministro de Economía criticó la intervención oficial en el dólar y la comparó con la gestión del exsecretario de Comercio; Emmanuel Álvarez Agis propuso endurecer nuevamente las restricciones cambiarias para las personas; otros especialistas dieron sus puntos de vista críticos con la actual gestión",
-      "url": "https://www.lanacion.com.ar/economia/cavallo-dijo-que-manejan-el-tipo-de-cambio-como-moreno-y-un-economista-kirchnerista-pidio-volver-al-nid27102026/",
-      "fecha": "2026-10-28T07:31:41.135Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "consumo_masivo",
         "gobierno"
       ]
     },
@@ -3138,36 +3224,6 @@
       "fuente": "Infobae",
       "categorias": [
         "gobierno"
-      ]
-    },
-    {
-      "titulo": "Las pensiones se ajustan según el último índice inflacionario, pero el bono se mantiene sin cambios; cuáles son las cifras del …",
-      "descripcion": "Las pensiones se ajustan según el último índice inflacionario, pero el bono se mantiene sin cambios; cuáles son las cifras del penúltimo mes del año",
-      "url": "https://www.lanacion.com.ar/economia/pnc-de-anses-cual-es-el-monto-de-las-pensiones-no-contributivas-en-noviembre-de-2026-nid19102026/",
-      "fecha": "2026-10-27T13:37:49.536Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "El aumento automático para esta prestación es del 1,93%; cuál es el valor que perciben las familias",
-      "descripcion": "El aumento automático para esta prestación es del 1,93%; cuál es el valor que perciben las familias",
-      "url": "https://www.lanacion.com.ar/economia/monto-de-la-asignacion-universal-por-hijo-de-cuanto-es-la-auh-en-noviembre-2026-con-el-aumento-nid15102026/",
-      "fecha": "2026-10-27T13:37:49.536Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "Para la actualización de haberes se toma el último índice de inflación que publicó el Indec; cuáles son las cifras para el penú…",
-      "descripcion": "Para la actualización de haberes se toma el último índice de inflación que publicó el Indec; cuáles son las cifras para el penúltimo mes del año",
-      "url": "https://www.lanacion.com.ar/economia/jubilaciones-de-anses-cuanto-cobro-en-noviembre-2026-con-el-bono-oficial-y-el-aumento-confirmado-nid14102026/",
-      "fecha": "2026-10-27T13:37:49.536Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "poder_adquisitivo"
       ]
     },
     {
@@ -4550,16 +4606,6 @@
       ]
     },
     {
-      "titulo": "Dólar blue: cotización del miércoles 21 de octubre de 2026",
-      "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
-      "url": "https://www.pagina12.com.ar/2026/10/21/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-miercoles-21-de-octubre-de-2026/",
-      "fecha": "2026-10-22T19:32:35.979Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
       "titulo": "Pymes bonaerenses y grandes aceiteras pelean por una decisión que puede modificar la participación en el mercado",
       "descripcion": "Pymes bonaerenses y grandes aceiteras pelean por una decisión que puede modificar la participación en el mercado",
       "url": "https://www.pagina12.com.ar/2026/10/20/disputa-por-los-biocombustibles/",
@@ -5005,16 +5051,6 @@
       ]
     },
     {
-      "titulo": "Plazo fijo. Cuál es la tasa de interés banco por banco este miércoles 21 de octubre",
-      "descripcion": "El Banco Central de la República Argentina (BCRA) permite a los ahorristas conocer el rendimiento de estos instrumentos de inversión en pesos con una tabla comparativa de tasas",
-      "url": "https://www.lanacion.com.ar/economia/plazo-fijo-cual-es-la-tasa-de-interes-banco-por-banco-este-miercoles-21-de-octubre-nid21102026/",
-      "fecha": "2026-10-21T15:55:28.102Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
       "titulo": "Exportaciones. Reasignan $18 millones para pagar gastos de pasajes y hotel en misiones comerciales para la yerba mate",
       "descripcion": "Es una iniciativa para lo que resta del año del Instituto Nacional de la Yerba Mate (INYM) para empresas del sector",
       "url": "https://www.lanacion.com.ar/economia/campo/reasignan-18-millones-para-pagar-gastos-de-pasajes-y-hotel-en-misiones-comerciales-para-la-yerba-nid21102026/",
@@ -5033,176 +5069,32 @@
       "categorias": [
         "gobierno"
       ]
-    },
-    {
-      "titulo": "El Gobierno dio luz verde a una inversión de Mindlin y Sielecki por más de US$ 3.200 millones en Vaca Muerta",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-10-21T11:04:18.885Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "servicios_hogar",
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "La canasta de crianza porteña aumentó por encima de la inflación: cuánto cuesta tener un hijo en la Ciudad de Buenos Aires",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-10-21T11:04:18.884Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo",
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Crecen hasta 40% las ventas de café: radiografía del nuevo mapa de los canales de consumo",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-10-21T11:04:18.877Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Las primeras restricciones se implementarán de forma escalonada en los servicios nocturnos a partir de este lunes.",
-      "descripcion": "Las primeras restricciones se implementarán de forma escalonada en los servicios nocturnos a partir de este lunes.",
-      "url": "https://www.pagina12.com.ar/2026/10/19/menos-frecuencia-de-colectivos/",
-      "fecha": "2026-10-21T11:04:18.249Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "Día de la Madre 2026: las ventas volvieron a caer y el gasto promedio sorprendió",
-      "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-      "url": "https://www.ellitoral.com/",
-      "fecha": "2026-10-21T11:04:16.913Z",
-      "fuente": "El Litoral (Santa Fe)",
-      "categorias": [
-        "servicios_hogar",
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Juan Pablo Fernández, CEO de una empresa gastronómica enfocada en alimentos y bebidas, explica por qué la logística debe estar …",
-      "descripcion": "Juan Pablo Fernández, CEO de una empresa gastronómica enfocada en alimentos y bebidas, explica por qué la logística debe estar en la mesa de decisiones y cómo evitar quiebres de stock y desvíos",
-      "url": "https://www.infobae.com/movant/2026/10/20/producto-correcto-en-el-momento-correcto-la-logistica-como-eje-del-negocio-gastronomico/",
-      "fecha": "2026-10-21T11:04:16.829Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "Fue a uno de los bodegones más destacados de Palermo, pidió un almuerzo para 6 y mostró cuánto gastó",
-      "descripcion": "Un cliente compartió el comprobante de un almuerzo para seis personas, en un contexto de subas de precios del consumo fuera del hogar según datos oficiales",
-      "url": "https://www.infobae.com/economia/2026/10/20/fue-a-uno-de-los-bodegones-mas-destacados-de-palermo-pidio-un-almuerzo-para-6-y-mostro-cuanto-gasto/",
-      "fecha": "2026-10-21T11:04:16.828Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "El descenso mensual estuvo impulsado por la menor demanda de gas tras el invierno, aunque el gasto en servicios acumuló una sub…",
-      "descripcion": "El descenso mensual estuvo impulsado por la menor demanda de gas tras el invierno, aunque el gasto en servicios acumuló una suba interanual del 56%",
-      "url": "https://www.infobae.com/economia/2026/10/20/por-menor-consumo-cayo-el-gasto-de-la-canasta-de-servicios-en-el-amba-cuanto-debio-destinar-una-familia-en-octubre/",
-      "fecha": "2026-10-21T11:04:16.827Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "servicios_hogar",
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "“La Semana de los 0 km”: la nueva apuesta de una automotriz para acelerar las ventas de autos antes de fin de año",
-      "descripcion": "Volkswagen lanzó una campaña de seis días con financiación a tasa cero, bonificaciones y beneficios adicionales en sus concesionarios. La iniciativa busca reducir stocks en un mercado que resultó más chico de lo previsto",
-      "url": "https://www.infobae.com/economia/2026/10/20/la-semana-de-los-0-km-la-nueva-apuesta-de-una-automotriz-para-acelerar-las-ventas-de-autos-antes-de-fin-de-ano/",
-      "fecha": "2026-10-21T11:04:16.827Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Martín Vauthier, director del Banco Central, expuso en el 31° Simposio de Economía de la Universidad de Tel Aviv en Argentina y…",
-      "descripcion": "Martín Vauthier, director del Banco Central, expuso en el 31° Simposio de Economía de la Universidad de Tel Aviv en Argentina y detalló cómo se compraron casi USD 40.000 millones pese a la apertura del mercado cambiario. Además, aseguró que las condiciones están dadas para que la inflación siga bajando",
-      "url": "https://www.infobae.com/economia/2026/10/20/un-asesor-de-caputo-defendio-la-acumulacion-de-reservas-se-logro-aun-eliminando-restricciones/",
-      "fecha": "2026-10-21T11:04:16.827Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "El Banco Central sumó otros USD 100 millones y ya compró más del doble que en septiembre",
-      "descripcion": "La autoridad monetaria hilvanó 16 jornadas consecutivas con saldo positivo en el mercado cambiario y las reservas brutas se consolidan por encima de los USD 50.000 millones",
-      "url": "https://www.infobae.com/economia/2026/10/20/el-banco-central-sumo-otros-usd-100-millones-y-ya-compro-mas-del-doble-que-en-septiembre/",
-      "fecha": "2026-10-21T11:04:16.822Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Jornada financiera: el riesgo país cerró a la baja tras superar los 700 puntos y el dólar subió por tercer día consecutivo",
-      "descripcion": "Los títulos públicos revirtieron las bajas iniciales y el indicador de JP Morgan descontó posiciones tras haber superado los 700 puntos por la mañana. La Bolsa porteña bajó 0,3%. El dólar subió a $1.545 en el Banco Nación y el BCRA compró USD 103 millones en el mercado",
-      "url": "https://www.infobae.com/economia/2026/10/20/jornada-financiera-el-riesgo-pais-cerro-a-la-baja-tras-superar-los-700-puntos-y-el-dolar-subio-por-tercer-dia-consecutivo/",
-      "fecha": "2026-10-21T11:04:16.822Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "La divisa mayorista cerró a $1.525, el mayor valor en un mes, con USD 673 millones ofertados. Al público subió a $1.545 para la…",
-      "descripcion": "La divisa mayorista cerró a $1.525, el mayor valor en un mes, con USD 673 millones ofertados. Al público subió a $1.545 para la venta en el Banco Nación",
-      "url": "https://www.infobae.com/economia/2026/10/20/el-dolar-subio-por-tercer-dia-consecutivo-y-alcanzo-el-nivel-mas-alto-de-octubre/",
-      "fecha": "2026-10-21T11:04:16.822Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Polémica. El Senasa se desligó del accionar de una empresa de software, evitó dar nombres y ya gastó más de $726 millones en un…",
-      "descripcion": "A raíz de una investigación de LA NACION sobre una firma que ofrecía servicios privados vinculados con una plataforma oficial de trazabilidad veterinaria, el organismo respondió a un pedido de acceso a la información pública de este medio",
-      "url": "https://www.lanacion.com.ar/economia/campo/polemica-el-senasa-se-desligo-del-accionar-de-una-empresa-de-software-evito-dar-nombres-y-ya-gasto-nid20102026/",
-      "fecha": "2026-10-21T11:04:16.718Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "servicios_hogar"
-      ]
     }
   ],
   "alertas": [
     {
-      "titulo": "El aumento de la inflación y de los costos de la deuda, impulsado en gran medida por la guerra entre Estados Unidos e Irán, pre…",
+      "titulo": "La actualización mensual llevará la prestación mínima a $ 444.158,46. La medida alcanza a jubilados, pensionados, titulares de …",
       "impacto": "PODER ADQUISITIVO",
       "tiempo": "Hace 3 min",
       "fuente": "Infobae"
     },
     {
-      "titulo": "El gobierno desvió la plata del fondo fiduciario destinado a reforzar la infraestructura hídrica, mientras el Super Niño avanza.",
+      "titulo": "Una obra de US$ 40 millones permitirá conexión a gas residencial a 12 mil usuarios en tres provincias de la Patagonia",
       "impacto": "SERVICIOS Y HOGAR",
       "tiempo": "Hace 3 min",
-      "fuente": "Página/12"
+      "fuente": "Clarín"
     },
     {
-      "titulo": "Gonzalo Tizón, licenciado en comercio internacional, explica cómo la congestión global, la posición geográfica y la infraestruc…",
+      "titulo": "Daniela Aguiar, asesora de comercio exterior, explica cómo se anticipan controles, costos y tiempos antes de embarcar, y por qu…",
       "impacto": "CONSUMO MASIVO",
       "tiempo": "Hace 3 min",
       "fuente": "Infobae"
     },
     {
-      "titulo": "Dólar blue: cotización del martes 27 de octubre de 2026",
+      "titulo": "El Gobierno aprobó un nuevo RIGI minero: prevé una inversión total por más de US$ 6.300 millones en Catamarca",
       "impacto": "GOBIERNO",
       "tiempo": "Hace 3 min",
-      "fuente": "Página/12"
+      "fuente": "Clarín"
     }
   ]
 }
