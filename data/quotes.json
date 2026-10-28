@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-28T05:29:38.824Z",
-  "timestamp_epoch": 1793165378,
+  "last_updated": "2026-10-28T11:32:09.606Z",
+  "timestamp_epoch": 1793187129,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -94,39 +94,39 @@
   "bursatil": [
     {
       "label": "PAMPA ENERGÍA",
-      "val": "$4.997,50",
-      "var": "▼ 2,77%",
-      "class": "down"
+      "val": "$5.020,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "YPF",
-      "val": "$8.030,00",
-      "var": "▼ 2,78%",
-      "class": "down"
+      "val": "$8.045,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "GRP FIN GALICIA",
       "val": "$5.835,00",
-      "var": "▼ 2,10%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "AL30 (BONO)",
-      "val": "$85.120,00",
-      "var": "▼ 0,43%",
-      "class": "down"
+      "val": "$85.030,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "CRESUD (AGRO)",
-      "val": "$1.668,00",
-      "var": "▲ +1,37%",
-      "class": "up"
+      "val": "$1.662,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "MOLINOS AGRO",
-      "val": "$2.120,00",
-      "var": "▼ 3,64%",
-      "class": "down"
+      "val": "$2.140,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     }
   ],
   "historial": {
