@@ -1,14 +1,12 @@
 {
-
-  "timestamp": "2026-10-31T19:10:31.429Z",
-  "timestamp_epoch": 1793473831,
+  "timestamp": "2026-10-31T19:29:57.145Z",
+  "timestamp_epoch": 1793474997,
   "source": "vxl-transito-ar",
   "cantidad": 10,
   "items": [
     {
       "id": "ellitoral:2026-30-10T11:29:Vie:00-03:00",
       "titulo": "Ruta 10-s: tramo Theobald–RN 9",
->>>>>>> af59d23 (feat(transito): scraper fuentes AR + JSON real Litoral)
       "categoria": "cortes",
       "tipo": "corte_total",
       "fecha": "2026-30-10T11:29:Vie:00-03:00",
@@ -171,8 +169,8 @@
       "titulo": "una camioneta volco en la ruta 14 tres personas fueron hospitalizadas entre ella…",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-10-31T19:10:30.524Z",
-      "fecha_raw": "2026-10-31T19:10:30.524Z",
+      "fecha": "2026-10-31T19:29:56.242Z",
+      "fecha_raw": "2026-10-31T19:29:56.242Z",
       "horario": null,
       "resumen": "una camioneta volco en la ruta 14 tres personas fueron hospitalizadas entre ellas un nino",
       "descripcion": "una camioneta volco en la ruta 14 tres personas fueron hospitalizadas entre ellas un nino",
@@ -190,10 +188,9 @@
       "id": "analisis:https://www.analisisdigital.com.ar/policiales/2026/10/31/tragedia-vial-en-parana-un-motociclista-murio-tras-un-choque-con-una-camioneta-y-el-conductor-quedo-detenido",
       "titulo": "tragedia vial en parana un motociclista murio tras un choque con una camioneta y…",
       "categoria": "accidentes",
-
       "tipo": "choque",
-      "fecha": "2026-10-31T19:10:30.482Z",
-      "fecha_raw": "2026-10-31T19:10:30.482Z",
+      "fecha": "2026-10-31T19:29:56.206Z",
+      "fecha_raw": "2026-10-31T19:29:56.206Z",
       "horario": null,
       "resumen": "tragedia vial en parana un motociclista murio tras un choque con una camioneta y el conductor quedo detenido",
       "descripcion": "tragedia vial en parana un motociclista murio tras un choque con una camioneta y el conductor quedo detenido",
@@ -206,7 +203,6 @@
       "km_desde": null,
       "km_hasta": null,
       "vigente_hasta": null
->>>>>>> af59d23 (feat(transito): scraper fuentes AR + JSON real Litoral)
     }
   ]
 }
