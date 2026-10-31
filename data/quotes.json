@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-30T20:47:35.037Z",
-  "timestamp_epoch": 1793393255,
+  "last_updated": "2026-10-31T00:10:24.290Z",
+  "timestamp_epoch": 1793405424,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -11,7 +11,7 @@
       "nombre": "Oficial",
       "compra": 1510,
       "venta": 1560,
-      "fechaActualizacion": "2026-10-30T17:00:00.000Z",
+      "fechaActualizacion": "2026-10-30T18:00:00.000Z",
       "variacion": 0
     },
     {
@@ -20,7 +20,7 @@
       "nombre": "Blue",
       "compra": 1545,
       "venta": 1565,
-      "fechaActualizacion": "2026-10-30T19:57:00.000Z",
+      "fechaActualizacion": "2026-10-30T20:57:00.000Z",
       "variacion": 0
     },
     {
@@ -29,7 +29,7 @@
       "nombre": "Bolsa",
       "compra": 1565.4,
       "venta": 1575,
-      "fechaActualizacion": "2026-10-30T19:57:00.000Z",
+      "fechaActualizacion": "2026-10-30T20:57:00.000Z",
       "variacion": 0.4
     },
     {
@@ -38,7 +38,7 @@
       "nombre": "Contado con liquidación",
       "compra": 1655.3,
       "venta": 1658.5,
-      "fechaActualizacion": "2026-10-30T19:57:00.000Z",
+      "fechaActualizacion": "2026-10-30T20:57:00.000Z",
       "variacion": 0.5
     },
     {
@@ -54,10 +54,10 @@
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1649.85,
-      "venta": 1655.84,
-      "fechaActualizacion": "2026-10-30T19:57:00.000Z",
-      "variacion": 0.72
+      "compra": 1649.75,
+      "venta": 1653.91,
+      "fechaActualizacion": "2026-10-30T20:57:00.000Z",
+      "variacion": 0.6
     },
     {
       "moneda": "USD",
@@ -65,7 +65,7 @@
       "nombre": "Tarjeta",
       "compra": 1963,
       "venta": 2028,
-      "fechaActualizacion": "2026-10-30T17:00:00.000Z",
+      "fechaActualizacion": "2026-10-30T18:00:00.000Z",
       "variacion": 0
     }
   ],
@@ -77,7 +77,7 @@
       "bolsa": 1575,
       "contadoconliqui": 1658.5,
       "mayorista": 1534,
-      "cripto": 1655.84,
+      "cripto": 1653.91,
       "tarjeta": 2028
     },
     "fecha_cierre": "2026-10-29",
