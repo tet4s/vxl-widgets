@@ -32,6 +32,17 @@ const CACHE  = path.join(__dirname, '../data/transito.cache.json');
 const PROVS_OK = ['Santa Fe', 'Entre Ríos'];
 const MAX = 30;
 
+const COORDS = {
+  'Paraná':         { lat: -31.7327, lon: -60.5290 },
+  'Santa Fe':       { lat: -31.6333, lon: -60.7000 },
+  'Rosario':        { lat: -31.4228, lon: -61.3545 },
+  'Santo Tomé':     { lat: -31.6620, lon: -60.7600 },
+  'Reconquista':    { lat: -29.1430, lon: -59.6400 },
+  'Venado Tuerto':  { lat: -33.7450, lon: -61.9700 },
+  'Rafaela':        { lat: -31.2500, lon: -61.4833 },
+  'Clorinda':       { lat: -25.2830, lon: -57.7200 }
+};
+
 const log = m => console.log('[scraper] ' + m);
 const pad = n => String(n).padStart(2, '0');
 function clean(t){ return (t||'').replace(/<script[^>]*>[\s\S]*?<\/script>/gi,' ').replace(/<style[^>]*>[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#39;/g,"'").replace(/&quot;/g,'"').replace(/window\.googletag[\s\S]*?;\s*/g,' ').replace(/\s+/g,' ').trim(); }
@@ -65,8 +76,8 @@ async function georef(direccion, provincia, localidad){
 /* ── parsers ── */
 const RE_TS = /(\d{1,2}:\d{2})\s*\/\s*([A-Z][a-z]{2})\s*\.\s*(\d{1,2})\.(\d{1,2})\.(\d{4})/;
 function tsToISO(ts){ if(!ts) return ''; const m=String(ts).match(RE_TS); if(m) return `${m[5]}-${pad(m[3])}-${pad(m[4])}T${pad(m[1])}:${m[2]}:00-03:00`; const d=new Date(ts); return isNaN(+d)?'':d.toISOString(); }
-function parseHorario(txt){ let m=String(txt).match(/de\s+(\d{1,2}:\d{2})\s+a\s+(?:las\s*)?(\d{1,2}:\d{2})/i); if(m) return 'de '+m[1]+' a '+m[2]; m=String(txt).match(/(?:desde\s+(\d{1,2}:\d{2})\s+a\s+(\d{1,2}:\d{2}))/i); if(m) return 'de '+m[1]+' a '+m[2]; m=String(txt).match(/hasta\s+(?:las\s*)?(\d{1,2}:\d{2})/i); if(m) return 'hasta '+m[1]; return null; }
-function vigenteHasta(horario, fechaISO){ if(!horario||!fechaISO) return null; const m=String(horario).match(/de\s+(\d{1,2}):(\d{2})\s+a\s+(\d{1,2}):(\d{2})/i); if(m){ const d=new Date(fechaISO); if(isNaN(+d)) return null; const o=new Date(d); o.setHours(parseInt(m[3]),parseInt(m[4]),0,0); return o.toISOString(); } return null; }
+function parseHorario(txt){ let m=String(txt).match(/de\s+(\d{1,2}:?\d{0,2})\s+a\s+(?:las\s*)?(\d{1,2}:?\d{0,2})/i); if(m) return 'de '+m[1]+' a '+m[2]; m=String(txt).match(/desde\s+(\d{1,2}:?\d{0,2})\s+a\s+(\d{1,2}:?\d{0,2})/i); if(m) return 'de '+m[1]+' a '+m[2]; m=String(txt).match(/hasta\s+(?:las\s*)?(\d{1,2}:?\d{0,2})/i); if(m) return 'hasta '+m[1]; return null; }
+function vigenteHasta(horario, fechaISO){ if(!horario||!fechaISO) return null; const m=String(horario).match(/de\s+(\d{1,2})(?::(\d{2}))?\s+a\s+(\d{1,2})(?::(\d{2}))?/i); if(m){ const d=new Date(fechaISO); if(isNaN(+d)) return null; const o=new Date(d); o.setHours(parseInt(m[3]),parseInt(m[4]||'0'),0,0); return o.toISOString(); } return null; }
 function parseKm(txt){ let m=String(txt).match(/k(?:m|il[oó]metro)?\s*(\d+(?:[.\d]+)?)\s*(?:hasta|–|-)\s*k(?:m|il[oó]metro)?\s*(\d+(?:[.\d]+)?)/i); if(m) return{from:m[1],to:m[2]}; m=String(txt).match(/(?:desde|entre)\s*(\d+(?:[.\d]+)?)\s*(?:y|hasta|–)\s*(\d+(?:[.\d]+)?)/i); if(m) return{from:m[1],to:m[2]}; m=String(txt).match(/k(?:m|il[oó]metro)?\s*(\d+(?:[.\d]+)?)/i); if(m) return{from:m[1],to:null}; return{from:null,to:null}; }
 function parseTipo(t,tt){ const s=(tt||'')+' '+(t||''); if(/corte\s*total|acceso\s*cerrado|interrupci[oó]n/i.test(s)) return 'corte_total'; if(/corte\s*parcial/i.test(s)) return 'corte_parcial'; if(/reducci[oó]n|menos\s*un\s*carril|entre\s*2\s*carriles/i.test(s)) return 'reduccion'; if(/obra|reparaci[oó]n|construcci[oó]n/i.test(s)) return 'obra'; if(/choque|colisi[oó]n|vuelco|accidente/i.test(s)) return 'choque'; return 'corte_total'; }
 function parseCat(t){ if(t==='choque') return 'accidentes'; if(t==='obra') return 'obras'; return 'cortes'; }
@@ -109,7 +120,7 @@ async function scrapElLitoral(){
       const horario=parseHorario(txt);
       const dirGeo=localidad||'Santa Fe';
       const geo=await georef(dirGeo,'Santa Fe',localidad);
-      const item=buildItem({id:'ellitoral:'+(fecha||short(b,40)),titulo:via||titulo,tipo:parseTipo(txt,txt),categoria:'cortes',fecha,descripcion:txt,resumen:txt,enlace:nota,via,kmDesde:km.from,kmHasta:km.to,localidad,provincia:'Santa Fe',horario,geo});
+      const item=buildItem({id:'ellitoral:'+(fecha||short(b,40)),titulo:via||titulo,tipo:parseTipo(txt,titulo),categoria:'cortes',fecha,descripcion:txt,resumen:txt,enlace:nota,via,kmDesde:km.from,kmHasta:km.to,localidad,provincia:'Santa Fe',horario,vigente_hasta:vigenteHasta(horario,fecha),geo});
       if(item) out.push(item); await sleep(120);
     }
   }catch(e){ log('  ✗ El Litoral: '+(e.message||e)); }
@@ -151,31 +162,11 @@ async function scrapElOnce(){
 }
 
 /* ════════════════════════════════════════════════════════════════════════════
-   3. ANÁLISIS DIGITAL  (Paraná) — policiales (choques/volcos + calles)
+   3. ANÁLISIS DIGITAL → DESCARTADO (noticias policiales, no alertas operativas).
    ═══════════════════════════════════════════════════════════════════════════*/
 async function scrapAnalisis(){
-  log('Análisis Digital (Paraná): policiales...');
-  const out=[];
-  try{
-    const html = await fetch('https://www.analisisdigital.com.ar/policiales');
-    const urlBase='https://www.analisisdigital.com.ar';
-    const $ = cheerio.load(html);
-    const links=[];
-    $('a[href]').each((_,a)=>{ const h=$(a).attr('href')||''; const href=h.replace(/^["']|["']$/g,'');
-      const hrefFull = href.startsWith('http')?href:h.startsWith('//')?'https:'+href:h.startsWith('/')?urlBase+href:href;
-      const m = href.match(/^\/policiales\/\d{4}\/\d{2}\/\d{2}\/[^?]+$/);
-      if(m && links.indexOf(urlBase+href)===-1){ links.push(urlBase+href); } });
-    log('  links: '+links.length);
-    for(const url of links.slice(0,15)){
-      const slug = url.split('/').pop().replace(/\.html$/,'');
-      const titulo = clean(decodeURIComponent(slug.replace(/-/g,' ')));
-      if(!/choque|colisi[oó]n|vuelco|accidente|chocaron|tr[\u00e1a]nsito|ruta\s*\d/i.test(titulo)){ continue; }
-      const geo=await georef('Paraná','Entre Ríos','Paraná');
-      const item=buildItem({id:'analisis:'+url,titulo:titulo,tipo:parseTipo(titulo,titulo),categoria:parseCat(parseTipo(titulo,titulo)),fecha:new Date().toISOString(),descripcion:titulo,resumen:titulo,enlace:url,via:'ruta/ciudad Paraná',localidad:'Paraná',provincia:'Entre Ríos',horario:null,geo});
-      if(item) out.push(item);
-    }
-  }catch(e){ log('  ✗ Análisis: '+(e.message||e)); }
-  return out;
+  log('Análisis Digital: DESCARTADO (noticias policiales, no alertas operativas).');
+  return [];
 }
 
 /* ════════════════════════════════════════════════════════════════════════════
@@ -198,7 +189,7 @@ async function scrapRuta0(){
       const prov=/Santa Fe/i.test(txt)?'Santa Fe':(/Paran[aá]/i.test(txt)?'Entre Ríos':(localidad?'':''));
       const locForGeo = localidad || (prov==='Santa Fe'?'Santa Fe':prov==='Entre Ríos'?'Paraná':'');
       const geo=await georef((km.from?via+' km '+km.from+' ':via+' ')+(locForGeo||'Litoral'),prov||undefined,locForGeo);
-      const item=buildItem({id:'ruta0:'+short(txt,40),titulo:short(txt||(via||'corte'),80),tipo:parseTipo(txt,txt),categoria:parseCat(parseTipo(txt,txt)),fecha:new Date().toISOString(),descripcion:txt,resumen:txt,enlace:'https://www.ruta0.com/estado-de-rutas/litoral/',via,kmDesde:km.from,kmHasta:km.to,localidad:localidad||(prov||'Litoral'),provincia:prov||'',horario,geo});
+      const item=buildItem({id:'ruta0:'+short(txt,40),titulo:short(txt||(via||'corte'),80),tipo:parseTipo(txt,txt),categoria:parseCat(parseTipo(txt,txt)),fecha:new Date().toISOString(),descripcion:txt,resumen:txt,enlace:'https://www.ruta0.com/estado-de-rutas/litoral/',via,kmDesde:km.from,kmHasta:km.to,localidad:localidad||(prov||'Litoral'),provincia:prov||'',horario,vigente_hasta:null,geo});
       if(item && PROVS_OK.indexOf(item.provincia)!==-1) out.push(item);
       await sleep(100);
     }
@@ -207,7 +198,410 @@ async function scrapRuta0(){
 }
 
 /* ════════════════════════════════════════════════════════════════════════════
-   5. APSV  (Santa Fe) — Estado de rutas oficial
+   6. ESTAMOS ENTRE RÍOS  (Paraná) — cortes de tránsito, obras, alertas locales
+   ═══════════════════════════════════════════════════════════════════════════*/
+async function scrapEstamosER(){
+  log('Estamos Entre Ríos (Paraná): indexando home...');
+  const out=[];
+  try{
+    const html = await fetch('https://estamosentrerios.com/');
+    const $ = cheerio.load(html);
+    const links=[];
+    $('a[href]').each((_,a)=>{
+      const href = $(a).attr('href')||'';
+      const titulo = clean($(a).text()).trim();
+      if(!/transito|trafico|corte|ruta|circulacion|obra|desv|transporte|colectivo|obras\s+viales/i.test(titulo)) return;
+      if(!/202[0-9]/.test(href)) return;
+      if(links.find(l => l.href === href)) return;
+      links.push({titulo, href});
+    });
+    log('  links: '+links.length);
+    for(const link of links.slice(0,12)){
+      try{
+        const nhtml = await fetch(link.href);
+        const $$ = cheerio.load(nhtml);
+        const txt = clean($$('.td-post-content').text()).trim();
+        if(!txt || txt.length < 60) continue;
+        const esDeParana = /paran[aá]/i.test(txt) || /direcci[oó]n\s+de\s+tr[aá]nsito\s+municipal/i.test(txt);
+        if(!esDeParana) continue;
+        const localidad = 'Paraná';
+        const provincia = 'Entre Ríos';
+        
+        // Fecha desde URL (/YYYY/MM/DD/) o del texto
+        let fechaNoticia = '';
+        const urlMatch = link.href.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//);
+        if(urlMatch){
+          fechaNoticia = `${urlMatch[1]}-${urlMatch[2]}-${urlMatch[3]}T00:00:00-03:00`;
+        } else {
+          const fechaMatch = txt.match(/(\d{1,2}:\d{2})?\s*\/\s*([A-Z][a-z]{2})\.?\s+(\d{1,2})\.(\d{1,2})\.(\d{4})/);
+          if(fechaMatch){
+            const dia = fechaMatch[3], mes = fechaMatch[4], anio = fechaMatch[5];
+            const hora = fechaMatch[1] ? fechaMatch[1].replace(/\s+/,'') : '00:00';
+            fechaNoticia = `${anio}-${String(dia).padStart(2,'0')}-${String(mes).padStart(2,'0')}T${String(hora).padStart(5,'0')}:00-03:00`;
+          }
+        }
+        if(!fechaNoticia) fechaNoticia = new Date().toISOString();
+        const horario = parseHorario(txt);
+        const vigenteHastaCalc = vigenteHasta(horario, fechaNoticia);
+        
+        // Extraer calle principal (buscar "calle 25 de Mayo entre X y Y" o similar)
+        let callePrincipal = '';
+        let calleLimiteInicio = '';
+        let calleLimiteFin = '';
+        const entreMatch = txt.match(/calle\s+([^,.;\n]+?)\s+entre\s+([A-Z][a-záéíóúñ]+)\s+y\s+([A-Z][a-záéíóúñ]+)/i);
+        if(entreMatch){
+          callePrincipal = entreMatch[1].trim();
+          calleLimiteInicio = entreMatch[2];
+          calleLimiteFin = entreMatch[3];
+        } else {
+          const entreSolo = txt.match(/entre\s+([A-Z][a-záéíóúñ]+)\s+y\s+([A-Z][a-záéíóúñ]+)/i);
+          if(entreSolo){
+            calleLimiteInicio = entreSolo[1];
+            calleLimiteFin = entreSolo[2];
+          }
+          const titularMatch = txt.match(/^(?:sobre|por|en)\s+(calle\s+)?([A-Z][a-záéíóúñ]+(?:\s+[a-záéíóúñ]+)?)/i);
+          if(titularMatch) callePrincipal = titularMatch[2].trim();
+        }
+        
+        // Geocodificar calles límite
+        const puntosLimite = [];
+        if(calleLimiteInicio) {
+          const geo1 = await georef(calleLimiteInicio, provincia, localidad);
+          if(geo1 && geo1.lat && geo1.lon) {
+            const fb = COORDS['Paraná'];
+            if(fb) {
+              const dist = Math.abs(geo1.lat - fb.lat) + Math.abs(geo1.lon - fb.lon);
+              if(dist < 0.15) puntosLimite.push([geo1.lat, geo1.lon]);
+            }
+          }
+        }
+        if(calleLimiteFin && calleLimiteFin !== calleLimiteInicio) {
+          const geo2 = await georef(calleLimiteFin, provincia, localidad);
+          if(geo2 && geo2.lat && geo2.lon) {
+            const fb = COORDS['Paraná'];
+            if(fb) {
+              const dist = Math.abs(geo2.lat - fb.lat) + Math.abs(geo2.lon - fb.lon);
+              if(dist < 0.15) puntosLimite.push([geo2.lat, geo2.lon]);
+            }
+          }
+        }
+        
+        // Polígono fijo para Halloween (Paraná) o punto puntual
+        let poligono = null;
+        let radio = null;
+        let geoFinal = null;
+        
+        if(localidad === "Paraná" && link.titulo.toLowerCase().includes("halloween")) {
+          poligono = [
+            [-31.73208, -60.53126],
+            [-31.73208, -60.52976],
+            [-31.73458, -60.52976],
+            [-31.73458, -60.53126]
+          ];
+          geoFinal = { lat: -31.73333, lon: -60.53051 };
+        } else {
+          if(puntosLimite.length >= 2) {
+            const dlat = Math.abs(puntosLimite[1][0] - puntosLimite[0][0]);
+            const dlon = Math.abs(puntosLimite[1][1] - puntosLimite[0][1]);
+            const longitud = Math.sqrt(dlat*dlat + dlon*dlon);
+            if(longitud < 0.005) {
+              const ancho = Math.max(longitud * 0.3, 0.00015);
+              const nx = (puntosLimite[1][1] - puntosLimite[0][1]) / (longitud || 0.001);
+              const ny = (puntosLimite[1][0] - puntosLimite[0][0]) / (longitud || 0.001);
+              const px = -ny * ancho;
+              const py = nx * ancho;
+              poligono = [
+                [puntosLimite[0][0] + py, puntosLimite[0][1] + px],
+                [puntosLimite[1][0] + py, puntosLimite[1][1] + px],
+                [puntosLimite[1][0] - py, puntosLimite[1][1] - px],
+                [puntosLimite[0][0] - py, puntosLimite[0][1] - px]
+              ];
+            }
+          }
+          
+          if(poligono && poligono.length >= 3) {
+            geoFinal = { lat: poligono[0][0], lon: poligono[0][1] };
+          } else if(puntosLimite.length > 0) {
+            geoFinal = { lat: puntosLimite[0][0], lon: puntosLimite[0][1] };
+          } else {
+            const fb = COORDS["Paraná"];
+            if(!fb) continue;
+            geoFinal = { lat: fb.lat, lon: fb.lon };
+          }
+        }
+        
+        const item=buildItem({id:'estamoser:'+short(link.titulo,40),titulo:short(link.titulo,90),tipo:parseTipo(txt,link.titulo),categoria:parseCat(parseTipo(txt,link.titulo)),fecha:fechaNoticia,descripcion:txt,resumen:short(txt,180),enlace:link.href,via:(callePrincipal||'').slice(0,90),kmDesde:null,kmHasta:null,localidad,provincia,horario,vigente_hasta:vigenteHastaCalc,geo:geoFinal,radio,poligono});
+        if(item) out.push(item);
+      }catch(e){ log('  ✗ item ER: '+(e.message||e)); }
+    }
+  }catch(e){ log('  ✗ EstamosER: '+(e.message||e)); }
+  return out;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   7. ENTRE RÍOS AHORA  (Paraná) — obras, cortes, desvíos municipales
+   ═══════════════════════════════════════════════════════════════════════════*/
+async function scrapEntreRiosAhora(){
+  log('Entre Ríos Ahora (Paraná): indexando...');
+  const out=[];
+  try{
+    const html = await fetch('https://entreriosahora.com/');
+    const $ = cheerio.load(html);
+    const links=[];
+    $('a[href]').each((_,a)=>{
+      const href = $(a).attr('href')||'';
+      const titulo = clean($(a).text()).trim();
+      if(!/transito|trafico|corte|ruta|circulacion|obra|desv|transporte|colectivo|obras\s+viales|camino|acceso|puente/i.test(titulo)) return;
+      if(!/202[0-9]/.test(href)) return;
+      if(links.find(l => l.href === href)) return;
+      links.push({titulo, href});
+    });
+    log('  links: '+links.length);
+    for(const link of links.slice(0,10)){
+      try{
+        const nhtml = await fetch(link.href);
+        const $$ = cheerio.load(nhtml);
+        const txt = clean($$('.entry-content, .post-content, article, .td-post-content').text()).trim();
+        if(!txt || txt.length < 60) continue;
+        const esDeParana = /paran[aá]/i.test(txt) || /municipio\s+de\s+paran[aá]/i.test(txt);
+        if(!esDeParana) continue;
+        const localidad = 'Paraná';
+        const provincia = 'Entre Ríos';
+        
+        // Fecha desde URL o texto
+        let fechaNoticia = '';
+        const urlMatch = link.href.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//);
+        if(urlMatch){
+          fechaNoticia = `${urlMatch[1]}-${urlMatch[2]}-${urlMatch[3]}T00:00:00-03:00`;
+        } else {
+          const fechaMatch = txt.match(/(\d{1,2}:\d{2})?\s*\/\s*([A-Z][a-z]{2})\.?\s+(\d{1,2})\.(\d{1,2})\.(\d{4})/);
+          if(fechaMatch){
+            const dia = fechaMatch[3], mes = fechaMatch[4], anio = fechaMatch[5];
+            const hora = fechaMatch[1] ? fechaMatch[1].replace(/\s+/,'') : '00:00';
+            fechaNoticia = `${anio}-${String(dia).padStart(2,'0')}-${String(mes).padStart(2,'0')}T${String(hora).padStart(5,'0')}:00-03:00`;
+          }
+        }
+        if(!fechaNoticia) fechaNoticia = new Date().toISOString();
+        const horario = parseHorario(txt);
+        const vigenteHastaCalc = vigenteHasta(horario, fechaNoticia);
+        
+        // Extraer calle principal
+        let callePrincipal = '';
+        let calleLimiteInicio = '';
+        let calleLimiteFin = '';
+        const entreMatch = txt.match(/calle\s+([^,.;\n]+?)\s+entre\s+([A-Z][a-záéíóúñ]+)\s+y\s+([A-Z][a-záéíóúñ]+)/i);
+        if(entreMatch){
+          callePrincipal = entreMatch[1].trim();
+          calleLimiteInicio = entreMatch[2];
+          calleLimiteFin = entreMatch[3];
+        } else {
+          const entreSolo = txt.match(/entre\s+([A-Z][a-záéíóúñ]+)\s+y\s+([A-Z][a-záéíóúñ]+)/i);
+          if(entreSolo){
+            calleLimiteInicio = entreSolo[1];
+            calleLimiteFin = entreSolo[2];
+          }
+          const titularMatch = txt.match(/^(?:sobre|por|en)\s+(calle\s+)?([A-Z][a-záéíóúñ]+(?:\s+[a-záéíóúñ]+)?)/i);
+          if(titularMatch) callePrincipal = titularMatch[2].trim();
+        }
+        
+        // Geocodificar calles límite
+        const puntosLimite = [];
+        if(calleLimiteInicio) {
+          const geo1 = await georef(calleLimiteInicio, provincia, localidad);
+          if(geo1 && geo1.lat && geo1.lon) {
+            const fb = COORDS['Paraná'];
+            if(fb) {
+              const dist = Math.abs(geo1.lat - fb.lat) + Math.abs(geo1.lon - fb.lon);
+              if(dist < 0.15) puntosLimite.push([geo1.lat, geo1.lon]);
+            }
+          }
+        }
+        if(calleLimiteFin && calleLimiteFin !== calleLimiteInicio) {
+          const geo2 = await georef(calleLimiteFin, provincia, localidad);
+          if(geo2 && geo2.lat && geo2.lon) {
+            const fb = COORDS['Paraná'];
+            if(fb) {
+              const dist = Math.abs(geo2.lat - fb.lat) + Math.abs(geo2.lon - fb.lon);
+              if(dist < 0.15) puntosLimite.push([geo2.lat, geo2.lon]);
+            }
+          }
+        }
+        
+        // Polígono o punto puntual
+        let poligono = null;
+        let radio = null;
+        let geoFinal = null;
+        
+        if(puntosLimite.length >= 2) {
+          const dlat = Math.abs(puntosLimite[1][0] - puntosLimite[0][0]);
+          const dlon = Math.abs(puntosLimite[1][1] - puntosLimite[0][1]);
+          const longitud = Math.sqrt(dlat*dlat + dlon*dlon);
+          if(longitud < 0.005) {
+            const ancho = Math.max(longitud * 0.3, 0.00015);
+            const nx = (puntosLimite[1][1] - puntosLimite[0][1]) / (longitud || 0.001);
+            const ny = (puntosLimite[1][0] - puntosLimite[0][0]) / (longitud || 0.001);
+            const px = -ny * ancho;
+            const py = nx * ancho;
+            poligono = [
+              [puntosLimite[0][0] + py, puntosLimite[0][1] + px],
+              [puntosLimite[1][0] + py, puntosLimite[1][1] + px],
+              [puntosLimite[1][0] - py, puntosLimite[1][1] - px],
+              [puntosLimite[0][0] - py, puntosLimite[0][1] - px]
+            ];
+          }
+        }
+        
+        if(poligono && poligono.length >= 3) {
+          geoFinal = { lat: poligono[0][0], lon: poligono[0][1] };
+        } else if(puntosLimite.length > 0) {
+          geoFinal = { lat: puntosLimite[0][0], lon: puntosLimite[0][1] };
+        } else {
+          const fb = COORDS["Paraná"];
+          if(!fb) continue;
+          geoFinal = { lat: fb.lat, lon: fb.lon };
+        }
+        
+        const item=buildItem({id:'entreriosahora:'+short(link.titulo,40),titulo:short(link.titulo,90),tipo:parseTipo(txt,link.titulo),categoria:parseCat(parseTipo(txt,link.titulo)),fecha:fechaNoticia,descripcion:txt,resumen:short(txt,180),enlace:link.href,via:(callePrincipal||'').slice(0,90),kmDesde:null,kmHasta:null,localidad,provincia,horario,vigente_hasta:vigenteHastaCalc,geo:geoFinal,radio,poligono});
+        if(item) out.push(item);
+      }catch(e){ log('  ✗ item ERA: '+(e.message||e)); }
+    }
+  }catch(e){ log('  ✗ EntreRiosAhora: '+(e.message||e)); }
+  return out;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   8. APFDIGITAL  (Paraná) — obras, cortes, desvíos municipales
+   ═══════════════════════════════════════════════════════════════════════════*/
+async function scrapApfDigital(){
+  log('APFDigital (Paraná): indexando...');
+  const out=[];
+  try{
+    const html = await fetch('https://www.apfdigital.com.ar/');
+    const $ = cheerio.load(html);
+    const links=[];
+    $('a[href]').each((_,a)=>{
+      const href = $(a).attr('href')||'';
+      const titulo = clean($(a).text()).trim();
+      if(!/transito|trafico|corte|ruta|circulacion|obra|desv|transporte|colectivo|obras\s+viales|camino|acceso|puente/i.test(titulo)) return;
+      if(!/202[0-9]/.test(href)) return;
+      if(links.find(l => l.href === href)) return;
+      links.push({titulo, href});
+    });
+    log('  links: '+links.length);
+    for(const link of links.slice(0,10)){
+      try{
+        const nhtml = await fetch(link.href);
+        const $$ = cheerio.load(nhtml);
+        const txt = clean($$('.entry-content, .post-content, article, .td-post-content').text()).trim();
+        if(!txt || txt.length < 60) continue;
+        const esDeParana = /paran[aá]/i.test(txt) || /municipio\s+de\s+paran[aá]/i.test(txt);
+        if(!esDeParana) continue;
+        const localidad = 'Paraná';
+        const provincia = 'Entre Ríos';
+        
+        // Fecha desde URL o texto
+        let fechaNoticia = '';
+        const urlMatch = link.href.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//);
+        if(urlMatch){
+          fechaNoticia = `${urlMatch[1]}-${urlMatch[2]}-${urlMatch[3]}T00:00:00-03:00`;
+        } else {
+          const fechaMatch = txt.match(/(\d{1,2}:\d{2})?\s*\/\s*([A-Z][a-z]{2})\.?\s+(\d{1,2})\.(\d{1,2})\.(\d{4})/);
+          if(fechaMatch){
+            const dia = fechaMatch[3], mes = fechaMatch[4], anio = fechaMatch[5];
+            const hora = fechaMatch[1] ? fechaMatch[1].replace(/\s+/,'') : '00:00';
+            fechaNoticia = `${anio}-${String(dia).padStart(2,'0')}-${String(mes).padStart(2,'0')}T${String(hora).padStart(5,'0')}:00-03:00`;
+          }
+        }
+        if(!fechaNoticia) fechaNoticia = new Date().toISOString();
+        const horario = parseHorario(txt);
+        const vigenteHastaCalc = vigenteHasta(horario, fechaNoticia);
+        
+        // Extraer calle principal
+        let callePrincipal = '';
+        let calleLimiteInicio = '';
+        let calleLimiteFin = '';
+        const entreMatch = txt.match(/calle\s+([^,.;\n]+?)\s+entre\s+([A-Z][a-záéíóúñ]+)\s+y\s+([A-Z][a-záéíóúñ]+)/i);
+        if(entreMatch){
+          callePrincipal = entreMatch[1].trim();
+          calleLimiteInicio = entreMatch[2];
+          calleLimiteFin = entreMatch[3];
+        } else {
+          const entreSolo = txt.match(/entre\s+([A-Z][a-záéíóúñ]+)\s+y\s+([A-Z][a-záéíóúñ]+)/i);
+          if(entreSolo){
+            calleLimiteInicio = entreSolo[1];
+            calleLimiteFin = entreSolo[2];
+          }
+          const titularMatch = txt.match(/^(?:sobre|por|en)\s+(calle\s+)?([A-Z][a-záéíóúñ]+(?:\s+[a-záéíóúñ]+)?)/i);
+          if(titularMatch) callePrincipal = titularMatch[2].trim();
+        }
+        
+        // Geocodificar calles límite
+        const puntosLimite = [];
+        if(calleLimiteInicio) {
+          const geo1 = await georef(calleLimiteInicio, provincia, localidad);
+          if(geo1 && geo1.lat && geo1.lon) {
+            const fb = COORDS['Paraná'];
+            if(fb) {
+              const dist = Math.abs(geo1.lat - fb.lat) + Math.abs(geo1.lon - fb.lon);
+              if(dist < 0.15) puntosLimite.push([geo1.lat, geo1.lon]);
+            }
+          }
+        }
+        if(calleLimiteFin && calleLimiteFin !== calleLimiteInicio) {
+          const geo2 = await georef(calleLimiteFin, provincia, localidad);
+          if(geo2 && geo2.lat && geo2.lon) {
+            const fb = COORDS['Paraná'];
+            if(fb) {
+              const dist = Math.abs(geo2.lat - fb.lat) + Math.abs(geo2.lon - fb.lon);
+              if(dist < 0.15) puntosLimite.push([geo2.lat, geo2.lon]);
+            }
+          }
+        }
+        
+        // Polígono o punto puntual
+        let poligono = null;
+        let radio = null;
+        let geoFinal = null;
+        
+        if(puntosLimite.length >= 2) {
+          const dlat = Math.abs(puntosLimite[1][0] - puntosLimite[0][0]);
+          const dlon = Math.abs(puntosLimite[1][1] - puntosLimite[0][1]);
+          const longitud = Math.sqrt(dlat*dlat + dlon*dlon);
+          if(longitud < 0.005) {
+            const ancho = Math.max(longitud * 0.3, 0.00015);
+            const nx = (puntosLimite[1][1] - puntosLimite[0][1]) / (longitud || 0.001);
+            const ny = (puntosLimite[1][0] - puntosLimite[0][0]) / (longitud || 0.001);
+            const px = -ny * ancho;
+            const py = nx * ancho;
+            poligono = [
+              [puntosLimite[0][0] + py, puntosLimite[0][1] + px],
+              [puntosLimite[1][0] + py, puntosLimite[1][1] + px],
+              [puntosLimite[1][0] - py, puntosLimite[1][1] - px],
+              [puntosLimite[0][0] - py, puntosLimite[0][1] - px]
+            ];
+          }
+        }
+        
+        if(poligono && poligono.length >= 3) {
+          geoFinal = { lat: poligono[0][0], lon: poligono[0][1] };
+        } else if(puntosLimite.length > 0) {
+          geoFinal = { lat: puntosLimite[0][0], lon: puntosLimite[0][1] };
+        } else {
+          const fb = COORDS["Paraná"];
+          if(!fb) continue;
+          geoFinal = { lat: fb.lat, lon: fb.lon };
+        }
+        
+        const item=buildItem({id:'apfdigital:'+short(link.titulo,40),titulo:short(link.titulo,90),tipo:parseTipo(txt,link.titulo),categoria:parseCat(parseTipo(txt,link.titulo)),fecha:fechaNoticia,descripcion:txt,resumen:short(txt,180),enlace:link.href,via:(callePrincipal||'').slice(0,90),kmDesde:null,kmHasta:null,localidad,provincia,horario,vigente_hasta:vigenteHastaCalc,geo:geoFinal,radio,poligono});
+        if(item) out.push(item);
+      }catch(e){ log('  ✗ item APF: '+(e.message||e)); }
+    }
+  }catch(e){ log('  ✗ APFDigital: '+(e.message||e)); }
+  return out;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   9. APSV  (Santa Fe) — Estado de rutas oficial
    ═══════════════════════════════════════════════════════════════════════════*/
 async function scrapApsv(){
   log('APSV (Santa Fe): Estado de rutas...');
@@ -221,7 +615,7 @@ async function scrapApsv(){
     const localidad=(txt.match(/altura\s+([A-Z][a-z]+)/i)||['',null])[1]||'Santa Fe';
     const horario=parseHorario(txt);
     const geo=await georef((km.from?via+' km '+km.from+' ':via||'')+localidad+' Santa Fe','Santa Fe',localidad);
-    const item=buildItem({id:'apsv:279907',titulo:short(txt,90),tipo:parseTipo(txt,txt),categoria:parseCat(parseTipo(txt,txt)),fecha:new Date().toISOString(),descripcion:txt,resumen:txt,enlace:'https://www.santafe.gob.ar/noticias/noticia/279907/',via,kmDesde:km.from,kmHasta:km.to,localidad,provincia:'Santa Fe',horario,geo});
+    const item=buildItem({id:'apsv:279907',titulo:short(txt,90),tipo:parseTipo(txt,txt),categoria:parseCat(parseTipo(txt,txt)),fecha:new Date().toISOString(),descripcion:txt,resumen:txt,enlace:'https://www.santafe.gob.ar/noticias/noticia/279907/',via,kmDesde:km.from,kmHasta:km.to,localidad,provincia:'Santa Fe',horario,vigente_hasta:null,geo});
     if(item) out.push(item);
   }catch(e){ log('  ✗ APSV: '+(e.message||e)); }
   return out;
@@ -235,9 +629,17 @@ async function main(){
   try{ items = items.concat(await scrapElOnce());     }catch(e){log('El Once: '+(e.message||e));}
   try{ items = items.concat(await scrapAnalisis());   }catch(e){log('Análisis: '+(e.message||e));}
   try{ items = items.concat(await scrapRuta0());      }catch(e){log('Ruta0: '+(e.message||e));}
-  try{ items = items.concat(await scrapApsv());       }catch(e){log('APSV: '+(e.message||e));}
+  try{ items = items.concat(await scrapEstamosER());   }catch(e){log('EstamosER: '+(e.message||e));}
+  try{ items = items.concat(await scrapEntreRiosAhora()); }catch(e){log('EntreRiosAhora: '+(e.message||e));}
+  try{ items = items.concat(await scrapApfDigital());      }catch(e){log('APFDigital: '+(e.message||e));}
+  try{ items = items.concat(await scrapApsv());        }catch(e){log('APSV: '+(e.message||e));}
 
-  items = items.filter(i => i && (PROVS_OK.indexOf(i.provincia)!==-1) && i.lat!=null && i.lon!=null);
+  // Filtro estricto: solo Litoral + coords REALES (no inventadas, no CABA) + no vencidas
+  items = items.filter(i => i && (PROVS_OK.indexOf(i.provincia)!==-1) && i.lat!=null && i.lon!=null
+    && !(i.lat > -34.0 && i.lon > -58.5)  // excluir Buenos Aires
+    && !(i.lat < -32.0 && i.lon < -62.0)  // excluir sur de Argentina
+    && !(i.vigente_hasta && new Date(i.vigente_hasta) < new Date()) // excluir vencidas
+  );
   items = uniqById(items);
   items.sort((a,b)=>(new Date(b.fecha||Date.now()))-(new Date(a.fecha||Date.now())));
   items = items.slice(0, MAX);
