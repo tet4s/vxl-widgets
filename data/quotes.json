@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-02T02:45:13.977Z",
-  "timestamp_epoch": 1793587513,
+  "last_updated": "2026-11-02T10:01:55.155Z",
+  "timestamp_epoch": 1793613715,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -57,7 +57,7 @@
       "compra": 1639.36,
       "venta": 1642.43,
       "fechaActualizacion": "2026-11-01T20:58:00.000Z",
-      "variacion": -0.05
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -70,7 +70,7 @@
     }
   ],
   "dolares_cierre": {
-    "fecha_ultimo": "2026-11-01",
+    "fecha_ultimo": "2026-11-02",
     "ultimo_del_dia": {
       "oficial": 1560,
       "blue": 1565,
@@ -80,14 +80,14 @@
       "cripto": 1642.43,
       "tarjeta": 2028
     },
-    "fecha_cierre": "2026-10-31",
+    "fecha_cierre": "2026-11-01",
     "cierre_anterior": {
       "oficial": 1560,
       "blue": 1565,
       "bolsa": 1575,
       "contadoconliqui": 1658.5,
       "mayorista": 1534,
-      "cripto": 1643.33,
+      "cripto": 1642.43,
       "tarjeta": 2028
     }
   },
@@ -113,8 +113,8 @@
     {
       "label": "AL30 (BONO)",
       "val": "$84.110,00",
-      "var": "▼ 0,76%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "CRESUD (AGRO)",
