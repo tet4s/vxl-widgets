@@ -1,9 +1,29 @@
 {
-  "timestamp": "2026-11-03T18:15:45.582Z",
-  "timestamp_epoch": 1793729745,
+  "timestamp": "2026-11-03T23:29:26.043Z",
+  "timestamp_epoch": 1793748566,
   "source": "vxl-transito-ar",
-  "cantidad": 8,
+  "cantidad": 9,
   "items": [
+    {
+      "id": "ellitoral:2026-03-11T13:17:Mar:00-03:00",
+      "titulo": "avenida López y Planes",
+      "categoria": "cortes",
+      "tipo": "choque",
+      "fecha": "2026-03-11T13:17:Mar:00-03:00",
+      "fecha_raw": "2026-03-11T13:17:Mar:00-03:00",
+      "horario": null,
+      "resumen": "Un choque entre dos automóviles que prestaban servicio para una plataforma de traslado en vehículos se produjo sobre la avenida López y Planes, a la altura de Cándido Pujato. Tráns…",
+      "descripcion": "Un choque entre dos automóviles que prestaban servicio para una plataforma de traslado en vehículos se produjo sobre la avenida López y Planes, a la altura de Cándido Pujato. Tránsito parcialmente reducido. 13:17 / Mar. 03.11.2026 Se normal…",
+      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-rutas-autopistas-provincia-accesos-rutas-caminos_0_lcq1Co4u0a.html",
+      "lat": -28.4858283030726,
+      "lon": -59.608875250976695,
+      "localidad": "Villa Ana",
+      "provincia": "Santa Fe",
+      "via": "avenida López y Planes",
+      "km_desde": null,
+      "km_hasta": null,
+      "vigente_hasta": null
+    },
     {
       "id": "ellitoral:2026-03-11T13:16:Mar:00-03:00",
       "titulo": "En el viaducto Oroño ingreso desde Alem 13:16 / Mar",
