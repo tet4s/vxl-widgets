@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-04T03:09:23.302Z",
-  "timestamp_epoch": 1793761763,
+  "timestamp": "2026-11-04T18:31:12.706Z",
+  "timestamp_epoch": 1793817072,
   "source": "vxl-transito-ar",
-  "cantidad": 9,
+  "cantidad": 10,
   "items": [
     {
       "id": "ellitoral:2026-03-11T13:17:Mar:00-03:00",
@@ -180,6 +180,26 @@
       "localidad": "Santa Fe",
       "provincia": "Santa Fe",
       "via": "Autopista Santa Fe - Rosario",
+      "km_desde": null,
+      "km_hasta": null,
+      "vigente_hasta": null
+    },
+    {
+      "id": "estamoser:Paraná: avanza la obra de saneamiento y…",
+      "titulo": "Paraná: avanza la obra de saneamiento y recuperación urbana del arroyo Colorado",
+      "categoria": "obras",
+      "tipo": "obra",
+      "fecha": "2026-11-04T00:00:00-03:00",
+      "fecha_raw": "2026-11-04T00:00:00-03:00",
+      "horario": null,
+      "resumen": "La Municipalidad de Paraná ejecuta trabajos de canalización y estabilización de barrancas en el arroyo Colorado, con una inversión de recursos municipales. La obra incluye la const…",
+      "descripcion": "La Municipalidad de Paraná ejecuta trabajos de canalización y estabilización de barrancas en el arroyo Colorado, con una inversión de recursos municipales. La obra incluye la construcción de un canal de hormigón armado y tareas complementar…",
+      "enlace": "https://estamosentrerios.com/2026/11/04/parana-avanza-obra-saneamiento-recuperacion-arroyo-colorado/",
+      "lat": -31.7327,
+      "lon": -60.529,
+      "localidad": "Paraná",
+      "provincia": "Entre Ríos",
+      "via": "",
       "km_desde": null,
       "km_hasta": null,
       "vigente_hasta": null
