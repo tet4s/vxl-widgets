@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-04T17:34:46.138Z",
-  "timestamp_epoch": 1793813686,
+  "last_updated": "2026-11-04T22:50:41.493Z",
+  "timestamp_epoch": 1793832641,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -11,53 +11,53 @@
       "nombre": "Oficial",
       "compra": 1520,
       "venta": 1570,
-      "fechaActualizacion": "2026-11-04T14:00:00.000Z",
+      "fechaActualizacion": "2026-11-04T18:00:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "blue",
       "nombre": "Blue",
-      "compra": 1545,
-      "venta": 1565,
-      "fechaActualizacion": "2026-11-04T16:55:00.000Z",
-      "variacion": -0.32
+      "compra": 1540,
+      "venta": 1560,
+      "fechaActualizacion": "2026-11-04T20:55:00.000Z",
+      "variacion": -0.64
     },
     {
       "moneda": "USD",
       "casa": "bolsa",
       "nombre": "Bolsa",
-      "compra": 1580.7,
-      "venta": 1582,
-      "fechaActualizacion": "2026-11-04T16:55:00.000Z",
-      "variacion": 0.06
+      "compra": 1575.7,
+      "venta": 1588.6,
+      "fechaActualizacion": "2026-11-04T20:55:00.000Z",
+      "variacion": 0.47
     },
     {
       "moneda": "USD",
       "casa": "contadoconliqui",
       "nombre": "Contado con liquidación",
-      "compra": 1684.6,
-      "venta": 1685.1,
-      "fechaActualizacion": "2026-11-04T16:55:00.000Z",
-      "variacion": 0.98
+      "compra": 1676.7,
+      "venta": 1680.4,
+      "fechaActualizacion": "2026-11-04T20:55:00.000Z",
+      "variacion": 0.7
     },
     {
       "moneda": "USD",
       "casa": "mayorista",
       "nombre": "Mayorista",
-      "compra": 1540,
-      "venta": 1549,
-      "fechaActualizacion": "2026-11-04T11:25:00.000Z",
-      "variacion": -0.13
+      "compra": 1537,
+      "venta": 1546,
+      "fechaActualizacion": "2026-11-04T16:24:00.000Z",
+      "variacion": -0.32
     },
     {
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1680.42,
-      "venta": 1683.99,
-      "fechaActualizacion": "2026-11-04T16:55:00.000Z",
-      "variacion": 1.48
+      "compra": 1659.63,
+      "venta": 1667.14,
+      "fechaActualizacion": "2026-11-04T20:55:00.000Z",
+      "variacion": 0.46
     },
     {
       "moneda": "USD",
@@ -65,7 +65,7 @@
       "nombre": "Tarjeta",
       "compra": 1976,
       "venta": 2041,
-      "fechaActualizacion": "2026-11-04T14:00:00.000Z",
+      "fechaActualizacion": "2026-11-04T18:00:00.000Z",
       "variacion": 0
     }
   ],
@@ -73,11 +73,11 @@
     "fecha_ultimo": "2026-11-04",
     "ultimo_del_dia": {
       "oficial": 1570,
-      "blue": 1565,
-      "bolsa": 1582,
-      "contadoconliqui": 1685.1,
-      "mayorista": 1549,
-      "cripto": 1683.99,
+      "blue": 1560,
+      "bolsa": 1588.6,
+      "contadoconliqui": 1680.4,
+      "mayorista": 1546,
+      "cripto": 1667.14,
       "tarjeta": 2041
     },
     "fecha_cierre": "2026-11-03",
@@ -94,38 +94,38 @@
   "bursatil": [
     {
       "label": "PAMPA ENERGÍA",
-      "val": "$4.467,50",
-      "var": "▼ 2,88%",
+      "val": "$4.365,00",
+      "var": "▼ 5,11%",
       "class": "down"
     },
     {
       "label": "YPF",
-      "val": "$7.030,00",
-      "var": "▼ 6,20%",
+      "val": "$6.995,00",
+      "var": "▼ 6,67%",
       "class": "down"
     },
     {
       "label": "GRP FIN GALICIA",
-      "val": "$5.310,00",
-      "var": "▲ +1,04%",
-      "class": "up"
+      "val": "$5.165,00",
+      "var": "▼ 1,71%",
+      "class": "down"
     },
     {
       "label": "AL30 (BONO)",
-      "val": "$83.230,00",
-      "var": "▲ +0,02%",
-      "class": "up"
+      "val": "$83.200,00",
+      "var": "▼ 0,01%",
+      "class": "down"
     },
     {
       "label": "CRESUD (AGRO)",
-      "val": "$1.586,00",
-      "var": "▼ 0,87%",
+      "val": "$1.552,00",
+      "var": "▼ 3,00%",
       "class": "down"
     },
     {
       "label": "MOLINOS AGRO",
-      "val": "$2.060,00",
-      "var": "▲ +1,72%",
+      "val": "$2.040,00",
+      "var": "▲ +0,74%",
       "class": "up"
     }
   ],
