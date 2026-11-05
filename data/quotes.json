@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-05T10:11:24.396Z",
-  "timestamp_epoch": 1793873484,
+  "last_updated": "2026-11-05T18:00:33.891Z",
+  "timestamp_epoch": 1793901633,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -11,53 +11,53 @@
       "nombre": "Oficial",
       "compra": 1520,
       "venta": 1570,
-      "fechaActualizacion": "2026-11-04T18:00:00.000Z",
+      "fechaActualizacion": "2026-11-05T14:00:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "blue",
       "nombre": "Blue",
-      "compra": 1540,
-      "venta": 1560,
-      "fechaActualizacion": "2026-11-04T20:55:00.000Z",
-      "variacion": 0
+      "compra": 1530,
+      "venta": 1550,
+      "fechaActualizacion": "2026-11-05T16:58:00.000Z",
+      "variacion": -0.64
     },
     {
       "moneda": "USD",
       "casa": "bolsa",
       "nombre": "Bolsa",
-      "compra": 1575.7,
-      "venta": 1588.6,
-      "fechaActualizacion": "2026-11-04T20:55:00.000Z",
-      "variacion": 0
+      "compra": 1582.5,
+      "venta": 1585.1,
+      "fechaActualizacion": "2026-11-05T16:58:00.000Z",
+      "variacion": -0.22
     },
     {
       "moneda": "USD",
       "casa": "contadoconliqui",
       "nombre": "Contado con liquidación",
-      "compra": 1676.7,
-      "venta": 1680.4,
-      "fechaActualizacion": "2026-11-04T20:55:00.000Z",
-      "variacion": 0
+      "compra": 1675.7,
+      "venta": 1676.3,
+      "fechaActualizacion": "2026-11-05T16:58:00.000Z",
+      "variacion": -0.24
     },
     {
       "moneda": "USD",
       "casa": "mayorista",
       "nombre": "Mayorista",
-      "compra": 1537,
-      "venta": 1546,
-      "fechaActualizacion": "2026-11-04T16:24:00.000Z",
-      "variacion": 0
+      "compra": 1536,
+      "venta": 1545,
+      "fechaActualizacion": "2026-11-05T12:46:00.000Z",
+      "variacion": -0.06
     },
     {
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1659.63,
-      "venta": 1667.14,
-      "fechaActualizacion": "2026-11-04T20:55:00.000Z",
-      "variacion": 0
+      "compra": 1669.21,
+      "venta": 1672,
+      "fechaActualizacion": "2026-11-05T16:58:00.000Z",
+      "variacion": 0.29
     },
     {
       "moneda": "USD",
@@ -65,7 +65,7 @@
       "nombre": "Tarjeta",
       "compra": 1976,
       "venta": 2041,
-      "fechaActualizacion": "2026-11-04T18:00:00.000Z",
+      "fechaActualizacion": "2026-11-05T14:00:00.000Z",
       "variacion": 0
     }
   ],
@@ -73,11 +73,11 @@
     "fecha_ultimo": "2026-11-05",
     "ultimo_del_dia": {
       "oficial": 1570,
-      "blue": 1560,
-      "bolsa": 1588.6,
-      "contadoconliqui": 1680.4,
-      "mayorista": 1546,
-      "cripto": 1667.14,
+      "blue": 1550,
+      "bolsa": 1585.1,
+      "contadoconliqui": 1676.3,
+      "mayorista": 1545,
+      "cripto": 1672,
       "tarjeta": 2041
     },
     "fecha_cierre": "2026-11-04",
@@ -94,39 +94,39 @@
   "bursatil": [
     {
       "label": "PAMPA ENERGÍA",
-      "val": "$4.360,00",
-      "var": "= 0,00%",
-      "class": "neutral"
+      "val": "$4.265,00",
+      "var": "▼ 2,29%",
+      "class": "down"
     },
     {
       "label": "YPF",
-      "val": "$7.000,00",
-      "var": "= 0,00%",
-      "class": "neutral"
+      "val": "$6.565,00",
+      "var": "▼ 6,14%",
+      "class": "down"
     },
     {
       "label": "GRP FIN GALICIA",
-      "val": "$5.170,00",
-      "var": "= 0,00%",
-      "class": "neutral"
+      "val": "$4.990,00",
+      "var": "▼ 3,38%",
+      "class": "down"
     },
     {
       "label": "AL30 (BONO)",
-      "val": "$83.270,00",
-      "var": "= 0,00%",
-      "class": "neutral"
+      "val": "$81.380,00",
+      "var": "▼ 2,18%",
+      "class": "down"
     },
     {
       "label": "CRESUD (AGRO)",
-      "val": "$1.560,00",
-      "var": "= 0,00%",
-      "class": "neutral"
+      "val": "$1.498,00",
+      "var": "▼ 3,47%",
+      "class": "down"
     },
     {
       "label": "MOLINOS AGRO",
-      "val": "$2.060,00",
-      "var": "= 0,00%",
-      "class": "neutral"
+      "val": "$2.025,00",
+      "var": "▼ 0,73%",
+      "class": "down"
     }
   ],
   "historial": {
