@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-05T02:54:33.566Z",
-  "timestamp_epoch": 1793847273,
+  "last_updated": "2026-11-05T10:11:24.396Z",
+  "timestamp_epoch": 1793873484,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -21,7 +21,7 @@
       "compra": 1540,
       "venta": 1560,
       "fechaActualizacion": "2026-11-04T20:55:00.000Z",
-      "variacion": -0.64
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -30,7 +30,7 @@
       "compra": 1575.7,
       "venta": 1588.6,
       "fechaActualizacion": "2026-11-04T20:55:00.000Z",
-      "variacion": 0.47
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -39,7 +39,7 @@
       "compra": 1676.7,
       "venta": 1680.4,
       "fechaActualizacion": "2026-11-04T20:55:00.000Z",
-      "variacion": 0.7
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -48,7 +48,7 @@
       "compra": 1537,
       "venta": 1546,
       "fechaActualizacion": "2026-11-04T16:24:00.000Z",
-      "variacion": -0.32
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -57,7 +57,7 @@
       "compra": 1659.63,
       "venta": 1667.14,
       "fechaActualizacion": "2026-11-04T20:55:00.000Z",
-      "variacion": 0.46
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -70,7 +70,7 @@
     }
   ],
   "dolares_cierre": {
-    "fecha_ultimo": "2026-11-04",
+    "fecha_ultimo": "2026-11-05",
     "ultimo_del_dia": {
       "oficial": 1570,
       "blue": 1560,
@@ -80,58 +80,57 @@
       "cripto": 1667.14,
       "tarjeta": 2041
     },
-    "fecha_cierre": "2026-11-03",
+    "fecha_cierre": "2026-11-04",
     "cierre_anterior": {
       "oficial": 1570,
-      "blue": 1570,
-      "bolsa": 1581.1,
-      "contadoconliqui": 1668.8,
-      "mayorista": 1551,
-      "cripto": 1659.45,
+      "blue": 1560,
+      "bolsa": 1588.6,
+      "contadoconliqui": 1680.4,
+      "mayorista": 1546,
+      "cripto": 1667.14,
       "tarjeta": 2041
     }
   },
   "bursatil": [
     {
       "label": "PAMPA ENERGÍA",
-      "val": "$4.365,00",
-      "var": "▼ 5,11%",
-      "class": "down"
+      "val": "$4.360,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "YPF",
-      "val": "$6.995,00",
-      "var": "▼ 6,67%",
-      "class": "down"
+      "val": "$7.000,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "GRP FIN GALICIA",
-      "val": "$5.165,00",
-      "var": "▼ 1,71%",
-      "class": "down"
+      "val": "$5.170,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "AL30 (BONO)",
-      "val": "$83.200,00",
-      "var": "▼ 0,01%",
-      "class": "down"
+      "val": "$83.270,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "CRESUD (AGRO)",
-      "val": "$1.552,00",
-      "var": "▼ 3,00%",
-      "class": "down"
+      "val": "$1.560,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "MOLINOS AGRO",
-      "val": "$2.040,00",
-      "var": "▲ +0,74%",
-      "class": "up"
+      "val": "$2.060,00",
+      "var": "= 0,00%",
+      "class": "neutral"
     }
   ],
   "historial": {
     "PAMPA ENERGÍA": [
-      5030,
       4942.5,
       4972.5,
       5130,
@@ -154,10 +153,10 @@
       4932.5,
       4817.5,
       4610,
-      4585
+      4585,
+      4360
     ],
     "YPF": [
-      8095,
       8005,
       8050,
       8225,
@@ -180,10 +179,10 @@
       7865,
       7790,
       7265,
-      7490
+      7490,
+      7000
     ],
     "GRP FIN GALICIA": [
-      6050,
       5865,
       5835,
       6135,
@@ -206,7 +205,8 @@
       5585,
       5365,
       5195,
-      5255
+      5255,
+      5170
     ],
     "AL30 (BONO)": [
       85250,
@@ -235,7 +235,6 @@
       85350
     ],
     "CRESUD (AGRO)": [
-      1860,
       1841,
       1829,
       1907,
@@ -258,10 +257,10 @@
       1650,
       1630,
       1625,
-      1596
+      1596,
+      1560
     ],
     "MOLINOS AGRO": [
-      2375,
       2365,
       2330,
       2350,
@@ -284,7 +283,8 @@
       2150,
       2110,
       2170,
-      2015
+      2015,
+      2060
     ]
   }
 }
