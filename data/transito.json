@@ -1,9 +1,29 @@
 {
-  "timestamp": "2026-11-06T17:49:53.995Z",
-  "timestamp_epoch": 1793987393,
+  "timestamp": "2026-11-06T22:44:52.476Z",
+  "timestamp_epoch": 1794005092,
   "source": "vxl-transito-ar",
-  "cantidad": 8,
+  "cantidad": 9,
   "items": [
+    {
+      "id": "ellitoral:2026-06-11T13:32:Vie:00-03:00",
+      "titulo": "Congestión vehicular en salida a circunvalación en KM 00, altura de Ro…",
+      "categoria": "cortes",
+      "tipo": "obra",
+      "fecha": "2026-06-11T13:32:Vie:00-03:00",
+      "fecha_raw": "2026-06-11T13:32:Vie:00-03:00",
+      "horario": null,
+      "resumen": "Congestión vehicular en salida a circunvalación en KM 00, altura de Rosario y sentido a Rosario. Circular con precaución. 13:32 / Vie. 06.11.2026 Rotondas y puentes: obras en disti…",
+      "descripcion": "Congestión vehicular en salida a circunvalación en KM 00, altura de Rosario y sentido a Rosario. Circular con precaución. 13:32 / Vie. 06.11.2026 Rotondas y puentes: obras en distintos puntos de la provincia",
+      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-rutas-autopistas-areametropolitana-provincia_0_DKaS8S263K.html",
+      "lat": -33.01252814739675,
+      "lon": -60.6509547378289,
+      "localidad": "Rosario",
+      "provincia": "Santa Fe",
+      "via": "",
+      "km_desde": "00",
+      "km_hasta": null,
+      "vigente_hasta": null
+    },
     {
       "id": "ellitoral:2026-06-11T11:48:Vie:00-03:00",
       "titulo": "Autopista AP01",
