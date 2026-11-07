@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-07T07:53:17.818Z",
-  "timestamp_epoch": 1794037997,
-  "total_noticias": 287,
+  "last_updated": "2026-11-07T14:27:38.928Z",
+  "timestamp_epoch": 1794061658,
+  "total_noticias": 285,
   "window_days": 7,
   "categorias": [
     {
@@ -9,10 +9,74 @@
       "nombre": "PODER ADQUISITIVO",
       "noticias": [
         {
+          "titulo": "La inflación se clavó en el 2 por ciento",
+          "descripcion": "La desinflación se cortó hace rato. Las mayores subas se registraron en los servicios para la vivienda.",
+          "url": "https://www.pagina12.com.ar/2026/11/06/la-inflacion-se-clavo-en-el-2-por-ciento/",
+          "fecha": "2026-11-07T14:24:22.525Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "La inflación en la Ciudad de Buenos Aires fue de 1,9% en octubre y acumuló un 32,5% en los últimos doce meses",
+          "descripcion": "El índice porteño aceleró levemente frente a septiembre. Vivienda, alimentos, salud y restaurantes fueron los rubros que más incidieron en el resultado mensual",
+          "url": "https://www.infobae.com/economia/2026/11/06/la-inflacion-en-la-ciudad-de-buenos-aires-fue-de-19-en-octubre-y-acumulo-un-325-en-los-ultimos-doce-meses/",
+          "fecha": "2026-11-07T14:24:21.441Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "La inflación de octubre fue de 1,8% y no bajará por seis meses, según cree el mercado",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.861Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "La inflación porteña sube por segundo mes consecutivo: fue de 1,9% en octubre",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.860Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "En octubre se acentuó el ajuste del gasto público primario: perdió contra la inflación y en el año va 3,2% abajo",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.843Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "La inflación de octubre pega más en la clase media porteña: cuánto hay que ganar para seguir perteneciendo a ese sector",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.843Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
           "titulo": "Debido a los feriados establecidos por la llegada del Sumo Pontífice a la Argentina, el organismo previsional modificó algunas …",
           "descripcion": "Debido a los feriados establecidos por la llegada del Sumo Pontífice a la Argentina, el organismo previsional modificó algunas fechas de cobro de noviembre",
           "url": "https://www.lanacion.com.ar/economia/la-anses-cambio-el-calendario-de-pago-de-jubilaciones-y-prestaciones-por-la-visita-del-papa-leon-xiv-nid06112026/",
-          "fecha": "2026-11-07T07:50:00.007Z",
+          "fecha": "2026-11-07T14:24:20.634Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "En octubre se desembolsaron apenas US$6 millones más que en septiembre y un 36% menos que un año atrás en créditos hipotecarios…",
+          "descripcion": "En octubre se desembolsaron apenas US$6 millones más que en septiembre y un 36% menos que un año atrás en créditos hipotecarios, a pesar de que las condiciones de los bancos mejoraron con respecto a los meses anteriores",
+          "url": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/creditos-hipotecarios-se-freno-el-crecimiento-de-los-prestamos-pese-al-impulso-de-los-fondos-de-la-nid05112026/",
+          "fecha": "2026-11-07T14:24:20.616Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
+          "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
+          "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
+          "fecha": "2026-11-07T14:24:20.615Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
         },
@@ -21,79 +85,15 @@
           "descripcion": "La producción y los patentamientos pesarán en la asignación a las terminales; habrá segmentos para los importadores y una reserva para quienes inviertan en cargadores; las solicitudes cierran el 17 de noviembre",
           "url": "https://www.lanacion.com.ar/autos/el-gobierno-detallo-las-nuevas-condiciones-de-asignacion-del-cupo-para-importar-autos-sin-arancel-nid06112026/",
           "fecha": "2026-11-07T07:50:00.006Z",
-          "fechaFormateada": "Hace 3 min",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "La Nación"
-        },
-        {
-          "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
-          "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
-          "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
-          "fecha": "2026-11-07T07:50:00.005Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "En octubre se desembolsaron apenas US$6 millones más que en septiembre y un 36% menos que un año atrás en créditos hipotecarios…",
-          "descripcion": "En octubre se desembolsaron apenas US$6 millones más que en septiembre y un 36% menos que un año atrás en créditos hipotecarios, a pesar de que las condiciones de los bancos mejoraron con respecto a los meses anteriores",
-          "url": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/creditos-hipotecarios-se-freno-el-crecimiento-de-los-prestamos-pese-al-impulso-de-los-fondos-de-la-nid05112026/",
-          "fecha": "2026-11-07T07:50:00.005Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "La inflación se clavó en el 2 por ciento",
-          "descripcion": "La desinflación se cortó hace rato. Las mayores subas se registraron en los servicios para la vivienda.",
-          "url": "https://www.pagina12.com.ar/2026/11/06/la-inflacion-se-clavo-en-el-2-por-ciento/",
-          "fecha": "2026-11-07T07:49:59.907Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "La inflación en la Ciudad de Buenos Aires fue de 1,9% en octubre y acumuló un 32,5% en los últimos doce meses",
-          "descripcion": "El índice porteño aceleró levemente frente a septiembre. Vivienda, alimentos, salud y restaurantes fueron los rubros que más incidieron en el resultado mensual",
-          "url": "https://www.infobae.com/economia/2026/11/06/la-inflacion-en-la-ciudad-de-buenos-aires-fue-de-19-en-octubre-y-acumulo-un-325-en-los-ultimos-doce-meses/",
-          "fecha": "2026-11-07T07:49:59.768Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "La inflación de octubre fue de 1,8% y no bajará por seis meses, según cree el mercado",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.066Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "La inflación porteña sube por segundo mes consecutivo: fue de 1,9% en octubre",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.065Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "En octubre se acentuó el ajuste del gasto público primario: perdió contra la inflación y en el año va 3,2% abajo",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.063Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "La inflación de octubre pega más en la clase media porteña: cuánto hay que ganar para seguir perteneciendo a ese sector",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.063Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
         },
         {
           "titulo": "La suspensión de embargos es un alivio necesario, pero la industria necesita medidas para volver a crecer",
           "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
           "url": "https://www.ellitoral.com/",
           "fecha": "2026-11-06T17:02:20.114Z",
-          "fechaFormateada": "Hace 14 hs",
+          "fechaFormateada": "Hace 21 hs",
           "fuente": "El Litoral (Santa Fe)"
         },
         {
@@ -101,7 +101,7 @@
           "descripcion": "Los rubros ligados a ese segmento de la sociedad aumentan por encima del promedio.Sin alquiler, una familia necesita ingresos de al menos $ 2.740.000 por mes.",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-06T17:02:19.641Z",
-          "fechaFormateada": "Hace 14 hs",
+          "fechaFormateada": "Hace 21 hs",
           "fuente": "Clarín"
         },
         {
@@ -109,7 +109,7 @@
           "descripcion": "El Relevamiento de Expectativas de Mercado anticipó una moderación de los precios en noviembre y estimó que el tipo de cambio llegará a $1.590 al cierre de 2026",
           "url": "https://www.infobae.com/economia/2026/11/05/las-consultoras-que-releva-el-bcra-proyectaron-una-inflacion-de-18-para-octubre-que-preven-para-este-mes/",
           "fecha": "2026-11-06T09:50:40.102Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -141,7 +141,7 @@
           "descripcion": "Operarios de Córdoba y de La Banda, en Santiago del Estero, paralizaron la producción tras meses de incumplimientos salariales; la empresa acumula $1.028 millones en cheques rechazados",
           "url": "https://www.infobae.com/economia/2026/11/04/crisis-en-una-reconocida-fabrica-de-tractores-los-trabajadores-tomaron-las-plantas-y-exigen-el-pago-de-sueldos/",
           "fecha": "2026-11-05T08:32:16.544Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Infobae"
         },
         {
@@ -325,7 +325,7 @@
           "descripcion": "Las pensiones se ajustan según el último índice inflacionario, pero el bono se mantiene sin cambios; cuáles son las cifras del penúltimo mes del año",
           "url": "https://www.lanacion.com.ar/economia/pnc-de-anses-cual-es-el-monto-de-las-pensiones-no-contributivas-en-noviembre-de-2026-nid19102026/",
           "fecha": "2026-11-02T08:13:03.195Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "La Nación"
         },
         {
@@ -333,7 +333,7 @@
           "descripcion": "El aumento automático para esta prestación es del 1,93%; cuál es el valor que perciben las familias",
           "url": "https://www.lanacion.com.ar/economia/monto-de-la-asignacion-universal-por-hijo-de-cuanto-es-la-auh-en-noviembre-2026-con-el-aumento-nid15102026/",
           "fecha": "2026-11-02T08:13:03.195Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "La Nación"
         },
         {
@@ -341,7 +341,7 @@
           "descripcion": "Para la actualización de haberes se toma el último índice de inflación que publicó el Indec; cuáles son las cifras para el penúltimo mes del año",
           "url": "https://www.lanacion.com.ar/economia/jubilaciones-de-anses-cuanto-cobro-en-noviembre-2026-con-el-bono-oficial-y-el-aumento-confirmado-nid14102026/",
           "fecha": "2026-11-02T08:13:03.195Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "La Nación"
         },
         {
@@ -349,7 +349,7 @@
           "descripcion": "Las consultoras ahora estiman que el Índice de Precios al Consumidor (IPC) podría ubicarse en torno al 2% por la suba de alimentos. El Banco Central anticipó presiones sobre el indicador en el cuarto trimestre del año por la carne y los combustibles",
           "url": "https://www.infobae.com/economia/2026/11/02/que-esperan-las-consultoras-privadas-para-el-dato-de-inflacion-de-octubre/",
           "fecha": "2026-11-02T08:13:02.953Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         }
       ]
@@ -359,18 +359,10 @@
       "nombre": "SERVICIOS Y HOGAR",
       "noticias": [
         {
-          "titulo": "Todos los detalles. Qué pasó con Ueno Bank y cómo sigue la crisis en Paraguay hoy, viernes 6 de noviembre",
-          "descripcion": "El Congreso paraguayo avanza con el proceso de destitución contra el presidente ante la inminente acefalía del Ejecutivo, mientras la Justicia investiga el manejo irregular de fondos públicos en la entidad financiera intervenida",
-          "url": "https://www.lanacion.com.ar/economia/que-paso-con-ueno-bank-y-como-sigue-la-crisis-en-paraguay-hoy-viernes-6-de-noviembre-nid06112026/",
-          "fecha": "2026-11-07T07:50:00.006Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
           "titulo": "De Paysandú a Colón, sin costo: quienes crucen a ver al papa pagarán solo el peaje de ida",
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
-          "fecha": "2026-11-07T07:49:59.663Z",
+          "fecha": "2026-11-07T14:24:21.774Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "El Entre Ríos"
         },
@@ -378,7 +370,7 @@
           "titulo": "Por la visita del Papa, refuerzan controles en el puente Colón-Paysandú y restringen el transporte de cargas",
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
-          "fecha": "2026-11-07T07:49:59.662Z",
+          "fecha": "2026-11-07T14:24:21.772Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "El Entre Ríos"
         },
@@ -386,7 +378,7 @@
           "titulo": "Las alertas ignoradas: cómo se gestó la crisis de Ueno y por qué apunta al corazón del poder paraguayo",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.065Z",
+          "fecha": "2026-11-07T14:24:20.859Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "Clarín"
         },
@@ -394,7 +386,7 @@
           "titulo": "En octubre se acentuó el ajuste del gasto público primario: perdió contra la inflación y en el año va 3,2% abajo",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.063Z",
+          "fecha": "2026-11-07T14:24:20.843Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "Clarín"
         },
@@ -402,16 +394,24 @@
           "titulo": "Crisis en Paraguay",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.061Z",
+          "fecha": "2026-11-07T14:24:20.838Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "Clarín"
+        },
+        {
+          "titulo": "Todos los detalles. Qué pasó con Ueno Bank y cómo sigue la crisis en Paraguay hoy, viernes 6 de noviembre",
+          "descripcion": "El Congreso paraguayo avanza con el proceso de destitución contra el presidente ante la inminente acefalía del Ejecutivo, mientras la Justicia investiga el manejo irregular de fondos públicos en la entidad financiera intervenida",
+          "url": "https://www.lanacion.com.ar/economia/que-paso-con-ueno-bank-y-como-sigue-la-crisis-en-paraguay-hoy-viernes-6-de-noviembre-nid06112026/",
+          "fecha": "2026-11-07T14:24:20.618Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
         },
         {
           "titulo": "Servicios básicos: el 47% de los hogares argentinos no accede a agua, gas y cloacas al mismo tiempo",
           "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
           "url": "https://www.ellitoral.com/",
           "fecha": "2026-11-07T07:49:58.930Z",
-          "fechaFormateada": "Hace 3 min",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "El Litoral (Santa Fe)"
         },
         {
@@ -419,7 +419,7 @@
           "descripcion": "Tres empresas socias buscan aprovechar el impulso de la cuenca, cada una con experiencia en el rubro financiero, tecnológico y de la construcción; su objetivo es traer la experiencia de Texas a Neuquén",
           "url": "https://www.lanacion.com.ar/economia/una-alianza-argentina-y-americana-se-mete-en-el-negocio-del-gas-de-vaca-muerta-nid06112026/",
           "fecha": "2026-11-06T22:01:35.256Z",
-          "fechaFormateada": "Hace 9 hs",
+          "fechaFormateada": "Hace 16 hs",
           "fuente": "La Nación"
         },
         {
@@ -427,7 +427,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-06T09:50:41.201Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Clarín"
         },
         {
@@ -435,7 +435,7 @@
           "descripcion": "El Observatorio de Acción Climática 2026 indica que los días con calor superior a la media mundial se triplicaron en América Latina, con efectos sobre ríos navegables, cosechas y fletes",
           "url": "https://www.infobae.com/movant/2026/11/05/calor-extremo-y-sequia-la-ocde-alerta-por-el-impacto-en-transporte-y-comercio-agricola/",
           "fecha": "2026-11-06T09:50:40.104Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -443,7 +443,7 @@
           "descripcion": "Un trabajador de ITTI relató a Infobae que recibió una suspensión sin goce de haberes por 30 días y que aún no cobró el salario de octubre. Esta tarde hubo un reclamo frente a las oficinas de la empresa en Buenos Aires",
           "url": "https://www.infobae.com/economia/2026/11/05/hablo-un-argentino-afectado-por-el-colapso-de-ueno-bank-de-paraguay/",
           "fecha": "2026-11-06T09:50:40.103Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -451,7 +451,7 @@
           "descripcion": "El presidente Santiago Peña renunció en medio del colapso del Ueno Bank. Los bonos soberanos del país vecino cayeron a un mínimo desde junio de 2025",
           "url": "https://www.infobae.com/economia/2026/11/05/tras-la-crisis-politica-y-la-renuncia-de-pena-el-riesgo-pais-de-paraguay-subio-66-y-alcanzo-los-146-puntos-basicos/",
           "fecha": "2026-11-06T09:50:40.102Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -459,7 +459,7 @@
           "descripcion": "Puente Casa de Bolsa, una empresa de los mismos dueños que la histórica financiera argentina, figura entre los principales depositantes del banco cuya crisis desencadenó la renuncia de presidente Santiago Peña. Son algo menos de USD 15 millones de sus clientes, menos del 1% de lo la empresa administra en Paraguay",
           "url": "https://www.infobae.com/economia/2026/11/06/la-filial-paraguaya-de-una-reconocida-financiera-de-la-city-portena-tenia-depositos-en-el-ueno-bank/",
           "fecha": "2026-11-06T09:50:40.100Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -579,7 +579,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-05T08:32:16.022Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -827,7 +827,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-02T08:13:04.475Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "El Entre Ríos"
         },
         {
@@ -835,7 +835,7 @@
           "descripcion": "Aunque muchos hogares mantienen subsidios, los usuarios de servicios públicos del AMBA deberán enfrentar diferentes incrementos en sus boletas",
           "url": "https://www.infobae.com/economia/2026/11/01/cuanto-aumentaran-la-luz-el-gas-y-el-agua-en-noviembre-y-que-nuevos-ajustes-estan-en-evaluacion/",
           "fecha": "2026-11-02T08:13:02.956Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -891,7 +891,7 @@
           "descripcion": "Los bombardeos nocturnos cortaron el suministro energético en Zhitómir, Dnipropetrovsk y Kiev. En territorio ruso, un ataque masivo con drones alcanzó una empresa industrial en Kstovo, donde está una de las mayores refinerías del país",
           "url": "https://www.infobae.com/america/mundo/2026/11/01/rusia-volvio-a-golpear-la-red-electrica-de-ucrania-y-dejo-a-cientos-de-localidades-sin-luz/",
           "fecha": "2026-11-01T13:29:06.767Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "Infobae"
         },
         {
@@ -981,10 +981,50 @@
       "nombre": "CONSUMO MASIVO",
       "noticias": [
         {
+          "titulo": "Especialistas del sector señalaron dificultades para retirar contenedores, mayores costos operativos y la necesidad de mejorar …",
+          "descripcion": "Especialistas del sector señalaron dificultades para retirar contenedores, mayores costos operativos y la necesidad de mejorar la coordinación logística durante un encuentro nacional de despachantes",
+          "url": "https://www.infobae.com/movant/2026/11/07/advierten-sobre-dificultades-logisticas-que-afectan-la-planificacion-del-comercio-exterior/",
+          "fecha": "2026-11-07T14:24:21.442Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Sandra Rossi, especialista en medicina del deporte, advierte sobre el costo del multitasking y el descanso perdido en una activ…",
+          "descripcion": "Sandra Rossi, especialista en medicina del deporte, advierte sobre el costo del multitasking y el descanso perdido en una actividad donde los proveedores del otro lado del mundo marcan los horarios",
+          "url": "https://www.infobae.com/movant/2026/11/06/el-alto-rendimiento-como-escuela-para-navegar-la-incertidumbre-de-logistica-y-comercio-exterior/",
+          "fecha": "2026-11-07T14:24:21.442Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Malas noticias para el consumo online: el CyberMonday vendió un 20% menos que el año anterior",
+          "descripcion": "La baja es en términos reales, descontando la inflación del mismo período. Tomaron mayor protagonismo categorías con tickets promedios más bajos. Además, participaron 100 empresas menos que en la edición anterior",
+          "url": "https://www.infobae.com/economia/2026/11/06/malas-noticias-para-el-consumo-online-el-cybermonday-vendio-un-20-menos-que-el-ano-anterior/",
+          "fecha": "2026-11-07T14:24:21.430Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Francisco De Narváez compró los supermercados DIA en la Argentina, tras el intento fallido de Carrefour",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.862Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "FAL: por qué las pymes necesitan prepararse para aprovechar esta nueva herramienta",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.841Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
           "titulo": "La apertura comercial, el dólar y la debilidad del consumo se presentan como una tormenta perfecta para buena parte del tejido …",
           "descripcion": "La apertura comercial, el dólar y la debilidad del consumo se presentan como una tormenta perfecta para buena parte del tejido productivo local; los casos de Marmicoc, Jit Pants, Franco Valente y Rasti muestran cómo la diversificación, la inversión y la especialización pueden transformarse en herramientas para competi",
           "url": "https://www.lanacion.com.ar/economia/negocios/la-receta-de-las-pymes-industriales-que-siguen-dando-pelea-nid06112026/",
-          "fecha": "2026-11-07T07:50:00.004Z",
+          "fecha": "2026-11-07T14:24:20.613Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
         },
@@ -992,7 +1032,7 @@
           "titulo": "Consumo online. Las ventas del CyberMonday cayeron 20% contra el año anterior",
           "descripcion": "Durante los tres días del evento se concretaron casi 6,5 millones de órdenes de compra, un 5,8% menos que el año pasado; los consumidores adquirieron más unidades por operación, pero gastaron menos en términos reales",
           "url": "https://www.lanacion.com.ar/economia/cybermonday-crecieron-21-las-unidades-vendidas-pero-la-facturacion-cayo-20-en-terminos-reales-nid06112026/",
-          "fecha": "2026-11-07T07:50:00.003Z",
+          "fecha": "2026-11-07T14:24:20.611Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
         },
@@ -1001,15 +1041,7 @@
           "descripcion": "Consumo abre expediente a una empresa de autobuses por prácticas engañosas en el precio y cláusulas abusivas",
           "url": "https://www.infobae.com/america/agencias/2026/11/07/consumo-abre-expediente-a-una-empresa-de-autobuses-por-practicas-enganosas-en-el-precio-y-clausulas-abusivas/",
           "fecha": "2026-11-07T07:49:59.772Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "Sandra Rossi, especialista en medicina del deporte, advierte sobre el costo del multitasking y el descanso perdido en una activ…",
-          "descripcion": "Sandra Rossi, especialista en medicina del deporte, advierte sobre el costo del multitasking y el descanso perdido en una actividad donde los proveedores del otro lado del mundo marcan los horarios",
-          "url": "https://www.infobae.com/movant/2026/11/06/el-alto-rendimiento-como-escuela-para-navegar-la-incertidumbre-de-logistica-y-comercio-exterior/",
-          "fecha": "2026-11-07T07:49:59.771Z",
-          "fechaFormateada": "Hace 3 min",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "Infobae"
         },
         {
@@ -1017,39 +1049,15 @@
           "descripcion": "El informe anual de la Organización Mundial de Aduanas advierte sobre los desafíos que enfrentan los controles fronterizos ante el crecimiento de la paquetería internacional",
           "url": "https://www.infobae.com/movant/2026/11/06/el-comercio-electronico-concentra-casi-el-45-de-los-casos-de-comercio-ilicito-reportados-a-la-oma/",
           "fecha": "2026-11-07T07:49:59.771Z",
-          "fechaFormateada": "Hace 3 min",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "Infobae"
-        },
-        {
-          "titulo": "Malas noticias para el consumo online: el CyberMonday vendió un 20% menos que el año anterior",
-          "descripcion": "La baja es en términos reales, descontando la inflación del mismo período. Tomaron mayor protagonismo categorías con tickets promedios más bajos. Además, participaron 100 empresas menos que en la edición anterior",
-          "url": "https://www.infobae.com/economia/2026/11/06/malas-noticias-para-el-consumo-online-el-cybermonday-vendio-un-20-menos-que-el-ano-anterior/",
-          "fecha": "2026-11-07T07:49:59.751Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "Francisco De Narváez compró los supermercados DIA en la Argentina, tras el intento fallido de Carrefour",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.067Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "FAL: por qué las pymes necesitan prepararse para aprovechar esta nueva herramienta",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.062Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
         },
         {
           "titulo": "Autos: por la caída de las ventas y el boom de los importados, cae casi 15% la producción en octubre",
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-06T22:01:37.681Z",
-          "fechaFormateada": "Hace 9 hs",
+          "fechaFormateada": "Hace 16 hs",
           "fuente": "Clarín"
         },
         {
@@ -1057,7 +1065,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-06T09:50:40.717Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "El Entre Ríos"
         },
         {
@@ -1065,7 +1073,7 @@
           "descripcion": "El Observatorio de Acción Climática 2026 indica que los días con calor superior a la media mundial se triplicaron en América Latina, con efectos sobre ríos navegables, cosechas y fletes",
           "url": "https://www.infobae.com/movant/2026/11/05/calor-extremo-y-sequia-la-ocde-alerta-por-el-impacto-en-transporte-y-comercio-agricola/",
           "fecha": "2026-11-06T09:50:40.104Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -1073,7 +1081,7 @@
           "descripcion": "Desde la negociación con proveedores hasta la gestión del stock, cada decisión puede incidir en los costos, los tiempos de entrega y la continuidad de las operaciones",
           "url": "https://www.infobae.com/movant/2026/11/05/comercio-exterior-adaptarse-anticiparse-y-estar-siempre-un-paso-adelante/",
           "fecha": "2026-11-06T09:50:40.104Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -1105,7 +1113,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-05T08:32:16.025Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -1113,7 +1121,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-05T08:32:16.025Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -1121,7 +1129,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-05T08:32:16.023Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -1313,7 +1321,7 @@
           "descripcion": "Entre descuentos, financiamiento y beneficios logísticos, el evento de ecommerce buscará captar a los consumidores en un contexto de mayor competencia con sitios del exterior",
           "url": "https://www.infobae.com/economia/2026/11/01/cyber-monday-2026-a-que-hora-empieza-que-ofertas-habra-y-las-categorias-con-descuentos-mas-altos/",
           "fecha": "2026-11-02T08:13:02.954Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -1345,7 +1353,7 @@
           "descripcion": "La OMC y Naciones Unidas señalan que el comercio Sur-Sur alcanzó una escala récord, pero regiones como América Latina y el Caribe todavía mantienen un bajo nivel de intercambio intrarregional",
           "url": "https://www.infobae.com/movant/2026/10/31/el-auge-del-comercio-sur-sur-expone-una-brecha-de-integracion-regional/",
           "fecha": "2026-11-01T13:29:06.766Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "Infobae"
         },
         {
@@ -1363,30 +1371,6 @@
           "fecha": "2026-10-31T21:26:11.000Z",
           "fechaFormateada": "Hace 6 días",
           "fuente": "Clarín"
-        },
-        {
-          "titulo": "Médicos exigen a OSER la devolución de descuentos y advierten que podrían suspender la atención en internaciones",
-          "descripcion": "",
-          "url": "https://www.elentrerios.com/",
-          "fecha": "2026-10-31T13:50:25.533Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "El Entre Ríos"
-        },
-        {
-          "titulo": "El Consejo de Seguridad analizó el impacto de los sistemas autónomos sobre rutas navieras, puertos y cables submarinos, en el m…",
-          "descripcion": "El Consejo de Seguridad analizó el impacto de los sistemas autónomos sobre rutas navieras, puertos y cables submarinos, en el mes con más ataques a buques registrados en el estrecho de Ormuz",
-          "url": "https://www.infobae.com/movant/2026/10/30/la-onu-advierte-que-la-ia-y-los-drones-elevan-los-riesgos-para-el-comercio-maritimo/",
-          "fecha": "2026-10-31T13:50:25.374Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "Las negociaciones podrían definirse en los próximos días. Según fuentes del mercado, la operación podría cerrarse en torno a lo…",
-          "descripcion": "Las negociaciones podrían definirse en los próximos días. Según fuentes del mercado, la operación podría cerrarse en torno a los USD 100 millones. Coincide con una fecha regulatoria clave que el sector sigue con atención",
-          "url": "https://www.infobae.com/economia/2026/10/30/la-venta-de-supermercados-dia-entra-en-la-recta-final-quien-es-el-principal-candidato-para-quedarse-con-la-cadena/",
-          "fecha": "2026-10-31T13:50:25.373Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
         }
       ]
     },
@@ -1395,18 +1379,138 @@
       "nombre": "GOBIERNO",
       "noticias": [
         {
-          "titulo": "Dólar blue hoy: a cuánto cotiza el viernes 6 de noviembre",
-          "descripcion": "La cotización de la moneda estadounidense ronda los $1508,35 para la compra y $1555 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 6 de noviembre de 2026",
-          "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-viernes-6-de-noviembre-nid06112026/",
-          "fecha": "2026-11-07T07:50:00.007Z",
+          "titulo": "Dólar blue: cotización del viernes 7 de noviembre de 2026",
+          "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
+          "url": "https://www.pagina12.com.ar/2026/11/06/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-viernes-7-de-noviembre-de-2026/",
+          "fecha": "2026-11-07T14:24:22.525Z",
           "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "La venta masiva de activos argentinos derrumba los precios y es señal de la fuga de divisas tras la desconfianza generada por l…",
+          "descripcion": "La venta masiva de activos argentinos derrumba los precios y es señal de la fuga de divisas tras la desconfianza generada por la derrota de Trump en las legislativas de Estados Unidos",
+          "url": "https://www.pagina12.com.ar/2026/11/06/titulos-de-deuda-en-caida-y-vuela-el-riesgo-pais/",
+          "fecha": "2026-11-07T14:24:22.525Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "Así cerró el dólar en bancos, blue y MEP este jueves 5 de noviembre",
+          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
+          "url": "https://www.ellitoral.com/",
+          "fecha": "2026-11-07T14:24:22.331Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "El Gobierno habilitó otras 50.000 importaciones de autos sin arancel para 2027",
+          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
+          "url": "https://www.ellitoral.com/",
+          "fecha": "2026-11-07T14:24:22.330Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "Así cerró el dólar en bancos, blue y MEP este viernes 6 de noviembre",
+          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
+          "url": "https://www.ellitoral.com/",
+          "fecha": "2026-11-07T14:24:22.330Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "El Litoral (Santa Fe)"
+        },
+        {
+          "titulo": "Riesgo país, cerca de los 930 puntos: Argentina le pagó al FMI y culpa al frente externo por la incertidumbre",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.861Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Deuda en pesos: sospechan que el Gobierno inyectó $ 2 billones para frenar la suba de tasas",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.860Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Luis Caputo dijo que el riesgo país sube por el temor a un cambio de gobierno y le aseguró al campo que si Milei gana terminará…",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.844Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "“Dólares hasta por las orejas”: a dónde se fueron todos los billetes que entraron por las exportaciones récord",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.840Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "El Gobierno restringe la tecnología china en el sector de las telecomunicaciones y podría impactar en el mercado de los teléfon…",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.840Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Dólares para inteligencia artificial: la dueña de ChatGPT consiguió US$ 11.000 millones de financiamiento y alcanza un valor de…",
+          "descripcion": "Realizó una primera ronda entre inversores privados.Su rival, Anthropic, está dando pasos para realizar una oferta pública de acciones.",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-07T14:24:20.839Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "Clarín"
         },
         {
           "titulo": "Dólar tarjeta hoy: a cuánto cotiza el dólar turista el 6 de noviembre",
           "descripcion": "La cotización del dólar tarjeta presenta viernes un precio de $2041; se trata del valor que se utiliza para las compras con tarjetas en el exterior o el pago de servicios",
           "url": "https://www.lanacion.com.ar/economia/dolar/dolar-tarjeta-hoy-a-cuanto-cotiza-el-dolar-turista-el-6-de-noviembre-nid06112026/",
-          "fecha": "2026-11-07T07:50:00.007Z",
+          "fecha": "2026-11-07T14:24:20.619Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Dólar blue hoy: a cuánto cotiza el viernes 6 de noviembre",
+          "descripcion": "La cotización de la moneda estadounidense ronda los $1508,35 para la compra y $1555 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 6 de noviembre de 2026",
+          "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-viernes-6-de-noviembre-nid06112026/",
+          "fecha": "2026-11-07T14:24:20.619Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
+          "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
+          "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
+          "fecha": "2026-11-07T14:24:20.615Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como…",
+          "descripcion": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como Irlanda, España, Australia, Estados Unidos y Chile",
+          "url": "https://www.lanacion.com.ar/economia/negocios/los-paises-que-quieren-que-emprendas-dan-dinero-bajan-impuestos-y-te-ayudan-a-conseguir-clientes-nid30092026/",
+          "fecha": "2026-11-07T14:24:20.614Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "El Centro Nacional de Ciberseguridad exige a los fabricantes de equipos para redes críticas una certificación de una asociación…",
+          "descripcion": "El Centro Nacional de Ciberseguridad exige a los fabricantes de equipos para redes críticas una certificación de una asociación privada de EE.UU. que no admite a empresas sancionadas por Washington",
+          "url": "https://www.lanacion.com.ar/economia/el-gobierno-comienza-a-restringir-la-llegada-de-celulares-chinos-a-la-argentina-nid06112026/",
+          "fecha": "2026-11-07T14:24:20.612Z",
+          "fechaFormateada": "Hace 3 min",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Volvió a pausar emisión a largo plazo por los precios y la incertidumbre; enfrenta un compromiso por $10,6 billones, que es ant…",
+          "descripcion": "Volvió a pausar emisión a largo plazo por los precios y la incertidumbre; enfrenta un compromiso por $10,6 billones, que es antesala de otro por $30 billones en dos semanas",
+          "url": "https://www.lanacion.com.ar/economia/el-gobierno-ofrece-deuda-en-pesos-a-corto-plazo-para-tratar-de-renovar-todo-lo-que-le-vence-la-nid06112026/",
+          "fecha": "2026-11-07T14:24:20.611Z",
           "fechaFormateada": "Hace 3 min",
           "fuente": "La Nación"
         },
@@ -1415,111 +1519,15 @@
           "descripcion": "La producción y los patentamientos pesarán en la asignación a las terminales; habrá segmentos para los importadores y una reserva para quienes inviertan en cargadores; las solicitudes cierran el 17 de noviembre",
           "url": "https://www.lanacion.com.ar/autos/el-gobierno-detallo-las-nuevas-condiciones-de-asignacion-del-cupo-para-importar-autos-sin-arancel-nid06112026/",
           "fecha": "2026-11-07T07:50:00.006Z",
-          "fechaFormateada": "Hace 3 min",
+          "fechaFormateada": "Hace 6 hs",
           "fuente": "La Nación"
-        },
-        {
-          "titulo": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como…",
-          "descripcion": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como Irlanda, España, Australia, Estados Unidos y Chile",
-          "url": "https://www.lanacion.com.ar/economia/negocios/los-paises-que-quieren-que-emprendas-dan-dinero-bajan-impuestos-y-te-ayudan-a-conseguir-clientes-nid30092026/",
-          "fecha": "2026-11-07T07:50:00.005Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
-          "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
-          "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
-          "fecha": "2026-11-07T07:50:00.005Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "El Centro Nacional de Ciberseguridad exige a los fabricantes de equipos para redes críticas una certificación de una asociación…",
-          "descripcion": "El Centro Nacional de Ciberseguridad exige a los fabricantes de equipos para redes críticas una certificación de una asociación privada de EE.UU. que no admite a empresas sancionadas por Washington",
-          "url": "https://www.lanacion.com.ar/economia/el-gobierno-comienza-a-restringir-la-llegada-de-celulares-chinos-a-la-argentina-nid06112026/",
-          "fecha": "2026-11-07T07:50:00.004Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "Volvió a pausar emisión a largo plazo por los precios y la incertidumbre; enfrenta un compromiso por $10,6 billones, que es ant…",
-          "descripcion": "Volvió a pausar emisión a largo plazo por los precios y la incertidumbre; enfrenta un compromiso por $10,6 billones, que es antesala de otro por $30 billones en dos semanas",
-          "url": "https://www.lanacion.com.ar/economia/el-gobierno-ofrece-deuda-en-pesos-a-corto-plazo-para-tratar-de-renovar-todo-lo-que-le-vence-la-nid06112026/",
-          "fecha": "2026-11-07T07:50:00.003Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "Dólar blue: cotización del viernes 7 de noviembre de 2026",
-          "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
-          "url": "https://www.pagina12.com.ar/2026/11/06/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-viernes-7-de-noviembre-de-2026/",
-          "fecha": "2026-11-07T07:49:59.907Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "La venta masiva de activos argentinos derrumba los precios y es señal de la fuga de divisas tras la desconfianza generada por l…",
-          "descripcion": "La venta masiva de activos argentinos derrumba los precios y es señal de la fuga de divisas tras la desconfianza generada por la derrota de Trump en las legislativas de Estados Unidos",
-          "url": "https://www.pagina12.com.ar/2026/11/06/titulos-de-deuda-en-caida-y-vuela-el-riesgo-pais/",
-          "fecha": "2026-11-07T07:49:59.907Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "Deuda en pesos: sospechan que el Gobierno inyectó $ 2 billones para frenar la suba de tasas",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.066Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Riesgo país, cerca de los 930 puntos: Argentina le pagó al FMI y culpa al frente externo por la incertidumbre",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.066Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Luis Caputo dijo que el riesgo país sube por el temor a un cambio de gobierno y le aseguró al campo que si Milei gana terminará…",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-07T07:49:59.065Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Así cerró el dólar en bancos, blue y MEP este jueves 5 de noviembre",
-          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-          "url": "https://www.ellitoral.com/",
-          "fecha": "2026-11-07T07:49:58.929Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "El Litoral (Santa Fe)"
-        },
-        {
-          "titulo": "El Gobierno habilitó otras 50.000 importaciones de autos sin arancel para 2027",
-          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-          "url": "https://www.ellitoral.com/",
-          "fecha": "2026-11-07T07:49:58.928Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "El Litoral (Santa Fe)"
-        },
-        {
-          "titulo": "Así cerró el dólar en bancos, blue y MEP este viernes 6 de noviembre",
-          "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-          "url": "https://www.ellitoral.com/",
-          "fecha": "2026-11-07T07:49:58.928Z",
-          "fechaFormateada": "Hace 3 min",
-          "fuente": "El Litoral (Santa Fe)"
         },
         {
           "titulo": "Con el pago de las indemnizaciones y salarios y el levantamiento del embargo, se zanjó la discusión sobre las obligaciones econ…",
           "descripcion": "Con el pago de las indemnizaciones y salarios y el levantamiento del embargo, se zanjó la discusión sobre las obligaciones económicas derivadas del cierre. Quejas porque la planta de San Fernando continúa ocupada y la restitución del inmueble a sus propietarios sigue pendiente.",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-07T01:49:36.190Z",
-          "fechaFormateada": "Hace 6 hs",
+          "fechaFormateada": "Hace 12 hs",
           "fuente": "Clarín"
         },
         {
@@ -1527,7 +1535,7 @@
           "descripcion": "Este viernes se publicó en el Boletín Oficial la apertura del cupo para importar autos sin arancel extrazona. La novedad es que se crearon subcategorías que cambian el volumen de unidades que podrán importar las marcas según su relevancia en el mercado",
           "url": "https://www.infobae.com/economia/2026/11/06/tras-las-demoras-el-gobierno-finalmente-abrio-la-licitacion-para-el-cupo-2027-de-autos-hibridos-y-electricos-y-habra-cambios/",
           "fecha": "2026-11-07T01:49:34.140Z",
-          "fechaFormateada": "Hace 6 hs",
+          "fechaFormateada": "Hace 12 hs",
           "fuente": "Infobae"
         },
         {
@@ -1535,7 +1543,7 @@
           "descripcion": "El ministro de Economía, Luis Caputo, habló ante los empresarios del campo en el acto por los 160 años de la Sociedad Rural Argentina, con el índice de JP Morgan en 925 puntos básicos, el nivel más alto desde octubre de 2025",
           "url": "https://www.infobae.com/economia/2026/11/06/caputo-minimizo-el-salto-del-riesgo-pais-y-aseguro-estar-tremendamente-tranquilo-de-cara-a-las-elecciones/",
           "fecha": "2026-11-07T01:49:34.139Z",
-          "fechaFormateada": "Hace 6 hs",
+          "fechaFormateada": "Hace 12 hs",
           "fuente": "Infobae"
         },
         {
@@ -1543,7 +1551,7 @@
           "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
           "url": "https://www.pagina12.com.ar/2026/11/05/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-jueves-5-de-noviembre-de-2026/",
           "fecha": "2026-11-06T22:01:37.388Z",
-          "fechaFormateada": "Hace 9 hs",
+          "fechaFormateada": "Hace 16 hs",
           "fuente": "Página/12"
         },
         {
@@ -1551,7 +1559,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-06T22:01:37.213Z",
-          "fechaFormateada": "Hace 9 hs",
+          "fechaFormateada": "Hace 16 hs",
           "fuente": "El Entre Ríos"
         },
         {
@@ -1559,7 +1567,7 @@
           "descripcion": "A través de la Resolución 538/2026 del Ministerio de Justicia, 72 registros seccionales del automotor cerrarán en un plazo de 60 días hábiles",
           "url": "https://www.lanacion.com.ar/autos/uno-por-uno-estos-son-los-registros-automotores-que-seran-cerrados-por-el-gobierno-nid06112026/",
           "fecha": "2026-11-06T17:02:20.809Z",
-          "fechaFormateada": "Hace 14 hs",
+          "fechaFormateada": "Hace 21 hs",
           "fuente": "La Nación"
         },
         {
@@ -1567,7 +1575,7 @@
           "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
           "url": "https://www.ellitoral.com/",
           "fecha": "2026-11-06T17:02:20.115Z",
-          "fechaFormateada": "Hace 14 hs",
+          "fechaFormateada": "Hace 21 hs",
           "fuente": "El Litoral (Santa Fe)"
         },
         {
@@ -1575,7 +1583,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-06T17:02:19.642Z",
-          "fechaFormateada": "Hace 14 hs",
+          "fechaFormateada": "Hace 21 hs",
           "fuente": "Clarín"
         },
         {
@@ -1583,7 +1591,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-06T09:50:41.201Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Clarín"
         },
         {
@@ -1591,7 +1599,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-06T09:50:41.200Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Clarín"
         },
         {
@@ -1599,7 +1607,7 @@
           "descripcion": "BlackToro y Arriazu Macroanalistas estiman que el Banco Central cuenta con el “poder de fuego” necesario para controlar el tipo de cambio; sin embargo, no prevén que el indicador de JP Morgan baje en el corto plazo",
           "url": "https://www.lanacion.com.ar/economia/miedo-al-pendulo-que-va-a-pasar-con-el-dolar-y-el-riesgo-pais-segun-una-consultora-nid05112026/",
           "fecha": "2026-11-06T09:50:40.876Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "La Nación"
         },
         {
@@ -1607,7 +1615,7 @@
           "descripcion": "El ministro de Desregulación y Transformación del Estado admitieron ante empresarios que la inversión y el crecimiento quedaron por debajo de sus propias expectativas, aunque descartaron un cambio de rumbo",
           "url": "https://www.infobae.com/economia/2026/11/05/federico-sturzenegger-defendio-el-rumbo-economico-del-gobierno-aunque-reconocio-que-la-inversion-tarda-en-llegar/",
           "fecha": "2026-11-06T09:50:40.102Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -1615,7 +1623,7 @@
           "descripcion": "El Relevamiento de Expectativas de Mercado anticipó una moderación de los precios en noviembre y estimó que el tipo de cambio llegará a $1.590 al cierre de 2026",
           "url": "https://www.infobae.com/economia/2026/11/05/las-consultoras-que-releva-el-bcra-proyectaron-una-inflacion-de-18-para-octubre-que-preven-para-este-mes/",
           "fecha": "2026-11-06T09:50:40.102Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -1623,7 +1631,7 @@
           "descripcion": "La autoridad monetaria adquirió USD 42 millones este jueves. El cumplimiento de un compromiso con el organismo multilateral redujo las tenencias brutas por debajo de los USD 50.000 millones",
           "url": "https://www.infobae.com/economia/2026/11/05/el-banco-central-ya-compro-mas-de-usd-16000-millones-en-2026-pero-las-reservas-cayeron-por-un-pago-al-fmi/",
           "fecha": "2026-11-06T09:50:40.102Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -1631,7 +1639,7 @@
           "descripcion": "La consultora 1816 detectó que los bonos duales y títulos CER sumaron $1,9 billones el miércoles y entienden que se buscó marcar un techo. La lectura de los analistas sobre el efecto en las tasas, el dólar y qué implica para la política del equipo económico",
           "url": "https://www.infobae.com/economia/2026/11/06/por-que-el-mercado-atribuye-al-gobierno-una-compra-de-bonos-por-2-billones/",
           "fecha": "2026-11-06T09:50:40.101Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -1639,7 +1647,7 @@
           "descripcion": "Los bonos en dólares cayeron más de 2% y siguen sin encontrar un piso. El frente externo está más complicado, pero sobre todo los inversores se mantienen cautelosos ante un escenario político muy incierto de cara al 2027",
           "url": "https://www.infobae.com/economia/2026/11/06/la-tormenta-global-volvio-a-impactar-en-el-riesgo-pais-argentino-y-suma-mas-complicaciones-para-el-ano-electoral/",
           "fecha": "2026-11-06T09:50:40.100Z",
-          "fechaFormateada": "Hace 22 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Infobae"
         },
         {
@@ -1751,7 +1759,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-05T08:32:17.178Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "El Entre Ríos"
         },
         {
@@ -1759,7 +1767,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-05T08:32:17.177Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "El Entre Ríos"
         },
         {
@@ -1767,7 +1775,7 @@
           "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
           "url": "https://www.ellitoral.com/",
           "fecha": "2026-11-05T08:32:17.088Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "El Litoral (Santa Fe)"
         },
         {
@@ -1775,7 +1783,7 @@
           "descripcion": "En Infobae al Regreso, el presidente de la UIA Martín Rappallini destacó las medidas para las PyMEs y reclamó una baja de impuestos, más crédito y mejores condiciones para competir",
           "url": "https://www.infobae.com/economia/2026/11/04/que-piensan-los-empresarios-industriales-de-los-anuncios-de-caputo-y-que-le-reclaman-al-gobierno/",
           "fecha": "2026-11-05T08:32:16.543Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Infobae"
         },
         {
@@ -1783,7 +1791,7 @@
           "descripcion": "Los índices bursátiles estadounidenses escalaron hasta 3% luego del triunfo demócrata en las elecciones de EEUU. El petróleo se desplomó 8% y arrastró a las acciones energéticas. El dólar mayorista retrocedió y el BCRA compró USD 9 millones en el mercado",
           "url": "https://www.infobae.com/economia/2026/11/04/el-riesgo-pais-supero-los-850-puntos-el-dolar-cayo-y-las-acciones-argentinas-se-hundieron-hasta-8-en-wall-street/",
           "fecha": "2026-11-05T08:32:16.543Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Infobae"
         },
         {
@@ -1791,7 +1799,7 @@
           "descripcion": "La autoridad monetaria adquirió USD 9 millones luego de un comienzo de noviembre sin compras oficiales. Las reservas internacionales se acercaron a USD 50.500 millones",
           "url": "https://www.infobae.com/economia/2026/11/04/tras-dos-dias-sin-sumar-divisas-el-banco-central-volvio-a-comprar-dolares/",
           "fecha": "2026-11-05T08:32:16.543Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Infobae"
         },
         {
@@ -1799,7 +1807,7 @@
           "descripcion": "Los bonos soberanos no pudieron acoplarse al rally global de los mercados. A las dudas que generó la elección de Brasil ahora se suma la incertidumbre por el futuro respaldo de Estados Unidos al Gobierno en materia cambiaria",
           "url": "https://www.infobae.com/economia/2026/11/05/la-incertidumbre-politica-aleja-a-los-inversores-de-los-activos-argentinos-y-el-riesgo-pais-alcanzo-un-nuevo-maximo-anual/",
           "fecha": "2026-11-05T08:32:16.540Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Infobae"
         },
         {
@@ -1807,7 +1815,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-05T08:32:16.026Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -1815,7 +1823,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-05T08:32:16.025Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -1823,7 +1831,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-05T08:32:16.024Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -1831,7 +1839,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-05T08:32:16.023Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -1839,7 +1847,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-05T08:32:16.022Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -1847,7 +1855,7 @@
           "descripcion": "El financiamiento ligado al consumo acumula seis meses en caída, pese a que se esperaba una recuperación",
           "url": "https://www.lanacion.com.ar/economia/el-credito-en-pesos-no-repunto-y-se-estancaron-los-prestamos-en-dolares-nid04112026/",
           "fecha": "2026-11-05T08:32:15.791Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "La Nación"
         },
         {
@@ -2391,7 +2399,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-02T08:13:04.475Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "El Entre Ríos"
         },
         {
@@ -2399,7 +2407,7 @@
           "descripcion": "La cotización de la divisa oficial abre con los mismos números que en su último día de cierre; así se posicionó el último día hábil",
           "url": "https://www.lanacion.com.ar/economia/dolar/a-cuanto-abre-el-dolar-el-lunes-2-de-noviembre-nid31102026/",
           "fecha": "2026-11-02T08:13:03.193Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "La Nación"
         },
         {
@@ -2407,7 +2415,7 @@
           "descripcion": "El ministro de Economía transmitió su inquietud por el contexto global a compañeros de Gabinete y empresarios; administración del tipo de cambio y búsqueda de fuentes de financiamiento alternativas",
           "url": "https://www.lanacion.com.ar/economia/el-riesgo-pais-argentino-subio-en-octubre-hasta-seis-veces-lo-que-aumento-en-la-region-y-el-gobierno-nid01112026/",
           "fecha": "2026-11-02T08:13:03.186Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "La Nación"
         },
         {
@@ -2415,7 +2423,7 @@
           "descripcion": "La reducción de impuestos, la eliminación de restricciones regulatorias y la apertura de mercados reavivan una discusión más amplia sobre qué factores determinan hoy la competitividad",
           "url": "https://www.infobae.com/economia/2026/11/01/el-debate-sobre-el-atraso-cambiario-las-exportaciones-crecieron-mientras-caia-el-tipo-de-cambio-real/",
           "fecha": "2026-11-02T08:13:02.955Z",
-          "fechaFormateada": "Hace 4 días",
+          "fechaFormateada": "Hace 5 días",
           "fuente": "Infobae"
         },
         {
@@ -2455,7 +2463,7 @@
           "descripcion": "Algunas compañías desaparecieron, otras se fusionaron y la gran mayoría se achicó desde noviembre de 2023. Los recortes más significativos y las excepciones",
           "url": "https://www.infobae.com/economia/2026/10/31/desde-que-asumio-el-gobierno-de-javier-milei-mas-de-23400-personas-dejaron-de-trabajar-para-empresas-del-estado/",
           "fecha": "2026-11-01T13:29:06.764Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "Infobae"
         },
         {
@@ -2463,7 +2471,7 @@
           "descripcion": "El FMI aseguró que aún restan dólares por ingresar por esta vía antes de diciembre. Según pudo saber Infobae, en el equipo económico empezaron a contemplarla para el próximo en medio de las dudas del mercado por la suspensión del Bonar 2029",
           "url": "https://www.infobae.com/economia/2026/10/31/el-gobierno-gestiona-creditos-con-garantia-multilateral-para-completar-su-financiamiento-en-2026-y-2027/",
           "fecha": "2026-11-01T13:29:06.764Z",
-          "fechaFormateada": "Hace 5 días",
+          "fechaFormateada": "Hace 6 días",
           "fuente": "Infobae"
         },
         {
@@ -2553,63 +2561,381 @@
           "fecha": "2026-11-01T00:15:34.210Z",
           "fechaFormateada": "Hace 6 días",
           "fuente": "La Nación"
-        },
-        {
-          "titulo": "Christine Lagarde renuncia como presidenta del Banco Central Europeo 9 meses antes de finalizar su mandato",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-10-31T13:50:26.445Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "La vocera del Fondo Monetario Internacional, Julie Kozack, dijo que acordaron con el Gobierno avanzar en cuatro medidas. El rec…",
-          "descripcion": "La vocera del Fondo Monetario Internacional, Julie Kozack, dijo que acordaron con el Gobierno avanzar en cuatro medidas. El reconocimiento implícito del estancamiento de la economía.",
-          "url": "https://www.pagina12.com.ar/2026/10/29/el-fmi-pide-impulsar-el-crecimiento-pero-su-receta-es-profundizar-el-ajuste/",
-          "fecha": "2026-10-31T13:50:25.967Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "La iniciativa de ajuste fiscal reúne cinco pilares y deberá superar cuatro debates antes del 16 de diciembre, con la posibilida…",
-          "descripcion": "La iniciativa de ajuste fiscal reúne cinco pilares y deberá superar cuatro debates antes del 16 de diciembre, con la posibilidad de conciliación si las cámaras aprueban textos diferentes entre sí",
-          "url": "https://www.infobae.com/colombia/2026/10/31/este-sera-el-tramite-que-debe-seguir-la-ley-de-ajuste-fiscal-impulsada-por-abelardo-de-la-espriella-en-el-congreso-hay-diferencias-entre-las-bancadas-politicas/",
-          "fecha": "2026-10-31T13:50:25.374Z",
-          "fechaFormateada": "Hace 6 días",
-          "fuente": "Infobae"
         }
       ]
     }
   ],
   "noticias": [
     {
-      "titulo": "Dólar blue hoy: a cuánto cotiza el viernes 6 de noviembre",
-      "descripcion": "La cotización de la moneda estadounidense ronda los $1508,35 para la compra y $1555 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 6 de noviembre de 2026",
-      "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-viernes-6-de-noviembre-nid06112026/",
-      "fecha": "2026-11-07T07:50:00.007Z",
-      "fuente": "La Nación",
+      "titulo": "La inflación se clavó en el 2 por ciento",
+      "descripcion": "La desinflación se cortó hace rato. Las mayores subas se registraron en los servicios para la vivienda.",
+      "url": "https://www.pagina12.com.ar/2026/11/06/la-inflacion-se-clavo-en-el-2-por-ciento/",
+      "fecha": "2026-11-07T14:24:22.525Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Dólar blue: cotización del viernes 7 de noviembre de 2026",
+      "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
+      "url": "https://www.pagina12.com.ar/2026/11/06/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-viernes-7-de-noviembre-de-2026/",
+      "fecha": "2026-11-07T14:24:22.525Z",
+      "fuente": "Página/12",
       "categorias": [
         "gobierno"
       ]
     },
     {
-      "titulo": "Dólar tarjeta hoy: a cuánto cotiza el dólar turista el 6 de noviembre",
-      "descripcion": "La cotización del dólar tarjeta presenta viernes un precio de $2041; se trata del valor que se utiliza para las compras con tarjetas en el exterior o el pago de servicios",
-      "url": "https://www.lanacion.com.ar/economia/dolar/dolar-tarjeta-hoy-a-cuanto-cotiza-el-dolar-turista-el-6-de-noviembre-nid06112026/",
-      "fecha": "2026-11-07T07:50:00.007Z",
-      "fuente": "La Nación",
+      "titulo": "La venta masiva de activos argentinos derrumba los precios y es señal de la fuga de divisas tras la desconfianza generada por l…",
+      "descripcion": "La venta masiva de activos argentinos derrumba los precios y es señal de la fuga de divisas tras la desconfianza generada por la derrota de Trump en las legislativas de Estados Unidos",
+      "url": "https://www.pagina12.com.ar/2026/11/06/titulos-de-deuda-en-caida-y-vuela-el-riesgo-pais/",
+      "fecha": "2026-11-07T14:24:22.525Z",
+      "fuente": "Página/12",
       "categorias": [
         "gobierno"
+      ]
+    },
+    {
+      "titulo": "Así cerró el dólar en bancos, blue y MEP este jueves 5 de noviembre",
+      "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
+      "url": "https://www.ellitoral.com/",
+      "fecha": "2026-11-07T14:24:22.331Z",
+      "fuente": "El Litoral (Santa Fe)",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El Gobierno habilitó otras 50.000 importaciones de autos sin arancel para 2027",
+      "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
+      "url": "https://www.ellitoral.com/",
+      "fecha": "2026-11-07T14:24:22.330Z",
+      "fuente": "El Litoral (Santa Fe)",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Así cerró el dólar en bancos, blue y MEP este viernes 6 de noviembre",
+      "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
+      "url": "https://www.ellitoral.com/",
+      "fecha": "2026-11-07T14:24:22.330Z",
+      "fuente": "El Litoral (Santa Fe)",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "De Paysandú a Colón, sin costo: quienes crucen a ver al papa pagarán solo el peaje de ida",
+      "descripcion": "",
+      "url": "https://www.elentrerios.com/",
+      "fecha": "2026-11-07T14:24:21.774Z",
+      "fuente": "El Entre Ríos",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "Por la visita del Papa, refuerzan controles en el puente Colón-Paysandú y restringen el transporte de cargas",
+      "descripcion": "",
+      "url": "https://www.elentrerios.com/",
+      "fecha": "2026-11-07T14:24:21.772Z",
+      "fuente": "El Entre Ríos",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "Especialistas del sector señalaron dificultades para retirar contenedores, mayores costos operativos y la necesidad de mejorar …",
+      "descripcion": "Especialistas del sector señalaron dificultades para retirar contenedores, mayores costos operativos y la necesidad de mejorar la coordinación logística durante un encuentro nacional de despachantes",
+      "url": "https://www.infobae.com/movant/2026/11/07/advierten-sobre-dificultades-logisticas-que-afectan-la-planificacion-del-comercio-exterior/",
+      "fecha": "2026-11-07T14:24:21.442Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "Sandra Rossi, especialista en medicina del deporte, advierte sobre el costo del multitasking y el descanso perdido en una activ…",
+      "descripcion": "Sandra Rossi, especialista en medicina del deporte, advierte sobre el costo del multitasking y el descanso perdido en una actividad donde los proveedores del otro lado del mundo marcan los horarios",
+      "url": "https://www.infobae.com/movant/2026/11/06/el-alto-rendimiento-como-escuela-para-navegar-la-incertidumbre-de-logistica-y-comercio-exterior/",
+      "fecha": "2026-11-07T14:24:21.442Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "La inflación en la Ciudad de Buenos Aires fue de 1,9% en octubre y acumuló un 32,5% en los últimos doce meses",
+      "descripcion": "El índice porteño aceleró levemente frente a septiembre. Vivienda, alimentos, salud y restaurantes fueron los rubros que más incidieron en el resultado mensual",
+      "url": "https://www.infobae.com/economia/2026/11/06/la-inflacion-en-la-ciudad-de-buenos-aires-fue-de-19-en-octubre-y-acumulo-un-325-en-los-ultimos-doce-meses/",
+      "fecha": "2026-11-07T14:24:21.441Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Malas noticias para el consumo online: el CyberMonday vendió un 20% menos que el año anterior",
+      "descripcion": "La baja es en términos reales, descontando la inflación del mismo período. Tomaron mayor protagonismo categorías con tickets promedios más bajos. Además, participaron 100 empresas menos que en la edición anterior",
+      "url": "https://www.infobae.com/economia/2026/11/06/malas-noticias-para-el-consumo-online-el-cybermonday-vendio-un-20-menos-que-el-ano-anterior/",
+      "fecha": "2026-11-07T14:24:21.430Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "Francisco De Narváez compró los supermercados DIA en la Argentina, tras el intento fallido de Carrefour",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.862Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "La inflación de octubre fue de 1,8% y no bajará por seis meses, según cree el mercado",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.861Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Riesgo país, cerca de los 930 puntos: Argentina le pagó al FMI y culpa al frente externo por la incertidumbre",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.861Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "La inflación porteña sube por segundo mes consecutivo: fue de 1,9% en octubre",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.860Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Deuda en pesos: sospechan que el Gobierno inyectó $ 2 billones para frenar la suba de tasas",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.860Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Las alertas ignoradas: cómo se gestó la crisis de Ueno y por qué apunta al corazón del poder paraguayo",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.859Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "Luis Caputo dijo que el riesgo país sube por el temor a un cambio de gobierno y le aseguró al campo que si Milei gana terminará…",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.844Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "En octubre se acentuó el ajuste del gasto público primario: perdió contra la inflación y en el año va 3,2% abajo",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.843Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo",
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "La inflación de octubre pega más en la clase media porteña: cuánto hay que ganar para seguir perteneciendo a ese sector",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.843Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "FAL: por qué las pymes necesitan prepararse para aprovechar esta nueva herramienta",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.841Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "“Dólares hasta por las orejas”: a dónde se fueron todos los billetes que entraron por las exportaciones récord",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.840Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "El Gobierno restringe la tecnología china en el sector de las telecomunicaciones y podría impactar en el mercado de los teléfon…",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.840Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Dólares para inteligencia artificial: la dueña de ChatGPT consiguió US$ 11.000 millones de financiamiento y alcanza un valor de…",
+      "descripcion": "Realizó una primera ronda entre inversores privados.Su rival, Anthropic, está dando pasos para realizar una oferta pública de acciones.",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.839Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Crisis en Paraguay",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-07T14:24:20.838Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "servicios_hogar"
       ]
     },
     {
       "titulo": "Debido a los feriados establecidos por la llegada del Sumo Pontífice a la Argentina, el organismo previsional modificó algunas …",
       "descripcion": "Debido a los feriados establecidos por la llegada del Sumo Pontífice a la Argentina, el organismo previsional modificó algunas fechas de cobro de noviembre",
       "url": "https://www.lanacion.com.ar/economia/la-anses-cambio-el-calendario-de-pago-de-jubilaciones-y-prestaciones-por-la-visita-del-papa-leon-xiv-nid06112026/",
-      "fecha": "2026-11-07T07:50:00.007Z",
+      "fecha": "2026-11-07T14:24:20.634Z",
       "fuente": "La Nación",
       "categorias": [
         "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Dólar tarjeta hoy: a cuánto cotiza el dólar turista el 6 de noviembre",
+      "descripcion": "La cotización del dólar tarjeta presenta viernes un precio de $2041; se trata del valor que se utiliza para las compras con tarjetas en el exterior o el pago de servicios",
+      "url": "https://www.lanacion.com.ar/economia/dolar/dolar-tarjeta-hoy-a-cuanto-cotiza-el-dolar-turista-el-6-de-noviembre-nid06112026/",
+      "fecha": "2026-11-07T14:24:20.619Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Dólar blue hoy: a cuánto cotiza el viernes 6 de noviembre",
+      "descripcion": "La cotización de la moneda estadounidense ronda los $1508,35 para la compra y $1555 para la venta; este precio lo ubica al mismo valor oficial informado por el Banco Nación este 6 de noviembre de 2026",
+      "url": "https://www.lanacion.com.ar/economia/dolar/dolar-blue-hoy-a-cuanto-cotiza-el-viernes-6-de-noviembre-nid06112026/",
+      "fecha": "2026-11-07T14:24:20.619Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Todos los detalles. Qué pasó con Ueno Bank y cómo sigue la crisis en Paraguay hoy, viernes 6 de noviembre",
+      "descripcion": "El Congreso paraguayo avanza con el proceso de destitución contra el presidente ante la inminente acefalía del Ejecutivo, mientras la Justicia investiga el manejo irregular de fondos públicos en la entidad financiera intervenida",
+      "url": "https://www.lanacion.com.ar/economia/que-paso-con-ueno-bank-y-como-sigue-la-crisis-en-paraguay-hoy-viernes-6-de-noviembre-nid06112026/",
+      "fecha": "2026-11-07T14:24:20.618Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "En octubre se desembolsaron apenas US$6 millones más que en septiembre y un 36% menos que un año atrás en créditos hipotecarios…",
+      "descripcion": "En octubre se desembolsaron apenas US$6 millones más que en septiembre y un 36% menos que un año atrás en créditos hipotecarios, a pesar de que las condiciones de los bancos mejoraron con respecto a los meses anteriores",
+      "url": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/creditos-hipotecarios-se-freno-el-crecimiento-de-los-prestamos-pese-al-impulso-de-los-fondos-de-la-nid05112026/",
+      "fecha": "2026-11-07T14:24:20.616Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
+      "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
+      "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
+      "fecha": "2026-11-07T14:24:20.615Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo",
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como…",
+      "descripcion": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como Irlanda, España, Australia, Estados Unidos y Chile",
+      "url": "https://www.lanacion.com.ar/economia/negocios/los-paises-que-quieren-que-emprendas-dan-dinero-bajan-impuestos-y-te-ayudan-a-conseguir-clientes-nid30092026/",
+      "fecha": "2026-11-07T14:24:20.614Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "La apertura comercial, el dólar y la debilidad del consumo se presentan como una tormenta perfecta para buena parte del tejido …",
+      "descripcion": "La apertura comercial, el dólar y la debilidad del consumo se presentan como una tormenta perfecta para buena parte del tejido productivo local; los casos de Marmicoc, Jit Pants, Franco Valente y Rasti muestran cómo la diversificación, la inversión y la especialización pueden transformarse en herramientas para competi",
+      "url": "https://www.lanacion.com.ar/economia/negocios/la-receta-de-las-pymes-industriales-que-siguen-dando-pelea-nid06112026/",
+      "fecha": "2026-11-07T14:24:20.613Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "El Centro Nacional de Ciberseguridad exige a los fabricantes de equipos para redes críticas una certificación de una asociación…",
+      "descripcion": "El Centro Nacional de Ciberseguridad exige a los fabricantes de equipos para redes críticas una certificación de una asociación privada de EE.UU. que no admite a empresas sancionadas por Washington",
+      "url": "https://www.lanacion.com.ar/economia/el-gobierno-comienza-a-restringir-la-llegada-de-celulares-chinos-a-la-argentina-nid06112026/",
+      "fecha": "2026-11-07T14:24:20.612Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Volvió a pausar emisión a largo plazo por los precios y la incertidumbre; enfrenta un compromiso por $10,6 billones, que es ant…",
+      "descripcion": "Volvió a pausar emisión a largo plazo por los precios y la incertidumbre; enfrenta un compromiso por $10,6 billones, que es antesala de otro por $30 billones en dos semanas",
+      "url": "https://www.lanacion.com.ar/economia/el-gobierno-ofrece-deuda-en-pesos-a-corto-plazo-para-tratar-de-renovar-todo-lo-que-le-vence-la-nid06112026/",
+      "fecha": "2026-11-07T14:24:20.611Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Consumo online. Las ventas del CyberMonday cayeron 20% contra el año anterior",
+      "descripcion": "Durante los tres días del evento se concretaron casi 6,5 millones de órdenes de compra, un 5,8% menos que el año pasado; los consumidores adquirieron más unidades por operación, pero gastaron menos en términos reales",
+      "url": "https://www.lanacion.com.ar/economia/cybermonday-crecieron-21-las-unidades-vendidas-pero-la-facturacion-cayo-20-en-terminos-reales-nid06112026/",
+      "fecha": "2026-11-07T14:24:20.611Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "consumo_masivo"
       ]
     },
     {
@@ -2624,131 +2950,10 @@
       ]
     },
     {
-      "titulo": "Todos los detalles. Qué pasó con Ueno Bank y cómo sigue la crisis en Paraguay hoy, viernes 6 de noviembre",
-      "descripcion": "El Congreso paraguayo avanza con el proceso de destitución contra el presidente ante la inminente acefalía del Ejecutivo, mientras la Justicia investiga el manejo irregular de fondos públicos en la entidad financiera intervenida",
-      "url": "https://www.lanacion.com.ar/economia/que-paso-con-ueno-bank-y-como-sigue-la-crisis-en-paraguay-hoy-viernes-6-de-noviembre-nid06112026/",
-      "fecha": "2026-11-07T07:50:00.006Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como…",
-      "descripcion": "Desde subsidios y capital semilla hasta mentorías, menos burocracia y ayuda para exportar: qué herramientas ofrecen países como Irlanda, España, Australia, Estados Unidos y Chile",
-      "url": "https://www.lanacion.com.ar/economia/negocios/los-paises-que-quieren-que-emprendas-dan-dinero-bajan-impuestos-y-te-ayudan-a-conseguir-clientes-nid30092026/",
-      "fecha": "2026-11-07T07:50:00.005Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Cuánto se puede ganar. El país que busca jóvenes para trabajar y paga sueldos en dólares",
-      "descripcion": "El país habilita 1000 visas para jóvenes argentinos que quieran vivir y trabajar durante un año; cuánto se puede ganar, cuáles son los empleos más buscados y qué hay que tener en cuenta antes de viajar",
-      "url": "https://www.lanacion.com.ar/economia/negocios/el-pais-que-busca-jovenes-para-trabajar-y-paga-sueldos-en-dolares-nid23092026/",
-      "fecha": "2026-11-07T07:50:00.005Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "poder_adquisitivo",
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "En octubre se desembolsaron apenas US$6 millones más que en septiembre y un 36% menos que un año atrás en créditos hipotecarios…",
-      "descripcion": "En octubre se desembolsaron apenas US$6 millones más que en septiembre y un 36% menos que un año atrás en créditos hipotecarios, a pesar de que las condiciones de los bancos mejoraron con respecto a los meses anteriores",
-      "url": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/creditos-hipotecarios-se-freno-el-crecimiento-de-los-prestamos-pese-al-impulso-de-los-fondos-de-la-nid05112026/",
-      "fecha": "2026-11-07T07:50:00.005Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "El Centro Nacional de Ciberseguridad exige a los fabricantes de equipos para redes críticas una certificación de una asociación…",
-      "descripcion": "El Centro Nacional de Ciberseguridad exige a los fabricantes de equipos para redes críticas una certificación de una asociación privada de EE.UU. que no admite a empresas sancionadas por Washington",
-      "url": "https://www.lanacion.com.ar/economia/el-gobierno-comienza-a-restringir-la-llegada-de-celulares-chinos-a-la-argentina-nid06112026/",
-      "fecha": "2026-11-07T07:50:00.004Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "La apertura comercial, el dólar y la debilidad del consumo se presentan como una tormenta perfecta para buena parte del tejido …",
-      "descripcion": "La apertura comercial, el dólar y la debilidad del consumo se presentan como una tormenta perfecta para buena parte del tejido productivo local; los casos de Marmicoc, Jit Pants, Franco Valente y Rasti muestran cómo la diversificación, la inversión y la especialización pueden transformarse en herramientas para competi",
-      "url": "https://www.lanacion.com.ar/economia/negocios/la-receta-de-las-pymes-industriales-que-siguen-dando-pelea-nid06112026/",
-      "fecha": "2026-11-07T07:50:00.004Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Volvió a pausar emisión a largo plazo por los precios y la incertidumbre; enfrenta un compromiso por $10,6 billones, que es ant…",
-      "descripcion": "Volvió a pausar emisión a largo plazo por los precios y la incertidumbre; enfrenta un compromiso por $10,6 billones, que es antesala de otro por $30 billones en dos semanas",
-      "url": "https://www.lanacion.com.ar/economia/el-gobierno-ofrece-deuda-en-pesos-a-corto-plazo-para-tratar-de-renovar-todo-lo-que-le-vence-la-nid06112026/",
-      "fecha": "2026-11-07T07:50:00.003Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Consumo online. Las ventas del CyberMonday cayeron 20% contra el año anterior",
-      "descripcion": "Durante los tres días del evento se concretaron casi 6,5 millones de órdenes de compra, un 5,8% menos que el año pasado; los consumidores adquirieron más unidades por operación, pero gastaron menos en términos reales",
-      "url": "https://www.lanacion.com.ar/economia/cybermonday-crecieron-21-las-unidades-vendidas-pero-la-facturacion-cayo-20-en-terminos-reales-nid06112026/",
-      "fecha": "2026-11-07T07:50:00.003Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "La inflación se clavó en el 2 por ciento",
-      "descripcion": "La desinflación se cortó hace rato. Las mayores subas se registraron en los servicios para la vivienda.",
-      "url": "https://www.pagina12.com.ar/2026/11/06/la-inflacion-se-clavo-en-el-2-por-ciento/",
-      "fecha": "2026-11-07T07:49:59.907Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "Dólar blue: cotización del viernes 7 de noviembre de 2026",
-      "descripcion": "El precio del dólar oficial y de los dólares financieros. En directo, todas las modificaciones de la jornada cambiaria.",
-      "url": "https://www.pagina12.com.ar/2026/11/06/dolar-blue-dolar-hoy-a-cuanto-cotizan-el-viernes-7-de-noviembre-de-2026/",
-      "fecha": "2026-11-07T07:49:59.907Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "La venta masiva de activos argentinos derrumba los precios y es señal de la fuga de divisas tras la desconfianza generada por l…",
-      "descripcion": "La venta masiva de activos argentinos derrumba los precios y es señal de la fuga de divisas tras la desconfianza generada por la derrota de Trump en las legislativas de Estados Unidos",
-      "url": "https://www.pagina12.com.ar/2026/11/06/titulos-de-deuda-en-caida-y-vuela-el-riesgo-pais/",
-      "fecha": "2026-11-07T07:49:59.907Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
       "titulo": "Consumo abre expediente a una empresa de autobuses por prácticas engañosas en el precio y cláusulas abusivas",
       "descripcion": "Consumo abre expediente a una empresa de autobuses por prácticas engañosas en el precio y cláusulas abusivas",
       "url": "https://www.infobae.com/america/agencias/2026/11/07/consumo-abre-expediente-a-una-empresa-de-autobuses-por-practicas-enganosas-en-el-precio-y-clausulas-abusivas/",
       "fecha": "2026-11-07T07:49:59.772Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Sandra Rossi, especialista en medicina del deporte, advierte sobre el costo del multitasking y el descanso perdido en una activ…",
-      "descripcion": "Sandra Rossi, especialista en medicina del deporte, advierte sobre el costo del multitasking y el descanso perdido en una actividad donde los proveedores del otro lado del mundo marcan los horarios",
-      "url": "https://www.infobae.com/movant/2026/11/06/el-alto-rendimiento-como-escuela-para-navegar-la-incertidumbre-de-logistica-y-comercio-exterior/",
-      "fecha": "2026-11-07T07:49:59.771Z",
       "fuente": "Infobae",
       "categorias": [
         "consumo_masivo"
@@ -2765,157 +2970,6 @@
       ]
     },
     {
-      "titulo": "La inflación en la Ciudad de Buenos Aires fue de 1,9% en octubre y acumuló un 32,5% en los últimos doce meses",
-      "descripcion": "El índice porteño aceleró levemente frente a septiembre. Vivienda, alimentos, salud y restaurantes fueron los rubros que más incidieron en el resultado mensual",
-      "url": "https://www.infobae.com/economia/2026/11/06/la-inflacion-en-la-ciudad-de-buenos-aires-fue-de-19-en-octubre-y-acumulo-un-325-en-los-ultimos-doce-meses/",
-      "fecha": "2026-11-07T07:49:59.768Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "Malas noticias para el consumo online: el CyberMonday vendió un 20% menos que el año anterior",
-      "descripcion": "La baja es en términos reales, descontando la inflación del mismo período. Tomaron mayor protagonismo categorías con tickets promedios más bajos. Además, participaron 100 empresas menos que en la edición anterior",
-      "url": "https://www.infobae.com/economia/2026/11/06/malas-noticias-para-el-consumo-online-el-cybermonday-vendio-un-20-menos-que-el-ano-anterior/",
-      "fecha": "2026-11-07T07:49:59.751Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "De Paysandú a Colón, sin costo: quienes crucen a ver al papa pagarán solo el peaje de ida",
-      "descripcion": "",
-      "url": "https://www.elentrerios.com/",
-      "fecha": "2026-11-07T07:49:59.663Z",
-      "fuente": "El Entre Ríos",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "Por la visita del Papa, refuerzan controles en el puente Colón-Paysandú y restringen el transporte de cargas",
-      "descripcion": "",
-      "url": "https://www.elentrerios.com/",
-      "fecha": "2026-11-07T07:49:59.662Z",
-      "fuente": "El Entre Ríos",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "Francisco De Narváez compró los supermercados DIA en la Argentina, tras el intento fallido de Carrefour",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.067Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Deuda en pesos: sospechan que el Gobierno inyectó $ 2 billones para frenar la suba de tasas",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.066Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "La inflación de octubre fue de 1,8% y no bajará por seis meses, según cree el mercado",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.066Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "Riesgo país, cerca de los 930 puntos: Argentina le pagó al FMI y culpa al frente externo por la incertidumbre",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.066Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Luis Caputo dijo que el riesgo país sube por el temor a un cambio de gobierno y le aseguró al campo que si Milei gana terminará…",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.065Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Las alertas ignoradas: cómo se gestó la crisis de Ueno y por qué apunta al corazón del poder paraguayo",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.065Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "La inflación porteña sube por segundo mes consecutivo: fue de 1,9% en octubre",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.065Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "En octubre se acentuó el ajuste del gasto público primario: perdió contra la inflación y en el año va 3,2% abajo",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.063Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo",
-        "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "La inflación de octubre pega más en la clase media porteña: cuánto hay que ganar para seguir perteneciendo a ese sector",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.063Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "FAL: por qué las pymes necesitan prepararse para aprovechar esta nueva herramienta",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.062Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Crisis en Paraguay",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-07T07:49:59.061Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
       "titulo": "Servicios básicos: el 47% de los hogares argentinos no accede a agua, gas y cloacas al mismo tiempo",
       "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
       "url": "https://www.ellitoral.com/",
@@ -2923,36 +2977,6 @@
       "fuente": "El Litoral (Santa Fe)",
       "categorias": [
         "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "Así cerró el dólar en bancos, blue y MEP este jueves 5 de noviembre",
-      "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-      "url": "https://www.ellitoral.com/",
-      "fecha": "2026-11-07T07:49:58.929Z",
-      "fuente": "El Litoral (Santa Fe)",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "El Gobierno habilitó otras 50.000 importaciones de autos sin arancel para 2027",
-      "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-      "url": "https://www.ellitoral.com/",
-      "fecha": "2026-11-07T07:49:58.928Z",
-      "fuente": "El Litoral (Santa Fe)",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Así cerró el dólar en bancos, blue y MEP este viernes 6 de noviembre",
-      "descripcion": "Noticias de Santa Fe, Argentina y El Mundo. El Litoral de Santa Fe. Noticias actualizadas las 24 horas.",
-      "url": "https://www.ellitoral.com/",
-      "fecha": "2026-11-07T07:49:58.928Z",
-      "fuente": "El Litoral (Santa Fe)",
-      "categorias": [
-        "gobierno"
       ]
     },
     {
@@ -5423,92 +5447,32 @@
       "categorias": [
         "servicios_hogar"
       ]
-    },
-    {
-      "titulo": "Christine Lagarde renuncia como presidenta del Banco Central Europeo 9 meses antes de finalizar su mandato",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-10-31T13:50:26.445Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "La vocera del Fondo Monetario Internacional, Julie Kozack, dijo que acordaron con el Gobierno avanzar en cuatro medidas. El rec…",
-      "descripcion": "La vocera del Fondo Monetario Internacional, Julie Kozack, dijo que acordaron con el Gobierno avanzar en cuatro medidas. El reconocimiento implícito del estancamiento de la economía.",
-      "url": "https://www.pagina12.com.ar/2026/10/29/el-fmi-pide-impulsar-el-crecimiento-pero-su-receta-es-profundizar-el-ajuste/",
-      "fecha": "2026-10-31T13:50:25.967Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Médicos exigen a OSER la devolución de descuentos y advierten que podrían suspender la atención en internaciones",
-      "descripcion": "",
-      "url": "https://www.elentrerios.com/",
-      "fecha": "2026-10-31T13:50:25.533Z",
-      "fuente": "El Entre Ríos",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "El Consejo de Seguridad analizó el impacto de los sistemas autónomos sobre rutas navieras, puertos y cables submarinos, en el m…",
-      "descripcion": "El Consejo de Seguridad analizó el impacto de los sistemas autónomos sobre rutas navieras, puertos y cables submarinos, en el mes con más ataques a buques registrados en el estrecho de Ormuz",
-      "url": "https://www.infobae.com/movant/2026/10/30/la-onu-advierte-que-la-ia-y-los-drones-elevan-los-riesgos-para-el-comercio-maritimo/",
-      "fecha": "2026-10-31T13:50:25.374Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "La iniciativa de ajuste fiscal reúne cinco pilares y deberá superar cuatro debates antes del 16 de diciembre, con la posibilida…",
-      "descripcion": "La iniciativa de ajuste fiscal reúne cinco pilares y deberá superar cuatro debates antes del 16 de diciembre, con la posibilidad de conciliación si las cámaras aprueban textos diferentes entre sí",
-      "url": "https://www.infobae.com/colombia/2026/10/31/este-sera-el-tramite-que-debe-seguir-la-ley-de-ajuste-fiscal-impulsada-por-abelardo-de-la-espriella-en-el-congreso-hay-diferencias-entre-las-bancadas-politicas/",
-      "fecha": "2026-10-31T13:50:25.374Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Las negociaciones podrían definirse en los próximos días. Según fuentes del mercado, la operación podría cerrarse en torno a lo…",
-      "descripcion": "Las negociaciones podrían definirse en los próximos días. Según fuentes del mercado, la operación podría cerrarse en torno a los USD 100 millones. Coincide con una fecha regulatoria clave que el sector sigue con atención",
-      "url": "https://www.infobae.com/economia/2026/10/30/la-venta-de-supermercados-dia-entra-en-la-recta-final-quien-es-el-principal-candidato-para-quedarse-con-la-cadena/",
-      "fecha": "2026-10-31T13:50:25.373Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "consumo_masivo"
-      ]
     }
   ],
   "alertas": [
     {
-      "titulo": "Debido a los feriados establecidos por la llegada del Sumo Pontífice a la Argentina, el organismo previsional modificó algunas …",
+      "titulo": "La inflación se clavó en el 2 por ciento",
       "impacto": "PODER ADQUISITIVO",
       "tiempo": "Hace 3 min",
-      "fuente": "La Nación"
+      "fuente": "Página/12"
     },
     {
-      "titulo": "Todos los detalles. Qué pasó con Ueno Bank y cómo sigue la crisis en Paraguay hoy, viernes 6 de noviembre",
+      "titulo": "De Paysandú a Colón, sin costo: quienes crucen a ver al papa pagarán solo el peaje de ida",
       "impacto": "SERVICIOS Y HOGAR",
       "tiempo": "Hace 3 min",
-      "fuente": "La Nación"
+      "fuente": "El Entre Ríos"
     },
     {
-      "titulo": "La apertura comercial, el dólar y la debilidad del consumo se presentan como una tormenta perfecta para buena parte del tejido …",
+      "titulo": "Especialistas del sector señalaron dificultades para retirar contenedores, mayores costos operativos y la necesidad de mejorar …",
       "impacto": "CONSUMO MASIVO",
       "tiempo": "Hace 3 min",
-      "fuente": "La Nación"
+      "fuente": "Infobae"
     },
     {
-      "titulo": "Dólar blue hoy: a cuánto cotiza el viernes 6 de noviembre",
+      "titulo": "Dólar blue: cotización del viernes 7 de noviembre de 2026",
       "impacto": "GOBIERNO",
       "tiempo": "Hace 3 min",
-      "fuente": "La Nación"
+      "fuente": "Página/12"
     }
   ]
 }
