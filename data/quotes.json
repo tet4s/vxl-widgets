@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-07T02:51:03.812Z",
-  "timestamp_epoch": 1794019863,
+  "last_updated": "2026-11-07T09:18:38.237Z",
+  "timestamp_epoch": 1794043118,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -30,7 +30,7 @@
       "compra": 1560.2,
       "venta": 1587.9,
       "fechaActualizacion": "2026-11-06T21:00:00.000Z",
-      "variacion": -0.01
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -57,7 +57,7 @@
       "compra": 1646.97,
       "venta": 1650.09,
       "fechaActualizacion": "2026-11-06T21:00:00.000Z",
-      "variacion": -0.29
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -70,7 +70,7 @@
     }
   ],
   "dolares_cierre": {
-    "fecha_ultimo": "2026-11-06",
+    "fecha_ultimo": "2026-11-07",
     "ultimo_del_dia": {
       "oficial": 1570,
       "blue": 1555,
@@ -80,14 +80,14 @@
       "cripto": 1650.09,
       "tarjeta": 2041
     },
-    "fecha_cierre": "2026-11-05",
+    "fecha_cierre": "2026-11-06",
     "cierre_anterior": {
       "oficial": 1570,
       "blue": 1555,
-      "bolsa": 1588,
+      "bolsa": 1587.9,
       "contadoconliqui": 1664.9,
       "mayorista": 1545.5,
-      "cripto": 1654.95,
+      "cripto": 1650.09,
       "tarjeta": 2041
     }
   },
@@ -95,43 +95,42 @@
     {
       "label": "PAMPA ENERGÍA",
       "val": "$4.272,50",
-      "var": "▼ 0,12%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "YPF",
       "val": "$6.455,00",
-      "var": "▼ 0,31%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "GRP FIN GALICIA",
       "val": "$4.915,00",
-      "var": "▼ 1,65%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "AL30 (BONO)",
       "val": "$81.250,00",
-      "var": "▲ +0,18%",
-      "class": "up"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "CRESUD (AGRO)",
       "val": "$1.519,00",
-      "var": "▲ +0,26%",
-      "class": "up"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "MOLINOS AGRO",
       "val": "$1.955,00",
-      "var": "▲ +0,26%",
-      "class": "up"
+      "var": "= 0,00%",
+      "class": "neutral"
     }
   ],
   "historial": {
     "PAMPA ENERGÍA": [
-      4972.5,
       5130,
       5265,
       5150,
@@ -154,10 +153,10 @@
       4610,
       4585,
       4360,
-      4290
+      4290,
+      4272.5
     ],
     "YPF": [
-      8050,
       8225,
       8245,
       7980,
@@ -180,10 +179,10 @@
       7265,
       7490,
       7000,
-      6495
+      6495,
+      6455
     ],
     "GRP FIN GALICIA": [
-      5835,
       6135,
       6165,
       5970,
@@ -206,7 +205,8 @@
       5195,
       5255,
       5170,
-      5005
+      5005,
+      4915
     ],
     "AL30 (BONO)": [
       85250,
@@ -235,7 +235,6 @@
       85350
     ],
     "CRESUD (AGRO)": [
-      1829,
       1907,
       1952,
       1873,
@@ -258,10 +257,10 @@
       1625,
       1596,
       1560,
-      1525
+      1525,
+      1519
     ],
     "MOLINOS AGRO": [
-      2330,
       2350,
       2375,
       2380,
@@ -284,7 +283,8 @@
       2170,
       2015,
       2060,
-      1950
+      1950,
+      1955
     ]
   }
 }
