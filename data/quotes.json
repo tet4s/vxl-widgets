@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-07T15:46:12.250Z",
-  "timestamp_epoch": 1794066372,
+  "last_updated": "2026-11-07T19:39:55.867Z",
+  "timestamp_epoch": 1794080395,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -20,7 +20,7 @@
       "nombre": "Blue",
       "compra": 1535,
       "venta": 1555,
-      "fechaActualizacion": "2026-11-07T15:00:00.000Z",
+      "fechaActualizacion": "2026-11-07T18:00:00.000Z",
       "variacion": 0
     },
     {
@@ -29,7 +29,7 @@
       "nombre": "Bolsa",
       "compra": 1560.2,
       "venta": 1587.9,
-      "fechaActualizacion": "2026-11-07T15:00:00.000Z",
+      "fechaActualizacion": "2026-11-07T18:00:00.000Z",
       "variacion": 0
     },
     {
@@ -38,7 +38,7 @@
       "nombre": "Contado con liquidación",
       "compra": 1658.4,
       "venta": 1664.9,
-      "fechaActualizacion": "2026-11-07T15:00:00.000Z",
+      "fechaActualizacion": "2026-11-07T18:00:00.000Z",
       "variacion": 0
     },
     {
@@ -54,10 +54,10 @@
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1648.2,
-      "venta": 1654.97,
-      "fechaActualizacion": "2026-11-07T15:00:00.000Z",
-      "variacion": 0.3
+      "compra": 1644.3,
+      "venta": 1650.4,
+      "fechaActualizacion": "2026-11-07T18:00:00.000Z",
+      "variacion": 0.02
     },
     {
       "moneda": "USD",
@@ -77,7 +77,7 @@
       "bolsa": 1587.9,
       "contadoconliqui": 1664.9,
       "mayorista": 1545.5,
-      "cripto": 1654.97,
+      "cripto": 1650.4,
       "tarjeta": 2041
     },
     "fecha_cierre": "2026-11-06",
