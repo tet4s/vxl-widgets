@@ -396,7 +396,8 @@ async function resolverSegmentos(txt, localidad, provincia, centroCiudad){
       desde: meta.desde || null,
       hasta: meta.hasta || null,
       motivo: motivoCorto(meta.ctx || ''),
-      franja: franjaCorta(meta.ctx || '')
+      franja: franjaCorta(meta.ctx || ''),
+      ctx: (meta.ctx || '').slice(0, 400)
     });
     pts.forEach(p => puntosUsados.push(p));
     return true;
@@ -494,12 +495,36 @@ function textoUbicacion(seg){
 }
 
 function buildItem(o){
-  const segmentos = dedupSegmentos(o.segmentos || (o.puntos && o.puntos.length ? [o.puntos] : null) || []);
+  let segmentos = dedupSegmentos(o.segmentos || (o.puntos && o.puntos.length ? [o.puntos] : null) || []);
+  const habiaSegmentos = segmentos.length > 0;
+  const titulo = tituloLimpio(o.titulo || '') || 'Alerta de tránsito';
+  const AHORA = Date.now();
+
+  // ── Vigencia por tramo: cada corte de la nota tiene su propio plazo ──────
+  // Solo se usa la vigencia explícita/diaria del tramo; si no tiene, hereda la del ítem.
+  const vivos = [];
+  for(const seg of segmentos){
+    if(seg.ctx){
+      const v = calcularVigencia(
+        { titulo, resumen: seg.ctx, descripcion: '', fecha: o.fecha },
+        {}
+      );
+      if(v.tipo !== 'estimada'){
+        seg.vence = v.hasta;
+        seg.vigencia = v.tipo;
+        if(new Date(v.hasta).getTime() <= AHORA) continue;   // este corte ya terminó
+      }
+    }
+    vivos.push(seg);
+  }
+  segmentos = vivos;
+  // Si tenía ubicaciones y todas vencieron, la alerta ya no existe
+  if(habiaSegmentos && segmentos.length === 0) return null;
+
   const conUbicacion = segmentos.length > 0;
   const primero = conUbicacion ? segmentos[0].puntos[0] : null;
   const lat = primero ? primero[0] : null;
   const lon = primero ? primero[1] : null;
-  const titulo = tituloLimpio(o.titulo || '') || 'Alerta de tránsito';
 
   // Motivo y franja a nivel alerta (los tramos heredan el motivo si no tienen)
   const motivo = motivoCorto((o.titulo || '') + ' ' + (o.resumen || '') + ' ' + (o.descripcion || ''));
@@ -516,6 +541,25 @@ function buildItem(o){
     seg.texto = textoUbicacion(seg);   // "Corrientes entre La Paz y Colón" / "Güemes y Ruperto Godoy"
     const u = seg.texto;
     if(u && !calles.includes(u)) calles.push(u);
+  }
+
+  // Vigencia: cuándo deja de mostrarse
+  let vig = calcularVigencia(
+    { titulo, resumen: o.resumen, descripcion: o.descripcion, fecha: o.fecha },
+    { diario: !!o.diario }
+  );
+  // Si los tramos tienen final explícito, el ítem vive hasta el último que termina
+  const fines = segmentos.map(s => s.vence).filter(Boolean)
+    .map(t => new Date(t).getTime()).filter(t => !isNaN(t));
+  if(fines.length){
+    const hastaTramos = Math.max(...fines);
+    const hastaItem = vig.tipo === 'explicita'
+      ? Math.max(hastaTramos, new Date(vig.hasta).getTime())
+      : hastaTramos;
+    if(hastaItem !== new Date(vig.hasta).getTime()){
+      vig = { hasta: new Date(hastaItem).toISOString(), tipo: vig.tipo === 'explicita' ? 'explicita' : 'diaria',
+              detalle: 'hasta el ' + fmtCorto(new Date(hastaItem)) };
+    }
   }
 
   return {
@@ -539,10 +583,247 @@ function buildItem(o){
     via: (o.via || '').trim().slice(0, 90),
     km_desde: o.kmDesde || null,
     km_hasta: o.kmHasta || null,
-    vigente_hasta: vigenteHasta(o.horario, o.fecha) || null,
+    vigencia: vig,
+    vigente_hasta: vig.hasta,
+    fuente_tipo: o.fuenteTipo || 'noticia',
     segmentos: segmentos,
     puntos: conUbicacion ? segmentos[0].puntos : null
   };
+}
+
+/* ── vigencia: cuándo deja de mostrarse una alerta ──────────────────────────
+   Capas, de la más confiable a la más gruesa:
+   1. EXPLÍCITA — la nota dice "hasta el 11 a las 6", "durante 32 horas", "3 meses".
+   2. DIARIA   — boletín del día ("el tránsito de este lunes") → vence a fin del día.
+   3. ESTIMADA — no dice nada: TTL por tipo (obra 30 d, accidente 6 h, ruta 24 h…).
+   Nunca se inventa una hora exacta: si es estimada, el JSON lo declara.
+   ─────────────────────────────────────────────────────────────────────────── */
+const MESES = { enero:0, febrero:1, marzo:2, abril:3, mayo:4, junio:5, julio:6, agosto:7, septiembre:8, setiembre:8, octubre:9, noviembre:10, diciembre:11 };
+const NUMEROS = { un:1, una:1, uno:1, dos:2, tres:3, cuatro:4, cinco:5, seis:6, siete:7, ocho:8, nueve:9, diez:10, once:11, doce:12, quince:15, veinte:20, treinta:30 };
+const DIASEM = { domingo:0, lunes:1, martes:2, miercoles:3, jueves:4, viernes:5, sabado:6 };
+
+function sinAcentos(s){ return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }
+function aNumero(s){
+  if(s == null) return null;
+  const n = parseInt(s, 10);
+  if(!isNaN(n)) return n;
+  const w = NUMEROS[sinAcentos(s)];
+  return w === undefined ? null : w;
+}
+function fmtCorto(d){
+  const p = n => String(n).padStart(2,'0');
+  return p(d.getDate()) + '/' + p(d.getMonth()+1) + (d.getHours() || d.getMinutes() ? ' ' + p(d.getHours()) + ':' + p(d.getMinutes()) : '');
+}
+
+/** Fecha ART (UTC-3) a partir de día/mes/hora. */
+function fechaART(dia, mesNombre, anio, hora, min){
+  const mes = MESES[sinAcentos(mesNombre)];
+  if(mes === undefined || !dia) return null;
+  let year = anio ? +anio : new Date().getFullYear();
+  const H = hora != null ? +hora : 23;
+  const M = min != null ? +min : (hora != null ? 0 : 59);
+  let d = new Date(Date.UTC(year, mes, +dia, H + 3, M, 0));
+  // Si quedó muy en el pasado, el año estaba implícito y es el siguiente
+  if(!anio && d.getTime() < Date.now() - 3*24*3600e3){
+    d = new Date(Date.UTC(year + 1, mes, +dia, H + 3, M, 0));
+  }
+  return isNaN(+d) ? null : d;
+}
+
+/** Próximo día de la semana indicado (a las 23:59 ART). */
+function proximoDiaSem(nombre){
+  const target = DIASEM[sinAcentos(nombre)];
+  if(target === undefined) return null;
+  const hoy = new Date();
+  const diff = (target - hoy.getUTCDay() + 7) % 7 || 7;
+  const d = new Date(Date.UTC(hoy.getUTCFullYear(), hoy.getUTCMonth(), hoy.getUTCDate() + diff, 23 + 3, 59, 0));
+  return d;
+}
+
+const UNIDAD_MS = { hora: 3600e3, dia: 24*3600e3, semana: 7*24*3600e3, mes: 30*24*3600e3 };
+function sumarUnidad(n, unidad, desde){
+  const u = sinAcentos(unidad);
+  const key = u.startsWith('hora') ? 'hora'
+            : u.startsWith('dia') ? 'dia'
+            : u.startsWith('semana') ? 'semana'
+            : u.startsWith('mes') ? 'mes' : null;
+  const ms = key ? UNIDAD_MS[key] : null;
+  if(!ms || !n) return null;
+  return new Date((desde ? desde.getTime() : Date.now()) + n*ms);
+}
+
+/** TTL por tipo cuando la nota no dice nada. */
+function ttlPorTipo(item){
+  const t = sinAcentos((item.titulo||'') + ' ' + (item.resumen||'') + ' ' + (item.descripcion||''));
+  if(/choque|colision|vuelco|siniestro/.test(t)) return { dias: 0.25, detalle: 'estimado: accidente (6 h)' };
+  if(/ruta|autopista|\bkm\b|\brn\b|\brp\b/.test(t)) return { dias: 1, detalle: 'estimado: ruta (24 h)' };
+  if(/obra|bacheo|repaviment|cloaca|colector|redes? de agua|caneria|vial|zanja/.test(t)) return { dias: 30, detalle: 'estimado: obra (30 días)' };
+  return { dias: 2, detalle: 'estimado: corte (48 h)' };
+}
+
+/** "este sábado" y la fecha de la nota cae ese día → boletín diario. */
+function esBoletinDelDia(txt, base){
+  const t = sinAcentos(txt);
+  const m = t.match(/\beste\s+(domingo|lunes|martes|miercoles|jueves|viernes|sabado)\b/);
+  if(!m) return false;
+  const target = DIASEM[m[1]];
+  const art = new Date(base.getTime() - 3*3600e3);   // fecha en hora argentina
+  return target !== undefined && art.getUTCDay() === target;
+}
+
+/**
+ * Devuelve { hasta, tipo, detalle } para una alerta.
+ * tipo: 'explicita' | 'diaria' | 'estimada'
+ */
+function calcularVigencia(item, opciones){
+  opciones = opciones || {};
+  const txt = clean((item.titulo||'') + '. ' + (item.resumen||'') + ' ' + (item.descripcion||''));
+  const base = item.fecha && !isNaN(+new Date(item.fecha)) ? new Date(item.fecha) : new Date();
+  const MAX = base.getTime() + 180*24*3600e3;   // techo absoluto
+
+  // 1) "hasta las 6 del miércoles 11 de noviembre"
+  let m = txt.match(/hasta\s+(?:las?\s+)?(\d{1,2})(?::(\d{2}))?\s*(?:hs?\.?)?\s*del?\s+(?:[a-záéíóúñ]+\s+)?(\d{1,2})\s+de\s+([a-záéíóúñ]+)(?:\s+de\s+(\d{4}))?/i);
+  if(m){
+    const d = fechaART(m[3], m[4], m[5], m[1], m[2]);
+    if(d) return { hasta: d.toISOString(), tipo: 'explicita', detalle: 'hasta el ' + fmtCorto(d) };
+  }
+
+  // 2) "hasta el 11 de noviembre (a las 6)"
+  m = txt.match(/hasta\s+el\s+(?:d[ií]a\s+)?(?:[a-záéíóúñ]+\s+)?(\d{1,2})\s+de\s+([a-záéíóúñ]+)(?:\s+de\s+(\d{4}))?(?:\s+a\s+las?\s+(\d{1,2})(?::(\d{2}))?)?/i);
+  if(m){
+    const d = fechaART(m[1], m[2], m[3], m[4], m[5]);
+    if(d) return { hasta: d.toISOString(), tipo: 'explicita', detalle: 'hasta el ' + fmtCorto(d) };
+  }
+
+  // 3) "hasta el miércoles"
+  m = txt.match(/hasta\s+el\s+(domingo|lunes|martes|mi[eé]rcoles|jueves|viernes|s[áa]bado)\b/i);
+  if(m){
+    const d = proximoDiaSem(m[1]);
+    if(d) return { hasta: d.toISOString(), tipo: 'explicita', detalle: 'hasta el ' + fmtCorto(d) };
+  }
+
+  // 4) "durante toda la jornada" / "todo el día"
+  if(/toda\s+la\s+jornada|todo\s+el\s+d[ií]a/i.test(txt)){
+    const d = new Date(Date.UTC(base.getUTCFullYear(), base.getUTCMonth(), base.getUTCDate(), 23 + 3, 59, 0));
+    return { hasta: d.toISOString(), tipo: 'diaria', detalle: 'solo ese día' };
+  }
+
+  // 5) "durante 32 horas", "plazo estimado de ejecución de tres meses", "por 48 horas"
+  m = txt.match(/(?:durante|por|plazo\s+(?:estimado\s+)?(?:de\s+)?(?:ejecuci[oó]n\s+)?(?:de\s+)?|duraci[oó]n\s+de|aproximadamente|ser[áa]n)\s*(?:un[ao]?\s+)?([a-z0-9]+)\s+(horas?|d[ií]as?|semanas?|meses?)/i);
+  if(!m) m = txt.match(/(\d+|[a-záéíóúñ]+)\s+(horas?|d[ií]as?|semanas?|meses?)\s+(?:de\s+)?(?:labor|trabajo|obra)/i);
+  if(m){
+    const n = aNumero(m[1]);
+    const d = sumarUnidad(n, m[2], base);
+    if(d) return { hasta: d.toISOString(), tipo: 'explicita', detalle: m[1] + ' ' + m[2] + ' desde el ' + fmtCorto(base) };
+  }
+
+  // 6) "hasta nuevo aviso" / "hasta que finalicen" / "permanente" → sin plazo → estimada
+  const explicitaIndefinida = /hasta\s+nuevo\s+aviso|hasta\s+que\s+(finalicen|terminen|concluyan)|permanente/i.test(txt);
+
+  // 6b) Boletín del día: "este sábado" (y la fecha de la nota coincide)
+  if(!explicitaIndefinida && esBoletinDelDia(txt, base)){
+    const d = new Date(Date.UTC(base.getUTCFullYear(), base.getUTCMonth(), base.getUTCDate(), 23 + 3, 59, 0));
+    return { hasta: d.toISOString(), tipo: 'diaria', detalle: 'solo ese día' };
+  }
+
+  // 7) Boletín del día (marcado por la fuente)
+  if(opciones.diario){
+    const d = new Date(Date.UTC(base.getUTCFullYear(), base.getUTCMonth(), base.getUTCDate(), 23 + 3, 59, 0));
+    return { hasta: d.toISOString(), tipo: 'diaria', detalle: 'boletín del día' };
+  }
+
+  // 8) Estimada por tipo
+  const ttl = ttlPorTipo(item);
+  let hasta = base.getTime() + ttl.dias*24*3600e3;
+  if(hasta > MAX) hasta = MAX;
+  return { hasta: new Date(hasta).toISOString(), tipo: 'estimada', detalle: ttl.detalle + (explicitaIndefinida ? ' (sin plazo en la nota)' : '') };
+}
+
+/* ── historial: silencio ≠ liberado ────────────────────────────────────────
+   Un corte publicado por un medio no deja de existir porque el buscador
+   deje de devolver la nota. Los ítems de fuentes de NOTICIA se conservan
+   hasta su vigencia declarada; los de fuentes de ESTADO (boletín diario,
+   estado de rutas) sí desaparecen cuando la fuente deja de listarlos.
+   ─────────────────────────────────────────────────────────────────────── */
+const HISTORIAL = path.join(__dirname, '../data/transito-historial.json');
+
+function cargarHistorial(){
+  try{ return JSON.parse(fs.readFileSync(HISTORIAL, 'utf8')); }
+  catch(e){
+    // Primera corrida con historial: sembrar desde el JSON anterior
+    try{
+      const prev = JSON.parse(fs.readFileSync(OUTPUT, 'utf8'));
+      const seed = { actualizado: null, items: {} };
+      for(const it of (prev.items || [])){
+        if(!it.vigencia){
+          it.vigencia = calcularVigencia(it, {});
+          it.vigente_hasta = it.vigencia.hasta;
+        }
+        if(!it.fuente_tipo) it.fuente_tipo = 'noticia';
+        seed.items[idEstable(it)] = {
+          item: it,
+          fuente_tipo: it.fuente_tipo || 'noticia',
+          primera_vez: it.fecha || null,
+          ultima_vez_vista: prev.timestamp || null
+        };
+      }
+      return seed;
+    }catch(e2){ return { items: {} }; }
+  }
+}
+function guardarHistorial(h){
+  try{ fs.writeFileSync(HISTORIAL, JSON.stringify(h, null, 2), 'utf8'); }catch(e){}
+}
+// Clave estable: mismo lugar + mismo motivo = misma alerta entre corridas
+function idEstable(i){
+  return [osm.norm(i.localidad||''), (i.calles||[]).map(osm.norm).sort().join('~'), osm.norm(i.motivo||'')].join('|');
+}
+
+function fusionarHistorial(items){
+  const h = cargarHistorial();
+  const ahora = Date.now();
+  const previos = (h && h.items) ? h.items : {};
+  const vistosAhora = new Set();
+  const finales = [];
+
+  for(const it of items){
+    const k = idEstable(it);
+    vistosAhora.add(k);
+    finales.push(it);
+  }
+
+  // Recuperar alertas de noticia que siguen vigentes aunque hoy no aparezcan
+  let recuperados = 0;
+  for(const [k, prev] of Object.entries(previos)){
+    if(vistosAhora.has(k)) continue;
+    const it = prev && prev.item;
+    if(!it || !it.vigencia) continue;
+    if(new Date(it.vigencia.hasta).getTime() <= ahora) continue;
+    if((prev.fuente_tipo || 'noticia') === 'estado') continue;   // el estado ya no lo lista
+    if(!it.segmentos || !it.segmentos.length) continue;
+    if(!it.fuente_tipo) it.fuente_tipo = prev.fuente_tipo || 'noticia';
+    finales.push(it);
+    vistosAhora.add(k);
+    recuperados++;
+  }
+
+  // Guardar historial depurado
+  const nuevo = { actualizado: new Date().toISOString(), items: {} };
+  for(const it of finales){
+    const k = idEstable(it);
+    const prev = previos[k];
+    nuevo.items[k] = {
+      item: it,
+      fuente_tipo: it.fuente_tipo || 'noticia',
+      primera_vez: prev ? prev.primera_vez : new Date().toISOString(),
+      ultima_vez_vista: vistosAhora.has(k) && !prev ? new Date().toISOString()
+        : (prev && prev.ultima_vez_vista) || new Date().toISOString(),
+      recuperada: !items.includes(it)
+    };
+  }
+  guardarHistorial(nuevo);
+  if(recuperados) log(`  ${recuperados} alerta(s) recuperada(s) del historial (seguían vigentes)`);
+  return finales;
 }
 
 /* ── limpieza de títulos ─────────────────────────────────────────────────── */
@@ -681,6 +962,8 @@ async function scrapElLitoral(){
         kmDesde: km.from ?? null, kmHasta: km.to ?? null,
         localidad, provincia: 'Santa Fe',
         horario: g.horarios[0] || null,
+        diario: true,           // boletín del día: vence a fin de ese día
+        fuenteTipo: 'estado',   // si la fuente deja de listarlo, se liberó
         segmentos: g.segs
       });
       if(item) out.push(item);
@@ -710,7 +993,7 @@ async function scrapRuta0(){
       const locForGeo = localidad || (prov==='Santa Fe' ? 'Santa Fe' : prov==='Entre Ríos' ? 'Paraná' : '');
       const centro = await georefCiudad(locForGeo, prov || undefined);
       const puntos = await resolverSegmentos(txt, locForGeo, prov, centro);
-      const item = buildItem({ id:'ruta0:'+short(txt,40), titulo:extraerTitulo(txt), tipo:parseTipo(txt,txt), categoria:parseCat(parseTipo(txt,txt)), fecha:new Date().toISOString(), fecha_raw:new Date().toISOString(), descripcion:txt, resumen:txt, enlace:'https://www.ruta0.com/estado-de-rutas/litoral/', via, kmDesde:km.from, kmHasta:km.to, localidad:localidad||(prov||'Litoral'), provincia:prov||'', horario, segmentos: puntos });
+      const item = buildItem({ id:'ruta0:'+short(txt,40), titulo:extraerTitulo(txt), tipo:parseTipo(txt,txt), categoria:parseCat(parseTipo(txt,txt)), fecha:new Date().toISOString(), fecha_raw:new Date().toISOString(), descripcion:txt, resumen:txt, enlace:'https://www.ruta0.com/estado-de-rutas/litoral/', fuenteTipo:'estado', via, kmDesde:km.from, kmHasta:km.to, localidad:localidad||(prov||'Litoral'), provincia:prov||'', horario, segmentos: puntos });
       if(item && PROVS_OK.indexOf(item.provincia)!==-1) out.push(item);
       await sleep(100);
     }
@@ -734,7 +1017,7 @@ async function scrapApsv(){
     const horario = parseHorario(txt);
     const centro = await georefCiudad(localidad, 'Santa Fe');
     const puntos = await resolverSegmentos(txt, localidad, 'Santa Fe', centro);
-    const item = buildItem({ id:'apsv:279907', titulo:extraerTitulo(txt), tipo:parseTipo(txt,txt), categoria:parseCat(parseTipo(txt,txt)), fecha:new Date().toISOString(), fecha_raw:new Date().toISOString(), descripcion:txt, resumen:txt, enlace:'https://www.santafe.gob.ar/noticias/noticia/279907/', via, kmDesde:km.from, kmHasta:km.to, localidad, provincia:'Santa Fe', horario, segmentos: puntos });
+    const item = buildItem({ id:'apsv:279907', titulo:extraerTitulo(txt), tipo:parseTipo(txt,txt), categoria:parseCat(parseTipo(txt,txt)), fecha:new Date().toISOString(), fecha_raw:new Date().toISOString(), descripcion:txt, resumen:txt, enlace:'https://www.santafe.gob.ar/noticias/noticia/279907/', fuenteTipo:'estado', via, kmDesde:km.from, kmHasta:km.to, localidad, provincia:'Santa Fe', horario, segmentos: puntos });
     if(item) out.push(item);
   }catch(e){ log('  ✗ APSV: '+(e.message||e)); }
   return out;
@@ -886,7 +1169,8 @@ async function scrapApfNoticias(){
         const via = extraerVia(txt);
         const item = buildItem({ id:'apfnoticia:'+short(it.title,50), titulo: it.title, tipo:parseTipo(txt, it.title), categoria:parseCat(parseTipo(txt, it.title)), fecha, fecha_raw: fecha, descripcion: txt, resumen: extraerLead($) || txt, enlace: it.link, via, kmDesde:null, kmHasta:null, localidad:'Paraná', provincia:'Entre Ríos', horario, segmentos: puntos });
         if(item) out.push(item);
-      }catch(e){}
+        else if(process.env.DEBUG_TRANSITO) console.error('[bing] item-null ' + original.slice(0,60));
+      }catch(e){ if(process.env.DEBUG_TRANSITO) console.error('[item] ' + (e && e.message ? e.message : e)); }
       await sleep(200);
     }
   }catch(e){ log('  ✗ APFDigital noticias: '+(e.message||e)); }
@@ -926,7 +1210,8 @@ async function scrapElonceSitemap(){
         const via = extraerVia(txt);
         const item = buildItem({ id:'elonce:'+short(titulo,50), titulo, tipo:parseTipo(txt, titulo), categoria:parseCat(parseTipo(txt, titulo)), fecha, fecha_raw: fecha, descripcion: txt, resumen: extraerLead($) || txt, enlace: url, via, kmDesde:null, kmHasta:null, localidad:'Paraná', provincia:'Entre Ríos', horario, segmentos: puntos });
         if(item) out.push(item);
-      }catch(e){}
+        else if(process.env.DEBUG_TRANSITO) console.error('[bing] item-null ' + original.slice(0,60));
+      }catch(e){ if(process.env.DEBUG_TRANSITO) console.error('[item] ' + (e && e.message ? e.message : e)); }
       await sleep(200);
     }
   }catch(e){ log('  ✗ Elonce sitemap: '+(e.message||e)); }
@@ -999,9 +1284,9 @@ async function scrapBingNews(query, tag){
       const original = m ? decodeURIComponent(m[1]) : '';
       if(!original) continue;
       // Filtro previo permisivo (el título del RSS a veces no menciona "corte")
-      if(!/corte|tr[aá]nsito|desv[ií]o|calzada|circulaci[oó]n|agua|cloaca|obra|calle|ruta|acceso|reparaci[oó]n|baches|paviment/i.test(it.title + ' ' + it.desc)) continue;
+      if(!/corte|tr[aá]nsito|desv[ií]o|calzada|circulaci[oó]n|agua|cloaca|obra|calle|ruta|acceso|reparaci[oó]n|baches|paviment/i.test(it.title + ' ' + it.desc)) { if(process.env.DEBUG_TRANSITO) console.error('[bing] pre-filtro: ' + it.title.slice(0,50)); continue; }
       const loc = detectarLocalidad(it.title + ' ' + it.desc + ' ' + original, original);
-      if(!loc) continue;
+      if(!loc) { if(process.env.DEBUG_TRANSITO) console.error('[bing] sin-localidad: ' + original.slice(0,60)); continue; }
       try{
         const html = await fetch(original);
         const $ = cheerio.load(html);
@@ -1009,19 +1294,20 @@ async function scrapBingNews(query, tag){
         const txt = extraerContenido($);
         if(!txt || txt.length < 80) continue;
         // Filtro estricto sobre el contenido real de la noticia
-        if(!/corte|tr[aá]nsito|desv[ií]o|calzada|circulaci[oó]n/i.test(txt)) continue;
+        if(!/corte|tr[aá]nsito|desv[ií]o|calzada|circulaci[oó]n/i.test(txt)) { if(process.env.DEBUG_TRANSITO) console.error('[bing] sin-tema ' + original.slice(0,60)); continue; }
         const fecha = parseFecha(txt, original);
-        if(!fecha) continue;
-        if(Date.now() - new Date(fecha).getTime() > 60*24*60*60*1000) continue;
+        if(!fecha) { if(process.env.DEBUG_TRANSITO) console.error('[bing] sin-fecha'); continue; }
+        if(Date.now() - new Date(fecha).getTime() > 60*24*60*60*1000) { if(process.env.DEBUG_TRANSITO) console.error('[bing] vieja ' + fecha); continue; }
         const horario = parseHorario(txt);
         const centro = await georefCiudad(loc.localidad, loc.provincia);
         let puntos = await resolverSegmentos(txt, loc.localidad, loc.provincia, centro);
-        if(!puntos) continue;
+        if(!puntos) { if(process.env.DEBUG_TRANSITO) console.error('[bing] sin-geometria ' + original.slice(0,60)); continue; }
         const via = extraerVia(txt);
         const titulo = clean($('h1').first().text()).trim() || it.title;
         const item = buildItem({ id: tag+':'+short(titulo,50), titulo, tipo:parseTipo(txt, titulo), categoria:parseCat(parseTipo(txt, titulo)), fecha, fecha_raw: fecha, descripcion: txt, resumen: extraerLead($) || txt, enlace: original, via, kmDesde:null, kmHasta:null, localidad: loc.localidad, provincia: loc.provincia, horario, segmentos: puntos });
         if(item) out.push(item);
-      }catch(e){}
+        else if(process.env.DEBUG_TRANSITO) console.error('[bing] item-null ' + original.slice(0,60));
+      }catch(e){ if(process.env.DEBUG_TRANSITO) console.error('[item] ' + (e && e.message ? e.message : e)); }
       await sleep(200);
     }
   }catch(e){ log('  ✗ Bing News: '+(e.message||e)); }
@@ -1084,15 +1370,26 @@ async function main(){
   const topDesc = Object.entries(descartados).sort((a,b)=>b[1]-a[1]).slice(0,8);
   if(topDesc.length) log('  descartados por dominio: ' + topDesc.map(([d,n])=>d+'('+n+')').join(', '));
 
-  // ── 2) Calidad: provincia válida, tema de tránsito, no vencidas, no viejas ─
-  items = items.filter(i => i && PROVS_OK.indexOf(i.provincia) !== -1
-    && RE_TEMA_TRANSITO.test((i.titulo||'') + ' ' + (i.resumen||''))
-    && (i.sin_ubicacion || (i.lat != null && i.lon != null))
-    && !(i.lat != null && i.lat > -34.0 && i.lon > -58.5)   // Buenos Aires
-    && !(i.lat != null && i.lat < -32.0 && i.lon < -62.0)   // sur del país
-    && !(i.vigente_hasta && new Date(i.vigente_hasta) < new Date())
-    && (!i.fecha || isNaN(+new Date(i.fecha)) || Date.now() - new Date(i.fecha).getTime() < 21*24*60*60*1000)
-  );
+  // ── 2) Calidad: provincia válida, tema de tránsito, vigente y ubicable ────
+  const AHORA = Date.now();
+  const antesDeFiltro = items.length;
+  items = items.filter(i => {
+    if(!i) return false;
+    const razones = [];
+    if(PROVS_OK.indexOf(i.provincia) === -1) razones.push('provincia:' + i.provincia);
+    if(!RE_TEMA_TRANSITO.test((i.titulo||'') + ' ' + (i.resumen||''))) razones.push('tema');
+    if(!(i.sin_ubicacion || (i.lat != null && i.lon != null))) razones.push('sin-coords');
+    if(i.lat != null && i.lat > -34.0 && i.lon > -58.5) razones.push('caba');
+    if(i.lat != null && i.lat < -32.0 && i.lon < -62.0) razones.push('sur');
+    if(!i.vigencia || !(new Date(i.vigencia.hasta).getTime() > AHORA)) razones.push('vencida:' + (i.vigencia ? i.vigencia.hasta : 'sin-dato'));
+    if(i.fecha && !isNaN(+new Date(i.fecha)) && AHORA - new Date(i.fecha).getTime() > 180*24*60*60*1000) razones.push('muy-vieja');
+    if(razones.length){
+      if(process.env.DEBUG_TRANSITO) console.error('[drop] ' + (i.titulo||'').slice(0,60) + ' → ' + razones.join(', '));
+      return false;
+    }
+    return true;
+  });
+  log(`  ${antesDeFiltro - items.length} descartada(s) por vencidas/fuera de zona`);
 
   // ── 3) Alertas sin ubicación: solo si el título es un titular real ────────
   const sinUbi = {};
@@ -1116,6 +1413,10 @@ async function main(){
   });
   items = items.slice(0, MAX);
 
+  // Recuperar lo que sigue vigente aunque hoy no haya aparecido
+  items = fusionarHistorial(items);
+  items = items.slice(0, MAX);
+
   const payload = { timestamp:new Date().toISOString(), timestamp_epoch:Math.floor(Date.now()/1000), source:'vxl-transito-ar', cantidad:items.length, items:items };
   fs.writeFileSync(OUTPUT, JSON.stringify(payload,null,2), 'utf-8');
   log(`💾 data/transito.json OK — ${items.length} alerta(s). Provincias: `+[...new Set(items.map(i=>i.provincia))].join(', '));
@@ -1127,4 +1428,4 @@ if(require.main === module){
 }
 
 // Exportado para tests (no se ejecuta al importar)
-module.exports = { extraerSegmentos, resolverSegmentos, limpiarNombre, parseHorario, parseFecha, parseTipo };
+module.exports = { extraerSegmentos, resolverSegmentos, limpiarNombre, parseHorario, parseFecha, parseTipo, calcularVigencia, motivoCorto, franjaCorta };

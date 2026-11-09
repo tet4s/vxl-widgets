@@ -1,0 +1,257 @@
+{
+  "actualizado": "2026-11-09T22:33:56.803Z",
+  "items": {
+    "santa fe|4 de enero y bulevar pellegrini~9 de julio y bulevar pellegrini~entre rios entre 1° de mayo y 4 de enero~francia y bulevar pellegrini~guemes y ruperto godoy~urquiza y bulevar pellegrini|obras en colector cloacal": {
+      "item": {
+        "id": "bing-santafe:Cortes de tránsito, obras en bulevar y desvíos de…",
+        "titulo": "Cortes de tránsito, obras en bulevar y desvíos de colectivos en Santa Fe este lunes 9 de noviembre",
+        "categoria": "cortes",
+        "tipo": "corte_total",
+        "fecha": "2026-11-09T00:00:00-03:00",
+        "fecha_raw": "2026-11-09T00:00:00-03:00",
+        "horario": "hasta 6",
+        "motivo": "Obras en colector cloacal",
+        "franja": "",
+        "calles": [
+          "Entre Ríos entre 1° de Mayo y 4 de Enero",
+          "Güemes y Ruperto Godoy",
+          "9 de Julio y Bulevar Pellegrini",
+          "4 de Enero y Bulevar Pellegrini",
+          "Urquiza y Bulevar Pellegrini",
+          "Francia y Bulevar Pellegrini"
+        ],
+        "resumen": "Entre Ríos entre 1° de Mayo y 4 de Enero · Güemes y Ruperto Godoy · 9 de Julio y Bulevar Pellegrini · 4 de Enero y Bulevar Pellegrini · Urqu…",
+        "descripcion": "Entre Ríos entre 1° de Mayo y 4 de Enero · Güemes y Ruperto Godoy · 9 de Julio y Bulevar Pellegrini · 4 de Enero y Bulevar Pellegrini · Urquiza y Bulevar Pelleg…",
+        "enlace": "https://www.airedesantafe.com.ar/santa-fe/cortes-transito-obras-bulevar-y-desvios-colectivos-santa-fe-este-lunes-9-noviembre-n676139",
+        "lat": -31.6595801,
+        "lon": -60.714549,
+        "sin_ubicacion": false,
+        "localidad": "Santa Fe",
+        "provincia": "Santa Fe",
+        "via": "",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-11-11T09:00:00.000Z",
+          "tipo": "explicita",
+          "detalle": "hasta el 11/11 06:00"
+        },
+        "vigente_hasta": "2026-11-11T09:00:00.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.6595801,
+                -60.714549
+              ],
+              [
+                -31.659305,
+                -60.7159008
+              ]
+            ],
+            "calle": "Entre Ríos",
+            "desde": "1° de Mayo",
+            "hasta": "4 de Enero",
+            "motivo": "Desvío de tránsito",
+            "franja": "Todo el día",
+            "ctx": "Entre Ríos, entre 1° de Mayo y 4 de Enero: reducción permanente desde las 00 por trabajos de ASSA (con desvíos de colectivos).",
+            "entre": "1° de Mayo y 4 de Enero",
+            "texto": "Entre Ríos entre 1° de Mayo y 4 de Enero"
+          },
+          {
+            "puntos": [
+              [
+                -31.6185317,
+                -60.6832434
+              ]
+            ],
+            "calle": "Güemes",
+            "desde": "Ruperto Godoy",
+            "hasta": null,
+            "motivo": "Bacheo",
+            "franja": "Todo el día",
+            "ctx": "Güemes, entre Ruperto Godoy y Santiago Derqui: corte total durante toda la jornada por tareas de bacheo a cargo de la Municipalidad (sin impacto en el transporte urbano).",
+            "vence": "2026-11-10T02:59:00.000Z",
+            "vigencia": "diaria",
+            "entre": "Ruperto Godoy",
+            "texto": "Güemes y Ruperto Godoy"
+          },
+          {
+            "puntos": [
+              [
+                -31.6350786,
+                -60.7058948
+              ]
+            ],
+            "calle": "9 de Julio",
+            "desde": "Bulevar Pellegrini",
+            "hasta": null,
+            "motivo": "Obras en colector cloacal",
+            "franja": "22:00 a 06:00",
+            "ctx": "9 de Julio y Bulevar Pellegrini (sector del cantero central): corte total que comienza a regir a partir de las 22 de este lunes y se extenderá hasta las 6 del miércoles 11 de noviembre.",
+            "vence": "2026-11-11T09:00:00.000Z",
+            "vigencia": "explicita",
+            "entre": "Bulevar Pellegrini",
+            "texto": "9 de Julio y Bulevar Pellegrini"
+          },
+          {
+            "puntos": [
+              [
+                -31.634502,
+                -60.708573
+              ]
+            ],
+            "calle": "4 de Enero",
+            "desde": "Bulevar Pellegrini",
+            "hasta": null,
+            "motivo": "Obras en colector cloacal",
+            "franja": "desde 22:00",
+            "ctx": "4 de Enero y Bulevar Pellegrini: calzada reducida a partir de las 22, en simultáneo con el corte sobre calle 9 de Julio, por obras del colector cloacal.",
+            "vence": "2026-11-10T02:59:00.000Z",
+            "vigencia": "diaria",
+            "entre": "Bulevar Pellegrini",
+            "texto": "4 de Enero y Bulevar Pellegrini"
+          },
+          {
+            "puntos": [
+              [
+                -31.6340829,
+                -60.7098444
+              ]
+            ],
+            "calle": "Urquiza",
+            "desde": "Bulevar Pellegrini",
+            "hasta": null,
+            "motivo": "Obras en colector cloacal",
+            "franja": "",
+            "ctx": "Urquiza y Bulevar Pellegrini: paso restringido continuo por obras de ASSA en el colector cloacal.",
+            "vence": "2026-11-10T02:59:00.000Z",
+            "vigencia": "diaria",
+            "entre": "Bulevar Pellegrini",
+            "texto": "Urquiza y Bulevar Pellegrini"
+          },
+          {
+            "puntos": [
+              [
+                -31.6339208,
+                -60.711325
+              ]
+            ],
+            "calle": "Francia",
+            "desde": "Bulevar Pellegrini",
+            "hasta": null,
+            "motivo": "Obras en colector cloacal",
+            "franja": "Todo el día",
+            "ctx": "Francia y Bulevar Pellegrini (cantero central): reducción permanente por intervenciones en el colector cloacal de ASSA.",
+            "entre": "Bulevar Pellegrini",
+            "texto": "Francia y Bulevar Pellegrini"
+          }
+        ],
+        "puntos": [
+          [
+            -31.6595801,
+            -60.714549
+          ],
+          [
+            -31.659305,
+            -60.7159008
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-09T00:00:00-03:00",
+      "ultima_vez_vista": "2026-11-09T21:18:10.563Z",
+      "recuperada": false
+    },
+    "parana|corrientes entre la paz y colon~villaguay entre alsina y cura alvarez|mantenimiento de red de agua": {
+      "item": {
+        "id": "bing-apf-cortes:El Municipio de Paraná realiza trabajos de manteni…",
+        "titulo": "El Municipio de Paraná realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca",
+        "categoria": "cortes",
+        "tipo": "corte_total",
+        "fecha": "2026-10-28T00:00:00-03:00",
+        "fecha_raw": "2026-10-28T00:00:00-03:00",
+        "horario": null,
+        "motivo": "Mantenimiento de red de agua",
+        "franja": "",
+        "calles": [
+          "Corrientes entre La Paz y Colón",
+          "Villaguay entre Alsina y Cura Álvarez"
+        ],
+        "resumen": "Corrientes entre La Paz y Colón · Villaguay entre Alsina y Cura Álvarez",
+        "descripcion": "Corrientes entre La Paz y Colón · Villaguay entre Alsina y Cura Álvarez",
+        "enlace": "https://www.apfdigital.com.ar/noticias/2026/10/28/476715-el-municipio-de-parana-realiza-trabajos-de-mantenimiento-y-reparacion-en-las-redes-de-agua-y-cloaca",
+        "lat": -31.7290563,
+        "lon": -60.5270386,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "calle Corrientes",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigente_hasta": "2026-11-27T03:00:00.000Z",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.7290563,
+                -60.5270386
+              ],
+              [
+                -31.7278727,
+                -60.5264172
+              ]
+            ],
+            "calle": "Corrientes",
+            "desde": "La Paz",
+            "hasta": "Colón",
+            "motivo": "Mantenimiento de red de agua",
+            "franja": "",
+            "entre": "La Paz y Colón",
+            "texto": "Corrientes entre La Paz y Colón"
+          },
+          {
+            "puntos": [
+              [
+                -31.7438224,
+                -60.5216426
+              ],
+              [
+                -31.7432956,
+                -60.5227917
+              ]
+            ],
+            "calle": "Villaguay",
+            "desde": "Alsina",
+            "hasta": "Cura Álvarez",
+            "motivo": "Mantenimiento de red cloacal",
+            "franja": "",
+            "entre": "Alsina y Cura Álvarez",
+            "texto": "Villaguay entre Alsina y Cura Álvarez"
+          }
+        ],
+        "puntos": [
+          [
+            -31.7290563,
+            -60.5270386
+          ],
+          [
+            -31.7278727,
+            -60.5264172
+          ]
+        ],
+        "vigencia": {
+          "hasta": "2026-11-27T03:00:00.000Z",
+          "tipo": "estimada",
+          "detalle": "estimado: obra (30 días)"
+        },
+        "fuente_tipo": "noticia"
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-10-28T00:00:00-03:00",
+      "ultima_vez_vista": "2026-11-09T21:18:10.563Z",
+      "recuperada": true
+    }
+  }
+}

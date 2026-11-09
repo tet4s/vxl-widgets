@@ -38,6 +38,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data/transito.json
+          git add data/transito.json data/transito-historial.json
           git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de alertas de tránsito [skip ci]"
           git push

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-09T21:18:10.563Z",
-  "timestamp_epoch": 1794259090,
+  "timestamp": "2026-11-09T22:33:56.804Z",
+  "timestamp_epoch": 1794263636,
   "source": "vxl-transito-ar",
   "cantidad": 2,
   "items": [
@@ -33,7 +33,13 @@
       "via": "",
       "km_desde": null,
       "km_hasta": null,
-      "vigente_hasta": null,
+      "vigencia": {
+        "hasta": "2026-11-11T09:00:00.000Z",
+        "tipo": "explicita",
+        "detalle": "hasta el 11/11 06:00"
+      },
+      "vigente_hasta": "2026-11-11T09:00:00.000Z",
+      "fuente_tipo": "noticia",
       "segmentos": [
         {
           "puntos": [
@@ -51,6 +57,7 @@
           "hasta": "4 de Enero",
           "motivo": "Desvío de tránsito",
           "franja": "Todo el día",
+          "ctx": "Entre Ríos, entre 1° de Mayo y 4 de Enero: reducción permanente desde las 00 por trabajos de ASSA (con desvíos de colectivos).",
           "entre": "1° de Mayo y 4 de Enero",
           "texto": "Entre Ríos entre 1° de Mayo y 4 de Enero"
         },
@@ -66,6 +73,9 @@
           "hasta": null,
           "motivo": "Bacheo",
           "franja": "Todo el día",
+          "ctx": "Güemes, entre Ruperto Godoy y Santiago Derqui: corte total durante toda la jornada por tareas de bacheo a cargo de la Municipalidad (sin impacto en el transporte urbano).",
+          "vence": "2026-11-10T02:59:00.000Z",
+          "vigencia": "diaria",
           "entre": "Ruperto Godoy",
           "texto": "Güemes y Ruperto Godoy"
         },
@@ -81,6 +91,9 @@
           "hasta": null,
           "motivo": "Obras en colector cloacal",
           "franja": "22:00 a 06:00",
+          "ctx": "9 de Julio y Bulevar Pellegrini (sector del cantero central): corte total que comienza a regir a partir de las 22 de este lunes y se extenderá hasta las 6 del miércoles 11 de noviembre.",
+          "vence": "2026-11-11T09:00:00.000Z",
+          "vigencia": "explicita",
           "entre": "Bulevar Pellegrini",
           "texto": "9 de Julio y Bulevar Pellegrini"
         },
@@ -96,6 +109,9 @@
           "hasta": null,
           "motivo": "Obras en colector cloacal",
           "franja": "desde 22:00",
+          "ctx": "4 de Enero y Bulevar Pellegrini: calzada reducida a partir de las 22, en simultáneo con el corte sobre calle 9 de Julio, por obras del colector cloacal.",
+          "vence": "2026-11-10T02:59:00.000Z",
+          "vigencia": "diaria",
           "entre": "Bulevar Pellegrini",
           "texto": "4 de Enero y Bulevar Pellegrini"
         },
@@ -111,6 +127,9 @@
           "hasta": null,
           "motivo": "Obras en colector cloacal",
           "franja": "",
+          "ctx": "Urquiza y Bulevar Pellegrini: paso restringido continuo por obras de ASSA en el colector cloacal.",
+          "vence": "2026-11-10T02:59:00.000Z",
+          "vigencia": "diaria",
           "entre": "Bulevar Pellegrini",
           "texto": "Urquiza y Bulevar Pellegrini"
         },
@@ -126,6 +145,7 @@
           "hasta": null,
           "motivo": "Obras en colector cloacal",
           "franja": "Todo el día",
+          "ctx": "Francia y Bulevar Pellegrini (cantero central): reducción permanente por intervenciones en el colector cloacal de ASSA.",
           "entre": "Bulevar Pellegrini",
           "texto": "Francia y Bulevar Pellegrini"
         }
@@ -166,7 +186,7 @@
       "via": "calle Corrientes",
       "km_desde": null,
       "km_hasta": null,
-      "vigente_hasta": null,
+      "vigente_hasta": "2026-11-27T03:00:00.000Z",
       "segmentos": [
         {
           "puntos": [
@@ -216,7 +236,13 @@
           -31.7278727,
           -60.5264172
         ]
-      ]
+      ],
+      "vigencia": {
+        "hasta": "2026-11-27T03:00:00.000Z",
+        "tipo": "estimada",
+        "detalle": "estimado: obra (30 días)"
+      },
+      "fuente_tipo": "noticia"
     }
   ]
 }
