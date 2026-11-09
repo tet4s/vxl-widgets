@@ -630,14 +630,21 @@ function fechaART(dia, mesNombre, anio, hora, min){
   return isNaN(+d) ? null : d;
 }
 
-/** Próximo día de la semana indicado (a las 23:59 ART). */
+/** Fecha "corrida" a hora Argentina (para comparar días sin depender del TZ del runner). */
+function diaART(d){ return new Date(((d || new Date()).getTime()) - 3*3600e3); }
+/** Fin del día argentino (23:59 ART) del día al que pertenece `d`. */
+function finDelDiaART(d){
+  const a = diaART(d);
+  return new Date(Date.UTC(a.getUTCFullYear(), a.getUTCMonth(), a.getUTCDate(), 26, 59, 0));
+}
+
+/** Próximo día de la semana indicado, a las 23:59 ART. */
 function proximoDiaSem(nombre){
   const target = DIASEM[sinAcentos(nombre)];
   if(target === undefined) return null;
-  const hoy = new Date();
-  const diff = (target - hoy.getUTCDay() + 7) % 7 || 7;
-  const d = new Date(Date.UTC(hoy.getUTCFullYear(), hoy.getUTCMonth(), hoy.getUTCDate() + diff, 23 + 3, 59, 0));
-  return d;
+  const a = diaART();
+  const diff = (target - a.getUTCDay() + 7) % 7 || 7;
+  return new Date(Date.UTC(a.getUTCFullYear(), a.getUTCMonth(), a.getUTCDate() + diff, 26, 59, 0));
 }
 
 const UNIDAD_MS = { hora: 3600e3, dia: 24*3600e3, semana: 7*24*3600e3, mes: 30*24*3600e3 };
@@ -704,8 +711,7 @@ function calcularVigencia(item, opciones){
 
   // 4) "durante toda la jornada" / "todo el día"
   if(/toda\s+la\s+jornada|todo\s+el\s+d[ií]a/i.test(txt)){
-    const d = new Date(Date.UTC(base.getUTCFullYear(), base.getUTCMonth(), base.getUTCDate(), 23 + 3, 59, 0));
-    return { hasta: d.toISOString(), tipo: 'diaria', detalle: 'solo ese día' };
+    return { hasta: finDelDiaART(base).toISOString(), tipo: 'diaria', detalle: 'solo ese día' };
   }
 
   // 5) "durante 32 horas", "plazo estimado de ejecución de tres meses", "por 48 horas"
@@ -722,14 +728,12 @@ function calcularVigencia(item, opciones){
 
   // 6b) Boletín del día: "este sábado" (y la fecha de la nota coincide)
   if(!explicitaIndefinida && esBoletinDelDia(txt, base)){
-    const d = new Date(Date.UTC(base.getUTCFullYear(), base.getUTCMonth(), base.getUTCDate(), 23 + 3, 59, 0));
-    return { hasta: d.toISOString(), tipo: 'diaria', detalle: 'solo ese día' };
+    return { hasta: finDelDiaART(base).toISOString(), tipo: 'diaria', detalle: 'solo ese día' };
   }
 
   // 7) Boletín del día (marcado por la fuente)
   if(opciones.diario){
-    const d = new Date(Date.UTC(base.getUTCFullYear(), base.getUTCMonth(), base.getUTCDate(), 23 + 3, 59, 0));
-    return { hasta: d.toISOString(), tipo: 'diaria', detalle: 'boletín del día' };
+    return { hasta: finDelDiaART(base).toISOString(), tipo: 'diaria', detalle: 'boletín del día' };
   }
 
   // 8) Estimada por tipo
