@@ -242,7 +242,7 @@ function extraerSegmentos(txt){
   const out = [];
   const visto = new Set();
 
-  const push = (calle, desde, hasta) => {
+  const push = (calle, desde, hasta, ctx) => {
     const c = limpiarNombre(calle);
     if(!c) return;
     const d = limpiarNombre(desde);
@@ -251,7 +251,7 @@ function extraerSegmentos(txt){
     const k = [c, d, h].map(x => x ? osm.norm(x) : '').join('|');
     if(visto.has(k)) return;
     visto.add(k);
-    out.push({ calle: c, desde: d, hasta: h });
+    out.push({ calle: c, desde: d, hasta: h, ctx: ctx || '' });
   };
 
   const PAL = '(?:[A-ZÁÉÍÓÚÑÜ0-9][\\wáéíóúñüÁÉÍÓÚÑÜ°.]*|de|del|la|las|los)';
@@ -274,14 +274,14 @@ function extraerSegmentos(txt){
       const corte = resto.search(/\bcalle\s/);
       if(corte > 0) resto = resto.slice(0, corte);
       const mEntre = resto.match(/entre\s+(?:calles?\s+)?([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})\s+y\s+(?:calles?\s+)?([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})/i);
-      if(mEntre) push(calle, mEntre[1], mEntre[2]);
-      else push(calle, null, null);
+      if(mEntre) push(calle, mEntre[1], mEntre[2], s);
+      else push(calle, null, null, s);
     }
 
     // ── B) "X, entre Y y Z" (sin la palabra "calle") ──────────────────────
     const spans = [];
     while((m = reTramo.exec(s)) !== null){
-      push(m[1], m[2], m[3]);
+      push(m[1], m[2], m[3], s);
       spans.push([m.index, m.index + m[0].length]);
     }
 
@@ -290,14 +290,14 @@ function extraerSegmentos(txt){
     for(const [a, b] of spans) for(let i = a; i < b; i++) s2[i] = ' ';
     s2 = s2.join('');
     while((m = reEsquina.exec(s2)) !== null){
-      push(m[1], m[2], null);
+      push(m[1], m[2], null, s);
     }
 
     // ── D) "calles X y Y" ─────────────────────────────────────────────────
     const reCalles = /\bcalles\s+([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})\s+y\s+(?:calles?\s+)?([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})/gi;
     while((m = reCalles.exec(s)) !== null){
-      push(m[1], null, null);
-      push(m[2], null, null);
+      push(m[1], null, null, s);
+      push(m[2], null, null, s);
     }
   }
 
@@ -314,6 +314,56 @@ function extraerRutas(txt){
     if(!rutas.find(x => x.toLowerCase() === r.toLowerCase())) rutas.push(r);
   }
   return rutas;
+}
+
+/* ── motivo y franja horaria (texto corto para las cards) ───────────────── */
+// Vocabulario controlado: la card muestra 2-4 palabras, no una frase entera.
+const MOTIVOS = [
+  [/redes?\s+de\s+agua|agua\s+potable|ca[ñn]er[ií]a\s+de\s+agua/i, 'Mantenimiento de red de agua'],
+  [/colector/i,                                                    'Obras en colector cloacal'],
+  [/cloaca|cloacal|desag[üu]e/i,                                   'Mantenimiento de red cloacal'],
+  [/bacheo|baches/i,                                               'Bacheo'],
+  [/repaviment|paviment/i,                                         'Repavimentación'],
+  [/sem[aá]foro/i,                                                 'Semáforo fuera de servicio'],
+  [/choque|colisi[oó]n|vuelco/i,                                   'Choque'],
+  [/desv[ií]o\s+de\s+(colectivo|transporte)/i,                     'Desvío de colectivos'],
+  [/desv[ií]o/i,                                                   'Desvío de tránsito'],
+  [/obra|intervenci[oó]n|vial/i,                                   'Obra en la vía pública'],
+];
+
+function capitalizar(t){
+  return t ? t.charAt(0).toUpperCase() + t.slice(1) : t;
+}
+
+/** Motivo corto y consistente: "Bacheo", "Mantenimiento de red de agua", ... */
+function motivoCorto(txt){
+  const t = clean(txt);
+  if(!t) return '';
+  for(const [re, label] of MOTIVOS) if(re.test(t)) return label;
+  return '';
+}
+
+/** Franja horaria, solo si la noticia la menciona. */
+function franjaCorta(txt){
+  const t = clean(txt);
+  if(!t) return '';
+  const p2 = n => String(n).padStart(2,'0');
+  const hhmm = (h, m) => p2(h) + ':' + (m || '00');
+
+  // "a partir de las 22 ... hasta las 6"
+  let m = t.match(/a\s+partir\s+de\s+las\s+(\d{1,2})(?::(\d{2}))?[\s\S]{0,80}?hasta\s+(?:las\s+)?(\d{1,2})(?::(\d{2}))?/i);
+  if(m) return hhmm(m[1], m[2]) + ' a ' + hhmm(m[3], m[4]);
+
+  // "de 17 a 22" / "desde las 8 hasta las 18"
+  m = t.match(/(?:de|desde)\s+(?:las\s+)?(\d{1,2})(?::(\d{2}))?\s*(?:hs?|horas)?\s*(?:a|hasta)\s+(?:las\s+)?(\d{1,2})(?::(\d{2}))?/i);
+  if(m) return hhmm(m[1], m[2]) + ' a ' + hhmm(m[3], m[4]);
+
+  // "a partir de las 22"
+  m = t.match(/a\s+partir\s+de\s+las\s+(\d{1,2})(?::(\d{2}))?/i);
+  if(m) return parseInt(m[1], 10) === 0 ? 'Todo el día' : 'desde ' + hhmm(m[1], m[2]);
+
+  if(/todo el d[ií]a|toda la jornada|las 24 horas|permanente/i.test(t)) return 'Todo el día';
+  return '';
 }
 
 async function resolverSegmentos(txt, localidad, provincia, centroCiudad){
@@ -333,14 +383,21 @@ async function resolverSegmentos(txt, localidad, provincia, centroCiudad){
   const MAX_SEGMENTOS = 6;
 
   const lejos = p => !puntosUsados.some(q => osm.distM(p, q) < 30);
-  const agregar = (pts) => {
+  const agregar = (pts, meta) => {
     if(segmentos.length >= MAX_SEGMENTOS) return false;
     if(!pts || !pts.length) return false;
     const k = pts.map(p => p[0].toFixed(4) + ',' + p[1].toFixed(4)).join('|');
     if(claves.has(k)) return false;
     if(pts.length === 1 && !lejos(pts[0])) return false;
     claves.add(k);
-    segmentos.push(pts);
+    segmentos.push({
+      puntos: pts,
+      calle: meta.calle,
+      desde: meta.desde || null,
+      hasta: meta.hasta || null,
+      motivo: motivoCorto(meta.ctx || ''),
+      franja: franjaCorta(meta.ctx || '')
+    });
     pts.forEach(p => puntosUsados.push(p));
     return true;
   };
@@ -349,7 +406,7 @@ async function resolverSegmentos(txt, localidad, provincia, centroCiudad){
   for(const s of segs){
     if(!s.calle || !s.desde || !s.hasta) continue;
     const r = await osm.segmentoEntre(s.calle, s.desde, s.hasta, localidad, provincia, ctx);
-    if(r && r.puntos.length >= 2 && agregar(r.puntos)){
+    if(r && r.puntos.length >= 2 && agregar(r.puntos, s)){
       callesConTramo.add(osm.norm(s.calle));
     }
   }
@@ -361,7 +418,7 @@ async function resolverSegmentos(txt, localidad, provincia, centroCiudad){
     if(!otra) continue;
     if(callesConTramo.has(osm.norm(s.calle))) continue;
     const p = await osm.esquina(s.calle, otra, localidad, provincia, ctx);
-    if(p) agregar([p]);
+    if(p) agregar([p], { calle: s.calle, desde: otra, hasta: null, ctx: s.ctx });
   }
 
   // (No se usan "puntos medios de calle": una calle mencionada sin esquinas
@@ -390,9 +447,12 @@ function dedupSegmentos(segmentos){
   const out = [];
   const keys = new Set();
   for(const seg of segmentos){
-    if(!seg || seg.length === 0) continue;
-    const key = seg.map(p => (p[0]||0).toFixed(4) + ',' + (p[1]||0).toFixed(4)).join('|');
-    if(!keys.has(key)){ keys.add(key); out.push(seg); }
+    const pts = Array.isArray(seg) ? seg : (seg && seg.puntos);
+    if(!pts || !pts.length) continue;
+    const key = pts.map(p => (p[0]||0).toFixed(4) + ',' + (p[1]||0).toFixed(4)).join('|');
+    if(keys.has(key)) continue;
+    keys.add(key);
+    out.push(Array.isArray(seg) ? { puntos: pts } : seg);
   }
   return out;
 }
@@ -425,12 +485,39 @@ function extraerLead($){
   return '';
 }
 
+// Texto corto de ubicación de un tramo: "Corrientes entre La Paz y Colón"
+function textoUbicacion(seg){
+  if(!seg || !seg.calle) return '';
+  if(seg.desde && seg.hasta) return seg.calle + ' entre ' + seg.desde + ' y ' + seg.hasta;
+  if(seg.desde) return seg.calle + ' y ' + seg.desde;
+  return seg.calle;
+}
+
 function buildItem(o){
   const segmentos = dedupSegmentos(o.segmentos || (o.puntos && o.puntos.length ? [o.puntos] : null) || []);
   const conUbicacion = segmentos.length > 0;
-  const lat = conUbicacion ? segmentos[0][0][0] : null;
-  const lon = conUbicacion ? segmentos[0][0][1] : null;
+  const primero = conUbicacion ? segmentos[0].puntos[0] : null;
+  const lat = primero ? primero[0] : null;
+  const lon = primero ? primero[1] : null;
   const titulo = tituloLimpio(o.titulo || '') || 'Alerta de tránsito';
+
+  // Motivo y franja a nivel alerta (los tramos heredan el motivo si no tienen)
+  const motivo = motivoCorto((o.titulo || '') + ' ' + (o.resumen || '') + ' ' + (o.descripcion || ''));
+  const franjas = [...new Set(segmentos.map(s => s.franja).filter(Boolean))];
+  // La franja a nivel alerta solo si es la misma para todos los tramos
+  const franja = franjas.length === 1 ? franjas[0] : '';
+
+  // Completar motivo por tramo y armar la lista corta de calles
+  const calles = [];
+  for(const seg of segmentos){
+    if(!seg.motivo) seg.motivo = motivo;
+    seg.entre = seg.desde && seg.hasta ? seg.desde + ' y ' + seg.hasta
+               : (seg.desde || seg.hasta || '');
+    seg.texto = textoUbicacion(seg);   // "Corrientes entre La Paz y Colón" / "Güemes y Ruperto Godoy"
+    const u = seg.texto;
+    if(u && !calles.includes(u)) calles.push(u);
+  }
+
   return {
     id: o.id,
     titulo: titulo,
@@ -439,8 +526,11 @@ function buildItem(o){
     fecha: o.fecha || '',
     fecha_raw: o.fecha_raw || o.fecha || '',
     horario: o.horario || null,
-    resumen: short(limpiarResumen(o.resumen || o.descripcion, titulo), 180),
-    descripcion: short(limpiarResumen(o.descripcion, titulo), 240),
+    motivo: motivo,
+    franja: franja,
+    calles: calles,
+    resumen: short(calles.join(' · '), 140),
+    descripcion: short(calles.join(' · '), 160),
     enlace: o.enlace || '',
     lat, lon,
     sin_ubicacion: !conUbicacion,
@@ -451,7 +541,7 @@ function buildItem(o){
     km_hasta: o.kmHasta || null,
     vigente_hasta: vigenteHasta(o.horario, o.fecha) || null,
     segmentos: segmentos,
-    puntos: conUbicacion ? segmentos[0] : null
+    puntos: conUbicacion ? segmentos[0].puntos : null
   };
 }
 
@@ -473,17 +563,24 @@ const RE_TEMA_TRANSITO = /corte|tr[aá]nsito|desv[ií]|obra|calle|ruta|autopista
 // Centroide de toda la geometría de una alerta (para reconocer el mismo evento)
 function centroGeom(i){
   const pts = [];
-  for(const seg of (i.segmentos||[])) for(const p of seg) pts.push(p);
+  for(const seg of (i.segmentos||[])) for(const p of (seg.puntos||seg)) pts.push(p);
   if(!pts.length) return null;
   let la=0, lo=0;
   for(const p of pts){ la += p[0]; lo += p[1]; }
   return [la/pts.length, lo/pts.length];
 }
 
+function puntosDe(seg){ return Array.isArray(seg) ? seg : (seg.puntos || []); }
+
 function claveSegmentos(i){
   return new Set((i.segmentos||[])
+    .map(puntosDe)
     .filter(s => s && s.length)
     .map(s => s[0][0].toFixed(4)+','+s[0][1].toFixed(4)+'>'+s[s.length-1][0].toFixed(4)+','+s[s.length-1][1].toFixed(4)));
+}
+
+function totalPuntos(i){
+  return (i.segmentos||[]).reduce((a,s)=>a + puntosDe(s).length, 0);
 }
 
 // Si la geometría de una alerta está contenida en otra (mismo evento publicado
@@ -504,9 +601,7 @@ function dedupPorGeometria(items){
       if(contenida){ idx = j; break; }
     }
     if(idx < 0){ out.push(i); continue; }
-    const nA = (out[idx].segmentos||[]).reduce((a,s)=>a+s.length,0);
-    const nN = (i.segmentos||[]).reduce((a,s)=>a+s.length,0);
-    if(nN > nA) out[idx] = i;
+    if(totalPuntos(i) > totalPuntos(out[idx])) out[idx] = i;
   }
   return out;
 }
