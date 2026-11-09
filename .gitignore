@@ -5,3 +5,6 @@ node_modules/
 .env
 .env.*
 scratch/
+
+# cache de geometría OSM (no es dato de producción)
+data/.cache-osm.json

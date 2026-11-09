@@ -1,148 +1,134 @@
 {
-  "timestamp": "2026-11-19T19:23:00.341Z",
-  "timestamp_epoch": 1795116180,
+  "timestamp": "2026-11-09T20:52:00.135Z",
+  "timestamp_epoch": 1794257520,
   "source": "vxl-transito-ar",
-  "cantidad": 7,
+  "cantidad": 2,
   "items": [
     {
-      "id": "ellitoral:2026-19-11T12:39:Jue:00-03:00",
-      "titulo": "Autopista Santa Fe - Rosario desde el Km 124",
+      "id": "bing-santafe:Cortes de tránsito, obras en bulevar y desvíos de…",
+      "titulo": "Cortes de tránsito, obras en bulevar y desvíos de colectivos en Santa Fe este lunes 9 de noviembre",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-19-11T12:39:Jue:00-03:00",
-      "fecha_raw": "2026-19-11T12:39:Jue:00-03:00",
-      "horario": null,
-      "resumen": "Autopista Santa Fe - Rosario desde el Km 124, altura Barrio Caima - Sentido a Santa Fe. Móvil de seguridad, recorre la zona y no hay animales sueltos. 12:39 / Jue. 19.11.2026 Anima…",
-      "descripcion": "Autopista Santa Fe - Rosario desde el Km 124, altura Barrio Caima - Sentido a Santa Fe. Móvil de seguridad, recorre la zona y no hay animales sueltos. 12:39 / Jue. 19.11.2026 Animales sueltos",
-      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-autopistas-provinciadesantafe-rutas-accesos-ciudaddesantafe_0_YqkSrCrMJY.html",
-      "lat": -33.01252814739675,
-      "lon": -60.6509547378289,
-      "localidad": "Rosario",
+      "fecha": "2026-11-09T00:00:00-03:00",
+      "fecha_raw": "2026-11-09T00:00:00-03:00",
+      "horario": "hasta 6",
+      "resumen": "Nuevas obras en el colector de bulevar, bacheo y reparaciones de ASSA generan cortes de calle y obligan a cambiar el recorrido de colectivos.",
+      "descripcion": "PORTADA | Santa Fe 9 de noviembre de 2026 · 09:41 Cortes de tránsito, obras en bulevar y desvíos de colectivos en Santa Fe este lunes 9 de noviembre Nuevas obras en el colector de bulevar, bacheo y reparaciones de ASSA generan cortes de cal…",
+      "enlace": "https://www.airedesantafe.com.ar/santa-fe/cortes-transito-obras-bulevar-y-desvios-colectivos-santa-fe-este-lunes-9-noviembre-n676139",
+      "lat": -31.6595801,
+      "lon": -60.714549,
+      "sin_ubicacion": false,
+      "localidad": "Santa Fe",
       "provincia": "Santa Fe",
-      "via": "Autopista Santa Fe - Rosario desde el Km 124",
-      "km_desde": "124",
-      "km_hasta": null,
-      "vigente_hasta": null
-    },
-    {
-      "id": "ellitoral:2026-19-11T10:29:Jue:00-03:00",
-      "titulo": "Autopista Santa Fe - Rosario en el Km 03",
-      "categoria": "cortes",
-      "tipo": "obra",
-      "fecha": "2026-19-11T10:29:Jue:00-03:00",
-      "fecha_raw": "2026-19-11T10:29:Jue:00-03:00",
-      "horario": null,
-      "resumen": "Autopista Santa Fe - Rosario en el Km 03, altura de Granadero Baigorria - Sentido a RosarioEquinos sueltos sobre banquina - Circular con precaución 10:29 / Jue. 19.11.2026 Obras en…",
-      "descripcion": "Autopista Santa Fe - Rosario en el Km 03, altura de Granadero Baigorria - Sentido a RosarioEquinos sueltos sobre banquina - Circular con precaución 10:29 / Jue. 19.11.2026 Obras en rutas provinciales: pavimentación y repavimentación",
-      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-autopistas-provinciadesantafe-rutas-accesos-ciudaddesantafe_0_YqkSrCrMJY.html",
-      "lat": -33.01252814739675,
-      "lon": -60.6509547378289,
-      "localidad": "Rosario",
-      "provincia": "Santa Fe",
-      "via": "Autopista Santa Fe - Rosario en el Km 03",
-      "km_desde": "03",
-      "km_hasta": null,
-      "vigente_hasta": null
-    },
-    {
-      "id": "ellitoral:2026-19-11T09:27:Jue:00-03:00",
-      "titulo": "RP 10-s: entre Theobald y RN 9 (departamento Constitución)",
-      "categoria": "cortes",
-      "tipo": "reduccion",
-      "fecha": "2026-19-11T09:27:Jue:00-03:00",
-      "fecha_raw": "2026-19-11T09:27:Jue:00-03:00",
-      "horario": null,
-      "resumen": "Pavimentación - RP 10-s: entre Theobald y RN 9 (departamento Constitución). - RP 91: desvío del tránsito pesado hacia Timbúes (departamento Iriondo). - RP 2: entre San Justo y RP 2…",
-      "descripcion": "Pavimentación - RP 10-s: entre Theobald y RN 9 (departamento Constitución). - RP 91: desvío del tránsito pesado hacia Timbúes (departamento Iriondo). - RP 2: entre San Justo y RP 281 (departamento San Justo). - RP 96: etapas 2 y 3, entre Ch…",
-      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-autopistas-provinciadesantafe-rutas-accesos-ciudaddesantafe_0_YqkSrCrMJY.html",
-      "lat": -28.4858283030726,
-      "lon": -59.608875250976695,
-      "localidad": "Villa Ana",
-      "provincia": "Santa Fe",
-      "via": "RP 10-s: entre Theobald y RN 9 (departamento Constitución)",
+      "via": "",
       "km_desde": null,
       "km_hasta": null,
-      "vigente_hasta": null
+      "vigente_hasta": null,
+      "segmentos": [
+        [
+          [
+            -31.6595801,
+            -60.714549
+          ],
+          [
+            -31.659305,
+            -60.7159008
+          ]
+        ],
+        [
+          [
+            -31.6185317,
+            -60.6832434
+          ]
+        ],
+        [
+          [
+            -31.6350786,
+            -60.7058948
+          ]
+        ],
+        [
+          [
+            -31.634502,
+            -60.708573
+          ]
+        ],
+        [
+          [
+            -31.6340829,
+            -60.7098444
+          ]
+        ],
+        [
+          [
+            -31.6339208,
+            -60.711325
+          ]
+        ]
+      ],
+      "puntos": [
+        [
+          -31.6595801,
+          -60.714549
+        ],
+        [
+          -31.659305,
+          -60.7159008
+        ]
+      ]
     },
     {
-      "id": "ellitoral:2026-19-11T07:47:Jue:00-03:00",
-      "titulo": "Autopista Santa Fe -Rosario en el KM 141 altura de Sauce Viejo - Sentido a Rosar…",
+      "id": "bing-apf-cortes:El Municipio de Paraná realiza trabajos de manteni…",
+      "titulo": "El Municipio de Paraná realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-19-11T07:47:Jue:00-03:00",
-      "fecha_raw": "2026-19-11T07:47:Jue:00-03:00",
+      "fecha": "2026-10-28T00:00:00-03:00",
+      "fecha_raw": "2026-10-28T00:00:00-03:00",
       "horario": null,
-      "resumen": "Autopista Santa Fe -Rosario en el KM 141 altura de Sauce Viejo - Sentido a Rosario, en el KM 126, altura de B. Caima - Sentido a Santa Fe y en el KM 59 a KM 61, altura de Monje - S…",
-      "descripcion": "Autopista Santa Fe -Rosario en el KM 141 altura de Sauce Viejo - Sentido a Rosario, en el KM 126, altura de B. Caima - Sentido a Santa Fe y en el KM 59 a KM 61, altura de Monje - Sentido a Santa Fe 07:47 / Jue. 19.11.2026 Congestión Vehicul…",
-      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-autopistas-provinciadesantafe-rutas-accesos-ciudaddesantafe_0_YqkSrCrMJY.html",
-      "lat": -33.01252814739675,
-      "lon": -60.6509547378289,
-      "localidad": "Rosario",
-      "provincia": "Santa Fe",
-      "via": "Autopista Santa Fe -Rosario en el KM 141 altura de Sauce Viejo - Sentido a Rosario",
-      "km_desde": "141",
-      "km_hasta": null,
-      "vigente_hasta": null
-    },
-    {
-      "id": "ellitoral:2026-19-11T06:53:Jue:00-03:00",
-      "titulo": "Autopista Santa Fe - Rosario en el KM 00",
-      "categoria": "cortes",
-      "tipo": "corte_total",
-      "fecha": "2026-19-11T06:53:Jue:00-03:00",
-      "fecha_raw": "2026-19-11T06:53:Jue:00-03:00",
-      "horario": null,
-      "resumen": "Autopista Santa Fe - Rosario en el KM 00, altura de Rosario - Sentido a Rosario. Congestión vehicular debido a gran afluencia de tránsito hacia salida circunvalación 06:53 / Jue. 1…",
-      "descripcion": "Autopista Santa Fe - Rosario en el KM 00, altura de Rosario - Sentido a Rosario. Congestión vehicular debido a gran afluencia de tránsito hacia salida circunvalación 06:53 / Jue. 19.11.2026 Puente Carretero Santo Tomé-Santa Fe",
-      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-autopistas-provinciadesantafe-rutas-accesos-ciudaddesantafe_0_YqkSrCrMJY.html",
-      "lat": -33.01252814739675,
-      "lon": -60.6509547378289,
-      "localidad": "Rosario",
-      "provincia": "Santa Fe",
-      "via": "Autopista Santa Fe - Rosario en el KM 00",
-      "km_desde": "00",
-      "km_hasta": null,
-      "vigente_hasta": null
-    },
-    {
-      "id": "ellitoral:2026-19-11T06:35:Jue:00-03:00",
-      "titulo": "Autopista Rosario-Córdoba (RN 9) y la RN 1V09 (ex RN 9)",
-      "categoria": "cortes",
-      "tipo": "corte_total",
-      "fecha": "2026-19-11T06:35:Jue:00-03:00",
-      "fecha_raw": "2026-19-11T06:35:Jue:00-03:00",
-      "horario": null,
-      "resumen": "Continúa la reconstrucción de una alcantarilla a la altura de Armstrong. Por las obras, permanece cortada totalmente la circulación entre la Autopista Rosario-Córdoba (RN 9) y la R…",
-      "descripcion": "Continúa la reconstrucción de una alcantarilla a la altura de Armstrong. Por las obras, permanece cortada totalmente la circulación entre la Autopista Rosario-Córdoba (RN 9) y la RN 1V09 (ex RN 9). Los desvíos se realizan por la Ruta Provin…",
-      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-autopistas-provinciadesantafe-rutas-accesos-ciudaddesantafe_0_YqkSrCrMJY.html",
-      "lat": -33.01252814739675,
-      "lon": -60.6509547378289,
-      "localidad": "Rosario",
-      "provincia": "Santa Fe",
-      "via": "Autopista Rosario-Córdoba (RN 9) y la RN 1V09 (ex RN 9)",
+      "resumen": "En calle Corrientes, en el tramo entre calles La Paz y Colón, se relocalizará mediante un desvío, una cañería distribuidora de agua potable de 100 milímetros, debido a la construcc…",
+      "descripcion": "Municipales El Municipio de Paraná realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca El Municipio realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca Las intervenciones se desarrollan en d…",
+      "enlace": "https://www.apfdigital.com.ar/noticias/2026/10/28/476715-el-municipio-de-parana-realiza-trabajos-de-mantenimiento-y-reparacion-en-las-redes-de-agua-y-cloaca",
+      "lat": -31.7290563,
+      "lon": -60.5270386,
+      "sin_ubicacion": false,
+      "localidad": "Paraná",
+      "provincia": "Entre Ríos",
+      "via": "calle Corrientes",
       "km_desde": null,
       "km_hasta": null,
-      "vigente_hasta": null
-    },
-    {
-      "id": "ellitoral:2026-19-11T06:33:Jue:00-03:00",
-      "titulo": "Autopista Santa Fe - Rosario",
-      "categoria": "cortes",
-      "tipo": "corte_total",
-      "fecha": "2026-19-11T06:33:Jue:00-03:00",
-      "fecha_raw": "2026-19-11T06:33:Jue:00-03:00",
-      "horario": null,
-      "resumen": "Permanecerá interrumpido el tránsito en 4 de Enero, entre Salta y Mendoza, debido a trabajos de ASSA en hundimiento de calzada. 06:33 / Jue. 19.11.2026 Autopista Santa Fe - Rosario",
-      "descripcion": "Permanecerá interrumpido el tránsito en 4 de Enero, entre Salta y Mendoza, debido a trabajos de ASSA en hundimiento de calzada. 06:33 / Jue. 19.11.2026 Autopista Santa Fe - Rosario",
-      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-autopistas-provinciadesantafe-rutas-accesos-ciudaddesantafe_0_YqkSrCrMJY.html",
-      "lat": -33.01252814739675,
-      "lon": -60.6509547378289,
-      "localidad": "Rosario",
-      "provincia": "Santa Fe",
-      "via": "Autopista Santa Fe - Rosario",
-      "km_desde": null,
-      "km_hasta": null,
-      "vigente_hasta": null
+      "vigente_hasta": null,
+      "segmentos": [
+        [
+          [
+            -31.7290563,
+            -60.5270386
+          ],
+          [
+            -31.7278727,
+            -60.5264172
+          ]
+        ],
+        [
+          [
+            -31.7438224,
+            -60.5216426
+          ],
+          [
+            -31.7432956,
+            -60.5227917
+          ]
+        ]
+      ],
+      "puntos": [
+        [
+          -31.7290563,
+          -60.5270386
+        ],
+        [
+          -31.7278727,
+          -60.5264172
+        ]
+      ]
     }
   ]
 }

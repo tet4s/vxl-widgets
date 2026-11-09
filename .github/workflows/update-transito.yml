@@ -2,9 +2,14 @@ name: Actualizar Alertas de Tránsito
 
 on:
   schedule:
-    # Cada 15 minutos, de lunes a viernes (horario Argentina ~08:00-20:00)
-    - cron: '*/15 11-23 * * 1-5'
+    # Cada 30 minutos, todos los días (el tránsito no para los fines de semana)
+    - cron: '*/30 * * * *'
   workflow_dispatch:
+
+# Evita que dos corridas se pisen escribiendo data/transito.json
+concurrency:
+  group: transito
+  cancel-in-progress: false
 
 permissions:
   contents: write
