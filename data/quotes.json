@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-09T21:29:32.009Z",
-  "timestamp_epoch": 1794259772,
+  "last_updated": "2026-11-10T03:45:25.716Z",
+  "timestamp_epoch": 1794282325,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -57,7 +57,7 @@
       "compra": 1661.05,
       "venta": 1666,
       "fechaActualizacion": "2026-11-09T20:58:00.000Z",
-      "variacion": 0.57
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -70,7 +70,7 @@
     }
   ],
   "dolares_cierre": {
-    "fecha_ultimo": "2026-11-09",
+    "fecha_ultimo": "2026-11-10",
     "ultimo_del_dia": {
       "oficial": 1570,
       "blue": 1555,
@@ -80,14 +80,14 @@
       "cripto": 1666,
       "tarjeta": 2041
     },
-    "fecha_cierre": "2026-11-08",
+    "fecha_cierre": "2026-11-09",
     "cierre_anterior": {
       "oficial": 1570,
       "blue": 1555,
       "bolsa": 1587.9,
       "contadoconliqui": 1664.9,
       "mayorista": 1545.5,
-      "cripto": 1656.63,
+      "cripto": 1666,
       "tarjeta": 2041
     }
   },
@@ -131,7 +131,6 @@
   ],
   "historial": {
     "PAMPA ENERGÍA": [
-      5130,
       5265,
       5150,
       5190,
@@ -157,7 +156,6 @@
       4272.5
     ],
     "YPF": [
-      8225,
       8245,
       7980,
       8045,
@@ -183,7 +181,6 @@
       6455
     ],
     "GRP FIN GALICIA": [
-      6135,
       6165,
       5970,
       5950,
@@ -235,7 +232,6 @@
       85350
     ],
     "CRESUD (AGRO)": [
-      1907,
       1952,
       1873,
       1873,
@@ -261,7 +257,6 @@
       1519
     ],
     "MOLINOS AGRO": [
-      2350,
       2375,
       2380,
       2305,
