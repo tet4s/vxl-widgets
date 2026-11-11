@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-11T03:12:23.073Z",
-  "timestamp_epoch": 1794366743,
+  "last_updated": "2026-11-11T10:58:08.568Z",
+  "timestamp_epoch": 1794394688,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -113,8 +113,8 @@
     {
       "label": "AL30 (BONO)",
       "val": "$81.250,00",
-      "var": "▲ +0,18%",
-      "class": "up"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "CRESUD (AGRO)",
