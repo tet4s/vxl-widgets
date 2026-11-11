@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-10T23:40:46.516Z",
-  "timestamp_epoch": 1794354046,
+  "timestamp": "2026-11-11T03:04:04.339Z",
+  "timestamp_epoch": 1794366244,
   "source": "vxl-transito-ar",
-  "cantidad": 7,
+  "cantidad": 6,
   "items": [
     {
       "id": "ellitoral:2026-10-11T11:18:Mar:00-03:00",
@@ -119,26 +119,6 @@
       "lon": -59.608875250976695,
       "localidad": "Villa Ana",
       "provincia": "Santa Fe",
-      "via": "",
-      "km_desde": null,
-      "km_hasta": null,
-      "vigente_hasta": null
-    },
-    {
-      "id": "estamoser:Colectivos feministas convocan en Paraná…",
-      "titulo": "Colectivos feministas convocan en Paraná a una vigilia por Micaela García",
-      "categoria": "cortes",
-      "tipo": "corte_total",
-      "fecha": "2026-11-09T00:00:00-03:00",
-      "fecha_raw": "2026-11-09T00:00:00-03:00",
-      "horario": null,
-      "resumen": "La convocatoria será el martes 10 a las 20 en Tribunales. En Gualeguay, donde se sustancia el juicio contra Pavón, la familia y organizaciones convocan a las 9 en Monte Caseros 239…",
-      "descripcion": "La convocatoria será el martes 10 a las 20 en Tribunales. En Gualeguay, donde se sustancia el juicio contra Pavón, la familia y organizaciones convocan a las 9 en Monte Caseros 239. El nuevo debate comenzó el 29 de octubre y la querella sos…",
-      "enlace": "https://estamosentrerios.com/2026/11/09/colectivos-feministas-convocan-parana-vigilia-micaela-garcia/",
-      "lat": -31.7327,
-      "lon": -60.529,
-      "localidad": "Paraná",
-      "provincia": "Entre Ríos",
       "via": "",
       "km_desde": null,
       "km_hasta": null,
