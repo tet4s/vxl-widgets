@@ -1,9 +1,29 @@
 {
-  "timestamp": "2026-11-12T18:43:08.019Z",
-  "timestamp_epoch": 1794508988,
+  "timestamp": "2026-11-12T23:54:48.641Z",
+  "timestamp_epoch": 1794527688,
   "source": "vxl-transito-ar",
-  "cantidad": 10,
+  "cantidad": 11,
   "items": [
+    {
+      "id": "ellitoral:2026-12-11T14:41:Jue:00-03:00",
+      "titulo": "En las inmediaciones de Facundo Zuviría hacia el oeste",
+      "categoria": "cortes",
+      "tipo": "corte_total",
+      "fecha": "2026-12-11T14:41:Jue:00-03:00",
+      "fecha_raw": "2026-12-11T14:41:Jue:00-03:00",
+      "horario": null,
+      "resumen": "En las inmediaciones de Facundo Zuviría hacia el oeste. Circular con precaucióny evitar la zona. 14:41 / Jue. 12.11.2026 Demoras en Santa Fe",
+      "descripcion": "En las inmediaciones de Facundo Zuviría hacia el oeste. Circular con precaucióny evitar la zona. 14:41 / Jue. 12.11.2026 Demoras en Santa Fe",
+      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-rutas-ciudaddesantafe-autopistas-provinciadesantafe-accesos_0_kcShdABDKq.html",
+      "lat": -28.4858283030726,
+      "lon": -59.608875250976695,
+      "localidad": "Santa Fe",
+      "provincia": "Santa Fe",
+      "via": "",
+      "km_desde": null,
+      "km_hasta": null,
+      "vigente_hasta": null
+    },
     {
       "id": "ellitoral:2026-12-11T12:41:Jue:00-03:00",
       "titulo": "Se registra tráfico intenso en los siguientes puntos de la ciudad: Av",
