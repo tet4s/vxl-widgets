@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-12T16:39:12.060Z",
-  "timestamp_epoch": 1794501552,
+  "last_updated": "2026-11-12T22:26:45.524Z",
+  "timestamp_epoch": 1794522405,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -11,53 +11,53 @@
       "nombre": "Oficial",
       "compra": 1520,
       "venta": 1570,
-      "fechaActualizacion": "2026-11-12T13:00:00.000Z",
+      "fechaActualizacion": "2026-11-12T18:00:00.000Z",
       "variacion": 0
     },
     {
       "moneda": "USD",
       "casa": "blue",
       "nombre": "Blue",
-      "compra": 1550,
-      "venta": 1570,
-      "fechaActualizacion": "2026-11-12T15:57:00.000Z",
-      "variacion": 0
+      "compra": 1545,
+      "venta": 1565,
+      "fechaActualizacion": "2026-11-12T20:57:00.000Z",
+      "variacion": -0.32
     },
     {
       "moneda": "USD",
       "casa": "bolsa",
       "nombre": "Bolsa",
-      "compra": 1573.1,
-      "venta": 1574.9,
-      "fechaActualizacion": "2026-11-12T15:57:00.000Z",
-      "variacion": -0.22
+      "compra": 1570.7,
+      "venta": 1573.8,
+      "fechaActualizacion": "2026-11-12T20:57:00.000Z",
+      "variacion": -0.29
     },
     {
       "moneda": "USD",
       "casa": "contadoconliqui",
       "nombre": "Contado con liquidación",
-      "compra": 1665.5,
-      "venta": 1666,
-      "fechaActualizacion": "2026-11-12T15:57:00.000Z",
-      "variacion": 0.07
+      "compra": 1663.4,
+      "venta": 1668.4,
+      "fechaActualizacion": "2026-11-12T20:57:00.000Z",
+      "variacion": 0.21
     },
     {
       "moneda": "USD",
       "casa": "mayorista",
       "nombre": "Mayorista",
-      "compra": 1535,
-      "venta": 1544,
-      "fechaActualizacion": "2026-11-12T12:47:00.000Z",
-      "variacion": 0
+      "compra": 1536.5,
+      "venta": 1545.5,
+      "fechaActualizacion": "2026-11-12T15:57:00.000Z",
+      "variacion": 0.1
     },
     {
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1656.68,
-      "venta": 1667.46,
-      "fechaActualizacion": "2026-11-12T15:57:00.000Z",
-      "variacion": 0.62
+      "compra": 1661.27,
+      "venta": 1666.32,
+      "fechaActualizacion": "2026-11-12T20:57:00.000Z",
+      "variacion": 0.55
     },
     {
       "moneda": "USD",
@@ -65,7 +65,7 @@
       "nombre": "Tarjeta",
       "compra": 1976,
       "venta": 2041,
-      "fechaActualizacion": "2026-11-12T13:00:00.000Z",
+      "fechaActualizacion": "2026-11-12T18:00:00.000Z",
       "variacion": 0
     }
   ],
@@ -73,11 +73,11 @@
     "fecha_ultimo": "2026-11-12",
     "ultimo_del_dia": {
       "oficial": 1570,
-      "blue": 1570,
-      "bolsa": 1574.9,
-      "contadoconliqui": 1666,
-      "mayorista": 1544,
-      "cripto": 1667.46,
+      "blue": 1565,
+      "bolsa": 1573.8,
+      "contadoconliqui": 1668.4,
+      "mayorista": 1545.5,
+      "cripto": 1666.32,
       "tarjeta": 2041
     },
     "fecha_cierre": "2026-11-11",
@@ -94,38 +94,38 @@
   "bursatil": [
     {
       "label": "PAMPA ENERGÍA",
-      "val": "$4.257,50",
-      "var": "▲ +0,53%",
-      "class": "up"
+      "val": "$4.205,00",
+      "var": "▼ 0,71%",
+      "class": "down"
     },
     {
       "label": "YPF",
-      "val": "$6.280,00",
-      "var": "▲ +1,04%",
+      "val": "$6.230,00",
+      "var": "▲ +0,24%",
       "class": "up"
     },
     {
       "label": "GRP FIN GALICIA",
-      "val": "$5.060,00",
-      "var": "▲ +1,65%",
-      "class": "up"
+      "val": "$4.855,00",
+      "var": "▼ 2,46%",
+      "class": "down"
     },
     {
       "label": "AL30 (BONO)",
-      "val": "$82.240,00",
-      "var": "▲ +1,13%",
-      "class": "up"
+      "val": "$81.310,00",
+      "var": "▼ 0,01%",
+      "class": "down"
     },
     {
       "label": "CRESUD (AGRO)",
-      "val": "$1.528,00",
-      "var": "▲ +0,85%",
-      "class": "up"
+      "val": "$1.502,00",
+      "var": "▼ 0,86%",
+      "class": "down"
     },
     {
       "label": "MOLINOS AGRO",
-      "val": "$1.965,00",
-      "var": "▼ 2,48%",
+      "val": "$1.985,00",
+      "var": "▼ 1,49%",
       "class": "down"
     }
   ],
