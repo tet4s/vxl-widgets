@@ -1,31 +1,39 @@
 {
-  "timestamp": "2026-11-12T19:41:48.457Z",
-  "timestamp_epoch": 1794512508,
+  "timestamp": "2026-11-13T00:57:00.672Z",
+  "timestamp_epoch": 1794531420,
   "categoria": "Pizarra Agroexportadora y Litoral",
   "fuente": "Bolsa de Comercio de Rosario / BolsaCER / MAG",
   "items": [
     {
       "label": "SOJA",
-      "valor": "$545.000 /Tn",
+      "valor": "$540.000 /Tn",
       "moneda": "ARS",
-      "valorNumerico": 545000,
-      "variacion": "= 0,00%",
-      "estado": "neutral"
+      "valorNumerico": 540000,
+      "variacion": "▼ -0,92%",
+      "estado": "down"
     },
     {
       "label": "MAÍZ",
-      "valor": "u$s 178 /Tn",
+      "valor": "u$s 175 /Tn",
       "moneda": "USD",
-      "valorNumerico": 178,
-      "variacion": "= 0,00%",
-      "estado": "neutral"
+      "valorNumerico": 175,
+      "variacion": "▼ -1,69%",
+      "estado": "down"
     },
     {
       "label": "TRIGO",
-      "valor": "u$s 210 /Tn",
+      "valor": "u$s 211 /Tn",
       "moneda": "USD",
-      "valorNumerico": 210,
-      "variacion": "= 0,00%",
+      "valorNumerico": 211,
+      "variacion": "▲ +0,48%",
+      "estado": "up"
+    },
+    {
+      "label": "SORGO",
+      "valor": "u$s 175 /Tn",
+      "moneda": "USD",
+      "valorNumerico": 175,
+      "variacion": "= n/d",
       "estado": "neutral"
     },
     {
