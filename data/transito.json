@@ -1,9 +1,29 @@
 {
-  "timestamp": "2026-11-17T19:39:24.018Z",
-  "timestamp_epoch": 1794944364,
+  "timestamp": "2026-11-18T01:53:54.201Z",
+  "timestamp_epoch": 1794966834,
   "source": "vxl-transito-ar",
-  "cantidad": 8,
+  "cantidad": 9,
   "items": [
+    {
+      "id": "ellitoral:2026-17-11T16:07:Mar:00-03:00",
+      "titulo": "Autopista se recordó que a partir del 1 de diciembre de 2026",
+      "categoria": "cortes",
+      "tipo": "choque",
+      "fecha": "2026-17-11T16:07:Mar:00-03:00",
+      "fecha_raw": "2026-17-11T16:07:Mar:00-03:00",
+      "horario": null,
+      "resumen": "Desde la administración de la Autopista se recordó que a partir del 1 de diciembre de 2026, las estaciones de peaje ubicadas en los kilómetros 16, 30 y 143 de la Autopista Rosario-…",
+      "descripcion": "Desde la administración de la Autopista se recordó que a partir del 1 de diciembre de 2026, las estaciones de peaje ubicadas en los kilómetros 16, 30 y 143 de la Autopista Rosario-Santa Fe funcionarán exclusivamente con TelePASE y dejarán d…",
+      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-rutas-autopistas-areametropolitana-ciudaddesantafe-accesos-provinciadesantafe_0_z57qDYfZV6.html",
+      "lat": -33.01252814739675,
+      "lon": -60.6509547378289,
+      "localidad": "Rosario",
+      "provincia": "Santa Fe",
+      "via": "Autopista se recordó que a partir del 1 de diciembre de 2026",
+      "km_desde": null,
+      "km_hasta": null,
+      "vigente_hasta": null
+    },
     {
       "id": "ellitoral:2026-17-11T16:08:Mar:00-03:00",
       "titulo": "Autopista Rosario - Santa Fe",
