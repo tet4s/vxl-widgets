@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-19T21:22:58.662Z",
-  "timestamp_epoch": 1795123378,
-  "total_noticias": 117,
+  "last_updated": "2026-11-19T21:43:56.126Z",
+  "timestamp_epoch": 1795124636,
+  "total_noticias": 118,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 54
+      "total": 55
     },
     {
       "id": "obras",
@@ -17,7 +17,7 @@
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 35
+      "total": 36
     },
     {
       "id": "elecciones",
@@ -34,7 +34,7 @@
     {
       "id": "santa_fe",
       "nombre": "SANTA FE",
-      "total": 9
+      "total": 10
     },
     {
       "id": "entre_rios",
@@ -64,9 +64,24 @@
   ],
   "noticias": [
     {
+      "titulo": "Primer paso para la Ley de Presupuesto de Santa Fe",
+      "resumen": "Los senadores aprobaron la norma de cálculo de gastos y recursos para 2027 con leves modificaciones sobre el proyecto elevado por el gobernador Maximiliano Pullaro. El ministro de Economía Pablo Olivares se reunió con diputados poco antes de que el texto avance en el Senado.",
+      "titulo_info": "Senado santafesino dio luz verde al Presupuesto 2027 de Pullaro con retoques",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T21:37:23.000Z",
+      "jurisdiccion": "santa_fe",
+      "categorias": [
+        "leyes",
+        "gobierno"
+      ],
+      "url": "https://www.ellitoral.com/politica/leydepresupuesto-camaradesenadores-santafe-maximilianopullaro-pabloolivares-fondodeinfraestructuraagropecuaria-juegossuramericanos2026-fabianbastia-rodrigoborla_0_tfJjaYivka.html",
+      "fuente": "El Litoral Política"
+    },
+    {
       "titulo": "“El espíritu del gobernador es que no se muera una cooperativa” dijo el ministro Vilchez",
       "resumen": "El titular de Acción Cooperativa habló de la situación en general de más de 500 entidades que funcionan en Misiones. Algunas están en delicada situación financiera. Sobre la Ceel Eldorado indicó que no habrá elecciones este año y hay una investigación en curso",
-      "titulo_info": "El titular de Acción Cooperativa habló de la situación en general de más de 500 entidades que funcionan en Misiones.",
+      "titulo_info": "Misiones: ministro Vilchez defendió cooperativas en riesgo y apuntó a investigación en Ceel Eldorado",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T21:22:35.946Z",
       "jurisdiccion": "misiones",
       "categorias": [
@@ -78,7 +93,8 @@
     {
       "titulo": "Marcelo Lewandowski: “Esta ley no es buena pero es la mejor ley que podemos sancionar hoy”",
       "resumen": "“Lo vamos a acompañar pero vamos a tener siempre la sensación de que no van a querer aplicarla, de que van a encontrar siempre un pero, una cuestión presupuestaria”, señaló el senador santafecino.",
-      "titulo_info": "Marcelo Lewandowski: “Esta ley no es buena pero es la mejor ley que podemos sancionar hoy”. “Lo vamos a acompañar pero vamos a tener siempre la sensación de que no van a querer aplicarla, de que van a encontrar siempre un pero, una cuestión…",
+      "titulo_info": "Lewandowski: \"Acompañamos ley de presupuesto santafesino, pero tememos que no la apliquen",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T21:22:35.642Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -90,7 +106,8 @@
     {
       "titulo": "Mauricio González confirmó la fecha para las elecciones en Sarmiento",
       "resumen": "A través de un video publicado en sus redes sociales, el presidente de Sarmiento anunció la presentación del balance y la renovación total de autoridades.",
-      "titulo_info": "A través de un video publicado en sus redes sociales, el presidente de Sarmiento anunció la presentación del balance y la renovación total de autoridades.",
+      "titulo_info": "Sarmiento: González confirmó fecha de elecciones y renovación de autoridades",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T21:22:35.465Z",
       "jurisdiccion": "chaco",
       "categorias": [
@@ -102,7 +119,8 @@
     {
       "titulo": "Aún sin las PASO, el calendario electoral habilitaría a la oposición a hacer internas partidarias",
       "resumen": "Si el Gobierno logra su objetivo de cambiar las reglas para 2027, los partidos tendrían hasta agosto para inscribir alianzas y candidatos. Eso estiraría el período de “rosca”, pero también el plazo para una eventual interna con los afiliados propios y los independientes.",
-      "titulo_info": "Aún sin las PASO, el calendario electoral habilitaría a la oposición a hacer internas partidarias. Si el Gobierno logra su objetivo de cambiar las reglas para 2027, los partidos tendrían hasta agosto para inscribir alianzas y candidatos.",
+      "titulo_info": "Oposición podría hacer internas partidarias sin PASO si el Gobierno cambia calendario electoral",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T21:22:35.534Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -114,7 +132,8 @@
     {
       "titulo": "El Tribunal Superior de Justicia porteño limitó la actualización de intereses por despido a la nueva ley de Modernización Laboral",
       "resumen": "Revocó un fallo de la Cámara Nacional de Apelaciones del Trabajo y dispuso que se aplique el artículo 55 de la nueva norma, que establece un piso y un techo",
-      "titulo_info": "El Tribunal Superior de Justicia porteño limitó la actualización de intereses por despido a la nueva ley de Modernización Laboral. Revocó un fallo de la Cámara Nacional de Apelaciones del Trabajo y dispuso que se aplique el artículo 55 de la…",
+      "titulo_info": "TSJ porteño limita actualización de intereses por despido a ley de Modernización Laboral",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T21:22:35.168Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -126,7 +145,8 @@
     {
       "titulo": "“El espíritu del gobernador, es que no se muera una cooperativa” dijo el ministro Vilches",
       "resumen": "El titular de Acción Cooperativa habló de la situación en general de más de 500 entidades que funcionan en Misiones. Algunas están en delicada situación financiera. Sobre la Ceel Eldorado indicó que no habrá elecciones este año y hay una investigación en curso",
-      "titulo_info": "El titular de Acción Cooperativa habló de la situación en general de más de 500 entidades que funcionan en Misiones.",
+      "titulo_info": "Misiones: ministro Vilches defendió cooperativas en riesgo y apuntó a investigación en Ceel Eldorado",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:59:16.457Z",
       "jurisdiccion": "misiones",
       "categorias": [
@@ -138,7 +158,8 @@
     {
       "titulo": "“Fue un viento fuerte”, lo que dejó la visita del Papa en la lucha por la ley de Discapacidad",
       "resumen": "El sacerdote y coordinador del Foro Permanente para la Promoción y la Defensa de los Derechos de las Personas con Discapacidad, Pablo Molero, aseguró que la visita de León XIV a Argentina, y sobre todo su paso por el Cottolengo Don Orione de Claypole, ayudó a terminar de sellar un tema que venía en agenda desde hacía meses.",
-      "titulo_info": "El sacerdote y coordinador del Foro Permanente para la Promoción y la Defensa de los Derechos de las Personas con Discapacidad, Pablo Molero, aseguró que la visita de León XIV a Argentina, y sobre todo su paso por el Cottolengo Don…",
+      "titulo_info": "Visita del Papa impulsó la ley de Discapacidad, según coordinador del Foro Permanente",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:48:05.482Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -150,7 +171,8 @@
     {
       "titulo": "El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
       "resumen": "",
-      "titulo_info": "El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
+      "titulo_info": "Intendente de Berazategui declaró en causa por supuesto plan para atacarlo",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -161,8 +183,9 @@
     },
     {
       "titulo": "Pullaro: “Estamos convencidos de que fortalecer la infraestructura educativa nos permite dar un salto de calidad”",
-      "resumen": "La iniciativa del Gobierno de la Provincia recibió el reconocimiento por parte de la Federación Argentina de Ajedrez en su 18º premiación anual. Durante 2026, el plan llevó adelante más de 30 torneos y convocó a más de 3.000 estudiantes.",
-      "titulo_info": "Pullaro: “Estamos convencidos de que fortalecer la infraestructura educativa nos permite dar un salto de calidad”. La iniciativa del Gobierno de la Provincia recibió el reconocimiento por parte de la Federación Argentina de Ajedrez en su 18º…",
+      "resumen": "Durante la inauguración del nuevo edificio del Jardín de Infantes Nº 365 de Pueblo Esther, en el departamento Rosario, el gobernador destacó la inversión en educación que el Gobierno Provincial lleva adelante en todo el territorio santafesino.",
+      "titulo_info": "Pullaro inauguró jardín en Pueblo Esther y destacó inversión en infraestructura educativa santafesina",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:47:38.929Z",
       "jurisdiccion": "santa_fe",
       "categorias": [
@@ -174,7 +197,8 @@
     {
       "titulo": "Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
       "resumen": "",
-      "titulo_info": "Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
+      "titulo_info": "Corte Suprema declaró inconstitucional DNU de Milei que liberaba precios de prepagas",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -186,7 +210,8 @@
     {
       "titulo": "El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
       "resumen": "",
-      "titulo_info": "El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
+      "titulo_info": "Senado avanza en sanción de ley de discapacidad pese a resistencias del oficialismo",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -199,6 +224,7 @@
       "titulo": "Cuándo se vota a gobernador en Salta",
       "resumen": "",
       "titulo_info": "Cuándo se vota a gobernador en Salta",
+      "titulo_info_src": "",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -210,7 +236,8 @@
     {
       "titulo": "El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
       "resumen": "",
-      "titulo_info": "El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
+      "titulo_info": "Gobierno obtuvo dictamen para suspender PASO tras eliminar listas colectoras",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -222,7 +249,8 @@
     {
       "titulo": "Acusan a la secretaria de Energía de favorecer a una empresa sancionada por operar en Malvinas",
       "resumen": "",
-      "titulo_info": "Acusan a la secretaria de Energía de favorecer a una empresa sancionada por operar en Malvinas",
+      "titulo_info": "Acusan a secretaria de Energía de favorecer a empresa sancionada por operar en Malvinas",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -234,7 +262,8 @@
     {
       "titulo": "Gobernador Virasoro lanzó la Fiesta Nacional del Mate y la Amistad",
       "resumen": "Tras la declaración de su principal evento turístico y cultural con carácter de fiesta nacional, autoridades de Gobernador Virasoro presentaron en la capital correntina los detalles de la celebración que será el fin de semana próximo, y que incluirá festivales así como charlas técnicas y recorridos turísticos por la localidad.",
-      "titulo_info": "Tras la declaración de su principal evento turístico y cultural con carácter de fiesta nacional, autoridades de Gobernador Virasoro presentaron en la capital correntina los detalles de la celebración que será el fin de semana próximo, y…",
+      "titulo_info": "Gobernador Virasoro lanzó la Fiesta Nacional del Mate y la Amistad en Corrientes",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:41.101Z",
       "jurisdiccion": "corrientes",
       "categorias": [
@@ -246,7 +275,8 @@
     {
       "titulo": "En un emotivo acto encabezado por el Gobernador Insfrán y el Vicegobernador Solís, 21 empleados y empleadas legislativas celebraron la finalización del secundario",
       "resumen": "",
-      "titulo_info": "En un emotivo acto encabezado por el Gobernador Insfrán y el Vicegobernador Solís, 21 empleados y empleadas legislativas celebraron la finalización del secundario",
+      "titulo_info": "21 empleados legislativos terminaron el secundario en acto con Insfrán y Solís",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:37.250Z",
       "jurisdiccion": "formosa",
       "categorias": [
@@ -258,7 +288,8 @@
     {
       "titulo": "El Gobierno y los gremios vuelven a reunirse este jueves en el marco de la paritaria estatal",
       "resumen": "",
-      "titulo_info": "El Gobierno y los gremios vuelven a reunirse este jueves en el marco de la paritaria estatal",
+      "titulo_info": "Gobierno y gremios estatales vuelven a negociar paritarias este jueves",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.810Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -270,7 +301,8 @@
     {
       "titulo": "El Senado debate la nueva ley de Discapacidad y la restitución de la Ley de Tierras",
       "resumen": "La Cámara alta sesionará este jueves desde las 11 con una agenda que incluye iniciativas sobre propiedad privada, patentes y derechos de niños, niñas y adolescentes. También se prevé la designación de representantes para el Comité Nacional para la Prevención de la Tortura.",
-      "titulo_info": "El Senado debate la nueva ley de Discapacidad y la restitución de la Ley de Tierras. La Cámara alta sesionará este jueves desde las 11 con una agenda que incluye iniciativas sobre propiedad privada, patentes y derechos de niños, niñas y adolescentes.",
+      "titulo_info": "Senado debate ley de Discapacidad y restitución de Ley de Tierras, con otras iniciativas",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.736Z",
       "jurisdiccion": "misiones",
       "categorias": [
@@ -282,7 +314,8 @@
     {
       "titulo": "Por falta de quorum, se cayó la sesión en Diputados que iba a tratar la ley de Malvinas y la reforma del Banco Central",
       "resumen": "El oficialismo reunió 126 de los 129 legisladores necesarios para habilitar el debate y no pudo avanzar con dos proyectos impulsados por el Gobierno nacional. Las diferencias con bloques aliados por la integración del Consejo de la Magistratura y la ley de biocombustibles incidieron en las ausencias.",
-      "titulo_info": "Por falta de quorum, se cayó la sesión en Diputados que iba a tratar la ley de Malvinas y la reforma del Banco Central. El oficialismo reunió 126 de los 129 legisladores necesarios para habilitar el debate y no pudo avanzar con dos proyectos…",
+      "titulo_info": "Sesión en Diputados se cayó por falta de quorum y no trató ley de Malvinas ni reforma del Banco Central",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.736Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -294,7 +327,8 @@
     {
       "titulo": "Villa Suramericana: hay 8.654 personas habilitadas para el sorteo de 104 viviendas construidas por el Gobierno provincial",
       "resumen": "El Gobierno de Santa Fe publicó el padrón provisorio del complejo que se construyó para los Juegos Suramericanos, que registró 24.406 inscriptos para esta instancia. Quienes no resultaron podrán apelar los días 20 y 24 de noviembre.",
-      "titulo_info": "Villa Suramericana: hay 8.654 personas habilitadas para el sorteo de 104 viviendas construidas por el Gobierno provincial. El Gobierno de Santa Fe publicó el padrón provisorio del complejo que se construyó para los Juegos Suramericanos, que…",
+      "titulo_info": "8.654 personas habilitadas para sorteo de 104 viviendas de Villa Suramericana en Santa Fe",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.552Z",
       "jurisdiccion": "santa_fe",
       "categorias": [
@@ -306,7 +340,8 @@
     {
       "titulo": "Santiago Ojeda será candidato a presidente de For Ever, con Héctor Gómez como vicepresidente",
       "resumen": "La agrupación \"Volveremos\" difundió cómo se conformará la cúpula de la lista.",
-      "titulo_info": "Santiago Ojeda será candidato a presidente de For Ever, con Héctor Gómez como vicepresidente. La agrupación \"Volveremos\" difundió cómo se conformará la cúpula de la lista.",
+      "titulo_info": "Santiago Ojeda será candidato a presidente de For Ever con Héctor Gómez de vice",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.533Z",
       "jurisdiccion": "chaco",
       "categorias": [
@@ -318,7 +353,8 @@
     {
       "titulo": "El Hospital Vidal incorporó un ecógrafo de última generación",
       "resumen": "El equipo fue donado por Droguería del Sud S.A. y permitirá ampliar las prestaciones del Servicio de Diagnóstico por Imágenes, optimizar los diagnósticos y fortalecer la formación de los profesionales.",
-      "titulo_info": "El equipo fue donado por Droguería del Sud S.A.",
+      "titulo_info": "Hospital Vidal incorporó ecógrafo de última generación donado por Droguería del Sud",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:41.101Z",
       "jurisdiccion": "corrientes",
       "categorias": [
@@ -330,7 +366,8 @@
     {
       "titulo": "El Vicegobernador el Dr. Eber Solís, recibió a estudiantes de Laguna Blanca en la última visita del año",
       "resumen": "",
-      "titulo_info": "El Vicegobernador el Dr. Eber Solís, recibió a estudiantes de Laguna Blanca en la última visita del año",
+      "titulo_info": "Vicegobernador Eber Solís recibió a estudiantes de Laguna Blanca en última visita del año",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:37.250Z",
       "jurisdiccion": "formosa",
       "categorias": [
@@ -342,7 +379,8 @@
     {
       "titulo": "Frigerio recibió a Azcué para coordinar acciones por El Niño y analizar la marcha de obras en Concordia",
       "resumen": "",
-      "titulo_info": "Frigerio recibió a Azcué para coordinar acciones por El Niño y analizar la marcha de obras en Concordia",
+      "titulo_info": "Frigerio y Azcué coordinaron acciones por El Niño y obras en Concordia",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.810Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -354,7 +392,8 @@
     {
       "titulo": "La Legislatura acompañó el desarrollo de un sistema de alertas ante incendios",
       "resumen": "Estudiantes de quinto año de la Escuela Secundaria de Innovación desarrollaron Prisma Ignis, una herramienta tecnológica para mejorar la comunicación interna de la Cámara de Representantes ante situaciones de emergencia.",
-      "titulo_info": "La Legislatura acompañó el desarrollo de un sistema de alertas ante incendios. Estudiantes de quinto año de la Escuela Secundaria de Innovación desarrollaron Prisma Ignis, una herramienta tecnológica para mejorar la comunicación interna de la…",
+      "titulo_info": "Legislatura de Entre Ríos acompañó desarrollo de sistema de alertas ante incendios creado por estudiantes",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.736Z",
       "jurisdiccion": "misiones",
       "categorias": [
@@ -366,7 +405,8 @@
     {
       "titulo": "Diputados debate la ley de soberanía sobre Malvinas y la reforma del Banco Central",
       "resumen": "La Cámara baja sesionará este miércoles desde el mediodía con una agenda que incluye proyectos vinculados con la exploración de recursos en las islas, acuerdos comerciales internacionales y el traspaso de competencias judiciales. Será la primera de cinco sesiones previstas en el Congreso durante las próximas dos semanas.",
-      "titulo_info": "Diputados debate la ley de soberanía sobre Malvinas y la reforma del Banco Central. La Cámara baja sesionará este miércoles desde el mediodía con una agenda que incluye proyectos vinculados con la exploración de recursos en las islas, acuerdos…",
+      "titulo_info": "Diputados debaten ley de soberanía sobre Malvinas y reforma del Banco Central",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.736Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -378,7 +418,8 @@
     {
       "titulo": "Suspensión de las PASO: el oficialismo logró dictamen en el Senado",
       "resumen": "El proyecto contó con el apoyo de la UCR, y será tratado el próximo jueves 26.",
-      "titulo_info": "El proyecto contó con el apoyo de la UCR, y será tratado el próximo jueves 26.",
+      "titulo_info": "Oficialismo logró dictamen en el Senado para suspender las PASO",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.533Z",
       "jurisdiccion": "chaco",
       "categorias": [
@@ -390,7 +431,8 @@
     {
       "titulo": "Sesión 19: Es Ley la Declaración de Emergencia Climática e Hídrica en la provincia",
       "resumen": "La Cámara de Diputados de la provincia de Corrientes, en su sesión 19 presida por Eduardo Tassano, sancionó con fuerza de ley la Declaración de Estado de Emergencia Climática e Hídrica en todo el territorio de la provincia por el término de 180 días, prorrogable por igual período, de mantenerse los eventos críticos climáticos e hídricos derivados de la “Corriente del Niño” que de manera actual …",
-      "titulo_info": "Sesión 19: Es Ley la Declaración de Emergencia Climática e Hídrica en la provincia. La Cámara de Diputados de la provincia de Corrientes, en su sesión 19 presida por Eduardo Tassano, sancionó con fuerza de ley la Declaración de Estado de…",
+      "titulo_info": "Diputados de Corrientes sancionaron ley de Emergencia Climática e Hídrica por 180 días",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.701Z",
       "jurisdiccion": "corrientes",
       "categorias": [
@@ -402,7 +444,8 @@
     {
       "titulo": "Día Histórico: se sancionó la ley que declara la necesidad de reforma de la Constitución Provincial",
       "resumen": "",
-      "titulo_info": "Día Histórico: se sancionó la ley que declara la necesidad de reforma de la Constitución Provincial",
+      "titulo_info": "Se sancionó la ley que declara la necesidad de reforma de la Constitución Provincial",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:37.250Z",
       "jurisdiccion": "formosa",
       "categorias": [
@@ -414,7 +457,8 @@
     {
       "titulo": "Paritaria estatal: ATE cuestionó la suspensión de la audiencia y reclamó \"recuperar salarios",
       "resumen": "",
-      "titulo_info": "Paritaria estatal: ATE cuestionó la suspensión de la audiencia y reclamó \"recuperar salarios",
+      "titulo_info": "ATE cuestionó suspensión de audiencia paritaria estatal y reclamó recuperar salarios",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -426,7 +470,8 @@
     {
       "titulo": "Misiones invertirá más de $31.000 millones para ampliar y repavimentar la ruta nacional 14",
       "resumen": "La obra abarcará unos 48 kilómetros entre Alem y Campo Viera e incluirá terceras trochas y carriles de adelantamiento. El presidente de Vialidad Provincial, Nicolás Mazal, confirmó que las ofertas están en etapa de análisis y que buscan iniciar los trabajos durante los primeros meses de 2027. También anticipó proyectos sobre las rutas provinciales 17 y 205 y la construcción de nuevos puentes.",
-      "titulo_info": "Misiones invertirá más de $31.000 millones para ampliar y repavimentar la ruta nacional 14. La obra abarcará unos 48 kilómetros entre Alem y Campo Viera e incluirá terceras trochas y carriles de adelantamiento.",
+      "titulo_info": "Misiones invertirá $31.000 millones para ampliar y repavimentar 48 km de la ruta nacional 14",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.736Z",
       "jurisdiccion": "misiones",
       "categorias": [
@@ -439,6 +484,7 @@
       "titulo": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
       "resumen": "",
       "titulo_info": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -450,7 +496,8 @@
     {
       "titulo": "La CAME pide que Diputados apruebe la nueva Ley de Biocombustibles",
       "resumen": "La entidad sostuvo que la iniciativa \"representa una oportunidad para fortalecer el desarrollo productivo, atraer inversiones y generar nuevas posibilidades\".",
-      "titulo_info": "La entidad sostuvo que la iniciativa \"representa una oportunidad para fortalecer el desarrollo productivo, atraer inversiones y generar nuevas posibilidades\".",
+      "titulo_info": "La CAME pide que Diputados apruebe la nueva Ley de Biocombustibles que busca fortalecer el desarrollo productivo y atraer inversiones",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.533Z",
       "jurisdiccion": "chaco",
       "categorias": [
@@ -462,7 +509,8 @@
     {
       "titulo": "Sesión 18: Media Sanción para el Plan de Prevención de la Ludopatía Online",
       "resumen": "La Cámara de Diputados de Corrientes, presidida por Eduardo Tassano, en su sesión 18 otorgó media sanción al proyecto de ley que crea el Plan Provincial de Prevención de la Ludopatía online en el ámbito educativo, destinado a estudiantes de los niveles obligatorios del sistema educativo, de gestión pública y privada, en el ámbito de la Provincia.",
-      "titulo_info": "Sesión 18: Media Sanción para el Plan de Prevención de la Ludopatía Online. La Cámara de Diputados de Corrientes, presidida por Eduardo Tassano, en su sesión 18 otorgó media sanción al proyecto de ley que crea el Plan Provincial de Prevención de…",
+      "titulo_info": "Diputados de Corrientes dio media sanción al Plan Provincial de Prevención de la Ludopatía Online en el ámbito educativo",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.701Z",
       "jurisdiccion": "corrientes",
       "categorias": [
@@ -472,9 +520,10 @@
       "fuente": "Diputados Corrientes"
     },
     {
-      "titulo": "Paritaria estatal en Entre Ríos: el Gobierno explicó por qué no \"pudo realizarse la audiencia",
+      "titulo": "Paritaria estatal en Entre Ríos: el Gobierno explicó por qué \"no pudo realizarse la audiencia",
       "resumen": "",
-      "titulo_info": "Paritaria estatal en Entre Ríos: el Gobierno explicó por qué no \"pudo realizarse la audiencia",
+      "titulo_info": "El Gobierno de Entre Ríos explicó por qué no pudo realizarse la audiencia de paritaria estatal",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -486,7 +535,8 @@
     {
       "titulo": "Una nueva perforación garantiza agua potable a 15 familias de una zona rural de Wanda",
       "resumen": "El IMAS puso en funcionamiento un pozo de 100 metros de profundidad en el paraje Sarandy, que también abastecerá al aula satélite de la escuela 899. La obra incluye un tanque elevado de 5.000 litros y una red de distribución para asegurar el suministro.",
-      "titulo_info": "Una nueva perforación garantiza agua potable a 15 familias de una zona rural de Wanda. El IMAS puso en funcionamiento un pozo de 100 metros de profundidad en el paraje Sarandy, que también abastecerá al aula satélite de la escuela 899.",
+      "titulo_info": "Una nueva perforación de 100 metros garantiza agua potable a 15 familias y al aula satélite de la escuela 899 en Wanda",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.736Z",
       "jurisdiccion": "misiones",
       "categorias": [
@@ -499,6 +549,7 @@
       "titulo": "Por qué metieron a un cuatro de copas?\": la crisis que casi hizo caer el dictamen de las PASO",
       "resumen": "",
       "titulo_info": "Por qué metieron a un cuatro de copas?\": la crisis que casi hizo caer el dictamen de las PASO",
+      "titulo_info_src": "heuristico",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -510,7 +561,8 @@
     {
       "titulo": "MÁS GRANDE, TECHADA Y RENOVADA: LA HISTÓRICA PEÑA MARTÍN FIERRO ENTRA EN LA RECTA FINAL DE OBRAS",
       "resumen": "",
-      "titulo_info": "MÁS GRANDE, TECHADA Y RENOVADA: LA HISTÓRICA PEÑA MARTÍN FIERRO ENTRA EN LA RECTA FINAL DE OBRAS",
+      "titulo_info": "La histórica Peña Martín Fierro entra en la recta final de obras para quedar más grande, techada y renovada",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.505Z",
       "jurisdiccion": "chaco",
       "categorias": [
@@ -522,7 +574,8 @@
     {
       "titulo": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria",
       "resumen": "El gobernador Juan Pablo Valdés confirmó que la Provincia avanzará en el prorrateo de las facturas de energía en seis meses, la ampliación del alcance de l",
-      "titulo_info": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria. El gobernador Juan Pablo Valdés confirmó que la Provincia avanzará en el prorrateo de las facturas de energía en seis meses, la ampliación del alcance de l",
+      "titulo_info": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria, incluyendo el prorrateo de facturas de energía",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.213Z",
       "jurisdiccion": "corrientes",
       "categorias": [
@@ -534,7 +587,8 @@
     {
       "titulo": "CAME pidió aprobar la nueva ley de biocombustibles para impulsar inversiones y empleo",
       "resumen": "",
-      "titulo_info": "CAME pidió aprobar la nueva ley de biocombustibles para impulsar inversiones y empleo",
+      "titulo_info": "CAME pide aprobar la nueva ley de biocombustibles para impulsar inversiones y empleo",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -546,7 +600,8 @@
     {
       "titulo": "Posadas debate este jueves una reforma al sistema electoral municipal",
       "resumen": "El proyecto obtuvo dictamen de mayoría en comisión legislativa el último lunes y será tratado esta mañana en el recinto. Entre los cambios propuestos se encuentra la limitación de candidaturas, con un máximo de dos postulantes por partido y tres por frente electoral.",
-      "titulo_info": "El proyecto obtuvo dictamen de mayoría en comisión legislativa el último lunes y será tratado esta mañana en el recinto.",
+      "titulo_info": "Posadas debate reforma electoral municipal con dictamen de mayoría, limita candidaturas",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.736Z",
       "jurisdiccion": "misiones",
       "categorias": [
@@ -558,7 +613,8 @@
     {
       "titulo": "Un diputado libertario deja el bloque oficialista tras denunciar un pacto con el gobernador peronista Osvaldo Jaldo en Tucumán",
       "resumen": "",
-      "titulo_info": "Un diputado libertario deja el bloque oficialista tras denunciar un pacto con el gobernador peronista Osvaldo Jaldo en Tucumán",
+      "titulo_info": "Diputado libertario deja bloque oficialista en Tucumán tras denunciar pacto con gobernador peronista",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -570,7 +626,8 @@
     {
       "titulo": "Desde el paraje Pampa Cantón a la Legislatura: estudiantes conocieron de cerca el trabajo de los diputados",
       "resumen": "Desde el paraje Pampa Cantón a la Legislatura: estudiantes conocieron de cerca el trabajo de los diputados",
-      "titulo_info": "Desde el paraje Pampa Cantón a la Legislatura: estudiantes conocieron de cerca el trabajo de los diputados",
+      "titulo_info": "Estudiantes de Pampa Cantón conocieron de cerca el trabajo de los diputados en la Legislatura",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.395Z",
       "jurisdiccion": "chaco",
       "categorias": [
@@ -582,7 +639,8 @@
     {
       "titulo": "Ingresó el Presupuesto 2027 al Concejo Deliberante",
       "resumen": "La proyección de recursos municipales asciende a más de $256 mil millones. Además, se aprobaron designaciones para el Juzgado Administrativo de Faltas N° 5",
-      "titulo_info": "La proyección de recursos municipales asciende a más de $256 mil millones.",
+      "titulo_info": "Concejo Deliberante recibe Presupuesto 2027 por $256 mil millones y aprueba designaciones para Juzgado de Faltas",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.213Z",
       "jurisdiccion": "corrientes",
       "categorias": [
@@ -594,7 +652,8 @@
     {
       "titulo": "Comenzó la sesión del Senado: se debate discapacidad, patentes y ley de Tierras",
       "resumen": "",
-      "titulo_info": "Comenzó la sesión del Senado: se debate discapacidad, patentes y ley de Tierras",
+      "titulo_info": "Senado debate discapacidad, patentes y ley de Tierras en sesión que ya comenzó",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -606,7 +665,8 @@
     {
       "titulo": "Qué cambia con la nueva Ley de Discapacidad y qué puede pasar con la venta de tierras a extranjeros",
       "resumen": "",
-      "titulo_info": "Qué cambia con la nueva Ley de Discapacidad y qué puede pasar con la venta de tierras a extranjeros",
+      "titulo_info": "Nueva Ley de Discapacidad y venta de tierras a extranjeros: cambios y posibles consecuencias en debate",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -618,7 +678,8 @@
     {
       "titulo": "La Comisión de Legislación General concretó su 18ª reunión ordinaria",
       "resumen": "Dirigida por la diputada Zulema Wannesson, se llevó a cabo la 18º reunión ordinaria de la Comisión de Legislación General, Justicia y Seguridad.",
-      "titulo_info": "Dirigida por la diputada Zulema Wannesson, se llevó a cabo la 18º reunión ordinaria de la Comisión de Legislación General, Justicia y Seguridad.",
+      "titulo_info": "Comisión de Legislación General, Justicia y Seguridad realizó su 18ª reunión ordinaria",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.395Z",
       "jurisdiccion": "chaco",
       "categorias": [
@@ -630,7 +691,8 @@
     {
       "titulo": "Polich proyecta un presupuesto de $256.314 millones para 2027",
       "resumen": "El proyecto que toma estado legislativo hoy en el Concejo prevé un aumento nominal en línea con la inflación proyectada respecto del cálculo de 2026. La ges",
-      "titulo_info": "El proyecto que toma estado legislativo hoy en el Concejo prevé un aumento nominal en línea con la inflación proyectada respecto del cálculo de 2026.",
+      "titulo_info": "El Concejo trata el presupuesto 2027 de Polich, proyectado en $256.314 millones, con un aumento nominal acorde a la inflación esperada respecto a 2026",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.213Z",
       "jurisdiccion": "corrientes",
       "categorias": [
@@ -642,7 +704,8 @@
     {
       "titulo": "La reforma electoral obtuvo dictamen: qué cambiaría para los votantes y los partidos",
       "resumen": "",
-      "titulo_info": "La reforma electoral obtuvo dictamen: qué cambiaría para los votantes y los partidos",
+      "titulo_info": "La reforma electoral obtuvo dictamen y se esperan cambios para votantes y partidos",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -655,7 +718,8 @@
     {
       "titulo": "Mientras acelera la designación de jueces, Mahiques viajó a EE.UU. y se reunió con un alto funcionario del Departamento de Justicia",
       "resumen": "",
-      "titulo_info": "Mientras acelera la designación de jueces, Mahiques viajó a EE.UU. y se reunió con un alto funcionario del Departamento de Justicia",
+      "titulo_info": "Mahiques viajó a EE.UU. y se reunió con un funcionario del Departamento de Justicia mientras acelera designaciones de jueces",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -667,7 +731,8 @@
     {
       "titulo": "La Legislatura acompañó la entrega del Doctorado Honoris Causa de la UNNE al escultor Humberto Gómez Lollo",
       "resumen": "La presidente de la Cámara de Diputados del Chaco, Carmen Delgado, participó del acto en el que la Universidad Nacional del Nordeste distinguió al reconocido artista chaqueño Humberto Gómez Lollo con el título de Doctor Honoris Causa, en reconocimiento a su excepcional trayectoria artística, docente y cultural. La ceremonia se realizó este martes 17 de noviembre, en el Salón de Usos Múltiples d…",
-      "titulo_info": "La Legislatura acompañó la entrega del Doctorado Honoris Causa de la UNNE al escultor Humberto Gómez Lollo. La presidente de la Cámara de Diputados del Chaco, Carmen Delgado, participó del acto en el que la Universidad Nacional del Nordeste…",
+      "titulo_info": "La Legislatura acompañó la entrega del Doctorado Honoris Causa de la UNNE al escultor Humberto Gómez Lollo",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.395Z",
       "jurisdiccion": "chaco",
       "categorias": [
@@ -679,7 +744,8 @@
     {
       "titulo": "Colonia Libertad acelera plan de obras en viviendas y la Ruta 25",
       "resumen": "Los trabajos avanzaron por encima de las previsiones iniciales, con resultados visibles antes de cumplirse el primer año de gestión. La carretera es important",
-      "titulo_info": "Los trabajos avanzaron por encima de las previsiones iniciales, con resultados visibles antes de cumplirse el primer año de gestión.",
+      "titulo_info": "Colonia Libertad acelera obras en viviendas y la Ruta 25, con trabajos que superan las previsiones iniciales",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.213Z",
       "jurisdiccion": "corrientes",
       "categorias": [
@@ -691,7 +757,8 @@
     {
       "titulo": "Paritaria estatal: Gobierno y gremios vuelven a negociar tras la suspensión de la audiencia",
       "resumen": "",
-      "titulo_info": "Paritaria estatal: Gobierno y gremios vuelven a negociar tras la suspensión de la audiencia",
+      "titulo_info": "Gobierno y gremios retoman negociaciones paritarias estatales tras la suspensión de la audiencia",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -703,7 +770,8 @@
     {
       "titulo": "Patricia Bullrich admitió que fue un “alivio” sacar las listas colectoras de la reforma electoral y respondió a la frase de Milei sobre “el plan platita”",
       "resumen": "",
-      "titulo_info": "Patricia Bullrich admitió que fue un “alivio” sacar las listas colectoras de la reforma electoral y respondió a la frase de Milei sobre “el plan platita”",
+      "titulo_info": "Patricia Bullrich consideró un alivio la exclusión de listas colectoras de la reforma electoral y respondió a Milei sobre el \"plan platita",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -715,7 +783,8 @@
     {
       "titulo": "Senadores sesionan este jueves para dar sanción definitiva a la Ley de Discapacidad",
       "resumen": "",
-      "titulo_info": "Senadores sesionan este jueves para dar sanción definitiva a la Ley de Discapacidad",
+      "titulo_info": "Los senadores sesionarán este jueves para dar sanción definitiva a la Ley de Discapacidad",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -727,7 +796,8 @@
     {
       "titulo": "El proyecto de Vandalismo Rural obtuvo dictamen en el Senado, pero plantean la necesidad de modificaciones en el texto",
       "resumen": "",
-      "titulo_info": "El proyecto de Vandalismo Rural obtuvo dictamen en el Senado, pero plantean la necesidad de modificaciones en el texto",
+      "titulo_info": "El Senado dictaminó el proyecto de Vandalismo Rural, pero piden modificarlo",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -739,7 +809,8 @@
     {
       "titulo": "El Gobierno logró dictamen para suspender las PASO de 2027",
       "resumen": "",
-      "titulo_info": "El Gobierno logró dictamen para suspender las PASO de 2027",
+      "titulo_info": "El Gobierno consiguió dictamen para suspender las PASO de 2027",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -751,7 +822,8 @@
     {
       "titulo": "Nueva encuesta electoral: polarización light y notable diferencia en el voto de hombres y mujeres",
       "resumen": "",
-      "titulo_info": "Nueva encuesta electoral: polarización light y notable diferencia en el voto de hombres y mujeres",
+      "titulo_info": "Encuesta electoral muestra polarización light y brecha de género en el voto",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -763,7 +835,8 @@
     {
       "titulo": "Boleta Única de Papel: un estudio reveló dificultades de uso y aumento de votos nulos",
       "resumen": "",
-      "titulo_info": "Boleta Única de Papel: un estudio reveló dificultades de uso y aumento de votos nulos",
+      "titulo_info": "Estudio sobre Boleta Única de Papel revela dificultades de uso y más votos nulos",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -775,7 +848,8 @@
     {
       "titulo": "El Senado sesiona para convertir en ley el nuevo proyecto de Discapacidad y ratificar la Ley de Tierras",
       "resumen": "",
-      "titulo_info": "El Senado sesiona para convertir en ley el nuevo proyecto de Discapacidad y ratificar la Ley de Tierras",
+      "titulo_info": "El Senado trata hoy la ley de Discapacidad y ratifica la Ley de Tierras",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -787,7 +861,8 @@
     {
       "titulo": "Paritaria estatal: Tras ausencia de UPCN, se ratificó un aumento del 4% en los salarios de noviembre",
       "resumen": "",
-      "titulo_info": "Paritaria estatal: Tras ausencia de UPCN, se ratificó un aumento del 4% en los salarios de noviembre",
+      "titulo_info": "Paritaria estatal ratificó 4% de aumento salarial en noviembre tras ausencia de UPCN",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.573Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -799,7 +874,8 @@
     {
       "titulo": "La disputa entre dos bloques aliados que hizo caer la sesión de Diputados ahora enciende las alarmas por el debate del Presupuesto",
       "resumen": "",
-      "titulo_info": "La disputa entre dos bloques aliados que hizo caer la sesión de Diputados ahora enciende las alarmas por el debate del Presupuesto",
+      "titulo_info": "Disputa entre aliados hizo caer sesión de Diputados y enciende alarmas por el Presupuesto",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -811,7 +887,8 @@
     {
       "titulo": "El Gobierno indicó que no se pudo realizar la audiencia paritaria estatal por el retiro de representantes sindicales",
       "resumen": "",
-      "titulo_info": "El Gobierno indicó que no se pudo realizar la audiencia paritaria estatal por el retiro de representantes sindicales",
+      "titulo_info": "Gobierno no pudo realizar audiencia paritaria estatal por retiro de sindicalistas",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.573Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -823,7 +900,8 @@
     {
       "titulo": "Patricia Bullrich insiste con sus mensajes a Milei: “Hay muchas cosas intocables y otras que uno las tiene que discutir para llegar mejor a las elecciones”",
       "resumen": "",
-      "titulo_info": "Patricia Bullrich insiste con sus mensajes a Milei: “Hay muchas cosas intocables y otras que uno las tiene que discutir para llegar mejor a las elecciones”",
+      "titulo_info": "Patricia Bullrich pide a Milei discutir temas para las elecciones",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -835,7 +913,8 @@
     {
       "titulo": "Gualeguaychú: El Concejo Deliberante aprobó el Presupuesto 2027",
       "resumen": "",
-      "titulo_info": "Gualeguaychú: El Concejo Deliberante aprobó el Presupuesto 2027",
+      "titulo_info": "Gualeguaychú: Concejo Deliberante aprobó el Presupuesto 2027",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.573Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -848,6 +927,7 @@
       "titulo": "Lanzamiento del GTA VI: la historia detrás del decreto que prohibió la saga en Rosario y el proyecto para anularlo",
       "resumen": "",
       "titulo_info": "Lanzamiento del GTA VI: la historia detrás del decreto que prohibió la saga en Rosario y el proyecto para anularlo",
+      "titulo_info_src": "heuristico",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -859,7 +939,8 @@
     {
       "titulo": "Ludopatía: el Senado rechazó tratar la ley sobre tablas, pero la debatirá la próxima semana",
       "resumen": "",
-      "titulo_info": "Ludopatía: el Senado rechazó tratar la ley sobre tablas, pero la debatirá la próxima semana",
+      "titulo_info": "Senado rechazó tratar ley sobre ludopatía, la debatirá la próxima semana",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.573Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -871,7 +952,8 @@
     {
       "titulo": "“La mier... de la política”: la fuerte reacción de Santiago Caputo tras la sesión fallida por la Ley Malvinas en Diputados",
       "resumen": "",
-      "titulo_info": "“La mier... de la política”: la fuerte reacción de Santiago Caputo tras la sesión fallida por la Ley Malvinas en Diputados",
+      "titulo_info": "Santiago Caputo criticó la sesión fallida por Ley Malvinas en Diputados",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -883,7 +965,8 @@
     {
       "titulo": "Rafael Grossi defendió a un funcionario ruso sancionado por Ucrania y causó polémica en plena elección en la ONU",
       "resumen": "",
-      "titulo_info": "Rafael Grossi defendió a un funcionario ruso sancionado por Ucrania y causó polémica en plena elección en la ONU",
+      "titulo_info": "Rafael Grossi defendió a funcionario ruso sancionado y generó polémica en la ONU",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.573Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -895,7 +978,8 @@
     {
       "titulo": "La Cámara de Diputados no reunió quórum para debatir la Ley Malvinas y la reforma del Banco Central",
       "resumen": "",
-      "titulo_info": "La Cámara de Diputados no reunió quórum para debatir la Ley Malvinas y la reforma del Banco Central",
+      "titulo_info": "Diputados no reunió quórum para debatir Ley Malvinas y reforma del Banco Central",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -907,7 +991,8 @@
     {
       "titulo": "Aquí podrá acceder a los distintos documentos que se generan durante la actividad Legislativa de la Cámara de Diputados",
       "resumen": "Transcripción de las notas taquigráficastomadas durante la Sesión",
-      "titulo_info": "Aquí podrá acceder a los distintos documentos que se generan durante la actividad Legislativa de la Cámara de Diputados. Transcripción de las notas taquigráficastomadas durante la Sesión",
+      "titulo_info": "Cámara de Diputados: Documentos de la actividad legislativa",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.126Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -918,8 +1003,9 @@
     },
     {
       "titulo": "Sesión en el Senado: LLA volvió a frenar el debate de la ley de Ludopatía",
-      "resumen": "",
-      "titulo_info": "Sesión en el Senado: LLA volvió a frenar el debate de la ley de Ludopatía",
+      "resumen": "El oficialismo impidió la discusión del proyecto que tiene media sanción y está por perder estado parlamentario. Votaron que sea tratado el 26 de noviembre, en la última sesión del año. En el temario de hoy están la Ley de Discapacidad, la adhesión al Tratado de Patentes con Estados Unidos y el restablecimiento de la Ley de Tierras.",
+      "titulo_info": "Sesión en el Senado: LLA volvió a frenar el debate de la ley de Ludopatía. El oficialismo impidió la discusión del proyecto que tiene media sanción y está por perder estado parlamentario.",
+      "titulo_info_src": "heuristico",
       "fecha": "2026-11-19T20:25:36.451Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -932,6 +1018,7 @@
       "titulo": "Reglamento de Concursos - Acta Paritaria",
       "resumen": "",
       "titulo_info": "Reglamento de Concursos",
+      "titulo_info_src": "",
       "fecha": "2026-11-19T20:25:36.126Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -942,8 +1029,9 @@
     },
     {
       "titulo": "Reforma electoral: Cuando el poder del dinero vale más que el voto",
-      "resumen": "",
-      "titulo_info": "Reforma electoral: Cuando el poder del dinero vale más que el voto",
+      "resumen": "La nueva ley le pone fin a la jornada de reflexión, menos espacios cedidos y campaña paga en redes: las nuevas reglas favorecen a quien tiene más fondos. La suspensión de las PASO apunta a complicar la interna peronista. En la Cámara Electoral advierten por los avales truchos y piden el padrón biométrico.",
+      "titulo_info": "La nueva ley le pone fin a la jornada de reflexión, menos espacios cedidos y campaña paga en redes: las nuevas reglas favorecen a quien tiene más fondos.",
+      "titulo_info_src": "heuristico",
       "fecha": "2026-11-19T20:25:36.451Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -956,6 +1044,7 @@
       "titulo": "Reglamento de Concursos Ascenso - Acta Paritaria",
       "resumen": "",
       "titulo_info": "Reglamento de Concursos Ascenso",
+      "titulo_info_src": "",
       "fecha": "2026-11-19T20:25:36.126Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -966,8 +1055,9 @@
     },
     {
       "titulo": "Una reforma electoral que al gobierno le costó unas colectoras",
-      "resumen": "",
+      "resumen": "El bloque libertario necesitó dos días de negociaciones para conseguir el texto que debatirán la próxima semana. La oposición consideró el proyecto como “un papelón”.",
       "titulo_info": "Una reforma electoral que al gobierno le costó unas colectoras",
+      "titulo_info_src": "",
       "fecha": "2026-11-19T20:25:36.451Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -980,6 +1070,7 @@
       "titulo": "Protocolo específico para la prevención e intervención en casos de violencia laboral y violencia de género en el ámbito de la Honorable Cámara de Diputados de la provi…",
       "resumen": "",
       "titulo_info": "Protocolo específico para la prevención e intervención en casos de violencia laboral y violencia de género en el ámbito de la Honorable Cámara de Diputados de la provi…",
+      "titulo_info_src": "",
       "fecha": "2026-11-19T20:25:36.126Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -992,6 +1083,7 @@
       "titulo": "Axel Kicillof y Magdalena Sierra entregaron 55 viviendas en Avellaneda",
       "resumen": "",
       "titulo_info": "Axel Kicillof y Magdalena Sierra entregaron 55 viviendas en Avellaneda",
+      "titulo_info_src": "",
       "fecha": "2026-11-19T20:25:36.451Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1004,6 +1096,7 @@
       "titulo": "Ley Provincial de Procedimientos Constitucionales",
       "resumen": "",
       "titulo_info": "Ley Provincial de Procedimientos Constitucionales",
+      "titulo_info_src": "",
       "fecha": "2026-11-19T20:25:36.126Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -1015,7 +1108,8 @@
     {
       "titulo": "El fiscal anticorrupción denunció a la secretaria de Energía: la acusó de favorecer a una empresa sancionada por operar en Malvinas",
       "resumen": "",
-      "titulo_info": "El fiscal anticorrupción denunció a la secretaria de Energía: la acusó de favorecer a una empresa sancionada por operar en Malvinas",
+      "titulo_info": "Fiscal anticorrupción denunció a secretaria de Energía por favorecer empresa sancionada por operar en Malvinas",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.353Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1028,6 +1122,7 @@
       "titulo": "Exp y Ley Presupuesto Provincial 2026",
       "resumen": "",
       "titulo_info": "Exp y Ley Presupuesto Provincial 2026",
+      "titulo_info_src": "",
       "fecha": "2026-11-19T20:25:36.126Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -1040,7 +1135,8 @@
     {
       "titulo": "El Deutsche Bank informó sobre US$60 millones vinculados a Carlos Wagner, el empresario líder del Club de la obra pública",
       "resumen": "",
-      "titulo_info": "El Deutsche Bank informó sobre US$60 millones vinculados a Carlos Wagner, el empresario líder del Club de la obra pública",
+      "titulo_info": "Deutsche Bank informó US$60 millones vinculados a empresario líder del Club de la obra pública",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.353Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1052,7 +1148,8 @@
     {
       "titulo": "Aquí podrá acceder a los expedientes y normas legales que se generan durante la actividad Legislativa de la Cámara de Diputados",
       "resumen": "",
-      "titulo_info": "Aquí podrá acceder a los expedientes y normas legales que se generan durante la actividad Legislativa de la Cámara de Diputados",
+      "titulo_info": "Acceda a expedientes y normas legales de la actividad Legislativa de la Cámara de Diputados",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.126Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -1064,7 +1161,8 @@
     {
       "titulo": "EL SUBSECRETARIO DE HIDROCARBUROS EXPUSO SOBRE EL PROYECTO DE LEY QUE REGULA LOS BIOCOMBUSTIBLES",
       "resumen": "Un plenario de las Comisiones de Energía y Combustibles, Presupuesto y Hacienda, Agricultura y Ganadería de la Cámara de Diputados de la Nac...",
-      "titulo_info": "EL SUBSECRETARIO DE HIDROCARBUROS EXPUSO SOBRE EL PROYECTO DE LEY QUE REGULA LOS BIOCOMBUSTIBLES. Un plenario de las Comisiones de Energía y Combustibles, Presupuesto y Hacienda, Agricultura y Ganadería de la Cámara de Diputados de la Nac...",
+      "titulo_info": "Subsecretario de Hidrocarburos expuso sobre proyecto de ley que regula biocombustibles, con dictamen de comisión",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.271Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1076,7 +1174,8 @@
     {
       "titulo": "LA COMISIÓN DE LEGISLACIÓN PENAL ABORDÓ LA IMPRESCRIPTIBILIDAD DE LOS DELITOS CONTRA LA INTEGRIDAD SEXUAL",
       "resumen": "En ese marco, los diputados de distintos bloques parlamentarios presentaron sus respectivos proyectos sobre el tema. Además, durante la Comi...",
-      "titulo_info": "LA COMISIÓN DE LEGISLACIÓN PENAL ABORDÓ LA IMPRESCRIPTIBILIDAD DE LOS DELITOS CONTRA LA INTEGRIDAD SEXUAL. En ese marco, los diputados de distintos bloques parlamentarios presentaron sus respectivos proyectos sobre el tema.",
+      "titulo_info": "Comisión de Legislación Penal abordó imprescriptibilidad de delitos contra integridad sexual con proyectos presentados",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.271Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1088,7 +1187,8 @@
     {
       "titulo": "DICTAMEN AL PROYECTO DE LA REFORMA DE LA CARTA ORGÁNICA DEL BANCO CENTRAL",
       "resumen": "Se dio en el marco del plenario de las comisiones de Finanzas y Presupuesto y Hacienda, donde el dictamen obtuvo 44 firmas de un total de 69...",
-      "titulo_info": "DICTAMEN AL PROYECTO DE LA REFORMA DE LA CARTA ORGÁNICA DEL BANCO CENTRAL. Se dio en el marco del plenario de las comisiones de Finanzas y Presupuesto y Hacienda, donde el dictamen obtuvo 44 firmas de un total de 69...",
+      "titulo_info": "Dictamen por mayoría para proyecto de reforma de Carta Orgánica del Banco Central",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.271Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1100,7 +1200,8 @@
     {
       "titulo": "COMISIONES DE JUSTICIA Y PRESUPUESTO Y HACIENDA DICTAMINARON POR LA TRANSFERENCIA JUDICIAL DE MENORES A CABA",
       "resumen": "Con la participación de referentes de la justicia federal, el encuentro encabezado por Alvaro Martinez (LLA) concluyó en un dictamen para tr...",
-      "titulo_info": "COMISIONES DE JUSTICIA Y PRESUPUESTO Y HACIENDA DICTAMINARON POR LA TRANSFERENCIA JUDICIAL DE MENORES A CABA. Con la participación de referentes de la justicia federal, el encuentro encabezado por Alvaro Martinez (LLA) concluyó en un dictamen…",
+      "titulo_info": "Comisiones de Justicia y Presupuesto dictaminaron por transferencia judicial de menores a CABA",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.271Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1112,7 +1213,8 @@
     {
       "titulo": "FUNCIONARIOS DEL MINISTERIO DE DESREGULACIÓN EXPUSIERON ACERCA DE LOS ALCANCES DEL PRESUPUESTO 2027",
       "resumen": "En una nueva reunión informativa sobre el proyecto de ley del Presupuesto 2027, la Comisión de Presupuesto y Hacienda de la Cámara de Diputa...",
-      "titulo_info": "FUNCIONARIOS DEL MINISTERIO DE DESREGULACIÓN EXPUSIERON ACERCA DE LOS ALCANCES DEL PRESUPUESTO 2027. En una nueva reunión informativa sobre el proyecto de ley del Presupuesto 2027, la Comisión de Presupuesto y Hacienda de la Cámara de Diputa...",
+      "titulo_info": "Funcionarios del Ministerio de Desregulación expusieron alcances del Presupuesto 2027 en Diputados",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.271Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1124,7 +1226,8 @@
     {
       "titulo": "LA CÁMARA DE DIPUTADOS APROBÓ EL PROYECTO DE INVIOLABILIDAD DE LA PROPIEDAD PRIVADA",
       "resumen": "La norma que contaba con media sanción del Senado, fue aprobada con modificaciones, por lo cual vuelve a la Cámara Alta para su sanción defi...",
-      "titulo_info": "LA CÁMARA DE DIPUTADOS APROBÓ EL PROYECTO DE INVIOLABILIDAD DE LA PROPIEDAD PRIVADA. La norma que contaba con media sanción del Senado, fue aprobada con modificaciones, por lo cual vuelve a la Cámara Alta para su sanción defi...",
+      "titulo_info": "Diputados aprobaron con modificaciones el proyecto de ley de Inviolabilidad de la Propiedad Privada, vuelve al Senado",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.271Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1136,7 +1239,8 @@
     {
       "titulo": "CON INVITADOS, ENERGÍA Y COMBUSTIBLES ABORDÓ EL PROYECTO DE LEY DE BIOCOMBUSTIBLES",
       "resumen": "Representantes de distintas Cámaras y Asociaciones productoras de biocombustibles participaron para aportar su visión a la iniciativa que cu...",
-      "titulo_info": "CON INVITADOS, ENERGÍA Y COMBUSTIBLES ABORDÓ EL PROYECTO DE LEY DE BIOCOMBUSTIBLES. Representantes de distintas Cámaras y Asociaciones productoras de biocombustibles participaron para aportar su visión a la iniciativa que cu...",
+      "titulo_info": "Comisión de Diputados abordó el proyecto de ley de Biocombustibles con representantes del sector",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.271Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1148,7 +1252,8 @@
     {
       "titulo": "PRESUPUESTO 2027: EXPUSO EL SECRETARIO DE EDUCACIÓN, CARLOS TORRENDELL",
       "resumen": "Se dio en el marco de una nueva reunión informativa de la comisión de Presupuesto y Hacienda, que presidió el diputado nacional Bertie Beneg...",
-      "titulo_info": "PRESUPUESTO 2027: EXPUSO EL SECRETARIO DE EDUCACIÓN, CARLOS TORRENDELL. Se dio en el marco de una nueva reunión informativa de la comisión de Presupuesto y Hacienda, que presidió el diputado nacional Bertie Beneg...",
+      "titulo_info": "Secretario de Educación Carlos Torrendell expuso sobre el Presupuesto 2027 en comisión de Diputados",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.271Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1160,7 +1265,8 @@
     {
       "titulo": "LA CÁMARA DE DIPUTADOS LAMENTA EL FALLECIMIENTO DEL DIRIGENTE GREMIAL NORBERTO DI PRÓSPERO",
       "resumen": "",
-      "titulo_info": "LA CÁMARA DE DIPUTADOS LAMENTA EL FALLECIMIENTO DEL DIRIGENTE GREMIAL NORBERTO DI PRÓSPERO",
+      "titulo_info": "La Cámara de Diputados lamenta el fallecimiento del dirigente gremial Norberto Di Próspero",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.271Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1172,7 +1278,8 @@
     {
       "titulo": "CON DICTÁMENES, AVANZA LA LEY DE INVIOLABILIDAD DE LA PROPIEDAD PRIVADA EN DIPUTADOS",
       "resumen": "Con un dictamen de mayoría y dos de minoría, los legisladores dieron curso a la norma que ya cuenta con media sanción del Senado.",
-      "titulo_info": "CON DICTÁMENES, AVANZA LA LEY DE INVIOLABILIDAD DE LA PROPIEDAD PRIVADA EN DIPUTADOS. Con un dictamen de mayoría y dos de minoría, los legisladores dieron curso a la norma que ya cuenta con media sanción del Senado.",
+      "titulo_info": "Avanza en Diputados la ley de Inviolabilidad de la Propiedad Privada con dictámenes, ya tiene media sanción del Senado",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.271Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1184,7 +1291,8 @@
     {
       "titulo": "En plena crecida, se destrabó el aval nacional para obras hídricas en San Javier",
       "resumen": "El respaldo del Tesoro nacional quedó incorporado al decreto de ampliación del Presupuesto 2026. Se trata de un préstamo del Fondo OPEP que Santa Fe gestionó para completar una obra que había sufrido la interrupción del financiamiento nacional en 2024.",
-      "titulo_info": "En plena crecida, se destrabó el aval nacional para obras hídricas en San Javier. El respaldo del Tesoro nacional quedó incorporado al decreto de ampliación del Presupuesto 2026.",
+      "titulo_info": "Destrabaron aval nacional para obras hídricas en San Javier con ampliación del Presupuesto 2026",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T19:42:19.000Z",
       "jurisdiccion": "santa_fe",
       "categorias": [
@@ -1196,7 +1304,8 @@
     {
       "titulo": "La Legislatura de Santa Fe removió de su cargo a una fiscal de Tostado",
       "resumen": "Por mayoría de votos en Diputados y por unanimidad en el Senado dejó de pertenecer al Ministerio Público de la Acusación la Dra. Shirli Soledad Tomasso, que se desempeñaba en la Fiscalía Regional 5. Hubo 10 legisladores en contra de la medida, 3 abstenciones y varias bancas vacías.",
-      "titulo_info": "La Legislatura de Santa Fe removió de su cargo a una fiscal de Tostado. Por mayoría de votos en Diputados y por unanimidad en el Senado dejó de pertenecer al Ministerio Público de la Acusación la Dra.",
+      "titulo_info": "Legislatura de Santa Fe removió de su cargo a fiscal de Tostado por mayoría en Diputados y unanimidad en Senado",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T19:01:54.000Z",
       "jurisdiccion": "santa_fe",
       "categorias": [
@@ -1207,8 +1316,9 @@
     },
     {
       "titulo": "Santa Fe impulsa una Ley de Derechos del Consumidor a partir de un trabajo de articulación institucional",
-      "resumen": "El proyecto elevado por el gobernador Maximiliano Pullaro a la Legislatura reglamenta el artículo 32 de la nueva Constitución Provincial.",
-      "titulo_info": "Santa Fe impulsa una Ley de Derechos del Consumidor a partir de un trabajo de articulación institucional. El proyecto elevado por el gobernador Maximiliano Pullaro a la Legislatura reglamenta el artículo 32 de la nueva Constitución Provincial.",
+      "resumen": "El mandatario encabezó en Buenos Aires la presentación de la edición 2027 de la megamuestra que se realizará del 2 al 5 de junio en Armstrong, bajo el lema “Muestra Patria”.",
+      "titulo_info": "Santa Fe impulsa Ley de Derechos del Consumidor tras articulación institucional",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T17:47:38.929Z",
       "jurisdiccion": "santa_fe",
       "categorias": [
@@ -1220,7 +1330,8 @@
     {
       "titulo": "Sucesor de Mussi. El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
       "resumen": "",
-      "titulo_info": "Sucesor de Mussi. El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
+      "titulo_info": "Intendente de Berazategui declaró en causa por supuesto plan para atacarlo",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1232,7 +1343,8 @@
     {
       "titulo": "Fallo unánime. Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
       "resumen": "",
-      "titulo_info": "Fallo unánime. Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
+      "titulo_info": "Corte Suprema frena DNU de Milei y declara inconstitucional liberación de precios de prepagas",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1244,7 +1356,8 @@
     {
       "titulo": "Reforma. Posadas eliminó la Ley de Lemas y el resultado podría condicionar la negociación de Santilli con un gobernador",
       "resumen": "",
-      "titulo_info": "Reforma. Posadas eliminó la Ley de Lemas y el resultado podría condicionar la negociación de Santilli con un gobernador",
+      "titulo_info": "Posadas eliminó Ley de Lemas y el resultado podría condicionar negociación de Santilli",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1257,7 +1370,8 @@
     {
       "titulo": "Desafío al Gobierno. El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
       "resumen": "",
-      "titulo_info": "Desafío al Gobierno. El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
+      "titulo_info": "Senado sancionará nueva ley de discapacidad pese a resistencias del oficialismo",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1269,7 +1383,8 @@
     {
       "titulo": "Cuadernos de las coimas. Un testigo que auditó la obra pública dejó una frase confusa y se desdijo en pleno juicio",
       "resumen": "",
-      "titulo_info": "Cuadernos de las coimas. Un testigo que auditó la obra pública dejó una frase confusa y se desdijo en pleno juicio",
+      "titulo_info": "Testigo en juicio por Cuadernos de las coimas dejó frase confusa y se desdijo",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1281,7 +1396,8 @@
     {
       "titulo": "Ludopatía. El PJ forzó el debate por la ley contra las apuestas online y será tratado en la próxima sesión del Senado",
       "resumen": "",
-      "titulo_info": "Ludopatía. El PJ forzó el debate por la ley contra las apuestas online y será tratado en la próxima sesión del Senado",
+      "titulo_info": "PJ forzó debate por ley contra apuestas online y será tratada en próxima sesión del Senado",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1293,7 +1409,8 @@
     {
       "titulo": "Cambio. El debate presidencial dejará de ser obligatorio en las elecciones generales si avanza el proyecto de Milei",
       "resumen": "",
-      "titulo_info": "Cambio. El debate presidencial dejará de ser obligatorio en las elecciones generales si avanza el proyecto de Milei",
+      "titulo_info": "Proyecto de Milei busca eliminar debate presidencial obligatorio en elecciones generales",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1306,6 +1423,7 @@
       "titulo": "Reforma electoral. Hacerle trampa a la Constitución",
       "resumen": "",
       "titulo_info": "Reforma electoral. Hacerle trampa a la Constitución",
+      "titulo_info_src": "heuristico",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1317,7 +1435,8 @@
     {
       "titulo": "Comicios locales. Cuándo se vota a gobernador en Salta",
       "resumen": "",
-      "titulo_info": "Comicios locales. Cuándo se vota a gobernador en Salta",
+      "titulo_info": "Comicios locales: Anuncian fecha de votación para gobernador en Salta",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1329,7 +1448,8 @@
     {
       "titulo": "Dónde voto. Publicaron el padrón provisorio para las elecciones de Argentina 2027",
       "resumen": "",
-      "titulo_info": "Dónde voto. Publicaron el padrón provisorio para las elecciones de Argentina 2027",
+      "titulo_info": "Dónde voto: Publicaron padrón provisorio para elecciones 2027 en Argentina",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1341,7 +1461,8 @@
     {
       "titulo": "En Washington. Argentina asumió la presidencia de la Comisión Interamericana de la OEA para el control de drogas",
       "resumen": "",
-      "titulo_info": "En Washington. Argentina asumió la presidencia de la Comisión Interamericana de la OEA para el control de drogas",
+      "titulo_info": "Argentina asumió presidencia de Comisión Interamericana de la OEA para control de drogas en Washington",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1353,7 +1474,8 @@
     {
       "titulo": "Expectativa por la sesión del Senado que tiene la Ley de Discapacidad en agenda",
       "resumen": "El temario incluye la Inviolabilidad de la Propiedad Privada con la restitución de la Ley de Tierras Rurales, otro de los temas que despertó polémica a lo largo del año. Habrá un proyecto dedicado a Raúl Alfonsín que cumpliría 100 años en marzo de 2027.",
-      "titulo_info": "Expectativa por la sesión del Senado que tiene la Ley de Discapacidad en agenda. El temario incluye la Inviolabilidad de la Propiedad Privada con la restitución de la Ley de Tierras Rurales, otro de los temas que despertó polémica a lo largo del año.",
+      "titulo_info": "Senado trata Ley de Discapacidad y propiedad privada con restitución de Ley de Tierras Rurales, además de proyecto por centenario de Raúl Alfonsín",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T13:44:28.000Z",
       "jurisdiccion": "santa_fe",
       "categorias": [
@@ -1365,7 +1487,8 @@
     {
       "titulo": "Crecida del Paraná: la Provincia defendió por qué no hará la defensa oeste de Arroyo Leyes",
       "resumen": "Virginia Coudannes sostuvo que la obra licitada durante la gestión anterior presenta problemas técnicos y legales que la hacen inviable. Mientras el Paraná comienza a estabilizarse, hay 462 evacuados en Santa Fe.",
-      "titulo_info": "Crecida del Paraná: la Provincia defendió por qué no hará la defensa oeste de Arroyo Leyes. Virginia Coudannes sostuvo que la obra licitada durante la gestión anterior presenta problemas técnicos y legales que la hacen inviable.",
+      "titulo_info": "Provincia defendió no hacer defensa oeste de Arroyo Leyes por problemas técnicos y legales en obra licitada, mientras Paraná se estabiliza con 462 evacuados en Santa Fe",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T12:35:31.000Z",
       "jurisdiccion": "santa_fe",
       "categorias": [
@@ -1377,7 +1500,8 @@
     {
       "titulo": "Presupuesto 2026: el Gobierno aumentó los fondos para salarios y prestaciones sociales",
       "resumen": "Mediante una reasignación de fondos, la Casa Rosada busca blindar prestaciones sociales y gastos operativos ante la falta de una actualización general.",
-      "titulo_info": "Presupuesto 2026: el Gobierno aumentó los fondos para salarios y prestaciones sociales. Mediante una reasignación de fondos, la Casa Rosada busca blindar prestaciones sociales y gastos operativos ante la falta de una actualización general.",
+      "titulo_info": "Gobierno aumentó fondos para salarios y prestaciones sociales en Presupuesto 2026 mediante reasignación",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T10:24:43.000Z",
       "jurisdiccion": "santa_fe",
       "categorias": [
@@ -1389,7 +1513,8 @@
     {
       "titulo": "Más de 200.000 beneficiados. El Gobierno avaló un financiamiento de US$150 millones para obras de agua en Chubut y Santa Cruz",
       "resumen": "",
-      "titulo_info": "Más de 200.000 beneficiados. El Gobierno avaló un financiamiento de US$150 millones para obras de agua en Chubut y Santa Cruz",
+      "titulo_info": "Gobierno avaló financiamiento de US$150 millones para obras de agua en Chubut y Santa Cruz, beneficiando a más de 200.000 personas",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-18T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1401,7 +1526,8 @@
     {
       "titulo": "Diputados aprobó donaciones de tierras y debatió junto a gremios cambios en la legislación laboral",
       "resumen": "Se desarrolló este miércoles la 18º sesión ordinaria del 147º Período Legislativo de la Cámara de Diputados, en la que se otorgó sanción definitiva a proyectos de donación de inmuebles a comunas y municipios, y media sanción a iniciativas vinculadas con la educación y los servicios comunitarios. Además, ingresó el proyecto de Régimen Legal de Ética y Transparencia en la Función Pública con las …",
-      "titulo_info": "Diputados aprobó donaciones de tierras y debatió junto a gremios cambios en la legislación laboral. Se desarrolló este miércoles la 18º sesión ordinaria del 147º Período Legislativo de la Cámara de Diputados, en la que se otorgó sanción…",
+      "titulo_info": "Diputados dio sanción definitiva a donaciones de tierras y media sanción a proyectos de educación y servicios comunitarios, además ingresó un proyecto de ética pública",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-18T15:00:00.000Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -1413,7 +1539,8 @@
     {
       "titulo": "Trabajoso apoyo. El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
       "resumen": "",
-      "titulo_info": "Trabajoso apoyo. El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
+      "titulo_info": "El Gobierno consiguió dictamen para suspender las PASO tras eliminar las listas colectoras",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-18T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1425,7 +1552,8 @@
     {
       "titulo": "Hein firmó un convenio con Rotary para impulsar acciones en salud mental",
       "resumen": "El presidente de la Cámara de Diputados, Gustavo Hein, y el gobernador del Distrito Binacional 4945 de Rotary International, Lucio Marani, firmaron un convenio marco de colaboración con el objetivo de desarrollar programas conjuntos vinculados a la salud mental y el bienestar integral.",
-      "titulo_info": "Hein firmó un convenio con Rotary para impulsar acciones en salud mental. El presidente de la Cámara de Diputados, Gustavo Hein, y el gobernador del Distrito Binacional 4945 de Rotary International, Lucio Marani, firmaron un convenio marco de…",
+      "titulo_info": "Hein firmó convenio con Rotary para impulsar acciones en salud mental",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-18T15:00:00.000Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -1437,7 +1565,8 @@
     {
       "titulo": "Pullaro: “En la provincia de Santa Fe hicimos mucha más obra pública que en los últimos 20 años”",
       "resumen": "El mandatario encabezó los actos en Serodino y Salto Grande, en el departamento Iriondo, donde se entregaron 10 y 16 casas, respectivamente.",
-      "titulo_info": "Pullaro: “En la provincia de Santa Fe hicimos mucha más obra pública que en los últimos 20 años”. El mandatario encabezó los actos en Serodino y Salto Grande, en el departamento Iriondo, donde se entregaron 10 y 16 casas, respectivamente.",
+      "titulo_info": "Pullaro afirmó que en Santa Fe se hizo más obra pública que en los últimos 20 años",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-17T15:00:00.000Z",
       "jurisdiccion": "santa_fe",
       "categorias": [
@@ -1449,7 +1578,8 @@
     {
       "titulo": "Boleta Única de Papel: Hein destacó el relevamiento nacional de CIPPEC sobre la implementación del sistema de votación",
       "resumen": "El presidente de la Cámara de Diputados de Entre Ríos, Gustavo Hein, participó de la presentación de un estudio de la organización sobre la primera experiencia con BUP en la elección legislativa en la provincia y en diferentes distritos del país.",
-      "titulo_info": "Boleta Única de Papel: Hein destacó el relevamiento nacional de CIPPEC sobre la implementación del sistema de votación. El presidente de la Cámara de Diputados de Entre Ríos, Gustavo Hein, participó de la presentación de un estudio de la…",
+      "titulo_info": "Hein destacó relevamiento nacional de CIPPEC sobre implementación de la Boleta Única de Papel",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-17T15:00:00.000Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -1461,7 +1591,8 @@
     {
       "titulo": "Dictamen para acuerdos de cooperación y control sobre los recursos naturales",
       "resumen": "La Comisión de Recursos Naturales y Ambiente finalizó el tratamiento del Expediente Nº29.834, que propone la ratificación legislativa de dos convenios suscriptos por la Provincia con YPF SA y el Ministerio de Seguridad de la Nación. Además, Cultura y Turismo analizó una iniciativa para declarar patrimonio histórico al acceso del ex Grupo de Artillería 121 de La Paz, con la participación de vete…",
-      "titulo_info": "Dictamen para acuerdos de cooperación y control sobre los recursos naturales. La Comisión de Recursos Naturales y Ambiente finalizó el tratamiento del Expediente Nº29.834, que propone la ratificación legislativa de dos convenios suscriptos por la…",
+      "titulo_info": "Comisión de Recursos Naturales y Ambiente dio dictamen para ratificar acuerdos de cooperación y control sobre recursos naturales con YPF y Ministerio de Seguridad",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-17T15:00:00.000Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
