@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-19T21:20:10.926Z",
-  "timestamp_epoch": 1795123210,
+  "timestamp": "2026-11-19T21:29:16.199Z",
+  "timestamp_epoch": 1795123756,
   "source": "vxl-transito-ar",
-  "cantidad": 5,
+  "cantidad": 6,
   "items": [
     {
       "id": "ellitoral:Santa Fe:2026-11-19",
@@ -85,6 +85,79 @@
       ]
     },
     {
+      "id": "elonce:Realizan obras de recuperación vial en el Parque I…",
+      "titulo": "Realizan obras de recuperación vial en el Parque Industrial de Paraná",
+      "categoria": "obras",
+      "tipo": "obra",
+      "fecha": "2026-11-19T00:00:00-03:00",
+      "fecha_raw": "2026-11-19T00:00:00-03:00",
+      "horario": null,
+      "motivo": "Obra en la vía pública",
+      "franja": "",
+      "calles": [
+        "Hernandarias",
+        "Valentín Torra"
+      ],
+      "resumen": "Hernandarias · Valentín Torra",
+      "descripcion": "Hernandarias · Valentín Torra",
+      "enlace": "https://www.elonce.com/parana/comenzaron-las-obras-de-recuperacion-vial-en-el-parque-industrial-de-parana.htm",
+      "lat": -31.766317645259097,
+      "lon": -60.463126230388326,
+      "sin_ubicacion": false,
+      "localidad": "Paraná",
+      "provincia": "Entre Ríos",
+      "via": "calle a",
+      "km_desde": null,
+      "km_hasta": null,
+      "vigencia": {
+        "hasta": "2026-11-20T03:00:00.000Z",
+        "tipo": "estimada",
+        "detalle": "estimado: ruta (24 h)"
+      },
+      "vigente_hasta": "2026-11-20T03:00:00.000Z",
+      "fuente_tipo": "noticia",
+      "segmentos": [
+        {
+          "puntos": [
+            [
+              -31.766317645259097,
+              -60.463126230388326
+            ]
+          ],
+          "calle": "Hernandarias",
+          "desde": null,
+          "hasta": null,
+          "motivo": "Obra en la vía pública",
+          "franja": "",
+          "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra 19 de Noviembre de 2026 El Municipio ejecuta obras de recuperación vial en el Parque Industrial Los trabajos comprenden bacheo, repavimentación y reparaciones complementarias en las redes de agua, cloacas y desagües pluviales.",
+          "entre": "",
+          "texto": "Hernandarias"
+        },
+        {
+          "puntos": [
+            [
+              -31.7706884781603,
+              -60.451085612029786
+            ]
+          ],
+          "calle": "Valentín Torra",
+          "desde": null,
+          "hasta": null,
+          "motivo": "Obra en la vía pública",
+          "franja": "",
+          "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra 19 de Noviembre de 2026 El Municipio ejecuta obras de recuperación vial en el Parque Industrial Los trabajos comprenden bacheo, repavimentación y reparaciones complementarias en las redes de agua, cloacas y desagües pluviales.",
+          "entre": "",
+          "texto": "Valentín Torra"
+        }
+      ],
+      "puntos": [
+        [
+          -31.766317645259097,
+          -60.463126230388326
+        ]
+      ]
+    },
+    {
       "id": "bing-apf-cortes:Con nuevos frentes continúa la obra de reconfigura…",
       "titulo": "Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná",
       "categoria": "cortes",
@@ -112,7 +185,7 @@
       "vigencia": {
         "hasta": "2026-11-21T02:59:00.000Z",
         "tipo": "explicita",
-        "detalle": "hasta el 20/11 23:59"
+        "detalle": "hasta el 21/11 02:59"
       },
       "vigente_hasta": "2026-11-21T02:59:00.000Z",
       "fuente_tipo": "noticia",
@@ -158,75 +231,160 @@
       ]
     },
     {
-      "id": "municipio-parana:Calle a calle: el Municipio ejecuta obras de recup…",
-      "titulo": "Calle a calle: el Municipio ejecuta obras de recuperación vial en el Parque Industrial",
-      "categoria": "obras",
-      "tipo": "obra",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "fecha_raw": "2026-11-18T15:00:00.000Z",
+      "id": "bing-apf-obras:Realizan obras en las redes de agua y cloaca sobre…",
+      "titulo": "Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná",
+      "categoria": "cortes",
+      "tipo": "corte_total",
+      "fecha": "2026-11-19T00:00:00-03:00",
+      "fecha_raw": "2026-11-19T00:00:00-03:00",
       "horario": null,
       "motivo": "Obra en la vía pública",
       "franja": "",
       "calles": [
-        "Hernandarias",
-        "Valentín Torra"
+        "Paraguay",
+        "Montevideo"
       ],
-      "resumen": "Hernandarias · Valentín Torra",
-      "descripcion": "Hernandarias · Valentín Torra",
-      "enlace": "https://www.parana.gob.ar/noticias/calle-a-calle-el-municipio-ejecuta-obras-de-recuperacion-vial-en-el-parque-industrial",
-      "lat": -31.766317645259097,
-      "lon": -60.463126230388326,
+      "resumen": "Paraguay · Montevideo",
+      "descripcion": "Paraguay · Montevideo",
+      "enlace": "https://www.apfdigital.com.ar/noticias/2024/11/22/426912-realizan-obras-en-las-redes-de-agua-y-cloaca-sobre-calle-pellegrini-de-parana",
+      "lat": -31.733901575748387,
+      "lon": -60.53809628939044,
       "sin_ubicacion": false,
       "localidad": "Paraná",
       "provincia": "Entre Ríos",
-      "via": "Calle a",
+      "via": "calle Pellegrini",
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2026-12-18T15:00:00.000Z",
+        "hasta": "2026-12-19T03:00:00.000Z",
         "tipo": "estimada",
         "detalle": "estimado: obra (30 días)"
       },
-      "vigente_hasta": "2026-12-18T15:00:00.000Z",
+      "vigente_hasta": "2026-12-19T03:00:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
           "puntos": [
             [
-              -31.766317645259097,
-              -60.463126230388326
+              -31.733901575748387,
+              -60.53809628939044
             ]
           ],
-          "calle": "Hernandarias",
+          "calle": "Paraguay",
           "desde": null,
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra, que forman parte de los principales recorridos del tránsito pesado.",
+          "ctx": "jueves 19 de noviembre de 2026 27.9ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
           "entre": "",
-          "texto": "Hernandarias"
+          "texto": "Paraguay"
         },
         {
           "puntos": [
             [
-              -31.7706884781603,
-              -60.451085612029786
+              -31.735974343618533,
+              -60.53661560393757
             ]
           ],
-          "calle": "Valentín Torra",
+          "calle": "Montevideo",
           "desde": null,
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra, que forman parte de los principales recorridos del tránsito pesado.",
+          "ctx": "jueves 19 de noviembre de 2026 27.9ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
           "entre": "",
-          "texto": "Valentín Torra"
+          "texto": "Montevideo"
         }
       ],
       "puntos": [
         [
-          -31.766317645259097,
-          -60.463126230388326
+          -31.733901575748387,
+          -60.53809628939044
+        ]
+      ]
+    },
+    {
+      "id": "bing-apf-obras:El Municipio de Paraná realiza trabajos de manteni…",
+      "titulo": "El Municipio de Paraná realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca",
+      "categoria": "cortes",
+      "tipo": "corte_total",
+      "fecha": "2026-11-19T00:00:00-03:00",
+      "fecha_raw": "2026-11-19T00:00:00-03:00",
+      "horario": null,
+      "motivo": "Mantenimiento de red de agua",
+      "franja": "",
+      "calles": [
+        "Corrientes entre La Paz y Colón",
+        "Villaguay entre Alsina y Cura Álvarez"
+      ],
+      "resumen": "Corrientes entre La Paz y Colón · Villaguay entre Alsina y Cura Álvarez",
+      "descripcion": "Corrientes entre La Paz y Colón · Villaguay entre Alsina y Cura Álvarez",
+      "enlace": "https://www.apfdigital.com.ar/noticias/2026/10/28/476715-el-municipio-de-parana-realiza-trabajos-de-mantenimiento-y-reparacion-en-las-redes-de-agua-y-cloaca",
+      "lat": -31.7290563,
+      "lon": -60.5270386,
+      "sin_ubicacion": false,
+      "localidad": "Paraná",
+      "provincia": "Entre Ríos",
+      "via": "calle Corrientes",
+      "km_desde": null,
+      "km_hasta": null,
+      "vigencia": {
+        "hasta": "2026-12-19T03:00:00.000Z",
+        "tipo": "estimada",
+        "detalle": "estimado: obra (30 días)"
+      },
+      "vigente_hasta": "2026-12-19T03:00:00.000Z",
+      "fuente_tipo": "noticia",
+      "segmentos": [
+        {
+          "puntos": [
+            [
+              -31.7290563,
+              -60.5270386
+            ],
+            [
+              -31.7278727,
+              -60.5264172
+            ]
+          ],
+          "calle": "Corrientes",
+          "desde": "La Paz",
+          "hasta": "Colón",
+          "motivo": "Desvío de tránsito",
+          "franja": "",
+          "ctx": "En calle Corrientes, en el tramo entre calles La Paz y Colón, se relocalizará mediante un desvío, una cañería distribuidora de agua potable de 100 milímetros, debido a la construcción de un nuevo sistema de desagües pluviales de gran diámetro –en el marco del avance de la obra de sistematización del arroyo La Santiagueña–, para reconducir los excedentes pluviales hacia el río Paraná.",
+          "entre": "La Paz y Colón",
+          "texto": "Corrientes entre La Paz y Colón"
+        },
+        {
+          "puntos": [
+            [
+              -31.7438224,
+              -60.5216426
+            ],
+            [
+              -31.7432956,
+              -60.5227917
+            ]
+          ],
+          "calle": "Villaguay",
+          "desde": "Alsina",
+          "hasta": "Cura Álvarez",
+          "motivo": "Mantenimiento de red cloacal",
+          "franja": "",
+          "ctx": "Solo pueden registrarse casos de baja presión en los hogares frentistas o aledaños al epicentro de esos trabajos.Mientras que para optimizar el funcionamiento de la red cloacal se desarrollará un operativo sobre calle Villaguay, en el tramo entre calles Alsina y Cura Álvarez.",
+          "entre": "Alsina y Cura Álvarez",
+          "texto": "Villaguay entre Alsina y Cura Álvarez"
+        }
+      ],
+      "puntos": [
+        [
+          -31.7290563,
+          -60.5270386
+        ],
+        [
+          -31.7278727,
+          -60.5264172
         ]
       ]
     },
@@ -302,89 +460,6 @@
           -60.520768253695216
         ]
       ]
-    },
-    {
-      "id": "bing-apf-cortes:El Municipio de Paraná realiza trabajos de manteni…",
-      "titulo": "El Municipio de Paraná realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca",
-      "categoria": "cortes",
-      "tipo": "corte_total",
-      "fecha": "2026-10-28T00:00:00-03:00",
-      "fecha_raw": "2026-10-28T00:00:00-03:00",
-      "horario": null,
-      "motivo": "Mantenimiento de red de agua",
-      "franja": "",
-      "calles": [
-        "Corrientes entre La Paz y Colón",
-        "Villaguay entre Alsina y Cura Álvarez"
-      ],
-      "resumen": "Corrientes entre La Paz y Colón · Villaguay entre Alsina y Cura Álvarez",
-      "descripcion": "Corrientes entre La Paz y Colón · Villaguay entre Alsina y Cura Álvarez",
-      "enlace": "https://www.apfdigital.com.ar/noticias/2026/10/28/476715-el-municipio-de-parana-realiza-trabajos-de-mantenimiento-y-reparacion-en-las-redes-de-agua-y-cloaca",
-      "lat": -31.7290563,
-      "lon": -60.5270386,
-      "sin_ubicacion": false,
-      "localidad": "Paraná",
-      "provincia": "Entre Ríos",
-      "via": "calle Corrientes",
-      "km_desde": null,
-      "km_hasta": null,
-      "vigente_hasta": "2026-11-27T03:00:00.000Z",
-      "segmentos": [
-        {
-          "puntos": [
-            [
-              -31.7290563,
-              -60.5270386
-            ],
-            [
-              -31.7278727,
-              -60.5264172
-            ]
-          ],
-          "calle": "Corrientes",
-          "desde": "La Paz",
-          "hasta": "Colón",
-          "motivo": "Mantenimiento de red de agua",
-          "franja": "",
-          "entre": "La Paz y Colón",
-          "texto": "Corrientes entre La Paz y Colón"
-        },
-        {
-          "puntos": [
-            [
-              -31.7438224,
-              -60.5216426
-            ],
-            [
-              -31.7432956,
-              -60.5227917
-            ]
-          ],
-          "calle": "Villaguay",
-          "desde": "Alsina",
-          "hasta": "Cura Álvarez",
-          "motivo": "Mantenimiento de red cloacal",
-          "franja": "",
-          "entre": "Alsina y Cura Álvarez",
-          "texto": "Villaguay entre Alsina y Cura Álvarez"
-        }
-      ],
-      "puntos": [
-        [
-          -31.7290563,
-          -60.5270386
-        ],
-        [
-          -31.7278727,
-          -60.5264172
-        ]
-      ],
-      "vigencia": {
-        "hasta": "2026-11-27T03:00:00.000Z",
-        "tipo": "estimada",
-        "detalle": "estimado: obra (30 días)"
-      },
-      "fuente_tipo": "noticia"
     }
   ]
 }
