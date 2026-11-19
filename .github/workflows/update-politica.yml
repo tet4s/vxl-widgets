@@ -1,0 +1,38 @@
+name: Actualizar Política del Litoral
+
+on:
+  schedule:
+    # Cada 20 minutos, todo el día: las notificaciones de política no tienen horario
+    - cron: '*/20 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del Repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js (v24)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Instalar Dependencias
+        run: npm install
+
+      - name: Ejecutar Update de Política
+        run: node scripts/update-politica.js
+
+      - name: Commit y Push de Datos Actualizados
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/politica.json
+          git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de política [skip ci]"
+          git pull --rebase origin main
+          git push
