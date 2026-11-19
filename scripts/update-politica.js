@@ -407,6 +407,12 @@ function clasificar(titulo) {
 function esOffTopic(n) {
   return OFF_TOPIC.some(kw => coincide(n, kw));
 }
+
+// Ruido que no entra ni aunque el título mencione "decreto" o "ley".
+const OFF_TOPIC_DURO = ['gta', 'videojuego', 'grammy', 'netflix', 'horoscopo', 'recital', 'futbol'];
+function esOffTopicDuro(n) {
+  return OFF_TOPIC_DURO.some(kw => coincide(n, kw));
+}
 function esGancho(n) {
   return GANCHO.some(kw => coincide(n, kw)) || /[!]{2,}/.test(n);
 }
@@ -462,7 +468,51 @@ function jurPorTitulo(titulo, jurFuente, oficial) {
   return jurFuente;
 }
 
-// ---------------------------------------------------------------- dedupe
+// En Santa Fe y Entre Ríos el widget sigue el gobierno provincial y la capital.
+// Las noticias de otras localidades (Concordia, Rosario, Rafaela...) no entran.
+const FOCO_PROVINCIAL = {
+  entre_rios: {
+    capital: ['parana'],
+    otras: ['concordia', 'gualeguaychu', 'colon', 'villaguay', 'concepcion del uruguay', 'chajari',
+      'federacion', 'diamante', 'crespo', 'nogoya', 'victoria', 'la paz', 'federal', 'gualeguay',
+      'san jose', 'feliciano', 'ramirez', 'macia', 'urdinarrain', 'ibicuy', 'santa elena', 'hernandarias',
+      'viale', 'segui', 'maria grande', 'cerrito', 'oro verde', 'san benito', 'colonia avellaneda',
+      'aldea brasilera', 'bovril', 'hasenkamp', 'santa anita', 'villa elisa', 'villa paranacito',
+      'ceibas', 'basavilbaso', 'rosario del tala', 'larroque', 'enrique carbo', 'santa lucia',
+      'san salvador', 'general campos', 'san jaime', 'los conquistadores', 'puerto yrigoyen']
+  },
+  santa_fe: {
+    capital: ['santa fe', 'ciudad de santa fe', 'la capital'],
+    otras: ['rosario', 'rafaela', 'reconquista', 'venado tuerto', 'santo tome', 'esperanza', 'san lorenzo',
+      'villa gobernador galvez', 'granadero baigorria', 'casilda', 'firmat', 'avellaneda', 'san justo',
+      'vera', 'tostado', 'ceres', 'sunchales', 'canada de gomez', 'rufino', 'perez', 'funes', 'roldan',
+      'carcarana', 'puerto general san martin', 'san cristobal', 'coronda', 'galvez', 'san genaro',
+      'pilar', 'teodelina', 'las parejas', 'las rosas', 'totoras', 'serodino', 'sao tome', 'calchaqui',
+      'pueblo esther', 'alvear', 'arroyo seco', 'villa constitucion', 'fray luis beltran',
+      'capitan bermudez', 'san jerónimo norte', 'monte vera', 'sauce viejo', 'san jose del rincon',
+      'laguna paiva', 'san carlos centro', 'humboldt', 'progreso', 'sastre', 'el trebol', 'lehmann',
+      'san vicente', 'ramona', 'bella italia', 'maria juana', 'san jorge', 'castellanos', 'susana']
+  }
+};
+
+function esOtraLocalidad(titulo, jur) {
+  const foco = FOCO_PROVINCIAL[jur];
+  if (!foco) return false;
+  const n = norm(titulo);
+  if (foco.capital.some(c => coincide(n, c))) return false;
+  for (const loc of foco.otras) {
+      const esc = norm(loc).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      if (new RegExp('(^|[^a-z0-9ñ])(?:en|de|desde|hacia|para|con|ante)\\s+' + esc + '(?=$|[^a-z0-9ñ])').test(n)) return true;
+      if (new RegExp('^' + esc + '(?=$|[^a-z0-9ñ])').test(n)) return true;
+    }
+  return false;
+}
+
+// Se llama después de asignar jurisdicción: devuelve true si la noticia es de
+// una localidad que no seguimos.
+function fueraDeFoco(titulo, jur) {
+  return esOtraLocalidad(titulo, jur);
+}
 const STOP = new Set(['para', 'como', 'sobre', 'entre', 'desde', 'hasta', 'cuando', 'donde', 'tras', 'luego', 'este', 'esta', 'estos', 'estas', 'otro', 'otra', 'fueron', 'fue', 'son', 'con', 'por', 'del', 'los', 'las', 'una', 'unos', 'unas', 'que', 'sus', 'mas', 'tras', 'sus']);
 function tokens(t) {
   return norm(t).replace(/[^a-z0-9ñü ]+/g, ' ').split(/\s+/).filter(w => w.length > 3 && !STOP.has(w));
@@ -704,7 +754,7 @@ async function main() {
   }
 
   const limite = Date.now() - WINDOW_DAYS * 86400000;
-  const stats = { offTopic: 0, gancho: 0, sinCategoria: 0, corto: 0, ok: 0 };
+  const stats = { offTopic: 0, gancho: 0, sinCategoria: 0, corto: 0, localidad: 0, ok: 0 };
   const porTitulo = new Map();
 
   function agregar(item, esNuevo) {
@@ -715,11 +765,13 @@ async function main() {
       const n = norm(titulo);
             if (esGancho(n) || PREGUNTA_RX.test(titulo)) { stats.gancho++; return; }
             if (esNombreDeDocumento(titulo)) { stats.corto++; return; }
+    if (esOffTopicDuro(n)) { stats.offTopic++; return; }
     const cats = clasificar(titulo);
     if (!cats.length) { stats.sinCategoria++; return; }
     if (esOffTopic(n) && !cats.includes('leyes') && !cats.includes('obras')) { stats.offTopic++; return; }
 
     const jur = jurPorTitulo(titulo, item.jurisdiccion || item.jur || 'nacional', item.oficial);
+    if (fueraDeFoco(titulo, jur)) { stats.localidad++; return; }
     const fecha = item.fecha || new Date().toISOString();
     if (new Date(fecha).getTime() < limite) return;
 
@@ -793,11 +845,18 @@ async function main() {
             noticias.length = 0;
             noticias.push(...sinDuplicados.map(n => ({ ...n })));
             // Saneo final: comillas desparejas en titulares que vienen de versiones viejas
-            for (const n of noticias) {
-              let t = n.titulo_info || n.titulo;
-              if ((t.match(/"/g) || []).length % 2 === 1) t = t.replace(/"/g, '').replace(/\s+/g, ' ').trim();
-              n.titulo_info = t;
-            }
+                  for (const n of noticias) {
+                    let t = n.titulo_info || n.titulo;
+                    if ((t.match(/"/g) || []).length % 2 === 1) t = t.replace(/"/g, '').replace(/\s+/g, ' ').trim();
+                    n.titulo_info = t;
+                  }
+                  // El titular reescrito puede nombrar una localidad que el original no decía
+                  // ("Pullaro inauguró un jardín en Pueblo Esther"): se filtra también acá.
+                  const enFoco = noticias.filter(n => !fueraDeFoco(n.titulo_info || n.titulo, n.jurisdiccion));
+                  if (enFoco.length) {
+                    noticias.length = 0;
+                    noticias.push(...enFoco);
+                  }
 
   const categorias = CATEGORIAS.map(c => ({
     id: c.id,
