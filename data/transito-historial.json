@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-19T21:29:16.198Z",
+  "actualizado": "2026-11-19T22:02:28.921Z",
   "items": {
     "santa fe|4 de enero entre salta y mendoza|obra en la via publica": {
       "item": {
@@ -85,6 +85,84 @@
       "fuente_tipo": "estado",
       "primera_vez": "2026-11-19T21:15:35.976Z",
       "ultima_vez_vista": "2026-11-19T21:15:35.976Z",
+      "recuperada": false
+    },
+    "parana|echague entre antartida argentina y alsina|obra en la via publica": {
+      "item": {
+        "id": "elonce:Chocaron tres autos en transitada calle de Paraná:…",
+        "titulo": "Chocaron tres autos en transitada calle de Paraná: un conductor se habría desvanecido y fue hospitalizado",
+        "categoria": "accidentes",
+        "tipo": "choque",
+        "fecha": "2026-11-19T00:00:00-03:00",
+        "fecha_raw": "2026-11-19T00:00:00-03:00",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "Echagüe entre Antártida Argentina y Alsina"
+        ],
+        "resumen": "Echagüe entre Antártida Argentina y Alsina",
+        "descripcion": "Echagüe entre Antártida Argentina y Alsina",
+        "enlace": "https://www.elonce.com/policiales/chocaron-tres-autos-en-transitada-calle-de-parana-un-conductor-se-habria-desvanecido-y-fue-hospitalizado.htm",
+        "lat": -31.7402716,
+        "lon": -60.5196916,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-11-20T02:59:00.000Z",
+          "tipo": "diaria",
+          "detalle": "solo ese día"
+        },
+        "vigente_hasta": "2026-11-20T02:59:00.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.7402716,
+                -60.5196916
+              ],
+              [
+                -31.7405824,
+                -60.5193755
+              ],
+              [
+                -31.7411433,
+                -60.5188172
+              ]
+            ],
+            "calle": "Echagüe",
+            "desde": "Antártida Argentina",
+            "hasta": "Alsina",
+            "motivo": "Choque",
+            "franja": "",
+            "ctx": "El hecho ocurrió en un sector de calle Echagüe, entre Antártida Argentina y Alsina, y quedó bajo investigación para esclarecer la mecánica del choque.",
+            "entre": "Antártida Argentina y Alsina",
+            "texto": "Echagüe entre Antártida Argentina y Alsina"
+          }
+        ],
+        "puntos": [
+          [
+            -31.7402716,
+            -60.5196916
+          ],
+          [
+            -31.7405824,
+            -60.5193755
+          ],
+          [
+            -31.7411433,
+            -60.5188172
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-19T22:02:28.921Z",
+      "ultima_vez_vista": "2026-11-19T22:02:28.921Z",
       "recuperada": false
     },
     "parana|hernandarias~valentin torra|obra en la via publica": {

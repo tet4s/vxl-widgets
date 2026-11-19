@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-19T21:29:16.199Z",
-  "timestamp_epoch": 1795123756,
+  "timestamp": "2026-11-19T22:02:28.922Z",
+  "timestamp_epoch": 1795125748,
   "source": "vxl-transito-ar",
-  "cantidad": 6,
+  "cantidad": 7,
   "items": [
     {
       "id": "ellitoral:Santa Fe:2026-11-19",
@@ -81,6 +81,78 @@
         [
           -31.6477965,
           -60.7123214
+        ]
+      ]
+    },
+    {
+      "id": "elonce:Chocaron tres autos en transitada calle de Paraná:…",
+      "titulo": "Chocaron tres autos en transitada calle de Paraná: un conductor se habría desvanecido y fue hospitalizado",
+      "categoria": "accidentes",
+      "tipo": "choque",
+      "fecha": "2026-11-19T00:00:00-03:00",
+      "fecha_raw": "2026-11-19T00:00:00-03:00",
+      "horario": null,
+      "motivo": "Obra en la vía pública",
+      "franja": "",
+      "calles": [
+        "Echagüe entre Antártida Argentina y Alsina"
+      ],
+      "resumen": "Echagüe entre Antártida Argentina y Alsina",
+      "descripcion": "Echagüe entre Antártida Argentina y Alsina",
+      "enlace": "https://www.elonce.com/policiales/chocaron-tres-autos-en-transitada-calle-de-parana-un-conductor-se-habria-desvanecido-y-fue-hospitalizado.htm",
+      "lat": -31.7402716,
+      "lon": -60.5196916,
+      "sin_ubicacion": false,
+      "localidad": "Paraná",
+      "provincia": "Entre Ríos",
+      "via": "",
+      "km_desde": null,
+      "km_hasta": null,
+      "vigencia": {
+        "hasta": "2026-11-20T02:59:00.000Z",
+        "tipo": "diaria",
+        "detalle": "solo ese día"
+      },
+      "vigente_hasta": "2026-11-20T02:59:00.000Z",
+      "fuente_tipo": "noticia",
+      "segmentos": [
+        {
+          "puntos": [
+            [
+              -31.7402716,
+              -60.5196916
+            ],
+            [
+              -31.7405824,
+              -60.5193755
+            ],
+            [
+              -31.7411433,
+              -60.5188172
+            ]
+          ],
+          "calle": "Echagüe",
+          "desde": "Antártida Argentina",
+          "hasta": "Alsina",
+          "motivo": "Choque",
+          "franja": "",
+          "ctx": "El hecho ocurrió en un sector de calle Echagüe, entre Antártida Argentina y Alsina, y quedó bajo investigación para esclarecer la mecánica del choque.",
+          "entre": "Antártida Argentina y Alsina",
+          "texto": "Echagüe entre Antártida Argentina y Alsina"
+        }
+      ],
+      "puntos": [
+        [
+          -31.7402716,
+          -60.5196916
+        ],
+        [
+          -31.7405824,
+          -60.5193755
+        ],
+        [
+          -31.7411433,
+          -60.5188172
         ]
       ]
     },
