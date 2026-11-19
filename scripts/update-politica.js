@@ -217,7 +217,7 @@ function scrapeMarkdown(md) {
   let m;
   while ((m = rx.exec(md)) !== null) {
     const titulo = limpiar(m[1].replace(/[*_]/g, ''));
-    if (!titulo) continue;
+        if (!titulo || /https?:\/\//i.test(titulo) || /^www\./i.test(titulo)) continue;
     const key = norm(titulo);
     if (vistos.has(key)) continue;
     vistos.add(key);
@@ -476,10 +476,12 @@ async function main() {
   const porTitulo = new Map();
 
   function agregar(item, esNuevo) {
-    const titulo = limpiar(item.titulo);
-    if (!titulo || titulo.length < 30) { stats.corto++; return; }
-    const n = norm(titulo);
-    if (esGancho(n)) { stats.gancho++; return; }
+      const titulo = limpiar(item.titulo);
+      if (!titulo || titulo.length < 30) { stats.corto++; return; }
+      // Algunos listados devuelven la URL como "titular" (pasa con el proxy).
+      if (/https?:\/\//i.test(titulo) || /^www\./i.test(titulo)) { stats.corto++; return; }
+      const n = norm(titulo);
+      if (esGancho(n)) { stats.gancho++; return; }
     const cats = clasificar(titulo);
     if (!cats.length) { stats.sinCategoria++; return; }
     if (esOffTopic(n) && !cats.includes('leyes') && !cats.includes('obras')) { stats.offTopic++; return; }

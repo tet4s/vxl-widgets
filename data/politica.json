@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-19T20:54:01.352Z",
-  "timestamp_epoch": 1795121641,
-  "total_noticias": 120,
+  "last_updated": "2026-11-19T20:54:35.324Z",
+  "timestamp_epoch": 1795121675,
+  "total_noticias": 117,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 54
+      "total": 53
     },
     {
       "id": "obras",
@@ -17,12 +17,12 @@
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 36
+      "total": 35
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 17
+      "total": 16
     }
   ],
   "jurisdicciones": [
@@ -34,12 +34,12 @@
     {
       "id": "santa_fe",
       "nombre": "SANTA FE",
-      "total": 13
+      "total": 9
     },
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 26
+      "total": 27
     },
     {
       "id": "corrientes",
@@ -104,16 +104,6 @@
       "fuente": "La Nación Política"
     },
     {
-      "titulo": "Https://www.ellitoral.com/politica/legislatura-santafe-removio-cargo-fiscal-tostado-votacion-dividida-abstenciones-ausencias0cj8IaaTqEf.html",
-      "fecha": "2026-11-19T20:47:38.718Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.ellitoral.com/politica/legislatura-santafe-removio-cargo-fiscal-tostado-votacion-dividida-abstenciones-ausencias_0_cj8IaaTqEf.html",
-      "fuente": "El Litoral Política"
-    },
-    {
       "titulo": "![Image 16: Posadas eliminó la Ley de Lemas y el resultado podría condicionar la negociación de Santilli con un gobernador",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
@@ -123,16 +113,6 @@
       ],
       "url": "https://www.lanacion.com.ar/resizer/v2/santilli-con-passalacqua-en-YSR3NFXBHZH37LDMLFPM3H5K7Y.jpeg?auth=2c04022ee46e73ba400922a271af4511310fa4a162f8b531207a8e08b8eb4b51&width=320&height=213&quality=70&smart=true",
       "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Https://www.ellitoral.com/politica/senado-nacional-discapacidad-propiedad-privada-ley-tierras-alfonsin0WquJGfXwhY.html",
-      "fecha": "2026-11-19T20:47:38.718Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.ellitoral.com/politica/senado-nacional-discapacidad-propiedad-privada-ley-tierras-alfonsin_0_WquJGfXwhY.html",
-      "fuente": "El Litoral Política"
     },
     {
       "titulo": "![Image 18: El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
@@ -145,16 +125,6 @@
       "fuente": "La Nación Política"
     },
     {
-      "titulo": "Https://www.ellitoral.com/politica/santa-fe-fabian-bastia-ignacio-tabares-universidad-tecnologica-nacional-escrutinio-elecciones-2027-telegramas02qYASWRG4U.html",
-      "fecha": "2026-11-19T20:47:38.718Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.ellitoral.com/politica/santa-fe-fabian-bastia-ignacio-tabares-universidad-tecnologica-nacional-escrutinio-elecciones-2027-telegramas_0_2qYASWRG4U.html",
-      "fuente": "El Litoral Política"
-    },
-    {
       "titulo": "![Image 19: Un testigo que auditó la obra pública dejó una frase confusa y se desdijo en pleno juicio",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
@@ -163,16 +133,6 @@
       ],
       "url": "https://www.lanacion.com.ar/resizer/v2/martin-gonzalez-oria-tecnico-del-organismo-de-JQWHOKEE2ZBWNHX7XARHRXNTBM.png?auth=0aaa22290a8b00512aff946cb31b4c0753cabace4f8b131675d0249bf3db8f07&width=320&height=213&quality=70&smart=true",
       "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Https://www.ellitoral.com/politica/arroyo-leyes-crecida-parana-defensa-oeste-evacuados-proteccion-civil-santa-fe-recursos-hidricos0pTmTHKzlo3.html",
-      "fecha": "2026-11-19T20:47:38.718Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.ellitoral.com/politica/arroyo-leyes-crecida-parana-defensa-oeste-evacuados-proteccion-civil-santa-fe-recursos-hidricos_0_pTmTHKzlo3.html",
-      "fuente": "El Litoral Política"
     },
     {
       "titulo": "![Image 25: El debate presidencial dejará de ser obligatorio en las elecciones generales si avanza el proyecto de Milei",
@@ -275,13 +235,13 @@
       "fuente": "Análisis Digital"
     },
     {
-      "titulo": "La Legislatura acompañó el desarrollo de un sistema de alertas ante incendios",
+      "titulo": "El Senado debate la nueva ley de Discapacidad y la restitución de la Ley de Tierras",
       "fecha": "2026-11-19T20:25:36.736Z",
       "jurisdiccion": "misiones",
       "categorias": [
-        "gobierno"
+        "leyes"
       ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928176-la-legislatura-acompano-el-desarrollo-de-un-sistema-de-alertas-ante-incendios",
+      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928083-el-senado-debate-la-nueva-ley-de-discapacidad-y-la-restitucion-de-la-ley-de-tierras",
       "fuente": "Territorio Digital"
     },
     {
@@ -345,13 +305,13 @@
       "fuente": "Análisis Digital"
     },
     {
-      "titulo": "El Senado debate la nueva ley de Discapacidad y la restitución de la Ley de Tierras",
+      "titulo": "La Legislatura acompañó el desarrollo de un sistema de alertas ante incendios",
       "fecha": "2026-11-19T20:25:36.736Z",
       "jurisdiccion": "misiones",
       "categorias": [
-        "leyes"
+        "gobierno"
       ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928083-el-senado-debate-la-nueva-ley-de-discapacidad-y-la-restitucion-de-la-ley-de-tierras",
+      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928176-la-legislatura-acompano-el-desarrollo-de-un-sistema-de-alertas-ante-incendios",
       "fuente": "Territorio Digital"
     },
     {
@@ -1265,6 +1225,16 @@
         "elecciones"
       ],
       "url": "https://www.hcder.gov.ar/noticiasDetalles.php?id=2036",
+      "fuente": "Diputados Entre Ríos"
+    },
+    {
+      "titulo": "Dictamen para acuerdos de cooperación y control sobre los recursos naturales",
+      "fecha": "2026-11-17T15:00:00.000Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.hcder.gov.ar/noticiasDetalles.php?id=2035",
       "fuente": "Diputados Entre Ríos"
     }
   ]
