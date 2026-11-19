@@ -272,7 +272,7 @@ function sonDuplicadas(a, b) {
 }
 
 // ---------------------------------------------------------------- reescritura LLM
-const GEMINI_MODELOS = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash-8b'];
+const GEMINI_MODELOS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.5-pro'];
 function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 // El presupuesto de salida tiene que alcanzar para TODOS los titulares del lote:
@@ -345,6 +345,7 @@ async function reescribirLote(items) {
       const txt = await geminiTexto(prompt, 120 * items.length + 300);
       if (txt) {
         const m = txt.match(/\{[\s\S]*\}/);
+        if (!m) console.log('[policial] LLM texto sin JSON: ' + txt.slice(0, 220));
         if (m) {
           try {
             const parsed = JSON.parse(m[0]);
@@ -360,11 +361,15 @@ async function reescribirLote(items) {
   return items.map(() => null);
 }
 
-async function reescribirConLLM(items) {
+// Solo se reescriben titulares NUEVOS (los que ya están en el JSON previo conservan
+// su versión): así no se quema la cuota gratuita de Gemini en cada corrida de 10 min.
+async function reescribirConLLM(items, conocidos) {
   if (!process.env.GEMINI_API_KEY || !items.length) return items;
+  const pendientes = items.filter(n => !conocidos.has(normalizarTexto(n.titulo)));
+  if (!pendientes.length) { console.log('[policial] LLM: sin titulares nuevos para reescribir'); return items; }
   let aplicados = 0, rechazados = 0;
-  for (let i = 0; i < items.length; i += 20) {
-    const chunk = items.slice(i, i + 20);
+  for (let i = 0; i < pendientes.length; i += 10) {
+    const chunk = pendientes.slice(i, i + 10);
     const rw = await reescribirLote(chunk);
     for (let j = 0; j < chunk.length; j++) {
       const n = limpiarTitulo(rw[j] || '');
@@ -373,7 +378,7 @@ async function reescribirConLLM(items) {
       else rechazados++;
     }
   }
-  console.log('[policial] titulares reescritos con LLM:', aplicados, '| rechazados:', rechazados);
+  console.log('[policial] titulares reescritos con LLM:', aplicados, '| rechazados:', rechazados, '| pendientes:', pendientes.length, '| total:', items.length);
   return items;
 }
 
@@ -439,7 +444,8 @@ async function main() {
   });
   items.sort((a, b) => parseIso(b.fecha) - parseIso(a.fecha));
 
-  await reescribirConLLM(items);
+  const conocidos = new Set(historico.map(n => normalizarTexto(n.titulo)));
+  await reescribirConLLM(items, conocidos);
 
   // dedupe final: misma noticia con distinto titulo/fuente
   const sinDup = [];
