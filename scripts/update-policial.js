@@ -280,7 +280,6 @@ function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
 async function geminiTexto(prompt, maxTokens) {
   const key = process.env.GEMINI_API_KEY || '';
   if (!key) { console.warn('[policial] GEMINI_API_KEY ausente o vacía (len ' + key.length + ')'); return null; }
-  console.log('[policial] Gemini key len ' + key.length + ' | modelos ' + GEMINI_MODELOS.join(','));
   for (const modelo of GEMINI_MODELOS) {
     const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + modelo + ':generateContent?key=' + encodeURIComponent(key);
     try {
