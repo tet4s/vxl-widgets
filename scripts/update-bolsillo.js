@@ -48,11 +48,20 @@ function normalizarTexto(texto) {
     .replace(/[\u0300-\u036f]/g, '');
 }
 
+// match por palabra: los términos cortos (gas, auto, luz, cer, uva...) se buscan
+// con límite de palabra inicial para no matchear dentro de otra palabra
+// (ej. "Las Vegas" no debe contar como "gas").
+function matchTermino(texto, termino) {
+  const t = normalizarTexto(termino);
+  if (t.length <= 4) return new RegExp('\\b' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(texto);
+  return texto.includes(t);
+}
+
 function clasificarNoticia(titulo) {
   const texto = normalizarTexto(titulo);
   const categorias = [];
   for (const cat of CATEGORIAS) {
-    if (cat.keywords.some(kw => texto.includes(normalizarTexto(kw)))) {
+    if (cat.keywords.some(kw => matchTermino(texto, kw))) {
       categorias.push(cat.id);
     }
   }
@@ -125,11 +134,11 @@ async function extraerDescripcion(link, timeout = 4000) {
 // titular descriptivo (path sin key / fallback): si el headline es vago/gancho usa el lead
 function tituloDescriptivo(t, desc) {
   let n = reescribirTitulo(t);
-  if (!desc) return n;
-  if (/[%$\d]|(subir|bajar|aumentar|anunciar|elevar|reducir|crecer|decir|señalar|confirmar|presentar|publicar|registrar)/i.test(n)) return n;
+  if (!desc) return repararPorcentaje(n, t);
+  if (/[%$\d]|(subir|bajar|aumentar|anunciar|elevar|reducir|crecer|decir|señalar|confirmar|presentar|publicar|registrar)/i.test(n)) return repararPorcentaje(n, t);
   let d = String(desc || '').replace(/\s+/g, ' ').trim();
   if (d.length > 130) d = d.slice(0, 127) + '\u2026';
-  return d || n;
+  return repararPorcentaje(d || n, t);
 }
 
 function reescribirTitulo(t) {
@@ -163,7 +172,7 @@ async function procesarFuente(fuente) {
       const tituloRaw = $el.text().trim();
       const titulo = reescribirTitulo(tituloRaw);
       const link = $el.attr('href') || $el.closest('a').attr('href') || '';
-      if (tituloRaw.length > 15 && !titulosVistos.has(tituloRaw) && !esGancho(tituloRaw) && !esOffTopic(tituloRaw)) {
+      if (tituloRaw.length > 15 && !titulosVistos.has(tituloRaw) && !esGancho(tituloRaw) && !esOffTopic(tituloRaw) && !esCotizacionDolar(tituloRaw)) {
         titulosVistos.add(tituloRaw);
         const categorias = clasificarNoticia(titulo);
         if (categorias.length > 0) {
@@ -205,11 +214,23 @@ function parseFechaIso(f) {
 }
 
 const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash-8b:generateContent?key=' + encodeURIComponent(process.env.GEMINI_API_KEY || '');
-const OFF_TOPIC = ['policia','policial','droga','drogadicc','narc','narcotr','confisc','detenc','detenido','allanamiento','homicid','victim','victima','violencia','tiroteo','accidente','accidental','fallec','muerte','omicid','delito','delincuencia','cauta','inyectable','prisión','prision','incendio','incendiado','enriquecimien','patrimoni','acusacion','corrupcion','fiscalia','fiscales','elecc','reelecc','voto','macrista','kirchner','bullrich','candidat','ballotage','peronism','macrism','oposicion','campana electoral'];
+const OFF_TOPIC = ['policia','policial','droga','drogadicc','narc','narcotr','confisc','detenc','detenido','allanamiento','homicid','victim','victima','violencia','tiroteo','accidente','accidental','fallec','muerte','omicid','delito','delincuencia','cauta','inyectable','prisión','prision','incendio','incendiado','enriquecimien','patrimoni','acusacion','corrupcion','fiscalia','fiscales','elecc','reelecc','voto','macrista','kirchner','bullrich','candidat','ballotage','peronism','macrism','oposicion','campana electoral','formula 1','gran premio','colapinto','futbol','fútbol','jugadores','tenis','rugby','basquet','básquet','olimpic','deportiv','mundial','libertadores','espectaculo','farandula','famosos','television'];
 function esOffTopic(t) {
   var n = normalizarTexto(t);
   for (var i = 0; i < OFF_TOPIC.length; i++) { if (n.indexOf(OFF_TOPIC[i]) !== -1) return true; }
   return false;
+}
+
+// El widget de bolsillo NO muestra cotizaciones del dólar: hay un widget dedicado
+// (flipboard-dolares-bolsa). Se descarta el reporte de cotización, pero SÍ se deja
+// pasar una noticia económica que mencione el dólar como causa (inflación, reservas...).
+function esCotizacionDolar(t) {
+  var n = normalizarTexto(t);
+  if (n.indexOf('dolar') === -1 && n.indexOf('dólar') === -1) return false;
+  var esReporte = /(cotizaci[oó]n|a cu[aá]nto|cierre|cerr[oó]|abri[oó]|precio del d[oó]lar|valor del d[oó]lar|d[oó]lar hoy|d[oó]lar blue hoy)/.test(n);
+  if (!esReporte) return false;
+  var esEconomico = /(inflaci[oó]n|salario|sueldo|tarifa|presupuesto|reserva|deuda|fmi|impuesto|paritaria|empleo|desempleo|aumento|suba|impacto|medida|anuncio)/.test(n);
+  return !esEconomico;
 }
 
 // WHITELIST temático (filtro primario, pre-LLM): un titular entra SOLO si menciona
@@ -347,13 +368,14 @@ async function main() {
 
   // --- merge + dedupe conservando la fecha más nueva ---
   const merged = {};
-  let cntGancho = 0, cntOffTopic = 0, cntNoEcon = 0;
+  let cntGancho = 0, cntOffTopic = 0, cntNoEcon = 0, cntDolar = 0;
   const add = (n) => {
     n.titulo = tituloDescriptivo(n.titulo, n.descripcion);   // <-- usa lead si el headline es vago/gancho
     const k = normalizarTexto(n.titulo);
     if (!k || !n.titulo) return;
     if (esGancho(n.titulo)) { cntGancho++; return; }
     if (esOffTopic(n.titulo)) { cntOffTopic++; return; }
+    if (esCotizacionDolar(n.titulo)) { cntDolar++; return; }   // widget de dólar aparte
     if (!esNoticiaEconomica(n.titulo)) { cntNoEcon++; return; }   // whitelist: debe mencionar consumo-masiva
     if (!n.categorias || !n.categorias.length) n.categorias = clasificarNoticia(n.titulo);
     if (merged[k]) { if (parseFechaIso(n.fecha) > parseFechaIso(merged[k].fecha)) merged[k] = n; }
@@ -361,7 +383,7 @@ async function main() {
   };
   for (const n of nuevas) add(n);
   for (const n of historico) add(n);
-  console.log('[bolsillo] filtrados gancho:', cntGancho, '| off-topic (policiales/drogas/etc):', cntOffTopic, '| no-econ (sin término consumo-masiva):', cntNoEcon);
+  console.log('[bolsillo] filtrados gancho:', cntGancho, '| off-topic (policiales/drogas/etc):', cntOffTopic, '| cotización dólar (widget aparte):', cntDolar, '| no-econ (sin término consumo-masiva):', cntNoEcon);
   const todas = Object.values(merged);
 
   // --- ventana 7 días (más recientes) ---
@@ -372,6 +394,25 @@ async function main() {
     return t > 0 && t >= AHORA - CORTE_MS && t <= AHORA + 60000;
   });
   recientes.sort((a, b) => parseFechaIso(b.fecha) - parseFechaIso(a.fecha)); /* más reciente primero */
+
+  // --- tope por categoría: máx 10 noticias por tag (evita acumulación) ---
+  // Se recorre de más reciente a más viejo; una noticia entra si al menos una de
+  // sus categorías todavía tiene lugar. Se le quitan los tags ya llenos para que
+  // no aparezca en filtros que ya no le corresponden. Se aplica ANTES del LLM
+  // para no reescribir noticias que después se van a descartar.
+  const MAX_POR_CATEGORIA = 10;
+  const conteoCat = {};
+  const recortadas = [];
+  for (const n of recientes) {
+    const disponibles = (n.categorias || []).filter(id => (conteoCat[id] || 0) < MAX_POR_CATEGORIA);
+    if (!disponibles.length) continue;
+    n.categorias = disponibles;
+    disponibles.forEach(id => { conteoCat[id] = (conteoCat[id] || 0) + 1; });
+    recortadas.push(n);
+  }
+  recientes = recortadas;
+  console.log('[bolsillo] tope por categoría (máx ' + MAX_POR_CATEGORIA + '): ' + recientes.length + ' noticias — ' + Object.keys(conteoCat).map(id => id + ':' + conteoCat[id]).join(', '));
+
   await reescribirConLLM(recientes); /* a voz VXL vía Gemini (gratis); fallback al heurístico */
 
   // --- dedupe post-LLM (misma noticia, distinto título/fuente → LLM la unifica → título idéntico → dup) ---
