@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-19T22:06:35.152Z",
-  "timestamp_epoch": 1795125995,
-  "total_noticias": 107,
+  "last_updated": "2026-11-19T22:22:38.473Z",
+  "timestamp_epoch": 1795126958,
+  "total_noticias": 104,
   "window_days": 7,
   "categorias": [
     {
@@ -12,17 +12,17 @@
     {
       "id": "obras",
       "nombre": "OBRAS",
-      "total": 14
+      "total": 12
     },
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 29
+      "total": 27
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 14
+      "total": 15
     }
   ],
   "jurisdicciones": [
@@ -39,7 +39,7 @@
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 24
+      "total": 21
     },
     {
       "id": "corrientes",
@@ -64,17 +64,17 @@
   ],
   "noticias": [
     {
-      "titulo": "Chajarí aprobó su presupuesto municipal",
-      "resumen": "",
-      "titulo_info": "Chajarí aprobó su presupuesto municipal",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-19T21:54:12.882Z",
-      "jurisdiccion": "entre_rios",
+      "titulo": "Senado sancionó la ley de Herramientas para el Fortalecimiento de la Seguridad en Santa Fe",
+      "resumen": "Sobre tablas, se aceptaron los cambios de fondo que el otro cuerpo había hecho al mensaje del Poder Ejecutivo Provincial. Ahora solo resta la promulgación para una iniciativa muy discutida dentro de Unidos, que se había iniciado en mayo.",
+      "titulo_info": "El Senado santafesino sancionó la ley de Fortalecimiento de la Seguridad tras aceptar cambios del Ejecutivo Provincial, a la espera de promulgación",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T22:12:05.000Z",
+      "jurisdiccion": "santa_fe",
       "categorias": [
-        "gobierno"
+        "leyes"
       ],
-      "url": "/noticias/2026/11/19/479961-chajari-aprobo-su-presupuesto-municipal",
-      "fuente": "APF Digital"
+      "url": "https://www.ellitoral.com/politica/maximilianopullaro-camaradesenadores-santafe-seguridadpublica-felipemichlig-rodrigoborla-unioncivicaradical-partidosocialista-codigoprocesalpenal_0_YY3Yy7hfU5.html",
+      "fuente": "El Litoral Política"
     },
     {
       "titulo": "Marcelo Lewandowski: “Esta ley no es buena pero es la mejor ley que podemos sancionar hoy”",
@@ -166,19 +166,6 @@
       ],
       "url": "https://www.lanacion.com.ar/resizer/v2/los-jueces-de-la-corte-suprema-ricardo-lorenzetti-EIQYSQJMRBBZJDBQMXVPQ6BUZI.JPG?auth=05a42f68b5fd6168111df0c99429b465dd3ea98835d2cf9b0c62c2f9e5cc2b66&width=320&height=213&quality=70&smart=true",
       "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Pullaro: “Estamos convencidos de que fortalecer la infraestructura educativa nos permite dar un salto de calidad”",
-      "resumen": "Durante la inauguración del nuevo edificio del Jardín de Infantes Nº 365 de Pueblo Esther, en el departamento Rosario, el gobernador destacó la inversión en educación que el Gobierno Provincial lleva adelante en todo el territorio santafesino.",
-      "titulo_info": "Pullaro inauguró jardín en Pueblo Esther y destacó inversión en infraestructura educativa santafesina",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:47:38.929Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.santafe.gob.ar/noticias/noticia/287872/",
-      "fuente": "Gobierno de Santa Fe"
     },
     {
       "titulo": "El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
@@ -324,17 +311,17 @@
       "fuente": "Legislatura Formosa"
     },
     {
-      "titulo": "Frigerio recibió a Azcué para coordinar acciones por El Niño y analizar la marcha de obras en Concordia",
+      "titulo": "Paritaria estatal: ATE cuestionó la suspensión de la audiencia y reclamó \"recuperar salarios",
       "resumen": "",
-      "titulo_info": "Frigerio y Azcué coordinaron acciones por El Niño y obras en Concordia",
+      "titulo_info": "ATE cuestionó suspensión de audiencia paritaria estatal y reclamó recuperar salarios",
       "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.810Z",
+      "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
-        "obras"
+        "gobierno"
       ],
-      "url": "/locales/2026/11/17/frigerio-recibio-azcue-para-coordinar-acciones-por-el-nino-y-analizar-la-marcha-de-obras-en-concordia",
-      "fuente": "Análisis Digital"
+      "url": "/politica/la-paritaria-estatal-paso-a-cuarto-intermedio-ate-cuestiono-reclamo-recuperar-salarios.htm",
+      "fuente": "Elonce Política"
     },
     {
       "titulo": "La Legislatura acompañó el desarrollo de un sistema de alertas ante incendios",
@@ -402,16 +389,16 @@
       "fuente": "Legislatura Formosa"
     },
     {
-      "titulo": "Paritaria estatal: ATE cuestionó la suspensión de la audiencia y reclamó \"recuperar salarios",
+      "titulo": "Paritaria estatal en Entre Ríos: el Gobierno explicó por qué \"no pudo realizarse la audiencia",
       "resumen": "",
-      "titulo_info": "ATE cuestionó suspensión de audiencia paritaria estatal y reclamó recuperar salarios",
+      "titulo_info": "El Gobierno de Entre Ríos explicó por qué no pudo realizarse la audiencia de paritaria estatal",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
         "gobierno"
       ],
-      "url": "/politica/la-paritaria-estatal-paso-a-cuarto-intermedio-ate-cuestiono-reclamo-recuperar-salarios.htm",
+      "url": "/politica/paritaria-estatal-en-entre-rios-el-gobierno-explico-por-que-no-pudo-realizarse-la-audiencia.htm",
       "fuente": "Elonce Política"
     },
     {
@@ -467,16 +454,16 @@
       "fuente": "Diario Época"
     },
     {
-      "titulo": "Paritaria estatal en Entre Ríos: el Gobierno explicó por qué \"no pudo realizarse la audiencia",
+      "titulo": "CAME pidió aprobar la nueva ley de biocombustibles para impulsar inversiones y empleo",
       "resumen": "",
-      "titulo_info": "El Gobierno de Entre Ríos explicó por qué no pudo realizarse la audiencia de paritaria estatal",
+      "titulo_info": "CAME pide aprobar la nueva ley de biocombustibles para impulsar inversiones y empleo",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
-        "gobierno"
+        "leyes"
       ],
-      "url": "/politica/paritaria-estatal-en-entre-rios-el-gobierno-explico-por-que-no-pudo-realizarse-la-audiencia.htm",
+      "url": "/politica/came-pidio-aprobar-la-nueva-ley-de-biocombustibles.htm",
       "fuente": "Elonce Política"
     },
     {
@@ -532,16 +519,16 @@
       "fuente": "Diario Época"
     },
     {
-      "titulo": "CAME pidió aprobar la nueva ley de biocombustibles para impulsar inversiones y empleo",
+      "titulo": "Comenzó la sesión del Senado: se debate discapacidad, patentes y ley de Tierras",
       "resumen": "",
-      "titulo_info": "CAME pide aprobar la nueva ley de biocombustibles para impulsar inversiones y empleo",
+      "titulo_info": "Senado debate discapacidad, patentes y ley de Tierras en sesión que ya comenzó",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
         "leyes"
       ],
-      "url": "/politica/came-pidio-aprobar-la-nueva-ley-de-biocombustibles.htm",
+      "url": "/politica/comenzo-la-sesion-del-senado-se-debate-discapacidad-patentes-y-ley-de-tierras.htm",
       "fuente": "Elonce Política"
     },
     {
@@ -597,16 +584,17 @@
       "fuente": "Diario Época"
     },
     {
-      "titulo": "Comenzó la sesión del Senado: se debate discapacidad, patentes y ley de Tierras",
+      "titulo": "La reforma electoral obtuvo dictamen: qué cambiaría para los votantes y los partidos",
       "resumen": "",
-      "titulo_info": "Senado debate discapacidad, patentes y ley de Tierras en sesión que ya comenzó",
+      "titulo_info": "La reforma electoral obtuvo dictamen y se esperan cambios para votantes y partidos",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
-        "leyes"
+        "leyes",
+        "elecciones"
       ],
-      "url": "/politica/comenzo-la-sesion-del-senado-se-debate-discapacidad-patentes-y-ley-de-tierras.htm",
+      "url": "/politica/la-reforma-electoral-obtuvo-dictamen-que-cambiaria-para-los-votantes-y-los-partidos.htm",
       "fuente": "Elonce Política"
     },
     {
@@ -636,17 +624,16 @@
       "fuente": "Legislatura Chaco"
     },
     {
-      "titulo": "La reforma electoral obtuvo dictamen: qué cambiaría para los votantes y los partidos",
+      "titulo": "Paritaria estatal: Gobierno y gremios vuelven a negociar tras la suspensión de la audiencia",
       "resumen": "",
-      "titulo_info": "La reforma electoral obtuvo dictamen y se esperan cambios para votantes y partidos",
+      "titulo_info": "Gobierno y gremios retoman negociaciones paritarias estatales tras la suspensión de la audiencia",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.588Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
-        "leyes",
-        "elecciones"
+        "gobierno"
       ],
-      "url": "/politica/la-reforma-electoral-obtuvo-dictamen-que-cambiaria-para-los-votantes-y-los-partidos.htm",
+      "url": "/politica/paritaria-estatal-ate-rechaza-el-4-y-reclama-mejoras.htm",
       "fuente": "Elonce Política"
     },
     {
@@ -676,32 +663,6 @@
       "fuente": "Legislatura Chaco"
     },
     {
-      "titulo": "Paritaria estatal: Gobierno y gremios vuelven a negociar tras la suspensión de la audiencia",
-      "resumen": "",
-      "titulo_info": "Gobierno y gremios retoman negociaciones paritarias estatales tras la suspensión de la audiencia",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.588Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/politica/paritaria-estatal-ate-rechaza-el-4-y-reclama-mejoras.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "Patricia Bullrich admitió que fue un “alivio” sacar las listas colectoras de la reforma electoral y respondió a la frase de Milei sobre “el plan platita”",
-      "resumen": "",
-      "titulo_info": "Patricia Bullrich consideró un alivio la exclusión de listas colectoras de la reforma electoral y respondió a Milei sobre el plan platita",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.634Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
       "titulo": "Senadores sesionan este jueves para dar sanción definitiva a la Ley de Discapacidad",
       "resumen": "",
       "titulo_info": "Los senadores sesionarán este jueves para dar sanción definitiva a la Ley de Discapacidad",
@@ -715,14 +676,14 @@
       "fuente": "Elonce Política"
     },
     {
-      "titulo": "El proyecto de Vandalismo Rural obtuvo dictamen en el Senado, pero plantean la necesidad de modificaciones en el texto",
+      "titulo": "Patricia Bullrich admitió que fue un “alivio” sacar las listas colectoras de la reforma electoral y respondió a la frase de Milei sobre “el plan platita”",
       "resumen": "",
-      "titulo_info": "El Senado dictaminó el proyecto de Vandalismo Rural, pero piden modificarlo",
+      "titulo_info": "Patricia Bullrich consideró un alivio la exclusión de listas colectoras de la reforma electoral y respondió a Milei sobre el plan platita",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "leyes"
+        "elecciones"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -741,14 +702,14 @@
       "fuente": "Elonce Política"
     },
     {
-      "titulo": "Nueva encuesta electoral: polarización light y notable diferencia en el voto de hombres y mujeres",
+      "titulo": "El proyecto de Vandalismo Rural obtuvo dictamen en el Senado, pero plantean la necesidad de modificaciones en el texto",
       "resumen": "",
-      "titulo_info": "Encuesta electoral muestra polarización light y brecha de género en el voto",
+      "titulo_info": "El Senado dictaminó el proyecto de Vandalismo Rural, pero piden modificarlo",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "elecciones"
+        "leyes"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -767,14 +728,14 @@
       "fuente": "Elonce Política"
     },
     {
-      "titulo": "El Senado sesiona para convertir en ley el nuevo proyecto de Discapacidad y ratificar la Ley de Tierras",
+      "titulo": "Nueva encuesta electoral: polarización light y notable diferencia en el voto de hombres y mujeres",
       "resumen": "",
-      "titulo_info": "El Senado trata hoy la ley de Discapacidad y ratifica la Ley de Tierras",
+      "titulo_info": "Encuesta electoral muestra polarización light y brecha de género en el voto",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "leyes"
+        "elecciones"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -793,61 +754,9 @@
       "fuente": "APF Digital"
     },
     {
-      "titulo": "La disputa entre dos bloques aliados que hizo caer la sesión de Diputados ahora enciende las alarmas por el debate del Presupuesto",
+      "titulo": "El Senado sesiona para convertir en ley el nuevo proyecto de Discapacidad y ratificar la Ley de Tierras",
       "resumen": "",
-      "titulo_info": "Disputa entre aliados hizo caer sesión de Diputados y enciende alarmas por el Presupuesto",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.634Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "El Gobierno indicó que no se pudo realizar la audiencia paritaria estatal por el retiro de representantes sindicales",
-      "resumen": "",
-      "titulo_info": "Gobierno no pudo realizar audiencia paritaria estatal por retiro de sindicalistas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.573Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/noticias/2026/11/19/479934-el-gobierno-indico-que-no-se-pudo-realizar-la-audiencia-paritaria-estatal-por-el-retiro-de-representantes-sindicales",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "Patricia Bullrich insiste con sus mensajes a Milei: “Hay muchas cosas intocables y otras que uno las tiene que discutir para llegar mejor a las elecciones”",
-      "resumen": "",
-      "titulo_info": "Patricia Bullrich pide a Milei discutir temas para las elecciones",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.634Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "Gualeguaychú: El Concejo Deliberante aprobó el Presupuesto 2027",
-      "resumen": "",
-      "titulo_info": "Gualeguaychú: Concejo Deliberante aprobó el Presupuesto 2027",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.573Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/noticias/2026/11/19/479937-gualeguaychu-el-concejo-deliberante-aprobo-el-presupuesto-2027",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "Lanzamiento del GTA VI: la historia detrás del decreto que prohibió la saga en Rosario y el proyecto para anularlo",
-      "resumen": "",
-      "titulo_info": "Prohibición del GTA VI en Rosario: el decreto y el proyecto para anularlo",
+      "titulo_info": "El Senado trata hoy la ley de Discapacidad y ratifica la Ley de Tierras",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
@@ -871,14 +780,14 @@
       "fuente": "APF Digital"
     },
     {
-      "titulo": "“La mier... de la política”: la fuerte reacción de Santiago Caputo tras la sesión fallida por la Ley Malvinas en Diputados",
+      "titulo": "La disputa entre dos bloques aliados que hizo caer la sesión de Diputados ahora enciende las alarmas por el debate del Presupuesto",
       "resumen": "",
-      "titulo_info": "Santiago Caputo criticó la sesión fallida por Ley Malvinas en Diputados",
+      "titulo_info": "Disputa entre aliados hizo caer sesión de Diputados y enciende alarmas por el Presupuesto",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "leyes"
+        "gobierno"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -897,6 +806,58 @@
       "fuente": "APF Digital"
     },
     {
+      "titulo": "Patricia Bullrich insiste con sus mensajes a Milei: “Hay muchas cosas intocables y otras que uno las tiene que discutir para llegar mejor a las elecciones”",
+      "resumen": "",
+      "titulo_info": "Patricia Bullrich pide a Milei discutir temas para las elecciones",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:25:36.634Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "elecciones"
+      ],
+      "url": "",
+      "fuente": "Clarín Política"
+    },
+    {
+      "titulo": "El Gobierno indicó que no se pudo realizar la audiencia paritaria estatal por el retiro de representantes sindicales",
+      "resumen": "",
+      "titulo_info": "Gobierno no pudo realizar audiencia paritaria estatal por retiro de sindicalistas",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:25:36.573Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "/noticias/2026/11/19/479934-el-gobierno-indico-que-no-se-pudo-realizar-la-audiencia-paritaria-estatal-por-el-retiro-de-representantes-sindicales",
+      "fuente": "APF Digital"
+    },
+    {
+      "titulo": "“La mier... de la política”: la fuerte reacción de Santiago Caputo tras la sesión fallida por la Ley Malvinas en Diputados",
+      "resumen": "",
+      "titulo_info": "Santiago Caputo criticó la sesión fallida por Ley Malvinas en Diputados",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:25:36.634Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "",
+      "fuente": "Clarín Política"
+    },
+    {
+      "titulo": "Aquí podrá acceder a los distintos documentos que se generan durante la actividad Legislativa de la Cámara de Diputados",
+      "resumen": "Transcripción de las notas taquigráficastomadas durante la Sesión",
+      "titulo_info": "Cámara de Diputados: Documentos de la actividad legislativa",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:25:36.126Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.hcder.gov.ar/archivosOrdenesDelDia.php",
+      "fuente": "Diputados Entre Ríos"
+    },
+    {
       "titulo": "La Cámara de Diputados no reunió quórum para debatir la Ley Malvinas y la reforma del Banco Central",
       "resumen": "",
       "titulo_info": "Diputados no reunió quórum para debatir Ley Malvinas y reforma del Banco Central",
@@ -910,16 +871,16 @@
       "fuente": "Elonce Política"
     },
     {
-      "titulo": "Aquí podrá acceder a los distintos documentos que se generan durante la actividad Legislativa de la Cámara de Diputados",
-      "resumen": "Transcripción de las notas taquigráficastomadas durante la Sesión",
-      "titulo_info": "Cámara de Diputados: Documentos de la actividad legislativa",
+      "titulo": "Protocolo específico para la prevención e intervención en casos de violencia laboral y violencia de género en el ámbito de la Honorable Cámara de Diputados de la provi…",
+      "resumen": "",
+      "titulo_info": "Diputados de la provincia de Buenos Aires tendrá protocolo para violencia laboral y de género",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.126Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
         "leyes"
       ],
-      "url": "https://www.hcder.gov.ar/archivosOrdenesDelDia.php",
+      "url": "https://www.hcder.gov.ar/archivosDownload/textos/E28105-28105-08042026C.pdf",
       "fuente": "Diputados Entre Ríos"
     },
     {
@@ -936,16 +897,16 @@
       "fuente": "Página/12 El País"
     },
     {
-      "titulo": "Protocolo específico para la prevención e intervención en casos de violencia laboral y violencia de género en el ámbito de la Honorable Cámara de Diputados de la provi…",
+      "titulo": "Aquí podrá acceder a los expedientes y normas legales que se generan durante la actividad Legislativa de la Cámara de Diputados",
       "resumen": "",
-      "titulo_info": "Diputados de la provincia de Buenos Aires tendrá protocolo para violencia laboral y de género",
+      "titulo_info": "Acceda a expedientes y normas legales de la actividad Legislativa de la Cámara de Diputados",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.126Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
         "leyes"
       ],
-      "url": "https://www.hcder.gov.ar/archivosDownload/textos/E28105-28105-08042026C.pdf",
+      "url": "",
       "fuente": "Diputados Entre Ríos"
     },
     {
@@ -960,19 +921,6 @@
       ],
       "url": "https://www.pagina12.com.ar/2026/11/19/reforma-electoral-cuando-el-poder-del-dinero-vale-mas-que-el-voto/",
       "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "Aquí podrá acceder a los expedientes y normas legales que se generan durante la actividad Legislativa de la Cámara de Diputados",
-      "resumen": "",
-      "titulo_info": "Acceda a expedientes y normas legales de la actividad Legislativa de la Cámara de Diputados",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.126Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "",
-      "fuente": "Diputados Entre Ríos"
     },
     {
       "titulo": "Una reforma electoral que al gobierno le costó unas colectoras",
@@ -1196,6 +1144,19 @@
       "fuente": "Gobierno de Santa Fe"
     },
     {
+      "titulo": "“Me gustaría que sea candidata”. El diputado que abandonó el bloque de La Libertad Avanza postuló a Patricia Bullrich para el año que viene",
+      "resumen": "En el mismo día en que rompió con la bancada libertaria al denunciar un pacto del oficialismo con el PJ en Tucumán, el legislador Mariano Campero explicitó sus apetencias electorales",
+      "titulo_info": "El diputado Campero, tras dejar La Libertad Avanza, propuso a Patricia Bullrich como candidata para el próximo año",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "elecciones"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/el-diputado-que-abandono-el-bloque-de-la-libertad-avanza-dijo-que-le-gustaria-que-patricia-bullrich-nid19112026/",
+      "fuente": "La Nación Política"
+    },
+    {
       "titulo": "Sucesor de Mussi. El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
       "resumen": "Carlos Balor fue convocado a una fiscalía luego de que un hombre denunciara que le ofrecieron plata para atentar contra su vida; el jefe comunal manifestó “preocupación”",
       "titulo_info": "El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo, manifestando preocupación",
@@ -1210,7 +1171,7 @@
     },
     {
       "titulo": "Fallo unánime. Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
-      "resumen": "",
+      "resumen": "El máximo tribunal confirmó una sentencia de la Cámara Federal de La Plata contra dos artículos del DNU 70/23, que eliminaron los límites a los aumentos de la medicina privada, y reafirmó los límites a los decretos de necesidad y urgencia",
       "titulo_info": "Corte Suprema frena DNU de Milei y declara inconstitucional liberación de precios de prepagas",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -1223,7 +1184,7 @@
     },
     {
       "titulo": "Reforma. Posadas eliminó la Ley de Lemas y el resultado podría condicionar la negociación de Santilli con un gobernador",
-      "resumen": "",
+      "resumen": "Con el impulso de La Libertad Avanza, se cayó un sistema electoral por el cual en la capital misionera hubo más de 40 candidatos a intendente; el resultado podría interferir en las negociaciones que tiene Passalacqua con la Nación por las PASO",
       "titulo_info": "Posadas eliminó Ley de Lemas y el resultado podría condicionar negociación de Santilli",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -1237,7 +1198,7 @@
     },
     {
       "titulo": "Desafío al Gobierno. El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
-      "resumen": "",
+      "resumen": "También se discute una serie de proyectos que incluyen la adhesión al tratado internacional de patentes y la reforma del régimen de propiedad privada; se acordó que la semana que viene abordará la iniciativa sobre ludopatía y la prórroga del Estatuto del Periodista",
       "titulo_info": "Senado sancionará nueva ley de discapacidad pese a resistencias del oficialismo",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -1250,7 +1211,7 @@
     },
     {
       "titulo": "Cuadernos de las coimas. Un testigo que auditó la obra pública dejó una frase confusa y se desdijo en pleno juicio",
-      "resumen": "",
+      "resumen": "El funcionario de Vialidad dijo que “lamentablemente” había supervisado obras en la provincia; fue nombrado por el kirchnerismo e hizo el relevamiento durante la gestión de Macri; no quedó claro qué quiso decir",
       "titulo_info": "Testigo en juicio por Cuadernos de las coimas dejó frase confusa y se desdijo",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
