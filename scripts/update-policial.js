@@ -125,13 +125,15 @@ function esPoliticaOEconomia(n) {
 }
 
 // Devuelve los ids de categoría que matchean, en orden de prioridad.
+// Cada noticia va a UNA sola categoría (la primera que matchea en el orden de
+// CATEGORIAS: accidentes > allanamientos > detenciones > causas > hechos).
+// Así los filtros del widget no repiten la misma noticia en dos solapas.
 function clasificar(titulo) {
   const n = normalizarTexto(titulo);
-  const out = [];
   for (const cat of CATEGORIAS) {
-    if (cat.keywords.some(kw => n.indexOf(normalizarTexto(kw)) !== -1)) out.push(cat.id);
+    if (cat.keywords.some(kw => n.indexOf(normalizarTexto(kw)) !== -1)) return [cat.id];
   }
-  return out;
+  return [];
 }
 
 // Localidad mencionada en el titular (sólo el Litoral), para el chip de lugar.
@@ -262,13 +264,22 @@ function containment(a, b) {
   sa.forEach(x => { if (sb.has(x)) inter++; });
   return inter / Math.min(sa.size, sb.size);
 }
+// Compara sin números: la misma noticia suele aparecer con cifras distintas
+// ("mil metros" vs "1500 metros") en cada portal.
+function sinNumeros(t) { return String(t || '').replace(/\d+([.,]\d+)?/g, ' '); }
+
 function sonDuplicadas(a, b) {
-  if (jaccard(a.titulo, b.titulo) > 0.72) return true;
+  const ta = sinNumeros(a.titulo), tb = sinNumeros(b.titulo);
+  if (jaccard(ta, tb) > 0.72) return true;
   const mismoLugar = !a.lugar || !b.lugar || a.lugar === b.lugar;
   if (!mismoLugar) return false;
+  const sa = new Set(tokens(ta)), sb = new Set(tokens(tb));
+  let inter = 0;
+  sa.forEach(x => { if (sb.has(x)) inter++; });
   // titulares cortos ("robo en un kiosco") se parecen demasiado entre hechos distintos
-  if (Math.min(tokens(a.titulo).length, tokens(b.titulo).length) < 5) return false;
-  return containment(a.titulo, b.titulo) >= 0.82;
+  if (Math.min(sa.size, sb.size) < 4) return false;
+  if (inter < 4) return false;
+  return containment(ta, tb) >= 0.8;
 }
 
 // ---------------------------------------------------------------- reescritura LLM
