@@ -213,7 +213,9 @@ function parseFechaIso(f) {
   return isNaN(d) ? 0 : d;
 }
 
-const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash-8b:generateContent?key=' + encodeURIComponent(process.env.GEMINI_API_KEY || '');
+// Modelo configurable por env (GEMINI_MODEL). Gemini 1.5 está retirado: usar 2.x.
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/' + GEMINI_MODEL + ':generateContent?key=' + encodeURIComponent(process.env.GEMINI_API_KEY || '');
 const OFF_TOPIC = ['policia','policial','droga','drogadicc','narc','narcotr','confisc','detenc','detenido','allanamiento','homicid','victim','victima','violencia','tiroteo','accidente','accidental','fallec','muerte','omicid','delito','delincuencia','cauta','inyectable','prisión','prision','incendio','incendiado','enriquecimien','patrimoni','acusacion','corrupcion','fiscalia','fiscales','elecc','reelecc','voto','macrista','kirchner','bullrich','candidat','ballotage','peronism','macrism','oposicion','campana electoral','formula 1','gran premio','colapinto','futbol','fútbol','jugadores','tenis','rugby','basquet','básquet','olimpic','deportiv','mundial','libertadores','espectaculo','farandula','famosos','television'];
 function esOffTopic(t) {
   var n = normalizarTexto(t);
@@ -310,6 +312,9 @@ async function reescribirLote(items) {
         try { var p2 = JSON.parse(txt.trim()); if (Array.isArray(p2.rewrites) && p2.rewrites.length === items.length) return aplicarGuardrail(p2.rewrites, items); } catch (e2) {}
       }
     } catch (e) {
+      var st = e.response && e.response.status;
+      var det = e.response && e.response.data && JSON.stringify(e.response.data).slice(0, 300);
+      console.warn('[bolsillo] LLM error intento ' + (attempt + 1) + '/' + 3 + ' — ' + (st || e.message) + (det ? ' — ' + det : ''));
       if (attempt < 2) await delay(2000);
     }
   }
