@@ -225,7 +225,7 @@
   },
   "rugby:parana:top10": {
     "hash": "1:DUENDES|2:JOCKEY CLUB R|3:ESTUDIANTES DE PARANA|4:SANTA FE RC|5:CRAI|6:GER|7:PARANA ROWING|8:UNIVERSITARIO R|9:OLD RESIAN|10:JOCKEY CLUB VT",
-    "fecha": "2026-11-19T21:16:03.043Z",
+    "fecha": "2026-11-19T22:34:04.758Z",
     "posiciones": {
       "duendes": 1,
       "jockey-club-r": 2,
@@ -238,11 +238,16 @@
       "old-resian": 9,
       "jockey-club-vt": 10
     },
-    "cambios": {}
+    "cambios": {
+      "duendes": 2,
+      "crai": -3,
+      "ger": -2,
+      "old-resian": -2
+    }
   },
   "rugby:santa_fe:top10": {
     "hash": "1:DUENDES|2:JOCKEY CLUB R|3:ESTUDIANTES DE PARANA|4:SANTA FE RC|5:CRAI|6:GER|7:PARANA ROWING|8:UNIVERSITARIO R|9:OLD RESIAN|10:JOCKEY CLUB VT",
-    "fecha": "2026-11-19T21:16:03.717Z",
+    "fecha": "2026-11-19T22:34:05.463Z",
     "posiciones": {
       "duendes": 1,
       "jockey-club-r": 2,
@@ -255,7 +260,12 @@
       "old-resian": 9,
       "jockey-club-vt": 10
     },
-    "cambios": {}
+    "cambios": {
+      "duendes": 2,
+      "crai": -3,
+      "ger": -2,
+      "old-resian": -2
+    }
   },
   "futbol:parana:fahi": {
     "hash": "1:DOUGLAS HAIG|2:SPORTIVO BELGRANO|3:GIMNASIA Y ESGRIMA CHIVILCOY|4:DEFENSORES BELGRANO VR|5:9 DE JULIO RAFAELA|6:SPORTIVO LAS PAREJAS|7:ATLETICO ESCOBAR|8:INDEPENDIENTE CHIVILCOY|9:EL LINQUENO|10:GIMNASIA DE CONCEPCION",
@@ -288,6 +298,72 @@
       "independiente-chivilcoy": 8,
       "el-linqueno": 9,
       "gimnasia-de-concepcion": 10
+    },
+    "cambios": {}
+  },
+  "basquet:parana:litoral-a": {
+    "hash": "1:URQUIZA|2:RIVADAVIA JRS|3:SIONISTA|4:RECREATIVO|5:GIMNASIA|6:LA ARMONIA|7:QUIQUE",
+    "fecha": "2026-11-19T22:30:08.777Z",
+    "posiciones": {
+      "urquiza": 1,
+      "rivadavia-jrs": 2,
+      "sionista": 3,
+      "recreativo": 4,
+      "gimnasia": 5,
+      "la-armonia": 6,
+      "quique": 7
+    },
+    "cambios": {}
+  },
+  "basquet:santa_fe:litoral-a": {
+    "hash": "1:URQUIZA|2:RIVADAVIA JRS|3:SIONISTA|4:RECREATIVO|5:GIMNASIA|6:LA ARMONIA|7:QUIQUE",
+    "fecha": "2026-11-19T22:30:09.906Z",
+    "posiciones": {
+      "urquiza": 1,
+      "rivadavia-jrs": 2,
+      "sionista": 3,
+      "recreativo": 4,
+      "gimnasia": 5,
+      "la-armonia": 6,
+      "quique": 7
+    },
+    "cambios": {}
+  },
+  "rugby:parana:segunda": {
+    "hash": "1:ALMA JRS|2:CRAR|3:GYE PERGAMINO|4:LOGARITMO|5:LOS CARANCHOS|6:PROVINCIAL|7:TILCARA|8:UNI|9:CHA ROGA|10:CUCU|11:LA SALLE|12:PAMPAS",
+    "fecha": "2026-11-19T22:32:57.829Z",
+    "posiciones": {
+      "alma-jrs": 1,
+      "crar": 2,
+      "gye-pergamino": 3,
+      "logaritmo": 4,
+      "los-caranchos": 5,
+      "provincial": 6,
+      "tilcara": 7,
+      "uni": 8,
+      "cha-roga": 9,
+      "cucu": 10,
+      "la-salle": 11,
+      "pampas": 12
+    },
+    "cambios": {}
+  },
+  "rugby:santa_fe:segunda": {
+    "hash": "1:ALMA JRS|2:CRAR|3:GYE PERGAMINO|4:LOGARITMO|5:LOS CARANCHOS|6:PROVINCIAL|7:TILCARA|8:UNI|9:CHA ROGA|10:CUCU|11:LA SALLE|12:PAMPAS",
+    "fecha": "2026-11-19T22:32:57.928Z",
+    "posiciones": {
+      "alma-jrs": 1,
+      "crar": 2,
+      "gye-pergamino": 3,
+      "logaritmo": 4,
+      "los-caranchos": 5,
+      "provincial": 6,
+      "tilcara": 7,
+      "uni": 8,
+      "cha-roga": 9,
+      "cucu": 10,
+      "la-salle": 11,
+      "pampas": 12
     },
     "cambios": {}
   }

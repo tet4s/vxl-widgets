@@ -66,18 +66,30 @@ const DEPORTES = {
     nombre: 'Básquet',
     metrica: 'PTS',
     ciudades: {
+      // Paraná no tiene club en La Liga Argentina: sus equipos juegan la Liga
+      // Federal (Litoral A), así que esa es la liga principal y la Argentina
+      // queda al lado para ver a los equipos entrerrianos de la categoría de
+      // arriba.
       parana: {
         fuente: 'laliga',
         grupo: 'CONFERENCIA SUR',
         ligaNombre: 'Liga Argentina',
-        equipos: ['ROCAMORA', 'CENTRAL ENTERRIANO'],
+        prioridad: 2,
+        equipos: ['SIONISTA', 'RECREATIVO', 'QUIQUE', 'ROCAMORA', 'CENTRAL ENTERRIANO'],
         nota: 'Entre Ríos',
+        secundarias: [
+          { fuente: 'ligafederal', id: 'litoral-a', grupo: 'LITORAL A', nombre: 'Liga Federal', prioridad: 1 },
+        ],
       },
       santa_fe: {
         fuente: 'laliga',
         grupo: 'CONFERENCIA NORTE',
         ligaNombre: 'Liga Argentina',
-        equipos: ['UNION (SF)'],
+        prioridad: 1,
+        equipos: ['UNION (SF)', 'RIVADAVIA JRS', 'GIMNASIA (SANTA FE)'],
+        secundarias: [
+          { fuente: 'ligafederal', id: 'litoral-a', grupo: 'LITORAL A', nombre: 'Liga Federal', prioridad: 2 },
+        ],
       },
     },
   },
@@ -93,6 +105,7 @@ const DEPORTES = {
         fuente: 'rugby',
         ligaNombre: 'Regional del Litoral',
         equipos: ['CAE|Estudiantes de Paraná', 'PARANA ROWING', 'TILCARA'],
+        incluirSinDatos: true,
         divisiones: [
           { id: 'top10', nombre: 'Top 10', prioridad: 1, grupo: 'TRL 1 nivel' },
           { id: 'segunda', nombre: 'Segunda', prioridad: 2, grupo: 'TRL 2 nivel' },
@@ -101,7 +114,8 @@ const DEPORTES = {
       santa_fe: {
         fuente: 'rugby',
         ligaNombre: 'Regional del Litoral',
-        equipos: ['SANTA FE RC', 'CRAI', 'UNIVERSITARIO (SF)'],
+        equipos: ['SANTA FE RC', 'CRAI', 'UNIVERSITARIO (SF)', 'LA SALLE'],
+        incluirSinDatos: true,
         divisiones: [
           { id: 'top10', nombre: 'Top 10', prioridad: 1, grupo: 'TRL 1 nivel' },
           { id: 'segunda', nombre: 'Segunda', prioridad: 2, grupo: 'TRL 2 nivel' },
@@ -625,22 +639,265 @@ async function desdeLaLiga(cfg) {
   conLogos(partido, escudos);
   ultimos.forEach((p) => conLogos(p, escudos));
 
+  const ligas = [
+    {
+      id: 'principal',
+      nombre: cfg.ligaNombre,
+      prioridad: cfg.prioridad || 1,
+      zona: zonaTxt,
+      temporada: String(new Date().getFullYear()),
+      fuente: 'AdC',
+      url: 'https://www.laliganacional.com.ar/laligaargentina',
+      nota: cfg.nota || null,
+      tabla: rows,
+      partido,
+      ultimos,
+    },
+  ];
+
+  // Liga Federal (3ª categoría de la CABB): ahí juegan los clubes de Paraná y
+  // Santa Fe que no están en La Liga Argentina.
+  for (const sec of cfg.secundarias || []) {
+    try {
+      ligas.push(await desdeLigaFederal(sec));
+    } catch (e) {
+      log(`  · ${sec.nombre || 'Liga Federal'}:`, e.message);
+    }
+  }
+
+  return { ligas };
+}
+
+// ---------------------------------------------------------------- básquet (Liga Federal / CABB)
+
+// La CABB publica la Liga Federal por conferencias; los equipos vienen con la
+// sede entre paréntesis ("SIONISTA (PARANA)"). La tabla se pide por handler y el
+// fixture por compCatId, los dos sacados de la propia página para no hardcodear
+// ids de temporada.
+const CABB = 'https://argentina.basketball';
+
+const SEDES = {
+  PARANA: 'Paraná',
+  'SANTA FE': 'Santa Fe',
+  COLON: 'Colón',
+  'SANTA ELENA': 'Santa Elena',
+  'CONCEPCION DEL URUGUAY': 'Concepción del Uruguay',
+  GUALEGUAYCHU: 'Gualeguaychú',
+  CONCORDIA: 'Concordia',
+  ROSARIO: 'Rosario',
+  'VENADO TUERTO': 'Venado Tuerto',
+  'MARCOS JUAREZ': 'Marcos Juárez',
+  'SAN FRANCISCO': 'San Francisco',
+  GALVEZ: 'Gálvez',
+  ESPERANZA: 'Esperanza',
+  RAFAELA: 'Rafaela',
+  SUNCHALES: 'Sunchales',
+  'SAN JUSTO': 'San Justo',
+  'SAN JORGE': 'San Jorge',
+  'SAN NICOLAS': 'San Nicolás',
+};
+
+const PARTICULAS = ['de', 'del', 'la', 'las', 'los', 'y', 'e'];
+
+/** "SIONISTA (PARANA)" → { nombre: 'Sionista', sede: 'Paraná' } */
+function separarSede(raw) {
+  const txt = limpiar(raw);
+  const m = txt.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+  if (!m) return { nombre: titulo(txt), sede: null };
+  const sedeNorm = norm(m[2]);
+  return { nombre: titulo(m[1]), sede: SEDES[sedeNorm] || titulo(m[2]) };
+}
+
+/** Pasa nombres en mayúsculas a formato de diario, respetando partículas. */
+function titulo(s) {
+  return limpiar(s)
+    .toLowerCase()
+    .split(/\s+/)
+    .map((palabra, i) => {
+      const limpia = palabra.replace(/[^\p{L}\p{N}]/gu, '');
+      if (i > 0 && PARTICULAS.includes(limpia)) return palabra;
+      return palabra.replace(/\p{L}/u, (c) => c.toUpperCase());
+    })
+    .join(' ');
+}
+
+let cabbCache = null;
+
+async function cabbInfo() {
+  if (cabbCache) return cabbCache;
+  const html = await getHtml(`${CABB}/liga-federal/tabla-posiciones`);
+  const mFase = html.match(/<option value="(\d+)"[^>]*>\s*FASE REGULAR/i);
+  if (!mFase) throw new Error('Liga Federal: no encontré la fase regular');
+  const faseId = mFase[1];
+  const grupos = await getJson(`${CABB}/api/clasificacion/${faseId}/grupos`);
+  const fx = await getHtml(`${CABB}/liga-federal/fixture`);
+  const mCat = fx.match(/compCatId:\s*['"]?(\d+)/);
+  if (!mCat) throw new Error('Liga Federal: no encontré compCatId');
+  cabbCache = { faseId, grupos, compCatId: mCat[1] };
+  return cabbCache;
+}
+
+function parsearCalendarioCabb(html) {
+  const $ = cheerio.load(html);
+  const out = [];
+  $('tr.fila-tabla-calendarios').each((_, tr) => {
+    const nombres = $(tr).find('.celda-nombre .nombre-equipo');
+    if (nombres.length < 2) return;
+    const local = separarSede(nombres.eq(0).text());
+    const visitante = separarSede(nombres.eq(1).text());
+    const marc = $(tr).find('td.resultados strong');
+    const gl = marc.length >= 1 ? num(marc.eq(0).text()) : null;
+    const gv = marc.length >= 2 ? num(marc.eq(1).text()) : null;
+    const ftxt = limpiar($(tr).find('.fecha-campo strong').text());
+    const m = ftxt.match(/(\d{2})\/(\d{2})\/(\d{4})\s+(\d{2}):(\d{2})/);
+    if (!local.nombre || !visitante.nombre || !m) return;
+    const esc = $(tr).find('.celda-escudo img');
+    out.push({
+      fecha: `${m[3]}-${m[2]}-${m[1]}T${m[4]}:${m[5]}:00-03:00`,
+      local: local.nombre,
+      visitante: visitante.nombre,
+      gl,
+      gv,
+      cancha: limpiar($(tr).find('.fecha-campo small').text()) || null,
+      logo_local: esc.eq(0).attr('src') ? `${CABB}${esc.eq(0).attr('src')}` : null,
+      logo_visitante: esc.eq(1).attr('src') ? `${CABB}${esc.eq(1).attr('src')}` : null,
+    });
+  });
+  return out;
+}
+
+let cabbCalendarioCache = null;
+
+async function cabbCalendario() {
+  if (cabbCalendarioCache) return cabbCalendarioCache;
+  const { compCatId } = await cabbInfo();
+  const iso = (d) => d.toISOString().slice(0, 10);
+  const hoy = Date.now();
+  // La fase regular arranca en febrero: si la ventana corta no trae nada, se
+  // pide el año entero.
+  for (const [atras, adelante] of [[150, 60], [300, 30], [400, 0]]) {
+    const html = await getHtml(
+      `${CABB}/liga-federal/fixture?handler=CargarFixture&compCatId=${compCatId}` +
+        `&fechaIni=${iso(new Date(hoy - atras * 864e5))}&fechaFin=${iso(new Date(hoy + adelante * 864e5))}`
+    );
+    if (html.includes('fila-tabla-calendarios')) {
+      cabbCalendarioCache = parsearCalendarioCabb(html);
+      return cabbCalendarioCache;
+    }
+  }
+  cabbCalendarioCache = [];
+  return cabbCalendarioCache;
+}
+
+async function desdeLigaFederal(cfg) {
+  const { faseId, grupos } = await cabbInfo();
+  const grupo =
+    grupos.find((g) => norm(g.nombre) === norm(cfg.grupo)) ||
+    grupos.find((g) => norm(g.nombre).includes(norm(cfg.grupo)));
+  if (!grupo) throw new Error(`Liga Federal: no encontré ${cfg.grupo}`);
+
+  const html = await getHtml(
+    `${CABB}/liga-federal/tabla-posiciones?handler=CargarClasificacion&faseId=${faseId}&grupoId=${grupo.idGrupo}`
+  );
+  const $ = cheerio.load(html);
+  const rows = [];
+  $('table tbody tr').each((_, tr) => {
+    const tds = $(tr).find('td');
+    if (tds.length < 9) return;
+    const celdaEquipo = tds.eq(1);
+    const { nombre, sede } = separarSede(celdaEquipo.text());
+    if (!nombre) return;
+    const txt = (i) => limpiar(tds.eq(i).text());
+    const logo = celdaEquipo.find('img').attr('src') || null;
+    rows.push({
+      pos: num(txt(0)),
+      equipo: nombre,
+      sede,
+      logo: logo ? `${CABB}${logo}` : null,
+      pj: num(txt(2)),
+      g: num(txt(3)),
+      p: num(txt(4)),
+      gf: num(txt(5)),
+      gc: num(txt(6)),
+      pts: num(txt(7)),
+      pct: txt(8) || null,
+      ultimo: null,
+      proximo: null,
+      cambio_fuente: null,
+    });
+  });
+  if (rows.length < 4) throw new Error('Liga Federal: tabla vacía');
+
+  const equipoDe = (n) => separarSede(n).nombre;
+  const calendario = await cabbCalendario();
+  const delGrupo = new Set(rows.map((r) => slug(r.equipo)));
+  const partidos = calendario
+    .filter((p) => delGrupo.has(slug(equipoDe(p.local))) && delGrupo.has(slug(equipoDe(p.visitante))))
+    .map((p) =>
+      partidoDesde({
+        fecha: p.fecha,
+        contexto: grupo.nombre.replace('LITORAL', 'Litoral'),
+        local: equipoDe(p.local),
+        visitante: equipoDe(p.visitante),
+        gl: p.gl,
+        gv: p.gv,
+        cancha: p.cancha,
+      })
+    );
+
+  const conFecha = (p) => p && p.fecha && !isNaN(new Date(p.fecha));
+  const jugados = partidos
+    .filter((p) => p.estado === 'finalizado' && conFecha(p))
+    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+  const pendientes = partidos
+    .filter((p) => p.estado !== 'finalizado' && conFecha(p))
+    .sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+
+  const escudos = {};
+  rows.forEach((r) => {
+    if (r.logo) escudos[slug(r.equipo)] = r.logo;
+  });
+  const porEquipo = {};
+  const tocar = (n) => (porEquipo[slug(n)] = porEquipo[slug(n)] || { ultimo: null, proximo: null });
+  jugados.forEach((p) => {
+    [p.local, p.visitante].forEach((n) => {
+      const d = tocar(n);
+      if (!d.ultimo) d.ultimo = p;
+    });
+    if (p.logo_local) escudos[slug(p.local)] = escudos[slug(p.local)] || p.logo_local;
+    if (p.logo_visitante) escudos[slug(p.visitante)] = escudos[slug(p.visitante)] || p.logo_visitante;
+  });
+  pendientes.forEach((p) => {
+    [p.local, p.visitante].forEach((n) => {
+      const d = tocar(n);
+      if (!d.proximo) d.proximo = p;
+    });
+  });
+  rows.forEach((r) => {
+    const d = porEquipo[slug(r.equipo)];
+    r.ultimo = d ? d.ultimo : null;
+    r.proximo = d ? d.proximo : null;
+    if (r.ultimo) conLogos(r.ultimo, escudos);
+    if (r.proximo) conLogos(r.proximo, escudos);
+  });
+
+  const propios = jugados.filter(
+    (p) => hayEquipo(p.local, cfg.equipos) || hayEquipo(p.visitante, cfg.equipos)
+  );
+  const ultimos = (propios.length ? propios : jugados).slice(0, 6);
+  ultimos.forEach((p) => conLogos(p, escudos));
+
   return {
-    ligas: [
-      {
-        id: 'principal',
-        nombre: cfg.ligaNombre,
-        prioridad: 1,
-        zona: zonaTxt,
-        temporada: String(new Date().getFullYear()),
-        fuente: 'AdC',
-        url: 'https://www.laliganacional.com.ar/laligaargentina',
-        nota: cfg.nota || null,
-        tabla: rows,
-        partido,
-        ultimos,
-      },
-    ],
+    id: cfg.id || 'federal',
+    nombre: cfg.nombre || 'Liga Federal',
+    prioridad: cfg.prioridad || 2,
+    zona: grupos.find((g) => g.idGrupo === grupo.idGrupo).nombre.replace('LITORAL', 'Litoral'),
+    temporada: String(new Date().getFullYear()),
+    fuente: 'CABB',
+    url: `${CABB}/liga-federal/tabla-posiciones`,
+    tabla: rows,
+    partido: ultimos[0] || null,
+    ultimos,
   };
 }
 
@@ -826,17 +1083,29 @@ async function desdeRugby(cfg) {
       const t = tablas.find((x) => norm(x.nivel) === norm(d.grupo));
       if (!t) continue;
       const jugados = t.rows.filter((r) => (r.pts || 0) > 0).length;
-      if (jugados < 4) continue;
+      // La USR publica las divisiones de abajo con los equipos pero sin puntos.
+      // Se muestran igual (así aparece Tilcara en la Segunda) y las columnas van
+      // vacías hasta que la planilla tenga datos.
+      const sinDatos = jugados < 4;
+      // La división de arriba nunca se publica vacía: si la planilla está en
+      // cero se prefiere Wikipedia, que sí tiene la tabla final. Las de abajo sí
+      // se muestran sin puntos (es el único lugar donde aparece Tilcara).
+      const esPrincipal = d.id === divisiones[0].id;
+      if (sinDatos && (esPrincipal || !cfg.incluirSinDatos)) continue;
       ligas.push({
         id: d.id,
         nombre: cfg.ligaNombre,
         prioridad: d.prioridad || (divisiones.indexOf(d) + 1),
         division: d.nombre,
+        sinDatos,
         zona: null,
+        nota: sinDatos ? 'La USR publica esta división sin puntos cargados' : null,
         temporada: String(anio),
         fuente: 'USR',
         url: 'https://usr.org.ar/tablas-trl/',
-        tabla: t.rows,
+        tabla: sinDatos
+          ? t.rows.map((r) => ({ ...r, pj: null, pts: null }))
+          : t.rows,
         partido: null,
         ultimos: [],
       });
@@ -846,7 +1115,7 @@ async function desdeRugby(cfg) {
   }
 
   // 2) Respaldo: Wikipedia (tabla del Top 10 + resultados de la fase final)
-  if (!ligas.length) {
+  if (!ligas.some((l) => l.id === divisiones[0].id)) {
     for (const a of [anio, anio - 1]) {
       try {
         const w = await rugbyWikipedia(a);
@@ -969,9 +1238,17 @@ async function main() {
         datos.ligas.forEach((l) => {
           l.tabla = aplicarMovimiento(`${deporte.id}:${ciudad.id}:${l.id}`, l.tabla, hist);
           l.tabla.forEach((r) => {
-            r.destacado = hayEquipo(r.equipo, cfg.equipos);
+            // Algunas fuentes traen el equipo sin la ciudad (Liga Federal: dos
+            // "Gimnasia" distintos), así que se prueba también con la sede.
+            r.destacado =
+              hayEquipo(r.equipo, cfg.equipos) ||
+              (r.sede ? hayEquipo(`${r.equipo} (${r.sede})`, cfg.equipos) : false);
           });
         });
+
+        // Las ligas salen ordenadas por jerarquía (principal primero) para que
+        // el desplegable del widget las muestre en ese orden.
+        datos.ligas.sort((a, b) => (a.prioridad || 9) - (b.prioridad || 9));
 
         // Liga por defecto: siempre la más alta del deporte (menor prioridad).
         const defecto = datos.ligas
