@@ -1,0 +1,38 @@
+name: Actualizar Deportes del Litoral
+
+on:
+  schedule:
+    # Cada 20 minutos: los resultados y las tablas cambian los fines de semana
+    - cron: '*/20 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del Repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js (v24)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Instalar Dependencias
+        run: npm install
+
+      - name: Ejecutar Update de Deportes
+        run: node scripts/update-deportes.js
+
+      - name: Commit y Push de Datos Actualizados
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/deportes.json data/deportes-historial.json
+          git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de deportes [skip ci]"
+          git pull --rebase origin main
+          git push
