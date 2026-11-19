@@ -2,8 +2,10 @@ name: Actualizar Alertas de Tránsito
 
 on:
   schedule:
-    # Cada 30 minutos, todos los días (el tránsito no para los fines de semana)
-    - cron: '*/30 * * * *'
+    # Cada 30 minutos, todos los días. Minutos explícitos y no "*/30": GitHub
+    # descarta primero los crons con comodines en las horas pico (visto en este
+    # repo: */15 corría 2-3 veces por día).
+    - cron: '7,37 * * * *'
   workflow_dispatch:
 
 # Evita que dos corridas se pisen escribiendo data/transito.json
