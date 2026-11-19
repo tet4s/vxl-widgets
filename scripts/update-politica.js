@@ -790,8 +790,14 @@ async function main() {
       historico.forEach(h => { if (h.titulo && h.titulo_info && h.titulo_info_src === 'llm') previos.set(norm(h.titulo), h.titulo_info); });
       await reescribirInformativos(noticias, previos);
       const sinDuplicados = dedupeTitulosInfo(noticias);
-      noticias.length = 0;
-      noticias.push(...sinDuplicados.map(n => ({ ...n })));
+            noticias.length = 0;
+            noticias.push(...sinDuplicados.map(n => ({ ...n })));
+            // Saneo final: comillas desparejas en titulares que vienen de versiones viejas
+            for (const n of noticias) {
+              let t = n.titulo_info || n.titulo;
+              if ((t.match(/"/g) || []).length % 2 === 1) t = t.replace(/"/g, '').replace(/\s+/g, ' ').trim();
+              n.titulo_info = t;
+            }
 
   const categorias = CATEGORIAS.map(c => ({
     id: c.id,
