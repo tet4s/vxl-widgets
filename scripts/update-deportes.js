@@ -48,13 +48,16 @@ const DEPORTES = {
         fuente: 'espn',
         liga: 'arg.2',
         ligaNombre: 'Primera Nacional',
-        equipos: ['Patronato'],
+        equipos: ['Patronato', 'Gimnasia de Concepción'],
+        // Liga de abajo: equipos de la provincia que no juegan en la principal
+        secundarias: [{ fuente: 'promiedos', id: 'fahi', urlName: 'federal-a', nombre: 'Federal A', prioridad: 3 }],
       },
       santa_fe: {
         fuente: 'espn',
         liga: 'arg.1',
         ligaNombre: 'Liga Profesional',
-        equipos: ['Unión (Santa Fe)|Unión'],
+        equipos: ['Unión (Santa Fe)|Unión', '9 De Julio Rafaela', 'Sportivo Las Parejas'],
+        secundarias: [{ fuente: 'promiedos', id: 'fahi', urlName: 'federal-a', nombre: 'Federal A', prioridad: 3 }],
       },
     },
   },
@@ -91,8 +94,8 @@ const DEPORTES = {
         ligaNombre: 'Regional del Litoral',
         equipos: ['CAE|Estudiantes de Paraná', 'PARANA ROWING', 'TILCARA'],
         divisiones: [
-          { id: 'top10', nombre: 'Top 10', grupo: 'TRL 1 nivel' },
-          { id: 'segunda', nombre: 'Segunda', grupo: 'TRL 2 nivel' },
+          { id: 'top10', nombre: 'Top 10', prioridad: 1, grupo: 'TRL 1 nivel' },
+          { id: 'segunda', nombre: 'Segunda', prioridad: 2, grupo: 'TRL 2 nivel' },
         ],
       },
       santa_fe: {
@@ -100,8 +103,8 @@ const DEPORTES = {
         ligaNombre: 'Regional del Litoral',
         equipos: ['SANTA FE RC', 'CRAI', 'UNIVERSITARIO (SF)'],
         divisiones: [
-          { id: 'top10', nombre: 'Top 10', grupo: 'TRL 1 nivel' },
-          { id: 'segunda', nombre: 'Segunda', grupo: 'TRL 2 nivel' },
+          { id: 'top10', nombre: 'Top 10', prioridad: 1, grupo: 'TRL 1 nivel' },
+          { id: 'segunda', nombre: 'Segunda', prioridad: 2, grupo: 'TRL 2 nivel' },
         ],
       },
     },
@@ -377,23 +380,96 @@ async function desdeEspn(cfg) {
   conLogos(partido, escudos);
   ultimos.forEach((p) => conLogos(p, escudos));
 
+  const ligas = [
+    {
+      id: 'principal',
+      nombre: cfg.ligaNombre,
+      prioridad: 1,
+      zona,
+      temporada,
+      fuente: 'ESPN',
+      url:
+        cfg.liga === 'arg.1'
+          ? 'https://www.espn.com.ar/futbol/argentina/primera'
+          : 'https://www.espn.com.ar/futbol/argentina/segunda',
+      tabla: rows,
+      partido,
+      ultimos,
+    },
+  ];
+
+  // Ligas de abajo (Federal A) para que no quede afuera ningún equipo de la provincia
+  for (const sec of cfg.secundarias || []) {
+    try {
+      ligas.push(await desdePromiedos(sec, cfg.equipos));
+    } catch (e) {
+      log(`  · ${sec.nombre}:`, e.message);
+    }
+  }
+
+  return { ligas };
+}
+
+/** Promiedos: tablas de ligas que ESPN no publica (Federal A, por ejemplo). */
+async function desdePromiedos(cfg, equipos) {
+  const html = await getHtml(`https://www.promiedos.com.ar/league/${cfg.urlName}/${cfg.id}`);
+  const m = html.match(/<script id="__NEXT_DATA__" type="application\/json">([\s\S]*?)<\/script>/);
+  if (!m) throw new Error('Promiedos: sin __NEXT_DATA__');
+  const data = JSON.parse(m[1]).props.pageProps.data || {};
+  const grupos = data.tables_groups || [];
+
+  // Elegimos la tabla (zona) donde juegan los equipos de la provincia; si no hay
+  // coincidencias, la primera de la temporada regular.
+  let elegida = null;
+  for (const g of grupos) {
+    for (const t of g.tables || []) {
+      const rows = (t.table && t.table.rows) || [];
+      const puntos = rows.filter((r) => hayEquipo((r.entity && r.entity.object && r.entity.object.name) || '', equipos)).length;
+      const esRegular = /temporada regular/i.test(g.name || '');
+      if (!elegida || puntos > elegida.puntos || (puntos === elegida.puntos && esRegular && !elegida.esRegular)) {
+        elegida = { grupo: g.name, zona: t.name, rows, puntos, esRegular };
+      }
+    }
+  }
+  if (!elegida || !elegida.rows.length) throw new Error('Promiedos: tabla vacía');
+
+  const rows = elegida.rows.map((r) => {
+    const val = (k) => {
+      const v = (r.values || []).find((x) => x.key === k);
+      return v ? num(v.value) : null;
+    };
+    const goles = ((r.values || []).find((x) => x.key === 'Goals') || {}).value || '';
+    const [gf, gc] = String(goles).split(':').map((x) => num(x));
+    const nombre = limpiar((r.entity && r.entity.object && r.entity.object.name) || '');
+    return {
+      pos: num(r.num),
+      equipo: nombre,
+      logo: null,
+      pj: val('GamePlayed'),
+      g: val('GamesWon'),
+      e: val('GamesEven'),
+      p: val('GamesLost'),
+      gf: gf ?? null,
+      gc: gc ?? null,
+      dg: val('Ratio'),
+      pts: val('Points'),
+      ultimo: null,
+      proximo: null,
+      cambio_fuente: null,
+    };
+  }).filter((r) => r.equipo);
+
   return {
-    ligas: [
-      {
-        id: 'principal',
-        nombre: cfg.ligaNombre,
-        zona,
-        temporada,
-        fuente: 'ESPN',
-        url:
-          cfg.liga === 'arg.1'
-            ? 'https://www.espn.com.ar/futbol/argentina/primera'
-            : 'https://www.espn.com.ar/futbol/argentina/segunda',
-        tabla: rows,
-        partido,
-        ultimos,
-      },
-    ],
+    id: cfg.id,
+    nombre: cfg.nombre,
+    prioridad: cfg.prioridad || 9,
+    zona: limpiar([elegida.grupo, elegida.zona].filter(Boolean).join(' · ')),
+    temporada: String(new Date().getFullYear()),
+    fuente: 'Promiedos',
+    url: `https://www.promiedos.com.ar/league/${cfg.urlName}/${cfg.id}`,
+    tabla: rows,
+    partido: null,
+    ultimos: [],
   };
 }
 
@@ -554,6 +630,7 @@ async function desdeLaLiga(cfg) {
       {
         id: 'principal',
         nombre: cfg.ligaNombre,
+        prioridad: 1,
         zona: zonaTxt,
         temporada: String(new Date().getFullYear()),
         fuente: 'AdC',
@@ -753,6 +830,7 @@ async function desdeRugby(cfg) {
       ligas.push({
         id: d.id,
         nombre: cfg.ligaNombre,
+        prioridad: d.prioridad || (divisiones.indexOf(d) + 1),
         division: d.nombre,
         zona: null,
         temporada: String(anio),
@@ -778,6 +856,7 @@ async function desdeRugby(cfg) {
         ligas.push({
           id: divisiones[0].id,
           nombre: cfg.ligaNombre,
+          prioridad: 1,
           division: divisiones[0].nombre,
           zona: null,
           temporada: String(a),
@@ -894,10 +973,10 @@ async function main() {
           });
         });
 
-        // Liga por defecto: donde juega la mayor cantidad de clubes de la ciudad
-        // (si hay empate queda la primera de la config, que es la de más arriba).
-        const cuenta = (l) => l.tabla.filter((r) => r.destacado).length;
-        const defecto = datos.ligas.slice().sort((a, b) => cuenta(b) - cuenta(a))[0];
+        // Liga por defecto: siempre la más alta del deporte (menor prioridad).
+        const defecto = datos.ligas
+          .slice()
+          .sort((a, b) => (a.prioridad || 9) - (b.prioridad || 9))[0];
 
         const antC = previoDeCiudad(deporte.id, ciudad.id);
         if (antC) {
