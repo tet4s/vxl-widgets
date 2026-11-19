@@ -1,55 +1,55 @@
 {
-  "last_updated": "2026-11-19T21:43:56.126Z",
-  "timestamp_epoch": 1795124636,
-  "total_noticias": 118,
+  "last_updated": "2026-11-19T21:57:35.112Z",
+  "timestamp_epoch": 1795125455,
+  "total_noticias": 105,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 55
+      "total": 51
     },
     {
       "id": "obras",
       "nombre": "OBRAS",
-      "total": 15
+      "total": 14
     },
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 36
+      "total": 28
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 16
+      "total": 14
     }
   ],
   "jurisdicciones": [
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 55
+      "total": 49
     },
     {
       "id": "santa_fe",
       "nombre": "SANTA FE",
-      "total": 10
+      "total": 9
     },
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 27
+      "total": 24
     },
     {
       "id": "corrientes",
       "nombre": "CORRIENTES",
-      "total": 8
+      "total": 6
     },
     {
       "id": "misiones",
       "nombre": "MISIONES",
-      "total": 7
+      "total": 6
     },
     {
       "id": "chaco",
@@ -64,31 +64,17 @@
   ],
   "noticias": [
     {
-      "titulo": "Primer paso para la Ley de Presupuesto de Santa Fe",
-      "resumen": "Los senadores aprobaron la norma de cálculo de gastos y recursos para 2027 con leves modificaciones sobre el proyecto elevado por el gobernador Maximiliano Pullaro. El ministro de Economía Pablo Olivares se reunió con diputados poco antes de que el texto avance en el Senado.",
-      "titulo_info": "Senado santafesino dio luz verde al Presupuesto 2027 de Pullaro con retoques",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T21:37:23.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "leyes",
-        "gobierno"
-      ],
-      "url": "https://www.ellitoral.com/politica/leydepresupuesto-camaradesenadores-santafe-maximilianopullaro-pabloolivares-fondodeinfraestructuraagropecuaria-juegossuramericanos2026-fabianbastia-rodrigoborla_0_tfJjaYivka.html",
-      "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "“El espíritu del gobernador es que no se muera una cooperativa” dijo el ministro Vilchez",
-      "resumen": "El titular de Acción Cooperativa habló de la situación en general de más de 500 entidades que funcionan en Misiones. Algunas están en delicada situación financiera. Sobre la Ceel Eldorado indicó que no habrá elecciones este año y hay una investigación en curso",
-      "titulo_info": "Misiones: ministro Vilchez defendió cooperativas en riesgo y apuntó a investigación en Ceel Eldorado",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T21:22:35.946Z",
-      "jurisdiccion": "misiones",
+      "titulo": "Chajarí aprobó su presupuesto municipal",
+      "resumen": "",
+      "titulo_info": "Chajarí aprobó su presupuesto municipal",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-19T21:54:12.882Z",
+      "jurisdiccion": "entre_rios",
       "categorias": [
         "gobierno"
       ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928233-el-espiritu-del-gobernador-es-que-no-se-muera-una-cooperativa-dijo-el-ministro-vilchez",
-      "fuente": "Territorio Digital"
+      "url": "/noticias/2026/11/19/479961-chajari-aprobo-su-presupuesto-municipal",
+      "fuente": "APF Digital"
     },
     {
       "titulo": "Marcelo Lewandowski: “Esta ley no es buena pero es la mejor ley que podemos sancionar hoy”",
@@ -143,16 +129,16 @@
       "fuente": "La Nación Política"
     },
     {
-      "titulo": "“El espíritu del gobernador, es que no se muera una cooperativa” dijo el ministro Vilches",
+      "titulo": "“El espíritu del gobernador es que no se muera una cooperativa” dijo el ministro Vilchez",
       "resumen": "El titular de Acción Cooperativa habló de la situación en general de más de 500 entidades que funcionan en Misiones. Algunas están en delicada situación financiera. Sobre la Ceel Eldorado indicó que no habrá elecciones este año y hay una investigación en curso",
-      "titulo_info": "Misiones: ministro Vilches defendió cooperativas en riesgo y apuntó a investigación en Ceel Eldorado",
+      "titulo_info": "Misiones: ministro Vilchez defendió cooperativas en riesgo y apuntó a investigación en Ceel Eldorado",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:59:16.457Z",
       "jurisdiccion": "misiones",
       "categorias": [
         "gobierno"
       ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928233-el-espiritu-del-gobernador-es-que-no-se-muera-una-cooperativa-dijo-el-ministro-vilches",
+      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928233-el-espiritu-del-gobernador-es-que-no-se-muera-una-cooperativa-dijo-el-ministro-vilchez",
       "fuente": "Territorio Digital"
     },
     {
@@ -173,7 +159,7 @@
       "resumen": "",
       "titulo_info": "Intendente de Berazategui declaró en causa por supuesto plan para atacarlo",
       "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:47:46.184Z",
+      "fecha": "2026-11-19T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
         "gobierno"
@@ -221,24 +207,11 @@
       "fuente": "La Nación Política"
     },
     {
-      "titulo": "Cuándo se vota a gobernador en Salta",
-      "resumen": "",
-      "titulo_info": "Cuándo se vota a gobernador en Salta",
-      "titulo_info_src": "",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/cuando-se-vota-a-gobernador-en-62GUKPBGPZGQJH4LIGIZBDDGIY.jpeg?auth=ed383e3d05694ee2f1474d95c15f94a0002a4f9d952b27e02d35c44e3554e850&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
       "titulo": "El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
       "resumen": "",
       "titulo_info": "Gobierno obtuvo dictamen para suspender PASO tras eliminar listas colectoras",
       "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:47:46.184Z",
+      "fecha": "2026-11-18T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
         "leyes"
@@ -351,17 +324,17 @@
       "fuente": "DataChaco"
     },
     {
-      "titulo": "El Hospital Vidal incorporó un ecógrafo de última generación",
-      "resumen": "El equipo fue donado por Droguería del Sud S.A. y permitirá ampliar las prestaciones del Servicio de Diagnóstico por Imágenes, optimizar los diagnósticos y fortalecer la formación de los profesionales.",
-      "titulo_info": "Hospital Vidal incorporó ecógrafo de última generación donado por Droguería del Sud",
+      "titulo": "Sesión 19: Es Ley la Declaración de Emergencia Climática e Hídrica en la provincia",
+      "resumen": "La Cámara de Diputados de la provincia de Corrientes, en su sesión 19 presida por Eduardo Tassano, sancionó con fuerza de ley la Declaración de Estado de Emergencia Climática e Hídrica en todo el territorio de la provincia por el término de 180 días, prorrogable por igual período, de mantenerse los eventos críticos climáticos e hídricos derivados de la “Corriente del Niño” que de manera actual …",
+      "titulo_info": "Diputados de Corrientes sancionaron ley de Emergencia Climática e Hídrica por 180 días",
       "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:41.101Z",
+      "fecha": "2026-11-19T20:25:36.701Z",
       "jurisdiccion": "corrientes",
       "categorias": [
-        "obras"
+        "leyes"
       ],
-      "url": "https://www.corrientes.gob.ar/29186/el-hospital-vidal-incorporo-un-ecografo-de-ultima-generacion",
-      "fuente": "Gobierno de Corrientes"
+      "url": "https://hcdcorrientes.gov.ar/sesion-19-es-ley-la-declaracion-de-emergencia-climatica-e-hidrica-en-la-provincia/",
+      "fuente": "Diputados Corrientes"
     },
     {
       "titulo": "El Vicegobernador el Dr. Eber Solís, recibió a estudiantes de Laguna Blanca en la última visita del año",
@@ -429,16 +402,16 @@
       "fuente": "DataChaco"
     },
     {
-      "titulo": "Sesión 19: Es Ley la Declaración de Emergencia Climática e Hídrica en la provincia",
-      "resumen": "La Cámara de Diputados de la provincia de Corrientes, en su sesión 19 presida por Eduardo Tassano, sancionó con fuerza de ley la Declaración de Estado de Emergencia Climática e Hídrica en todo el territorio de la provincia por el término de 180 días, prorrogable por igual período, de mantenerse los eventos críticos climáticos e hídricos derivados de la “Corriente del Niño” que de manera actual …",
-      "titulo_info": "Diputados de Corrientes sancionaron ley de Emergencia Climática e Hídrica por 180 días",
+      "titulo": "Sesión 18: Media Sanción para el Plan de Prevención de la Ludopatía Online",
+      "resumen": "La Cámara de Diputados de Corrientes, presidida por Eduardo Tassano, en su sesión 18 otorgó media sanción al proyecto de ley que crea el Plan Provincial de Prevención de la Ludopatía online en el ámbito educativo, destinado a estudiantes de los niveles obligatorios del sistema educativo, de gestión pública y privada, en el ámbito de la Provincia.",
+      "titulo_info": "Diputados de Corrientes dio media sanción al Plan Provincial de Prevención de la Ludopatía Online en el ámbito educativo",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.701Z",
       "jurisdiccion": "corrientes",
       "categorias": [
         "leyes"
       ],
-      "url": "https://hcdcorrientes.gov.ar/sesion-19-es-ley-la-declaracion-de-emergencia-climatica-e-hidrica-en-la-provincia/",
+      "url": "https://hcdcorrientes.gov.ar/sesion-18-media-sancion-para-el-plan-de-prevencion-de-la-ludopatia-online/",
       "fuente": "Diputados Corrientes"
     },
     {
@@ -507,17 +480,17 @@
       "fuente": "DataChaco"
     },
     {
-      "titulo": "Sesión 18: Media Sanción para el Plan de Prevención de la Ludopatía Online",
-      "resumen": "La Cámara de Diputados de Corrientes, presidida por Eduardo Tassano, en su sesión 18 otorgó media sanción al proyecto de ley que crea el Plan Provincial de Prevención de la Ludopatía online en el ámbito educativo, destinado a estudiantes de los niveles obligatorios del sistema educativo, de gestión pública y privada, en el ámbito de la Provincia.",
-      "titulo_info": "Diputados de Corrientes dio media sanción al Plan Provincial de Prevención de la Ludopatía Online en el ámbito educativo",
+      "titulo": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria",
+      "resumen": "El gobernador Juan Pablo Valdés confirmó que la Provincia avanzará en el prorrateo de las facturas de energía en seis meses, la ampliación del alcance de l",
+      "titulo_info": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria, incluyendo el prorrateo de facturas de energía",
       "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.701Z",
+      "fecha": "2026-11-19T20:25:36.213Z",
       "jurisdiccion": "corrientes",
       "categorias": [
-        "leyes"
+        "obras"
       ],
-      "url": "https://hcdcorrientes.gov.ar/sesion-18-media-sancion-para-el-plan-de-prevencion-de-la-ludopatia-online/",
-      "fuente": "Diputados Corrientes"
+      "url": "https://www.diarioepoca.com/1395592-valdes-anuncio-medidas-de-alivio-economico-y-nuevas-obras-en-paso-de-la-patria",
+      "fuente": "Diario Época"
     },
     {
       "titulo": "Paritaria estatal en Entre Ríos: el Gobierno explicó por qué \"no pudo realizarse la audiencia",
@@ -548,8 +521,8 @@
     {
       "titulo": "Por qué metieron a un cuatro de copas?\": la crisis que casi hizo caer el dictamen de las PASO",
       "resumen": "",
-      "titulo_info": "Por qué metieron a un cuatro de copas?\": la crisis que casi hizo caer el dictamen de las PASO",
-      "titulo_info_src": "heuristico",
+      "titulo_info": "Crisis en el oficialismo: un \"cuatro de copas\" casi frena el dictamen de las PASO",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -572,16 +545,16 @@
       "fuente": "Gobierno del Chaco"
     },
     {
-      "titulo": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria",
-      "resumen": "El gobernador Juan Pablo Valdés confirmó que la Provincia avanzará en el prorrateo de las facturas de energía en seis meses, la ampliación del alcance de l",
-      "titulo_info": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria, incluyendo el prorrateo de facturas de energía",
+      "titulo": "Polich proyecta un presupuesto de $256.314 millones para 2027",
+      "resumen": "El proyecto que toma estado legislativo hoy en el Concejo prevé un aumento nominal en línea con la inflación proyectada respecto del cálculo de 2026. La ges",
+      "titulo_info": "El Concejo trata el presupuesto 2027 de Polich, proyectado en $256.314 millones, con un aumento nominal acorde a la inflación esperada respecto a 2026",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.213Z",
       "jurisdiccion": "corrientes",
       "categorias": [
-        "obras"
+        "gobierno"
       ],
-      "url": "https://www.diarioepoca.com/1395592-valdes-anuncio-medidas-de-alivio-economico-y-nuevas-obras-en-paso-de-la-patria",
+      "url": "https://www.diarioepoca.com/1395552-polich-proyecta-un-presupuesto-de-256314-millones-para-2027",
       "fuente": "Diario Época"
     },
     {
@@ -637,16 +610,16 @@
       "fuente": "Legislatura Chaco"
     },
     {
-      "titulo": "Ingresó el Presupuesto 2027 al Concejo Deliberante",
-      "resumen": "La proyección de recursos municipales asciende a más de $256 mil millones. Además, se aprobaron designaciones para el Juzgado Administrativo de Faltas N° 5",
-      "titulo_info": "Concejo Deliberante recibe Presupuesto 2027 por $256 mil millones y aprueba designaciones para Juzgado de Faltas",
+      "titulo": "Colonia Libertad acelera plan de obras en viviendas y la Ruta 25",
+      "resumen": "Los trabajos avanzaron por encima de las previsiones iniciales, con resultados visibles antes de cumplirse el primer año de gestión. La carretera es important",
+      "titulo_info": "Colonia Libertad acelera obras en viviendas y la Ruta 25, con trabajos que superan las previsiones iniciales",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.213Z",
       "jurisdiccion": "corrientes",
       "categorias": [
-        "gobierno"
+        "obras"
       ],
-      "url": "https://www.diarioepoca.com/1395588-ingreso-el-presupuesto-2027-al-concejo-deliberante",
+      "url": "https://www.diarioepoca.com/1395330-colonia-libertad-acelera-plan-de-obras-en-viviendas-y-la-ruta-25",
       "fuente": "Diario Época"
     },
     {
@@ -689,19 +662,6 @@
       "fuente": "Legislatura Chaco"
     },
     {
-      "titulo": "Polich proyecta un presupuesto de $256.314 millones para 2027",
-      "resumen": "El proyecto que toma estado legislativo hoy en el Concejo prevé un aumento nominal en línea con la inflación proyectada respecto del cálculo de 2026. La ges",
-      "titulo_info": "El Concejo trata el presupuesto 2027 de Polich, proyectado en $256.314 millones, con un aumento nominal acorde a la inflación esperada respecto a 2026",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.213Z",
-      "jurisdiccion": "corrientes",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.diarioepoca.com/1395552-polich-proyecta-un-presupuesto-de-256314-millones-para-2027",
-      "fuente": "Diario Época"
-    },
-    {
       "titulo": "La reforma electoral obtuvo dictamen: qué cambiaría para los votantes y los partidos",
       "resumen": "",
       "titulo_info": "La reforma electoral obtuvo dictamen y se esperan cambios para votantes y partidos",
@@ -740,19 +700,6 @@
       ],
       "url": "https://www.legislaturachaco.gov.ar/noticia-la-legislatura-acompano-la-entrega-del-doctorado-honoris-causa-de-la-unne-al-escultor-humberto-gomez-lollo-2026-11-17-20-27",
       "fuente": "Legislatura Chaco"
-    },
-    {
-      "titulo": "Colonia Libertad acelera plan de obras en viviendas y la Ruta 25",
-      "resumen": "Los trabajos avanzaron por encima de las previsiones iniciales, con resultados visibles antes de cumplirse el primer año de gestión. La carretera es important",
-      "titulo_info": "Colonia Libertad acelera obras en viviendas y la Ruta 25, con trabajos que superan las previsiones iniciales",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.213Z",
-      "jurisdiccion": "corrientes",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.diarioepoca.com/1395330-colonia-libertad-acelera-plan-de-obras-en-viviendas-y-la-ruta-25",
-      "fuente": "Diario Época"
     },
     {
       "titulo": "Paritaria estatal: Gobierno y gremios vuelven a negociar tras la suspensión de la audiencia",
@@ -926,8 +873,8 @@
     {
       "titulo": "Lanzamiento del GTA VI: la historia detrás del decreto que prohibió la saga en Rosario y el proyecto para anularlo",
       "resumen": "",
-      "titulo_info": "Lanzamiento del GTA VI: la historia detrás del decreto que prohibió la saga en Rosario y el proyecto para anularlo",
-      "titulo_info_src": "heuristico",
+      "titulo_info": "Prohibición del GTA VI en Rosario: el decreto y el proyecto para anularlo",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1004,8 +951,8 @@
     {
       "titulo": "Sesión en el Senado: LLA volvió a frenar el debate de la ley de Ludopatía",
       "resumen": "El oficialismo impidió la discusión del proyecto que tiene media sanción y está por perder estado parlamentario. Votaron que sea tratado el 26 de noviembre, en la última sesión del año. En el temario de hoy están la Ley de Discapacidad, la adhesión al Tratado de Patentes con Estados Unidos y el restablecimiento de la Ley de Tierras.",
-      "titulo_info": "Sesión en el Senado: LLA volvió a frenar el debate de la ley de Ludopatía. El oficialismo impidió la discusión del proyecto que tiene media sanción y está por perder estado parlamentario.",
-      "titulo_info_src": "heuristico",
+      "titulo_info": "El Senado postergó el debate de la ley de Ludopatía, con media sanción, hasta el 26 de noviembre",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.451Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1015,62 +962,10 @@
       "fuente": "Página/12 El País"
     },
     {
-      "titulo": "Reglamento de Concursos - Acta Paritaria",
-      "resumen": "",
-      "titulo_info": "Reglamento de Concursos",
-      "titulo_info_src": "",
-      "fecha": "2026-11-19T20:25:36.126Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.hcder.gov.ar/archivosDownload/concursos/ACTA_Nro5_CPP_01_NOV.pdf",
-      "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "Reforma electoral: Cuando el poder del dinero vale más que el voto",
-      "resumen": "La nueva ley le pone fin a la jornada de reflexión, menos espacios cedidos y campaña paga en redes: las nuevas reglas favorecen a quien tiene más fondos. La suspensión de las PASO apunta a complicar la interna peronista. En la Cámara Electoral advierten por los avales truchos y piden el padrón biométrico.",
-      "titulo_info": "La nueva ley le pone fin a la jornada de reflexión, menos espacios cedidos y campaña paga en redes: las nuevas reglas favorecen a quien tiene más fondos.",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-19T20:25:36.451Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/19/reforma-electoral-cuando-el-poder-del-dinero-vale-mas-que-el-voto/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "Reglamento de Concursos Ascenso - Acta Paritaria",
-      "resumen": "",
-      "titulo_info": "Reglamento de Concursos Ascenso",
-      "titulo_info_src": "",
-      "fecha": "2026-11-19T20:25:36.126Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.hcder.gov.ar/archivosDownload/concursos/ACTA_PARITARIA_REGLAMENTO_CONCURSO_ASCENSO_CD.pdf",
-      "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "Una reforma electoral que al gobierno le costó unas colectoras",
-      "resumen": "El bloque libertario necesitó dos días de negociaciones para conseguir el texto que debatirán la próxima semana. La oposición consideró el proyecto como “un papelón”.",
-      "titulo_info": "Una reforma electoral que al gobierno le costó unas colectoras",
-      "titulo_info_src": "",
-      "fecha": "2026-11-19T20:25:36.451Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/19/una-reforma-electoral-que-al-gobierno-le-costo-unas-colectoras/",
-      "fuente": "Página/12 El País"
-    },
-    {
       "titulo": "Protocolo específico para la prevención e intervención en casos de violencia laboral y violencia de género en el ámbito de la Honorable Cámara de Diputados de la provi…",
       "resumen": "",
-      "titulo_info": "Protocolo específico para la prevención e intervención en casos de violencia laboral y violencia de género en el ámbito de la Honorable Cámara de Diputados de la provi…",
-      "titulo_info_src": "",
+      "titulo_info": "Diputados de la provincia de Buenos Aires tendrá protocolo para violencia laboral y de género",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.126Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -1080,70 +975,17 @@
       "fuente": "Diputados Entre Ríos"
     },
     {
-      "titulo": "Axel Kicillof y Magdalena Sierra entregaron 55 viviendas en Avellaneda",
-      "resumen": "",
-      "titulo_info": "Axel Kicillof y Magdalena Sierra entregaron 55 viviendas en Avellaneda",
-      "titulo_info_src": "",
+      "titulo": "Reforma electoral: Cuando el poder del dinero vale más que el voto",
+      "resumen": "La nueva ley le pone fin a la jornada de reflexión, menos espacios cedidos y campaña paga en redes: las nuevas reglas favorecen a quien tiene más fondos. La suspensión de las PASO apunta a complicar la interna peronista. En la Cámara Electoral advierten por los avales truchos y piden el padrón biométrico.",
+      "titulo_info": "Reforma electoral: el poder del dinero y la campaña paga en redes favorecen a los que más fondos tienen",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.451Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "obras"
+        "elecciones"
       ],
-      "url": "https://www.pagina12.com.ar/2026/11/19/axel-kicillof-y-magdalena-sierra-entregaron-55-viviendas-en-avellaneda/",
+      "url": "https://www.pagina12.com.ar/2026/11/19/reforma-electoral-cuando-el-poder-del-dinero-vale-mas-que-el-voto/",
       "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "Ley Provincial de Procedimientos Constitucionales",
-      "resumen": "",
-      "titulo_info": "Ley Provincial de Procedimientos Constitucionales",
-      "titulo_info_src": "",
-      "fecha": "2026-11-19T20:25:36.126Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.hcder.gov.ar/archivosDownload/Ley8369_ProcedimientosConstitucionalesDeEntreRios_ultMod_Ley10704_2019.pdf",
-      "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "El fiscal anticorrupción denunció a la secretaria de Energía: la acusó de favorecer a una empresa sancionada por operar en Malvinas",
-      "resumen": "",
-      "titulo_info": "Fiscal anticorrupción denunció a secretaria de Energía por favorecer empresa sancionada por operar en Malvinas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.353Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/un-fiscal-anticorrupcion-denuncio-a-la-secretaria-de-energia-la-acuso-de-favorecer-a-una-empresa-nid17112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Exp y Ley Presupuesto Provincial 2026",
-      "resumen": "",
-      "titulo_info": "Exp y Ley Presupuesto Provincial 2026",
-      "titulo_info_src": "",
-      "fecha": "2026-11-19T20:25:36.126Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes",
-        "gobierno"
-      ],
-      "url": "https://hcder.gov.ar/consultasExpedientes_VerDirecto.php?exp=28722",
-      "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "El Deutsche Bank informó sobre US$60 millones vinculados a Carlos Wagner, el empresario líder del Club de la obra pública",
-      "resumen": "",
-      "titulo_info": "Deutsche Bank informó US$60 millones vinculados a empresario líder del Club de la obra pública",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.353Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/el-deutsche-bank-informo-sobre-us60-millones-vinculados-a-carlos-wagner-el-empresario-lider-del-club-nid18112026/",
-      "fuente": "La Nación Política"
     },
     {
       "titulo": "Aquí podrá acceder a los expedientes y normas legales que se generan durante la actividad Legislativa de la Cámara de Diputados",
@@ -1157,6 +999,58 @@
       ],
       "url": "",
       "fuente": "Diputados Entre Ríos"
+    },
+    {
+      "titulo": "Una reforma electoral que al gobierno le costó unas colectoras",
+      "resumen": "El bloque libertario necesitó dos días de negociaciones para conseguir el texto que debatirán la próxima semana. La oposición consideró el proyecto como “un papelón”.",
+      "titulo_info": "El bloque libertario negoció dos días para conseguir el texto de la reforma electoral que debatirán la próxima semana",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:25:36.451Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "elecciones"
+      ],
+      "url": "https://www.pagina12.com.ar/2026/11/19/una-reforma-electoral-que-al-gobierno-le-costo-unas-colectoras/",
+      "fuente": "Página/12 El País"
+    },
+    {
+      "titulo": "Axel Kicillof y Magdalena Sierra entregaron 55 viviendas en Avellaneda",
+      "resumen": "El Municipio de Avellaneda, en articulación con el Gobierno provincial, garantizó la continuidad de las obras y finalizó proyectos interrumpidos por falta de financiamiento del Gobierno nacional.",
+      "titulo_info": "Kicillof y Sierra entregaron 55 viviendas en Avellaneda, obras que estaban paralizadas",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:25:36.451Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "obras"
+      ],
+      "url": "https://www.pagina12.com.ar/2026/11/19/axel-kicillof-y-magdalena-sierra-entregaron-55-viviendas-en-avellaneda/",
+      "fuente": "Página/12 El País"
+    },
+    {
+      "titulo": "El Deutsche Bank informó sobre US$60 millones vinculados a Carlos Wagner, el empresario líder del Club de la obra pública",
+      "resumen": "El banco alemán rechazó al constructor y a Esuco como clientes tras el estallido del “caso Cuadernos”; la Justicia argentina ya embargó cuentas suizas del empresario y de su hermana por US$20 millones",
+      "titulo_info": "Deutsche Bank informó US$60 millones vinculados a empresario líder del Club de la obra pública",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:25:36.353Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "obras"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/el-deutsche-bank-informo-sobre-us60-millones-vinculados-a-carlos-wagner-el-empresario-lider-del-club-nid18112026/",
+      "fuente": "La Nación Política"
+    },
+    {
+      "titulo": "El fiscal anticorrupción denunció a la secretaria de Energía: la acusó de favorecer a una empresa sancionada por operar en Malvinas",
+      "resumen": "",
+      "titulo_info": "Fiscal anticorrupción denunció a secretaria de Energía por favorecer empresa sancionada por operar en Malvinas",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:25:36.353Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/un-fiscal-anticorrupcion-denuncio-a-la-secretaria-de-energia-la-acuso-de-favorecer-a-una-empresa-nid17112026/",
+      "fuente": "La Nación Política"
     },
     {
       "titulo": "EL SUBSECRETARIO DE HIDROCARBUROS EXPUSO SOBRE EL PROYECTO DE LEY QUE REGULA LOS BIOCOMBUSTIBLES",
@@ -1316,7 +1210,7 @@
     },
     {
       "titulo": "Santa Fe impulsa una Ley de Derechos del Consumidor a partir de un trabajo de articulación institucional",
-      "resumen": "El mandatario encabezó en Buenos Aires la presentación de la edición 2027 de la megamuestra que se realizará del 2 al 5 de junio en Armstrong, bajo el lema “Muestra Patria”.",
+      "resumen": "El proyecto elevado por el gobernador Maximiliano Pullaro a la Legislatura reglamenta el artículo 32 de la nueva Constitución Provincial.",
       "titulo_info": "Santa Fe impulsa Ley de Derechos del Consumidor tras articulación institucional",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T17:47:38.929Z",
@@ -1326,19 +1220,6 @@
       ],
       "url": "https://www.santafe.gob.ar/noticias/noticia/287946/",
       "fuente": "Gobierno de Santa Fe"
-    },
-    {
-      "titulo": "Sucesor de Mussi. El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
-      "resumen": "",
-      "titulo_info": "Intendente de Berazategui declaró en causa por supuesto plan para atacarlo",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/el-intendente-de-berazategui-declaro-como-testigo-en-una-causa-que-investiga-una-supuesta-oferta-nid19112026/",
-      "fuente": "La Nación Política"
     },
     {
       "titulo": "Fallo unánime. Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
@@ -1420,45 +1301,6 @@
       "fuente": "La Nación Política"
     },
     {
-      "titulo": "Reforma electoral. Hacerle trampa a la Constitución",
-      "resumen": "",
-      "titulo_info": "Reforma electoral. Hacerle trampa a la Constitución",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/reforma-electoral-hacerle-trampa-a-la-constitucion-nid19112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Comicios locales. Cuándo se vota a gobernador en Salta",
-      "resumen": "",
-      "titulo_info": "Comicios locales: Anuncian fecha de votación para gobernador en Salta",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/calendario-electoral-2027-cuando-se-vota-gobernador-en-salta-nid17112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Dónde voto. Publicaron el padrón provisorio para las elecciones de Argentina 2027",
-      "resumen": "",
-      "titulo_info": "Dónde voto: Publicaron padrón provisorio para elecciones 2027 en Argentina",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/donde-voto-publicaron-el-padron-provisorio-para-las-elecciones-de-argentina-2027-nid02112026/",
-      "fuente": "La Nación Política"
-    },
-    {
       "titulo": "En Washington. Argentina asumió la presidencia de la Comisión Interamericana de la OEA para el control de drogas",
       "resumen": "",
       "titulo_info": "Argentina asumió presidencia de Comisión Interamericana de la OEA para control de drogas en Washington",
@@ -1535,19 +1377,6 @@
       ],
       "url": "https://www.hcder.gov.ar/noticiasDetalles.php?id=2038",
       "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "Trabajoso apoyo. El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
-      "resumen": "",
-      "titulo_info": "El Gobierno consiguió dictamen para suspender las PASO tras eliminar las listas colectoras",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/el-gobierno-retiro-las-listas-colectoras-para-asegurarse-el-apoyo-para-suspender-las-paso-nid18112026/",
-      "fuente": "La Nación Política"
     },
     {
       "titulo": "Hein firmó un convenio con Rotary para impulsar acciones en salud mental",
