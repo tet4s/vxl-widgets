@@ -347,11 +347,11 @@ function guardrail(rewrites, items) {
     const numsSrc = new Set((src.match(/\d+/g) || []));
     for (const num of (r.match(/\d+/g) || [])) if (!numsSrc.has(num)) return null;
     // nombres propios nuevos (se ignoran la primera palabra y las mayúsculas de la fuente)
-    const srcWords = new Set(src.split(/\s+/));
+    const srcWords = new Set(src.split(/\s+/).map(w => w.toLowerCase()));
     const rWords = r.split(/\s+/);
     for (let k = 1; k < rWords.length; k++) {
       const w = rWords[k].replace(/^[¿¡"“«(]+/, '');
-      if (/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{2,}/.test(w) && !srcWords.has(w)) return null;
+      if (/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{2,}/.test(w) && !srcWords.has(w.toLowerCase())) return null;
     }
     return r;
   });
