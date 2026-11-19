@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-19T21:20:36.253Z",
+  "actualizado": "2026-11-19T21:25:29.448Z",
   "ciudades": [
     {
       "id": "parana",
@@ -2657,8 +2657,9 @@
           "ligas": [
             {
               "id": "top10",
-              "nombre": "Top 10",
-              "zona": "Regional del Litoral",
+              "nombre": "Regional del Litoral",
+              "division": "Top 10",
+              "zona": null,
               "temporada": "2026",
               "fuente": "Wikipedia",
               "url": "https://es.wikipedia.org/wiki/Torneo_Regional_del_Litoral_2026",
@@ -2899,8 +2900,9 @@
           "ligas": [
             {
               "id": "top10",
-              "nombre": "Top 10",
-              "zona": "Regional del Litoral",
+              "nombre": "Regional del Litoral",
+              "division": "Top 10",
+              "zona": null,
               "temporada": "2026",
               "fuente": "Wikipedia",
               "url": "https://es.wikipedia.org/wiki/Torneo_Regional_del_Litoral_2026",
