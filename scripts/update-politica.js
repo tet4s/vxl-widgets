@@ -86,6 +86,8 @@ const OFF_TOPIC = ['detuvieron', 'allanamiento', 'asesinato', 'homicidio', 'femi
 
 const GANCHO = ['viral', 'se hizo viral', 'no creer', 'increible', 'impactante', 'en vivo', 'minuto a minuto',
   'mira', 'te vas a', 'polémico', 'escandalo sexual', 'video', 'encuesta: quien gana', 'sabias que'];
+// Títulos-pregunta: no sirven como notificación (no hay nada para clickear).
+const PREGUNTA_RX = /^(¿|cu[aá]ndo\b|qui[eé]n\b|d[oó]nde\b|c[oó]mo\b|qu[eé]\b|cu[aá]l\b)/i;
 
 function norm(t) {
   return String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -408,6 +410,13 @@ function esOffTopic(n) {
 function esGancho(n) {
   return GANCHO.some(kw => coincide(n, kw)) || /[!]{2,}/.test(n);
 }
+// Título que no es una noticia sino el nombre de un documento ("Reglamento de
+// Concursos", "Acta Paritaria"): va sin verbo y sin contexto.
+function esNombreDeDocumento(titulo) {
+  const t = String(titulo || '').trim();
+  if (t.length > 60) return false;
+  return !/(\b(?:aprob|sancion|present|debate|debati|trat|envi|anunci|inaugur|firm|reclama|rechaz|pide|pidi|logr|avanz|suspend|declar|denunci|confirm|entrega|licit|ejecut|invirti|habilit|remov|asumi|renunci|vet|promulg)\w*)/i.test(t);
+}
 
 // Señales de que la noticia es nacional aunque la publique un portal provincial.
 const SENALES_NACIONAL = ['milei', 'villarruel', 'casa rosada', 'gobierno nacional', 'congreso de la nacion',
@@ -537,8 +546,9 @@ function tokensSignificativos(t) {
 }
 
 function guardrailTitular(nuevo, item) {
-  const n = limpiar(String(nuevo || '').replace(/^["“”']|["“”']$/g, ''));
-  if (n.length < 55 || n.length > 260) return null;
+  let n = limpiar(String(nuevo || '').replace(/^["“”']|["“”']$/g, ''));
+  if ((n.match(/"/g) || []).length % 2 === 1) n = n.replace(/"/g, '').replace(/\s+/g, ' ').trim();
+  if (n.length < 45 || n.length > 260) return null;
   if (/[!?¿¡]{1,}/.test(n)) return null;
   if (/[\u{1F300}-\u{1FAFF}]/u.test(n)) return null;
   if (/(mir[aá]|no te lo pierdas|no vas a creer|as[ií] fue|qu[eé] dijo|video|en vivo|minuto a minuto|imperdible)/i.test(n)) return null;
@@ -597,6 +607,26 @@ function titularHeuristico(titulo, resumen) {
     return recortarOracion(out, 250);
   }
   return recortarOracion(t.replace(/[.\s]+$/, '') + '. ' + oracion, 250);
+}
+
+// Después de reescribir, dos notas de fuentes distintas pueden quedar con el mismo
+// titular: se deja la primera (más vieja) y se unen las categorías.
+function dedupeTitulosInfo(noticias) {
+  const out = [];
+  for (const n of noticias) {
+    let dup = false;
+    for (const o of out) {
+      if (!o.titulo_info || !n.titulo_info) continue;
+      if (jaccard(o.titulo_info, n.titulo_info) > 0.72) {
+        o.categorias = Array.from(new Set([...o.categorias, ...n.categorias]));
+        if (new Date(n.fecha) < new Date(o.fecha)) o.fecha = n.fecha;
+        dup = true;
+        break;
+      }
+    }
+    if (!dup) out.push(n);
+  }
+  return out;
 }
 
 async function reescribirInformativos(noticias, previos) {
@@ -683,7 +713,8 @@ async function main() {
       // Algunos listados devuelven la URL como "titular" (pasa con el proxy).
       if (/https?:\/\//i.test(titulo) || /^www\./i.test(titulo)) { stats.corto++; return; }
       const n = norm(titulo);
-      if (esGancho(n)) { stats.gancho++; return; }
+            if (esGancho(n) || PREGUNTA_RX.test(titulo)) { stats.gancho++; return; }
+            if (esNombreDeDocumento(titulo)) { stats.corto++; return; }
     const cats = clasificar(titulo);
     if (!cats.length) { stats.sinCategoria++; return; }
     if (esOffTopic(n) && !cats.includes('leyes') && !cats.includes('obras')) { stats.offTopic++; return; }
@@ -701,7 +732,8 @@ async function main() {
     const fechaTitulo = fechaTexto(titulo);
     if (fechaTitulo && Date.now() - new Date(fechaTitulo).getTime() > 25 * 86400000) return;
 
-    const key = n.replace(/[^a-z0-9]+/g, ' ').trim();
+    const plano = n.replace(/[^a-z0-9ñ]+/g, ' ').replace(/\s+/g, ' ').trim();
+    const key = plano;
     const previo = porTitulo.get(key);
     if (previo) {
       // La fecha de una notificación es la PRIMERA vez que la vimos:
@@ -712,9 +744,10 @@ async function main() {
     }
 
     // dedupe difuso contra lo ya aceptado
-        const prefijo = n.slice(0, 55);
+        const prefijo = plano.slice(0, 55);
         for (const otro of porTitulo.values()) {
-          const mismoArranque = prefijo.length > 40 && norm(otro.titulo).slice(0, 55) === prefijo;
+          const planoOtro = norm(otro.titulo).replace(/[^a-z0-9ñ]+/g, ' ').replace(/\s+/g, ' ').trim();
+          const mismoArranque = prefijo.length > 40 && planoOtro.slice(0, 55) === prefijo;
           if (mismoArranque || jaccard(titulo, otro.titulo) > 0.82) {
         otro.categorias = Array.from(new Set([...otro.categorias, ...cats]));
         if (new Date(fecha) < new Date(otro.fecha)) otro.fecha = fecha;
@@ -754,8 +787,11 @@ async function main() {
       // Titulares que se entiendan sin abrir la nota: copete -> LLM -> heurístico.
       await enriquecerResumen(noticias);
       const previos = new Map();
-        historico.forEach(h => { if (h.titulo && h.titulo_info && h.titulo_info_src === 'llm') previos.set(norm(h.titulo), h.titulo_info); });
+      historico.forEach(h => { if (h.titulo && h.titulo_info && h.titulo_info_src === 'llm') previos.set(norm(h.titulo), h.titulo_info); });
       await reescribirInformativos(noticias, previos);
+      const sinDuplicados = dedupeTitulosInfo(noticias);
+      noticias.length = 0;
+      noticias.push(...sinDuplicados.map(n => ({ ...n })));
 
   const categorias = CATEGORIAS.map(c => ({
     id: c.id,
