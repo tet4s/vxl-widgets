@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * update-deportes.js — datos de deportes para los widgets del home (VXL)
+ * update-deportes.js — datos de deportes para los widgets del Litoral (VXL)
  *
- * Arma `data/deportes.json` con, para cada deporte y cada ciudad del Litoral:
- *   - la tabla de posiciones de la liga donde juegan los equipos más relevantes
- *   - el último partido jugado
- *   - los últimos resultados del equipo destacado
+ * Arma `data/deportes.json` con, para cada deporte y cada ciudad:
+ *   - las ligas/divisiones disponibles y, por cada una, la tabla de posiciones
+ *   - el último partido y los últimos resultados del equipo destacado
+ *   - por equipo: su último partido y su próximo partido (para el detalle al hacer clic)
  *   - el movimiento de posiciones (flechas ▲▼) contra el último cambio real
  *
  * Fuentes (todas públicas, sin clave):
@@ -36,8 +36,8 @@ const CIUDADES = [
   { id: 'santa_fe', nombre: 'Santa Fe', provincia: 'Santa Fe', lat: -31.6333, lon: -60.7 },
 ];
 
-// Ligas relevantes por ciudad: la liga donde juega el equipo más importante
-// de esa ciudad en cada deporte (no "la liga más famosa", sino la del Litoral).
+// Ligas por ciudad: no "la liga más famosa", sino la del equipo más relevante de
+// cada ciudad. `equipos` puede traer alias separados por "|".
 const DEPORTES = {
   futbol: {
     id: 'futbol',
@@ -54,7 +54,7 @@ const DEPORTES = {
         fuente: 'espn',
         liga: 'arg.1',
         ligaNombre: 'Liga Profesional',
-        equipos: ['Unión'],
+        equipos: ['Unión (Santa Fe)|Unión'],
       },
     },
   },
@@ -83,17 +83,26 @@ const DEPORTES = {
     nombre: 'Rugby',
     metrica: 'PTS',
     ciudades: {
+      // Los clubes del Litoral se reparten entre el Top 10 y la Segunda División.
+      // El widget muestra por defecto la división donde juega la mayoría y deja
+      // pestañas para cambiar de división cuando hay datos de más de una.
       parana: {
         fuente: 'rugby',
         ligaNombre: 'Regional del Litoral',
-        grupo: 'TRL 1 nivel',
-        equipos: ['CAE|Estudiantes de Paraná', 'PARANA ROWING'],
+        equipos: ['CAE|Estudiantes de Paraná', 'PARANA ROWING', 'TILCARA'],
+        divisiones: [
+          { id: 'top10', nombre: 'Top 10', grupo: 'TRL 1 nivel' },
+          { id: 'segunda', nombre: 'Segunda', grupo: 'TRL 2 nivel' },
+        ],
       },
       santa_fe: {
         fuente: 'rugby',
         ligaNombre: 'Regional del Litoral',
-        grupo: 'TRL 1 nivel',
-        equipos: ['SANTA FE RC'],
+        equipos: ['SANTA FE RC', 'CRAI', 'UNIVERSITARIO (SF)'],
+        divisiones: [
+          { id: 'top10', nombre: 'Top 10', grupo: 'TRL 1 nivel' },
+          { id: 'segunda', nombre: 'Segunda', grupo: 'TRL 2 nivel' },
+        ],
       },
     },
   },
@@ -106,17 +115,27 @@ const sinAcentos = (s) =>
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '');
 
+/**
+ * Limpia texto de las fuentes: quita caracteres invisibles (zero-width, LRM),
+ * normaliza NBSP y colapsa espacios. Sin esto, un nombre con un carácter raro
+ * fuerza al navegador a usar otra tipografía y la tabla se ve distinta.
+ */
+const limpiar = (s) =>
+  String(s == null ? '' : s)
+    .replace(/[\u200B-\u200F\u202A-\u202E\u2060\uFEFF]/g, '')
+    .replace(/\u00A0/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
 const norm = (s) =>
-  sinAcentos(s)
+  sinAcentos(limpiar(s))
     .toUpperCase()
     .replace(/[^A-Z0-9]+/g, ' ')
     .trim();
 
 const tokens = (s) => norm(s).split(' ').filter(Boolean);
 
-/** ¿El nombre del equipo de la fuente corresponde al equipo configurado?
- *  Un equipo configurado puede traer alias separados por "|":
- *  'CAE|Estudiantes de Paraná'. */
+/** ¿El nombre del equipo de la fuente corresponde al equipo configurado? */
 function coincide(nombreFuente, nombreConfig) {
   if (String(nombreConfig).includes('|')) {
     return String(nombreConfig)
@@ -127,9 +146,6 @@ function coincide(nombreFuente, nombreConfig) {
   const b = tokens(nombreConfig);
   if (!a.length || !b.length) return false;
   if (a.join(' ') === b.join(' ')) return true;
-  // todos los tokens configurados deben aparecer en el nombre de la fuente,
-  // en orden (permite "UNION" contra "UNIÓN (SANTA FE)" y evita "UNION" contra
-  // "LA UNION (COLON)" porque "LA" y "COLON" no están en el configurado).
   let i = 0;
   for (const t of a) {
     if (t === b[i]) i++;
@@ -138,10 +154,10 @@ function coincide(nombreFuente, nombreConfig) {
   return false;
 }
 
-const hayEquipo = (nombreFuente, lista) => lista.some((c) => coincide(nombreFuente, c));
+const hayEquipo = (nombreFuente, lista) => (lista || []).some((c) => coincide(nombreFuente, c));
 
 const num = (v) => {
-  if (v === null || v === undefined) return null;
+  if (v === null || v === undefined || v === '') return null;
   const n = Number(String(v).replace(/[^\d.-]/g, ''));
   return Number.isFinite(n) ? n : null;
 };
@@ -169,8 +185,51 @@ async function getHtml(url, timeout = 30000) {
   return data;
 }
 
+/** Corre `fn` sobre `items` con concurrencia limitada. */
+async function enParalelo(items, limite, fn) {
+  const out = new Array(items.length);
+  let i = 0;
+  const workers = Array.from({ length: Math.min(limite, items.length) }, async () => {
+    while (i < items.length) {
+      const idx = i++;
+      try {
+        out[idx] = await fn(items[idx], idx);
+      } catch (e) {
+        out[idx] = null;
+      }
+    }
+  });
+  await Promise.all(workers);
+  return out;
+}
+
 function log(...a) {
   console.log(new Date().toISOString().slice(11, 19), ...a);
+}
+
+function partidoDesde({ fecha, contexto, local, visitante, gl, gv }) {
+  if (!local || !visitante) return null;
+  // Un partido con fecha futura nunca está jugado, aunque la fuente muestre 0-0
+  // como marcador provisorio (pasa en el fixture de La Liga Argentina).
+  const futuro = fecha ? new Date(fecha).getTime() > Date.now() + 2 * 3600 * 1000 : false;
+  const jugado = !futuro && gl !== null && gl !== undefined;
+  return {
+    fecha: fecha || null,
+    contexto: limpiar(contexto) || null,
+    local: limpiar(local),
+    visitante: limpiar(visitante),
+    marcador_local: jugado ? gl : null,
+    marcador_visitante: jugado ? gv : null,
+    estado: jugado ? 'finalizado' : 'programado',
+  };
+}
+
+/** Le pega los escudos a un partido cuando la fuente los da. */
+function conLogos(p, mapa) {
+  if (!p) return p;
+  p.logo_local = mapa[slug(p.local)] || null;
+  p.logo_visitante = mapa[slug(p.visitante)] || null;
+  return p;
 }
 
 // ---------------------------------------------------------------- fútbol (ESPN)
@@ -191,15 +250,33 @@ function competitorScore(c) {
 
 function limpiarContexto(nombre) {
   if (!nombre) return null;
-  return String(nombre)
-    .replace(/\s*-\s*/g, ' · ')
-    .replace(/Regular Season/i, 'Fase regular')
-    .replace(/Torneo Reducido/i, 'Reducido')
-    .replace(/Quarterfinals/i, 'Cuartos de final')
-    .replace(/Semifinals/i, 'Semifinales')
-    .replace(/First Round/i, 'Primera fase')
-    .replace(/Final\b/i, 'Final')
-    .trim();
+  return limpiar(
+    String(nombre)
+      .replace(/\s*-\s*/g, ' · ')
+      .replace(/Regular Season/i, 'Fase regular')
+      .replace(/Torneo Reducido/i, 'Reducido')
+      .replace(/Quarterfinals/i, 'Cuartos de final')
+      .replace(/Semifinals/i, 'Semifinales')
+      .replace(/First Round/i, 'Primera fase')
+      .replace(/Final\b/i, 'Final')
+  );
+}
+
+function eventoEspn(ev) {
+  const c = ev.competitions && ev.competitions[0];
+  if (!c) return null;
+  const local = c.competitors.find((x) => x.homeAway === 'home') || c.competitors[0];
+  const visitante = c.competitors.find((x) => x.homeAway === 'away') || c.competitors[1];
+  if (!local || !visitante) return null;
+  const completado = !!(c.status && c.status.type && c.status.type.completed);
+  return partidoDesde({
+    fecha: ev.date,
+    contexto: limpiarContexto(ev.seasonType && ev.seasonType.name),
+    local: local.team.displayName,
+    visitante: visitante.team.displayName,
+    gl: completado ? competitorScore(local) : null,
+    gv: completado ? competitorScore(visitante) : null,
+  });
 }
 
 async function desdeEspn(cfg) {
@@ -207,26 +284,22 @@ async function desdeEspn(cfg) {
   const st = await getJson(`${base}/${cfg.liga}/standings`);
   const temporada = String((st.season && st.season.year) || new Date().getFullYear());
 
-  const grupos = st.children || [];
   let grupo = null;
-  let equipo = null;
-
-  for (const ch of grupos) {
+  for (const ch of st.children || []) {
     for (const e of (ch.standings && ch.standings.entries) || []) {
       if (hayEquipo(e.team.displayName, cfg.equipos)) {
         grupo = ch;
-        equipo = e;
         break;
       }
     }
     if (grupo) break;
   }
-
   if (!grupo) throw new Error(`${cfg.ligaNombre}: no encontré a ${cfg.equipos.join(' / ')} en la tabla`);
 
   const rows = (grupo.standings.entries || []).map((e) => ({
     pos: statVal(e, 'rank'),
-    equipo: e.team.displayName,
+    equipo: limpiar(e.team.displayName),
+    equipo_id: e.team.id || null,
     logo: (e.team.logos && e.team.logos[0] && e.team.logos[0].href) || null,
     pj: statVal(e, 'gamesPlayed'),
     g: statVal(e, 'wins'),
@@ -238,83 +311,89 @@ async function desdeEspn(cfg) {
     pts: statVal(e, 'points'),
     cambio_fuente: statVal(e, 'rankChange'),
   }));
-
-  // ESPN ordena por rank; si no vino, ordenamos por puntos
   rows.sort((a, b) => (a.pos ?? 999) - (b.pos ?? 999) || (b.pts ?? 0) - (a.pts ?? 0));
   rows.forEach((r, i) => {
     if (r.pos === null || r.pos === undefined) r.pos = i + 1;
   });
 
-  // Último partido y últimos resultados del equipo destacado
+  // Fixture por equipo (para el detalle al hacer clic en una fila)
+  await enParalelo(rows, 6, async (r) => {
+    if (!r.equipo_id) return null;
+    try {
+      const sch = await getJson(
+        `https://site.api.espn.com/apis/site/v2/sports/soccer/${cfg.liga}/teams/${r.equipo_id}/schedule?season=${temporada}`
+      );
+      const partidos = (sch.events || []).map(eventoEspn).filter(Boolean);
+      const jugados = partidos
+        .filter((p) => p.estado === 'finalizado')
+        .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+      const pendientes = partidos
+        .filter((p) => p.estado !== 'finalizado')
+        .sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+      r.ultimo = jugados[0] || null;
+      r.proximo = pendientes[0] || null;
+      return null;
+    } catch {
+      r.ultimo = null;
+      r.proximo = null;
+      return null;
+    }
+  });
+
+  // Equipo destacado: su último partido y sus últimos resultados
+  const propio = rows.find((r) => hayEquipo(r.equipo, cfg.equipos));
   let partido = null;
   let ultimos = [];
-  try {
-    const sch = await getJson(
-      `${base.replace('/v2/', '/site/v2/')}/${cfg.liga}/teams/${equipo.team.id}/schedule?season=${temporada}`
-    );
-    const eventos = (sch.events || [])
-      .filter((ev) => {
-        const c = ev.competitions && ev.competitions[0];
-        return c && c.status && c.status.type && c.status.type.completed;
-      })
-      .sort((a, b) => new Date(b.date) - new Date(a.date));
-
-    ultimos = eventos.slice(0, 6).map((ev) => {
-      const c = ev.competitions[0];
-      const local = c.competitors.find((x) => x.homeAway === 'home') || c.competitors[0];
-      const visitante = c.competitors.find((x) => x.homeAway === 'away') || c.competitors[1];
-      return {
-        fecha: ev.date,
-        contexto: limpiarContexto(ev.seasonType && ev.seasonType.name),
-        local: local.team.displayName,
-        visitante: visitante.team.displayName,
-        logo_local: (local.team.logos && local.team.logos[0] && local.team.logos[0].href) || null,
-        logo_visitante: (visitante.team.logos && visitante.team.logos[0] && visitante.team.logos[0].href) || null,
-        goles_local: competitorScore(local),
-        goles_visitante: competitorScore(visitante),
-      };
-    });
-
-    if (ultimos.length) {
-      const u = ultimos[0];
-      partido = {
-        fecha: u.fecha,
-        contexto: u.contexto,
-        local: u.local,
-        visitante: u.visitante,
-        logo_local: u.logo_local,
-        logo_visitante: u.logo_visitante,
-        marcador_local: u.goles_local,
-        marcador_visitante: u.goles_visitante,
-        estado: 'finalizado',
-        destacado: true,
-      };
+  if (propio && propio.equipo_id) {
+    try {
+      const sch = await getJson(
+        `https://site.api.espn.com/apis/site/v2/sports/soccer/${cfg.liga}/teams/${propio.equipo_id}/schedule?season=${temporada}`
+      );
+      const jugados = (sch.events || [])
+        .map(eventoEspn)
+        .filter((p) => p && p.estado === 'finalizado')
+        .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+      ultimos = jugados.slice(0, 6);
+      partido = ultimos[0] || null;
+    } catch (e) {
+      log('  ! sin fixture de', propio.equipo, e.message);
     }
-  } catch (e) {
-    log('  ! sin fixture de', equipo.team.displayName, e.message);
   }
 
-  const zona = grupo.name && grupo.name !== 'Group A' && grupo.name !== 'Group B' ? grupo.name : grupo.name;
-  const zonaTxt = zona ? zona.replace(/^Group\s*/i, 'Zona ') : null;
+  const zona = grupo.name ? grupo.name.replace(/^Group\s*/i, 'Zona ') : null;
+
+  // Escudos por equipo (salen de la tabla) para la barra y el detalle
+  const escudos = {};
+  rows.forEach((r) => {
+    if (r.logo) escudos[slug(r.equipo)] = r.logo;
+    if (r.ultimo) conLogos(r.ultimo, escudos);
+    if (r.proximo) conLogos(r.proximo, escudos);
+  });
+  // Segundo paso: con el mapa completo (los escudos se van llenando arriba)
+  rows.forEach((r) => {
+    if (r.ultimo) conLogos(r.ultimo, escudos);
+    if (r.proximo) conLogos(r.proximo, escudos);
+  });
+  conLogos(partido, escudos);
+  ultimos.forEach((p) => conLogos(p, escudos));
 
   return {
-    liga: {
-      nombre: cfg.ligaNombre,
-      zona: zonaTxt,
-      temporada,
-      fuente: 'ESPN',
-      url: cfg.liga === 'arg.1' ? 'https://www.espn.com.ar/futbol/argentina/primera' : 'https://www.espn.com.ar/futbol/argentina/segunda',
-    },
-    destacados: cfg.equipos,
-    metrica: 'PTS',
-    columnas: [
-      { key: 'pj', label: 'PJ' },
-      { key: 'dg', label: 'DG' },
-      { key: 'pts', label: 'PTS' },
+    ligas: [
+      {
+        id: 'principal',
+        nombre: cfg.ligaNombre,
+        zona,
+        temporada,
+        fuente: 'ESPN',
+        url:
+          cfg.liga === 'arg.1'
+            ? 'https://www.espn.com.ar/futbol/argentina/primera'
+            : 'https://www.espn.com.ar/futbol/argentina/segunda',
+        tabla: rows,
+        partido,
+        ultimos,
+      },
     ],
-    tabla: rows,
-    partido,
-    ultimos,
   };
 }
 
@@ -352,7 +431,7 @@ async function desdeLaLiga(cfg) {
   $('tr.datos-estadisticos').each((_, tr) => {
     const tds = $(tr).find('td');
     if (tds.length < 8) return;
-    const txt = (i) => $(tds[i]).text().replace(/\s+/g, ' ').trim();
+    const txt = (i) => limpiar($(tds[i]).text());
     const logoRel = $(tds[1]).find('img').attr('src') || null;
     rows.push({
       pos: num(txt(0)),
@@ -365,105 +444,126 @@ async function desdeLaLiga(cfg) {
       gc: num(txt(6)),
       pts: num(txt(7)),
       pct: txt(8) || null,
+      ultimo: null,
+      proximo: null,
       cambio_fuente: null,
     });
   });
   if (rows.length < 5) throw new Error('La Liga Argentina: tabla vacía');
 
-  // Fixture: últimos 45 días (resultados) — el handler devuelve toda la liga
+  const zonaTxt = cfg.grupo
+    .toLowerCase()
+    .replace('conferencia ', 'Conferencia ')
+    .replace(/(^|\s)([a-záéíóú])/g, (m, a, b) => a + b.toUpperCase());
+
+  // Fixture: 60 días atrás y 30 adelante (resultados + próximos partidos)
   const hoy = new Date();
-  const desde = new Date(hoy.getTime() - 45 * 24 * 3600 * 1000);
+  const desde = new Date(hoy.getTime() - 60 * 24 * 3600 * 1000);
+  const hasta = new Date(hoy.getTime() + 30 * 24 * 3600 * 1000);
   const iso = (d) => d.toISOString().slice(0, 10);
-  let partidos = [];
+  const partidos = [];
+  const escudos = {};
   try {
     const fx = await getHtml(
       `https://www.laliganacional.com.ar/laligaargentina/fixture?handler=ProximosPartidos&fechaInicio=${iso(
         desde
-      )}&fechaFin=${iso(hoy)}`
+      )}&fechaFin=${iso(hasta)}`
     );
     const $$ = cheerio.load(fx);
     $$('tr.fila-tabla-calendarios').each((_, tr) => {
-      const c = $$(tr).find('td');
-      if (c.length < 6) return;
-      const local = $$(tr).find('.celda-nombre.text-start .nombre-equipo').first().text().replace(/\s+/g, ' ').trim();
-      const visit = $$(tr).find('.celda-nombre.text-end .nombre-equipo').first().text().replace(/\s+/g, ' ').trim();
+      const local = $$(tr).find('.celda-nombre.text-start .nombre-equipo').first().text();
+      const visit = $$(tr).find('.celda-nombre.text-end .nombre-equipo').first().text();
       const marc = $$(tr).find('td.resultados strong');
       const gl = marc.length >= 1 ? num(marc.eq(0).text()) : null;
       const gv = marc.length >= 2 ? num(marc.eq(1).text()) : null;
       const fechaTxt = $$(tr).find('.fecha-campo strong').first().text().trim(); // dd/mm/yyyy HH:MM
       const m = fechaTxt.match(/(\d{2})\/(\d{2})\/(\d{4})\s+(\d{2}):(\d{2})/);
-      if (!local || !visit || !m) return;
-      const fecha = `${m[3]}-${m[2]}-${m[1]}T${m[4]}:${m[5]}:00-03:00`;
-      const lc = $$(tr).find('.celda-escudo img').eq(0).attr('src') || null;
-      const vc = $$(tr).find('.celda-escudo img').eq(1).attr('src') || null;
-      partidos.push({
-        fecha,
-        contexto: cfg.grupo
-          ? cfg.grupo
-              .toLowerCase()
-              .replace('conferencia ', 'Conferencia ')
-              .replace(/(^|\s)([a-záéíóú])/g, (m, a, b) => a + b.toUpperCase())
-          : null,
-        local,
-        visitante: visit,
-        logo_local: lc ? `https://www.laliganacional.com.ar${lc}` : null,
-        logo_visitante: vc ? `https://www.laliganacional.com.ar${vc}` : null,
-        goles_local: gl,
-        goles_visitante: gv,
-      });
+      if (!limpiar(local) || !limpiar(visit) || !m) return;
+      const esc = $$(tr).find('.celda-escudo img');
+      if (esc.length >= 1 && esc.eq(0).attr('src')) {
+        escudos[slug(local)] = `https://www.laliganacional.com.ar${esc.eq(0).attr('src')}`;
+      }
+      if (esc.length >= 2 && esc.eq(1).attr('src')) {
+        escudos[slug(visit)] = `https://www.laliganacional.com.ar${esc.eq(1).attr('src')}`;
+      }
+      partidos.push(
+        partidoDesde({
+          fecha: `${m[3]}-${m[2]}-${m[1]}T${m[4]}:${m[5]}:00-03:00`,
+          contexto: zonaTxt,
+          local,
+          visitante: visit,
+          gl,
+          gv,
+        })
+      );
     });
   } catch (e) {
     log('  ! sin fixture de básquet', e.message);
   }
 
+  const conFecha = (p) => p && p.fecha && !isNaN(new Date(p.fecha));
   const jugados = partidos
-    .filter((p) => p.goles_local !== null && p.goles_visitante !== null)
+    .filter((p) => p && p.estado === 'finalizado' && conFecha(p))
     .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+  const pendientes = partidos
+    .filter((p) => p && p.estado !== 'finalizado' && conFecha(p))
+    .sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
 
-  const propios = jugados.filter(
-    (p) => hayEquipo(p.local, cfg.equipos) || hayEquipo(p.visitante, cfg.equipos)
-  );
+  const porEquipo = {};
+  const tocar = (nombre) => {
+    const k = slug(nombre);
+    if (!porEquipo[k]) porEquipo[k] = { ultimo: null, proximo: null };
+    return porEquipo[k];
+  };
+  jugados.forEach((p) => {
+    [p.local, p.visitante].forEach((n) => {
+      const d = tocar(n);
+      if (!d.ultimo) d.ultimo = p;
+    });
+  });
+  pendientes.forEach((p) => {
+    [p.local, p.visitante].forEach((n) => {
+      const d = tocar(n);
+      if (!d.proximo) d.proximo = p;
+    });
+  });
+
+  rows.forEach((r) => {
+    const d = porEquipo[slug(r.equipo)];
+    r.ultimo = d ? d.ultimo : null;
+    r.proximo = d ? d.proximo : null;
+  });
+
+  // Escudos: la tabla los tiene todos, el fixture los va completando
+  rows.forEach((r) => {
+    if (r.logo) escudos[slug(r.equipo)] = r.logo;
+  });
+  rows.forEach((r) => {
+    if (r.ultimo) conLogos(r.ultimo, escudos);
+    if (r.proximo) conLogos(r.proximo, escudos);
+  });
+
+  const propios = jugados.filter((p) => hayEquipo(p.local, cfg.equipos) || hayEquipo(p.visitante, cfg.equipos));
   const ultimos = (propios.length ? propios : jugados).slice(0, 6);
-
-  let partido = null;
-  if (ultimos.length) {
-    const u = ultimos[0];
-    partido = {
-      fecha: u.fecha,
-      contexto: u.contexto,
-      local: u.local,
-      visitante: u.visitante,
-      logo_local: u.logo_local,
-      logo_visitante: u.logo_visitante,
-      marcador_local: u.goles_local,
-      marcador_visitante: u.goles_visitante,
-      estado: 'finalizado',
-      destacado: true,
-    };
-  }
+  const partido = ultimos[0] || null;
+  conLogos(partido, escudos);
+  ultimos.forEach((p) => conLogos(p, escudos));
 
   return {
-    liga: {
-      nombre: cfg.ligaNombre,
-      zona: cfg.grupo
-        .toLowerCase()
-        .replace('conferencia ', 'Conferencia ')
-        .replace(/(^|\s)([a-záéíóú])/g, (m, a, b) => a + b.toUpperCase()),
-      temporada: String(new Date().getFullYear()),
-      fuente: 'AdC',
-      url: 'https://www.laliganacional.com.ar/laligaargentina',
-      nota: cfg.nota || null,
-    },
-    destacados: cfg.equipos,
-    metrica: 'PTS',
-    columnas: [
-      { key: 'pj', label: 'PJ' },
-      { key: 'pct', label: '%' },
-      { key: 'pts', label: 'PTS' },
+    ligas: [
+      {
+        id: 'principal',
+        nombre: cfg.ligaNombre,
+        zona: zonaTxt,
+        temporada: String(new Date().getFullYear()),
+        fuente: 'AdC',
+        url: 'https://www.laliganacional.com.ar/laligaargentina',
+        nota: cfg.nota || null,
+        tabla: rows,
+        partido,
+        ultimos,
+      },
     ],
-    tabla: rows,
-    partido,
-    ultimos,
   };
 }
 
@@ -480,24 +580,49 @@ function fechaDesdeTexto(txt, anio) {
   const dia = Number(m[1]);
   const mes = MESES[sinAcentos(m[2]).toLowerCase()];
   if (!dia || !mes) return null;
-  const d = new Date(Date.UTC(anio, mes - 1, dia, 21, 0, 0));
-  return d.toISOString();
+  return new Date(Date.UTC(anio, mes - 1, dia, 21, 0, 0)).toISOString();
 }
 
-async function rugbyDesdeUsr(grupoNombre) {
+/** Lee todas las tablas de usr.org.ar/tablas-trl/ agrupadas por división. */
+async function rugbyUsrTablas() {
   const html = await getHtml('https://usr.org.ar/tablas-trl/');
   const $ = cheerio.load(html);
   let nivel = null;
   let categoria = null;
-  const tablas = [];
+  const salida = [];
 
   $('h2, h3, h4, table.gsheet-data-table').each((_, el) => {
-    const tag = (el.tagName || el.name || '').toLowerCase();
+    const tag = String(el.tagName || el.name || '').toLowerCase();
     if (tag === 'table') {
-      if (nivel && /1 nivel/i.test(nivel) && /primera/i.test(categoria || '')) tablas.push(el);
+      if (!nivel || !/primera/i.test(categoria || '')) return;
+      const rows = [];
+      $(el)
+        .find('tbody tr')
+        .each((__, tr) => {
+          const tds = $(tr).find('td');
+          if (tds.length < 3) return;
+          const nombre = limpiar($(tds[1]).text());
+          const logoRel = $(tds[0]).find('img').attr('src') || null;
+          if (!nombre) return;
+          rows.push({
+            pos: rows.length + 1,
+            equipo: nombre,
+            logo: logoRel ? (logoRel.startsWith('http') ? logoRel : `https://usr.org.ar${logoRel}`) : null,
+            pj: num($(tds[tds.length - 2]).text()),
+            pts: num($(tds[tds.length - 1]).text()),
+            g: null,
+            e: null,
+            p: null,
+            dg: null,
+            ultimo: null,
+            proximo: null,
+            cambio_fuente: null,
+          });
+        });
+      if (rows.length >= 4) salida.push({ nivel, categoria, rows });
       return;
     }
-    const t = $(el).text().replace(/\s+/g, ' ').trim();
+    const t = limpiar($(el).text());
     if (/TRL/i.test(t)) {
       nivel = t;
       categoria = null;
@@ -506,47 +631,17 @@ async function rugbyDesdeUsr(grupoNombre) {
     }
   });
 
-  if (!tablas.length) throw new Error('USR: no encontré la tabla del TRL 1 nivel');
-
-  const rows = [];
-  $(tablas[0])
-    .find('tbody tr')
-    .each((_, tr) => {
-      const tds = $(tr).find('td');
-      if (tds.length < 3) return;
-      const nombre = $(tds[1]).text().replace(/\s+/g, ' ').trim();
-      const logoRel = $(tds[0]).find('img').attr('src') || null;
-      const pj = num($(tds[tds.length - 2]).text());
-      const pts = num($(tds[tds.length - 1]).text());
-      if (!nombre) return;
-      rows.push({
-        pos: rows.length + 1,
-        equipo: nombre,
-        logo: logoRel && /^https?:/.test(logoRel) ? logoRel : logoRel ? `https://usr.org.ar${logoRel}` : null,
-        pj,
-        pts,
-        g: null,
-        e: null,
-        p: null,
-        dg: null,
-        cambio_fuente: null,
-      });
-    });
-
-  const jugados = rows.filter((r) => (r.pts || 0) > 0).length;
-  if (jugados < 4) throw new Error('USR: tabla sin datos cargados (temporada no iniciada)');
-  return rows;
+  return salida;
 }
 
-async function rugbyDesdeWikipedia(anio) {
+async function rugbyWikipedia(anio) {
   const api =
     'https://es.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&origin=*&page=' +
     encodeURIComponent(`Torneo Regional del Litoral ${anio}`) +
     '&prop=text';
   const data = await getJson(api);
   if (!data.parse || !data.parse.text) throw new Error(`Wikipedia: no hay página del TRL ${anio}`);
-  const html = data.parse.text;
-  const $ = cheerio.load(html);
+  const $ = cheerio.load(data.parse.text);
 
   let tabla = null;
   $('table').each((_, t) => {
@@ -560,7 +655,7 @@ async function rugbyDesdeWikipedia(anio) {
     .find('tr')
     .first()
     .find('th,td')
-    .map((_, th) => $(th).text().replace(/\s+/g, ' ').trim())
+    .map((_, th) => limpiar($(th).text()))
     .get();
   const idx = (re) => headCells.findIndex((h) => re.test(h));
 
@@ -577,12 +672,12 @@ async function rugbyDesdeWikipedia(anio) {
     .each((_, tr) => {
       const cells = $(tr).find('td');
       if (cells.length < 5) return;
-      const equipo = $(cells[1]).text().replace(/\s+/g, ' ').trim();
+      const equipo = limpiar($(cells[1]).text());
       if (!equipo) return;
-      // Ojo: las imágenes de la celda son banderas de la unión, no escudos.
       rows.push({
         pos: rows.length + 1,
         equipo,
+        // Las imágenes de la celda son banderas de la unión, no escudos.
         logo: null,
         pj: iPj >= 0 ? num($(cells[iPj]).text()) : null,
         g: iG >= 0 ? num($(cells[iG]).text()) : null,
@@ -590,117 +685,128 @@ async function rugbyDesdeWikipedia(anio) {
         p: iP >= 0 ? num($(cells[iP]).text()) : null,
         dg: iDif >= 0 ? num($(cells[iDif]).text()) : null,
         pts: iPts >= 0 ? num($(cells[iPts]).text()) : null,
+        ultimo: null,
+        proximo: null,
         cambio_fuente: null,
       });
     });
-
   if (rows.length < 8) throw new Error('Wikipedia: tabla incompleta');
 
-  // Partidos: las cajas de la fase final tienen fecha | equipo | score | equipo
+  // Partidos de la fase final: filas "fecha | equipo | 23 - 20 | equipo"
   const partidos = [];
   $('table').each((_, t) => {
     $(t)
       .find('tr')
-      .each((_, tr) => {
+      .each((__, tr) => {
         const c = $(tr).find('td,th');
         if (c.length < 4) return;
-        const texto = (i) => $(c[i]).text().replace(/\s+/g, ' ').trim();
+        const texto = (i) => limpiar($(c[i]).text());
         const marcador = texto(2).match(/^(\d{1,2})\s*[-–]\s*(\d{1,2})$/);
         if (!marcador) return;
         const fecha = fechaDesdeTexto(texto(0), anio);
-        const local = texto(1);
-        const visitante = texto(3);
-        if (!fecha || !local || !visitante) return;
-        partidos.push({
-          fecha,
-          contexto: 'Fase final',
-          local,
-          visitante,
-          logo_local: null,
-          logo_visitante: null,
-          goles_local: Number(marcador[1]),
-          goles_visitante: Number(marcador[2]),
-        });
+        if (!fecha || !texto(1) || !texto(3)) return;
+        partidos.push(
+          partidoDesde({
+            fecha,
+            contexto: 'Fase final',
+            local: texto(1),
+            visitante: texto(3),
+            gl: Number(marcador[1]),
+            gv: Number(marcador[2]),
+          })
+        );
       });
   });
 
   partidos.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
-  return { rows, partidos, anio };
+  return { rows, partidos };
+}
+
+function completarRugby(rows, partidos) {
+  const porEquipo = {};
+  partidos.forEach((p) => {
+    [p.local, p.visitante].forEach((n) => {
+      const k = slug(n);
+      if (!porEquipo[k]) porEquipo[k] = { ultimo: p };
+    });
+  });
+  rows.forEach((r) => {
+    const d = porEquipo[slug(r.equipo)];
+    r.ultimo = d ? d.ultimo : null;
+    r.proximo = null;
+  });
 }
 
 async function desdeRugby(cfg) {
-  const anioActual = new Date().getFullYear();
-  let rows = null;
-  let partidos = [];
-  let fuente = null;
-  let temporada = String(anioActual);
+  const anio = new Date().getFullYear();
+  const divisiones = cfg.divisiones || [{ id: 'principal', nombre: cfg.ligaNombre, grupo: 'TRL 1 nivel' }];
+  const ligas = [];
 
+  // 1) USR (oficial). Puede traer Top 10 y Segunda; si está en cero, no sirve.
   try {
-    rows = await rugbyDesdeUsr(cfg.grupo || 'TRL 1 nivel');
-    fuente = 'USR';
+    const tablas = await rugbyUsrTablas();
+    for (const d of divisiones) {
+      const t = tablas.find((x) => norm(x.nivel) === norm(d.grupo));
+      if (!t) continue;
+      const jugados = t.rows.filter((r) => (r.pts || 0) > 0).length;
+      if (jugados < 4) continue;
+      ligas.push({
+        id: d.id,
+        nombre: cfg.ligaNombre,
+        division: d.nombre,
+        zona: null,
+        temporada: String(anio),
+        fuente: 'USR',
+        url: 'https://usr.org.ar/tablas-trl/',
+        tabla: t.rows,
+        partido: null,
+        ultimos: [],
+      });
+    }
   } catch (e) {
     log('  · rugby USR sin datos:', e.message);
   }
 
-  if (!rows) {
-    for (const anio of [anioActual, anioActual - 1]) {
+  // 2) Respaldo: Wikipedia (tabla del Top 10 + resultados de la fase final)
+  if (!ligas.length) {
+    for (const a of [anio, anio - 1]) {
       try {
-        const w = await rugbyDesdeWikipedia(anio);
-        rows = w.rows;
-        partidos = w.partidos;
-        fuente = 'Wikipedia';
-        temporada = String(anio);
+        const w = await rugbyWikipedia(a);
+        completarRugby(w.rows, w.partidos);
+        const propios = w.partidos.filter((p) => hayEquipo(p.local, cfg.equipos) || hayEquipo(p.visitante, cfg.equipos));
+        const ultimos = (propios.length ? propios : w.partidos).slice(0, 6);
+        ligas.push({
+          id: divisiones[0].id,
+          nombre: cfg.ligaNombre,
+          division: divisiones[0].nombre,
+          zona: null,
+          temporada: String(a),
+          fuente: 'Wikipedia',
+          url: `https://es.wikipedia.org/wiki/Torneo_Regional_del_Litoral_${a}`,
+          tabla: w.rows,
+          partido: ultimos[0] || null,
+          ultimos,
+        });
         break;
       } catch (e) {
-        log(`  · rugby Wikipedia ${anio}:`, e.message);
+        log(`  · rugby Wikipedia ${a}:`, e.message);
       }
     }
   }
 
-  if (!rows) throw new Error('Rugby: ninguna fuente devolvió la tabla del TRL');
+  if (!ligas.length) throw new Error('Rugby: ninguna fuente devolvió la tabla del TRL');
 
-  const propios = partidos.filter((p) => hayEquipo(p.local, cfg.equipos) || hayEquipo(p.visitante, cfg.equipos));
-  const ultimos = (propios.length ? propios : partidos).slice(0, 6);
+  // Para las ligas sin resultados (USR todavía no publica), se usa el último
+  // partido conocido del equipo destacado si existe.
+  ligas.forEach((l) => {
+    if (l.partido) return;
+    const conUltimo = (l.tabla || []).filter((r) => r.ultimo);
+    const delDestacado = conUltimo.find((r) => hayEquipo(r.equipo, cfg.equipos));
+    l.partido = delDestacado ? delDestacado.ultimo : null;
+    l.ultimos = [];
+  });
 
-  let partido = null;
-  if (ultimos.length) {
-    const u = ultimos[0];
-    partido = {
-      fecha: u.fecha,
-      contexto: u.contexto,
-      local: u.local,
-      visitante: u.visitante,
-      logo_local: u.logo_local,
-      logo_visitante: u.logo_visitante,
-      marcador_local: u.goles_local,
-      marcador_visitante: u.goles_visitante,
-      estado: 'finalizado',
-      destacado: true,
-    };
-  }
-
-  return {
-    liga: {
-      nombre: cfg.ligaNombre,
-      zona: 'Top 10',
-      temporada,
-      fuente,
-      url:
-        fuente === 'USR'
-          ? 'https://usr.org.ar/tablas-trl/'
-          : `https://es.wikipedia.org/wiki/Torneo_Regional_del_Litoral_${temporada}`,
-    },
-    destacados: cfg.equipos,
-    metrica: 'PTS',
-    columnas: [
-      { key: 'pj', label: 'PJ' },
-      { key: 'dg', label: 'DIF' },
-      { key: 'pts', label: 'PTS' },
-    ],
-    tabla: rows,
-    partido,
-    ultimos,
-  };
+  return { ligas };
 }
 
 // ---------------------------------------------------------------- historial
@@ -727,34 +833,26 @@ function aplicarMovimiento(clave, rows, hist) {
   const prev = hist[clave];
   const h = hashTabla(rows);
 
-  let cambios;
-  if (!prev) {
-    cambios = {};
-  } else if (prev.hash === h) {
-    // Sin cambios reales: no se toca el snapshot (ni la fecha) para no ensuciar
-    // el historial en cada corrida del cron.
-    cambios = prev.cambios || {};
+  if (prev && prev.hash === h) {
+    const cambios = prev.cambios || {};
     rows.forEach((r) => {
       const c = cambios[slug(r.equipo)];
       r.cambio = typeof c === 'number' ? c : 0;
-      r.destacado = false;
     });
     return rows;
-  } else {
-    cambios = {};
+  }
+
+  const cambios = {};
+  if (prev && prev.posiciones) {
     for (const [k, pos] of Object.entries(actual)) {
-      if (prev.posiciones && prev.posiciones[k] !== undefined) {
-        cambios[k] = prev.posiciones[k] - pos; // + = subió, - = bajó
-      }
+      if (prev.posiciones[k] !== undefined) cambios[k] = prev.posiciones[k] - pos; // + subió, - bajó
     }
   }
 
   hist[clave] = { hash: h, fecha: new Date().toISOString(), posiciones: actual, cambios };
-
   rows.forEach((r) => {
     const c = cambios[slug(r.equipo)];
     r.cambio = typeof c === 'number' ? c : 0;
-    r.destacado = false;
   });
   return rows;
 }
@@ -766,11 +864,15 @@ async function main() {
   const hist = leerHistorial();
   const salida = { actualizado: new Date().toISOString(), ciudades: CIUDADES, deportes: [] };
 
-  // Datos previos: si una fuente falla, no se pierde lo último bueno
   let previo = null;
   try {
     previo = JSON.parse(fs.readFileSync(OUT_FILE, 'utf8'));
   } catch {}
+
+  const previoDeCiudad = (deporteId, ciudadId) => {
+    const d = ((previo && previo.deportes) || []).find((x) => x.id === deporteId);
+    return (d && d.ciudades && d.ciudades[ciudadId]) || null;
+  };
 
   for (const deporte of Object.values(DEPORTES)) {
     const bloque = { id: deporte.id, nombre: deporte.nombre, metrica: deporte.metrica, ciudades: {} };
@@ -785,31 +887,52 @@ async function main() {
         else if (cfg.fuente === 'laliga') datos = await desdeLaLiga(cfg);
         else datos = await desdeRugby(cfg);
 
-        const clave = `${deporte.id}:${ciudad.id}`;
-        datos.tabla = aplicarMovimiento(clave, datos.tabla, hist);
-        datos.tabla.forEach((r) => {
-          r.destacado = hayEquipo(r.equipo, cfg.equipos);
+        datos.ligas.forEach((l) => {
+          l.tabla = aplicarMovimiento(`${deporte.id}:${ciudad.id}:${l.id}`, l.tabla, hist);
+          l.tabla.forEach((r) => {
+            r.destacado = hayEquipo(r.equipo, cfg.equipos);
+          });
         });
 
-        // Si esta corrida no trajo último partido, conservamos el anterior
-        if (!datos.partido && previo) {
-          const ant = (previo.deportes || []).find((d) => d.id === deporte.id);
-          const antC = ant && ant.ciudades && ant.ciudades[ciudad.id];
-          if (antC && antC.partido) datos.partido = antC.partido;
-          if (!datos.ultimos.length && antC && antC.ultimos) datos.ultimos = antC.ultimos;
+        // Liga por defecto: donde juega la mayor cantidad de clubes de la ciudad
+        // (si hay empate queda la primera de la config, que es la de más arriba).
+        const cuenta = (l) => l.tabla.filter((r) => r.destacado).length;
+        const defecto = datos.ligas.slice().sort((a, b) => cuenta(b) - cuenta(a))[0];
+
+        const antC = previoDeCiudad(deporte.id, ciudad.id);
+        if (antC) {
+          const antLigas = antC.ligas || [];
+          datos.ligas.forEach((l) => {
+            const ant = antLigas.find((x) => x.id === l.id);
+            if (ant && !l.partido && ant.partido) {
+              l.partido = ant.partido;
+              l.ultimos = l.ultimos && l.ultimos.length ? l.ultimos : ant.ultimos || [];
+            }
+          });
         }
 
-        bloque.ciudades[ciudad.id] = datos;
-        log(`  ✓ ${datos.tabla.length} equipos · partido: ${datos.partido ? datos.partido.local + ' ' + datos.partido.marcador_local + '-' + datos.partido.marcador_visitante + ' ' + datos.partido.visitante : 'sin dato'}`);
+        bloque.ciudades[ciudad.id] = {
+          destacados: cfg.equipos,
+          metrica: 'PTS',
+          liga_default: defecto ? defecto.id : null,
+          ligas: datos.ligas,
+        };
+
+        log(
+          `  ✓ ${datos.ligas
+            .map((l) => `${l.nombre}: ${l.tabla.length} equipos`)
+            .join(' / ')} · partido: ${
+            defecto && defecto.partido
+              ? `${defecto.partido.local} ${defecto.partido.marcador_local}-${defecto.partido.marcador_visitante} ${defecto.partido.visitante}`
+              : 'sin dato'
+          }`
+        );
       } catch (e) {
         log(`  ✗ ${ciudad.nombre}: ${e.message}`);
-        if (previo) {
-          const ant = (previo.deportes || []).find((d) => d.id === deporte.id);
-          const antC = ant && ant.ciudades && ant.ciudades[ciudad.id];
-          if (antC) {
-            bloque.ciudades[ciudad.id] = antC;
-            log('    · se conserva el dato anterior');
-          }
+        const antC = previoDeCiudad(deporte.id, ciudad.id);
+        if (antC) {
+          bloque.ciudades[ciudad.id] = antC;
+          log('    · se conserva el dato anterior');
         }
       }
     }

@@ -211,6 +211,17 @@ async function bajarViaProxy(url) {
   return res.data;
 }
 
+function parrafoDespues(md, desde) {
+  const resto = md.slice(desde, desde + 900).split('\n');
+  for (let i = 1; i < resto.length; i++) {
+    let l = resto[i].trim();
+    if (!l || /^[#*\->|]|^!\[|^\*   \[|^\[/.test(l)) continue;
+    l = limpiarResumen(l);
+    if (l.length >= 60) return l;
+  }
+  return '';
+}
+
 function scrapeMarkdown(md) {
   const ahoraMs = Date.now();
   const out = [];
@@ -219,13 +230,13 @@ function scrapeMarkdown(md) {
   let m;
   while ((m = rx.exec(md)) !== null) {
     const titulo = limpiar(m[1].replace(/[*_]/g, ''));
-        if (!titulo || /https?:\/\//i.test(titulo) || /^www\./i.test(titulo)) continue;
+    if (!titulo || /https?:\/\//i.test(titulo) || /^www\./i.test(titulo)) continue;
     const key = norm(titulo);
     if (vistos.has(key)) continue;
     vistos.add(key);
     const cerca = md.slice(m.index, m.index + 400);
     const fecha = fechaRelativa(m[3], ahoraMs) || fechaRelativa(cerca, ahoraMs) || new Date(ahoraMs).toISOString();
-    out.push({ titulo, fecha, url: m[2] });
+    out.push({ titulo, resumen: parrafoDespues(md, m.index + m[0].length), fecha, url: m[2] });
   }
   return out;
 }
@@ -256,6 +267,17 @@ function fechaTexto(txt) {
   return null;
 }
 
+function limpiarResumen(txt) {
+  let n = String(txt || '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/\s+/g, ' ').trim();
+  n = n.replace(/\s*(?:leer m[áa]s|ver nota|seguir leyendo|compartir|fuente:.*)$/i, '').trim();
+  if (n.length > 400) n = n.slice(0, 397) + '…';
+  return n;
+}
+
 // ---------------------------------------------------------------- scrapers
 async function scrapeRss(fuente) {
   const xml = await bajar(fuente.url);
@@ -264,9 +286,22 @@ async function scrapeRss(fuente) {
   const feed = await parser.parseString(xml);
   return (feed.items || []).slice(0, 25).map(it => ({
     titulo: limpiar(it.title),
+    resumen: limpiarResumen(it.contentSnippet || it.summary || it.description),
     fecha: fechaValida(it.isoDate || it.pubDate) || new Date().toISOString(),
     url: it.link || ''
   }));
+}
+
+// Primer párrafo del bloque (el "copete" de la tarjeta). Es lo que permite
+// escribir un titular informativo sin salir a buscar cada nota.
+function resumenDeBloque($, cont, titulo) {
+  let out = '';
+  cont.find('p').each((_, p) => {
+    if (out) return;
+    const t = limpiarResumen($(p).text());
+    if (t.length >= 40 && norm(t) !== norm(titulo) && t.length > titulo.length * 0.5) out = t;
+  });
+  return out;
 }
 
 async function scrapeHeads(fuente) {
@@ -284,7 +319,7 @@ async function scrapeHeads(fuente) {
     if (url && !/^https?:/i.test(url)) {
       try { url = new URL(url, fuente.url).href; } catch (e) { url = ''; }
     }
-    out.push({ titulo: texto, fecha: fecha || ahora, url });
+    out.push({ titulo: texto, resumen: resumenDeBloque($, cont, texto), fecha: fecha || ahora, url });
   });
   return out;
 }
@@ -306,7 +341,7 @@ async function scrapeLinks(fuente) {
     vistos.add(key);
     const cont = $a.closest('article, li, div');
     const fecha = fechaTexto(cont.find('time').first().text() || cont.text().slice(0, 300));
-    out.push({ titulo, fecha: fecha || ahora, url: href });
+    out.push({ titulo, resumen: resumenDeBloque($, cont, titulo), fecha: fecha || ahora, url: href });
   });
   return out;
 }
@@ -431,6 +466,171 @@ function jaccard(a, b) {
   return inter / (sa.size + sb.size - inter);
 }
 
+// ---------------------------------------------------------------- titulares informativos
+// El titular del widget no puede ser un gancho: tiene que contar la noticia.
+// Fuente: título + copete (lead). Primero se reescribe con LLM; si no hay key o
+// falla, sale un titular armado con el copete (nunca queda solo el gancho).
+const delay = ms => new Promise(r => setTimeout(r, ms));
+
+async function resumenDeNota(url) {
+  try {
+    const html = await bajar(url);
+    const $ = cheerio.load(html);
+    const meta = $('meta[property="og:description"]').attr('content') || $('meta[name="description"]').attr('content') || '';
+    let r = limpiarResumen(meta);
+    if (r.length < 60) {
+      const p = limpiarResumen($('article p, .article-body p, .nota p, main p').first().text());
+      if (p.length > r.length) r = p;
+    }
+    return r.length >= 60 ? r : '';
+  } catch (e) { return ''; }
+}
+
+async function enriquecerResumen(noticias) {
+  const faltan = noticias.filter(n => (!n.resumen || n.resumen.length < 60) && n.url).slice(0, 45);
+  if (!faltan.length) return 0;
+  let ok = 0;
+  const CONC = 5;
+  for (let i = 0; i < faltan.length; i += CONC) {
+    const lote = faltan.slice(i, i + CONC);
+    const res = await Promise.all(lote.map(n => resumenDeNota(n.url)));
+    res.forEach((r, idx) => { if (r) { lote[idx].resumen = r; ok++; } });
+  }
+  console.log('[politica] copetes recuperados de la nota: ' + ok + '/' + faltan.length);
+  return ok;
+}
+
+const GEMINI_MODELOS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite'];
+async function geminiTexto(prompt, maxTokens) {
+  const key = process.env.GEMINI_API_KEY || '';
+  if (!key) return null;
+  for (const modelo of GEMINI_MODELOS) {
+    try {
+      const generationConfig = { temperature: 0.25, maxOutputTokens: maxTokens };
+      if (modelo.indexOf('2.5') === 0) generationConfig.thinkingConfig = { thinkingBudget: 0 };
+      const r = await axios.post(
+        'https://generativelanguage.googleapis.com/v1beta/models/' + modelo + ':generateContent?key=' + encodeURIComponent(key),
+        { contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig },
+        { timeout: 45000, headers: { 'Content-Type': 'application/json' } }
+      );
+      const cand = r.data && r.data.candidates && r.data.candidates[0];
+      const txt = cand && cand.content && cand.content.parts && cand.content.parts.map(p => p.text || '').join('') || '';
+      if (txt.trim()) return txt;
+    } catch (e) {
+      console.warn('[politica] gemini ' + modelo + ': ' + e.message);
+    }
+  }
+  return null;
+}
+
+const PROMPT_TITULARES = 'Sos editor de la sección Política de un portal del Litoral argentino. ' +
+  'Para cada noticia escribí UN titular informativo en español rioplatense que se entienda sin abrir la nota: ' +
+  'qué pasó, qué ley/proyecto/obra es, quién lo hizo y en qué estado está (presentado, con dictamen, media sanción, aprobado, promulgado, inaugurado). ' +
+  'Nada de ganchos, preguntas, citas sueltas, "mirá", "así fue", "qué dijo", "video" ni suspenso: no hay link para hacer clic. ' +
+  'Largo libre entre 70 y 220 caracteres; si el hecho se cuenta en 80, no lo estires. Una sola oración (o dos cortas), sin punto final, sin emojis. ' +
+  'Usá SOLO el titular y el copete provistos: no inventes nombres, cifras, fechas ni estados que no estén ahí. ' +
+  'Si el copete está vacío, devolvé el titular original limpio, sin agregar nada. ' +
+  'Devolvé SOLO JSON {"titulares":["...","..."]} con la misma cantidad y orden. Entradas: ';
+
+function tokensSignificativos(t) {
+  return new Set(norm(t).replace(/[^a-z0-9ñ ]+/g, ' ').split(/\s+/).filter(w => w.length > 4));
+}
+
+function guardrailTitular(nuevo, item) {
+  const n = limpiar(String(nuevo || '').replace(/^["“”']|["“”']$/g, ''));
+  if (n.length < 55 || n.length > 260) return null;
+  if (/[!?¿¡]{1,}/.test(n)) return null;
+  if (/[\u{1F300}-\u{1FAFF}]/u.test(n)) return null;
+  if (/(mir[aá]|no te lo pierdas|no vas a creer|as[ií] fue|qu[eé] dijo|video|en vivo|minuto a minuto|imperdible)/i.test(n)) return null;
+  if (/\.\.\.|…$/.test(n)) return null;
+  // anti-invención: al menos 2 palabras "de contenido" en común con título o copete
+  const fuente = tokensSignificativos(item.titulo + ' ' + (item.resumen || ''));
+  const propios = Array.from(tokensSignificativos(n));
+  const comunes = propios.filter(w => fuente.has(w)).length;
+  if (!propios.length || comunes < Math.min(2, Math.max(1, Math.floor(propios.length * 0.2)))) return null;
+  return n;
+}
+
+async function reescribirLote(items) {
+  const prompt = PROMPT_TITULARES + JSON.stringify(items.map(i => ({ titular: i.titulo, copete: (i.resumen || '').slice(0, 400) })));
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const txt = await geminiTexto(prompt, 160 * items.length + 300);
+    if (txt) {
+      const m = txt.match(/\{[\s\S]*\}/);
+      if (m) {
+        try {
+          const parsed = JSON.parse(m[0]);
+          if (Array.isArray(parsed.titulares) && parsed.titulares.length === items.length) return parsed.titulares;
+        } catch (e) { /* sigue */ }
+      }
+    }
+    await delay(2500);
+  }
+  return items.map(() => null);
+}
+
+// Titular sin LLM: si el original es gancho, manda el copete; si no, título + copete.
+const ES_GANCHO_TITULAR = /^(¿|"|“)|qu[eé] dijo|as[ií] fue|mir[aá]|en vivo|video|qui[eé]n es|cu[aá]ndo|d[oó]nde|\?$|\.\.\.$|^.{3,60}:\s*[“"]/i;
+
+// Corta sin dejar una frase colgando: prefiere el último punto, después coma.
+function recortarOracion(txt, max) {
+  const t = String(txt || '').trim();
+  if (t.length <= max) return t;
+  const corte = t.slice(0, max);
+  const p = Math.max(corte.lastIndexOf('. '), corte.lastIndexOf('; '));
+  if (p > max * 0.55) return corte.slice(0, p).trim();
+  const c = corte.lastIndexOf(', ');
+  if (c > max * 0.6) return corte.slice(0, c).trim();
+  return corte.replace(/[,;\s]\S*$/, '').trim();
+}
+
+function titularHeuristico(titulo, resumen) {
+  const t = limpiar(titulo).replace(/\s*[|–-]\s*[^|–-]{2,25}$/, '');
+  if (!resumen || resumen.length < 60) return t;
+  const oracion = limpiarResumen(resumen.split(/(?<=[.!?])\s+/)[0] || resumen);
+  if (oracion.length < 40) return t;
+  const nt = norm(t).slice(0, 45);
+  const no = norm(oracion).slice(0, 45);
+  if (nt && no && (no.indexOf(nt) !== -1 || nt.indexOf(no) !== -1)) return t;
+  if (ES_GANCHO_TITULAR.test(t) || t.length < 70) {
+    const out = oracion.replace(/^[a-záéíóúñ]/, c => c.toUpperCase());
+    return recortarOracion(out, 250);
+  }
+  return recortarOracion(t.replace(/[.\s]+$/, '') + '. ' + oracion, 250);
+}
+
+async function reescribirInformativos(noticias, previos) {
+  let reusados = 0;
+  const pendientes = [];
+  for (const n of noticias) {
+    const prev = previos.get(norm(n.titulo));
+    if (prev && prev.length > 55) { n.titulo_info = prev; reusados++; }
+    else pendientes.push(n);
+  }
+  console.log('[politica] titulares ya reescritos (reuso): ' + reusados + ' | pendientes: ' + pendientes.length);
+
+  if (pendientes.length && process.env.GEMINI_API_KEY) {
+    for (let i = 0; i < pendientes.length; i += 8) {
+      const chunk = pendientes.slice(i, i + 8);
+      const rw = await reescribirLote(chunk);
+      for (let j = 0; j < chunk.length; j++) {
+        const ok = guardrailTitular(rw[j], chunk[j]);
+        if (ok) chunk[j].titulo_info = ok;
+      }
+      await delay(1500);
+    }
+  } else if (pendientes.length) {
+    console.log('[politica] sin GEMINI_API_KEY: titulares armados con el copete');
+  }
+
+  let heuristicos = 0;
+  for (const n of pendientes) {
+    if (!n.titulo_info) { n.titulo_info = titularHeuristico(n.titulo, n.resumen); heuristicos++; }
+  }
+  console.log('[politica] titulares: ' + (pendientes.length - heuristicos) + ' con LLM, ' + heuristicos + ' heuristicos, ' + reusados + ' reusados');
+  return noticias;
+}
+
 // ---------------------------------------------------------------- orden
 // Las fuentes sin fecha propia comparten el minuto del scrape. Dentro de ese
 // minuto se intercala por jurisdicción para que el lateral no muestre 10
@@ -512,8 +712,10 @@ async function main() {
     }
 
     // dedupe difuso contra lo ya aceptado
-    for (const otro of porTitulo.values()) {
-      if (jaccard(titulo, otro.titulo) > 0.82) {
+        const prefijo = n.slice(0, 55);
+        for (const otro of porTitulo.values()) {
+          const mismoArranque = prefijo.length > 40 && norm(otro.titulo).slice(0, 55) === prefijo;
+          if (mismoArranque || jaccard(titulo, otro.titulo) > 0.82) {
         otro.categorias = Array.from(new Set([...otro.categorias, ...cats]));
         if (new Date(fecha) < new Date(otro.fecha)) otro.fecha = fecha;
         return;
@@ -521,30 +723,38 @@ async function main() {
     }
 
     porTitulo.set(key, {
-      titulo,
-      fecha,
-      jurisdiccion: jur,
-      categorias: cats,
-      url: item.url || '',
-      fuente: item.fuente || ''
-    });
-    stats.ok++;
-  }
+          titulo,
+          resumen: item.resumen || '',
+          titulo_info: item.titulo_info || '',
+          fecha,
+          jurisdiccion: jur,
+          categorias: cats,
+          url: item.url || '',
+          fuente: item.fuente || ''
+        });
+        stats.ok++;
+      }
 
-  // 1) primero lo fresco del scrape, 2) después el histórico (para conservar
-  //    noticias de fuentes que hoy fallaron)
-  crudos.forEach(it => agregar(it, true));
-  historico.forEach(it => agregar({ ...it, jurisdiccion: it.jurisdiccion }, false));
+      // 1) primero lo fresco del scrape, 2) después el histórico (para conservar
+      //    noticias de fuentes que hoy fallaron)
+      crudos.forEach(it => agregar(it, true));
+      historico.forEach(it => agregar({ ...it, jurisdiccion: it.jurisdiccion }, false));
 
-  const noticias = mezclarPorMinuto(Array.from(porTitulo.values())
-    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha)))
-    .slice(0, MAX_ITEMS);
+      const noticias = mezclarPorMinuto(Array.from(porTitulo.values())
+        .sort((a, b) => new Date(b.fecha) - new Date(a.fecha)))
+        .slice(0, MAX_ITEMS);
 
-  // Si TODO falló y el histórico tampoco sirve, no se pisa el JSON bueno.
-  if (!noticias.length) {
-    console.error('[politica] sin noticias: se conserva el JSON anterior');
-    process.exit(0);
-  }
+      // Si TODO falló y el histórico tampoco sirve, no se pisa el JSON bueno.
+      if (!noticias.length) {
+        console.error('[politica] sin noticias: se conserva el JSON anterior');
+        process.exit(0);
+      }
+
+      // Titulares que se entiendan sin abrir la nota: copete -> LLM -> heurístico.
+      await enriquecerResumen(noticias);
+      const previos = new Map();
+      historico.forEach(h => { if (h.titulo && h.titulo_info) previos.set(norm(h.titulo), h.titulo_info); });
+      await reescribirInformativos(noticias, previos);
 
   const categorias = CATEGORIAS.map(c => ({
     id: c.id,

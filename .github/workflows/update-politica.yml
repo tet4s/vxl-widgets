@@ -27,6 +27,8 @@ jobs:
 
       - name: Ejecutar Update de Política
         run: node scripts/update-politica.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Commit y Push de Datos Actualizados
         run: |
