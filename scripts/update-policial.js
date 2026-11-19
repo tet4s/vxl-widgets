@@ -276,9 +276,50 @@ const VERBOS_RUIDO = new Set(['detuvieron','detienen','detuvo','detenido','deten
 function sustantivos(t) {
   return new Set(tokens(sinNumeros(t)).filter(w => w.length > 4 && !VERBOS_RUIDO.has(w)));
 }
+
+// Palabras que aparecen en cualquier crónica policial: no identifican un hecho.
+// Se comparan ya normalizadas a raíz (ver raiz()).
+const GENERICAS = new Set(['detuv', 'deten', 'detec', 'allan', 'secuestr', 'rob', 'robatori', 'asalt',
+  'atac', 'herid', 'hir', 'mur', 'muer', 'fallec', 'encontr', 'hall', 'inform', 'confirm', 'denunci',
+  'traslad', 'llev', 'imput', 'conden', 'orden', 'salv', 'investig', 'polici', 'comisari', 'movil',
+  'patrull', 'hombr', 'mujer', 'person', 'sujet', 'joven', 'vecin', 'zon', 'lug', 'hech', 'cas', 'caus',
+  'fiscal', 'juez', 'tribunal', 'hor', 'dia', 'noch', 'madrug', 'proced', 'operativ', 'fuerz', 'agent',
+  'oficial', 'intent', 'intento', 'viol', 'gener', 'delit', 'ladron', 'autor', 'victim',
+  'robo', 'escap', 'persecuci', 'fuga', 'huir', 'aprehend', 'captur', 'imput']);
+// Variantes que el mismo medio usa para el mismo concepto.
+const SINONIMOS = { murio: 'muerte', murieron: 'muerte', fallecio: 'muerte', fallecimiento: 'muerte',
+  'niña': 'menor', 'niño': 'menor', nena: 'menor', nene: 'menor',
+  escuela: 'escuela', escolar: 'escuela', colegio: 'escuela' };
+function raiz(w) {
+  w = SINONIMOS[w] || w;
+  const sufs = ['aciones', 'acion', 'ciones', 'cion', 'mente', 'idades', 'idad', 'anzas', 'anza',
+    'encias', 'encia', 'adores', 'ador', 'imientos', 'imiento', 'ando', 'iendo', 'aron', 'ieron', 'aba', 'ia'];
+  for (const s of sufs) if (w.length > 6 && w.endsWith(s)) return w.slice(0, -s.length);
+  return w;
+}
+// Conceptos que sí identifican el caso (persona, institución, objeto particular).
+function distintivas(t) {
+  const out = new Set();
+  tokens(t).forEach(w => { const r = raiz(w); if (!GENERICAS.has(r) && !/^\d+$/.test(r)) out.add(r); });
+  return out;
+}
+// Mismo medio + mismo día + lugar compatible + conceptos distintivos compartidos:
+// dos notas del mismo portal sobre el mismo caso con enfoques distintos (una
+// policial, otra judicial) son el mismo hecho y no deben aparecer dos veces.
+function mismoHecho(a, b) {
+  if (!a.fuente || a.fuente !== b.fuente) return false;
+  if (String(a.fecha || '').slice(0, 10) !== String(b.fecha || '').slice(0, 10)) return false;
+  const la = a.lugar || '', lb = b.lugar || '';
+  if (la && lb && la !== lb) return false;
+  const sa = distintivas(a.titulo), sb = distintivas(b.titulo);
+  let inter = 0;
+  sa.forEach(w => { if (sb.has(w)) inter++; });
+  return inter >= 2;
+}
 // Misma noticia contada distinto: los medios cambian el verbo y la sintaxis, pero
 // repiten los mismos sustantivos propios (Copnaf, Concordia, violencia, género).
 function sonDuplicadas(a, b) {
+  if (mismoHecho(a, b)) return true;
   const ta = sinNumeros(a.titulo), tb = sinNumeros(b.titulo);
   if (jaccard(ta, tb) > 0.72) return true;
   const mismoLugar = !a.lugar || !b.lugar || a.lugar === b.lugar;
@@ -424,11 +465,14 @@ async function agruparDuplicados(items) {
     (i + 1) + '. [' + (n.lugar || 'sin lugar') + ' | ' + fmtDia(n.fecha) + '] ' + n.titulo
   ).join(String.fromCharCode(10));
   const prompt = 'Sos editor de la sección Policiales de un portal del Litoral argentino. '
-    + 'Recibís una lista numerada de titulares con [lugar | fecha]. Algunos describen el MISMO hecho con palabras distintas. '
-    + 'Agrupá SOLO los que son el mismo hecho: misma localidad (o una sin dato), misma fecha o día siguiente, y mismos protagonistas. '
-    + 'Si el lugar o la fecha no coinciden, NO son duplicados. Si dudás, no agrupes. '
-    + 'Devolvé SOLO JSON: {"grupos":[[1,5],[2,3]]}. Si no hay duplicados: {"grupos":[]}. '
-    + 'Titulares:' + String.fromCharCode(10) + lista;
+    + 'Recibís una lista numerada de noticias con [lugar | fecha]. '
+    + 'Marcá los grupos que cuentan EL MISMO HECHO aunque cambien las palabras o el enfoque: '
+    + 'misma víctima o protagonista, misma localidad (aunque a una de las dos le falte el lugar) '
+    + 'y misma fecha o día siguiente. Dos notas del mismo medio sobre el mismo caso con enfoques '
+    + 'distintos (una policial, otra judicial) SON el mismo hecho y hay que agruparlas. '
+    + 'Si ambas tienen lugar y son distintos, no son duplicados. Ante la duda, no agrupes. '
+    + 'Devolvé SOLO JSON: {"grupos":[[1,2]]}. Si no hay duplicados: {"grupos":[]}. '
+    + 'Noticias:' + String.fromCharCode(10) + lista;
   const txt = await geminiTexto(prompt, 900);
   const parsed = extraerJSON(txt);
   if (!parsed) { console.log('[policial] dedupe LLM: respuesta sin JSON valido'); return items; }
@@ -526,10 +570,12 @@ async function main() {
   const conocidos = new Set(historico.map(n => normalizarTexto(n.titulo)));
   await reescribirConLLM(items, conocidos);
 
-  // dedupe semántico vía LLM (solo si entraron titulares nuevos: no gastar cuota
-  // en cada corrida de 10 min) + dedupe heurístico final
+  // dedupe semántico vía LLM: si entraron titulares nuevos o una vez por hora
+  // (para limpiar repetidos que hayan quedado de una corrida anterior). No se
+  // gasta cuota en cada corrida de 10 min.
   const nuevos = items.filter(n => !conocidos.has(normalizarTexto(n.titulo)));
-  if (nuevos.length) items = await agruparDuplicados(items);
+  const horaDeDedupe = new Date().getUTCMinutes() < 10;
+  if (nuevos.length || horaDeDedupe) items = await agruparDuplicados(items);
   const sinDup = [];
   for (const n of items) {
     if (!sinDup.some(k => sonDuplicadas(n, k))) sinDup.push(n);
@@ -572,7 +618,10 @@ async function main() {
   for (const c of categoriasOutput) console.log('  ' + c.nombre + ': ' + c.total);
 }
 
-main().catch(e => {
-  console.error('[ERROR] Falló el pipeline policial:', e.message);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(e => {
+    console.error('[ERROR] Falló el pipeline policial:', e.message);
+    process.exit(1);
+  });
+}
+module.exports = { sonDuplicadas, mismoHecho, distintivas, clasificar, limpiarTitulo };
