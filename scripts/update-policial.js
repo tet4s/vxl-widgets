@@ -268,6 +268,16 @@ function containment(a, b) {
 // ("mil metros" vs "1500 metros") en cada portal.
 function sinNumeros(t) { return String(t || '').replace(/\d+([.,]\d+)?/g, ' '); }
 
+// Verbos y palabras de acción que cambian entre medios pero no cambian el hecho.
+const VERBOS_RUIDO = new Set(['detuvieron','detienen','detuvo','detenido','detenida','aprehendieron','aprehendido',
+  'investigan','investiga','investigacion','robaron','robo','robó','asaltaron','atacaron','hirieron','mataron',
+  'murio','murió','fallecio','falleció','encontro','encontraron','hallaron','informaron','confirmaron','denunciaron',
+  'trasladaron','llevaron','secuestraron','allanaron','imputaron','condenaron','sobreseyeron','ordenaron','salvaron']);
+function sustantivos(t) {
+  return new Set(tokens(sinNumeros(t)).filter(w => w.length > 4 && !VERBOS_RUIDO.has(w)));
+}
+// Misma noticia contada distinto: los medios cambian el verbo y la sintaxis, pero
+// repiten los mismos sustantivos propios (Copnaf, Concordia, violencia, género).
 function sonDuplicadas(a, b) {
   const ta = sinNumeros(a.titulo), tb = sinNumeros(b.titulo);
   if (jaccard(ta, tb) > 0.72) return true;
@@ -276,10 +286,13 @@ function sonDuplicadas(a, b) {
   const sa = new Set(tokens(ta)), sb = new Set(tokens(tb));
   let inter = 0;
   sa.forEach(x => { if (sb.has(x)) inter++; });
-  // titulares cortos ("robo en un kiosco") se parecen demasiado entre hechos distintos
   if (Math.min(sa.size, sb.size) < 4) return false;
-  if (inter < 4) return false;
-  return containment(ta, tb) >= 0.8;
+  if (inter >= 4 && containment(ta, tb) >= 0.8) return true;
+  // segunda pasada: mismos sustantivos (>=3 compartidos, 60% del más corto)
+  const na = sustantivos(ta), nb = sustantivos(tb);
+  let ni = 0; na.forEach(x => { if (nb.has(x)) ni++; });
+  if (ni >= 3 && ni / Math.min(na.size, nb.size) >= 0.4) return true;
+  return false;
 }
 
 // ---------------------------------------------------------------- reescritura LLM
@@ -392,6 +405,43 @@ async function reescribirConLLM(items, conocidos) {
   return items;
 }
 
+// ---------------------------------------------------------------- dedupe semántico
+// Los portales cuentan el mismo hecho con títulos muy distintos ("Crimen de peón
+// rural en Diamante" vs "Caso Jorge Wolf: extorsión, asesinato..."). El parecido
+// por palabras no alcanza, así que se le pide al LLM que agrupe los que son el
+// mismo hecho. Si falla (sin key, 429, JSON roto), no toca nada: quedan los
+// heurísticos de sonDuplicadas().
+async function agruparDuplicados(items) {
+  if (!process.env.GEMINI_API_KEY || items.length < 2) return items;
+  const lista = items.map((n, i) => (i + 1) + '. ' + n.titulo).join('\n');
+  const prompt = 'Sos editor de la sección Policiales de un portal del Litoral argentino. '
+    + 'Estos titulares pueden ser la MISMA noticia contada por distintos medios. '
+    + 'Devolvé SOLO JSON {"grupos":[[1,5],[2,3]]} con los números de los titulares que son el mismo hecho. '
+    + 'Si no hay duplicados, {"grupos":[]}. No agrupes hechos distintos parecidos (dos robos en la misma ciudad no son el mismo hecho). '
+    + 'Titulares:\n' + lista;
+  const txt = await geminiTexto(prompt, 900);
+  if (!txt) return items;
+  const m = txt.match(/\{[\s\S]*\}/);
+  if (!m) return items;
+  let grupos;
+  try { grupos = JSON.parse(m[0]).grupos; } catch (e) { return items; }
+  if (!Array.isArray(grupos)) return items;
+  const descartar = new Set();
+  for (const g of grupos) {
+    if (!Array.isArray(g) || g.length < 2) continue;
+    const idx = g.map(n => parseInt(n, 10) - 1).filter(n => n >= 0 && n < items.length);
+    if (idx.length < 2) continue;
+    // se queda el más reciente (items ya viene ordenado por fecha)
+    idx.sort((a, b) => a - b);
+    for (let k = 1; k < idx.length; k++) descartar.add(idx[k]);
+  }
+  if (!descartar.size) return items;
+  const antes = items.length;
+  const filtrados = items.filter((_, i) => !descartar.has(i));
+  console.log('[policial] dedupe LLM: ' + descartar.size + ' repetidos quitados (' + antes + ' -> ' + filtrados.length + ')');
+  return filtrados;
+}
+
 // ---------------------------------------------------------------- main
 function parseIso(f) { const d = Date.parse(f); return isNaN(d) ? 0 : d; }
 
@@ -457,7 +507,10 @@ async function main() {
   const conocidos = new Set(historico.map(n => normalizarTexto(n.titulo)));
   await reescribirConLLM(items, conocidos);
 
-  // dedupe final: misma noticia con distinto titulo/fuente
+  // dedupe semántico vía LLM (solo si entraron titulares nuevos: no gastar cuota
+  // en cada corrida de 10 min) + dedupe heurístico final
+  const nuevos = items.filter(n => !conocidos.has(normalizarTexto(n.titulo)));
+  if (nuevos.length) items = await agruparDuplicados(items);
   const sinDup = [];
   for (const n of items) {
     if (!sinDup.some(k => sonDuplicadas(n, k))) sinDup.push(n);
