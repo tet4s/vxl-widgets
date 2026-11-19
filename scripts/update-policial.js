@@ -366,16 +366,11 @@ async function reescribirLote(items) {
       await delay(4000);
       // presupuesto: ~120 tokens por titular + margen para el JSON
       const txt = await geminiTexto(prompt, 120 * items.length + 300);
-      if (txt) {
-        const m = txt.match(/\{[\s\S]*\}/);
-        if (!m) console.log('[policial] LLM texto sin JSON: ' + txt.slice(0, 220));
-        if (m) {
-          try {
-            const parsed = JSON.parse(m[0]);
-            if (Array.isArray(parsed.rewrites) && parsed.rewrites.length === items.length) return guardrail(parsed.rewrites, items);
-          } catch (e) { /* sigue */ }
-        }
+      const parsed = extraerJSON(txt);
+      if (parsed && Array.isArray(parsed.rewrites) && parsed.rewrites.length === items.length) {
+        return guardrail(parsed.rewrites, items);
       }
+      if (txt && !parsed) console.log('[policial] LLM texto sin JSON: ' + txt.slice(0, 220));
     } catch (e) {
       if (attempt < 2) await delay(2000);
     }
@@ -405,6 +400,17 @@ async function reescribirConLLM(items, conocidos) {
   return items;
 }
 
+// El modelo a veces envuelve el JSON en ```json ... ``` o agrega texto alrededor.
+// Se limpia y se parsea el primer objeto completo; si no hay, null.
+function extraerJSON(txt) {
+  if (!txt) return null;
+  const t = String(txt).replace(/```json/gi, '').replace(/```/g, '').trim();
+  const i = t.indexOf('{');
+  const j = t.lastIndexOf('}');
+  if (i === -1 || j === -1 || j < i) return null;
+  try { return JSON.parse(t.slice(i, j + 1)); } catch (e) { return null; }
+}
+
 // ---------------------------------------------------------------- dedupe semántico
 // Los portales cuentan el mismo hecho con títulos muy distintos ("Crimen de peón
 // rural en Diamante" vs "Caso Jorge Wolf: extorsión, asesinato..."). El parecido
@@ -415,16 +421,17 @@ async function agruparDuplicados(items) {
   if (!process.env.GEMINI_API_KEY || items.length < 2) return items;
   const lista = items.map((n, i) => (i + 1) + '. ' + n.titulo).join('\n');
   const prompt = 'Sos editor de la sección Policiales de un portal del Litoral argentino. '
-    + 'Estos titulares pueden ser la MISMA noticia contada por distintos medios. '
-    + 'Devolvé SOLO JSON {"grupos":[[1,5],[2,3]]} con los números de los titulares que son el mismo hecho. '
-    + 'Si no hay duplicados, {"grupos":[]}. No agrupes hechos distintos parecidos (dos robos en la misma ciudad no son el mismo hecho). '
+    + 'Recibís una lista numerada de titulares. Algunos describen el MISMO hecho con palabras distintas '
+    + '(distinto medio, distinto enfoque). Ejemplo: "Muerte de una niña en Concordia: la Policía confirmó una exposición de la directora" '
+    + 'y "Murió una niña entrerriana tras una presunta agresión escolar" son el MISMO hecho. '
+    + 'Marcá como duplicados los que comparten víctima/sospechoso, lugar y hecho, aunque el texto cambie. '
+    + 'NO agrupes hechos distintos parecidos (dos robos en la misma ciudad no son el mismo hecho). '
+    + 'Devolvé SOLO JSON: {"grupos":[[1,5],[2,3]]} con los números de cada grupo. Si no hay duplicados: {"grupos":[]}. '
     + 'Titulares:\n' + lista;
   const txt = await geminiTexto(prompt, 900);
-  if (!txt) return items;
-  const m = txt.match(/\{[\s\S]*\}/);
-  if (!m) return items;
-  let grupos;
-  try { grupos = JSON.parse(m[0]).grupos; } catch (e) { return items; }
+  const parsed = extraerJSON(txt);
+  if (!parsed) { console.log('[policial] dedupe LLM: respuesta sin JSON valido'); return items; }
+  const grupos = parsed.grupos;
   if (!Array.isArray(grupos)) return items;
   const descartar = new Set();
   for (const g of grupos) {
