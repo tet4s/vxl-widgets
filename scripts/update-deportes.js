@@ -731,7 +731,15 @@ function aplicarMovimiento(clave, rows, hist) {
   if (!prev) {
     cambios = {};
   } else if (prev.hash === h) {
+    // Sin cambios reales: no se toca el snapshot (ni la fecha) para no ensuciar
+    // el historial en cada corrida del cron.
     cambios = prev.cambios || {};
+    rows.forEach((r) => {
+      const c = cambios[slug(r.equipo)];
+      r.cambio = typeof c === 'number' ? c : 0;
+      r.destacado = false;
+    });
+    return rows;
   } else {
     cambios = {};
     for (const [k, pos] of Object.entries(actual)) {
