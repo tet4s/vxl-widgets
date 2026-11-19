@@ -604,7 +604,7 @@ async function reescribirInformativos(noticias, previos) {
   const pendientes = [];
   for (const n of noticias) {
     const prev = previos.get(norm(n.titulo));
-    if (prev && prev.length > 55) { n.titulo_info = prev; reusados++; }
+    if (prev && prev.length > 55) { n.titulo_info = prev; n.titulo_info_src = 'llm'; reusados++; }
     else pendientes.push(n);
   }
   console.log('[politica] titulares ya reescritos (reuso): ' + reusados + ' | pendientes: ' + pendientes.length);
@@ -615,7 +615,7 @@ async function reescribirInformativos(noticias, previos) {
       const rw = await reescribirLote(chunk);
       for (let j = 0; j < chunk.length; j++) {
         const ok = guardrailTitular(rw[j], chunk[j]);
-        if (ok) chunk[j].titulo_info = ok;
+        if (ok) { chunk[j].titulo_info = ok; chunk[j].titulo_info_src = 'llm'; }
       }
       await delay(1500);
     }
@@ -625,7 +625,7 @@ async function reescribirInformativos(noticias, previos) {
 
   let heuristicos = 0;
   for (const n of pendientes) {
-    if (!n.titulo_info) { n.titulo_info = titularHeuristico(n.titulo, n.resumen); heuristicos++; }
+    if (!n.titulo_info) { n.titulo_info = titularHeuristico(n.titulo, n.resumen); n.titulo_info_src = 'heuristico'; heuristicos++; }
   }
   console.log('[politica] titulares: ' + (pendientes.length - heuristicos) + ' con LLM, ' + heuristicos + ' heuristicos, ' + reusados + ' reusados');
   return noticias;
@@ -726,6 +726,7 @@ async function main() {
           titulo,
           resumen: item.resumen || '',
           titulo_info: item.titulo_info || '',
+          titulo_info_src: item.titulo_info_src || '',
           fecha,
           jurisdiccion: jur,
           categorias: cats,
@@ -753,7 +754,7 @@ async function main() {
       // Titulares que se entiendan sin abrir la nota: copete -> LLM -> heurístico.
       await enriquecerResumen(noticias);
       const previos = new Map();
-      historico.forEach(h => { if (h.titulo && h.titulo_info) previos.set(norm(h.titulo), h.titulo_info); });
+        historico.forEach(h => { if (h.titulo && h.titulo_info && h.titulo_info_src === 'llm') previos.set(norm(h.titulo), h.titulo_info); });
       await reescribirInformativos(noticias, previos);
 
   const categorias = CATEGORIAS.map(c => ({
