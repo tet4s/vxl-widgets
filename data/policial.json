@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-19T21:04:53.955Z",
-  "timestamp_epoch": 1795122293,
-  "total_noticias": 45,
+  "last_updated": "2026-11-19T22:31:44.787Z",
+  "timestamp_epoch": 1795127504,
+  "total_noticias": 47,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 2
+      "total": 4
     },
     {
       "id": "allanamientos",
@@ -17,12 +17,12 @@
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 17
+      "total": 16
     },
     {
       "id": "causas",
       "nombre": "CAUSAS",
-      "total": 5
+      "total": 6
     },
     {
       "id": "hechos",
@@ -35,7 +35,7 @@
       "titulo": "Grave accidente laboral en arenera del sur entrerriano: un joven operario cayó a una fosa de cuatro metros",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/grave-accidente-laboral-en-arenera-del-sur-entrerriano-un-joven-cayo-a-una-fosa-de-cuatro-metros.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -46,19 +46,18 @@
       "titulo": "Detuvieron al extitular del Copnaf de Concordia por una causa de violencia de género",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-al-extitular-del-copnaf-de-concordia-por-una-causa-de-violencia-de-genero.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "Concordia",
       "categorias": [
-        "detenciones",
-        "hechos"
+        "detenciones"
       ]
     },
     {
       "titulo": "Detuvieron al hombre que se atrincheró en su auto para evitar que se lo llevara la grúa en Paraná",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-al-hombre-que-se-atrinchero-en-su-auto-para-evitar-que-se-lo-llevara-la-grua.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -69,43 +68,40 @@
       "titulo": "Imputaron a un padre y su hijo por robar patos en Palermo: hallaron 60 animales hacinados en su casa",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/imputaron-a-un-padre-y-su-hijo-por-robar-patos-en-palermo-hallaron-60-animales-hacinados-en-su-casa.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
-        "detenciones",
-        "hechos"
+        "detenciones"
       ]
     },
     {
       "titulo": "Allanaron una vivienda por amenazas y encontraron 159 envoltorios de cocaína",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/allanamiento-por-amenazas-hallaron-cocaina-y-hubo-tres-detenidos.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
-        "allanamientos",
-        "hechos"
+        "allanamientos"
       ]
     },
     {
       "titulo": "Intentó robar una camioneta, escapó en moto y fue detenido tras una persecución",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/intento-robar-una-camioneta-escapo-en-moto-y-fue-detenido.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
-        "detenciones",
-        "hechos"
+        "detenciones"
       ]
     },
     {
       "titulo": "Crimen de peón rural en Diamante: la extorsión, el asesinato y el plan para ocultar el cuerpo",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/crimen-de-jorge-wolf-extorsion-asesinato-y-dos-detenidos.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "Diamante",
       "categorias": [
@@ -116,7 +112,7 @@
       "titulo": "Lo detectaron por las cámaras y le secuestraron éxtasis, anfetaminas y cocaína en Paraná",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/demoraron-a-un-hombre-con-extasis-y-otras-drogas-en-parana.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -127,19 +123,18 @@
       "titulo": "Atacó con un cuchillo a dos policías, hirió a uno en la pierna y terminó detenido",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/ataco-con-un-cuchillo-a-dos-policias-e-hirio-a-uno.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
-        "detenciones",
-        "hechos"
+        "detenciones"
       ]
     },
     {
       "titulo": "Secuestraron 62 envoltorios de droga tras la fuga de un sospechoso por los techos",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/escapo-por-los-techos-y-abandono-62-envoltorios-de-droga.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -150,31 +145,29 @@
       "titulo": "Detuvieron a “Chuky”, acusado de amenazar con incendiar la casa de su familia",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-a-chuky-acusado-de-amenazar-con-incendiar-la-casa-de-su-familia.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
-        "detenciones",
-        "hechos"
+        "detenciones"
       ]
     },
     {
       "titulo": "Detuvieron a un hombre por violencia de género en Piedras Blancas: tenía armas y había sido denunciado por su expareja",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/violencia-genero-piedras-blancas-detenido-activista-feminista.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
-        "detenciones",
-        "hechos"
+        "detenciones"
       ]
     },
     {
       "titulo": "Robó una moto en Urdinarrain, intentó escapar de la Policía y aseguró que iba a devolverla",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/robo-moto-urdinarrain-menor-intento-escapar-policia.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "Urdinarrain",
       "categorias": [
@@ -185,7 +178,7 @@
       "titulo": "Muerte de una niña en Concordia: la Policía confirmó que hay “una exposición de la directora” de la escuela",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/muerte-de-una-nina-en-concordia-la-policia-confirmo-que-hay-una-exposicion-de-la-directora-de-la-escuela.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "Concordia",
       "categorias": [
@@ -196,7 +189,7 @@
       "titulo": "Detuvieron a un joven en Paraná acusado de dispararle a un hombre en una pierna",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-a-un-joven-en-parana-acusado-de-dispararle-a-un-hombre-en-una-pierna.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -207,7 +200,7 @@
       "titulo": "Murió una niña entrerriana tras una presunta agresión escolar y su familia denuncia negligencia médica",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/nina-entrerriana-fue-golpeada-por-una-companera-en-la-escuela-y-murio-tras-varios-dias-de-agonia-su-familia-denuncia-negligencia-medica.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -218,11 +211,33 @@
       "titulo": "Laboratorio de drogas sintéticas en San Benito: la joven seguirá con prisión domiciliaria",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/laboratorio-de-drogas-sinteticas-en-san-benito-la-joven-seguira-con-prision-domiciliaria.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
+      "fecha": "2026-11-19T22:31:38.917Z",
       "fuente": "Elonce",
       "lugar": "San Benito",
       "categorias": [
         "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Cuatro aprehendidos por robar placas en el Cementerio Municipal de Nelson",
+      "descripcion": "Personal de la Comisaría 15ª recuperó elementos vinculados al hecho, luego de realizar una requisa voluntaria en una vivienda de Llambi Campbell.",
+      "url": "https://www.ellitoral.com/sucesos/aprehendidos-robar-placas-cementerio-municipal-nelson_0_OjOs5NxsCy.html",
+      "fecha": "2026-11-19T21:45:52.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Rescataron a mujer atrapada en auto tras choque en ruta 2",
+      "descripcion": "El siniestro ocurrió sobre la ruta provincial 2, a la altura de barrio Paprosky. La víctima fue trasladada al Hospital Cullen de la ciudad de Santa Fe. Su nieto, de 6 años, también fue llevado a un centro de salud.",
+      "url": "https://www.ellitoral.com/sucesos/bomberos-rescataron-mujer-quedo-atrapada-auto-choque_0_8IRH8mOSOE.html",
+      "fecha": "2026-11-19T21:26:35.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "accidentes"
       ]
     },
     {
@@ -277,9 +292,7 @@
       "fuente": "El Litoral",
       "lugar": "",
       "categorias": [
-        "detenciones",
-        "causas",
-        "hechos"
+        "detenciones"
       ]
     },
     {
@@ -301,8 +314,18 @@
       "fuente": "El Litoral",
       "lugar": "",
       "categorias": [
-        "detenciones",
-        "hechos"
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Operario grave tras caer a fosa en arenera de Ibicuy",
+      "descripcion": "Un trabajador de una arenera de Ibicuy permanece en estado grave después de caer a una fosa de unos cuatro metros de profundidad. El accidente laboral ocurrió en la planta La República, perteneciente a la empresa Cristamine, en el departamento Islas del Ibicuy.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/accidente-laboral-en-arenera-en-ibicuy-un-operario-cayo-una-fosa-de-cuatro-metros",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Ibicuy",
+      "categorias": [
+        "accidentes"
       ]
     },
     {
@@ -335,7 +358,6 @@
       "fuente": "Análisis Digital",
       "lugar": "Concordia",
       "categorias": [
-        "detenciones",
         "hechos"
       ]
     },
@@ -347,8 +369,7 @@
       "fuente": "El Litoral",
       "lugar": "",
       "categorias": [
-        "detenciones",
-        "hechos"
+        "detenciones"
       ]
     },
     {
@@ -359,8 +380,7 @@
       "fuente": "El Litoral",
       "lugar": "",
       "categorias": [
-        "detenciones",
-        "causas"
+        "detenciones"
       ]
     },
     {
@@ -375,17 +395,6 @@
       ]
     },
     {
-      "titulo": "Robaron cable del aeropuerto de Concordia y no hay vuelos nocturnos",
-      "descripcion": "Se trata de una zona protegida por la Policía de Seguridad Aeroportuaria. En cuando a la investigación del delito cometido, es responsabilidad de la Justicia Federal.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/18/robaron-mas-de-1500-metros-de-cable-del-aeropuerto-de-concordia-y-no-esta-operativo-para-vuelos-nocturnos",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Concordia",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
       "titulo": "Hay muchas condenas cortas que no sirven para nada, advirtió la jueza de Ejecución, Cecilia Bértora",
       "descripcion": "",
       "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/hay-muchas-condenas-cortas-que-no-sirven-para-nada-advirtio-la-jueza-de-ejecucion-cecilia-bertora",
@@ -397,17 +406,6 @@
       ]
     },
     {
-      "titulo": "Acusada por tenencia de ketamina seguirá con arresto domiciliario y tobillera electrónica en San Benito",
-      "descripcion": "",
-      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/acusada-por-tenencia-de-ketamina-seguira-con-arresto-domiciliario-y-tobillera-electronica-en-san-benito",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "San Benito",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
       "titulo": "Causa por adicionales: sobreseyeron a una funcionaria policial y los otros nueve policías irán a juicio",
       "descripcion": "",
       "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/causa-por-adicionales-sobreseyeron-una-funcionaria-policial-y-los-otros-nueve-policias-iran-juicio",
@@ -415,8 +413,7 @@
       "fuente": "Análisis Digital",
       "lugar": "",
       "categorias": [
-        "causas",
-        "hechos"
+        "causas"
       ]
     },
     {
@@ -442,6 +439,17 @@
       ]
     },
     {
+      "titulo": "Acusada por tenencia de ketamina seguirá con arresto domiciliario y tobillera electrónica en San Benito",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/acusada-por-tenencia-de-ketamina-seguira-con-arresto-domiciliario-y-tobillera-electronica-en-san-benito",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "San Benito",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
       "titulo": "Detuvieron a tres personas en Chajarí con cocaína y secuestraron más de cuatro millones de pesos",
       "descripcion": "El procedimiento se desarrolló en un domicilio ubicado sobre calle Islas Malvinas al 1200, donde el personal policial logró el secuestro de cinco envoltorios de cocaína, además de una importante suma de dinero en efectivo que asciende a $4.110.500.",
       "url": "https://www.analisisdigital.com.ar/policiales/2026/11/17/detuvieron-tres-personas-en-chajari-con-cocaina-y-secuestraron-mas-de-cuatro-millones-de-pesos",
@@ -449,8 +457,7 @@
       "fuente": "Análisis Digital",
       "lugar": "Chajarí",
       "categorias": [
-        "allanamientos",
-        "detenciones"
+        "allanamientos"
       ]
     },
     {
@@ -461,8 +468,7 @@
       "fuente": "Análisis Digital",
       "lugar": "San José",
       "categorias": [
-        "detenciones",
-        "causas"
+        "detenciones"
       ]
     },
     {
@@ -473,7 +479,6 @@
       "fuente": "APF Digital",
       "lugar": "Colón",
       "categorias": [
-        "detenciones",
         "causas"
       ]
     },
@@ -485,8 +490,7 @@
       "fuente": "Análisis Digital",
       "lugar": "La Paz",
       "categorias": [
-        "allanamientos",
-        "detenciones"
+        "allanamientos"
       ]
     },
     {
@@ -497,9 +501,7 @@
       "fuente": "Análisis Digital",
       "lugar": "Federal",
       "categorias": [
-        "allanamientos",
-        "causas",
-        "hechos"
+        "allanamientos"
       ]
     },
     {
@@ -521,8 +523,7 @@
       "fuente": "APF Digital",
       "lugar": "Viale",
       "categorias": [
-        "causas",
-        "hechos"
+        "causas"
       ]
     },
     {
