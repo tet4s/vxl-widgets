@@ -17,7 +17,9 @@ on:
 # Evita que dos corridas se pisen escribiendo data/politica.json
 concurrency:
   group: politica
-  cancel-in-progress: false
+  # Si llega una corrida nueva mientras otra scrapea, gana la nueva: evita que se
+  # apilen runs de 15+ minutos cuando el repo recibe varios pushes seguidos.
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -25,6 +27,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Tope duro: si una fuente se cuelga, el run muere y el JSON anterior queda intacto.
+    timeout-minutes: 15
 
     steps:
       - name: Checkout del Repositorio
