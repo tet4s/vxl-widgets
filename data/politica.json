@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-19T21:57:35.112Z",
-  "timestamp_epoch": 1795125455,
-  "total_noticias": 105,
+  "last_updated": "2026-11-19T22:06:35.152Z",
+  "timestamp_epoch": 1795125995,
+  "total_noticias": 107,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 51
+      "total": 52
     },
     {
       "id": "obras",
@@ -17,7 +17,7 @@
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 28
+      "total": 29
     },
     {
       "id": "elecciones",
@@ -29,7 +29,7 @@
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 49
+      "total": 51
     },
     {
       "id": "santa_fe",
@@ -79,7 +79,7 @@
     {
       "titulo": "Marcelo Lewandowski: “Esta ley no es buena pero es la mejor ley que podemos sancionar hoy”",
       "resumen": "“Lo vamos a acompañar pero vamos a tener siempre la sensación de que no van a querer aplicarla, de que van a encontrar siempre un pero, una cuestión presupuestaria”, señaló el senador santafecino.",
-      "titulo_info": "Lewandowski: \"Acompañamos ley de presupuesto santafesino, pero tememos que no la apliquen",
+      "titulo_info": "Lewandowski: Acompañamos ley de presupuesto santafesino, pero tememos que no la apliquen",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T21:22:35.642Z",
       "jurisdiccion": "nacional",
@@ -155,16 +155,16 @@
       "fuente": "Página/12 El País"
     },
     {
-      "titulo": "El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
+      "titulo": "Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
       "resumen": "",
-      "titulo_info": "Intendente de Berazategui declaró en causa por supuesto plan para atacarlo",
+      "titulo_info": "Corte Suprema declaró inconstitucional DNU de Milei que liberaba precios de prepagas",
       "titulo_info_src": "llm",
-      "fecha": "2026-11-19T15:00:00.000Z",
+      "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "gobierno"
+        "leyes"
       ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/carlos-balor-intendente-de-KZJGBK26IBHJZEEMGVFGUJDYCU.jpg?auth=2af1c9dc4422c79e24601dac908cad4c70498eaa2a87135e6cb78fb54f6349cd&width=320&height=213&quality=70&smart=true",
+      "url": "https://www.lanacion.com.ar/resizer/v2/los-jueces-de-la-corte-suprema-ricardo-lorenzetti-EIQYSQJMRBBZJDBQMXVPQ6BUZI.JPG?auth=05a42f68b5fd6168111df0c99429b465dd3ea98835d2cf9b0c62c2f9e5cc2b66&width=320&height=213&quality=70&smart=true",
       "fuente": "La Nación Política"
     },
     {
@@ -181,19 +181,6 @@
       "fuente": "Gobierno de Santa Fe"
     },
     {
-      "titulo": "Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
-      "resumen": "",
-      "titulo_info": "Corte Suprema declaró inconstitucional DNU de Milei que liberaba precios de prepagas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/los-jueces-de-la-corte-suprema-ricardo-lorenzetti-EIQYSQJMRBBZJDBQMXVPQ6BUZI.JPG?auth=05a42f68b5fd6168111df0c99429b465dd3ea98835d2cf9b0c62c2f9e5cc2b66&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
       "titulo": "El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
       "resumen": "",
       "titulo_info": "Senado avanza en sanción de ley de discapacidad pese a resistencias del oficialismo",
@@ -204,19 +191,6 @@
         "leyes"
       ],
       "url": "https://www.lanacion.com.ar/resizer/v2/victoria-villarruel-al-abrir-la-sesion-de-hoy-en-O27COTYS55BZ7CC4N7VHM6VR24.JPG?auth=a162c64b06ff794edef63d3702ed214e91510b02255dfd0708c482f116d1635a&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
-      "resumen": "",
-      "titulo_info": "Gobierno obtuvo dictamen para suspender PASO tras eliminar listas colectoras",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/patricia-bullrich-al-firmar-este-miercoles-el-LPCKDAPYK5FLBJQVQBASD3O2TQ.jpg?auth=c3499aa118961c8f014b64379c8e549473aff600d55f724b721baa26e02249bb&width=320&height=213&quality=70&smart=true",
       "fuente": "La Nación Política"
     },
     {
@@ -717,7 +691,7 @@
     {
       "titulo": "Patricia Bullrich admitió que fue un “alivio” sacar las listas colectoras de la reforma electoral y respondió a la frase de Milei sobre “el plan platita”",
       "resumen": "",
-      "titulo_info": "Patricia Bullrich consideró un alivio la exclusión de listas colectoras de la reforma electoral y respondió a Milei sobre el \"plan platita",
+      "titulo_info": "Patricia Bullrich consideró un alivio la exclusión de listas colectoras de la reforma electoral y respondió a Milei sobre el plan platita",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
@@ -1027,6 +1001,19 @@
       "fuente": "Página/12 El País"
     },
     {
+      "titulo": "El fiscal anticorrupción denunció a la secretaria de Energía: la acusó de favorecer a una empresa sancionada por operar en Malvinas",
+      "resumen": "El titular de la PIA denunció en Comodoro Py que Tettamanti y su antecesor, ambos funcionarios de Milei, autorizaron a actuar en el país, en negocios gigantescos, a una firma británica inhabilitada; la sugestiva “Condición del Perdón Argentino”",
+      "titulo_info": "Fiscal anticorrupción denunció a secretaria de Energía por favorecer empresa sancionada por operar en Malvinas",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:25:36.353Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/un-fiscal-anticorrupcion-denuncio-a-la-secretaria-de-energia-la-acuso-de-favorecer-a-una-empresa-nid17112026/",
+      "fuente": "La Nación Política"
+    },
+    {
       "titulo": "El Deutsche Bank informó sobre US$60 millones vinculados a Carlos Wagner, el empresario líder del Club de la obra pública",
       "resumen": "El banco alemán rechazó al constructor y a Esuco como clientes tras el estallido del “caso Cuadernos”; la Justicia argentina ya embargó cuentas suizas del empresario y de su hermana por US$20 millones",
       "titulo_info": "Deutsche Bank informó US$60 millones vinculados a empresario líder del Club de la obra pública",
@@ -1037,19 +1024,6 @@
         "obras"
       ],
       "url": "https://www.lanacion.com.ar/politica/el-deutsche-bank-informo-sobre-us60-millones-vinculados-a-carlos-wagner-el-empresario-lider-del-club-nid18112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "El fiscal anticorrupción denunció a la secretaria de Energía: la acusó de favorecer a una empresa sancionada por operar en Malvinas",
-      "resumen": "",
-      "titulo_info": "Fiscal anticorrupción denunció a secretaria de Energía por favorecer empresa sancionada por operar en Malvinas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.353Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/un-fiscal-anticorrupcion-denuncio-a-la-secretaria-de-energia-la-acuso-de-favorecer-a-una-empresa-nid17112026/",
       "fuente": "La Nación Política"
     },
     {
@@ -1222,6 +1196,19 @@
       "fuente": "Gobierno de Santa Fe"
     },
     {
+      "titulo": "Sucesor de Mussi. El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
+      "resumen": "Carlos Balor fue convocado a una fiscalía luego de que un hombre denunciara que le ofrecieron plata para atentar contra su vida; el jefe comunal manifestó “preocupación”",
+      "titulo_info": "El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo, manifestando preocupación",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/el-intendente-de-berazategui-declaro-como-testigo-en-una-causa-que-investiga-una-supuesta-oferta-nid19112026/",
+      "fuente": "La Nación Política"
+    },
+    {
       "titulo": "Fallo unánime. Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
       "resumen": "",
       "titulo_info": "Corte Suprema frena DNU de Milei y declara inconstitucional liberación de precios de prepagas",
@@ -1314,6 +1301,19 @@
       "fuente": "La Nación Política"
     },
     {
+      "titulo": "El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
+      "resumen": "",
+      "titulo_info": "Intendente de Berazategui declaró en causa por supuesto plan para atacarlo",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.lanacion.com.ar/resizer/v2/carlos-balor-intendente-de-KZJGBK26IBHJZEEMGVFGUJDYCU.jpg?auth=2af1c9dc4422c79e24601dac908cad4c70498eaa2a87135e6cb78fb54f6349cd&width=320&height=213&quality=70&smart=true",
+      "fuente": "La Nación Política"
+    },
+    {
       "titulo": "Expectativa por la sesión del Senado que tiene la Ley de Discapacidad en agenda",
       "resumen": "El temario incluye la Inviolabilidad de la Propiedad Privada con la restitución de la Ley de Tierras Rurales, otro de los temas que despertó polémica a lo largo del año. Habrá un proyecto dedicado a Raúl Alfonsín que cumpliría 100 años en marzo de 2027.",
       "titulo_info": "Senado trata Ley de Discapacidad y propiedad privada con restitución de Ley de Tierras Rurales, además de proyecto por centenario de Raúl Alfonsín",
@@ -1379,6 +1379,19 @@
       "fuente": "Diputados Entre Ríos"
     },
     {
+      "titulo": "Trabajoso apoyo. El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
+      "resumen": "",
+      "titulo_info": "El Gobierno consiguió dictamen para suspender las PASO tras eliminación de listas colectoras",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/el-gobierno-retiro-las-listas-colectoras-para-asegurarse-el-apoyo-para-suspender-las-paso-nid18112026/",
+      "fuente": "La Nación Política"
+    },
+    {
       "titulo": "Hein firmó un convenio con Rotary para impulsar acciones en salud mental",
       "resumen": "El presidente de la Cámara de Diputados, Gustavo Hein, y el gobernador del Distrito Binacional 4945 de Rotary International, Lucio Marani, firmaron un convenio marco de colaboración con el objetivo de desarrollar programas conjuntos vinculados a la salud mental y el bienestar integral.",
       "titulo_info": "Hein firmó convenio con Rotary para impulsar acciones en salud mental",
@@ -1390,6 +1403,19 @@
       ],
       "url": "https://www.hcder.gov.ar/noticiasDetalles.php?id=2037",
       "fuente": "Diputados Entre Ríos"
+    },
+    {
+      "titulo": "El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
+      "resumen": "",
+      "titulo_info": "Gobierno obtuvo dictamen para suspender PASO tras eliminar listas colectoras",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.lanacion.com.ar/resizer/v2/patricia-bullrich-al-firmar-este-miercoles-el-LPCKDAPYK5FLBJQVQBASD3O2TQ.jpg?auth=c3499aa118961c8f014b64379c8e549473aff600d55f724b721baa26e02249bb&width=320&height=213&quality=70&smart=true",
+      "fuente": "La Nación Política"
     },
     {
       "titulo": "Pullaro: “En la provincia de Santa Fe hicimos mucha más obra pública que en los últimos 20 años”",
