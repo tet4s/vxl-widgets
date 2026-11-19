@@ -283,9 +283,12 @@ async function geminiTexto(prompt, maxTokens) {
   for (const modelo of GEMINI_MODELOS) {
     const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + modelo + ':generateContent?key=' + encodeURIComponent(key);
     try {
+      const generationConfig = { temperature: 0.25, maxOutputTokens: maxTokens };
+      // 2.5 "piensa" y se come el presupuesto de salida antes de escribir el JSON
+      if (modelo.indexOf('2.5') === 0) generationConfig.thinkingConfig = { thinkingBudget: 0 };
       const r = await axios.post(url, {
         contents: [{ role: 'user', parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.25, maxOutputTokens: maxTokens }
+        generationConfig
       }, { timeout: 30000, headers: { 'Content-Type': 'application/json' } });
       const t = (r.data && r.data.candidates && r.data.candidates[0] && r.data.candidates[0].content
         && r.data.candidates[0].content.parts && r.data.candidates[0].content.parts[0]
@@ -301,17 +304,31 @@ async function geminiTexto(prompt, maxTokens) {
   return null;
 }
 
-// El LLM sólo puede reformular: si agrega más de un token que no esté en
-// titular+lead, se descarta y queda el título limpio.
+// El LLM sólo puede reformular: no puede inventar datos.
+// Reglas: (1) todo número del titular reescrito tiene que existir en la fuente;
+// (2) como mucho 40% de palabras nuevas (conectores, sinónimos, orden);
+// (3) ningún nombre propio nuevo (mayúscula que no esté en la fuente).
 function guardrail(rewrites, items) {
   return rewrites.map((r, i) => {
     if (!r || typeof r !== 'string') return null;
     const src = ((items[i] && items[i].titulo) || '') + ' ' + ((items[i] && items[i].descripcion) || '');
     const base = new Set(tokens(src));
     const tl = tokens(r);
+    if (!tl.length) return null;
     let dif = 0;
     for (const w of tl) if (!base.has(w)) dif++;
-    return dif <= 1 ? r : null;
+    if (dif / tl.length > 0.4) return null;
+    // números inventados (fechas, edades, montos, cantidades)
+    const numsSrc = new Set((src.match(/\d+/g) || []));
+    for (const num of (r.match(/\d+/g) || [])) if (!numsSrc.has(num)) return null;
+    // nombres propios nuevos (se ignoran la primera palabra y las mayúsculas de la fuente)
+    const srcWords = new Set(src.split(/\s+/));
+    const rWords = r.split(/\s+/);
+    for (let k = 1; k < rWords.length; k++) {
+      const w = rWords[k].replace(/^[¿¡"“«(]+/, '');
+      if (/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{2,}/.test(w) && !srcWords.has(w)) return null;
+    }
+    return r;
   });
 }
 
@@ -319,19 +336,19 @@ async function reescribirLote(items) {
   if (!process.env.GEMINI_API_KEY) return items.map(() => null);
   const prompt = 'Sos el editor de la sección Policiales de un portal del Litoral argentino. Reescribí cada titular en español rioplatense, claro y directo, como se lo contarías a un amigo: qué pasó, dónde y quién, sin sensacionalismo, sin jerga judicial innecesaria, sin adjetivos grandilocuentes y sin emojis. Usá el titular y el resumen (lead) como única fuente: NO inventes datos, nombres, edades ni cifras. Máximo 110 caracteres por titular, una sola línea, sin punto final. Si el resumen está vacío, devolvé el titular limpio. Devolvé SOLO JSON {"rewrites":["titular 1","titular 2",...]} con la misma cantidad y orden. Entradas: '
     + JSON.stringify(items.map(i => ({ titular: i.titulo, resumen: i.descripcion })));
-  const body = { contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.25, maxOutputTokens: 200 } };
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
       await delay(4000);
-      const r = await axios.post(GEMINI_URL, body, { timeout: 20000, headers: { 'Content-Type': 'application/json' } });
-      const cand = r.data && r.data.candidates && r.data.candidates[0];
-      const txt = (cand && cand.content && cand.content.parts && cand.content.parts[0] && cand.content.parts[0].text) || '';
-      const m = txt.match(/\{[\s\S]*\}/);
-      if (m) {
-        try {
-          const parsed = JSON.parse(m[0]);
-          if (Array.isArray(parsed.rewrites) && parsed.rewrites.length === items.length) return guardrail(parsed.rewrites, items);
-        } catch (e) { /* sigue */ }
+      // presupuesto: ~120 tokens por titular + margen para el JSON
+      const txt = await geminiTexto(prompt, 120 * items.length + 300);
+      if (txt) {
+        const m = txt.match(/\{[\s\S]*\}/);
+        if (m) {
+          try {
+            const parsed = JSON.parse(m[0]);
+            if (Array.isArray(parsed.rewrites) && parsed.rewrites.length === items.length) return guardrail(parsed.rewrites, items);
+          } catch (e) { /* sigue */ }
+        }
       }
     } catch (e) {
       if (attempt < 2) await delay(2000);
