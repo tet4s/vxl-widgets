@@ -1071,14 +1071,50 @@ function completarRugby(rows, partidos) {
   });
 }
 
+// Mismos clubes con distinto nombre según la fuente: la USR (planilla) los
+// abrevia y Wikipedia (tabla con puntos) los escribe enteros. Sirve para cruzar
+// los escudos de la USR con la tabla de Wikipedia; el primero de cada fila es la
+// clave común.
+const RUGBY_MISMOS = [
+  ['CAE', 'ESTUDIANTES DE PARANA'],
+  ['CRAI', 'CRAI'],
+  ['DUENDES', 'DUENDES'],
+  ['GER', 'GER'],
+  ['JOCKEY ROSARIO', 'JOCKEY CLUB R'],
+  ['JOCKEY VT', 'JOCKEY CLUB VT'],
+  ['OLD RESIAN', 'OLD RESIAN'],
+  ['ROWING', 'PARANA ROWING'],
+  ['SFRC', 'SANTA FE RC'],
+  ['UNI ROSARIO', 'UNIVERSITARIO R'],
+];
+
+const canonRugby = (nombre) => {
+  const n = norm(nombre);
+  const grupo = RUGBY_MISMOS.find((g) => g.some((x) => norm(x) === n));
+  return grupo ? norm(grupo[0]) : n;
+};
+
+/** Escudos de la USR indexados por nombre canónico del club. */
+function escudosRugby(tablas) {
+  const mapa = {};
+  (tablas || []).forEach((t) => {
+    (t.rows || []).forEach((r) => {
+      if (r.logo) mapa[canonRugby(r.equipo)] = r.logo;
+    });
+  });
+  return mapa;
+}
+
 async function desdeRugby(cfg) {
   const anio = new Date().getFullYear();
   const divisiones = cfg.divisiones || [{ id: 'principal', nombre: cfg.ligaNombre, grupo: 'TRL 1 nivel' }];
   const ligas = [];
+  let tablasUsr = [];
 
   // 1) USR (oficial). Puede traer Top 10 y Segunda; si está en cero, no sirve.
   try {
     const tablas = await rugbyUsrTablas();
+    tablasUsr = tablas;
     for (const d of divisiones) {
       const t = tablas.find((x) => norm(x.nivel) === norm(d.grupo));
       if (!t) continue;
@@ -1145,6 +1181,20 @@ async function desdeRugby(cfg) {
   }
 
   if (!ligas.length) throw new Error('Rugby: ninguna fuente devolvió la tabla del TRL');
+
+  // Wikipedia no trae escudos: se los cruza desde la planilla de la USR.
+  const escudos = escudosRugby(tablasUsr);
+  ligas.forEach((l) => {
+    if (l.fuente === 'USR') return;
+    (l.tabla || []).forEach((r) => {
+      if (!r.logo) r.logo = escudos[canonRugby(r.equipo)] || null;
+    });
+    [l.partido, ...(l.ultimos || [])].forEach((p) => {
+      if (!p) return;
+      p.logo_local = p.logo_local || escudos[canonRugby(p.local)] || null;
+      p.logo_visitante = p.logo_visitante || escudos[canonRugby(p.visitante)] || null;
+    });
+  });
 
   // Para las ligas sin resultados (USR todavía no publica), se usa el último
   // partido conocido del equipo destacado si existe.
