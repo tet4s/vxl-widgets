@@ -6,6 +6,15 @@ on:
     # descarta primero los crons con comodines en las horas pico (visto en este
     # repo: */15 corría 2-3 veces por día).
     - cron: '7,37 * * * *'
+  # Respaldo: GitHub limita las corridas programadas de este repo (medido:
+  # 1-3 por día en TODOS los workflows). El repo recibe pushes de bots cada
+  # pocos minutos, así que un push también dispara esto. La guarda de frescura
+  # del primer step evita que corra si los datos tienen menos de 25 minutos.
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/transito.json'
+      - 'data/transito-historial.json'
   workflow_dispatch:
 
 # Evita que dos corridas se pisen escribiendo data/transito.json
@@ -24,19 +33,44 @@ jobs:
       - name: Checkout del Repositorio
         uses: actions/checkout@v4
 
+      # Solo aplica a los runs disparados por push: si data/transito.json se
+      # actualizó hace menos de 25 minutos, no vale la pena gastar 5 minutos
+      # de scraping (ni molestar a Nominatim).
+      - name: ¿Datos frescos?
+        id: frescura
+        run: |
+          if [ "${{ github.event_name }}" != "push" ]; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "Corrida por ${{ github.event_name }}: se ejecuta siempre."
+            exit 0
+          fi
+          node -e '
+            const fs = require("fs");
+            let t = 0;
+            try { t = Date.parse(JSON.parse(fs.readFileSync("data/transito.json","utf8")).timestamp) || 0; } catch (e) {}
+            const min = (Date.now() - t) / 60000;
+            const skip = t > 0 && min < 25;
+            console.log("Última actualización hace " + Math.round(min) + " min → " + (skip ? "se saltea" : "se ejecuta"));
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, "skip=" + skip + "\n");
+          '
+
       - name: Configurar Node.js (v24)
+        if: steps.frescura.outputs.skip != 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '24'
 
       - name: Instalar Dependencias
+        if: steps.frescura.outputs.skip != 'true'
         run: |
           npm install
 
       - name: Ejecutar Update de Tránsito
+        if: steps.frescura.outputs.skip != 'true'
         run: node scripts/update-transito.js
 
       - name: Commit y Push de Datos Actualizados
+        if: steps.frescura.outputs.skip != 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
