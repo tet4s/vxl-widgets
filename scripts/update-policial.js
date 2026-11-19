@@ -294,11 +294,12 @@ async function geminiTexto(prompt, maxTokens) {
       const t = (r.data && r.data.candidates && r.data.candidates[0] && r.data.candidates[0].content
         && r.data.candidates[0].content.parts && r.data.candidates[0].content.parts[0]
         && r.data.candidates[0].content.parts[0].text) || '';
+      console.log('[policial] Gemini ' + modelo + ' OK (' + t.length + ' chars)');
       if (t) return t;
-      console.warn('[policial] Gemini ' + modelo + ': respuesta vacía (finishReason ' + (r.data && r.data.candidates && r.data.candidates[0] && r.data.candidates[0].finishReason) + ')');
+      console.log('[policial] Gemini ' + modelo + ': respuesta vacía (finishReason ' + (r.data && r.data.candidates && r.data.candidates[0] && r.data.candidates[0].finishReason) + ')');
     } catch (e) {
       const detalle = e.response ? (e.response.status + ' ' + JSON.stringify(e.response.data).slice(0, 140)) : e.message;
-      console.warn('[policial] Gemini ' + modelo + ' falló: ' + detalle);
+      console.log('[policial] Gemini ' + modelo + ' falló: ' + detalle);
     }
     await delay(1000);
   }
