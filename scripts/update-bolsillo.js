@@ -315,25 +315,52 @@ async function reescribirLote(items) {
       var st = e.response && e.response.status;
       var det = e.response && e.response.data && JSON.stringify(e.response.data).slice(0, 300);
       console.warn('[bolsillo] LLM error intento ' + (attempt + 1) + '/' + 3 + ' — ' + (st || e.message) + (det ? ' — ' + det : ''));
+      if (st === 429) break; // cuota agotada: no reintentar (quema más cuota)
       if (attempt < 2) await delay(2000);
     }
   }
   console.warn('[bolsillo] LLM parse no match (fallback): conserva heurístico para chunk de', items.length);
   return items.map(function () { return null; });
 }
+// Cache de reescrituras: cada título se reescribe UNA sola vez y se reutiliza.
+// Evita quemar la cuota gratuita de Gemini en cada corrida (cron cada 10 min).
+const CACHE_FILE = path.join(__dirname, '../data/rewrites-cache.json');
+function cargarCacheRewrites() {
+  try { return JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8')) || {}; } catch (e) { return {}; }
+}
 async function reescribirConLLM(items) {
   if (!process.env.GEMINI_API_KEY || !items.length) return;
-  var aplicados = 0, rechazados = 0, filtPost = 0;
-  for (var i = 0; i < items.length; i += 25) {
-    var chunk = items.slice(i, i + 25);
+  var cache = cargarCacheRewrites();
+  var usados = new Set();
+  var aplicados = 0, rechazados = 0, filtPost = 0, desdeCache = 0;
+  var pendientes = [];
+  for (var i = 0; i < items.length; i++) {
+    var k = normalizarTexto(items[i].titulo);
+    if (cache[k] && typeof cache[k] === 'string') { items[i].titulo = cache[k]; usados.add(k); desdeCache++; }
+    else pendientes.push(items[i]);
+  }
+  for (var b = 0; b < pendientes.length; b += 25) {
+    var chunk = pendientes.slice(b, b + 25);
+    var claves = chunk.map(function (it) { return normalizarTexto(it.titulo); });
     var rw = await reescribirLote(chunk);   // chunk: {titulo, descripcion, ...} -> orig con lead
     for (var j = 0; j < chunk.length; j++) {
-      if (rw[j] && typeof rw[j] === 'string' && rw[j].length && !esOffTopic(rw[j])) { chunk[j].titulo = rw[j]; aplicados++; }
-      else if (rw[j] && esOffTopic(rw[j])) { filtPost++; }
+      if (rw[j] && typeof rw[j] === 'string' && rw[j].length && !esOffTopic(rw[j])) {
+        chunk[j].titulo = rw[j];
+        cache[claves[j]] = rw[j];
+        usados.add(claves[j]);
+        aplicados++;
+      } else if (rw[j] && esOffTopic(rw[j])) { filtPost++; }
       else { rechazados++; }
     }
   }
-  console.log('[bolsillo] rewrites LLM aplicados:', aplicados, '| rechazados por invención (conserva heurístico):', rechazados, '| filtrados judiciales/post-LLM:', filtPost);
+  // podar el cache a las claves vigentes
+  var podado = {};
+  usados.forEach(function (k) { if (cache[k]) podado[k] = cache[k]; });
+  try {
+    fs.mkdirSync(path.dirname(CACHE_FILE), { recursive: true });
+    fs.writeFileSync(CACHE_FILE, JSON.stringify(podado, null, 2));
+  } catch (e) { console.warn('[bolsillo] no se pudo guardar cache de rewrites:', e.message); }
+  console.log('[bolsillo] rewrites LLM nuevos:', aplicados, '| desde cache:', desdeCache, '| rechazados por invención:', rechazados, '| filtrados judiciales/post-LLM:', filtPost);
   return items;
 }
 
