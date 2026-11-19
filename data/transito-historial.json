@@ -1,168 +1,407 @@
 {
-  "actualizado": "2026-11-09T22:56:12.189Z",
+  "actualizado": "2026-11-19T21:20:10.924Z",
   "items": {
-    "santa fe|4 de enero y bulevar pellegrini~9 de julio y bulevar pellegrini~entre rios entre 1° de mayo y 4 de enero~francia y bulevar pellegrini~guemes y ruperto godoy~urquiza y bulevar pellegrini|obras en colector cloacal": {
+    "santa fe|4 de enero entre salta y mendoza|obra en la via publica": {
       "item": {
-        "id": "bing-santafe:Cortes de tránsito, obras en bulevar y desvíos de…",
-        "titulo": "Cortes de tránsito, obras en bulevar y desvíos de colectivos en Santa Fe este lunes 9 de noviembre",
+        "id": "ellitoral:Santa Fe:2026-11-19",
+        "titulo": "El tránsito en la provincia de Santa Fe; la información minuto a minuto",
         "categoria": "cortes",
         "tipo": "corte_total",
-        "fecha": "2026-11-09T00:00:00-03:00",
-        "fecha_raw": "2026-11-09T00:00:00-03:00",
-        "horario": "hasta 6",
-        "motivo": "Obras en colector cloacal",
+        "fecha": "2026-11-19T13:54:00-03:00",
+        "fecha_raw": "2026-11-19T13:54:00-03:00",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
         "franja": "",
         "calles": [
-          "Entre Ríos entre 1° de Mayo y 4 de Enero",
-          "Güemes y Ruperto Godoy",
-          "9 de Julio y Bulevar Pellegrini",
-          "4 de Enero y Bulevar Pellegrini",
-          "Urquiza y Bulevar Pellegrini",
-          "Francia y Bulevar Pellegrini"
+          "4 de Enero entre Salta y Mendoza"
         ],
-        "resumen": "Entre Ríos entre 1° de Mayo y 4 de Enero · Güemes y Ruperto Godoy · 9 de Julio y Bulevar Pellegrini · 4 de Enero y Bulevar Pellegrini · Urqu…",
-        "descripcion": "Entre Ríos entre 1° de Mayo y 4 de Enero · Güemes y Ruperto Godoy · 9 de Julio y Bulevar Pellegrini · 4 de Enero y Bulevar Pellegrini · Urquiza y Bulevar Pelleg…",
-        "enlace": "https://www.airedesantafe.com.ar/santa-fe/cortes-transito-obras-bulevar-y-desvios-colectivos-santa-fe-este-lunes-9-noviembre-n676139",
-        "lat": -31.6595801,
-        "lon": -60.714549,
+        "resumen": "4 de Enero entre Salta y Mendoza",
+        "descripcion": "4 de Enero entre Salta y Mendoza",
+        "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-autopistas-provinciadesantafe-rutas-accesos-ciudaddesantafe_0_YqkSrCrMJY.html",
+        "lat": -31.6492311,
+        "lon": -60.7127051,
         "sin_ubicacion": false,
         "localidad": "Santa Fe",
         "provincia": "Santa Fe",
-        "via": "",
+        "via": "Ruta Provincial 2 · Autopista Santa Fe - Rosario · Autopista Santa Fe -Rosario · RP 1 · Ru",
+        "km_desde": "124",
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-11-20T02:59:00.000Z",
+          "tipo": "diaria",
+          "detalle": "boletín del día"
+        },
+        "vigente_hasta": "2026-11-20T02:59:00.000Z",
+        "fuente_tipo": "estado",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.6492311,
+                -60.7127051
+              ],
+              [
+                -31.6488002,
+                -60.7125899
+              ],
+              [
+                -31.648725,
+                -60.7125697
+              ],
+              [
+                -31.6477965,
+                -60.7123214
+              ]
+            ],
+            "calle": "4 de Enero",
+            "desde": "Salta",
+            "hasta": "Mendoza",
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Permanecerá interrumpido el tránsito en 4 de Enero, entre Salta y Mendoza, debido a trabajos de ASSA en hundimiento de calzada.",
+            "entre": "Salta y Mendoza",
+            "texto": "4 de Enero entre Salta y Mendoza"
+          }
+        ],
+        "puntos": [
+          [
+            -31.6492311,
+            -60.7127051
+          ],
+          [
+            -31.6488002,
+            -60.7125899
+          ],
+          [
+            -31.648725,
+            -60.7125697
+          ],
+          [
+            -31.6477965,
+            -60.7123214
+          ]
+        ]
+      },
+      "fuente_tipo": "estado",
+      "primera_vez": "2026-11-19T21:15:35.976Z",
+      "ultima_vez_vista": "2026-11-19T21:15:35.976Z",
+      "recuperada": false
+    },
+    "parana|25 de mayo~belgrano|obra en la via publica": {
+      "item": {
+        "id": "bing-apf-cortes:Con nuevos frentes continúa la obra de reconfigura…",
+        "titulo": "Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná",
+        "categoria": "cortes",
+        "tipo": "corte_total",
+        "fecha": "2026-11-19T00:00:00-03:00",
+        "fecha_raw": "2026-11-19T00:00:00-03:00",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "25 de Mayo",
+          "Belgrano"
+        ],
+        "resumen": "25 de Mayo · Belgrano",
+        "descripcion": "25 de Mayo · Belgrano",
+        "enlace": "https://www.apfdigital.com.ar/noticias/2026/11/18/479613-con-nuevos-frentes-continua-la-obra-de-reconfiguracion-de-calle-25-de-mayo-de-parana",
+        "lat": -31.737032534185293,
+        "lon": -60.520768253695216,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "Calle a",
         "km_desde": null,
         "km_hasta": null,
         "vigencia": {
-          "hasta": "2026-11-11T09:00:00.000Z",
+          "hasta": "2026-11-21T02:59:00.000Z",
           "tipo": "explicita",
-          "detalle": "hasta el 11/11 06:00"
+          "detalle": "hasta el 20/11 23:59"
         },
-        "vigente_hasta": "2026-11-11T09:00:00.000Z",
+        "vigente_hasta": "2026-11-21T02:59:00.000Z",
         "fuente_tipo": "noticia",
         "segmentos": [
           {
             "puntos": [
               [
-                -31.6595801,
-                -60.714549
-              ],
-              [
-                -31.659305,
-                -60.7159008
+                -31.737032534185293,
+                -60.520768253695216
               ]
             ],
-            "calle": "Entre Ríos",
-            "desde": "1° de Mayo",
-            "hasta": "4 de Enero",
-            "motivo": "Desvío de tránsito",
-            "franja": "Todo el día",
-            "ctx": "Entre Ríos, entre 1° de Mayo y 4 de Enero: reducción permanente desde las 00 por trabajos de ASSA (con desvíos de colectivos).",
-            "entre": "1° de Mayo y 4 de Enero",
-            "texto": "Entre Ríos entre 1° de Mayo y 4 de Enero"
-          },
-          {
-            "puntos": [
-              [
-                -31.6185317,
-                -60.6832434
-              ]
-            ],
-            "calle": "Güemes",
-            "desde": "Ruperto Godoy",
+            "calle": "25 de Mayo",
+            "desde": null,
             "hasta": null,
-            "motivo": "Bacheo",
-            "franja": "Todo el día",
-            "ctx": "Güemes, entre Ruperto Godoy y Santiago Derqui: corte total durante toda la jornada por tareas de bacheo a cargo de la Municipalidad (sin impacto en el transporte urbano).",
-            "vence": "2026-11-10T02:59:00.000Z",
-            "vigencia": "diaria",
-            "entre": "Ruperto Godoy",
-            "texto": "Güemes y Ruperto Godoy"
-          },
-          {
-            "puntos": [
-              [
-                -31.6350786,
-                -60.7058948
-              ]
-            ],
-            "calle": "9 de Julio",
-            "desde": "Bulevar Pellegrini",
-            "hasta": null,
-            "motivo": "Obras en colector cloacal",
-            "franja": "22:00 a 06:00",
-            "ctx": "9 de Julio y Bulevar Pellegrini (sector del cantero central): corte total que comienza a regir a partir de las 22 de este lunes y se extenderá hasta las 6 del miércoles 11 de noviembre.",
-            "vence": "2026-11-11T09:00:00.000Z",
-            "vigencia": "explicita",
-            "entre": "Bulevar Pellegrini",
-            "texto": "9 de Julio y Bulevar Pellegrini"
-          },
-          {
-            "puntos": [
-              [
-                -31.634502,
-                -60.708573
-              ]
-            ],
-            "calle": "4 de Enero",
-            "desde": "Bulevar Pellegrini",
-            "hasta": null,
-            "motivo": "Obras en colector cloacal",
-            "franja": "desde 22:00",
-            "ctx": "4 de Enero y Bulevar Pellegrini: calzada reducida a partir de las 22, en simultáneo con el corte sobre calle 9 de Julio, por obras del colector cloacal.",
-            "vence": "2026-11-10T02:59:00.000Z",
-            "vigencia": "diaria",
-            "entre": "Bulevar Pellegrini",
-            "texto": "4 de Enero y Bulevar Pellegrini"
-          },
-          {
-            "puntos": [
-              [
-                -31.6340829,
-                -60.7098444
-              ]
-            ],
-            "calle": "Urquiza",
-            "desde": "Bulevar Pellegrini",
-            "hasta": null,
-            "motivo": "Obras en colector cloacal",
+            "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "Urquiza y Bulevar Pellegrini: paso restringido continuo por obras de ASSA en el colector cloacal.",
-            "vence": "2026-11-10T02:59:00.000Z",
-            "vigencia": "diaria",
-            "entre": "Bulevar Pellegrini",
-            "texto": "Urquiza y Bulevar Pellegrini"
+            "ctx": "jueves 19 de noviembre de 2026 27.9ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
+            "entre": "",
+            "texto": "25 de Mayo"
           },
           {
             "puntos": [
               [
-                -31.6339208,
-                -60.711325
+                -31.740078448059144,
+                -60.52966505058802
               ]
             ],
-            "calle": "Francia",
-            "desde": "Bulevar Pellegrini",
+            "calle": "Belgrano",
+            "desde": null,
             "hasta": null,
-            "motivo": "Obras en colector cloacal",
-            "franja": "Todo el día",
-            "ctx": "Francia y Bulevar Pellegrini (cantero central): reducción permanente por intervenciones en el colector cloacal de ASSA.",
-            "entre": "Bulevar Pellegrini",
-            "texto": "Francia y Bulevar Pellegrini"
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Los trabajos que comenzarán este martes en el tramo comprendido entre las calles Belgrano e Illia, en sentido este-oeste, implicarán una interrupción del tránsito en esa cuadra. miércoles 18 de noviembre de 2026 | 8:44hs.",
+            "entre": "",
+            "texto": "Belgrano"
           }
         ],
         "puntos": [
           [
-            -31.6595801,
-            -60.714549
-          ],
-          [
-            -31.659305,
-            -60.7159008
+            -31.737032534185293,
+            -60.520768253695216
           ]
         ]
       },
       "fuente_tipo": "noticia",
-      "primera_vez": "2026-11-09T00:00:00-03:00",
-      "ultima_vez_vista": "2026-11-09T21:18:10.563Z",
+      "primera_vez": "2026-11-19T21:15:35.976Z",
+      "ultima_vez_vista": "2026-11-19T21:15:35.976Z",
       "recuperada": false
+    },
+    "parana|hernandarias~valentin torra|obra en la via publica": {
+      "item": {
+        "id": "municipio-parana:Calle a calle: el Municipio ejecuta obras de recup…",
+        "titulo": "Calle a calle: el Municipio ejecuta obras de recuperación vial en el Parque Industrial",
+        "categoria": "obras",
+        "tipo": "obra",
+        "fecha": "2026-11-18T15:00:00.000Z",
+        "fecha_raw": "2026-11-18T15:00:00.000Z",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "Hernandarias",
+          "Valentín Torra"
+        ],
+        "resumen": "Hernandarias · Valentín Torra",
+        "descripcion": "Hernandarias · Valentín Torra",
+        "enlace": "https://www.parana.gob.ar/noticias/calle-a-calle-el-municipio-ejecuta-obras-de-recuperacion-vial-en-el-parque-industrial",
+        "lat": -31.766317645259097,
+        "lon": -60.463126230388326,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "Calle a",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-12-18T15:00:00.000Z",
+          "tipo": "estimada",
+          "detalle": "estimado: obra (30 días)"
+        },
+        "vigente_hasta": "2026-12-18T15:00:00.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.766317645259097,
+                -60.463126230388326
+              ]
+            ],
+            "calle": "Hernandarias",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra, que forman parte de los principales recorridos del tránsito pesado.",
+            "entre": "",
+            "texto": "Hernandarias"
+          },
+          {
+            "puntos": [
+              [
+                -31.7706884781603,
+                -60.451085612029786
+              ]
+            ],
+            "calle": "Valentín Torra",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra, que forman parte de los principales recorridos del tránsito pesado.",
+            "entre": "",
+            "texto": "Valentín Torra"
+          }
+        ],
+        "puntos": [
+          [
+            -31.766317645259097,
+            -60.463126230388326
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-19T21:18:30.437Z",
+      "ultima_vez_vista": "2026-11-19T21:18:30.437Z",
+      "recuperada": false
+    },
+    "parana|25 de mayo~25 de mayo segui|obra en la via publica": {
+      "item": {
+        "id": "bing-elonce-cortes:Por obras, estará cortado un tramo de calle 25 de…",
+        "titulo": "Por obras, estará cortado un tramo de calle 25 de Mayo de Paraná",
+        "categoria": "obras",
+        "tipo": "obra",
+        "fecha": "2026-11-17T00:00:00-03:00",
+        "fecha_raw": "2026-11-17T00:00:00-03:00",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "25 de Mayo",
+          "25 de Mayo Seguí"
+        ],
+        "resumen": "25 de Mayo · 25 de Mayo Seguí",
+        "descripcion": "25 de Mayo · 25 de Mayo Seguí",
+        "enlace": "https://www.elonce.com/parana/corte-de-transito-en-el-centro-de-parana-hasta-el-viernes.htm",
+        "lat": -31.737032534185293,
+        "lon": -60.520768253695216,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "Calle a",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-11-21T02:59:00.000Z",
+          "tipo": "explicita",
+          "detalle": "hasta el 20/11 23:59"
+        },
+        "vigente_hasta": "2026-11-21T02:59:00.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.737032534185293,
+                -60.520768253695216
+              ]
+            ],
+            "calle": "25 de Mayo",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Más tarde Aceptar {{dayName}} {{day}} de {{monthName}} de {{year}} En Vivo Últimas noticias Paraná Policiales Política Sociedad Internacionales Deportes Economía Espectáculos Registrarme Iniciar sesión Vivo Ingrese palabra o frase a buscar Hablar Últimas noticias Paraná Policiales Política Sociedad Internacionales Deportes Economía Espectáculos Haciendo Comunidad Impulso Empresarial La Cocina del ",
+            "entre": "",
+            "texto": "25 de Mayo"
+          },
+          {
+            "puntos": [
+              [
+                -31.771885353308384,
+                -60.50477271740066
+              ]
+            ],
+            "calle": "25 de Mayo Seguí",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Paraná corte de tránsito Tránsito en Paraná calle 25 de Mayo Seguí las noticias de Elonce.com en Google News Más leidas de Paraná Creciente del río Paraná: cómo ingresar al Balneario Thompson y qué sectores siguen habilitados Paraná presentó una amplia agenda de actividades para disfrutar el fin de semana largo La Escuela Técnica de Puerto Nuevo exhibió canoas y piraguas que sus alumnos probarán e",
+            "entre": "",
+            "texto": "25 de Mayo Seguí"
+          }
+        ],
+        "puntos": [
+          [
+            -31.737032534185293,
+            -60.520768253695216
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-19T21:15:35.976Z",
+      "ultima_vez_vista": "2026-11-19T21:15:35.976Z",
+      "recuperada": true
+    },
+    "parana|hernandarias~valentin torra|mantenimiento de red de agua": {
+      "item": {
+        "id": "municipio-parana:Calle a calle: el Municipio ejecuta obras de recup…",
+        "titulo": "Calle a calle: el Municipio ejecuta obras de recuperación vial en el Parque Industrial",
+        "categoria": "obras",
+        "tipo": "obra",
+        "fecha": "2026-11-18T15:00:00.000Z",
+        "fecha_raw": "2026-11-18T15:00:00.000Z",
+        "horario": null,
+        "motivo": "Mantenimiento de red de agua",
+        "franja": "",
+        "calles": [
+          "Hernandarias",
+          "Valentín Torra"
+        ],
+        "resumen": "Hernandarias · Valentín Torra",
+        "descripcion": "Hernandarias · Valentín Torra",
+        "enlace": "https://www.parana.gob.ar/noticias/calle-a-calle-el-municipio-ejecuta-obras-de-recuperacion-vial-en-el-parque-industrial",
+        "lat": -31.766317645259097,
+        "lon": -60.463126230388326,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "Calle a",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-12-18T15:00:00.000Z",
+          "tipo": "estimada",
+          "detalle": "estimado: obra (30 días)"
+        },
+        "vigente_hasta": "2026-12-18T15:00:00.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.766317645259097,
+                -60.463126230388326
+              ]
+            ],
+            "calle": "Hernandarias",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra, que forman parte de los principales recorridos del tránsito pesado.",
+            "entre": "",
+            "texto": "Hernandarias"
+          },
+          {
+            "puntos": [
+              [
+                -31.7706884781603,
+                -60.451085612029786
+              ]
+            ],
+            "calle": "Valentín Torra",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra, que forman parte de los principales recorridos del tránsito pesado.",
+            "entre": "",
+            "texto": "Valentín Torra"
+          }
+        ],
+        "puntos": [
+          [
+            -31.766317645259097,
+            -60.463126230388326
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-19T21:15:35.976Z",
+      "ultima_vez_vista": "2026-11-19T21:15:35.976Z",
+      "recuperada": true
     },
     "parana|corrientes entre la paz y colon~villaguay entre alsina y cura alvarez|mantenimiento de red de agua": {
       "item": {

@@ -215,9 +215,14 @@ function limpiarNombre(n){
   if(!n) return null;
   let x = String(n).replace(/\s+/g,' ').trim().replace(/[.,;:]+$/,'').trim();
   x = x.replace(/^calle\s+/i,'').trim();
+  // quitar conectores colgando al final ("25 de Mayo de" → "25 de Mayo")
+  for(let i = 0; i < 3; i++) x = x.replace(/\s+(de|del|la|las|los|y|entre|en|por)$/i,'').trim();
   if(!x || x.length > 42) return null;
   if(/^\d+$/.test(x)) return null;            // solo un número: no es calle
   if(/\by\b/i.test(x)) return null;           // capturó de más
+  // número suelto al final ("Valentín Torra 19"): es ruido de fecha/hora
+  x = x.replace(/\s+\d{1,2}$/,'').trim();
+  if(!x) return null;
   // Cada palabra debe ser nombre propio (mayúscula/dígito) o conector válido
   const CONECTORES = new Set(['de','del','la','las','los','y']);
   for(const t of x.split(' ')){
@@ -256,8 +261,8 @@ function extraerSegmentos(txt){
 
   const PAL = '(?:[A-ZÁÉÍÓÚÑÜ0-9][\\wáéíóúñüÁÉÍÓÚÑÜ°.]*|de|del|la|las|los)';
   const NOM = '([A-ZÁÉÍÓÚÑÜ0-9][\\wáéíóúñüÁÉÍÓÚÑÜ°.]*(?:\\s+' + PAL + '){0,4})';
-  const reTramo = new RegExp('\\b' + NOM + '\\s*,\\s*entre\\s+(?:calles?\\s+|la\\s+calle\\s+)?' + NOM + '\\s+y\\s+' + NOM + '(?=[\\s,;:()]|$)', 'g');
-  const reEsquina = new RegExp('\\b' + NOM + '\\s+y\\s+' + NOM + '\\s*(?=[:(])', 'g');
+  const reTramo = new RegExp('\\b' + NOM + '\\s*,\\s*entre\\s+(?:calles?\\s+|la\\s+calle\\s+)?' + NOM + '\\s+(?:y|e)\\s+' + NOM + '(?=[\\s,;:()]|$)', 'g');
+  const reEsquina = new RegExp('\\b' + NOM + '\\s+(?:y|e)\\s+' + NOM + '\\s*(?=[:(])', 'g');
 
   // Oración por oración, sin cortar en iniciales tipo "F. Leloir"
   const oraciones = clean(txt).split(/(?<=[.:;!?])(?<!\b[A-ZÁÉÍÓÚÑ]\.)\s+(?=[A-ZÁÉÍÓÚÑÜ0-9])/);
@@ -273,7 +278,7 @@ function extraerSegmentos(txt){
       let resto = s.slice(m.index + m[0].length, m.index + m[0].length + 140);
       const corte = resto.search(/\bcalle\s/);
       if(corte > 0) resto = resto.slice(0, corte);
-      const mEntre = resto.match(/entre\s+(?:calles?\s+)?([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})\s+y\s+(?:calles?\s+)?([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})/i);
+      const mEntre = resto.match(/entre\s+(?:calles?\s+)?([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})\s+(?:y|e)\s+(?:calles?\s+)?([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})/i);
       if(mEntre) push(calle, mEntre[1], mEntre[2], s);
       else push(calle, null, null, s);
     }
@@ -294,7 +299,7 @@ function extraerSegmentos(txt){
     }
 
     // ── D) "calles X y Y" ─────────────────────────────────────────────────
-    const reCalles = /\bcalles\s+([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})\s+y\s+(?:calles?\s+)?([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})/gi;
+    const reCalles = /\bcalles\s+([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})\s+(?:y|e)\s+(?:calles?\s+)?([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*(?:\s+(?:[A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]*|\d+|de|la|del|las|los)){0,2})/gi;
     while((m = reCalles.exec(s)) !== null){
       push(m[1], null, null, s);
       push(m[2], null, null, s);
@@ -339,8 +344,12 @@ function capitalizar(t){
 function motivoCorto(txt){
   const t = clean(txt);
   if(!t) return '';
-  for(const [re, label] of MOTIVOS) if(re.test(t)) return label;
-  return '';
+  let mejor = '', pos = Infinity;
+  for(const [re, label] of MOTIVOS){
+    const m = t.match(re);
+    if(m && m.index < pos){ pos = m.index; mejor = label; }
+  }
+  return mejor;
 }
 
 /** Franja horaria, solo si la noticia la menciona. */
@@ -422,8 +431,23 @@ async function resolverSegmentos(txt, localidad, provincia, centroCiudad){
     if(p) agregar([p], { calle: s.calle, desde: otra, hasta: null, ctx: s.ctx });
   }
 
-  // (No se usan "puntos medios de calle": una calle mencionada sin esquinas
-  //  no dice DÓNDE está el corte. Preferimos no marcar antes que marcar mal.)
+  // 3) Si la nota no dio ninguna esquina, marcar la calle nombrada (punto real
+  //    sobre la propia calle). Solo cuando no hay nada más preciso y como
+  //    máximo 2 calles, para no llenar el mapa de puntos.
+  if(segmentos.length === 0){
+    let puestas = 0;
+    const nombres = [];
+    for(const s of segs){
+      if(puestas >= 2) break;
+      if(!s.calle || s.desde || s.hasta) continue;
+      // "25 de Mayo Seguí" es la misma calle capturada con su esquina: se descarta
+      if(nombres.some(n => osm.norm(s.calle).startsWith(n + ' '))) continue;
+      const p = await osm.puntoCalle(s.calle, localidad, provincia, ctx);
+      if(p && agregar([p], { calle: s.calle, desde: null, hasta: null, ctx: s.ctx })){
+        nombres.push(osm.norm(s.calle)); puestas++;
+      }
+    }
+  }
 
   return segmentos.length ? segmentos : null;
 }
@@ -431,17 +455,21 @@ async function resolverSegmentos(txt, localidad, provincia, centroCiudad){
 /* ════════════════════════════════════════════════════════════════════════════
    BUILD ITEM
    ════════════════════════════════════════════════════════════════════════════ */
-// Extrae el contenido del artículo (no el menú ni scripts)
+// Extrae el contenido del artículo (no el menú ni scripts).
+// Elonce, por ejemplo, pone un <article> de 95 caracteres y el texto real en el body:
+// se elige el contenedor MÁS LARGO, no el primero que aparezca.
 function extraerContenido($){
   const selectores = ['article', 'main', '.page-noticia', '.article-content', '.nota-content', '.entry-content', '.post-content', '.content', '#content', '.node-content', '.field--name-body', '.story-body', '.article__body', '.newspack-article'];
+  let mejor = '';
   for(const sel of selectores){
     const el = $(sel).first();
-    if(el.length){
-      const t = clean(el.text()).trim();
-      if(t.length > 80) return t;
-    }
+    if(!el.length) continue;
+    const t = clean(el.text()).trim();
+    if(t.length > mejor.length) mejor = t;
   }
-  return clean($('body').text()).trim();
+  const body = clean($('body').text()).trim();
+  if(mejor.length >= 400 && mejor.length >= body.length * 0.5) return mejor;
+  return body.length > mejor.length ? body : mejor;
 }
 
 function dedupSegmentos(segmentos){
@@ -615,16 +643,21 @@ function fmtCorto(d){
   return p(d.getDate()) + '/' + p(d.getMonth()+1) + (d.getHours() || d.getMinutes() ? ' ' + p(d.getHours()) + ':' + p(d.getMinutes()) : '');
 }
 
-/** Fecha ART (UTC-3) a partir de día/mes/hora. */
-function fechaART(dia, mesNombre, anio, hora, min){
+/** Fecha ART (UTC-3) a partir de día/mes/hora. `ref` = fecha de la nota (define el año). */
+function fechaART(dia, mesNombre, anio, hora, min, ref){
   const mes = MESES[sinAcentos(mesNombre)];
   if(mes === undefined || !dia) return null;
-  let year = anio ? +anio : new Date().getFullYear();
   const H = hora != null ? +hora : 23;
   const M = min != null ? +min : (hora != null ? 0 : 59);
+
+  // El año se toma de la nota, no de "hoy": una nota del 9/11 que dice
+  // "hasta el 11 de noviembre" es de 2026 aunque ya estemos en diciembre.
+  const refD = ref && !isNaN(+new Date(ref)) ? new Date(ref) : new Date();
+  let year = anio ? +anio : refD.getUTCFullYear();
   let d = new Date(Date.UTC(year, mes, +dia, H + 3, M, 0));
-  // Si quedó muy en el pasado, el año estaba implícito y es el siguiente
-  if(!anio && d.getTime() < Date.now() - 3*24*3600e3){
+
+  // Si la fecha quedó MUY antes que la nota, el año implícito era el siguiente
+  if(!anio && d.getTime() < refD.getTime() - 60*24*3600e3){
     d = new Date(Date.UTC(year + 1, mes, +dia, H + 3, M, 0));
   }
   return isNaN(+d) ? null : d;
@@ -691,14 +724,14 @@ function calcularVigencia(item, opciones){
   // 1) "hasta las 6 del miércoles 11 de noviembre"
   let m = txt.match(/hasta\s+(?:las?\s+)?(\d{1,2})(?::(\d{2}))?\s*(?:hs?\.?)?\s*del?\s+(?:[a-záéíóúñ]+\s+)?(\d{1,2})\s+de\s+([a-záéíóúñ]+)(?:\s+de\s+(\d{4}))?/i);
   if(m){
-    const d = fechaART(m[3], m[4], m[5], m[1], m[2]);
+    const d = fechaART(m[3], m[4], m[5], m[1], m[2], base);
     if(d) return { hasta: d.toISOString(), tipo: 'explicita', detalle: 'hasta el ' + fmtCorto(d) };
   }
 
   // 2) "hasta el 11 de noviembre (a las 6)"
   m = txt.match(/hasta\s+el\s+(?:d[ií]a\s+)?(?:[a-záéíóúñ]+\s+)?(\d{1,2})\s+de\s+([a-záéíóúñ]+)(?:\s+de\s+(\d{4}))?(?:\s+a\s+las?\s+(\d{1,2})(?::(\d{2}))?)?/i);
   if(m){
-    const d = fechaART(m[1], m[2], m[3], m[4], m[5]);
+    const d = fechaART(m[1], m[2], m[3], m[4], m[5], base);
     if(d) return { hasta: d.toISOString(), tipo: 'explicita', detalle: 'hasta el ' + fmtCorto(d) };
   }
 
@@ -759,10 +792,9 @@ function cargarHistorial(){
       const prev = JSON.parse(fs.readFileSync(OUTPUT, 'utf8'));
       const seed = { actualizado: null, items: {} };
       for(const it of (prev.items || [])){
-        if(!it.vigencia){
-          it.vigencia = calcularVigencia(it, {});
-          it.vigente_hasta = it.vigencia.hasta;
-        }
+        // Se recalcula siempre: el JSON pudo generarse con otra versión
+        it.vigencia = calcularVigencia(it, {});
+        it.vigente_hasta = it.vigencia.hasta;
         if(!it.fuente_tipo) it.fuente_tipo = 'noticia';
         seed.items[idEstable(it)] = {
           item: it,
@@ -844,6 +876,9 @@ function tituloLimpio(t){
 }
 
 const RE_TEMA_TRANSITO = /corte|tr[aá]nsito|desv[ií]|obra|calle|ruta|autopista|acceso|calzada|reducci|paso|restric|bacheo|repaviment|colectivo|circulaci|sem[aá]foro|siniestro|accidente|cloaca|ca[ñn]er|colector|vial|zanja|paviment|agua/i;
+
+// Noticias policiales / de color que NO son alertas operativas
+const RE_NO_ES_ALERTA = /atrincher|detenid|demorad|huy[oó]|robo|asalto|homicidio|femicidio|abuso|allanamiento|muri[oó]|falleci|herid[oa]|trasladad[oa] al hospital|gr[uú]a|aprehendid|imputad|condenad/iu;
 
 // Centroide de toda la geometría de una alerta (para reconocer el mismo evento)
 function centroGeom(i){
@@ -1047,6 +1082,7 @@ function esAlertaTransito(titulo, desc){
 // provincia (ej. "San Juan 8" hablando de "calle Santa Fe") no entra.
 const DOMINIOS = [
   ['apfdigital.com.ar',  'Entre Ríos', 'Paraná'],
+  ['parana.gob.ar',      'Entre Ríos', 'Paraná'],
   ['elonce.com',         'Entre Ríos', 'Paraná'],
   ['viapais.com.ar',     'Entre Ríos', 'Paraná'],
   ['unoentrerios.com.ar','Entre Ríos', 'Paraná'],
@@ -1319,11 +1355,103 @@ async function scrapBingNews(query, tag){
 }
 
 /* ════════════════════════════════════════════════════════════════════════════
-   MAIN
+   8. LISTADOS DE NOTAS (Elonce temas / Municipalidad de Paraná)
    ════════════════════════════════════════════════════════════════════════════ */
+const MESES_ARR = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+
+function diasDesde(iso){
+  const t = new Date(iso).getTime();
+  return isNaN(t) ? 1e9 : (Date.now() - t) / 86400000;
+}
+
+/** Fecha de publicación: meta og, "18 de Noviembre de 2026" en el texto, o la URL. */
+function fechaDeArticulo($, txt, url){
+  const meta = $('meta[property="article:published_time"]').attr('content')
+            || $('meta[property="og:updated_time"]').attr('content');
+  if(meta && !isNaN(+new Date(meta))) return new Date(meta).toISOString();
+
+  const m = clean(txt).match(/\b(\d{1,2})\s+de\s+([a-záéíóúñ]+)\s+de\s+(\d{4})\b/i);
+  if(m){
+    const d = fechaART(m[1], m[2], m[3], 12);
+    if(d) return d.toISOString();
+  }
+  return parseFecha(txt, url) || null;
+}
+
+/**
+ * Scrapea un listado de notas y devuelve alertas.
+ * cfg: { nombre, indice, base, tag, filtroLink (regex), max }
+ */
+async function scrapListadoDeNotas(cfg){
+  log(cfg.nombre + ': indexando...');
+  const out = [];
+  try{
+    const idx = await fetch(cfg.indice);
+    const $ = cheerio.load(idx);
+    const links = [];
+    $('a[href]').each((_, a) => {
+      const h = $(a).attr('href') || '';
+      const t = clean($(a).text());
+      if(t.length < 25 || t.length > 160) return;
+      if(!RE_TEMA_TRANSITO.test(t)) return;
+      const abs = h.startsWith('http') ? h : cfg.base + h;
+      if(cfg.filtroLink && !cfg.filtroLink.test(abs)) return;
+      if(links.find(x => x.url === abs)) return;
+      links.push({ url: abs, titulo: t });
+    });
+    log('  links: ' + links.length);
+
+    for(const l of links.slice(0, cfg.max || 8)){
+      try{
+        const html = await fetch(l.url);
+        const $h = cheerio.load(html);
+        $h('script, style, noscript, iframe').remove();
+        const txt = extraerContenido($h);
+        if(!txt || txt.length < 120) continue;
+        if(!RE_TEMA_TRANSITO.test(txt)) continue;
+
+        const fecha = fechaDeArticulo($h, txt, l.url);
+        if(!fecha || diasDesde(fecha) > 21) continue;
+
+        const loc = detectarLocalidad(l.titulo + ' ' + txt, l.url);
+        if(!loc) continue;
+
+        const centro = await georefCiudad(loc.localidad, loc.provincia);
+        const titulo = clean($h('h1').first().text()).trim() || l.titulo;
+        // El título suele nombrar la calle ("Avenida Almafuerte"): se antepone
+        const puntos = await resolverSegmentos(titulo + '. ' + txt, loc.localidad, loc.provincia, centro);
+        if(!puntos) continue;
+
+        const item = buildItem({
+          id: cfg.tag + ':' + short(titulo, 50), titulo,
+          tipo: parseTipo(txt, titulo), categoria: parseCat(parseTipo(txt, titulo)),
+          fecha, fecha_raw: fecha,
+          descripcion: txt, resumen: extraerLead($h) || txt,
+          enlace: l.url, via: extraerVia(txt),
+          kmDesde: null, kmHasta: null,
+          localidad: loc.localidad, provincia: loc.provincia,
+          horario: parseHorario(txt), segmentos: puntos
+        });
+        if(item) out.push(item);
+      }catch(e){}
+      await sleep(150);
+    }
+  }catch(e){ log('  ✗ ' + cfg.nombre + ': ' + (e.message || e)); }
+  log('  → ' + out.length + ' alerta(s)');
+  return out;
+}
 async function main(){
   log('🚦 Iniciando extracción de alertas de tránsito (Litoral AR)...');
   let items=[];
+
+  // ── Paraná: listados con notas actuales (antes no se usaban) ─────────────
+  for(const cfg of [
+    { nombre: 'Elonce temas/transito', indice: 'https://www.elonce.com/temas/transito', base: 'https://www.elonce.com', tag: 'elonce-transito', filtroLink: /^https:\/\/www\.elonce\.com\/parana\//, max: 6 },
+    { nombre: 'Elonce temas/obras',    indice: 'https://www.elonce.com/temas/obras',    base: 'https://www.elonce.com', tag: 'elonce-obras',    filtroLink: /^https:\/\/www\.elonce\.com\/parana\//, max: 6 },
+    { nombre: 'Municipalidad de Paraná', indice: 'https://www.parana.gob.ar/noticias', base: 'https://www.parana.gob.ar', tag: 'municipio-parana', filtroLink: /\/noticias\//, max: 6 },
+  ]){
+    try{ items = items.concat(await scrapListadoDeNotas(cfg)); }catch(e){ log(cfg.nombre + ': ' + (e.message||e)); }
+  }
   try{ items = items.concat(await scrapElLitoral()); }catch(e){log('El Litoral: '+(e.message||e));}
   try{ items = items.concat(await scrapRuta0()); }catch(e){log('Ruta0: '+(e.message||e));}
   try{ items = items.concat(await scrapApsv()); }catch(e){log('APSV: '+(e.message||e));}
@@ -1382,6 +1510,7 @@ async function main(){
     const razones = [];
     if(PROVS_OK.indexOf(i.provincia) === -1) razones.push('provincia:' + i.provincia);
     if(!RE_TEMA_TRANSITO.test((i.titulo||'') + ' ' + (i.resumen||''))) razones.push('tema');
+    if(RE_NO_ES_ALERTA.test(i.titulo || '')) razones.push('policial');
     if(!(i.sin_ubicacion || (i.lat != null && i.lon != null))) razones.push('sin-coords');
     if(i.lat != null && i.lat > -34.0 && i.lon > -58.5) razones.push('caba');
     if(i.lat != null && i.lat < -32.0 && i.lon < -62.0) razones.push('sur');
@@ -1419,6 +1548,14 @@ async function main(){
 
   // Recuperar lo que sigue vigente aunque hoy no haya aparecido
   items = fusionarHistorial(items);
+  // Dedup OTRA VEZ: lo recuperado puede duplicar lo recién raspado (misma obra
+  // publicada por el municipio y por el diario)
+  items = dedupSimilares(items);
+  items = dedupPorGeometria(items);
+  items.sort((a,b) => {
+    if(!!a.sin_ubicacion !== !!b.sin_ubicacion) return a.sin_ubicacion ? 1 : -1;
+    return (new Date(b.fecha||0)) - (new Date(a.fecha||0));
+  });
   items = items.slice(0, MAX);
 
   const payload = { timestamp:new Date().toISOString(), timestamp_epoch:Math.floor(Date.now()/1000), source:'vxl-transito-ar', cantidad:items.length, items:items };
