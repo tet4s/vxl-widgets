@@ -179,6 +179,55 @@ async function bajar(url) {
   throw ultimo;
 }
 
+// Texto relativo en castellano ("Hace cuatro horas", "Hace más de un día") a fecha ISO.
+const NUM_PALABRA = { una: 1, un: 1, dos: 2, tres: 3, cuatro: 4, cinco: 5, seis: 6, siete: 7, ocho: 8, nueve: 9, diez: 10, once: 11, doce: 12 };
+function fechaRelativa(txt, ahoraMs) {
+  const t = norm(txt);
+  const m = t.match(/hace\s+(?:m[aá]s de\s+)?(\d{1,2}|[a-z]+)\s*(minutos?|min|horas?|d[ií]as?|semanas?)/i);
+  if (!m) return null;
+  const n = /^\d+$/.test(m[1]) ? parseInt(m[1], 10) : NUM_PALABRA[m[1]];
+  if (!n) return null;
+  const u = m[2];
+  let ms = n * 60000;
+  if (/hora/.test(u)) ms = n * 3600000;
+  else if (/d[ií]a/.test(u)) ms = n * 86400000;
+  else if (/semana/.test(u)) ms = n * 7 * 86400000;
+  return new Date(ahoraMs - ms).toISOString();
+}
+
+// Fallback para cuando la fuente bloquea al runner (403 de Cloudflare) o tarda
+// demasiado: se pide el texto a r.jina.ai (proxy de lectura, sin API key) y se
+// extraen los titulares del markdown. Sólo se usa si el fetch directo falló.
+async function bajarViaProxy(url) {
+  const res = await axios.get('https://r.jina.ai/' + url, {
+    timeout: 50000,
+    responseType: 'text',
+    transformResponse: [(d) => d],
+    headers: { 'User-Agent': UA, 'Accept': 'text/plain' }
+  });
+  if (typeof res.data !== 'string' || res.data.length < 200) throw new Error('proxy sin contenido');
+  return res.data;
+}
+
+function scrapeMarkdown(md) {
+  const ahoraMs = Date.now();
+  const out = [];
+  const vistos = new Set();
+  const rx = /\[([^\]\n]{25,190})\]\((https?:\/\/[^)\s]+)\)([^\n]*)/g;
+  let m;
+  while ((m = rx.exec(md)) !== null) {
+    const titulo = limpiar(m[1].replace(/[*_]/g, ''));
+    if (!titulo) continue;
+    const key = norm(titulo);
+    if (vistos.has(key)) continue;
+    vistos.add(key);
+    const cerca = md.slice(m.index, m.index + 400);
+    const fecha = fechaRelativa(m[3], ahoraMs) || fechaRelativa(cerca, ahoraMs) || new Date(ahoraMs).toISOString();
+    out.push({ titulo, fecha, url: m[2] });
+  }
+  return out;
+}
+
 function fechaValida(s) {
   if (!s) return null;
   const d = new Date(s);
@@ -260,19 +309,34 @@ async function scrapeLinks(fuente) {
   return out;
 }
 
+function mapearFuente(fuente, items) {
+  const host = (() => { try { return new URL(fuente.url).hostname; } catch (e) { return ''; } })();
+  const oficial = /(^|\.)(gob|gov)\.ar$/.test(host);
+  return items.map(it => ({ ...it, jur: fuente.jur, fuente: fuente.nombre, oficial }));
+}
+
 async function procesarFuente(fuente) {
+  const SOLO_PROXY = process.argv.includes('--proxy-todo');
   try {
+    if (SOLO_PROXY) throw new Error('modo --proxy-todo');
     let items = [];
     if (fuente.tipo === 'rss') items = await scrapeRss(fuente);
     else if (fuente.tipo === 'links') items = await scrapeLinks(fuente);
     else items = await scrapeHeads(fuente);
     console.log('[politica] ' + fuente.nombre + ': ' + items.length + ' crudos');
-    const host = (() => { try { return new URL(fuente.url).hostname; } catch (e) { return ''; } })();
-    const oficial = /(^|\.)(gob|gov)\.ar$/.test(host);
-    return items.map(it => ({ ...it, jur: fuente.jur, fuente: fuente.nombre, oficial }));
+    return mapearFuente(fuente, items);
   } catch (e) {
-    console.warn('[politica] ERROR ' + fuente.nombre + ': ' + e.message);
-    return [];
+    // Reintento vía proxy de lectura: resuelve los 403 de Cloudflare contra las
+    // IPs de Actions y los hosts argentinos que no responden desde afuera.
+    try {
+      const md = await bajarViaProxy(fuente.url);
+      const items = scrapeMarkdown(md);
+      console.log('[politica] ' + fuente.nombre + ' vía proxy: ' + items.length + ' crudos (' + e.message + ')');
+      return mapearFuente(fuente, items);
+    } catch (e2) {
+      console.warn('[politica] ERROR ' + fuente.nombre + ': ' + e.message + ' | proxy: ' + e2.message);
+      return [];
+    }
   }
 }
 
