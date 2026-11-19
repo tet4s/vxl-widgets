@@ -272,8 +272,34 @@ function sonDuplicadas(a, b) {
 }
 
 // ---------------------------------------------------------------- reescritura LLM
-const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash-8b:generateContent?key=' + encodeURIComponent(process.env.GEMINI_API_KEY || '');
+const GEMINI_MODELOS = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash-8b'];
 function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// El presupuesto de salida tiene que alcanzar para TODOS los titulares del lote:
+// con maxOutputTokens chico la respuesta se corta, el JSON no parsea y se pierde la reescritura.
+async function geminiTexto(prompt, maxTokens) {
+  const key = process.env.GEMINI_API_KEY || '';
+  if (!key) return null;
+  for (const modelo of GEMINI_MODELOS) {
+    const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + modelo + ':generateContent?key=' + encodeURIComponent(key);
+    try {
+      const r = await axios.post(url, {
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        generationConfig: { temperature: 0.25, maxOutputTokens: maxTokens }
+      }, { timeout: 30000, headers: { 'Content-Type': 'application/json' } });
+      const t = (r.data && r.data.candidates && r.data.candidates[0] && r.data.candidates[0].content
+        && r.data.candidates[0].content.parts && r.data.candidates[0].content.parts[0]
+        && r.data.candidates[0].content.parts[0].text) || '';
+      if (t) return t;
+      console.warn('[policial] Gemini ' + modelo + ': respuesta vacía (finishReason ' + (r.data && r.data.candidates && r.data.candidates[0] && r.data.candidates[0].finishReason) + ')');
+    } catch (e) {
+      const detalle = e.response ? (e.response.status + ' ' + JSON.stringify(e.response.data).slice(0, 140)) : e.message;
+      console.warn('[policial] Gemini ' + modelo + ' falló: ' + detalle);
+    }
+    await delay(1000);
+  }
+  return null;
+}
 
 // El LLM sólo puede reformular: si agrega más de un token que no esté en
 // titular+lead, se descarta y queda el título limpio.

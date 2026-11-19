@@ -146,7 +146,7 @@ const FUENTES = [
 
 // ---------------------------------------------------------------- fetch helpers
 const OPCIONES = {
-  timeout: 22000,
+  timeout: 35000,
   maxRedirects: 5,
   responseType: 'text',
   transformResponse: [(d) => d],
@@ -158,18 +158,25 @@ const OPCIONES = {
 };
 
 async function bajar(url) {
-  try {
-    const res = await axios.get(url, OPCIONES);
-    return res.data;
-  } catch (e) {
-    // Algunos portales de gobierno tienen la cadena de certificados mal armada.
-    // Se reintenta una vez sin verificar TLS: la fuente es pública y de solo lectura.
-    if (/certificate|CERT|self.signed/i.test(e.message)) {
-      const res = await axios.get(url, { ...OPCIONES, httpsAgent: new https.Agent({ rejectUnauthorized: false }) });
+  let ultimo;
+  for (let intento = 0; intento < 2; intento++) {
+    try {
+      const res = await axios.get(url, OPCIONES);
       return res.data;
+    } catch (e) {
+      ultimo = e;
+      // Cadena de certificados mal armada en portales de gobierno: un reintento
+      // sin verificar TLS (fuente pública, solo lectura).
+      if (/certificate|CERT|self.signed/i.test(e.message)) {
+        const res = await axios.get(url, { ...OPCIONES, httpsAgent: new https.Agent({ rejectUnauthorized: false }) });
+        return res.data;
+      }
+      // Los runners de Actions están lejos de los servidores argentinos: un
+      // timeout suelto no significa fuente caída. Un reintento y listo.
+      if (intento === 0) await new Promise(r => setTimeout(r, 2500));
     }
-    throw e;
   }
+  throw ultimo;
 }
 
 function fechaValida(s) {
