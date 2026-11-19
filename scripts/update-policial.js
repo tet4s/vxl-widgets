@@ -419,33 +419,45 @@ function extraerJSON(txt) {
 // heurísticos de sonDuplicadas().
 async function agruparDuplicados(items) {
   if (!process.env.GEMINI_API_KEY || items.length < 2) return items;
-  const lista = items.map((n, i) => (i + 1) + '. ' + n.titulo).join('\n');
+  const fmtDia = (f) => String(f || '').slice(0, 10);
+  const lista = items.map((n, i) =>
+    (i + 1) + '. [' + (n.lugar || 'sin lugar') + ' | ' + fmtDia(n.fecha) + '] ' + n.titulo
+  ).join(String.fromCharCode(10));
   const prompt = 'Sos editor de la sección Policiales de un portal del Litoral argentino. '
-    + 'Recibís una lista numerada de titulares. Algunos describen el MISMO hecho con palabras distintas '
-    + '(distinto medio, distinto enfoque). Ejemplo: "Muerte de una niña en Concordia: la Policía confirmó una exposición de la directora" '
-    + 'y "Murió una niña entrerriana tras una presunta agresión escolar" son el MISMO hecho. '
-    + 'Marcá como duplicados los que comparten víctima/sospechoso, lugar y hecho, aunque el texto cambie. '
-    + 'NO agrupes hechos distintos parecidos (dos robos en la misma ciudad no son el mismo hecho). '
-    + 'Devolvé SOLO JSON: {"grupos":[[1,5],[2,3]]} con los números de cada grupo. Si no hay duplicados: {"grupos":[]}. '
-    + 'Titulares:\n' + lista;
+    + 'Recibís una lista numerada de titulares con [lugar | fecha]. Algunos describen el MISMO hecho con palabras distintas. '
+    + 'Agrupá SOLO los que son el mismo hecho: misma localidad (o una sin dato), misma fecha o día siguiente, y mismos protagonistas. '
+    + 'Si el lugar o la fecha no coinciden, NO son duplicados. Si dudás, no agrupes. '
+    + 'Devolvé SOLO JSON: {"grupos":[[1,5],[2,3]]}. Si no hay duplicados: {"grupos":[]}. '
+    + 'Titulares:' + String.fromCharCode(10) + lista;
   const txt = await geminiTexto(prompt, 900);
   const parsed = extraerJSON(txt);
   if (!parsed) { console.log('[policial] dedupe LLM: respuesta sin JSON valido'); return items; }
   const grupos = parsed.grupos;
   if (!Array.isArray(grupos)) return items;
+
   const descartar = new Set();
+  const DIST_MAX_MS = 36 * 60 * 60 * 1000;   // mismo día o al día siguiente
   for (const g of grupos) {
-    if (!Array.isArray(g) || g.length < 2) continue;
+    if (!Array.isArray(g) || g.length < 2 || g.length > 3) continue;
     const idx = g.map(n => parseInt(n, 10) - 1).filter(n => n >= 0 && n < items.length);
     if (idx.length < 2) continue;
-    // se queda el más reciente (items ya viene ordenado por fecha)
-    idx.sort((a, b) => a - b);
+    const grupo = idx.map(i => items[i]);
+    // guardas: lugar compatible y fechas cercanas
+    const lugares = grupo.map(n => n.lugar || '').filter(Boolean);
+    if (new Set(lugares).size > 1) continue;
+    const fechas = grupo.map(n => parseIso(n.fecha)).filter(t => t > 0);
+    if (fechas.length && (Math.max(...fechas) - Math.min(...fechas)) > DIST_MAX_MS) continue;
+    // se queda el más reciente (items viene ordenado por fecha)
     for (let k = 1; k < idx.length; k++) descartar.add(idx[k]);
   }
   if (!descartar.size) return items;
-  const antes = items.length;
+  // cordura: si el modelo quiere borrar más de un tercio, se descarta la pasada
+  if (descartar.size > Math.ceil(items.length / 3)) {
+    console.log('[policial] dedupe LLM descartado por exceso (' + descartar.size + ' de ' + items.length + ')');
+    return items;
+  }
   const filtrados = items.filter((_, i) => !descartar.has(i));
-  console.log('[policial] dedupe LLM: ' + descartar.size + ' repetidos quitados (' + antes + ' -> ' + filtrados.length + ')');
+  console.log('[policial] dedupe LLM: ' + descartar.size + ' repetidos quitados (' + items.length + ' -> ' + filtrados.length + ')');
   return filtrados;
 }
 
