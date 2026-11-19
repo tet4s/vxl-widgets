@@ -247,6 +247,20 @@ function nuevasEn(llm, orig) {
 // guardrail "no inventar": el LLM solo puede reordenar/sinonimizar el titular original.
 // Si el rewrite introduce >2 tokens novedosos (no en el original) => se rechaza
 // y se conserva el rewrite heurístico. Así "a nuestra manera" sí, pero NUNCA inventa.
+// Reparación determinística: si el original trae "N% " y el rewrite dejó el número
+// sin el símbolo (ej. "1,6 en octubre" en vez de "1,6% en octubre"), se re-inserta.
+function repararPorcentaje(rw, orig) {
+  if (!rw || !orig) return rw;
+  var out = String(rw);
+  var m; var re = /(\d+(?:[.,]\d+)?)\s*%/g;
+  while ((m = re.exec(String(orig))) !== null) {
+    var num = m[1];
+    if (out.indexOf(num + '%') !== -1) continue;
+    var reNum = new RegExp('(' + num.replace(/\./g, '\\.') + ')(?![0-9])(\\s+)(?!(%|por ciento))', 'g');
+    if (reNum.test(out)) out = out.replace(reNum, '$1%$2');
+  }
+  return out;
+}
 function aplicarGuardrail(rewrites, items) {
   return rewrites.map(function (r, i) {
     if (!r || typeof r !== 'string') return null;
@@ -255,7 +269,7 @@ function aplicarGuardrail(rewrites, items) {
     let dif = 0;
     const tl = simTokens(r);
     for (let j = 0; j < tl.length; j++) { if (!base.has(tl[j])) dif++; }
-    return dif <= 1 ? r : null; // <=1 content-word novedoso (sinónimo) ok; >1 = invención -> conserva heurístico
+    return dif <= 1 ? repararPorcentaje(r, items[i] && items[i].titulo) : null; // <=1 content-word novedoso (sinónimo) ok; >1 = invención -> conserva heurístico
   });
 }
 function delay(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
