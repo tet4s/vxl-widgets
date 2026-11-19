@@ -29,7 +29,13 @@ const cheerio = require('cheerio');
 const osm = require('./lib/osm-calles');
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
-const OUTPUT = path.join(__dirname, '../data/transito.json');
+// Rutas de salida. Por defecto, ../data/ al lado del scraper (repo o VPS con data/).
+// Se pueden pisar por variable de entorno para instalar el paquete en cualquier lado:
+//   TRANSITO_OUT=/var/www/sitio/data/transito.json
+const DIR_DATOS = process.env.TRANSITO_DIR
+  ? path.resolve(process.env.TRANSITO_DIR)
+  : path.join(__dirname, '../data');
+const OUTPUT = path.join(DIR_DATOS, 'transito.json');
 const PROVS_OK = ['Santa Fe', 'Entre Ríos'];
 const MAX = 30;
 const DIST_MAX_CIUDAD = 0.5; // grados (~50km) — máxima distancia del centroide de la ciudad
@@ -782,7 +788,7 @@ function calcularVigencia(item, opciones){
    hasta su vigencia declarada; los de fuentes de ESTADO (boletín diario,
    estado de rutas) sí desaparecen cuando la fuente deja de listarlos.
    ─────────────────────────────────────────────────────────────────────── */
-const HISTORIAL = path.join(__dirname, '../data/transito-historial.json');
+const HISTORIAL = path.join(DIR_DATOS, 'transito-historial.json');
 
 function cargarHistorial(){
   try{ return JSON.parse(fs.readFileSync(HISTORIAL, 'utf8')); }
@@ -1559,6 +1565,7 @@ async function main(){
   items = items.slice(0, MAX);
 
   const payload = { timestamp:new Date().toISOString(), timestamp_epoch:Math.floor(Date.now()/1000), source:'vxl-transito-ar', cantidad:items.length, items:items };
+  fs.mkdirSync(DIR_DATOS, { recursive: true });
   fs.writeFileSync(OUTPUT, JSON.stringify(payload,null,2), 'utf-8');
   log(`💾 data/transito.json OK — ${items.length} alerta(s). Provincias: `+[...new Set(items.map(i=>i.provincia))].join(', '));
   if(items.length === 0) log('⚠ Sin alertas georreferenciables.');
