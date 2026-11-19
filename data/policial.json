@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-19T23:30:14.072Z",
-  "timestamp_epoch": 1795131014,
-  "total_noticias": 37,
+  "last_updated": "2026-11-19T23:49:51.011Z",
+  "timestamp_epoch": 1795132191,
+  "total_noticias": 41,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 3
+      "total": 4
     },
     {
       "id": "allanamientos",
@@ -17,7 +17,7 @@
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 12
+      "total": 13
     },
     {
       "id": "causas",
@@ -27,15 +27,26 @@
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 9
+      "total": 11
     }
   ],
   "noticias": [
     {
+      "titulo": "Poste cayó sobre motociclista en Santa Fe",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/un-poste-cayo-sobre-un-motociclista-mientras-circulaba-en-santa-fe-y-lo-golpeo-en-la-cabeza.htm",
+      "fecha": "2026-11-19T23:49:28.682Z",
+      "fuente": "Elonce",
+      "lugar": "Santa Fe",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
       "titulo": "Grave accidente laboral en arenera del sur entrerriano: un joven operario cayó a una fosa de cuatro metros",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/grave-accidente-laboral-en-arenera-del-sur-entrerriano-un-joven-cayo-a-una-fosa-de-cuatro-metros.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -46,7 +57,7 @@
       "titulo": "Detuvieron al extitular del Copnaf de Concordia por una causa de violencia de género",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-al-extitular-del-copnaf-de-concordia-por-una-causa-de-violencia-de-genero.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "Concordia",
       "categorias": [
@@ -57,7 +68,7 @@
       "titulo": "Detuvieron al hombre que se atrincheró en su auto para evitar que se lo llevara la grúa en Paraná",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-al-hombre-que-se-atrinchero-en-su-auto-para-evitar-que-se-lo-llevara-la-grua.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -68,7 +79,7 @@
       "titulo": "Imputaron a un padre y su hijo por robar patos en Palermo: hallaron 60 animales hacinados en su casa",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/imputaron-a-un-padre-y-su-hijo-por-robar-patos-en-palermo-hallaron-60-animales-hacinados-en-su-casa.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -79,7 +90,7 @@
       "titulo": "Allanaron una vivienda por amenazas y encontraron 159 envoltorios de cocaína",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/allanamiento-por-amenazas-hallaron-cocaina-y-hubo-tres-detenidos.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -90,7 +101,7 @@
       "titulo": "Intentó robar una camioneta, escapó en moto y fue detenido tras una persecución",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/intento-robar-una-camioneta-escapo-en-moto-y-fue-detenido.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -101,7 +112,7 @@
       "titulo": "Crimen de peón rural en Diamante: la extorsión, el asesinato y el plan para ocultar el cuerpo",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/crimen-de-jorge-wolf-extorsion-asesinato-y-dos-detenidos.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "Diamante",
       "categorias": [
@@ -112,7 +123,7 @@
       "titulo": "Lo detectaron por las cámaras y le secuestraron éxtasis, anfetaminas y cocaína en Paraná",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/demoraron-a-un-hombre-con-extasis-y-otras-drogas-en-parana.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -123,7 +134,7 @@
       "titulo": "Atacó con un cuchillo a dos policías, hirió a uno en la pierna y terminó detenido",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/ataco-con-un-cuchillo-a-dos-policias-e-hirio-a-uno.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -134,7 +145,7 @@
       "titulo": "Secuestraron 62 envoltorios de droga tras la fuga de un sospechoso por los techos",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/escapo-por-los-techos-y-abandono-62-envoltorios-de-droga.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -145,7 +156,7 @@
       "titulo": "Detuvieron a “Chuky”, acusado de amenazar con incendiar la casa de su familia",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-a-chuky-acusado-de-amenazar-con-incendiar-la-casa-de-su-familia.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -156,7 +167,7 @@
       "titulo": "Detuvieron a un hombre por violencia de género en Piedras Blancas: tenía armas y había sido denunciado por su expareja",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/violencia-genero-piedras-blancas-detenido-activista-feminista.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -167,7 +178,7 @@
       "titulo": "Robó una moto en Urdinarrain, intentó escapar de la Policía y aseguró que iba a devolverla",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/robo-moto-urdinarrain-menor-intento-escapar-policia.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "Urdinarrain",
       "categorias": [
@@ -178,20 +189,9 @@
       "titulo": "Muerte de una niña en Concordia: la Policía confirmó que hay “una exposición de la directora” de la escuela",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/muerte-de-una-nina-en-concordia-la-policia-confirmo-que-hay-una-exposicion-de-la-directora-de-la-escuela.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
+      "fecha": "2026-11-19T23:49:28.682Z",
       "fuente": "Elonce",
       "lugar": "Concordia",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Murió una niña entrerriana tras una presunta agresión escolar y su familia denuncia negligencia médica",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/nina-entrerriana-fue-golpeada-por-una-companera-en-la-escuela-y-murio-tras-varios-dias-de-agonia-su-familia-denuncia-negligencia-medica.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
-      "fuente": "Elonce",
-      "lugar": "",
       "categorias": [
         "hechos"
       ]
@@ -302,6 +302,39 @@
       "fecha": "2026-11-19T15:37:05.000Z",
       "fuente": "El Litoral",
       "lugar": "",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Atacaron con cuchillo a policía en Villaguay",
+      "descripcion": "El atacante tiene 29 años y fue detenido. El agente sufrió un corte de carácter leve en la pierna derecha.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/en-villaguay-atacaron-con-un-cuchillo-un-policia",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Villaguay",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Caso Wolf: extorsión y asesinato en el campo",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/19/caso-jorge-wolf-extorsion-asesinato-en-la-oscuridad-del-campo-y-el-plan-para-descartar-el-cuerpo",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Paraná: Detuvieron a un joven acusado de disparar a un hombre",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/19/479784-parana-detuvieron-a-un-joven-acusado-de-disparar-a-un-hombre",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "Paraná",
       "categorias": [
         "detenciones"
       ]
@@ -425,6 +458,17 @@
       "lugar": "Viale",
       "categorias": [
         "causas"
+      ]
+    },
+    {
+      "titulo": "Intento de femicidio en Entre Ríos: le habría disparado a su pareja y luego se quitó la vida",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/16/479280-intento-de-femicidio-en-entre-rios-le-habria-disparado-a-su-pareja-y-luego-se-quito-la-vida",
+      "fecha": "2026-11-16T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "",
+      "categorias": [
+        "hechos"
       ]
     },
     {
