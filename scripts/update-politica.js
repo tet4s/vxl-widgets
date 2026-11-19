@@ -439,8 +439,24 @@ const FUERA_LITORAL = ['cordoba', 'mendoza', 'tucuman', 'salta', 'jujuy', 'san j
   'catamarca', 'santiago del estero', 'neuquen', 'rio negro', 'chubut', 'santa cruz', 'tierra del fuego',
   'la pampa', 'mar del plata', 'bahia blanca', 'caba', 'capital federal', 'la plata', 'avellaneda'];
 
+// Gentilicios: "presupuesto santafesino" en un portal entrerriano es nota de Santa Fe.
+const GENTILICIOS = {
+  santa_fe: ['santafesino', 'santafesina', 'santafesinos', 'santafesinas'],
+  entre_rios: ['entrerriano', 'entrerriana', 'entrerrianos', 'entrerrianas'],
+  corrientes: ['correntino', 'correntina', 'correntinos', 'correntinas'],
+  misiones: ['misionero', 'misionera', 'misioneros', 'misioneras'],
+  chaco: ['chaqueno', 'chaquena', 'chaquenos', 'chaquenas'],
+  formosa: ['formoseno', 'formosena', 'formosenos', 'formosenas']
+};
+
 function jurPorTitulo(titulo, jurFuente, oficial) {
   const n = norm(titulo);
+
+  // 0) gentilicio de otra provincia del Litoral -> esa provincia
+  for (const id of Object.keys(GENTILICIOS)) {
+    if (id === jurFuente) continue;
+    if (GENTILICIOS[id].some(g => coincide(n, g))) return id;
+  }
 
   // 1) otra provincia del Litoral nombrada con fuerza -> manda el título.
   //    Desde un portal nacional sólo vale el NOMBRE de la provincia (una nota
