@@ -1094,11 +1094,13 @@ async function desdeRugby(cfg) {
       if (sinDatos && (esPrincipal || !cfg.incluirSinDatos)) continue;
       ligas.push({
         id: d.id,
-        nombre: cfg.ligaNombre,
+        // El torneo es uno solo (Regional del Litoral) con divisiones: el título
+        // del widget es la división y el torneo va como contexto.
+        nombre: d.nombre,
         prioridad: d.prioridad || (divisiones.indexOf(d) + 1),
-        division: d.nombre,
+        division: null,
         sinDatos,
-        zona: null,
+        zona: cfg.ligaNombre,
         nota: sinDatos ? 'La USR publica esta división sin puntos cargados' : null,
         temporada: String(anio),
         fuente: 'USR',
@@ -1124,10 +1126,10 @@ async function desdeRugby(cfg) {
         const ultimos = (propios.length ? propios : w.partidos).slice(0, 6);
         ligas.push({
           id: divisiones[0].id,
-          nombre: cfg.ligaNombre,
+          nombre: divisiones[0].nombre,
           prioridad: 1,
-          division: divisiones[0].nombre,
-          zona: null,
+          division: null,
+          zona: cfg.ligaNombre,
           temporada: String(a),
           fuente: 'Wikipedia',
           url: `https://es.wikipedia.org/wiki/Torneo_Regional_del_Litoral_${a}`,

@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-19T22:51:54.508Z",
+  "actualizado": "2026-11-19T22:47:29.546Z",
   "ciudades": [
     {
       "id": "parana",
@@ -3439,10 +3439,10 @@
           "ligas": [
             {
               "id": "top10",
-              "nombre": "Regional del Litoral",
+              "nombre": "Top 10",
               "prioridad": 1,
-              "division": "Top 10",
-              "zona": null,
+              "division": null,
+              "zona": "Regional del Litoral",
               "temporada": "2026",
               "fuente": "Wikipedia",
               "url": "https://es.wikipedia.org/wiki/Torneo_Regional_del_Litoral_2026",
@@ -3672,11 +3672,11 @@
             },
             {
               "id": "segunda",
-              "nombre": "Regional del Litoral",
+              "nombre": "Segunda",
               "prioridad": 2,
-              "division": "Segunda",
+              "division": null,
               "sinDatos": true,
-              "zona": null,
+              "zona": "Regional del Litoral",
               "nota": "La USR publica esta división sin puntos cargados",
               "temporada": "2026",
               "fuente": "USR",
@@ -3892,10 +3892,10 @@
           "ligas": [
             {
               "id": "top10",
-              "nombre": "Regional del Litoral",
+              "nombre": "Top 10",
               "prioridad": 1,
-              "division": "Top 10",
-              "zona": null,
+              "division": null,
+              "zona": "Regional del Litoral",
               "temporada": "2026",
               "fuente": "Wikipedia",
               "url": "https://es.wikipedia.org/wiki/Torneo_Regional_del_Litoral_2026",
@@ -4125,11 +4125,11 @@
             },
             {
               "id": "segunda",
-              "nombre": "Regional del Litoral",
+              "nombre": "Segunda",
               "prioridad": 2,
-              "division": "Segunda",
+              "division": null,
               "sinDatos": true,
-              "zona": null,
+              "zona": "Regional del Litoral",
               "nota": "La USR publica esta división sin puntos cargados",
               "temporada": "2026",
               "fuente": "USR",
