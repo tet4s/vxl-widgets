@@ -1,35 +1,35 @@
 {
-  "last_updated": "2026-11-19T21:00:01.131Z",
-  "timestamp_epoch": 1795122001,
-  "total_noticias": 117,
+  "last_updated": "2026-11-19T20:59:21.784Z",
+  "timestamp_epoch": 1795121961,
+  "total_noticias": 112,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 53
+      "total": 52
     },
     {
       "id": "obras",
       "nombre": "OBRAS",
-      "total": 17
+      "total": 15
     },
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 35
+      "total": 34
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 16
+      "total": 14
     }
   ],
   "jurisdicciones": [
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 58
+      "total": 52
     },
     {
       "id": "santa_fe",
@@ -49,7 +49,7 @@
     {
       "id": "misiones",
       "nombre": "MISIONES",
-      "total": 5
+      "total": 6
     },
     {
       "id": "chaco",
@@ -64,6 +64,16 @@
   ],
   "noticias": [
     {
+      "titulo": "“El espíritu del gobernador, es que no se muera una cooperativa” dijo el ministro Vilches",
+      "fecha": "2026-11-19T20:59:16.457Z",
+      "jurisdiccion": "misiones",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928233-el-espiritu-del-gobernador-es-que-no-se-muera-una-cooperativa-dijo-el-ministro-vilches",
+      "fuente": "Territorio Digital"
+    },
+    {
       "titulo": "“Fue un viento fuerte”, lo que dejó la visita del Papa en la lucha por la ley de Discapacidad",
       "fecha": "2026-11-19T20:48:05.482Z",
       "jurisdiccion": "nacional",
@@ -74,7 +84,7 @@
       "fuente": "Página/12 El País"
     },
     {
-      "titulo": "![Image 10: El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
+      "titulo": "El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -94,7 +104,7 @@
       "fuente": "Gobierno de Santa Fe"
     },
     {
-      "titulo": "![Image 12: Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
+      "titulo": "Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -104,18 +114,7 @@
       "fuente": "La Nación Política"
     },
     {
-      "titulo": "![Image 16: Posadas eliminó la Ley de Lemas y el resultado podría condicionar la negociación de Santilli con un gobernador",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes",
-        "gobierno"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/santilli-con-passalacqua-en-YSR3NFXBHZH37LDMLFPM3H5K7Y.jpeg?auth=2c04022ee46e73ba400922a271af4511310fa4a162f8b531207a8e08b8eb4b51&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "![Image 18: El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
+      "titulo": "El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -125,27 +124,7 @@
       "fuente": "La Nación Política"
     },
     {
-      "titulo": "![Image 19: Un testigo que auditó la obra pública dejó una frase confusa y se desdijo en pleno juicio",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/martin-gonzalez-oria-tecnico-del-organismo-de-JQWHOKEE2ZBWNHX7XARHRXNTBM.png?auth=0aaa22290a8b00512aff946cb31b4c0753cabace4f8b131675d0249bf3db8f07&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "![Image 25: El debate presidencial dejará de ser obligatorio en las elecciones generales si avanza el proyecto de Milei",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/sergio-massa-patricia-bullrich-juan-schiaretti-y-IQMATZKLIVHMZIGUCMOMR34DV4.JPG?auth=70675461e19424a8c50475beefea373d1df6798b8175ce77ab86dc4db2c0151c&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "![Image 29: Cuándo se vota a gobernador en Salta",
+      "titulo": "Cuándo se vota a gobernador en Salta",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -155,37 +134,7 @@
       "fuente": "La Nación Política"
     },
     {
-      "titulo": "![Image 30: Publicaron el padrón provisorio para las elecciones de Argentina 2027",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/el-padron-electoral-de-la-provincia-de-buenos-K6FY2PGOZBFGZBXUIOPB5MFU24.jpg?auth=7806600ea6fa8a117b63c855234abf0afa9c626833509eadb98e8629cee69269&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "![Image 31: Argentina asumió la presidencia de la Comisión Interamericana de la OEA para el control de drogas",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/roberto-moro-titular-del-56XPTDDESNHUDBDKXR3X52ZA5I.jpeg?auth=520d34a0cf14564f4b11979ad279fc4d481a6ace80110489a3e84f9772c57bae&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "![Image 33: El Gobierno avaló un financiamiento de US$150 millones para obras de agua en Chubut y Santa Cruz",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/el-ministro-de-hacienda-junto-al-gobernador-FE3JJ2EB6JFSXOF4CUCNOLLOLA.png?auth=7c64b19f87722e076076503db27c1bb368625580760289d402d304921f9e4db0&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "![Image 34: El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
+      "titulo": "El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -195,7 +144,7 @@
       "fuente": "La Nación Política"
     },
     {
-      "titulo": "![Image 38: Acusan a la secretaria de Energía de favorecer a una empresa sancionada por operar en Malvinas",
+      "titulo": "Acusan a la secretaria de Energía de favorecer a una empresa sancionada por operar en Malvinas",
       "fecha": "2026-11-19T20:47:46.184Z",
       "jurisdiccion": "nacional",
       "categorias": [

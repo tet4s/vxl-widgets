@@ -93,6 +93,8 @@ function norm(t) {
 
 function limpiar(t) {
   let n = String(t || '').replace(/\s+/g, ' ').trim();
+  // Markdown del proxy: "![Image 12: Titular real](url)" o "Image 12: Titular".
+  n = n.replace(/^!?\s*\[?\s*image\s*\d+\s*:\s*/i, '').replace(/^!\[/i, '');
   n = n.replace(/[\u{1F300}-\u{1FAFF}]/gu, '');
   n = n.replace(/\s*[|–-]\s*(El Litoral|Elonce|UNO|La Capital|Diario Época|Territorio Digital|DataChaco|APFDigital|Análisis Digital)\s*$/i, '');
   n = n.replace(/\s+/g, ' ').trim();
