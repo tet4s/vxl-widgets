@@ -2,9 +2,22 @@ name: Actualizar Política del Litoral
 
 on:
   schedule:
-    # Cada 20 minutos, todo el día: las notificaciones de política no tienen horario
-    - cron: '*/20 * * * *'
+    # Minutos explícitos (no "*/20"): GitHub descarta primero los crons con comodines
+    # en las horas pico. En este repo las corridas programadas son 1-3 por día.
+    - cron: '9,29,49 * * * *'
+  # Respaldo principal: el repo recibe pushes de otros workflows cada pocos minutos
+  # (deportes, policial, tránsito), así que un push también refresca política.
+  # La guarda de frescura del primer step evita correr si los datos son recientes.
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/politica.json'
   workflow_dispatch:
+
+# Evita que dos corridas se pisen escribiendo data/politica.json
+concurrency:
+  group: politica
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -17,25 +30,50 @@ jobs:
       - name: Checkout del Repositorio
         uses: actions/checkout@v4
 
+      # Solo aplica a los runs disparados por push: si data/politica.json se
+      # actualizó hace menos de 25 minutos, no vale la pena volver a scrapear.
+      - name: ¿Datos frescos?
+        id: frescura
+        run: |
+          if [ "${{ github.event_name }}" != "push" ]; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "Corrida por ${{ github.event_name }}: se ejecuta siempre."
+            exit 0
+          fi
+          node -e '
+            const fs = require("fs");
+            let t = 0;
+            try { t = Date.parse(JSON.parse(fs.readFileSync("data/politica.json","utf8")).last_updated) || 0; } catch (e) {}
+            const min = (Date.now() - t) / 60000;
+            const skip = t > 0 && min < 25;
+            console.log("Última actualización hace " + Math.round(min) + " min → " + (skip ? "se saltea" : "se ejecuta"));
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, "skip=" + skip + "\n");
+          '
+
       - name: Configurar Node.js (v24)
+        if: steps.frescura.outputs.skip != 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '24'
 
       - name: Instalar Dependencias
+        if: steps.frescura.outputs.skip != 'true'
         run: npm install
 
       - name: Ejecutar Update de Política
+        if: steps.frescura.outputs.skip != 'true'
         run: node scripts/update-politica.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Commit y Push de Datos Actualizados
+        if: steps.frescura.outputs.skip != 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add data/politica.json
           git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de política [skip ci]"
+          # Otros workflows commitean al mismo tiempo: reintentar el push con rebase
           for i in 1 2 3 4; do
             git pull --rebase origin main && git push && break
             sleep 5
