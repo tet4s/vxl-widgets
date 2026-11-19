@@ -2,7 +2,11 @@ name: Actualizador de Cotizaciones VXL Economía
 
 on:
   schedule:
-    - cron: '* * * * *' # Ejecución cada 1 minuto
+    # GitHub no soporta crons más frecuentes que cada 5 minutos: '* * * * *'
+    # no se cumple y, además, marca el repo como abusivo y hace que el
+    # scheduler descarte las corridas de TODOS los workflows del repo
+    # (medido: 3-5 corridas por día por workflow, incluso con cron de 1 min).
+    - cron: '*/10 * * * *' # Cada 10 minutos
   workflow_dispatch:
 
 # PERMISO OBLIGATORIO PARA EVITAR EL EXIT CODE 128 (PERMITIR PUSH EN EL REPO)
