@@ -1,0 +1,505 @@
+{
+  "last_updated": "2026-11-19T20:10:46.871Z",
+  "timestamp_epoch": 1795119046,
+  "total_noticias": 41,
+  "window_days": 5,
+  "categorias": [
+    {
+      "id": "accidentes",
+      "nombre": "ACCIDENTES",
+      "total": 1
+    },
+    {
+      "id": "allanamientos",
+      "nombre": "ALLANAMIENTOS",
+      "total": 8
+    },
+    {
+      "id": "detenciones",
+      "nombre": "DETENCIONES",
+      "total": 15
+    },
+    {
+      "id": "causas",
+      "nombre": "CAUSAS",
+      "total": 5
+    },
+    {
+      "id": "hechos",
+      "nombre": "HECHOS",
+      "total": 12
+    }
+  ],
+  "noticias": [
+    {
+      "titulo": "Detuvieron al extitular del Copnaf de Concordia por una causa de violencia de género",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/detuvieron-al-extitular-del-copnaf-de-concordia-por-una-causa-de-violencia-de-genero.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "Concordia",
+      "categorias": [
+        "detenciones",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Detuvieron al hombre que se atrincheró en su auto para evitar que se lo llevara la grúa en Paraná",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/detuvieron-al-hombre-que-se-atrinchero-en-su-auto-para-evitar-que-se-lo-llevara-la-grua.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "Paraná",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Imputaron a un padre y su hijo por robar patos en Palermo: hallaron 60 animales hacinados en su casa",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/imputaron-a-un-padre-y-su-hijo-por-robar-patos-en-palermo-hallaron-60-animales-hacinados-en-su-casa.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "detenciones",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Allanaron una vivienda por amenazas y encontraron 159 envoltorios de cocaína",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/allanamiento-por-amenazas-hallaron-cocaina-y-hubo-tres-detenidos.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "allanamientos",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Intentó robar una camioneta, escapó en moto y fue detenido tras una persecución",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/intento-robar-una-camioneta-escapo-en-moto-y-fue-detenido.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "detenciones",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Crimen de peón rural en Diamante: la extorsión, el asesinato y el plan para ocultar el cuerpo",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/crimen-de-jorge-wolf-extorsion-asesinato-y-dos-detenidos.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "Diamante",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Lo detectaron por las cámaras y le secuestraron éxtasis, anfetaminas y cocaína en Paraná",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/demoraron-a-un-hombre-con-extasis-y-otras-drogas-en-parana.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "Paraná",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Atacó con un cuchillo a dos policías, hirió a uno en la pierna y terminó detenido",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/ataco-con-un-cuchillo-a-dos-policias-e-hirio-a-uno.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "detenciones",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Secuestraron 62 envoltorios de droga tras la fuga de un sospechoso por los techos",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/escapo-por-los-techos-y-abandono-62-envoltorios-de-droga.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Detuvieron a “Chuky”, acusado de amenazar con incendiar la casa de su familia",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/detuvieron-a-chuky-acusado-de-amenazar-con-incendiar-la-casa-de-su-familia.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "detenciones",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Detuvieron a un hombre por violencia de género en Piedras Blancas: tenía armas y había sido denunciado por su expareja",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/violencia-genero-piedras-blancas-detenido-activista-feminista.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "detenciones",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Robó una moto en Urdinarrain, intentó escapar de la Policía y aseguró que iba a devolverla",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/robo-moto-urdinarrain-menor-intento-escapar-policia.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "Urdinarrain",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Muerte de una niña en Concordia: la Policía confirmó que hay “una exposición de la directora” de la escuela",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/muerte-de-una-nina-en-concordia-la-policia-confirmo-que-hay-una-exposicion-de-la-directora-de-la-escuela.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "Concordia",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Detuvieron a un joven en Paraná acusado de dispararle a un hombre en una pierna",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/detuvieron-a-un-joven-en-parana-acusado-de-dispararle-a-un-hombre-en-una-pierna.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "Paraná",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Murió una niña entrerriana tras una presunta agresión escolar y su familia denuncia negligencia médica",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/nina-entrerriana-fue-golpeada-por-una-companera-en-la-escuela-y-murio-tras-varios-dias-de-agonia-su-familia-denuncia-negligencia-medica.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Laboratorio de drogas sintéticas en San Benito: la joven seguirá con prisión domiciliaria",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/laboratorio-de-drogas-sinteticas-en-san-benito-la-joven-seguira-con-prision-domiciliaria.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "San Benito",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Secuestraron 900 kilos de surubíes y aplicaron una multa millonaria a un frigorífico entrerriano",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/secuestraron-900-kilos-de-surubies-y-aplicaron-una-multa-millonaria-a-un-frigorifico-entrerriano.htm",
+      "fecha": "2026-11-19T20:10:46.533Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "El MPA explicó cómo funcionarán los controles de IMEI y por qué es clave denunciar el robo del celular",
+      "descripcion": "En diálogo con CyD Litoral, Marina Pieretti detalló las tres vías del mercado ilegal de teléfonos en Santa Fe y estimó que la implementación llevará dos o tres meses.",
+      "url": "https://www.ellitoral.com/sucesos/imei-santa-fe-marina-pieretti-robo-celulares-ley-celulares-mpa-denuncia_0_25MnTQfTuu.html",
+      "fecha": "2026-11-19T20:02:16.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Robaron más de mil metros de cable del aeropuerto de Concordia",
+      "descripcion": "La sustracción se habría llevado a cabo durante dos noches. El lugar dejó de tener vuelos nocturnos. Desde el ente que maneja el lugar aseguran que están llevando a cabo acciones para volver a la operatividad.",
+      "url": "https://www.ellitoral.com/sucesos/aeropuertocomodoropierrestegui-concordia-balizamiento-vuelosnocturnos-justiciafederal-psa-cable-edaac-balizado_0_kAB6JZNGIM.html",
+      "fecha": "2026-11-19T19:31:56.000Z",
+      "fuente": "El Litoral",
+      "lugar": "Concordia",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Investigan transferencias entre la dueña de geriátricos ilegales y tres asistentes sociales en Santa Fe",
+      "descripcion": "Lo reveló el fiscal del caso, en una audiencia en la que solicitó la continuidad de la prisión preventiva para María Laura MIlia. La defensa había pedido la libertad bajo alternativas, pero fue rechazada.",
+      "url": "https://www.ellitoral.com/sucesos/investigan-transferencias-duena-geriatricos-ilegales-asistentes-sociales-santafe-abandono-personas_0_SvAWAKUpxc.html",
+      "fecha": "2026-11-19T17:55:16.000Z",
+      "fuente": "El Litoral",
+      "lugar": "Santa Fe",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Ordenaron la prisión preventiva para el muralista Cobre condenado por abuso sexual",
+      "descripcion": "Así lo dispuso la jueza Susana Luna este jueves al mediodía. Andrés Iglesias había llegado libre y fue detenido de inmediato.",
+      "url": "https://www.ellitoral.com/sucesos/andresiglesias-cobre-prisionpreventiva-santafe-muralista-susanaluna-mpa-jorgelinamoserferro-tribunales-robertoprieumantaras-oscarburtnik-sebastiancreus-quedo-detenido_0_4m1KY3bERH.html",
+      "fecha": "2026-11-19T16:47:19.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "detenciones",
+        "causas",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Se disfrazó de mujer para robar una joyería, forcejeó con una empleada y huyó",
+      "descripcion": "El episodio ocurrió en un comercio céntrico y quedó registrado por las cámaras de seguridad. El sospechoso escapó en una camioneta con pedido de secuestro activo, que fue encontrada abandonada horas después.",
+      "url": "https://www.ellitoral.com/sucesos/villagesell-joyeria-asalto-empleada-vestido-mujer-camioneta-robada-mardelplata_0_9WzNTdsDX6.html",
+      "fecha": "2026-11-19T15:57:37.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Detuvieron a un hombre investigado por amenazas y delitos sexuales contra tres menores",
+      "descripcion": "La Policía de Investigaciones realizó una requisa domiciliaria en una vivienda de calle 25 de Mayo al 1100 y secuestró una computadora y dos teléfonos celulares. El procedimiento se enmarca en una causa que también contempla presuntas amenazas y coacción. La medida fue ordenada …",
+      "url": "https://www.ellitoral.com/sucesos/detuvieron-hombre-investigado-amenazas-delitos-sexuales-menores_0_BndmbxueWZ.html",
+      "fecha": "2026-11-19T15:37:05.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "detenciones",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "En Villaguay atacaron con un cuchillo a un policía",
+      "descripcion": "El atacante tiene 29 años y fue detenido. El agente sufrió un corte de carácter leve en la pierna derecha.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/en-villaguay-atacaron-con-un-cuchillo-un-policia",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Villaguay",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Caso Jorge Wolf: extorsión, asesinato en la oscuridad del campo y el plan para descartar el cuerpo",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/19/caso-jorge-wolf-extorsion-asesinato-en-la-oscuridad-del-campo-y-el-plan-para-descartar-el-cuerpo",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Atacaron a un niño trans de 12 años durante un encuentro cosplay y el agresor será imputado",
+      "descripcion": "El episodio ocurrió el domingo 8 de noviembre durante la convención Santa Freak, en la costanera santafesina. La víctima fue arrojada al suelo mediante una maniobra de inmovilización y debió recibir asistencia médica. La Fiscalía investiga el hecho como \"Lesiones leves calificad…",
+      "url": "https://www.ellitoral.com/sucesos/atacaron-nino-trans-12-anos-encuentro-cosplay-agresor-imputado_0_p22HUeekon.html",
+      "fecha": "2026-11-19T13:36:56.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "detenciones",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Tras la confirmación de la condena, la Justicia volverá a discutir si Cobre debe quedar detenido",
+      "descripcion": "El muralista Andrés Iglesias Petrochelli deberá presentarse este jueves en los Tribunales de Santa Fe. La fiscalía pidió revisar su situación cautelar luego de que la Cámara ratificara su responsabilidad penal por el abuso de su expareja y fijara una pena de seis años y seis mes…",
+      "url": "https://www.ellitoral.com/sucesos/abuso-sexual-confirmacion-condena-justicia-santafe-volvera-discutir-cobre-detenido-audiencia_0_cW0b113S0x.html",
+      "fecha": "2026-11-19T12:18:59.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "detenciones",
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Falleció una mujer tras colisionar su moto con un semirremolque estacionado en Concordia",
+      "descripcion": "Murió una mujer de 46 años tras chocar con un semirremolque estacionado en Concordia.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/18/fallecio-una-mujer-tras-colisionar-su-moto-con-un-semirremolque-estacionado-en-concordia",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Concordia",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
+      "titulo": "Hay muchas condenas cortas que no sirven para nada, advirtió la jueza de Ejecución, Cecilia Bértora",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/hay-muchas-condenas-cortas-que-no-sirven-para-nada-advirtio-la-jueza-de-ejecucion-cecilia-bertora",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Acusada por tenencia de ketamina seguirá con arresto domiciliario y tobillera electrónica en San Benito",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/acusada-por-tenencia-de-ketamina-seguira-con-arresto-domiciliario-y-tobillera-electronica-en-san-benito",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "San Benito",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Causa por adicionales: sobreseyeron a una funcionaria policial y los otros nueve policías irán a juicio",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/causa-por-adicionales-sobreseyeron-una-funcionaria-policial-y-los-otros-nueve-policias-iran-juicio",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Salvada por sus vecinas: Santa Elena conmocionada por un grave hecho de violencia de género",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/18/479676-salvada-por-sus-vecinas-santa-elena-conmocionada-por-un-grave-hecho-de-violencia-de-genero",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "Santa Elena",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Investigan la muerte de una mujer que llegó sin vida a un hospital entrerriano",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/18/479592-investigan-la-muerte-de-una-mujer-que-llego-sin-vida-a-un-hospital-entrerriano",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Detuvieron a tres personas en Chajarí con cocaína y secuestraron más de cuatro millones de pesos",
+      "descripcion": "El procedimiento se desarrolló en un domicilio ubicado sobre calle Islas Malvinas al 1200, donde el personal policial logró el secuestro de cinco envoltorios de cocaína, además de una importante suma de dinero en efectivo que asciende a $4.110.500.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/17/detuvieron-tres-personas-en-chajari-con-cocaina-y-secuestraron-mas-de-cuatro-millones-de-pesos",
+      "fecha": "2026-11-17T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Chajarí",
+      "categorias": [
+        "allanamientos",
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Investigan la muerte de una mujer en San José: detuvieron al hombre que la llevó sin vida al hospital",
+      "descripcion": "Una mujer de 41 años murió durante la madrugada de este martes en el hospital de San José, en el departamento Colón, y la Justicia inició una investigación para determinar las circunstancias del fallecimiento. La víctima había sido trasladada al establecimiento por un hombre que…",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/17/investigan-la-muerte-de-una-mujer-en-san-jose-detuvieron-al-hombre-que-la-llevo-sin-vida-al-hospital",
+      "fecha": "2026-11-17T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "San José",
+      "categorias": [
+        "detenciones",
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Detuvieron a un cuatrero y secuestraron ciervos, carpinchos y un jabalí en La Paz",
+      "descripcion": "Dos procedimientos policiales realizados durante la madrugada de este lunes en La Paz terminaron con un hombre detenido por presunto abigeato y la intervención de otros cuatro sujetos que transportaban animales silvestres sin vida, entre ellos dos ciervos axis, carpinchos y un j…",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/16/detuvieron-un-cuatrero-y-secuestraron-ciervos-carpinchos-y-un-jabali-en-la-paz",
+      "fecha": "2026-11-16T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "La Paz",
+      "categorias": [
+        "allanamientos",
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Investigan un presunto abuso sexual en Federal: allanaron una vivienda y secuestraron elementos",
+      "descripcion": "Un allanamiento por presunto abuso sexual en Federal permitió el secuestro de distintos elementos considerados de interés para una investigación judicial. El procedimiento se concretó en una vivienda de la ciudad entrerriana, donde también fue identificado un joven de 24 años qu…",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/16/investigan-un-presunto-abuso-sexual-en-federal-allanaron-una-vivienda-y-secuestraron-elementos",
+      "fecha": "2026-11-16T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Federal",
+      "categorias": [
+        "allanamientos",
+        "causas",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Hubo un intento de femicidio seguido de suicidio el fin de semana en Colón",
+      "descripcion": "La mujer fue intervenida quirúrgicamente en el Hospital San Benjamín de Colón y permanece internada en sala común, sin riesgo de vida.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/16/hubo-un-intento-de-femicidio-seguido-de-suicidio-el-fin-de-semana-en-colon",
+      "fecha": "2026-11-16T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Colón",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Investigan una tentativa de homicidio en Viale: un hombre sufrió varias puñaladas",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/16/479292-investigan-una-tentativa-de-homicidio-en-viale-un-hombre-sufrio-varias-punaladas",
+      "fecha": "2026-11-16T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "Viale",
+      "categorias": [
+        "causas",
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Intento de femicidio en Entre Ríos: le habría disparado a su pareja y luego se quitó la vida",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/16/479280-intento-de-femicidio-en-entre-rios-le-habria-disparado-a-su-pareja-y-luego-se-quito-la-vida",
+      "fecha": "2026-11-16T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Un joven está en estado crítico tras sufrir un botellazo en el barrio Belgrano y detuvieron al presunto autor",
+      "descripcion": "Un joven de 20 años permanece internado en estado crítico en el Hospital San Martín de Paraná luego de sufrir un grave traumatismo de cráneo durante una presunta pelea ocurrida en la madrugada de este domingo en el barrio Belgrano. Por el hecho, la Policía detuvo a un hombre de …",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/15/un-joven-esta-en-estado-critico-tras-sufrir-un-botellazo-en-el-barrio-belgrano-y-detuvieron-al-presunto-autor",
+      "fecha": "2026-11-15T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "detenciones"
+      ]
+    }
+  ]
+}

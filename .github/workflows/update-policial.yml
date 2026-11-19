@@ -1,0 +1,40 @@
+name: Actualizador de Policiales VXL
+
+on:
+  schedule:
+    - cron: '*/10 * * * *' # Cada 10 minutos
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: policial
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar script de policiales
+        run: node ./scripts/update-policial.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Commit y Push
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add ./data/policial.json
+          git diff-index --quiet HEAD || (git commit -m 'Auto-update: noticias policiales [skip ci]' && (git push || (git pull --rebase && git push)))
