@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-20T04:16:55.593Z",
-  "timestamp_epoch": 1795148215,
-  "total_noticias": 33,
+  "last_updated": "2026-11-20T13:00:19.034Z",
+  "timestamp_epoch": 1795179619,
+  "total_noticias": 35,
   "window_days": 7,
   "categorias": [
     {
@@ -9,26 +9,10 @@
       "nombre": "PODER ADQUISITIVO",
       "noticias": [
         {
-          "titulo": "600 mil cuentas sueldo destruidas",
-          "descripcion": "Nuevo indicador preocupante: desde diciembre de 2024 desaparecieron más de 600 mil cuentas sueldo de los bancos.",
-          "url": "https://www.pagina12.com.ar/2026/11/19/600-mil-cuentas-sueldo-destruidas/",
-          "fecha": "2026-11-20T04:16:29.740Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "Uno de los gremios se fue de la reunión y el gobierno levantó la paritaria: “No hay decisión política”",
-          "descripcion": "",
-          "url": "https://www.elentrerios.com/",
-          "fecha": "2026-11-20T04:16:29.396Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "El Entre Ríos"
-        },
-        {
           "titulo": "La aerolínea colombiana permitirá que quienes ya hayan iniciado su viaje puedan volver sin pagar una nueva tarifa; la medida al…",
           "descripcion": "La aerolínea colombiana permitirá que quienes ya hayan iniciado su viaje puedan volver sin pagar una nueva tarifa; la medida alcanzará a pasajes con fechas hasta el 2 de diciembre",
           "url": "https://www.lanacion.com.ar/economia/avianca-ofrecera-vuelos-de-regreso-a-los-pasajeros-afectados-por-la-suspension-de-plus-ultra-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.008Z",
+          "fecha": "2026-11-20T12:59:41.572Z",
           "fechaFormateada": "Ahora",
           "fuente": "La Nación"
         },
@@ -36,24 +20,64 @@
           "titulo": "Bonos en pesos y Cedears. Qué inversiones le ganan a la inflación en lo que va de 2026",
           "descripcion": "Analistas financieros destacaron el desempeño de bonos en pesos y algunas acciones que lograron rendimientos reales positivos frente a la suba de precios",
           "url": "https://www.lanacion.com.ar/economia/que-inversiones-le-ganan-a-la-inflacion-en-lo-que-va-de-2026-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.007Z",
+          "fecha": "2026-11-20T12:59:41.571Z",
           "fechaFormateada": "Ahora",
           "fuente": "La Nación"
+        },
+        {
+          "titulo": "600 mil cuentas sueldo destruidas",
+          "descripcion": "Nuevo indicador preocupante: desde diciembre de 2024 desaparecieron más de 600 mil cuentas sueldo de los bancos.",
+          "url": "https://www.pagina12.com.ar/2026/11/19/600-mil-cuentas-sueldo-destruidas/",
+          "fecha": "2026-11-20T12:59:41.418Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Página/12"
         },
         {
           "titulo": "¿Cómo bajar rápidamente la inflación y el riesgo país",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-20T04:16:28.663Z",
+          "fecha": "2026-11-20T12:59:40.850Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
+        },
+        {
+          "titulo": "Crisis en la principal fábrica de tractores nacionales: Pauny ofreció un plan de pagos de salarios atrasados y reanudar la acti…",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-20T12:59:40.848Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Un informe regional advierte sobre la precariedad del sistema previsional nicaragüense, donde la informalidad laboral masiva y …",
+          "descripcion": "Un informe regional advierte sobre la precariedad del sistema previsional nicaragüense, donde la informalidad laboral masiva y los ajustes recientes impiden que la población de mayor edad cuente con un retiro digno",
+          "url": "https://www.infobae.com/nicaragua/2026/11/20/nicaragua-figura-entre-los-paises-mas-rezagados-de-america-latina-en-cobertura-de-pensiones/",
+          "fecha": "2026-11-20T12:59:40.657Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "La luz y el gas continuarán con la misma fórmula de IPC más mayorista mientras que la boleta de agua contemplará la evolución d…",
+          "descripcion": "La luz y el gas continuarán con la misma fórmula de IPC más mayorista mientras que la boleta de agua contemplará la evolución de los salarios para los ajustes. En el caso de los colectivos en la Ciudad aún se espera por una audiencia de diciembre",
+          "url": "https://www.infobae.com/economia/2026/11/20/inflacion-y-elecciones-como-van-a-aumentar-los-precios-del-gas-la-luz-el-agua-y-el-transporte-en-2027/",
+          "fecha": "2026-11-20T12:59:40.637Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "Uno de los gremios se fue de la reunión y el gobierno levantó la paritaria: “No hay decisión política”",
+          "descripcion": "",
+          "url": "https://www.elentrerios.com/",
+          "fecha": "2026-11-20T04:16:29.396Z",
+          "fechaFormateada": "Hace 8 hs",
+          "fuente": "El Entre Ríos"
         },
         {
           "titulo": "Acreditaciones. La fecha de cobro de la jubilación de noviembre para DNI terminado en 7",
           "descripcion": "Los jubilados que tengan DNI con terminación en 7 tienen una fecha específica de pago, según cobren el haber mínimo, superior o una pensión",
           "url": "https://www.lanacion.com.ar/economia/calendario-anses-cuando-cobro-la-jubilacion-de-noviembre-si-mi-dni-termina-en-7-nid19112026/",
           "fecha": "2026-11-19T23:58:44.780Z",
-          "fechaFormateada": "Hace 4 hs",
+          "fechaFormateada": "Hace 13 hs",
           "fuente": "La Nación"
         },
         {
@@ -61,32 +85,8 @@
           "descripcion": "Los precios mayoristas aumentaron 1,6 en octubre",
           "url": "https://www.pagina12.com.ar/2026/11/17/la-inflacion-no-retrocede/",
           "fecha": "2026-11-19T17:24:00.316Z",
-          "fechaFormateada": "Hace 10 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Página/12"
-        },
-        {
-          "titulo": "La inflación mayorista tuvo una desaceleración en octubre y marcó 1,6%",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-19T17:23:59.989Z",
-          "fechaFormateada": "Hace 10 hs",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Créditos hipotecarios con fondos de ANSeS: 7 bancos entraron en la tercera ronda y se flexibilizaron las condiciones",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-19T17:23:59.988Z",
-          "fechaFormateada": "Hace 10 hs",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Una consultora hizo 5.000 simulaciones para estimar la inflación de 2027: cuál es la probabilidad de que perfore el 1% mensual",
-          "descripcion": "El estudio de Outlier evaluó cómo incidirían el dólar y otros precios en la dinámica previa a los comicios. El escenario central prevé una desaceleración, aunque sin seis registros consecutivos debajo de ese nivel",
-          "url": "https://www.infobae.com/economia/2026/11/19/una-consultora-hizo-5000-simulaciones-para-estimar-la-inflacion-de-2027-cual-es-la-probabilidad-de-que-perfore-el-1-mensual/",
-          "fecha": "2026-11-19T17:23:58.929Z",
-          "fechaFormateada": "Hace 10 hs",
-          "fuente": "Infobae"
         }
       ]
     },
@@ -95,18 +95,10 @@
       "nombre": "SERVICIOS Y HOGAR",
       "noticias": [
         {
-          "titulo": "Presión empresaria para que se sancione la nueva ley",
-          "descripcion": "Presión empresaria para que se sancione la nueva ley",
-          "url": "https://www.pagina12.com.ar/2026/11/19/lobby-en-favor-de-biocombustibles/",
-          "fecha": "2026-11-20T04:16:29.740Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Página/12"
-        },
-        {
           "titulo": "La aerolínea colombiana permitirá que quienes ya hayan iniciado su viaje puedan volver sin pagar una nueva tarifa; la medida al…",
           "descripcion": "La aerolínea colombiana permitirá que quienes ya hayan iniciado su viaje puedan volver sin pagar una nueva tarifa; la medida alcanzará a pasajes con fechas hasta el 2 de diciembre",
           "url": "https://www.lanacion.com.ar/economia/avianca-ofrecera-vuelos-de-regreso-a-los-pasajeros-afectados-por-la-suspension-de-plus-ultra-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.008Z",
+          "fecha": "2026-11-20T12:59:41.572Z",
           "fechaFormateada": "Ahora",
           "fuente": "La Nación"
         },
@@ -114,16 +106,48 @@
           "titulo": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sent…",
           "descripcion": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sentencia es solo para un caso, pero sienta un precedente y alienta la litigiosidad; expectativa por los pasos que seguiría el Gobierno",
           "url": "https://www.lanacion.com.ar/economia/que-podria-pasar-tras-el-fallo-de-la-corte-sobre-las-cuotas-de-las-prepagas-y-como-reacciono-el-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.006Z",
+          "fecha": "2026-11-20T12:59:41.569Z",
           "fechaFormateada": "Ahora",
           "fuente": "La Nación"
+        },
+        {
+          "titulo": "Presión empresaria para que se sancione la nueva ley",
+          "descripcion": "Presión empresaria para que se sancione la nueva ley",
+          "url": "https://www.pagina12.com.ar/2026/11/19/lobby-en-favor-de-biocombustibles/",
+          "fecha": "2026-11-20T12:59:41.419Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "Peajes automáticos: en qué rutas y autopistas ya no se podrá pagar en efectivo desde el 1° de enero",
+          "descripcion": "El proceso de automatización de los peajes a nivel nacional está en su fase final. Sin embargo, las rutas provinciales como las 2 y 11, que se usan tanto en el verano, mantendrán el cobro manual con dinero",
+          "url": "https://www.infobae.com/economia/2026/11/20/peajes-automaticos-en-que-rutas-y-autopistas-ya-no-se-podra-pagar-en-efectivo-desde-el-1-de-enero/",
+          "fecha": "2026-11-20T12:59:40.639Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "El abogado Osvaldo Bassano explicó cómo iniciar un reclamo ante la Superintendencia de Servicios de Salud, solicitar la devoluc…",
+          "descripcion": "El abogado Osvaldo Bassano explicó cómo iniciar un reclamo ante la Superintendencia de Servicios de Salud, solicitar la devolución de los montos cobrados de más y cuáles son los alcances de la sentencia de la Corte Suprema",
+          "url": "https://www.infobae.com/economia/2026/11/20/el-fallo-no-alcanza-a-todos-los-usuarios-que-pueden-reclamar-los-afiliados-a-las-prepagas-tras-la-decision-de-la-corte/",
+          "fecha": "2026-11-20T12:59:40.638Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
+        },
+        {
+          "titulo": "La luz y el gas continuarán con la misma fórmula de IPC más mayorista mientras que la boleta de agua contemplará la evolución d…",
+          "descripcion": "La luz y el gas continuarán con la misma fórmula de IPC más mayorista mientras que la boleta de agua contemplará la evolución de los salarios para los ajustes. En el caso de los colectivos en la Ciudad aún se espera por una audiencia de diciembre",
+          "url": "https://www.infobae.com/economia/2026/11/20/inflacion-y-elecciones-como-van-a-aumentar-los-precios-del-gas-la-luz-el-agua-y-el-transporte-en-2027/",
+          "fecha": "2026-11-20T12:59:40.637Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Infobae"
         },
         {
           "titulo": "Sin el mecanismo de amortiguación de YPF, un litro de nafta costaría casi $3.000: cuándo y cómo podría bajar el combustible",
           "descripcion": "Un análisis del IARAF muestra que el mecanismo de amortiguación evitó subas de hasta el 57% en el peor momento de la crisis del crudo, mientras la baja en los surtidores depende de condiciones que todavía no se cumplen",
           "url": "https://www.infobae.com/economia/2026/11/19/sin-el-mecanismo-de-amortiguacion-de-ypf-un-litro-de-nafta-costaria-casi-3000-cuando-y-como-podria-bajar-el-combustible/",
           "fecha": "2026-11-20T04:16:28.782Z",
-          "fechaFormateada": "Ahora",
+          "fechaFormateada": "Hace 8 hs",
           "fuente": "Infobae"
         },
         {
@@ -131,7 +155,7 @@
           "descripcion": "La Unión Argentina de Salud cuestionó la decisión que restituyó el control estatal sobre las cuotas y aseguró que podría haber reclamos retroactivos. Hugo Magonza, titular de la entidad, advirtió que la medida incrementará la judicialización, agravará las dificultades financieras del sector y puede afectar las prestaci",
           "url": "https://www.infobae.com/economia/2026/11/19/las-prepagas-criticaron-el-fallo-contra-los-aumentos-libres-estan-matando-al-sistema-la-gente-se-va-a-quedar-sin-cobertura/",
           "fecha": "2026-11-20T04:16:28.780Z",
-          "fechaFormateada": "Ahora",
+          "fechaFormateada": "Hace 8 hs",
           "fuente": "Infobae"
         },
         {
@@ -139,7 +163,7 @@
           "descripcion": "Autopistas del Sol (AuSol) y Autopistas del Oeste (AuOeste) confirmaron que dejarán de aceptar pagos en efectivo; desde cuándo regirá la medida y cuáles serán los medios de pago habilitados",
           "url": "https://www.lanacion.com.ar/autos/chau-efectivo-dejaran-de-aceptar-este-medio-de-pago-en-varias-autopistas-de-la-provincia-de-buenos-nid19112026/",
           "fecha": "2026-11-19T23:58:44.778Z",
-          "fechaFormateada": "Hace 4 hs",
+          "fechaFormateada": "Hace 13 hs",
           "fuente": "La Nación"
         },
         {
@@ -147,32 +171,8 @@
           "descripcion": "La Corte Suprema declaró inconstitucionales dos artículos del DNU 70/23 que habían liberado los precios de los planes de salud.",
           "url": "https://www.pagina12.com.ar/2026/11/19/las-prepagas-ya-no-podran-aumentar-las-cuotas-sin-autorizacion-del-gobierno/",
           "fecha": "2026-11-19T22:30:53.708Z",
-          "fechaFormateada": "Hace 5 hs",
+          "fechaFormateada": "Hace 14 hs",
           "fuente": "Página/12"
-        },
-        {
-          "titulo": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; la sentencia tiene impacto s…",
-          "descripcion": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; la sentencia tiene impacto solo para un caso en particular, pero sienta un precedente y alentaría la litigiosidad; expectativa por los pasos que seguiría el Gobierno",
-          "url": "https://www.lanacion.com.ar/economia/que-podria-pasar-tras-el-fallo-de-la-corte-sobre-las-cuotas-de-las-prepagas-y-como-reacciono-el-nid19112026/",
-          "fecha": "2026-11-19T22:30:52.098Z",
-          "fechaFormateada": "Hace 5 hs",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "Vino al Parque 2026: el último brindis del año llega con música y gastronomía a Bogotá",
-          "descripcion": "El festival celebrará su novena edición del 27 al 29 de noviembre, con más de 1.100 referencias de vino, catas, gastronomía y música en vivo",
-          "url": "https://www.infobae.com/america/inhouse/2026/11/19/vino-al-parque-2026-el-ultimo-brindis-del-ano-llega-con-musica-y-gastronomia-a-bogota/",
-          "fecha": "2026-11-19T17:23:58.931Z",
-          "fechaFormateada": "Hace 10 hs",
-          "fuente": "Infobae"
-        },
-        {
-          "titulo": "El procedimiento unifica criterios en todo el país, ordena las obligaciones de exportadores, importadores y empresas aplicadora…",
-          "descripcion": "El procedimiento unifica criterios en todo el país, ordena las obligaciones de exportadores, importadores y empresas aplicadoras, y refuerza la seguridad en depósitos, contenedores y buques",
-          "url": "https://www.infobae.com/movant/2026/11/18/nuevas-reglas-para-las-fumigaciones-oficiales-de-cargas-en-el-comercio-exterior-argentino/",
-          "fecha": "2026-11-19T17:23:58.930Z",
-          "fechaFormateada": "Hace 10 hs",
-          "fuente": "Infobae"
         }
       ]
     },
@@ -181,26 +181,10 @@
       "nombre": "CONSUMO MASIVO",
       "noticias": [
         {
-          "titulo": "Las comisiones de Salud y de Prevención de Consumos Problemáticos de Diputados acordaron avanzar en campañas de concientización…",
-          "descripcion": "Las comisiones de Salud y de Prevención de Consumos Problemáticos de Diputados acordaron avanzar en campañas de concientización, controles de la venta a menores de edad y herramientas para regular el delivery. El debate también expuso dificultades del sistema provincial para garantizar el seguimiento de quienes necesit",
-          "url": "https://www.pagina12.com.ar/2026/11/20/coordinan-acciones-para-prevenir-el-consumo-de-alcohol-en-adolescentes/",
-          "fecha": "2026-11-20T04:16:29.741Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "Vivir y trabajar frente al río. Invertirán US$45 millones en un edificio inspirado en Bulgaria con descuentos del 50% en sus al…",
-          "descripcion": "El emprendimiento ubicado en Uruguay combinará 200 habitaciones, coworking y espacios comunes para que los empleados de una empresa convivan bajo el mismo techo",
-          "url": "https://www.lanacion.com.ar/propiedades/inmuebles-comerciales/un-proyecto-de-us45-millones-de-inversion-sobre-el-rio-inspirado-en-bulgaria-con-departamentos-que-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.009Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "La Nación"
-        },
-        {
           "titulo": "Encuestas oficiales. De cara a 2027: las expectativas de la industria siguen en rojo, pero mejoran las de los supermercados",
           "descripcion": "Con vistas al año electoral, las fábricas prevén menos producción y empleo; las grandes cadenas proyectan una mejora; la falta de demanda, el principal escollo",
           "url": "https://www.lanacion.com.ar/economia/de-cara-a-2027-las-expectativas-de-la-industria-siguen-en-rojo-pero-mejoran-las-de-los-supermercados-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.007Z",
+          "fecha": "2026-11-20T12:59:41.570Z",
           "fechaFormateada": "Ahora",
           "fuente": "La Nación"
         },
@@ -208,8 +192,32 @@
           "titulo": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sent…",
           "descripcion": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sentencia es solo para un caso, pero sienta un precedente y alienta la litigiosidad; expectativa por los pasos que seguiría el Gobierno",
           "url": "https://www.lanacion.com.ar/economia/que-podria-pasar-tras-el-fallo-de-la-corte-sobre-las-cuotas-de-las-prepagas-y-como-reacciono-el-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.006Z",
+          "fecha": "2026-11-20T12:59:41.569Z",
           "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Mercado Libre avanza en consumo masivo: cerró un acuerdo con Carrefour y promete entregas en 45 minutos",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-20T12:59:40.854Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Las comisiones de Salud y de Prevención de Consumos Problemáticos de Diputados acordaron avanzar en campañas de concientización…",
+          "descripcion": "Las comisiones de Salud y de Prevención de Consumos Problemáticos de Diputados acordaron avanzar en campañas de concientización, controles de la venta a menores de edad y herramientas para regular el delivery. El debate también expuso dificultades del sistema provincial para garantizar el seguimiento de quienes necesit",
+          "url": "https://www.pagina12.com.ar/2026/11/20/coordinan-acciones-para-prevenir-el-consumo-de-alcohol-en-adolescentes/",
+          "fecha": "2026-11-20T04:16:29.741Z",
+          "fechaFormateada": "Hace 8 hs",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "Vivir y trabajar frente al río. Invertirán US$45 millones en un edificio inspirado en Bulgaria con descuentos del 50% en sus al…",
+          "descripcion": "El emprendimiento ubicado en Uruguay combinará 200 habitaciones, coworking y espacios comunes para que los empleados de una empresa convivan bajo el mismo techo",
+          "url": "https://www.lanacion.com.ar/propiedades/inmuebles-comerciales/un-proyecto-de-us45-millones-de-inversion-sobre-el-rio-inspirado-en-bulgaria-con-departamentos-que-nid19112026/",
+          "fecha": "2026-11-20T04:16:29.009Z",
+          "fechaFormateada": "Hace 8 hs",
           "fuente": "La Nación"
         },
         {
@@ -217,23 +225,15 @@
           "descripcion": "Las 25.254 operaciones inscriptas retrocedieron 6,5% respecto de septiembre, aunque elevaron a casi el 55% la cuota sobre los patentamientos de vehículos nuevos, su mayor nivel de 2026.",
           "url": "https://www.infobae.com/economia/2026/11/19/financiacion-de-autos-0-km-en-octubre-hubo-menos-operaciones-pero-crecio-la-proporcion-dentro-de-las-ventas-totales/",
           "fecha": "2026-11-20T04:16:28.782Z",
-          "fechaFormateada": "Ahora",
+          "fechaFormateada": "Hace 8 hs",
           "fuente": "Infobae"
-        },
-        {
-          "titulo": "Mercado Libre avanza en consumo masivo: cerró un acuerdo con Carrefour y promete entregas en 45 minutos",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-20T04:16:28.665Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
         },
         {
           "titulo": "Ya cerraron 9.350 pymes y empresas en la Provincia y más de 32.000 en todo el país",
           "descripcion": "El ministro de Economía bonaerense expuso la crisis productiva y laboral bajo el gobierno de Javier Milei. Además, mostró que desde noviembre de 2023 también se perdieron 386.232 empleos asalariados registrados, de los cuales más de 108.000 corresponden al sector privado bonaerense.",
           "url": "https://www.pagina12.com.ar/2026/11/19/ya-cerraron-9350-pymes-y-empresas-en-la-provincia-y-mas-de-32000-en-todo-el-pais/",
           "fecha": "2026-11-19T23:58:45.296Z",
-          "fechaFormateada": "Hace 4 hs",
+          "fechaFormateada": "Hace 13 hs",
           "fuente": "Página/12"
         },
         {
@@ -241,7 +241,7 @@
           "descripcion": "La Corte Suprema declaró inconstitucionales dos artículos del DNU 70/23 que habían liberado los precios de los planes de salud.",
           "url": "https://www.pagina12.com.ar/2026/11/19/las-prepagas-ya-no-podran-aumentar-las-cuotas-sin-autorizacion-del-gobierno/",
           "fecha": "2026-11-19T22:30:53.708Z",
-          "fechaFormateada": "Hace 5 hs",
+          "fechaFormateada": "Hace 14 hs",
           "fuente": "Página/12"
         },
         {
@@ -249,7 +249,7 @@
           "descripcion": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; la sentencia tiene impacto solo para un caso en particular, pero sienta un precedente y alentaría la litigiosidad; expectativa por los pasos que seguiría el Gobierno",
           "url": "https://www.lanacion.com.ar/economia/que-podria-pasar-tras-el-fallo-de-la-corte-sobre-las-cuotas-de-las-prepagas-y-como-reacciono-el-nid19112026/",
           "fecha": "2026-11-19T22:30:52.098Z",
-          "fechaFormateada": "Hace 5 hs",
+          "fechaFormateada": "Hace 14 hs",
           "fuente": "La Nación"
         },
         {
@@ -257,7 +257,7 @@
           "descripcion": "El procedimiento unifica criterios en todo el país, ordena las obligaciones de exportadores, importadores y empresas aplicadoras, y refuerza la seguridad en depósitos, contenedores y buques",
           "url": "https://www.infobae.com/movant/2026/11/18/nuevas-reglas-para-las-fumigaciones-oficiales-de-cargas-en-el-comercio-exterior-argentino/",
           "fecha": "2026-11-19T17:23:58.930Z",
-          "fechaFormateada": "Hace 10 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "Infobae"
         }
       ]
@@ -267,42 +267,10 @@
       "nombre": "GOBIERNO",
       "noticias": [
         {
-          "titulo": "Advierten por el agujero de dólares para 2027",
-          "descripcion": "Las proyecciones son similares: al Gobierno le faltan entre 17.000 y 20.000 millones de dólares para cubrir los vencimientos de deuda estimados para el año electoral.",
-          "url": "https://www.pagina12.com.ar/2026/11/18/advierten-por-el-agujero-de-dolares-para-2027/",
-          "fecha": "2026-11-20T04:16:29.741Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "Uno de los gremios se fue de la reunión y el gobierno levantó la paritaria: “No hay decisión política”",
-          "descripcion": "",
-          "url": "https://www.elentrerios.com/",
-          "fecha": "2026-11-20T04:16:29.396Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "El Entre Ríos"
-        },
-        {
-          "titulo": "Mercados. El riesgo país trepó hasta los 930 puntos y el dólar alcanzó su valor más alto del año",
-          "descripcion": "El tipo de cambio minorista anotó su segundo avance consecutivo y operó a $1585; el indicador elaborado por JP Morgan saltó más de 80 unidades, mientras que las acciones argentinas cayeron hasta 10% en Wall Street",
-          "url": "https://www.lanacion.com.ar/economia/el-dolar-volvio-a-subir-hasta-su-valor-mas-alto-del-ano-y-el-riesgo-pais-roza-los-900-puntos-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.008Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "La Nación"
-        },
-        {
           "titulo": "La empresa que manejó la terminal durante más de 30 años denunció que le copiaron su viejo proyecto; el Ejecutivo dijo que no s…",
           "descripcion": "La empresa que manejó la terminal durante más de 30 años denunció que le copiaron su viejo proyecto; el Ejecutivo dijo que no se exige originalidad y que la autoría se discute entre privados",
           "url": "https://www.lanacion.com.ar/economia/polemica-y-denuncia-de-robo-de-planos-el-gobierno-blindo-la-iniciativa-de-havanna-para-retiro-pero-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.008Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "La Nación"
-        },
-        {
-          "titulo": "La billetera de Milei. Sin déficit, pero con menos colchón: el Gobierno resignó $7,5 billones de superávit para pagar jubilacio…",
-          "descripcion": "El decreto 1391, publicado hoy, sumó $15,6 billones de gasto y $8,1 billones de recursos; los fondos salen de la caja de reserva del Tesoro Nacional",
-          "url": "https://www.lanacion.com.ar/economia/sin-deficit-pero-con-menos-colchon-el-gobierno-resigno-75-billones-de-superavit-para-pagar-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.007Z",
+          "fecha": "2026-11-20T12:59:41.572Z",
           "fechaFormateada": "Ahora",
           "fuente": "La Nación"
         },
@@ -310,54 +278,300 @@
           "titulo": "Bonos en pesos y Cedears. Qué inversiones le ganan a la inflación en lo que va de 2026",
           "descripcion": "Analistas financieros destacaron el desempeño de bonos en pesos y algunas acciones que lograron rendimientos reales positivos frente a la suba de precios",
           "url": "https://www.lanacion.com.ar/economia/que-inversiones-le-ganan-a-la-inflacion-en-lo-que-va-de-2026-nid19112026/",
-          "fecha": "2026-11-20T04:16:29.007Z",
+          "fecha": "2026-11-20T12:59:41.571Z",
           "fechaFormateada": "Ahora",
           "fuente": "La Nación"
         },
         {
-          "titulo": "Las acciones y los bonos argentinos volvieron a caer muy fuerte y el riesgo país superó los 900 puntos básicos",
-          "descripcion": "El MSCI Merval cedió 2% y las acciones y ADR argentinos se hundieron hasta 10% en Wall Street. Los títulos públicos en dólares cayeron 3% y el indicador de JP Morgan escaló 80 unidades",
-          "url": "https://www.infobae.com/economia/2026/11/19/las-acciones-y-los-bonos-argentinos-vuelven-a-caer-y-el-riesgo-pais-escala-a-876-puntos/",
-          "fecha": "2026-11-20T04:16:28.782Z",
+          "titulo": "Mercados. El riesgo país trepó hasta los 930 puntos y el dólar alcanzó su valor más alto del año",
+          "descripcion": "El tipo de cambio minorista anotó su segundo avance consecutivo y operó a $1585; el indicador elaborado por JP Morgan saltó más de 80 unidades, mientras que las acciones argentinas cayeron hasta 10% en Wall Street",
+          "url": "https://www.lanacion.com.ar/economia/el-dolar-volvio-a-subir-hasta-su-valor-mas-alto-del-ano-y-el-riesgo-pais-roza-los-900-puntos-nid19112026/",
+          "fecha": "2026-11-20T12:59:41.571Z",
           "fechaFormateada": "Ahora",
-          "fuente": "Infobae"
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "La billetera de Milei. Sin déficit, pero con menos colchón: el Gobierno resignó $7,5 billones de superávit para pagar jubilacio…",
+          "descripcion": "El decreto 1391, publicado hoy, sumó $15,6 billones de gasto y $8,1 billones de recursos; los fondos salen de la caja de reserva del Tesoro Nacional",
+          "url": "https://www.lanacion.com.ar/economia/sin-deficit-pero-con-menos-colchon-el-gobierno-resigno-75-billones-de-superavit-para-pagar-nid19112026/",
+          "fecha": "2026-11-20T12:59:41.570Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "La Nación"
+        },
+        {
+          "titulo": "Advierten por el agujero de dólares para 2027",
+          "descripcion": "Las proyecciones son similares: al Gobierno le faltan entre 17.000 y 20.000 millones de dólares para cubrir los vencimientos de deuda estimados para el año electoral.",
+          "url": "https://www.pagina12.com.ar/2026/11/18/advierten-por-el-agujero-de-dolares-para-2027/",
+          "fecha": "2026-11-20T12:59:41.421Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "¿Vuelve la brecha cambiaria? La diferencia entre el dólar oficial y el financiero está en su máximo en un año",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-20T12:59:40.871Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "El dólar en Brasil subió 19%: crece la demanda de viajes para el verano y advierten por el impacto comercial",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-20T12:59:40.854Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Rojo en los mercados globales: se hundieron los bonos argentinos y el riesgo país volvió a los 930 puntos",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-20T12:59:40.851Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
         },
         {
           "titulo": "El dólar volvió a subir, las acciones argentinas se hundieron hasta 10% en Wall Street y el riesgo país escaló 80 puntos",
           "descripcion": "Pese al debut de Anthropic, que ganó 17%, los índices de Wall Street cayeron más de 2 por ciento. El MSCI Merval cedió también 2% y los bonos en dólares perdieron 3 por ciento. El indicador de JP Morgan subió a 931 puntos. El dólar marcó precios récord",
           "url": "https://www.infobae.com/economia/2026/11/19/las-acciones-argentinas-se-hundieron-hasta-10-en-wall-street-y-el-riesgo-pais-escalo-80-puntos/",
-          "fecha": "2026-11-20T04:16:28.780Z",
+          "fecha": "2026-11-20T12:59:40.654Z",
           "fechaFormateada": "Ahora",
           "fuente": "Infobae"
         },
         {
-          "titulo": "La volatilidad externa, la fortaleza del dólar y las tensiones cambiarias internas llevaron al indicador a 931 puntos básicos, …",
-          "descripcion": "La volatilidad externa, la fortaleza del dólar y las tensiones cambiarias internas llevaron al indicador a 931 puntos básicos, pese a las expectativas que había generado el avance legislativo sobre las PASO",
-          "url": "https://www.infobae.com/economia/2026/11/19/el-riesgo-pais-se-disparo-casi-10-que-factores-explican-la-nueva-escalada/",
-          "fecha": "2026-11-20T04:16:28.779Z",
+          "titulo": "La suba del indicador de JP Morgan ahora sí le pasó factura al tipo de cambio. El oficial quedó como el más barato luego de cer…",
+          "descripcion": "La suba del indicador de JP Morgan ahora sí le pasó factura al tipo de cambio. El oficial quedó como el más barato luego de cerrar a $1.585. Expectativa por el vencimiento de $25 billones que debe afrontar el Tesoro la semana próxima",
+          "url": "https://www.infobae.com/economia/2026/11/20/el-riesgo-pais-contagia-al-dolar-crece-la-brecha-cambiaria-y-amenaza-con-encarecer-las-tasas-y-golpear-a-la-actividad/",
+          "fecha": "2026-11-20T12:59:40.653Z",
           "fechaFormateada": "Ahora",
           "fuente": "Infobae"
-        },
-        {
-          "titulo": "Domingo Cavallo fue a la UBA y dijo que el Gobierno “se equivoca” con el dólar y el cepo",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-20T04:16:28.670Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
         }
       ]
     }
   ],
   "noticias": [
     {
+      "titulo": "La aerolínea colombiana permitirá que quienes ya hayan iniciado su viaje puedan volver sin pagar una nueva tarifa; la medida al…",
+      "descripcion": "La aerolínea colombiana permitirá que quienes ya hayan iniciado su viaje puedan volver sin pagar una nueva tarifa; la medida alcanzará a pasajes con fechas hasta el 2 de diciembre",
+      "url": "https://www.lanacion.com.ar/economia/avianca-ofrecera-vuelos-de-regreso-a-los-pasajeros-afectados-por-la-suspension-de-plus-ultra-nid19112026/",
+      "fecha": "2026-11-20T12:59:41.572Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo",
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "La empresa que manejó la terminal durante más de 30 años denunció que le copiaron su viejo proyecto; el Ejecutivo dijo que no s…",
+      "descripcion": "La empresa que manejó la terminal durante más de 30 años denunció que le copiaron su viejo proyecto; el Ejecutivo dijo que no se exige originalidad y que la autoría se discute entre privados",
+      "url": "https://www.lanacion.com.ar/economia/polemica-y-denuncia-de-robo-de-planos-el-gobierno-blindo-la-iniciativa-de-havanna-para-retiro-pero-nid19112026/",
+      "fecha": "2026-11-20T12:59:41.572Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Bonos en pesos y Cedears. Qué inversiones le ganan a la inflación en lo que va de 2026",
+      "descripcion": "Analistas financieros destacaron el desempeño de bonos en pesos y algunas acciones que lograron rendimientos reales positivos frente a la suba de precios",
+      "url": "https://www.lanacion.com.ar/economia/que-inversiones-le-ganan-a-la-inflacion-en-lo-que-va-de-2026-nid19112026/",
+      "fecha": "2026-11-20T12:59:41.571Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "poder_adquisitivo",
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Mercados. El riesgo país trepó hasta los 930 puntos y el dólar alcanzó su valor más alto del año",
+      "descripcion": "El tipo de cambio minorista anotó su segundo avance consecutivo y operó a $1585; el indicador elaborado por JP Morgan saltó más de 80 unidades, mientras que las acciones argentinas cayeron hasta 10% en Wall Street",
+      "url": "https://www.lanacion.com.ar/economia/el-dolar-volvio-a-subir-hasta-su-valor-mas-alto-del-ano-y-el-riesgo-pais-roza-los-900-puntos-nid19112026/",
+      "fecha": "2026-11-20T12:59:41.571Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "La billetera de Milei. Sin déficit, pero con menos colchón: el Gobierno resignó $7,5 billones de superávit para pagar jubilacio…",
+      "descripcion": "El decreto 1391, publicado hoy, sumó $15,6 billones de gasto y $8,1 billones de recursos; los fondos salen de la caja de reserva del Tesoro Nacional",
+      "url": "https://www.lanacion.com.ar/economia/sin-deficit-pero-con-menos-colchon-el-gobierno-resigno-75-billones-de-superavit-para-pagar-nid19112026/",
+      "fecha": "2026-11-20T12:59:41.570Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Encuestas oficiales. De cara a 2027: las expectativas de la industria siguen en rojo, pero mejoran las de los supermercados",
+      "descripcion": "Con vistas al año electoral, las fábricas prevén menos producción y empleo; las grandes cadenas proyectan una mejora; la falta de demanda, el principal escollo",
+      "url": "https://www.lanacion.com.ar/economia/de-cara-a-2027-las-expectativas-de-la-industria-siguen-en-rojo-pero-mejoran-las-de-los-supermercados-nid19112026/",
+      "fecha": "2026-11-20T12:59:41.570Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sent…",
+      "descripcion": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sentencia es solo para un caso, pero sienta un precedente y alienta la litigiosidad; expectativa por los pasos que seguiría el Gobierno",
+      "url": "https://www.lanacion.com.ar/economia/que-podria-pasar-tras-el-fallo-de-la-corte-sobre-las-cuotas-de-las-prepagas-y-como-reacciono-el-nid19112026/",
+      "fecha": "2026-11-20T12:59:41.569Z",
+      "fuente": "La Nación",
+      "categorias": [
+        "servicios_hogar",
+        "consumo_masivo"
+      ]
+    },
+    {
       "titulo": "Advierten por el agujero de dólares para 2027",
       "descripcion": "Las proyecciones son similares: al Gobierno le faltan entre 17.000 y 20.000 millones de dólares para cubrir los vencimientos de deuda estimados para el año electoral.",
       "url": "https://www.pagina12.com.ar/2026/11/18/advierten-por-el-agujero-de-dolares-para-2027/",
-      "fecha": "2026-11-20T04:16:29.741Z",
+      "fecha": "2026-11-20T12:59:41.421Z",
       "fuente": "Página/12",
       "categorias": [
         "gobierno"
+      ]
+    },
+    {
+      "titulo": "Presión empresaria para que se sancione la nueva ley",
+      "descripcion": "Presión empresaria para que se sancione la nueva ley",
+      "url": "https://www.pagina12.com.ar/2026/11/19/lobby-en-favor-de-biocombustibles/",
+      "fecha": "2026-11-20T12:59:41.419Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "600 mil cuentas sueldo destruidas",
+      "descripcion": "Nuevo indicador preocupante: desde diciembre de 2024 desaparecieron más de 600 mil cuentas sueldo de los bancos.",
+      "url": "https://www.pagina12.com.ar/2026/11/19/600-mil-cuentas-sueldo-destruidas/",
+      "fecha": "2026-11-20T12:59:41.418Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "¿Vuelve la brecha cambiaria? La diferencia entre el dólar oficial y el financiero está en su máximo en un año",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-20T12:59:40.871Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Mercado Libre avanza en consumo masivo: cerró un acuerdo con Carrefour y promete entregas en 45 minutos",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-20T12:59:40.854Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "consumo_masivo"
+      ]
+    },
+    {
+      "titulo": "El dólar en Brasil subió 19%: crece la demanda de viajes para el verano y advierten por el impacto comercial",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-20T12:59:40.854Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Rojo en los mercados globales: se hundieron los bonos argentinos y el riesgo país volvió a los 930 puntos",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-20T12:59:40.851Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "¿Cómo bajar rápidamente la inflación y el riesgo país",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-20T12:59:40.850Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Crisis en la principal fábrica de tractores nacionales: Pauny ofreció un plan de pagos de salarios atrasados y reanudar la acti…",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-20T12:59:40.848Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "Un informe regional advierte sobre la precariedad del sistema previsional nicaragüense, donde la informalidad laboral masiva y …",
+      "descripcion": "Un informe regional advierte sobre la precariedad del sistema previsional nicaragüense, donde la informalidad laboral masiva y los ajustes recientes impiden que la población de mayor edad cuente con un retiro digno",
+      "url": "https://www.infobae.com/nicaragua/2026/11/20/nicaragua-figura-entre-los-paises-mas-rezagados-de-america-latina-en-cobertura-de-pensiones/",
+      "fecha": "2026-11-20T12:59:40.657Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "poder_adquisitivo"
+      ]
+    },
+    {
+      "titulo": "El dólar volvió a subir, las acciones argentinas se hundieron hasta 10% en Wall Street y el riesgo país escaló 80 puntos",
+      "descripcion": "Pese al debut de Anthropic, que ganó 17%, los índices de Wall Street cayeron más de 2 por ciento. El MSCI Merval cedió también 2% y los bonos en dólares perdieron 3 por ciento. El indicador de JP Morgan subió a 931 puntos. El dólar marcó precios récord",
+      "url": "https://www.infobae.com/economia/2026/11/19/las-acciones-argentinas-se-hundieron-hasta-10-en-wall-street-y-el-riesgo-pais-escalo-80-puntos/",
+      "fecha": "2026-11-20T12:59:40.654Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "La suba del indicador de JP Morgan ahora sí le pasó factura al tipo de cambio. El oficial quedó como el más barato luego de cer…",
+      "descripcion": "La suba del indicador de JP Morgan ahora sí le pasó factura al tipo de cambio. El oficial quedó como el más barato luego de cerrar a $1.585. Expectativa por el vencimiento de $25 billones que debe afrontar el Tesoro la semana próxima",
+      "url": "https://www.infobae.com/economia/2026/11/20/el-riesgo-pais-contagia-al-dolar-crece-la-brecha-cambiaria-y-amenaza-con-encarecer-las-tasas-y-golpear-a-la-actividad/",
+      "fecha": "2026-11-20T12:59:40.653Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "gobierno"
+      ]
+    },
+    {
+      "titulo": "Peajes automáticos: en qué rutas y autopistas ya no se podrá pagar en efectivo desde el 1° de enero",
+      "descripcion": "El proceso de automatización de los peajes a nivel nacional está en su fase final. Sin embargo, las rutas provinciales como las 2 y 11, que se usan tanto en el verano, mantendrán el cobro manual con dinero",
+      "url": "https://www.infobae.com/economia/2026/11/20/peajes-automaticos-en-que-rutas-y-autopistas-ya-no-se-podra-pagar-en-efectivo-desde-el-1-de-enero/",
+      "fecha": "2026-11-20T12:59:40.639Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "El abogado Osvaldo Bassano explicó cómo iniciar un reclamo ante la Superintendencia de Servicios de Salud, solicitar la devoluc…",
+      "descripcion": "El abogado Osvaldo Bassano explicó cómo iniciar un reclamo ante la Superintendencia de Servicios de Salud, solicitar la devolución de los montos cobrados de más y cuáles son los alcances de la sentencia de la Corte Suprema",
+      "url": "https://www.infobae.com/economia/2026/11/20/el-fallo-no-alcanza-a-todos-los-usuarios-que-pueden-reclamar-los-afiliados-a-las-prepagas-tras-la-decision-de-la-corte/",
+      "fecha": "2026-11-20T12:59:40.638Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "servicios_hogar"
+      ]
+    },
+    {
+      "titulo": "La luz y el gas continuarán con la misma fórmula de IPC más mayorista mientras que la boleta de agua contemplará la evolución d…",
+      "descripcion": "La luz y el gas continuarán con la misma fórmula de IPC más mayorista mientras que la boleta de agua contemplará la evolución de los salarios para los ajustes. En el caso de los colectivos en la Ciudad aún se espera por una audiencia de diciembre",
+      "url": "https://www.infobae.com/economia/2026/11/20/inflacion-y-elecciones-como-van-a-aumentar-los-precios-del-gas-la-luz-el-agua-y-el-transporte-en-2027/",
+      "fecha": "2026-11-20T12:59:40.637Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "poder_adquisitivo",
+        "servicios_hogar"
       ]
     },
     {
@@ -371,34 +585,13 @@
       ]
     },
     {
-      "titulo": "600 mil cuentas sueldo destruidas",
-      "descripcion": "Nuevo indicador preocupante: desde diciembre de 2024 desaparecieron más de 600 mil cuentas sueldo de los bancos.",
-      "url": "https://www.pagina12.com.ar/2026/11/19/600-mil-cuentas-sueldo-destruidas/",
-      "fecha": "2026-11-20T04:16:29.740Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "Presión empresaria para que se sancione la nueva ley",
-      "descripcion": "Presión empresaria para que se sancione la nueva ley",
-      "url": "https://www.pagina12.com.ar/2026/11/19/lobby-en-favor-de-biocombustibles/",
-      "fecha": "2026-11-20T04:16:29.740Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
       "titulo": "Uno de los gremios se fue de la reunión y el gobierno levantó la paritaria: “No hay decisión política”",
       "descripcion": "",
       "url": "https://www.elentrerios.com/",
       "fecha": "2026-11-20T04:16:29.396Z",
       "fuente": "El Entre Ríos",
       "categorias": [
-        "poder_adquisitivo",
-        "gobierno"
+        "poder_adquisitivo"
       ]
     },
     {
@@ -409,89 +602,6 @@
       "fuente": "La Nación",
       "categorias": [
         "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Mercados. El riesgo país trepó hasta los 930 puntos y el dólar alcanzó su valor más alto del año",
-      "descripcion": "El tipo de cambio minorista anotó su segundo avance consecutivo y operó a $1585; el indicador elaborado por JP Morgan saltó más de 80 unidades, mientras que las acciones argentinas cayeron hasta 10% en Wall Street",
-      "url": "https://www.lanacion.com.ar/economia/el-dolar-volvio-a-subir-hasta-su-valor-mas-alto-del-ano-y-el-riesgo-pais-roza-los-900-puntos-nid19112026/",
-      "fecha": "2026-11-20T04:16:29.008Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "La aerolínea colombiana permitirá que quienes ya hayan iniciado su viaje puedan volver sin pagar una nueva tarifa; la medida al…",
-      "descripcion": "La aerolínea colombiana permitirá que quienes ya hayan iniciado su viaje puedan volver sin pagar una nueva tarifa; la medida alcanzará a pasajes con fechas hasta el 2 de diciembre",
-      "url": "https://www.lanacion.com.ar/economia/avianca-ofrecera-vuelos-de-regreso-a-los-pasajeros-afectados-por-la-suspension-de-plus-ultra-nid19112026/",
-      "fecha": "2026-11-20T04:16:29.008Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "poder_adquisitivo",
-        "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "La empresa que manejó la terminal durante más de 30 años denunció que le copiaron su viejo proyecto; el Ejecutivo dijo que no s…",
-      "descripcion": "La empresa que manejó la terminal durante más de 30 años denunció que le copiaron su viejo proyecto; el Ejecutivo dijo que no se exige originalidad y que la autoría se discute entre privados",
-      "url": "https://www.lanacion.com.ar/economia/polemica-y-denuncia-de-robo-de-planos-el-gobierno-blindo-la-iniciativa-de-havanna-para-retiro-pero-nid19112026/",
-      "fecha": "2026-11-20T04:16:29.008Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "La billetera de Milei. Sin déficit, pero con menos colchón: el Gobierno resignó $7,5 billones de superávit para pagar jubilacio…",
-      "descripcion": "El decreto 1391, publicado hoy, sumó $15,6 billones de gasto y $8,1 billones de recursos; los fondos salen de la caja de reserva del Tesoro Nacional",
-      "url": "https://www.lanacion.com.ar/economia/sin-deficit-pero-con-menos-colchon-el-gobierno-resigno-75-billones-de-superavit-para-pagar-nid19112026/",
-      "fecha": "2026-11-20T04:16:29.007Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Encuestas oficiales. De cara a 2027: las expectativas de la industria siguen en rojo, pero mejoran las de los supermercados",
-      "descripcion": "Con vistas al año electoral, las fábricas prevén menos producción y empleo; las grandes cadenas proyectan una mejora; la falta de demanda, el principal escollo",
-      "url": "https://www.lanacion.com.ar/economia/de-cara-a-2027-las-expectativas-de-la-industria-siguen-en-rojo-pero-mejoran-las-de-los-supermercados-nid19112026/",
-      "fecha": "2026-11-20T04:16:29.007Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Bonos en pesos y Cedears. Qué inversiones le ganan a la inflación en lo que va de 2026",
-      "descripcion": "Analistas financieros destacaron el desempeño de bonos en pesos y algunas acciones que lograron rendimientos reales positivos frente a la suba de precios",
-      "url": "https://www.lanacion.com.ar/economia/que-inversiones-le-ganan-a-la-inflacion-en-lo-que-va-de-2026-nid19112026/",
-      "fecha": "2026-11-20T04:16:29.007Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "poder_adquisitivo",
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sent…",
-      "descripcion": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sentencia es solo para un caso, pero sienta un precedente y alienta la litigiosidad; expectativa por los pasos que seguiría el Gobierno",
-      "url": "https://www.lanacion.com.ar/economia/que-podria-pasar-tras-el-fallo-de-la-corte-sobre-las-cuotas-de-las-prepagas-y-como-reacciono-el-nid19112026/",
-      "fecha": "2026-11-20T04:16:29.006Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "servicios_hogar",
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Las acciones y los bonos argentinos volvieron a caer muy fuerte y el riesgo país superó los 900 puntos básicos",
-      "descripcion": "El MSCI Merval cedió 2% y las acciones y ADR argentinos se hundieron hasta 10% en Wall Street. Los títulos públicos en dólares cayeron 3% y el indicador de JP Morgan escaló 80 unidades",
-      "url": "https://www.infobae.com/economia/2026/11/19/las-acciones-y-los-bonos-argentinos-vuelven-a-caer-y-el-riesgo-pais-escala-a-876-puntos/",
-      "fecha": "2026-11-20T04:16:28.782Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
       ]
     },
     {
@@ -515,16 +625,6 @@
       ]
     },
     {
-      "titulo": "El dólar volvió a subir, las acciones argentinas se hundieron hasta 10% en Wall Street y el riesgo país escaló 80 puntos",
-      "descripcion": "Pese al debut de Anthropic, que ganó 17%, los índices de Wall Street cayeron más de 2 por ciento. El MSCI Merval cedió también 2% y los bonos en dólares perdieron 3 por ciento. El indicador de JP Morgan subió a 931 puntos. El dólar marcó precios récord",
-      "url": "https://www.infobae.com/economia/2026/11/19/las-acciones-argentinas-se-hundieron-hasta-10-en-wall-street-y-el-riesgo-pais-escalo-80-puntos/",
-      "fecha": "2026-11-20T04:16:28.780Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
       "titulo": "La Unión Argentina de Salud cuestionó la decisión que restituyó el control estatal sobre las cuotas y aseguró que podría haber …",
       "descripcion": "La Unión Argentina de Salud cuestionó la decisión que restituyó el control estatal sobre las cuotas y aseguró que podría haber reclamos retroactivos. Hugo Magonza, titular de la entidad, advirtió que la medida incrementará la judicialización, agravará las dificultades financieras del sector y puede afectar las prestaci",
       "url": "https://www.infobae.com/economia/2026/11/19/las-prepagas-criticaron-el-fallo-contra-los-aumentos-libres-estan-matando-al-sistema-la-gente-se-va-a-quedar-sin-cobertura/",
@@ -532,46 +632,6 @@
       "fuente": "Infobae",
       "categorias": [
         "servicios_hogar"
-      ]
-    },
-    {
-      "titulo": "La volatilidad externa, la fortaleza del dólar y las tensiones cambiarias internas llevaron al indicador a 931 puntos básicos, …",
-      "descripcion": "La volatilidad externa, la fortaleza del dólar y las tensiones cambiarias internas llevaron al indicador a 931 puntos básicos, pese a las expectativas que había generado el avance legislativo sobre las PASO",
-      "url": "https://www.infobae.com/economia/2026/11/19/el-riesgo-pais-se-disparo-casi-10-que-factores-explican-la-nueva-escalada/",
-      "fecha": "2026-11-20T04:16:28.779Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Domingo Cavallo fue a la UBA y dijo que el Gobierno “se equivoca” con el dólar y el cepo",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-20T04:16:28.670Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ]
-    },
-    {
-      "titulo": "Mercado Libre avanza en consumo masivo: cerró un acuerdo con Carrefour y promete entregas en 45 minutos",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-20T04:16:28.665Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "¿Cómo bajar rápidamente la inflación y el riesgo país",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-20T04:16:28.663Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo"
       ]
     },
     {
@@ -622,7 +682,6 @@
       "fecha": "2026-11-19T22:30:52.098Z",
       "fuente": "La Nación",
       "categorias": [
-        "servicios_hogar",
         "consumo_masivo"
       ]
     },
@@ -637,81 +696,40 @@
       ]
     },
     {
-      "titulo": "La inflación mayorista tuvo una desaceleración en octubre y marcó 1,6%",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-19T17:23:59.989Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "Créditos hipotecarios con fondos de ANSeS: 7 bancos entraron en la tercera ronda y se flexibilizaron las condiciones",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-19T17:23:59.988Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo"
-      ]
-    },
-    {
-      "titulo": "Vino al Parque 2026: el último brindis del año llega con música y gastronomía a Bogotá",
-      "descripcion": "El festival celebrará su novena edición del 27 al 29 de noviembre, con más de 1.100 referencias de vino, catas, gastronomía y música en vivo",
-      "url": "https://www.infobae.com/america/inhouse/2026/11/19/vino-al-parque-2026-el-ultimo-brindis-del-ano-llega-con-musica-y-gastronomia-a-bogota/",
-      "fecha": "2026-11-19T17:23:58.931Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "servicios_hogar"
-      ]
-    },
-    {
       "titulo": "El procedimiento unifica criterios en todo el país, ordena las obligaciones de exportadores, importadores y empresas aplicadora…",
       "descripcion": "El procedimiento unifica criterios en todo el país, ordena las obligaciones de exportadores, importadores y empresas aplicadoras, y refuerza la seguridad en depósitos, contenedores y buques",
       "url": "https://www.infobae.com/movant/2026/11/18/nuevas-reglas-para-las-fumigaciones-oficiales-de-cargas-en-el-comercio-exterior-argentino/",
       "fecha": "2026-11-19T17:23:58.930Z",
       "fuente": "Infobae",
       "categorias": [
-        "servicios_hogar",
         "consumo_masivo"
-      ]
-    },
-    {
-      "titulo": "Una consultora hizo 5.000 simulaciones para estimar la inflación de 2027: cuál es la probabilidad de que perfore el 1% mensual",
-      "descripcion": "El estudio de Outlier evaluó cómo incidirían el dólar y otros precios en la dinámica previa a los comicios. El escenario central prevé una desaceleración, aunque sin seis registros consecutivos debajo de ese nivel",
-      "url": "https://www.infobae.com/economia/2026/11/19/una-consultora-hizo-5000-simulaciones-para-estimar-la-inflacion-de-2027-cual-es-la-probabilidad-de-que-perfore-el-1-mensual/",
-      "fecha": "2026-11-19T17:23:58.929Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "poder_adquisitivo"
       ]
     }
   ],
   "alertas": [
     {
-      "titulo": "600 mil cuentas sueldo destruidas",
+      "titulo": "La aerolínea colombiana permitirá que quienes ya hayan iniciado su viaje puedan volver sin pagar una nueva tarifa; la medida al…",
       "impacto": "PODER ADQUISITIVO",
       "tiempo": "Ahora",
-      "fuente": "Página/12"
+      "fuente": "La Nación"
     },
     {
-      "titulo": "Presión empresaria para que se sancione la nueva ley",
+      "titulo": "La aerolínea colombiana permitirá que quienes ya hayan iniciado su viaje puedan volver sin pagar una nueva tarifa; la medida al…",
       "impacto": "SERVICIOS Y HOGAR",
       "tiempo": "Ahora",
-      "fuente": "Página/12"
+      "fuente": "La Nación"
     },
     {
-      "titulo": "Las comisiones de Salud y de Prevención de Consumos Problemáticos de Diputados acordaron avanzar en campañas de concientización…",
+      "titulo": "Encuestas oficiales. De cara a 2027: las expectativas de la industria siguen en rojo, pero mejoran las de los supermercados",
       "impacto": "CONSUMO MASIVO",
       "tiempo": "Ahora",
-      "fuente": "Página/12"
+      "fuente": "La Nación"
     },
     {
-      "titulo": "Advierten por el agujero de dólares para 2027",
+      "titulo": "La empresa que manejó la terminal durante más de 30 años denunció que le copiaron su viejo proyecto; el Ejecutivo dijo que no s…",
       "impacto": "GOBIERNO",
       "tiempo": "Ahora",
-      "fuente": "Página/12"
+      "fuente": "La Nación"
     }
   ]
 }
