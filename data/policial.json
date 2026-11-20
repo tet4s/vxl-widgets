@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-19T23:49:51.011Z",
-  "timestamp_epoch": 1795132191,
-  "total_noticias": 41,
+  "last_updated": "2026-11-20T01:55:41.931Z",
+  "timestamp_epoch": 1795139741,
+  "total_noticias": 45,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 4
+      "total": 5
     },
     {
       "id": "allanamientos",
@@ -17,7 +17,7 @@
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 13
+      "total": 16
     },
     {
       "id": "causas",
@@ -32,10 +32,32 @@
   ],
   "noticias": [
     {
-      "titulo": "Poste cayó sobre motociclista en Santa Fe",
+      "titulo": "Detuvieron a un joven por robar vacunos en las islas de Victoria",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/detuvieron-a-un-joven-por-abigeato-tras-un-operativo-en-las-islas-de-victoria.htm",
+      "fecha": "2026-11-20T01:54:56.440Z",
+      "fuente": "Elonce",
+      "lugar": "Victoria",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Detuvieron a un ganadero por estafar a productores santafesinos",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/detuvieron-a-un-ganadero-acusado-de-estafar-a-productores-santafesinos-por-129-vacunos.htm",
+      "fecha": "2026-11-20T01:54:56.440Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Un poste cayó sobre un motociclista en Santa Fe",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/un-poste-cayo-sobre-un-motociclista-mientras-circulaba-en-santa-fe-y-lo-golpeo-en-la-cabeza.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "Santa Fe",
       "categorias": [
@@ -46,7 +68,7 @@
       "titulo": "Grave accidente laboral en arenera del sur entrerriano: un joven operario cayó a una fosa de cuatro metros",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/grave-accidente-laboral-en-arenera-del-sur-entrerriano-un-joven-cayo-a-una-fosa-de-cuatro-metros.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -57,7 +79,7 @@
       "titulo": "Detuvieron al extitular del Copnaf de Concordia por una causa de violencia de género",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-al-extitular-del-copnaf-de-concordia-por-una-causa-de-violencia-de-genero.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "Concordia",
       "categorias": [
@@ -68,7 +90,7 @@
       "titulo": "Detuvieron al hombre que se atrincheró en su auto para evitar que se lo llevara la grúa en Paraná",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-al-hombre-que-se-atrinchero-en-su-auto-para-evitar-que-se-lo-llevara-la-grua.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -79,7 +101,7 @@
       "titulo": "Imputaron a un padre y su hijo por robar patos en Palermo: hallaron 60 animales hacinados en su casa",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/imputaron-a-un-padre-y-su-hijo-por-robar-patos-en-palermo-hallaron-60-animales-hacinados-en-su-casa.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -90,7 +112,7 @@
       "titulo": "Allanaron una vivienda por amenazas y encontraron 159 envoltorios de cocaína",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/allanamiento-por-amenazas-hallaron-cocaina-y-hubo-tres-detenidos.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -101,7 +123,7 @@
       "titulo": "Intentó robar una camioneta, escapó en moto y fue detenido tras una persecución",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/intento-robar-una-camioneta-escapo-en-moto-y-fue-detenido.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -112,7 +134,7 @@
       "titulo": "Crimen de peón rural en Diamante: la extorsión, el asesinato y el plan para ocultar el cuerpo",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/crimen-de-jorge-wolf-extorsion-asesinato-y-dos-detenidos.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "Diamante",
       "categorias": [
@@ -123,7 +145,7 @@
       "titulo": "Lo detectaron por las cámaras y le secuestraron éxtasis, anfetaminas y cocaína en Paraná",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/demoraron-a-un-hombre-con-extasis-y-otras-drogas-en-parana.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -134,7 +156,7 @@
       "titulo": "Atacó con un cuchillo a dos policías, hirió a uno en la pierna y terminó detenido",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/ataco-con-un-cuchillo-a-dos-policias-e-hirio-a-uno.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -145,7 +167,7 @@
       "titulo": "Secuestraron 62 envoltorios de droga tras la fuga de un sospechoso por los techos",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/escapo-por-los-techos-y-abandono-62-envoltorios-de-droga.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -156,7 +178,7 @@
       "titulo": "Detuvieron a “Chuky”, acusado de amenazar con incendiar la casa de su familia",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-a-chuky-acusado-de-amenazar-con-incendiar-la-casa-de-su-familia.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -167,7 +189,7 @@
       "titulo": "Detuvieron a un hombre por violencia de género en Piedras Blancas: tenía armas y había sido denunciado por su expareja",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/violencia-genero-piedras-blancas-detenido-activista-feminista.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -178,7 +200,7 @@
       "titulo": "Robó una moto en Urdinarrain, intentó escapar de la Policía y aseguró que iba a devolverla",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/robo-moto-urdinarrain-menor-intento-escapar-policia.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "Urdinarrain",
       "categorias": [
@@ -189,7 +211,7 @@
       "titulo": "Muerte de una niña en Concordia: la Policía confirmó que hay “una exposición de la directora” de la escuela",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/muerte-de-una-nina-en-concordia-la-policia-confirmo-que-hay-una-exposicion-de-la-directora-de-la-escuela.htm",
-      "fecha": "2026-11-19T23:49:28.682Z",
+      "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "Concordia",
       "categorias": [
@@ -307,7 +329,18 @@
       ]
     },
     {
-      "titulo": "Atacaron con cuchillo a policía en Villaguay",
+      "titulo": "Investigan a un policía por un choque y fuga en Villa Adela",
+      "descripcion": "Un policía fue allanado en la jornada de este jueves, luego de que su vehículo fuera identificado como el presunto rodado que habría protagonizado un siniestro vial y luego se diera a la fuga en la zona de Villa Adela.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/investigan-un-efectivo-policial-por-un-choque-y-fuga-en-villa-adela",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
+      "titulo": "Atacaron con un cuchillo a un policía en Villaguay",
       "descripcion": "El atacante tiene 29 años y fue detenido. El agente sufrió un corte de carácter leve en la pierna derecha.",
       "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/en-villaguay-atacaron-con-un-cuchillo-un-policia",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -318,7 +351,7 @@
       ]
     },
     {
-      "titulo": "Caso Wolf: extorsión y asesinato en el campo",
+      "titulo": "Caso Jorge Wolf: extorsión y asesinato en el campo",
       "descripcion": "",
       "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/19/caso-jorge-wolf-extorsion-asesinato-en-la-oscuridad-del-campo-y-el-plan-para-descartar-el-cuerpo",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -417,6 +450,17 @@
       ]
     },
     {
+      "titulo": "Mataron a una mujer en San José, detuvieron al que la llevó al hospital",
+      "descripcion": "Una mujer de 41 años murió durante la madrugada de este martes en el hospital de San José, en el departamento Colón, y la Justicia inició una investigación para determinar las circunstancias del fallecimiento. La víctima había sido trasladada al establecimiento por un hombre que…",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/17/investigan-la-muerte-de-una-mujer-en-san-jose-detuvieron-al-hombre-que-la-llevo-sin-vida-al-hospital",
+      "fecha": "2026-11-17T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "San José",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
       "titulo": "Detuvieron a un cuatrero y secuestraron ciervos, carpinchos y un jabalí en La Paz",
       "descripcion": "Dos procedimientos policiales realizados durante la madrugada de este lunes en La Paz terminaron con un hombre detenido por presunto abigeato y la intervención de otros cuatro sujetos que transportaban animales silvestres sin vida, entre ellos dos ciervos axis, carpinchos y un j…",
       "url": "https://www.analisisdigital.com.ar/policiales/2026/11/16/detuvieron-un-cuatrero-y-secuestraron-ciervos-carpinchos-y-un-jabali-en-la-paz",
@@ -425,28 +469,6 @@
       "lugar": "La Paz",
       "categorias": [
         "allanamientos"
-      ]
-    },
-    {
-      "titulo": "Investigan un presunto abuso sexual en Federal: allanaron una vivienda y secuestraron elementos",
-      "descripcion": "Un allanamiento por presunto abuso sexual en Federal permitió el secuestro de distintos elementos considerados de interés para una investigación judicial. El procedimiento se concretó en una vivienda de la ciudad entrerriana, donde también fue identificado un joven de 24 años qu…",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/16/investigan-un-presunto-abuso-sexual-en-federal-allanaron-una-vivienda-y-secuestraron-elementos",
-      "fecha": "2026-11-16T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Federal",
-      "categorias": [
-        "allanamientos"
-      ]
-    },
-    {
-      "titulo": "Hubo un intento de femicidio seguido de suicidio el fin de semana en Colón",
-      "descripcion": "La mujer fue intervenida quirúrgicamente en el Hospital San Benjamín de Colón y permanece internada en sala común, sin riesgo de vida.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/16/hubo-un-intento-de-femicidio-seguido-de-suicidio-el-fin-de-semana-en-colon",
-      "fecha": "2026-11-16T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Colón",
-      "categorias": [
-        "hechos"
       ]
     },
     {
@@ -467,6 +489,28 @@
       "fecha": "2026-11-16T15:00:00.000Z",
       "fuente": "APF Digital",
       "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Investigan un presunto abuso sexual en Federal: allanaron una vivienda y secuestraron elementos",
+      "descripcion": "Un allanamiento por presunto abuso sexual en Federal permitió el secuestro de distintos elementos considerados de interés para una investigación judicial. El procedimiento se concretó en una vivienda de la ciudad entrerriana, donde también fue identificado un joven de 24 años qu…",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/16/investigan-un-presunto-abuso-sexual-en-federal-allanaron-una-vivienda-y-secuestraron-elementos",
+      "fecha": "2026-11-16T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Federal",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Hubo un intento de femicidio seguido de suicidio el fin de semana en Colón",
+      "descripcion": "La mujer fue intervenida quirúrgicamente en el Hospital San Benjamín de Colón y permanece internada en sala común, sin riesgo de vida.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/16/hubo-un-intento-de-femicidio-seguido-de-suicidio-el-fin-de-semana-en-colon",
+      "fecha": "2026-11-16T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Colón",
       "categorias": [
         "hechos"
       ]
