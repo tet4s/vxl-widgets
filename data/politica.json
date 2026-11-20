@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-20T20:41:22.994Z",
-  "timestamp_epoch": 1795207282,
+  "last_updated": "2026-11-20T20:48:28.078Z",
+  "timestamp_epoch": 1795207708,
   "total_noticias": 119,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 62
+      "total": 60
     },
     {
       "id": "obras",
@@ -17,29 +17,29 @@
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 33
+      "total": 34
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 19
+      "total": 20
     }
   ],
   "jurisdicciones": [
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 54
+      "total": 53
     },
     {
       "id": "santa_fe",
       "nombre": "SANTA FE",
-      "total": 10
+      "total": 8
     },
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 27
+      "total": 30
     },
     {
       "id": "corrientes",
@@ -63,6 +63,58 @@
     }
   ],
   "noticias": [
+    {
+      "titulo": "Pullaro inauguró el gasoducto Albarellos-Uranga: más de 850 familias accederán al servicio de gas natural",
+      "resumen": "La obra en el departamento Rosario contempla 15 kilómetros de gasoducto principal, una estación reguladora y 2 kilómetros de red de distribución domiciliaria. El proyecto fue desarrollado de manera conjunta entre Litoral Gas y las comunas.",
+      "titulo_info": "Pullaro inauguró el gasoducto Albarellos-Uranga para más de 850 familias",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T20:46:24.745Z",
+      "jurisdiccion": "santa_fe",
+      "categorias": [
+        "obras"
+      ],
+      "url": "https://www.santafe.gob.ar/noticias/noticia/287956/",
+      "fuente": "Gobierno de Santa Fe"
+    },
+    {
+      "titulo": "Agmer convocó a un paro de 48 horas para la semana que viene tras el cierre de la paritaria docente",
+      "resumen": "",
+      "titulo_info": "Agmer convocó a un paro de 48 horas tras el cierre de la paritaria docente",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T20:45:13.049Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "/noticias/2026/11/20/480048-agmer-convoco-a-un-paro-de-48-horas-para-la-semana-que-viene-tras-el-cierre-de-la-paritaria-docente",
+      "fuente": "APF Digital"
+    },
+    {
+      "titulo": "Estudiantes universitarios y de nivel superior ya pueden inscribirse para capacitarse sobre Boleta Única de Papel",
+      "resumen": "",
+      "titulo_info": "Estudiantes universitarios y de nivel superior se pueden capacitar sobre Boleta Única de Papel",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T20:45:13.049Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "elecciones"
+      ],
+      "url": "/noticias/2026/11/20/480135-estudiantes-universitarios-y-de-nivel-superior-ya-pueden-inscribirse-para-capacitarse-sobre-boleta-unica-de-papel",
+      "fuente": "APF Digital"
+    },
+    {
+      "titulo": "“La transformación de Frigerio tiene que llegar a Paraná”: Renoldi lanzó su precandidatura a Intendenta",
+      "resumen": "",
+      "titulo_info": "Renoldi lanzó su precandidatura a Intendenta y pidió que la transformación de Frigerio llegue a Paraná",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T20:45:13.049Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "/noticias/2026/11/20/480120-la-transformacion-de-frigerio-tiene-que-llegar-a-parana-renoldi-lanzo-su-precandidatura-a-intendenta",
+      "fuente": "APF Digital"
+    },
     {
       "titulo": "Torres se adelanta a Milei, desdobla las elecciones y abre la pelea por Chubut",
       "resumen": "El gobernador buscará un nuevo mandato y decidió que la provincia vote antes de las presidenciales. La movida anticipa una disputa con La Libertad Avanza y obliga al PJ a acelerar la definición de su candidato.",
@@ -105,7 +157,7 @@
     {
       "titulo": "Fracaso de la paritaria: Agmer anunció 48 horas de paro",
       "resumen": "",
-      "titulo_info": "Agmer anuncia 48 horas de paro por fracaso de paritaria",
+      "titulo_info": "Agmer anunció 48 horas de paro por fracaso de la paritaria",
       "titulo_info_src": "llm",
       "fecha": "2026-11-20T20:37:37.952Z",
       "jurisdiccion": "entre_rios",
@@ -157,8 +209,8 @@
     {
       "titulo": "El calendario electoral 2027. Torres confirmó que adelanta los comicios en Chubut y se extiende la ola de desdoblamientos",
       "resumen": "El gobernador Ignacio Torres dispuso que los comicios provinciales se realizarán el 21 de marzo próximo; Neuquén, Tucumán, Santa Fe y Salta también separarán la competencia local de la nacional",
-      "titulo_info": "El calendario electoral 2027. Torres confirmó que adelanta los comicios en Chubut y se extiende la ola de desdoblamientos. El gobernador Ignacio Torres dispuso que los comicios provinciales se realizarán el 21 de marzo próximo",
-      "titulo_info_src": "heuristico",
+      "titulo_info": "Torres adelantó los comicios en Chubut para el 21 de marzo, sumándose a la ola de desdoblamientos",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-20T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -170,8 +222,8 @@
     {
       "titulo": "Neuquén. Nadia Márquez busca ser la candidata a gobernadora de Milei, pero la ley de ficha limpia le impediría competir",
       "resumen": "La senadora, quien reconoció que le gustaría acompañar en la fórmula al Presidente en 2027, podría ser ungida tras un congreso partidario de LLA; el obstáculo legal que podría marginarla de la carrera",
-      "titulo_info": "Neuquén. Nadia Márquez busca ser la candidata a gobernadora de Milei, pero la ley de ficha limpia le impediría competir. La senadora, quien reconoció que le gustaría acompañar en la fórmula al Presidente en 2027",
-      "titulo_info_src": "heuristico",
+      "titulo_info": "Nadia Márquez busca ser candidata a gobernadora de Milei en Neuquén pero la ley de ficha limpia podría impedirle competir",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-20T15:00:00.000Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -198,8 +250,8 @@
     {
       "titulo": "El Senado aprobó la Ley de Discapacidad: un voto unánime fruto de la movilización y la lucha",
       "resumen": "Las personas con discapacidad, su familia, los prestadores y organizaciones de todo el país son los responsables del apoyo total en el Senado. El presupuesto, la otra pelea.",
-      "titulo_info": "El Senado aprobó la Ley de Discapacidad: un voto unánime fruto de la movilización y la lucha. Las personas con discapacidad, su familia, los prestadores y organizaciones de todo el país son los responsables del apoyo total en el Senado.",
-      "titulo_info_src": "heuristico",
+      "titulo_info": "El Senado aprobó por unanimidad la Ley de Discapacidad, fruto de la movilización y lucha de organizaciones y familias",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-20T12:43:40.970Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -211,8 +263,8 @@
     {
       "titulo": "El Senado sancionó por unanimidad la ley de Fortalecimiento del Sistema de Discapacidad",
       "resumen": "La iniciativa obtuvo 71 votos afirmativos y establece nuevas condiciones para el acceso a las pensiones, garantiza su compatibilidad con el empleo formal y contempla la cobertura de salud y la rehabilitación de beneficios suspendidos.",
-      "titulo_info": "El Senado sancionó por unanimidad la ley de Fortalecimiento del Sistema de Discapacidad. La iniciativa obtuvo 71 votos afirmativos y establece nuevas condiciones para el acceso a las pensiones",
-      "titulo_info_src": "heuristico",
+      "titulo_info": "El Senado sancionó por unanimidad la ley de Fortalecimiento del Sistema de Discapacidad, que mejora el acceso a pensiones y garantiza cobertura de salud",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-20T12:43:40.304Z",
       "jurisdiccion": "misiones",
       "categorias": [
@@ -222,36 +274,10 @@
       "fuente": "Territorio Digital"
     },
     {
-      "titulo": "La capacitación sobre la Boleta Única de Papel llegó a Feliciano con más de 200 estudiantes",
-      "resumen": "",
-      "titulo_info": "La capacitación sobre la Boleta Única de Papel llegó a Feliciano con más de 200 estudiantes",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-20T12:43:39.115Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "/noticias/2026/11/20/480027-la-capacitacion-sobre-la-boleta-unica-de-papel-llego-a-feliciano-con-mas-de-200-estudiantes",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "Lo que dejó el debate entre Pedro Sánchez y Feijóo de cara a las elecciones del 29N en España",
-      "resumen": "En el PSOE ponen en valor que Sánchez no haya entrado en las provocaciones de Feijóo en su intento de seducir al electorado indeciso de centro con sus intervenciones sin estridencias.",
-      "titulo_info": "Lo que dejó el debate entre Pedro Sánchez y Feijóo de cara a las elecciones del 29N en España. En el PSOE ponen en valor que Sánchez no haya entrado en las provocaciones de Feijóo en su intento de seducir al electorado indeciso de centro con sus",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-20T12:43:40.970Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/20/lo-que-dejo-el-debate-entre-pedro-sanchez-y-feijoo-de-cara-a-las-elecciones-del-29n-en-espana/",
-      "fuente": "Página/12 El País"
-    },
-    {
       "titulo": "Se reglamentó en Brasil la jornada laboral 5x2: Lula ya firmó el decreto",
       "resumen": "",
-      "titulo_info": "Se reglamentó en Brasil la jornada laboral 5x2: Lula ya firmó el decreto",
-      "titulo_info_src": "heuristico",
+      "titulo_info": "En Brasil se reglamentó la jornada laboral 5x2 con decreto firmado por Lula",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-20T12:43:39.115Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
@@ -261,10 +287,36 @@
       "fuente": "APF Digital"
     },
     {
+      "titulo": "Lo que dejó el debate entre Pedro Sánchez y Feijóo de cara a las elecciones del 29N en España",
+      "resumen": "En el PSOE ponen en valor que Sánchez no haya entrado en las provocaciones de Feijóo en su intento de seducir al electorado indeciso de centro con sus intervenciones sin estridencias.",
+      "titulo_info": "El debate entre Pedro Sánchez y Feijóo de cara a las elecciones del 29N en España dejó al PSOE valorando la estrategia de Sánchez de no caer en provocaciones",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T12:43:40.970Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "elecciones"
+      ],
+      "url": "https://www.pagina12.com.ar/2026/11/20/lo-que-dejo-el-debate-entre-pedro-sanchez-y-feijoo-de-cara-a-las-elecciones-del-29n-en-espana/",
+      "fuente": "Página/12 El País"
+    },
+    {
+      "titulo": "La capacitación sobre la Boleta Única de Papel llegó a Feliciano con más de 200 estudiantes",
+      "resumen": "",
+      "titulo_info": "La capacitación sobre la Boleta Única de Papel llegó a Feliciano con más de 200 estudiantes",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T12:43:39.115Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "elecciones"
+      ],
+      "url": "/noticias/2026/11/20/480027-la-capacitacion-sobre-la-boleta-unica-de-papel-llego-a-feliciano-con-mas-de-200-estudiantes",
+      "fuente": "APF Digital"
+    },
+    {
       "titulo": "El Senado nacional aprobó la reforma del régimen de propiedad privada que restablece la Ley de Tierras",
       "resumen": "",
       "titulo_info": "El Senado nacional aprobó la reforma del régimen de propiedad privada que restablece la Ley de Tierras",
-      "titulo_info_src": "heuristico",
+      "titulo_info_src": "llm",
       "fecha": "2026-11-20T12:43:39.115Z",
       "jurisdiccion": "nacional",
       "categorias": [
@@ -1199,16 +1251,16 @@
       "fuente": "Clarín Política"
     },
     {
-      "titulo": "Paritaria estatal: Tras ausencia de UPCN, se ratificó un aumento del 4% en los salarios de noviembre",
+      "titulo": "Rafael Grossi defendió a un funcionario ruso sancionado por Ucrania y causó polémica en plena elección en la ONU",
       "resumen": "",
-      "titulo_info": "Paritaria estatal ratificó 4% de aumento salarial en noviembre tras ausencia de UPCN",
+      "titulo_info": "Rafael Grossi defendió a funcionario ruso sancionado y generó polémica en la ONU",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.573Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
-        "gobierno"
+        "leyes"
       ],
-      "url": "/noticias/2026/11/19/479928-paritaria-estatal-tras-ausencia-de-upcn-se-ratifico-un-aumento-del-4por_ciento-en-los-salarios-de-noviembre",
+      "url": "/noticias/2026/11/18/479778-rafael-grossi-defendio-a-un-funcionario-ruso-sancionado-por-ucrania-y-causo-polemica-en-plena-eleccion-en-la-onu",
       "fuente": "APF Digital"
     },
     {
@@ -1225,16 +1277,16 @@
       "fuente": "Clarín Política"
     },
     {
-      "titulo": "Ludopatía: el Senado rechazó tratar la ley sobre tablas, pero la debatirá la próxima semana",
+      "titulo": "Paritaria estatal: Tras ausencia de UPCN, se ratificó un aumento del 4% en los salarios de noviembre",
       "resumen": "",
-      "titulo_info": "Senado rechazó tratar ley sobre ludopatía, la debatirá la próxima semana",
+      "titulo_info": "Paritaria estatal ratificó 4% de aumento salarial en noviembre tras ausencia de UPCN",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.573Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
-        "leyes"
+        "gobierno"
       ],
-      "url": "/noticias/2026/11/19/479910-ludopatia-el-senado-rechazo-tratar-la-ley-sobre-tablas-pero-la-debatira-la-proxima-semana",
+      "url": "/noticias/2026/11/19/479928-paritaria-estatal-tras-ausencia-de-upcn-se-ratifico-un-aumento-del-4por_ciento-en-los-salarios-de-noviembre",
       "fuente": "APF Digital"
     },
     {
@@ -1251,16 +1303,16 @@
       "fuente": "Clarín Política"
     },
     {
-      "titulo": "Rafael Grossi defendió a un funcionario ruso sancionado por Ucrania y causó polémica en plena elección en la ONU",
+      "titulo": "Ludopatía: el Senado rechazó tratar la ley sobre tablas, pero la debatirá la próxima semana",
       "resumen": "",
-      "titulo_info": "Rafael Grossi defendió a funcionario ruso sancionado y generó polémica en la ONU",
+      "titulo_info": "Senado rechazó tratar ley sobre ludopatía, la debatirá la próxima semana",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.573Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
         "leyes"
       ],
-      "url": "/noticias/2026/11/18/479778-rafael-grossi-defendio-a-un-funcionario-ruso-sancionado-por-ucrania-y-causo-polemica-en-plena-eleccion-en-la-onu",
+      "url": "/noticias/2026/11/19/479910-ludopatia-el-senado-rechazo-tratar-la-ley-sobre-tablas-pero-la-debatira-la-proxima-semana",
       "fuente": "APF Digital"
     },
     {
@@ -1561,58 +1613,6 @@
       ],
       "url": "https://www.diputados.gob.ar/prensa/noticia/CON-DICTAMENES-AVANZA-LA-LEY-DE-INVIOLABILIDAD-DE-LA-PROPIEDAD-PRIVADA-EN-DIPUTADOS/",
       "fuente": "Diputados Nación"
-    },
-    {
-      "titulo": "En plena crecida, se destrabó el aval nacional para obras hídricas en San Javier",
-      "resumen": "El respaldo del Tesoro nacional quedó incorporado al decreto de ampliación del Presupuesto 2026. Se trata de un préstamo del Fondo OPEP que Santa Fe gestionó para completar una obra que había sufrido la interrupción del financiamiento nacional en 2024.",
-      "titulo_info": "Destrabaron aval nacional para obras hídricas en San Javier con ampliación del Presupuesto 2026",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T19:42:19.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.ellitoral.com/politica/sanjavier-defensacontrainundaciones-santafe-fondoopep-credito-aval-javiermilei-presupuesto_0_HVWDIlsplz.html",
-      "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "La Legislatura de Santa Fe removió de su cargo a una fiscal de Tostado",
-      "resumen": "Por mayoría de votos en Diputados y por unanimidad en el Senado dejó de pertenecer al Ministerio Público de la Acusación la Dra. Shirli Soledad Tomasso, que se desempeñaba en la Fiscalía Regional 5. Hubo 10 legisladores en contra de la medida, 3 abstenciones y varias bancas vacías.",
-      "titulo_info": "Legislatura de Santa Fe removió de su cargo a fiscal de Tostado por mayoría en Diputados y unanimidad en Senado",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T19:01:54.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.ellitoral.com/politica/legislatura-santafe-removio-cargo-fiscal-tostado-votacion-dividida-abstenciones-ausencias_0_cj8IaaTqEf.html",
-      "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "Santa Fe impulsa una Ley de Derechos del Consumidor a partir de un trabajo de articulación institucional",
-      "resumen": "El proyecto elevado por el gobernador Maximiliano Pullaro a la Legislatura reglamenta el artículo 32 de la nueva Constitución Provincial.",
-      "titulo_info": "Santa Fe impulsa Ley de Derechos del Consumidor tras articulación institucional",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T17:47:38.929Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.santafe.gob.ar/noticias/noticia/287946/",
-      "fuente": "Gobierno de Santa Fe"
-    },
-    {
-      "titulo": "Por unanimidad. Aprueban la nueva ley de Discapacidad y reclaman que el Gobierno cumpla con su reglamentación",
-      "resumen": "",
-      "titulo_info": "Por unanimidad, el Senado aprobó la nueva ley de Discapacidad con 71 votos a favor y ninguno en contra, reclamando al Gobierno su reglamentación",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/el-senado-sanciono-la-ley-de-discapacidad-y-la-oposicion-reclamo-al-gobierno-que-cumpla-con-su-nid19112026/",
-      "fuente": "La Nación Política"
     }
   ]
 }
