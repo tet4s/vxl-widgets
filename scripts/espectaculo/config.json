@@ -1,0 +1,33 @@
+{
+  "salida": "data/espectaculo-raspados.json",
+  "ventana_dias": 30,
+  "ciudades": [
+    "Paraná",
+    "Santa Fe",
+    "Santo Tomé (SF)",
+    "Oro Verde (ER)",
+    "Crespo (ER)",
+    "Sauce Viejo (SF)"
+  ],
+  "fuentes": {
+    "santafe": {
+      "activa": true,
+      "nombre": "Agenda Santa Fe Ciudad",
+      "url": "https://agenda.santafeciudad.gov.ar/"
+    },
+    "eventbrite": {
+      "activa": true,
+      "nombre": "Eventbrite",
+      "urls": {
+        "Paraná": "https://www.eventbrite.com.ar/d/argentina--paran%C3%A1/eventos/",
+        "Santa Fe": "https://www.eventbrite.com.ar/d/argentina--santa-fe/eventos/"
+      }
+    },
+    "parana": {
+      "activa": false,
+      "nombre": "Agenda Municipal de Paraná",
+      "url": "https://www.parana.gob.ar/agenda",
+      "motivo": "La agenda municipal lista programas y espacios culturales, no eventos con fecha y hora. Se deja el adaptador listo para cuando publiquen fechas; mientras tanto Paraná se cubre con Eventbrite."
+    }
+  }
+}
