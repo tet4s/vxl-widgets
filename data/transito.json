@@ -1,96 +1,16 @@
 {
-  "timestamp": "2026-11-20T01:44:05.550Z",
-  "timestamp_epoch": 1795139045,
+  "timestamp": "2026-11-20T03:04:39.630Z",
+  "timestamp_epoch": 1795143879,
   "source": "vxl-transito-ar",
-  "cantidad": 9,
+  "cantidad": 7,
   "items": [
-    {
-      "id": "ellitoral:Santa Fe:2026-11-19",
-      "titulo": "El tránsito en la provincia de Santa Fe; la información minuto a minuto",
-      "categoria": "cortes",
-      "tipo": "corte_total",
-      "fecha": "2026-11-19T13:54:00-03:00",
-      "fecha_raw": "2026-11-19T13:54:00-03:00",
-      "horario": null,
-      "motivo": "Obra en la vía pública",
-      "franja": "",
-      "calles": [
-        "4 de Enero entre Salta y Mendoza"
-      ],
-      "resumen": "4 de Enero entre Salta y Mendoza",
-      "descripcion": "4 de Enero entre Salta y Mendoza",
-      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-autopistas-provinciadesantafe-rutas-accesos-ciudaddesantafe_0_YqkSrCrMJY.html",
-      "lat": -31.6492311,
-      "lon": -60.7127051,
-      "sin_ubicacion": false,
-      "localidad": "Santa Fe",
-      "provincia": "Santa Fe",
-      "via": "Ruta Provincial 2 · Autopista Santa Fe - Rosario · Autopista Santa Fe -Rosario · RP 1 · Ru",
-      "km_desde": "124",
-      "km_hasta": null,
-      "vigencia": {
-        "hasta": "2026-11-20T02:59:00.000Z",
-        "tipo": "diaria",
-        "detalle": "boletín del día"
-      },
-      "vigente_hasta": "2026-11-20T02:59:00.000Z",
-      "fuente_tipo": "estado",
-      "segmentos": [
-        {
-          "puntos": [
-            [
-              -31.6492311,
-              -60.7127051
-            ],
-            [
-              -31.6488002,
-              -60.7125899
-            ],
-            [
-              -31.648725,
-              -60.7125697
-            ],
-            [
-              -31.6477965,
-              -60.7123214
-            ]
-          ],
-          "calle": "4 de Enero",
-          "desde": "Salta",
-          "hasta": "Mendoza",
-          "motivo": "Obra en la vía pública",
-          "franja": "",
-          "ctx": "Permanecerá interrumpido el tránsito en 4 de Enero, entre Salta y Mendoza, debido a trabajos de ASSA en hundimiento de calzada.",
-          "entre": "Salta y Mendoza",
-          "texto": "4 de Enero entre Salta y Mendoza"
-        }
-      ],
-      "puntos": [
-        [
-          -31.6492311,
-          -60.7127051
-        ],
-        [
-          -31.6488002,
-          -60.7125899
-        ],
-        [
-          -31.648725,
-          -60.7125697
-        ],
-        [
-          -31.6477965,
-          -60.7123214
-        ]
-      ]
-    },
     {
       "id": "bing-apf-cortes:Con nuevos frentes continúa la obra de reconfigura…",
       "titulo": "Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-11-19T00:00:00-03:00",
-      "fecha_raw": "2026-11-19T00:00:00-03:00",
+      "fecha": "2026-11-20T00:00:00-03:00",
+      "fecha_raw": "2026-11-20T00:00:00-03:00",
       "horario": null,
       "motivo": "Obra en la vía pública",
       "franja": "",
@@ -110,11 +30,11 @@
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2026-11-21T02:59:00.000Z",
+        "hasta": "2026-11-28T02:59:00.000Z",
         "tipo": "explicita",
-        "detalle": "hasta el 21/11 02:59"
+        "detalle": "hasta el 28/11 02:59"
       },
-      "vigente_hasta": "2026-11-21T02:59:00.000Z",
+      "vigente_hasta": "2026-11-28T02:59:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
@@ -129,7 +49,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "jueves 19 de noviembre de 2026 24.4ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
+          "ctx": "viernes 20 de noviembre de 2026 21.4ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
           "entre": "",
           "texto": "25 de Mayo"
         },
@@ -162,8 +82,8 @@
       "titulo": "El Municipio de Paraná adjudicó dos importantes obras de agua y cloaca por 14 millones de pesos",
       "categoria": "obras",
       "tipo": "obra",
-      "fecha": "2026-11-19T00:00:00-03:00",
-      "fecha_raw": "2026-11-19T00:00:00-03:00",
+      "fecha": "2026-11-20T00:00:00-03:00",
+      "fecha_raw": "2026-11-20T00:00:00-03:00",
       "horario": null,
       "motivo": "Obra en la vía pública",
       "franja": "",
@@ -182,11 +102,11 @@
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2027-03-19T03:00:00.000Z",
+        "hasta": "2027-03-20T03:00:00.000Z",
         "tipo": "explicita",
-        "detalle": "120 días desde el 19/11 03:00"
+        "detalle": "120 días desde el 20/11 03:00"
       },
-      "vigente_hasta": "2027-03-19T03:00:00.000Z",
+      "vigente_hasta": "2027-03-20T03:00:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
@@ -226,8 +146,8 @@
       "titulo": "Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-11-19T00:00:00-03:00",
-      "fecha_raw": "2026-11-19T00:00:00-03:00",
+      "fecha": "2026-11-20T00:00:00-03:00",
+      "fecha_raw": "2026-11-20T00:00:00-03:00",
       "horario": null,
       "motivo": "Obra en la vía pública",
       "franja": "",
@@ -247,11 +167,11 @@
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2027-05-18T03:00:00.000Z",
+        "hasta": "2027-05-19T03:00:00.000Z",
         "tipo": "explicita",
-        "detalle": "180 días desde el 19/11 03:00"
+        "detalle": "180 días desde el 20/11 03:00"
       },
-      "vigente_hasta": "2027-05-18T03:00:00.000Z",
+      "vigente_hasta": "2027-05-19T03:00:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
@@ -266,7 +186,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "jueves 19 de noviembre de 2026 24.4ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+          "ctx": "viernes 20 de noviembre de 2026 21.4ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
           "entre": "",
           "texto": "Paraguay"
         },
@@ -282,7 +202,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "jueves 19 de noviembre de 2026 24.4ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+          "ctx": "viernes 20 de noviembre de 2026 21.4ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
           "entre": "",
           "texto": "Montevideo"
         }
@@ -299,8 +219,8 @@
       "titulo": "El Municipio de Paraná realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-11-19T00:00:00-03:00",
-      "fecha_raw": "2026-11-19T00:00:00-03:00",
+      "fecha": "2026-11-20T00:00:00-03:00",
+      "fecha_raw": "2026-11-20T00:00:00-03:00",
       "horario": null,
       "motivo": "Mantenimiento de red de agua",
       "franja": "",
@@ -320,11 +240,11 @@
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2027-05-18T03:00:00.000Z",
+        "hasta": "2027-05-19T03:00:00.000Z",
         "tipo": "explicita",
-        "detalle": "180 días desde el 19/11 03:00"
+        "detalle": "180 días desde el 20/11 03:00"
       },
-      "vigente_hasta": "2027-05-18T03:00:00.000Z",
+      "vigente_hasta": "2027-05-19T03:00:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
@@ -384,8 +304,8 @@
       "titulo": "Paraná: Modifican los recorridos del transporte urbano y metropolitano por trabajos en calles La Paz y Corrientes",
       "categoria": "obras",
       "tipo": "obra",
-      "fecha": "2026-11-19T00:00:00-03:00",
-      "fecha_raw": "2026-11-19T00:00:00-03:00",
+      "fecha": "2026-11-20T00:00:00-03:00",
+      "fecha_raw": "2026-11-20T00:00:00-03:00",
       "horario": null,
       "motivo": "Obra en la vía pública",
       "franja": "",
@@ -404,11 +324,11 @@
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2027-05-18T03:00:00.000Z",
+        "hasta": "2027-05-19T03:00:00.000Z",
         "tipo": "explicita",
-        "detalle": "180 días desde el 19/11 03:00"
+        "detalle": "180 días desde el 20/11 03:00"
       },
-      "vigente_hasta": "2027-05-18T03:00:00.000Z",
+      "vigente_hasta": "2027-05-19T03:00:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
@@ -436,86 +356,14 @@
       ]
     },
     {
-      "id": "elonce:Chocaron tres autos en transitada calle de Paraná:…",
-      "titulo": "Chocaron tres autos en transitada calle de Paraná: un conductor se habría desvanecido y fue hospitalizado",
-      "categoria": "accidentes",
-      "tipo": "choque",
-      "fecha": "2026-11-19T00:00:00-03:00",
-      "fecha_raw": "2026-11-19T00:00:00-03:00",
-      "horario": null,
-      "motivo": "Obra en la vía pública",
-      "franja": "",
-      "calles": [
-        "Echagüe entre Antártida Argentina y Alsina"
-      ],
-      "resumen": "Echagüe entre Antártida Argentina y Alsina",
-      "descripcion": "Echagüe entre Antártida Argentina y Alsina",
-      "enlace": "https://www.elonce.com/policiales/chocaron-tres-autos-en-transitada-calle-de-parana-un-conductor-se-habria-desvanecido-y-fue-hospitalizado.htm",
-      "lat": -31.7402716,
-      "lon": -60.5196916,
-      "sin_ubicacion": false,
-      "localidad": "Paraná",
-      "provincia": "Entre Ríos",
-      "via": "",
-      "km_desde": null,
-      "km_hasta": null,
-      "vigencia": {
-        "hasta": "2026-11-20T02:59:00.000Z",
-        "tipo": "diaria",
-        "detalle": "solo ese día"
-      },
-      "vigente_hasta": "2026-11-20T02:59:00.000Z",
-      "fuente_tipo": "noticia",
-      "segmentos": [
-        {
-          "puntos": [
-            [
-              -31.7402716,
-              -60.5196916
-            ],
-            [
-              -31.7405824,
-              -60.5193755
-            ],
-            [
-              -31.7411433,
-              -60.5188172
-            ]
-          ],
-          "calle": "Echagüe",
-          "desde": "Antártida Argentina",
-          "hasta": "Alsina",
-          "motivo": "Choque",
-          "franja": "",
-          "ctx": "El hecho ocurrió en un sector de calle Echagüe, entre Antártida Argentina y Alsina, y quedó bajo investigación para esclarecer la mecánica del choque.",
-          "entre": "Antártida Argentina y Alsina",
-          "texto": "Echagüe entre Antártida Argentina y Alsina"
-        }
-      ],
-      "puntos": [
-        [
-          -31.7402716,
-          -60.5196916
-        ],
-        [
-          -31.7405824,
-          -60.5193755
-        ],
-        [
-          -31.7411433,
-          -60.5188172
-        ]
-      ]
-    },
-    {
-      "id": "elonce:Realizan obras de recuperación vial en el Parque I…",
-      "titulo": "Realizan obras de recuperación vial en el Parque Industrial de Paraná",
+      "id": "municipio-parana:Calle a calle: el Municipio ejecuta obras de recup…",
+      "titulo": "Calle a calle: el Municipio ejecuta obras de recuperación vial en el Parque Industrial",
       "categoria": "obras",
       "tipo": "obra",
-      "fecha": "2026-11-19T00:00:00-03:00",
-      "fecha_raw": "2026-11-19T00:00:00-03:00",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "fecha_raw": "2026-11-18T15:00:00.000Z",
       "horario": null,
-      "motivo": "Obra en la vía pública",
+      "motivo": "Mantenimiento de red de agua",
       "franja": "",
       "calles": [
         "Hernandarias",
@@ -523,21 +371,21 @@
       ],
       "resumen": "Hernandarias · Valentín Torra",
       "descripcion": "Hernandarias · Valentín Torra",
-      "enlace": "https://www.elonce.com/parana/comenzaron-las-obras-de-recuperacion-vial-en-el-parque-industrial-de-parana.htm",
+      "enlace": "https://www.parana.gob.ar/noticias/calle-a-calle-el-municipio-ejecuta-obras-de-recuperacion-vial-en-el-parque-industrial",
       "lat": -31.766317645259097,
       "lon": -60.463126230388326,
       "sin_ubicacion": false,
       "localidad": "Paraná",
       "provincia": "Entre Ríos",
-      "via": "calle a",
+      "via": "Calle a",
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2026-11-20T03:00:00.000Z",
+        "hasta": "2026-12-18T15:00:00.000Z",
         "tipo": "estimada",
-        "detalle": "estimado: ruta (24 h)"
+        "detalle": "estimado: obra (30 días)"
       },
-      "vigente_hasta": "2026-11-20T03:00:00.000Z",
+      "vigente_hasta": "2026-12-18T15:00:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
@@ -552,7 +400,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra 19 de Noviembre de 2026 El Municipio ejecuta obras de recuperación vial en el Parque Industrial Los trabajos comprenden bacheo, repavimentación y reparaciones complementarias en las redes de agua, cloacas y desagües pluviales.",
+          "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra, que forman parte de los principales recorridos del tránsito pesado.",
           "entre": "",
           "texto": "Hernandarias"
         },
@@ -568,7 +416,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra 19 de Noviembre de 2026 El Municipio ejecuta obras de recuperación vial en el Parque Industrial Los trabajos comprenden bacheo, repavimentación y reparaciones complementarias en las redes de agua, cloacas y desagües pluviales.",
+          "ctx": "Las intervenciones se concentran actualmente en las calles Hernandarias y Valentín Torra, que forman parte de los principales recorridos del tránsito pesado.",
           "entre": "",
           "texto": "Valentín Torra"
         }
