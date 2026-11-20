@@ -2,7 +2,15 @@ name: Actualizador de Bolsillo VXL
 
 on:
   schedule:
-    - cron: '*/10 * * * *' # Cada 10 minutos
+    # GitHub no garantiza crons: en este repo las corridas programadas son 1-3 por día.
+    # El disparo por push (con guarda de frescura) mantiene el dato al día cuando
+    # alguien publica. Para refresco garantizado usar "Actualizar todos los datos VXL".
+    - cron: '*/10 * * * *'
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/bolsillo.json'
+      - 'data/rewrites-cache.json'
   workflow_dispatch:
 
 permissions:
@@ -15,26 +23,53 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Solo para corridas por push: si bolsillo.json tiene menos de 25 minutos, no corre.
+      - name: ¿Datos frescos?
+        id: frescura
+        run: |
+          if [ "${{ github.event_name }}" != "push" ]; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          node -e '
+            const fs=require("fs");
+            let t=0;
+            try { t=Date.parse(JSON.parse(fs.readFileSync("data/bolsillo.json","utf8")).last_updated)||0; } catch(e){}
+            const min=(Date.now()-t)/60000;
+            const skip=t>0 && min<25;
+            console.log("Última actualización hace "+Math.round(min)+" min → "+(skip?"se saltea":"se ejecuta"));
+            fs.appendFileSync(process.env.GITHUB_OUTPUT,"skip="+skip+"\n");
+          '
+
       - name: Configurar Node.js
+        if: steps.frescura.outputs.skip != 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Instalar dependencias
-        run: npm install
+        if: steps.frescura.outputs.skip != 'true'
+        run: npm ci || npm install
 
       - name: Ejecutar script de bolsillo
+        if: steps.frescura.outputs.skip != 'true'
         run: node ./scripts/update-bolsillo.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Commit y Push
+      - name: Commit y push
+        if: steps.frescura.outputs.skip != 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add ./data/bolsillo.json ./data/rewrites-cache.json
-          git diff-index --quiet HEAD || (git commit -m 'Auto-update: bolsillo noticias [skip ci]' && (git push || (git pull --rebase && git push)))
+          git diff-index --quiet HEAD || git commit -m 'Auto-update: bolsillo noticias [skip ci]'
+          for i in 1 2 3 4; do
+            git pull --rebase --autostash origin main && git push && break
+            sleep 5
+          done
