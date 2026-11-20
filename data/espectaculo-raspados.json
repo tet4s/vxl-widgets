@@ -1,6 +1,6 @@
 {
-  "generado": "2026-11-20T23:06:31.670Z",
-  "cantidad": 24,
+  "generado": "2026-11-20T23:10:07.825Z",
+  "cantidad": 25,
   "ventana_dias": 30,
   "fuentes": [
     {
@@ -11,7 +11,7 @@
     {
       "nombre": "Eventbrite",
       "ok": true,
-      "nota": "40 registros leídos, 7 con fecha y ciudad válida"
+      "nota": "40 registros leídos, 9 con fecha y ciudad válida"
     },
     {
       "nombre": "parana",
@@ -371,6 +371,22 @@
       "link": "",
       "fuente": "Agenda Santa Fe Ciudad",
       "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-de-artesanos-plaza-scarafia/"
+    },
+    {
+      "id": "eb-ema-cabrera-soy-aqui-tickets-2004094878731",
+      "titulo": "Ema Cabrera: “Soy Aquí”",
+      "descripcion": "Ema Cabrera presenta Soy Aquí, un recorrido por la música popular y la canción de autor en un encuentro íntimo y lleno de sensibilidad.",
+      "fecha": "2026-11-28",
+      "hora": "",
+      "fin": "2026-11-28T23:59",
+      "lugar": "Subsuelo Galeria Flamingo",
+      "ciudad": "Paraná",
+      "categoria": "musica",
+      "gratis": false,
+      "precio": "",
+      "link": "",
+      "fuente": "Eventbrite",
+      "fuente_url": "https://www.eventbrite.com.ar/e/ema-cabrera-soy-aqui-tickets-2004094878731"
     },
     {
       "id": "eb-entre-el-aire-y-la-musica-tickets-2004954941201",
