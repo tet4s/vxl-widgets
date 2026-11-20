@@ -151,21 +151,11 @@ async function ejecutarScraperReal() {
     const variaciones = calcularVariaciones(itemsExtraidos, outputPath);
     const datosFinales = itemsExtraidos.map(it => ({ ...it, ...(variaciones[it.label] || {}) }));
 
-    if (!datosFinales.some(i => i.label === 'ARROZ')) {
-      datosFinales.push({ label: "ARROZ", valor: "$480.000 /Tn", variacion: "▲ +0,5%", estado: "up" });
-    }
-    if (!datosFinales.some(i => i.label === 'NOVILLO EN PIE')) {
-      datosFinales.push({ label: "NOVILLO EN PIE", valor: "$2.150 /Kg", variacion: "▲ +0,5%", estado: "up" });
-    }
-    if (!datosFinales.some(i => i.label === 'CALADO HIDROVÍA')) {
-      datosFinales.push({ label: "CALADO HIDROVÍA", valor: "32.5 ft", variacion: "Normal", estado: "up" });
-    }
-
     const payloadJSON = {
       timestamp: new Date().toISOString(),
       timestamp_epoch: Math.floor(Date.now() / 1000),
       categoria: "Pizarra Agroexportadora y Litoral",
-      fuente: "Bolsa de Comercio de Rosario / BolsaCER / MAG",
+      fuente: "Bolsa de Comercio de Rosario",
       items: datosFinales
     };
 

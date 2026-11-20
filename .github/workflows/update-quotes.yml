@@ -2,33 +2,59 @@ name: Actualizador de Cotizaciones VXL Economía
 
 on:
   schedule:
-    # GitHub no soporta crons más frecuentes que cada 5 minutos: '* * * * *'
-    # no se cumple y, además, marca el repo como abusivo y hace que el
-    # scheduler descarte las corridas de TODOS los workflows del repo
-    # (medido: 3-5 corridas por día por workflow, incluso con cron de 1 min).
-    - cron: '*/10 * * * *' # Cada 10 minutos
+    # GitHub no garantiza crons: este repo recibe ~4 corridas/día por schedule.
+    # El disparo por push (con guarda de frescura) es el que mantiene el dato al día.
+    - cron: '*/10 * * * *'
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/quotes.json'
   workflow_dispatch:
 
-# PERMISO OBLIGATORIO PARA EVITAR EL EXIT CODE 128 (PERMITIR PUSH EN EL REPO)
+concurrency:
+  group: quotes
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - name: Checkout del Repositorio
-        uses: actions/checkout@v4 # Actualizado a v4 para corregir warning de Node.js
+      - uses: actions/checkout@v4
+
+      # Solo para corridas por push: si quotes.json tiene menos de 25 minutos, no corre.
+      - name: ¿Datos frescos?
+        id: frescura
+        run: |
+          if [ "${{ github.event_name }}" != "push" ]; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          node -e '
+            const fs=require("fs");
+            let t=0;
+            try { t=Date.parse(JSON.parse(fs.readFileSync("data/quotes.json","utf8")).last_updated)||0; } catch(e){}
+            const min=(Date.now()-t)/60000;
+            const skip=t>0 && min<25;
+            console.log("Última actualización hace "+Math.round(min)+" min → "+(skip?"se saltea":"se ejecuta"));
+            fs.appendFileSync(process.env.GITHUB_OUTPUT,"skip="+skip+"\n");
+          '
 
       - name: Configurar Node.js
-        uses: actions/setup-node@v4 # Actualizado a v4
+        if: steps.frescura.outputs.skip != 'true'
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Instalar Dependencias
-        run: npm install axios
+      - name: Instalar dependencias
+        if: steps.frescura.outputs.skip != 'true'
+        run: npm ci || npm install
 
-      - name: Ejecutar Script de Actualización
+      - name: Ejecutar script de actualización
+        if: steps.frescura.outputs.skip != 'true'
         env:
           IOL_USERNAME: ${{ secrets.IOL_USERNAME }}
           IOL_PASSWORD: ${{ secrets.IOL_PASSWORD }}
@@ -36,9 +62,14 @@ jobs:
           IOL_REFRESH_TOKEN: ${{ secrets.IOL_REFRESH_TOKEN }}
         run: node ./scripts/update-quotes.js
 
-      - name: Commit y Push a GitHub
+      - name: Commit y push
+        if: steps.frescura.outputs.skip != 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add ./data/quotes.json
-          git diff-index --quiet HEAD || (git commit -m 'Auto-update: cotizaciones con universos ampliados [skip ci]' && git push)
+          git diff-index --quiet HEAD || git commit -m 'Auto-update: cotizaciones [skip ci]'
+          for i in 1 2 3 4; do
+            git pull --rebase --autostash origin main && git push && break
+            sleep 5
+          done

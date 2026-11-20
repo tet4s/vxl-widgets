@@ -186,7 +186,7 @@ function toWidgetItem(titulo, slot) {
     slot.formato === 'puntos'
       ? `${fmtNumero(precio, 0)} pts`
       : `$${fmtNumero(precio, 2)}`;
-  const signo = variacion > 0 ? '▲ +' : variacion < 0 ? '▼ ' : '= ';
+  const signo = variacion > 0 ? '▲ +' : variacion < 0 ? '▼ -' : '= ';
   const varStr = `${signo}${fmtNumero(Math.abs(variacion), 2)}%`;
   const clase = variacion > 0 ? 'up' : variacion < 0 ? 'down' : 'neutral';
   return { label: slot.label, val, var: varStr, class: clase };

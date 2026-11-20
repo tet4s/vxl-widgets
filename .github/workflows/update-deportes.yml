@@ -2,9 +2,18 @@ name: Actualizar Deportes del Litoral
 
 on:
   schedule:
-    # Cada 20 minutos: los resultados y las tablas cambian los fines de semana
+    # Los resultados y las tablas cambian los fines de semana.
     - cron: '*/20 * * * *'
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/deportes.json'
+      - 'data/deportes-historial.json'
   workflow_dispatch:
+
+concurrency:
+  group: deportes
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -12,27 +21,49 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 10
     steps:
-      - name: Checkout del Repositorio
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Configurar Node.js (v24)
+      - name: ¿Datos frescos?
+        id: frescura
+        run: |
+          if [ "${{ github.event_name }}" != "push" ]; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          node -e '
+            const fs=require("fs");
+            let t=0;
+            try { t=Date.parse(JSON.parse(fs.readFileSync("data/deportes.json","utf8")).actualizado)||0; } catch(e){}
+            const min=(Date.now()-t)/60000;
+            const skip=t>0 && min<25;
+            console.log("Última actualización hace "+Math.round(min)+" min → "+(skip?"se saltea":"se ejecuta"));
+            fs.appendFileSync(process.env.GITHUB_OUTPUT,"skip="+skip+"\n");
+          '
+
+      - name: Configurar Node.js
+        if: steps.frescura.outputs.skip != 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      - name: Instalar Dependencias
-        run: npm install
+      - name: Instalar dependencias
+        if: steps.frescura.outputs.skip != 'true'
+        run: npm ci || npm install
 
-      - name: Ejecutar Update de Deportes
+      - name: Ejecutar update de deportes
+        if: steps.frescura.outputs.skip != 'true'
         run: node scripts/update-deportes.js
 
-      - name: Commit y Push de Datos Actualizados
+      - name: Commit y push
+        if: steps.frescura.outputs.skip != 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add data/deportes.json data/deportes-historial.json
-          git diff-index --quiet HEAD || git commit -m "chore(data): actualización automática de deportes [skip ci]"
-          git pull --rebase origin main
-          git push
+          git diff-index --quiet HEAD || git commit -m "chore(data): deportes [skip ci]"
+          for i in 1 2 3 4; do
+            git pull --rebase --autostash origin main && git push && break
+            sleep 5
+          done
