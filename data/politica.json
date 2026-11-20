@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-20T00:03:03.307Z",
-  "timestamp_epoch": 1795132983,
-  "total_noticias": 112,
+  "last_updated": "2026-11-20T01:44:55.402Z",
+  "timestamp_epoch": 1795139095,
+  "total_noticias": 116,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 59
+      "total": 61
     },
     {
       "id": "obras",
@@ -17,7 +17,7 @@
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 27
+      "total": 29
     },
     {
       "id": "elecciones",
@@ -29,7 +29,7 @@
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 57
+      "total": 59
     },
     {
       "id": "santa_fe",
@@ -44,12 +44,12 @@
     {
       "id": "corrientes",
       "nombre": "CORRIENTES",
-      "total": 6
+      "total": 7
     },
     {
       "id": "misiones",
       "nombre": "MISIONES",
-      "total": 6
+      "total": 7
     },
     {
       "id": "chaco",
@@ -63,6 +63,58 @@
     }
   ],
   "noticias": [
+    {
+      "titulo": "El Gobernador acompañó los festejos por los 294 años de Saladas con inauguraciones y nuevos anuncios de obras",
+      "resumen": "Juan Pablo Valdés participó de las celebraciones por un nuevo aniversario de la localidad, que incluyeron la puesta en valor de la Sociedad Española, la habilitación de infraestructura deportiva y recreativa y el tradicional desfile cívico-militar. Además, anunció nuevas intervenciones para fortalecer el desarrollo urbano y productivo de la región.",
+      "titulo_info": "El Gobernador inauguró obras y anunció nuevas intervenciones en Saladas por su 294 aniversario",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T01:41:45.582Z",
+      "jurisdiccion": "corrientes",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.corrientes.gob.ar/29192/el-gobernador-acompano-los-festejos-por-los-294-anos-de-saladas-con-inauguraciones-y-nuevos-anuncios-de-obras",
+      "fuente": "Gobierno de Corrientes"
+    },
+    {
+      "titulo": "Ley de Discapacidad: las organizaciones acompañaron el tratamiento y celebraron la sanción",
+      "resumen": "Familias, personas con discapacidad y prestadores de salud se movilizaron para exigir el cumplimiento efectivo de la nueva norma.",
+      "titulo_info": "Organizaciones celebraron la sanción de la Ley de Discapacidad tras acompañar su tratamiento",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T01:41:40.292Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.pagina12.com.ar/2026/11/20/ley-de-discapacidad-las-organizaciones-acompanaron-el-tratamiento-y-celebraron-la-sancion/",
+      "fuente": "Página/12 El País"
+    },
+    {
+      "titulo": "Triunfo de Fredomis, la lista docente que de manera abierta respaldó el gobernador de Misiones",
+      "resumen": "Los datos preliminares, son favorables al Frente de Docentes Misioneros, en las dos ramas educativas. Recuerdan que recibió pleno acompañamiento del Movimiento por lo que Viene",
+      "titulo_info": "Fredomis, lista docente con respaldo del gobernador de Misiones, se perfila como ganadora en elecciones educativas",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T01:41:39.592Z",
+      "jurisdiccion": "misiones",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928332-triunfo-de-fredomis-la-lista-docente-que-de-manera-abierta-respaldo-el-gobernador-de-misiones",
+      "fuente": "Territorio Digital"
+    },
+    {
+      "titulo": "El Senado sancionó la Ley de Inviolabilidad de la Propiedad, que ratifica la Ley de Tierras",
+      "resumen": "",
+      "titulo_info": "El Senado sancionó la Ley de Inviolabilidad de la Propiedad, ratificando la Ley de Tierras",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T01:41:39.949Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "",
+      "fuente": "Clarín Política"
+    },
     {
       "titulo": "El Senado aprobó por unanimidad una ley permanente de discapacidad: cuáles son los beneficios",
       "resumen": "",
@@ -506,14 +558,14 @@
       "fuente": "Territorio Digital"
     },
     {
-      "titulo": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
+      "titulo": "Por qué metieron a un cuatro de copas?\": la crisis que casi hizo caer el dictamen de las PASO",
       "resumen": "",
-      "titulo_info": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
+      "titulo_info": "Crisis en el oficialismo: un \"cuatro de copas\" casi frena el dictamen de las PASO",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "elecciones"
+        "leyes"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -571,14 +623,14 @@
       "fuente": "Territorio Digital"
     },
     {
-      "titulo": "Por qué metieron a un cuatro de copas?\": la crisis que casi hizo caer el dictamen de las PASO",
+      "titulo": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
       "resumen": "",
-      "titulo_info": "Crisis en el oficialismo: un \"cuatro de copas\" casi frena el dictamen de las PASO",
+      "titulo_info": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "leyes"
+        "elecciones"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -1262,7 +1314,7 @@
     },
     {
       "titulo": "Sucesor de Mussi. El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
-      "resumen": "",
+      "resumen": "Carlos Balor fue convocado a una fiscalía luego de que un hombre denunciara que le ofrecieron plata para atentar contra su vida; el jefe comunal manifestó “preocupación”",
       "titulo_info": "El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo, manifestando preocupación",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -1275,7 +1327,7 @@
     },
     {
       "titulo": "Fallo unánime. Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
-      "resumen": "",
+      "resumen": "El máximo tribunal confirmó una sentencia de la Cámara Federal de La Plata contra dos artículos del DNU 70/23, que eliminaron los límites a los aumentos de la medicina privada, y reafirmó los límites a los decretos de necesidad y urgencia",
       "titulo_info": "Corte Suprema frena DNU de Milei y declara inconstitucional liberación de precios de prepagas",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -1288,7 +1340,7 @@
     },
     {
       "titulo": "Reforma. Posadas eliminó la Ley de Lemas y el resultado podría condicionar la negociación de Santilli con un gobernador",
-      "resumen": "",
+      "resumen": "Con el impulso de La Libertad Avanza, se cayó un sistema electoral por el cual en la capital misionera hubo más de 40 candidatos a intendente; el resultado podría interferir en las negociaciones que tiene Passalacqua con la Nación por las PASO",
       "titulo_info": "Posadas eliminó Ley de Lemas y el resultado podría condicionar negociación de Santilli",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
