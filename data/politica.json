@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-19T23:08:07.434Z",
-  "timestamp_epoch": 1795129687,
-  "total_noticias": 111,
+  "last_updated": "2026-11-20T00:03:03.307Z",
+  "timestamp_epoch": 1795132983,
+  "total_noticias": 112,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 58
+      "total": 59
     },
     {
       "id": "obras",
@@ -39,7 +39,7 @@
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 22
+      "total": 23
     },
     {
       "id": "corrientes",
@@ -63,6 +63,19 @@
     }
   ],
   "noticias": [
+    {
+      "titulo": "El Senado aprobó por unanimidad una ley permanente de discapacidad: cuáles son los beneficios",
+      "resumen": "",
+      "titulo_info": "El Senado aprobó por unanimidad ley permanente de discapacidad con beneficios",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T23:58:53.130Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "/politica/el-senado-aprobo-por-unanimidad-una-ley-permanente-de-discapacidad-cuales-son-los-beneficios.htm",
+      "fuente": "Elonce Política"
+    },
     {
       "titulo": "El Senado aprobó por unanimidad la nueva Ley de Discapacidad",
       "resumen": "El proyecto de Ley de Fortalecimiento, Sostenibilidad y Eficiencia Permanente del Sistema de Discapacidad contaba con media sanción de Diputados. La iniciativa replica prácticamente todo el esquema de beneficios establecido en la Ley 27.793, pero elimina su carácter de emergencia y transitoriedad.",
@@ -233,6 +246,19 @@
       "fuente": "Página/12 El País"
     },
     {
+      "titulo": "El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del Gobierno",
+      "resumen": "También se discute una serie de proyectos que incluyen la adhesión al tratado internacional de patentes y la reforma del régimen de propiedad privada; se acordó que la semana que viene abordará la iniciativa sobre ludopatía y la prórroga del Estatuto del Periodista",
+      "titulo_info": "El Senado avanza en ley de discapacidad pese a resistencias del Gobierno; trata patentes, propiedad privada, ludopatía y Estatuto del Periodista",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:47:46.184Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/el-senado-se-encamina-a-sancionar-una-nueva-ley-de-discapacidad-pese-a-las-resistencias-del-gobierno-nid19112026/",
+      "fuente": "La Nación Política"
+    },
+    {
       "titulo": "Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
       "resumen": "",
       "titulo_info": "Corte Suprema declaró inconstitucional DNU de Milei que liberaba precios de prepagas",
@@ -243,19 +269,6 @@
         "leyes"
       ],
       "url": "https://www.lanacion.com.ar/resizer/v2/los-jueces-de-la-corte-suprema-ricardo-lorenzetti-EIQYSQJMRBBZJDBQMXVPQ6BUZI.JPG?auth=05a42f68b5fd6168111df0c99429b465dd3ea98835d2cf9b0c62c2f9e5cc2b66&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del oficialismo",
-      "resumen": "",
-      "titulo_info": "Senado avanza en sanción de ley de discapacidad pese a resistencias del oficialismo",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/victoria-villarruel-al-abrir-la-sesion-de-hoy-en-O27COTYS55BZ7CC4N7VHM6VR24.JPG?auth=a162c64b06ff794edef63d3702ed214e91510b02255dfd0708c482f116d1635a&width=320&height=213&quality=70&smart=true",
       "fuente": "La Nación Política"
     },
     {
@@ -1027,19 +1040,6 @@
       "fuente": "Página/12 El País"
     },
     {
-      "titulo": "El fiscal anticorrupción denunció a la secretaria de Energía: la acusó de favorecer a una empresa sancionada por operar en Malvinas",
-      "resumen": "El titular de la PIA denunció en Comodoro Py que Tettamanti y su antecesor, ambos funcionarios de Milei, autorizaron a actuar en el país, en negocios gigantescos, a una firma británica inhabilitada; la sugestiva “Condición del Perdón Argentino”",
-      "titulo_info": "Fiscal anticorrupción denunció a secretaria de Energía por favorecer empresa sancionada por operar en Malvinas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.353Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/un-fiscal-anticorrupcion-denuncio-a-la-secretaria-de-energia-la-acuso-de-favorecer-a-una-empresa-nid17112026/",
-      "fuente": "La Nación Política"
-    },
-    {
       "titulo": "El Deutsche Bank informó sobre US$60 millones vinculados a Carlos Wagner, el empresario líder del Club de la obra pública",
       "resumen": "El banco alemán rechazó al constructor y a Esuco como clientes tras el estallido del “caso Cuadernos”; la Justicia argentina ya embargó cuentas suizas del empresario y de su hermana por US$20 millones",
       "titulo_info": "Deutsche Bank informó US$60 millones vinculados a empresario líder del Club de la obra pública",
@@ -1050,6 +1050,19 @@
         "obras"
       ],
       "url": "https://www.lanacion.com.ar/politica/el-deutsche-bank-informo-sobre-us60-millones-vinculados-a-carlos-wagner-el-empresario-lider-del-club-nid18112026/",
+      "fuente": "La Nación Política"
+    },
+    {
+      "titulo": "El fiscal anticorrupción denunció a la secretaria de Energía: la acusó de favorecer a una empresa sancionada por operar en Malvinas",
+      "resumen": "El titular de la PIA denunció en Comodoro Py que Tettamanti y su antecesor, ambos funcionarios de Milei, autorizaron a actuar en el país, en negocios gigantescos, a una firma británica inhabilitada; la sugestiva “Condición del Perdón Argentino”",
+      "titulo_info": "Fiscal anticorrupción denunció a secretaria de Energía por favorecer empresa sancionada por operar en Malvinas",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-19T20:25:36.353Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/un-fiscal-anticorrupcion-denuncio-a-la-secretaria-de-energia-la-acuso-de-favorecer-a-una-empresa-nid17112026/",
       "fuente": "La Nación Política"
     },
     {
@@ -1249,7 +1262,7 @@
     },
     {
       "titulo": "Sucesor de Mussi. El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
-      "resumen": "Carlos Balor fue convocado a una fiscalía luego de que un hombre denunciara que le ofrecieron plata para atentar contra su vida; el jefe comunal manifestó “preocupación”",
+      "resumen": "",
       "titulo_info": "El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo, manifestando preocupación",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
