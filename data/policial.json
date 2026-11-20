@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-11-20T18:04:25.360Z",
-  "timestamp_epoch": 1795197865,
-  "total_noticias": 60,
+  "last_updated": "2026-11-20T20:38:06.348Z",
+  "timestamp_epoch": 1795207086,
+  "total_noticias": 55,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 9
+      "total": 7
     },
     {
       "id": "allanamientos",
       "nombre": "ALLANAMIENTOS",
-      "total": 9
+      "total": 7
     },
     {
       "id": "detenciones",
@@ -27,7 +27,7 @@
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 15
+      "total": 14
     }
   ],
   "noticias": [
@@ -35,7 +35,7 @@
       "titulo": "Dos camiones chocaron en Ruta 14",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/dos-camiones-protagonizaron-un-siniestro-en-ruta-14-uno-choco-contra-un-guardarrail-y-una-columna.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -46,7 +46,7 @@
       "titulo": "Policía mató a su pareja y se suicidó en Santa Fe",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/dos-policias-muertos-investigan-un-femicidio-seguido-de-suicidio.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "Santa Fe",
       "categorias": [
@@ -54,21 +54,10 @@
       ]
     },
     {
-      "titulo": "Niña murió en choque en Ruta 14, demoran a camionero",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/corrientes-una-nina-murio-tras-un-choque-en-la-ruta-14-y-demoraron-a-un-camionero-entrerriano.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
       "titulo": "Roban mercadería de súper tras detención del dueño",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/robaron-mercaderia-de-un-supermercado-tras-la-detencion-del-dueno-por-presunto-abuso-de-un-nino.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -79,7 +68,7 @@
       "titulo": "Auto volcó en Ruta 20 tras pasar por agua",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/despiste-y-vuelco-en-ruta-20-un-auto-termino-de-costado.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -90,7 +79,7 @@
       "titulo": "Allanaron casa en Paraná y hallaron armas",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/allanamiento-en-parana-encontraron-armas-tras-una-agresion.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -98,10 +87,10 @@
       ]
     },
     {
-      "titulo": "Incendio en club de Federación: un hombre internado",
+      "titulo": "Incendio en club de Federación: un herido",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/incendio-en-federacion-un-auto-destruido-y-un-hombre-internado.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "Federación",
       "categorias": [
@@ -112,7 +101,7 @@
       "titulo": "Secuestraron más de $1,6 millones y celulares en tres allanamientos por narcomenudeo",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/narcomenudeo-secuestraron-1-6-millones-en-tres-allanamientos.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -120,10 +109,10 @@
       ]
     },
     {
-      "titulo": "Abigeato en Victoria: detienen a segundo sospechoso",
+      "titulo": "Abigeato en las islas de Victoria: detuvieron a un segundo sospechoso y sería el padre del primer arrestado",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/abigeato-en-victoria-detuvieron-a-un-segundo-sospechoso.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "Victoria",
       "categorias": [
@@ -134,7 +123,7 @@
       "titulo": "Allanaron la vivienda de un policía por su presunta vinculación con un siniestro vial y fuga en Villa Adela",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/policia-allanado-siniestro-vial-fuga-villa-adela-concordia.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -145,7 +134,7 @@
       "titulo": "Asaltaron a una pareja en un parque de Concepción del Uruguay: un joven fue herido con un arma blanca",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/asaltaron-a-una-pareja-en-un-parque-de-concepcion-del-uruguay-un-joven-fue-herido-con-un-arma-blanca.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -156,7 +145,7 @@
       "titulo": "Estafa en Villaguay: recuperaron un elevador valuado en $8 millones en Gualeguay",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/estafa-villaguay-elevador-ocho-millones-gualeguay.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "Villaguay",
       "categorias": [
@@ -167,7 +156,7 @@
       "titulo": "Detuvieron a un ganadero acusado de estafar a productores santafesinos por 129 vacunos",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-a-un-ganadero-acusado-de-estafar-a-productores-santafesinos-por-129-vacunos.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -178,7 +167,7 @@
       "titulo": "Un poste cayó sobre un motociclista mientras circulaba en Santa Fe y lo golpeó en la cabeza",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/un-poste-cayo-sobre-un-motociclista-mientras-circulaba-en-santa-fe-y-lo-golpeo-en-la-cabeza.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "Santa Fe",
       "categorias": [
@@ -189,9 +178,20 @@
       "titulo": "Estafas con construcción de viviendas: aclaran que los acusados aún no están imputados, pero avanza la investigación",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/estafas-con-construccion-de-viviendas-aclaran-que-los-acusados-aun-no-estan-imputados-pero-avanza-la-investigacion.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
+      "fecha": "2026-11-20T20:37:41.091Z",
       "fuente": "Elonce",
       "lugar": "",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Detienen a ladrón de picaportes en Santa Fe",
+      "descripcion": "El procedimiento fue realizado por la policía este viernes en inmediaciones de Junín y San Jerónimo, luego de que testigos alertaran sobre el robo de piezas metálicas las cercanías.",
+      "url": "https://www.ellitoral.com/sucesos/detuvieron-ladron-serial-picaportes-macrocentro-santafe-bronce_0_U35AcH9QGr.html",
+      "fecha": "2026-11-20T20:06:06.000Z",
+      "fuente": "El Litoral",
+      "lugar": "Santa Fe",
       "categorias": [
         "detenciones"
       ]
@@ -208,7 +208,7 @@
       ]
     },
     {
-      "titulo": "Pity Álvarez condenado a 12 años y arresto domiciliario",
+      "titulo": "Condenaron a Pity Álvarez a 12 años de prisión y le otorgaron arresto domiciliario",
       "descripcion": "El tribunal lo declaró culpable de homicidio agravado por el uso de arma de fuego. Antes del fallo, el músico cuestionó el pedido de la Fiscalía, que había solicitado 18 años y seis meses.",
       "url": "https://www.ellitoral.com/sucesos/pity-alvarez-condena-arresto-domiciliario-cristian-diaz-homicidio-villa-lugano-viejas-locas-intoxicados_0_EHcuZnq5kX.html",
       "fecha": "2026-11-20T17:04:19.000Z",
@@ -219,7 +219,7 @@
       ]
     },
     {
-      "titulo": "Prófugo bonaerense cayó en Entre Ríos",
+      "titulo": "Cayeron en Entre Ríos con un prófugo de la justicia bonaerense",
       "descripcion": "Tiene 40 años y fue localizado mientras trabajaba en una vivienda. Quedó alojado a la espera de las diligencias para su traslado.",
       "url": "https://www.analisisdigital.com.ar/policiales/2026/11/20/detuvieron-en-entre-rios-un-profugo-buscado-por-la-justicia-bonaerense",
       "fecha": "2026-11-20T15:00:00.000Z",
@@ -230,7 +230,7 @@
       ]
     },
     {
-      "titulo": "Piden fiscales contra el delito rural en Entre Ríos",
+      "titulo": "Entrerrianos piden fiscalías contra el delito rural",
       "descripcion": "",
       "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/20/la-mesa-de-enlace-de-entre-rios-impulsa-la-necesidad-de-crear-fiscalias-especializadas-contra-el-delito-rural",
       "fecha": "2026-11-20T15:00:00.000Z",
@@ -241,7 +241,7 @@
       ]
     },
     {
-      "titulo": "Rescataron cría de chajá en la Costanera Este",
+      "titulo": "Rescataron un chajá bebé entre camalotes en la Costanera Este",
       "descripcion": "El pequeño ejemplar fue encontrado por guardavidas mientras permanecía entre vegetación flotante que se desplazaba a la deriva. Los trabajadores lo pusieron a resguardo y dieron aviso a la Policía Ecológica, cuyos efectivos lo trasladaron a una jaula de protección y dieron inter…",
       "url": "https://www.ellitoral.com/sucesos/rescataron-cria-chaja-camalotes-costanera_0_9aFimKnZHg.html",
       "fecha": "2026-11-20T12:08:45.000Z",
@@ -307,17 +307,6 @@
       ]
     },
     {
-      "titulo": "Allanaron una vivienda por amenazas y encontraron 159 envoltorios de cocaína",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/allanamiento-por-amenazas-hallaron-cocaina-y-hubo-tres-detenidos.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "allanamientos"
-      ]
-    },
-    {
       "titulo": "Intentó robar una camioneta, escapó en moto y fue detenido tras una persecución",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/intento-robar-una-camioneta-escapo-en-moto-y-fue-detenido.htm",
@@ -359,17 +348,6 @@
       "lugar": "",
       "categorias": [
         "detenciones"
-      ]
-    },
-    {
-      "titulo": "Secuestraron 62 envoltorios de droga tras la fuga de un sospechoso por los techos",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/escapo-por-los-techos-y-abandono-62-envoltorios-de-droga.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "allanamientos"
       ]
     },
     {
@@ -513,39 +491,6 @@
       "lugar": "",
       "categorias": [
         "detenciones"
-      ]
-    },
-    {
-      "titulo": "Detienen a joven por faenar novillo en islas de Victoria",
-      "descripcion": "Un joven de 24 años fue detenido este jueves en flagrancia, acusado de cometer un hecho de abigeato en la zona de islas de Victoria. Durante un operativo policial, los efectivos interceptaron una embarcación en la que transportaba cuatro bolsas con cortes de carne y restos de un…",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/detuvieron-un-joven-acusado-de-faenar-un-novillo-de-300-kilos-en-las-islas-de-victoria",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Victoria",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Investigan a un efectivo policial por un choque y fuga en Villa Adela",
-      "descripcion": "Un policía fue allanado en la jornada de este jueves, luego de que su vehículo fuera identificado como el presunto rodado que habría protagonizado un siniestro vial y luego se diera a la fuga en la zona de Villa Adela.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/investigan-un-efectivo-policial-por-un-choque-y-fuga-en-villa-adela",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "En Villaguay atacaron con un cuchillo a un policía",
-      "descripcion": "El atacante tiene 29 años y fue detenido. El agente sufrió un corte de carácter leve en la pierna derecha.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/en-villaguay-atacaron-con-un-cuchillo-un-policia",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Villaguay",
-      "categorias": [
-        "hechos"
       ]
     },
     {
