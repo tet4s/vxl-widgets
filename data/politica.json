@@ -1,28 +1,28 @@
 {
-  "last_updated": "2026-11-20T04:01:03.206Z",
-  "timestamp_epoch": 1795147263,
-  "total_noticias": 119,
+  "last_updated": "2026-11-20T12:46:24.405Z",
+  "timestamp_epoch": 1795178784,
+  "total_noticias": 120,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 64
+      "total": 65
     },
     {
       "id": "obras",
       "nombre": "OBRAS",
-      "total": 12
+      "total": 10
     },
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 29
+      "total": 31
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 16
+      "total": 17
     }
   ],
   "jurisdicciones": [
@@ -34,12 +34,12 @@
     {
       "id": "santa_fe",
       "nombre": "SANTA FE",
-      "total": 11
+      "total": 9
     },
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 22
+      "total": 24
     },
     {
       "id": "corrientes",
@@ -49,7 +49,7 @@
     {
       "id": "misiones",
       "nombre": "MISIONES",
-      "total": 8
+      "total": 9
     },
     {
       "id": "chaco",
@@ -75,6 +75,150 @@
       ],
       "url": "https://www.lanacion.com.ar/politica/el-senado-aprobo-la-reforma-del-regimen-de-propiedad-privada-que-restablece-la-ley-de-tierras-nid19112026/",
       "fuente": "La Nación Política"
+    },
+    {
+      "titulo": "El Senado aprobó la Ley de Discapacidad: un voto unánime fruto de la movilización y la lucha",
+      "resumen": "Las personas con discapacidad, su familia, los prestadores y organizaciones de todo el país son los responsables del apoyo total en el Senado. El presupuesto, la otra pelea.",
+      "titulo_info": "El Senado aprobó la Ley de Discapacidad: un voto unánime fruto de la movilización y la lucha. Las personas con discapacidad, su familia, los prestadores y organizaciones de todo el país son los responsables del apoyo total en el Senado.",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T12:43:40.970Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.pagina12.com.ar/2026/11/20/un-voto-unanime-fruto-de-la-movilizacion-y-la-lucha/",
+      "fuente": "Página/12 El País"
+    },
+    {
+      "titulo": "El Senado sancionó por unanimidad la ley de Fortalecimiento del Sistema de Discapacidad",
+      "resumen": "La iniciativa obtuvo 71 votos afirmativos y establece nuevas condiciones para el acceso a las pensiones, garantiza su compatibilidad con el empleo formal y contempla la cobertura de salud y la rehabilitación de beneficios suspendidos.",
+      "titulo_info": "El Senado sancionó por unanimidad la ley de Fortalecimiento del Sistema de Discapacidad. La iniciativa obtuvo 71 votos afirmativos y establece nuevas condiciones para el acceso a las pensiones",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T12:43:40.304Z",
+      "jurisdiccion": "misiones",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.territoriodigital.com/noticias/2026/11/20/928362-el-senado-sanciono-por-unanimidad-la-ley-de-fortalecimiento-del-sistema-de-discapacidad",
+      "fuente": "Territorio Digital"
+    },
+    {
+      "titulo": "La capacitación sobre la Boleta Única de Papel llegó a Feliciano con más de 200 estudiantes",
+      "resumen": "",
+      "titulo_info": "La capacitación sobre la Boleta Única de Papel llegó a Feliciano con más de 200 estudiantes",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T12:43:39.115Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "elecciones"
+      ],
+      "url": "/noticias/2026/11/20/480027-la-capacitacion-sobre-la-boleta-unica-de-papel-llego-a-feliciano-con-mas-de-200-estudiantes",
+      "fuente": "APF Digital"
+    },
+    {
+      "titulo": "Lo que dejó el debate entre Pedro Sánchez y Feijóo de cara a las elecciones del 29N en España",
+      "resumen": "En el PSOE ponen en valor que Sánchez no haya entrado en las provocaciones de Feijóo en su intento de seducir al electorado indeciso de centro con sus intervenciones sin estridencias.",
+      "titulo_info": "Lo que dejó el debate entre Pedro Sánchez y Feijóo de cara a las elecciones del 29N en España. En el PSOE ponen en valor que Sánchez no haya entrado en las provocaciones de Feijóo en su intento de seducir al electorado indeciso de centro con sus",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T12:43:40.970Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "elecciones"
+      ],
+      "url": "https://www.pagina12.com.ar/2026/11/20/lo-que-dejo-el-debate-entre-pedro-sanchez-y-feijoo-de-cara-a-las-elecciones-del-29n-en-espana/",
+      "fuente": "Página/12 El País"
+    },
+    {
+      "titulo": "Se reglamentó en Brasil la jornada laboral 5x2: Lula ya firmó el decreto",
+      "resumen": "",
+      "titulo_info": "Se reglamentó en Brasil la jornada laboral 5x2: Lula ya firmó el decreto",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T12:43:39.115Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "/noticias/2026/11/20/480009-se-reglamento-en-brasil-la-jornada-laboral-5x2-lula-ya-firmo-el-decreto",
+      "fuente": "APF Digital"
+    },
+    {
+      "titulo": "El Senado nacional aprobó la reforma del régimen de propiedad privada que restablece la Ley de Tierras",
+      "resumen": "",
+      "titulo_info": "El Senado nacional aprobó la reforma del régimen de propiedad privada que restablece la Ley de Tierras",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T12:43:39.115Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "/noticias/2026/11/20/479991-el-senado-nacional-aprobo-la-reforma-del-regimen-de-propiedad-privada-que-restablece-la-ley-de-tierras",
+      "fuente": "APF Digital"
+    },
+    {
+      "titulo": "El Frente Entrerriano Federal repudió la agresión a la intendenta de Paraná",
+      "resumen": "",
+      "titulo_info": "El Frente Entrerriano Federal repudió la agresión a la intendenta de Paraná",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T12:43:39.115Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "/noticias/2026/11/20/480015-el-frente-entrerriano-federal-repudio-la-agresion-a-la-intendenta-de-parana",
+      "fuente": "APF Digital"
+    },
+    {
+      "titulo": "Humanidades de Uader firmó convenio para difundir sus producciones musicales en plataformas digitales",
+      "resumen": "",
+      "titulo_info": "Humanidades de Uader firmó convenio para difundir sus producciones musicales en plataformas digitales",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T12:43:39.115Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "/noticias/2026/11/20/480006-humanidades-de-uader-firmo-convenio-para-difundir-sus-producciones-musicales-en-plataformas-digitales",
+      "fuente": "APF Digital"
+    },
+    {
+      "titulo": "Bahillo estuvo con legisladores nacionales del PJ para analizar el impacto del Presupuesto 2027 en Entre Ríos",
+      "resumen": "",
+      "titulo_info": "Bahillo estuvo con legisladores nacionales del PJ para analizar el impacto del Presupuesto 2027 en Entre Ríos",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T12:43:39.046Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "/provinciales/2026/11/20/bahillo-estuvo-con-legisladores-nacionales-del-pj-para-analizar-el-impacto-del-presupuesto-2027-en-entre-rios",
+      "fuente": "Análisis Digital"
+    },
+    {
+      "titulo": "Ley Joaquín: qué medidas de seguridad deberán cumplir los clubes y las escuelas",
+      "resumen": "El Senado convirtió en ley la iniciativa que busca evitar accidentes en espacios deportivos y recreativos. Alcanza a instituciones públicas y privadas, plazas y lugares de juego, y establece condiciones de instalación, sujeción, mantenimiento y control de los equipamientos.",
+      "titulo_info": "Ley Joaquín: qué medidas de seguridad deberán cumplir los clubes y las escuelas. El Senado convirtió en ley la iniciativa que busca evitar accidentes en espacios deportivos y recreativos.",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T11:14:31.000Z",
+      "jurisdiccion": "santa_fe",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.ellitoral.com/politica/leyjoaquin-senadodelanacion-equipamientodeportivo-medidasdeseguridad-ramosmejia-junindelosandes-joaquinstefanogatto-subsecretariadedeportesdelanacion-camaradediputados_0_ZgCxErNAVN.html",
+      "fuente": "El Litoral Política"
+    },
+    {
+      "titulo": "La Legislatura se encamina a garantizar, por ley, educación financiera en escuelas santafesinas",
+      "resumen": "La decisión quedó en manos del Senado. El objetivo es que jóvenes y adultos tengan herramientas a la hora de tomar decisiones sobre el dinero. La Cámara Baja dejó para la última sesión del período Ordinario los principales temas en carpeta ante la falta de acuerdo entre los diferentes espacios políticos.",
+      "titulo_info": "La Legislatura se encamina a garantizar, por ley, educación financiera en escuelas santafesinas",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T09:26:18.000Z",
+      "jurisdiccion": "santa_fe",
+      "categorias": [
+        "leyes",
+        "gobierno"
+      ],
+      "url": "https://www.ellitoral.com/politica/legislatura-educacionfinanciera-ley-provincial-escuelassantafesinas_0_ZbTQ5ntJmQ.html",
+      "fuente": "El Litoral Política"
     },
     {
       "titulo": "El Senado aprobó la adhesión al Tratado global de Patentes y blindó la ley de Tierras",
@@ -1080,7 +1224,7 @@
     },
     {
       "titulo": "Sesión en el Senado: LLA volvió a frenar el debate de la ley de Ludopatía",
-      "resumen": "El oficialismo impidió la discusión del proyecto que tiene media sanción y está por perder estado parlamentario. Votaron que sea tratado el 26 de noviembre, en la última sesión del año. En el temario de hoy están la Ley de Discapacidad, la adhesión al Tratado de Patentes con Estados Unidos y el restablecimiento de la Ley de Tierras.",
+      "resumen": "",
       "titulo_info": "El Senado postergó el debate de la ley de Ludopatía, con media sanción, hasta el 26 de noviembre",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.451Z",
@@ -1340,7 +1484,7 @@
     },
     {
       "titulo": "Por unanimidad. Aprueban la nueva ley de Discapacidad y reclaman que el Gobierno cumpla con su reglamentación",
-      "resumen": "Con 71 votos a favor y ninguno en contra, el proyecto, que ya había obtenido un respaldo casi unánime en Diputados, con 237 avales, fue aprobado esta tarde",
+      "resumen": "",
       "titulo_info": "Por unanimidad, el Senado aprobó la nueva ley de Discapacidad con 71 votos a favor y ninguno en contra, reclamando al Gobierno su reglamentación",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -1353,7 +1497,7 @@
     },
     {
       "titulo": "“Me gustaría que sea candidata”. El diputado que abandonó el bloque de La Libertad Avanza postuló a Patricia Bullrich para el año que viene",
-      "resumen": "En el mismo día en que rompió con la bancada libertaria al denunciar un pacto del oficialismo con el PJ en Tucumán, el legislador Mariano Campero explicitó sus apetencias electorales",
+      "resumen": "",
       "titulo_info": "El diputado Campero, tras dejar La Libertad Avanza, propuso a Patricia Bullrich como candidata para el próximo año",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -1366,7 +1510,7 @@
     },
     {
       "titulo": "Sucesor de Mussi. El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo",
-      "resumen": "Carlos Balor fue convocado a una fiscalía luego de que un hombre denunciara que le ofrecieron plata para atentar contra su vida; el jefe comunal manifestó “preocupación”",
+      "resumen": "",
       "titulo_info": "El intendente de Berazategui declaró en una causa que investiga un supuesto plan para atacarlo, manifestando preocupación",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -1379,7 +1523,7 @@
     },
     {
       "titulo": "Fallo unánime. Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
-      "resumen": "El máximo tribunal confirmó una sentencia de la Cámara Federal de La Plata contra dos artículos del DNU 70/23, que eliminaron los límites a los aumentos de la medicina privada, y reafirmó los límites a los decretos de necesidad y urgencia",
+      "resumen": "",
       "titulo_info": "Corte Suprema frena DNU de Milei y declara inconstitucional liberación de precios de prepagas",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -1481,136 +1625,6 @@
       ],
       "url": "https://www.lanacion.com.ar/resizer/v2/carlos-balor-intendente-de-KZJGBK26IBHJZEEMGVFGUJDYCU.jpg?auth=2af1c9dc4422c79e24601dac908cad4c70498eaa2a87135e6cb78fb54f6349cd&width=320&height=213&quality=70&smart=true",
       "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Expectativa por la sesión del Senado que tiene la Ley de Discapacidad en agenda",
-      "resumen": "El temario incluye la Inviolabilidad de la Propiedad Privada con la restitución de la Ley de Tierras Rurales, otro de los temas que despertó polémica a lo largo del año. Habrá un proyecto dedicado a Raúl Alfonsín que cumpliría 100 años en marzo de 2027.",
-      "titulo_info": "Senado trata Ley de Discapacidad y propiedad privada con restitución de Ley de Tierras Rurales, además de proyecto por centenario de Raúl Alfonsín",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T13:44:28.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.ellitoral.com/politica/senado-nacional-discapacidad-propiedad-privada-ley-tierras-alfonsin_0_WquJGfXwhY.html",
-      "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "Crecida del Paraná: la Provincia defendió por qué no hará la defensa oeste de Arroyo Leyes",
-      "resumen": "Virginia Coudannes sostuvo que la obra licitada durante la gestión anterior presenta problemas técnicos y legales que la hacen inviable. Mientras el Paraná comienza a estabilizarse, hay 462 evacuados en Santa Fe.",
-      "titulo_info": "Provincia defendió no hacer defensa oeste de Arroyo Leyes por problemas técnicos y legales en obra licitada, mientras Paraná se estabiliza con 462 evacuados en Santa Fe",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T12:35:31.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.ellitoral.com/politica/arroyo-leyes-crecida-parana-defensa-oeste-evacuados-proteccion-civil-santa-fe-recursos-hidricos_0_pTmTHKzlo3.html",
-      "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "Presupuesto 2026: el Gobierno aumentó los fondos para salarios y prestaciones sociales",
-      "resumen": "Mediante una reasignación de fondos, la Casa Rosada busca blindar prestaciones sociales y gastos operativos ante la falta de una actualización general.",
-      "titulo_info": "Gobierno aumentó fondos para salarios y prestaciones sociales en Presupuesto 2026 mediante reasignación",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T10:24:43.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.ellitoral.com/politica/presupuesto2026-decreto13912026-javiermilei-anses-seguridadsocial-incluirsalud-pami-plan1000dias-pensiones-arca-ministeriodesalud_0_gQlzTHmYjw.html",
-      "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "Más de 200.000 beneficiados. El Gobierno avaló un financiamiento de US$150 millones para obras de agua en Chubut y Santa Cruz",
-      "resumen": "",
-      "titulo_info": "Gobierno avaló financiamiento de US$150 millones para obras de agua en Chubut y Santa Cruz, beneficiando a más de 200.000 personas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-el-mandatario-cito-a-pablo-picasso-y-dijo-me-voy-a-encargar-de-lo-nid18112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Diputados aprobó donaciones de tierras y debatió junto a gremios cambios en la legislación laboral",
-      "resumen": "Se desarrolló este miércoles la 18º sesión ordinaria del 147º Período Legislativo de la Cámara de Diputados, en la que se otorgó sanción definitiva a proyectos de donación de inmuebles a comunas y municipios, y media sanción a iniciativas vinculadas con la educación y los servicios comunitarios. Además, ingresó el proyecto de Régimen Legal de Ética y Transparencia en la Función Pública con las …",
-      "titulo_info": "Diputados dio sanción definitiva a donaciones de tierras y media sanción a proyectos de educación y servicios comunitarios, además ingresó un proyecto de ética pública",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.hcder.gov.ar/noticiasDetalles.php?id=2038",
-      "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "Trabajoso apoyo. El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
-      "resumen": "",
-      "titulo_info": "El Gobierno consiguió dictamen para suspender las PASO tras eliminación de listas colectoras",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/el-gobierno-retiro-las-listas-colectoras-para-asegurarse-el-apoyo-para-suspender-las-paso-nid18112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Hein firmó un convenio con Rotary para impulsar acciones en salud mental",
-      "resumen": "El presidente de la Cámara de Diputados, Gustavo Hein, y el gobernador del Distrito Binacional 4945 de Rotary International, Lucio Marani, firmaron un convenio marco de colaboración con el objetivo de desarrollar programas conjuntos vinculados a la salud mental y el bienestar integral.",
-      "titulo_info": "Hein firmó convenio con Rotary para impulsar acciones en salud mental",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.hcder.gov.ar/noticiasDetalles.php?id=2037",
-      "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "El Gobierno consiguió el dictamen para suspender las PASO tras la eliminación de las listas colectoras",
-      "resumen": "",
-      "titulo_info": "Gobierno obtuvo dictamen para suspender PASO tras eliminar listas colectoras",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/patricia-bullrich-al-firmar-este-miercoles-el-LPCKDAPYK5FLBJQVQBASD3O2TQ.jpg?auth=c3499aa118961c8f014b64379c8e549473aff600d55f724b721baa26e02249bb&width=320&height=213&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Pullaro: “En la provincia de Santa Fe hicimos mucha más obra pública que en los últimos 20 años”",
-      "resumen": "El mandatario encabezó los actos en Serodino y Salto Grande, en el departamento Iriondo, donde se entregaron 10 y 16 casas, respectivamente.",
-      "titulo_info": "Pullaro afirmó que en Santa Fe se hizo más obra pública que en los últimos 20 años",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-17T15:00:00.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.santafe.gob.ar/noticias/noticia/287931/",
-      "fuente": "Gobierno de Santa Fe"
-    },
-    {
-      "titulo": "Boleta Única de Papel: Hein destacó el relevamiento nacional de CIPPEC sobre la implementación del sistema de votación",
-      "resumen": "El presidente de la Cámara de Diputados de Entre Ríos, Gustavo Hein, participó de la presentación de un estudio de la organización sobre la primera experiencia con BUP en la elección legislativa en la provincia y en diferentes distritos del país.",
-      "titulo_info": "Hein destacó relevamiento nacional de CIPPEC sobre implementación de la Boleta Única de Papel",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-17T15:00:00.000Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.hcder.gov.ar/noticiasDetalles.php?id=2036",
-      "fuente": "Diputados Entre Ríos"
     }
   ]
 }
