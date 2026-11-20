@@ -115,16 +115,19 @@ async function main() {
     items: todos
   };
 
+  /* Si no hay eventos no se toca el archivo: se conserva el último JSON bueno.
+     Publicar una agenda vacía borraría la cartelera del sitio. */
+  if (!todos.length) {
+    log('ATENCIÓN: la salida quedó vacía. No se publica; queda el JSON anterior.');
+    process.exitCode = 2;
+    return;
+  }
+
   var destino = SALIDA;
   fs.mkdirSync(path.dirname(destino), { recursive: true });
   fs.writeFileSync(destino, JSON.stringify(salida, null, 2) + '\n', 'utf8');
 
   log('Listo: ' + todos.length + ' eventos en ' + destino);
-
-  if (!todos.length) {
-    log('ATENCIÓN: la salida quedó vacía. Revisar las fuentes antes de publicar.');
-    process.exitCode = 2;
-  }
 }
 
 main().catch(function (e) {
