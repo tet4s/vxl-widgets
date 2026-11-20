@@ -1,10 +1,6 @@
 name: Actualizador de Cotizaciones VXL Economía
 
 on:
-  schedule:
-    # GitHub no garantiza crons: este repo recibe ~4 corridas/día por schedule.
-    # El disparo por push (con guarda de frescura) es el que mantiene el dato al día.
-    - cron: '*/10 * * * *'
   push:
     branches: [main]
     paths-ignore:

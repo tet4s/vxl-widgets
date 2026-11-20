@@ -1,10 +1,6 @@
 name: Actualizar Política del Litoral
 
 on:
-  schedule:
-    # Minutos explícitos (no "*/20"): GitHub descarta primero los crons con comodines
-    # en las horas pico. En este repo las corridas programadas son 1-3 por día.
-    - cron: '9,29,49 * * * *'
   # Respaldo principal: el repo recibe pushes de otros workflows cada pocos minutos
   # (deportes, policial, tránsito), así que un push también refresca política.
   # La guarda de frescura del primer step evita correr si los datos son recientes.

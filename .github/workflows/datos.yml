@@ -1,0 +1,90 @@
+name: Datos VXL
+
+# Un solo cron para todo el repositorio.
+# GitHub entrega aproximadamente una corrida programada por hora por repositorio:
+# con siete workflows compitiendo, cada dato se refrescaba cada ~8 horas. Con uno
+# solo, cada corrida refresca lo que esté vencido y el resto lo saltea.
+#
+# Los workflows individuales siguen existiendo para el disparo por push.
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Instalar dependencias
+        run: npm ci || npm install
+
+      - name: Cotizaciones (cada corrida)
+        continue-on-error: true
+        env:
+          IOL_USERNAME: ${{ secrets.IOL_USERNAME }}
+          IOL_PASSWORD: ${{ secrets.IOL_PASSWORD }}
+          IOL_ACCESS_TOKEN: ${{ secrets.IOL_ACCESS_TOKEN }}
+          IOL_REFRESH_TOKEN: ${{ secrets.IOL_REFRESH_TOKEN }}
+        run: node ./scripts/update-quotes.js
+
+      - name: Pizarra de granos (si tiene más de 90 min)
+        continue-on-error: true
+        run: |
+          if node scripts/frescura.js data/pizarra.json 90; then node ./scripts/scraper.js; fi
+
+      - name: Bolsillo (si tiene más de 90 min)
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if node scripts/frescura.js data/bolsillo.json 90; then node ./scripts/update-bolsillo.js; fi
+
+      - name: Política (si tiene más de 120 min)
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if node scripts/frescura.js data/politica.json 120; then node ./scripts/update-politica.js; fi
+
+      - name: Policiales (si tiene más de 90 min)
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if node scripts/frescura.js data/policial.json 90; then node ./scripts/update-policial.js; fi
+
+      - name: Deportes (si tiene más de 120 min)
+        continue-on-error: true
+        run: |
+          if node scripts/frescura.js data/deportes.json 120; then node ./scripts/update-deportes.js; fi
+
+      - name: Tránsito (si tiene más de 120 min)
+        continue-on-error: true
+        run: |
+          if node scripts/frescura.js data/transito.json 120; then node ./scripts/update-transito.js; fi
+
+      - name: Commit y push
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/
+          git diff-index --quiet HEAD || git commit -m 'Auto-update: datos VXL [skip ci]'
+          for i in 1 2 3 4; do
+            git pull --rebase --autostash origin main && git push && break
+            sleep 5
+          done

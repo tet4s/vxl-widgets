@@ -1,11 +1,6 @@
 name: Actualizar Alertas de Tránsito
 
 on:
-  schedule:
-    # Cada 30 minutos, todos los días. Minutos explícitos y no "*/30": GitHub
-    # descarta primero los crons con comodines en las horas pico (visto en este
-    # repo: */15 corría 2-3 veces por día).
-    - cron: '7,37 * * * *'
   # Respaldo: GitHub limita las corridas programadas de este repo (medido:
   # 1-3 por día en TODOS los workflows). El repo recibe pushes de bots cada
   # pocos minutos, así que un push también dispara esto. La guarda de frescura

@@ -1,9 +1,6 @@
 name: Executar Scraper Agrícola en Tiempo Real
 
 on:
-  schedule:
-    # Se ejecuta cada 30 minutos de Lunes a Viernes de 12:00 a 21:00 UTC (09:00 a 18:00 hora Argentina)
-    - cron: '*/30 12-21 * * 1-5'
   workflow_dispatch: # Disparo manual desde GitHub Actions
 
 permissions:

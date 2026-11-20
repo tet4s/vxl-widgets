@@ -1,9 +1,6 @@
 name: Actualizar Deportes del Litoral
 
 on:
-  schedule:
-    # Los resultados y las tablas cambian los fines de semana.
-    - cron: '*/20 * * * *'
   push:
     branches: [main]
     paths-ignore:
