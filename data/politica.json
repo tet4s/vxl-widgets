@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-20T20:48:28.078Z",
-  "timestamp_epoch": 1795207708,
-  "total_noticias": 119,
+  "last_updated": "2026-11-20T23:11:41.883Z",
+  "timestamp_epoch": 1795216301,
+  "total_noticias": 120,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 60
+      "total": 61
     },
     {
       "id": "obras",
@@ -17,19 +17,19 @@
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 34
+      "total": 33
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 20
+      "total": 21
     }
   ],
   "jurisdicciones": [
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 53
+      "total": 51
     },
     {
       "id": "santa_fe",
@@ -39,7 +39,7 @@
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 30
+      "total": 32
     },
     {
       "id": "corrientes",
@@ -49,7 +49,7 @@
     {
       "id": "misiones",
       "nombre": "MISIONES",
-      "total": 9
+      "total": 10
     },
     {
       "id": "chaco",
@@ -64,6 +64,97 @@
   ],
   "noticias": [
     {
+      "titulo": "Mientras el Gobierno festeja la ley de patentes, los laboratorios alertan por una fuerte suba de medicamentos",
+      "resumen": "El Senado aprobó la adhesión argentina al acuerdo internacional y el oficialismo celebró la decisión. Los laboratorios nacionales advierten por el impacto sobre la producción local y el precio de los tratamientos.",
+      "titulo_info": "Mientras el Gobierno festeja la ley de patentes, los laboratorios alertan por una fuerte suba de medicamentos. El Senado aprobó la adhesión argentina al acuerdo internacional y el oficialismo celebró la decisión.",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T23:08:06.358Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.pagina12.com.ar/2026/11/20/mientras-el-gobierno-festeja-la-ley-de-patentes-los-laboratorios-alertan-por-una-fuerte-suba-de-medicamentos/",
+      "fuente": "Página/12 El País"
+    },
+    {
+      "titulo": "En jornada sobre la Ley de Mecenazgo Deportivo, Uranga afirmó: “Marcará un antes y un después”",
+      "resumen": "",
+      "titulo_info": "En jornada sobre la Ley de Mecenazgo Deportivo, Uranga afirmó: “Marcará un antes y un después”",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T23:08:05.980Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "/politica/en-jornada-sobre-la-ley-de-mecenazgo-deportivo-uranga-afirmo-marcara-un-antes-y-un-despues.htm",
+      "fuente": "Elonce Política"
+    },
+    {
+      "titulo": "Santo Tomé aprobó un presupuesto de más de $17.600 millones y renovó el reclamo por la ruta 14",
+      "resumen": "El Concejo Deliberante sancionó el cálculo de recursos para 2027 por mayoría, luego de un debate en el que se presentaron dos dictámenes con posiciones contrapuestas. Además, los ediles aprobaron por unanimidad un nuevo pedido de reparación integral de la ruta nacional 14, con especial atención al tramo del kilómetro 751.",
+      "titulo_info": "Santo Tomé aprobó un presupuesto de más de $17.600 millones y renovó el reclamo por la ruta 14. El Concejo Deliberante sancionó el cálculo de recursos para 2027 por mayoría",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T23:08:05.779Z",
+      "jurisdiccion": "misiones",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.territoriodigital.com/noticias/2026/11/20/928464-santo-tome-aprobo-un-presupuesto-de-mas-de-17600-millones-y-renovo-el-reclamo-por-la-ruta-14",
+      "fuente": "Territorio Digital"
+    },
+    {
+      "titulo": "Con el insólito spot de un astronauta y un marciano, arrancó la campaña electoral en Neuquén",
+      "resumen": "",
+      "titulo_info": "Con el insólito spot de un astronauta y un marciano, arrancó la campaña electoral en Neuquén",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T23:08:05.908Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "elecciones"
+      ],
+      "url": "",
+      "fuente": "Clarín Política"
+    },
+    {
+      "titulo": "Con la presencia de Filmus, Concepción del Uruguay será sede de la jornada por los 20 años de la Ley de Educación Nacional",
+      "resumen": "",
+      "titulo_info": "Con la presencia de Filmus, Concepción del Uruguay será sede de la jornada por los 20 años de la Ley de Educación Nacional",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T23:08:05.200Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "/noticias/2026/11/20/480150-con-la-presencia-de-filmus-concepcion-del-uruguay-sera-sede-de-la-jornada-por-los-20-anos-de-la-ley-de-educacion-nacional",
+      "fuente": "APF Digital"
+    },
+    {
+      "titulo": "Ley de Ludopatía: bajo presión, el oficialismo habilita el debate pero buscará imponer un proyecto propio",
+      "resumen": "",
+      "titulo_info": "Ley de Ludopatía: bajo presión, el oficialismo habilita el debate pero buscará imponer un proyecto propio",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T23:08:05.908Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "",
+      "fuente": "Clarín Política"
+    },
+    {
+      "titulo": "Chubut elegirá gobernador el 21 de marzo de 2027 con nuevas reglas electorales",
+      "resumen": "",
+      "titulo_info": "Chubut elegirá gobernador el 21 de marzo de 2027 con nuevas reglas electorales",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T23:08:05.200Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "/noticias/2026/11/20/480171-chubut-elegira-gobernador-el-21-de-marzo-de-2027-con-nuevas-reglas-electorales",
+      "fuente": "APF Digital"
+    },
+    {
       "titulo": "Pullaro inauguró el gasoducto Albarellos-Uranga: más de 850 familias accederán al servicio de gas natural",
       "resumen": "La obra en el departamento Rosario contempla 15 kilómetros de gasoducto principal, una estación reguladora y 2 kilómetros de red de distribución domiciliaria. El proyecto fue desarrollado de manera conjunta entre Litoral Gas y las comunas.",
       "titulo_info": "Pullaro inauguró el gasoducto Albarellos-Uranga para más de 850 familias",
@@ -77,16 +168,16 @@
       "fuente": "Gobierno de Santa Fe"
     },
     {
-      "titulo": "Agmer convocó a un paro de 48 horas para la semana que viene tras el cierre de la paritaria docente",
+      "titulo": "“La transformación de Frigerio tiene que llegar a Paraná”: Renoldi lanzó su precandidatura a Intendenta",
       "resumen": "",
-      "titulo_info": "Agmer convocó a un paro de 48 horas tras el cierre de la paritaria docente",
+      "titulo_info": "Renoldi lanzó su precandidatura a Intendenta y pidió que la transformación de Frigerio llegue a Paraná",
       "titulo_info_src": "llm",
       "fecha": "2026-11-20T20:45:13.049Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
         "gobierno"
       ],
-      "url": "/noticias/2026/11/20/480048-agmer-convoco-a-un-paro-de-48-horas-para-la-semana-que-viene-tras-el-cierre-de-la-paritaria-docente",
+      "url": "/noticias/2026/11/20/480120-la-transformacion-de-frigerio-tiene-que-llegar-a-parana-renoldi-lanzo-su-precandidatura-a-intendenta",
       "fuente": "APF Digital"
     },
     {
@@ -103,16 +194,16 @@
       "fuente": "APF Digital"
     },
     {
-      "titulo": "“La transformación de Frigerio tiene que llegar a Paraná”: Renoldi lanzó su precandidatura a Intendenta",
+      "titulo": "Agmer convocó a un paro de 48 horas para la semana que viene tras el cierre de la paritaria docente",
       "resumen": "",
-      "titulo_info": "Renoldi lanzó su precandidatura a Intendenta y pidió que la transformación de Frigerio llegue a Paraná",
+      "titulo_info": "Agmer convocó a un paro de 48 horas tras el cierre de la paritaria docente",
       "titulo_info_src": "llm",
       "fecha": "2026-11-20T20:45:13.049Z",
       "jurisdiccion": "entre_rios",
       "categorias": [
         "gobierno"
       ],
-      "url": "/noticias/2026/11/20/480120-la-transformacion-de-frigerio-tiene-que-llegar-a-parana-renoldi-lanzo-su-precandidatura-a-intendenta",
+      "url": "/noticias/2026/11/20/480048-agmer-convoco-a-un-paro-de-48-horas-para-la-semana-que-viene-tras-el-cierre-de-la-paritaria-docente",
       "fuente": "APF Digital"
     },
     {
@@ -232,6 +323,19 @@
         "elecciones"
       ],
       "url": "https://www.lanacion.com.ar/politica/nadia-marquez-busca-ser-la-candidata-a-gobernadora-de-milei-en-neuquen-pero-la-ley-de-ficha-limpia-nid20112026/",
+      "fuente": "La Nación Política"
+    },
+    {
+      "titulo": "Por unanimidad. Aprueban la nueva ley de Discapacidad y reclaman que el Gobierno cumpla con su reglamentación",
+      "resumen": "Con 71 votos a favor y ninguno en contra, el proyecto, que ya había obtenido un respaldo casi unánime en Diputados, con 237 avales, fue aprobado el jueves por la tarde",
+      "titulo_info": "Por unanimidad. Aprueban la nueva ley de Discapacidad y reclaman que el Gobierno cumpla con su reglamentación. Con 71 votos a favor y ninguno en contra, el proyecto, que ya había obtenido un respaldo casi unánime en Diputados, con 237 avales",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-20T15:00:00.000Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/el-senado-sanciono-la-ley-de-discapacidad-y-la-oposicion-reclamo-al-gobierno-que-cumpla-con-su-nid19112026/",
       "fuente": "La Nación Política"
     },
     {
@@ -1188,7 +1292,7 @@
     {
       "titulo": "“¿Por qué metieron a un cuatro de copas?”: la crisis que casi hizo caer el dictamen de las PASO",
       "resumen": "",
-      "titulo_info": "La crisis que casi hizo caer el dictamen de las PASO",
+      "titulo_info": "Crisis interna casi tumba dictamen de PASO por cuestionamientos a un legislador",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
@@ -1521,97 +1625,6 @@
         "leyes"
       ],
       "url": "https://www.diputados.gob.ar/prensa/noticia/DICTAMEN-AL-PROYECTO-DE-LA-REFORMA-DE-LA-CARTA-ORGANICA-DEL-BANCO-CENTRAL/",
-      "fuente": "Diputados Nación"
-    },
-    {
-      "titulo": "COMISIONES DE JUSTICIA Y PRESUPUESTO Y HACIENDA DICTAMINARON POR LA TRANSFERENCIA JUDICIAL DE MENORES A CABA",
-      "resumen": "Con la participación de referentes de la justicia federal, el encuentro encabezado por Alvaro Martinez (LLA) concluyó en un dictamen para tr...",
-      "titulo_info": "Comisiones de Justicia y Presupuesto dictaminaron por transferencia judicial de menores a CABA",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.271Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.diputados.gob.ar/prensa/noticia/COMISIONES-DE-JUSTICIA-Y-PRESUPUESTO-Y-HACIENDA-DICTAMINARON-POR-LA-TRANSFERENCIA-JUDICIAL-DE-MENORES-A-CABA/",
-      "fuente": "Diputados Nación"
-    },
-    {
-      "titulo": "FUNCIONARIOS DEL MINISTERIO DE DESREGULACIÓN EXPUSIERON ACERCA DE LOS ALCANCES DEL PRESUPUESTO 2027",
-      "resumen": "En una nueva reunión informativa sobre el proyecto de ley del Presupuesto 2027, la Comisión de Presupuesto y Hacienda de la Cámara de Diputa...",
-      "titulo_info": "Funcionarios del Ministerio de Desregulación expusieron alcances del Presupuesto 2027 en Diputados",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.271Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.diputados.gob.ar/prensa/noticia/FUNCIONARIOS-DEL-MINISTERIO-DE-DESREGULACION-EXPUSIERON-ACERCA-DE-LOS-ALCANCES-DEL-PRESUPUESTO-2027/",
-      "fuente": "Diputados Nación"
-    },
-    {
-      "titulo": "LA CÁMARA DE DIPUTADOS APROBÓ EL PROYECTO DE INVIOLABILIDAD DE LA PROPIEDAD PRIVADA",
-      "resumen": "La norma que contaba con media sanción del Senado, fue aprobada con modificaciones, por lo cual vuelve a la Cámara Alta para su sanción defi...",
-      "titulo_info": "Diputados aprobaron con modificaciones el proyecto de ley de Inviolabilidad de la Propiedad Privada, vuelve al Senado",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.271Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.diputados.gob.ar/prensa/noticia/LA-CAMARA-DE-DIPUTADOS-APROBO-EL-PROYECTO-DE-INVIOLABILIDAD-DE-LA-PROPIEDAD-PRIVADA/",
-      "fuente": "Diputados Nación"
-    },
-    {
-      "titulo": "CON INVITADOS, ENERGÍA Y COMBUSTIBLES ABORDÓ EL PROYECTO DE LEY DE BIOCOMBUSTIBLES",
-      "resumen": "Representantes de distintas Cámaras y Asociaciones productoras de biocombustibles participaron para aportar su visión a la iniciativa que cu...",
-      "titulo_info": "Comisión de Diputados abordó el proyecto de ley de Biocombustibles con representantes del sector",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.271Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.diputados.gob.ar/prensa/noticia/CON-INVITADOS-ENERGIA-Y-COMBUSTIBLES-ABORDO-EL-PROYECTO-DE-LEY-DE-BIOCOMBUSTIBLES/",
-      "fuente": "Diputados Nación"
-    },
-    {
-      "titulo": "PRESUPUESTO 2027: EXPUSO EL SECRETARIO DE EDUCACIÓN, CARLOS TORRENDELL",
-      "resumen": "Se dio en el marco de una nueva reunión informativa de la comisión de Presupuesto y Hacienda, que presidió el diputado nacional Bertie Beneg...",
-      "titulo_info": "Secretario de Educación Carlos Torrendell expuso sobre el Presupuesto 2027 en comisión de Diputados",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.271Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.diputados.gob.ar/prensa/noticia/PRESUPUESTO-2027-EXPUSO-EL-SECRETARIO-DE-EDUCACION-CARLOS-TORRENDELL/",
-      "fuente": "Diputados Nación"
-    },
-    {
-      "titulo": "LA CÁMARA DE DIPUTADOS LAMENTA EL FALLECIMIENTO DEL DIRIGENTE GREMIAL NORBERTO DI PRÓSPERO",
-      "resumen": "",
-      "titulo_info": "La Cámara de Diputados lamenta el fallecimiento del dirigente gremial Norberto Di Próspero",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.271Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.diputados.gob.ar/prensa/noticia/LA-CAMARA-DE-DIPUTADOS-LAMENTA-EL-FALLECIMIENTO-DEL-DIRIGENTE-GREMIAL-NORBERTO-DI-PROSPERO/",
-      "fuente": "Diputados Nación"
-    },
-    {
-      "titulo": "CON DICTÁMENES, AVANZA LA LEY DE INVIOLABILIDAD DE LA PROPIEDAD PRIVADA EN DIPUTADOS",
-      "resumen": "Con un dictamen de mayoría y dos de minoría, los legisladores dieron curso a la norma que ya cuenta con media sanción del Senado.",
-      "titulo_info": "Avanza en Diputados la ley de Inviolabilidad de la Propiedad Privada con dictámenes, ya tiene media sanción del Senado",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.271Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.diputados.gob.ar/prensa/noticia/CON-DICTAMENES-AVANZA-LA-LEY-DE-INVIOLABILIDAD-DE-LA-PROPIEDAD-PRIVADA-EN-DIPUTADOS/",
       "fuente": "Diputados Nación"
     }
   ]
