@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20T20:37:41.856Z",
+  "actualizado": "2026-11-20T23:08:16.299Z",
   "ciudades": [
     {
       "id": "parana",
@@ -1872,26 +1872,26 @@
                   "pts": 12,
                   "pct": "71,4",
                   "ultimo": {
-                    "fecha": "2026-11-13T20:30:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "RACING (A)",
-                    "visitante": "GIMNASIA (LP)",
-                    "marcador_local": 74,
-                    "marcador_visitante": 81,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/83/113741",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2420/113230"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-20T20:30:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "GIMNASIA (LP)",
                     "visitante": "DEP. NORTE",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2420/113230",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-23T21:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "DEP. VIEDMA",
+                    "visitante": "GIMNASIA (LP)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2420/113230",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2173/114689",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2420/113230"
                   },
                   "cambio_fuente": null,
                   "cambio": 0,
@@ -1909,26 +1909,26 @@
                   "pts": 10,
                   "pct": "66,6",
                   "ultimo": {
-                    "fecha": "2026-11-15T20:30:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "REGATAS (SN)",
-                    "visitante": "CICLISTA (J)",
-                    "marcador_local": 96,
-                    "marcador_visitante": 92,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2149/114733",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1937/115445"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-20T21:00:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "CICLISTA (J)",
                     "visitante": "CENTRAL ENTRERRIANO",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1937/115445",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-24T21:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "CICLISTA (J)",
+                    "visitante": "UNIÓN (MDP)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
                     "logo_local": "https://www.laliganacional.com.ar/escudos/1937/115445",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2378/115029"
                   },
                   "cambio_fuente": null,
                   "cambio": 1,
@@ -2057,25 +2057,25 @@
                   "pts": 12,
                   "pct": "50,0",
                   "ultimo": {
-                    "fecha": "2026-11-17T21:00:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "DEP. NORTE",
-                    "visitante": "CENTENARIO (VT)",
-                    "marcador_local": 58,
-                    "marcador_visitante": 71,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1640/114179",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1926/112888"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-20T20:30:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "GIMNASIA (LP)",
                     "visitante": "DEP. NORTE",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2420/113230",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-22T20:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "RACING (A)",
+                    "visitante": "DEP. NORTE",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2420/113230",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/83/113741",
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
                   },
                   "cambio_fuente": null,
@@ -2168,25 +2168,25 @@
                   "pts": 13,
                   "pct": "44,4",
                   "ultimo": {
-                    "fecha": "2026-11-18T21:00:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "PERGAMINO BASQUET",
-                    "visitante": "CENTRAL ENTRERRIANO",
-                    "marcador_local": 82,
-                    "marcador_visitante": 68,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2254/114918",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-20T21:00:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "CICLISTA (J)",
                     "visitante": "CENTRAL ENTRERRIANO",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1937/115445",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-22T21:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "CENTENARIO (VT)",
+                    "visitante": "CENTRAL ENTRERRIANO",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1937/115445",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1926/112888",
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
                   },
                   "cambio_fuente": null,
@@ -2566,25 +2566,25 @@
                   "pts": 10,
                   "pct": "100,0",
                   "ultimo": {
-                    "fecha": "2026-11-18T21:30:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "VILLA SAN MARTÍN",
-                    "visitante": "SAN ISIDRO",
-                    "marcador_local": 65,
-                    "marcador_visitante": 79,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1836/112840",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-20T21:30:00-03:00",
                     "contexto": "Conferencia Norte",
                     "local": "COMUNICACIONES",
                     "visitante": "SAN ISIDRO",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1435/112548",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-22T21:00:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "MITRE (POSADAS)",
+                    "visitante": "SAN ISIDRO",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1435/112548",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1725/115054",
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
                   },
                   "cambio_fuente": null,
@@ -2899,26 +2899,26 @@
                   "pts": 7,
                   "pct": "40,0",
                   "ultimo": {
-                    "fecha": "2026-11-12T22:00:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "BARRIO JARDIN (T)",
-                    "visitante": "BOCHAS (CC)",
-                    "marcador_local": 81,
-                    "marcador_visitante": 68,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2501/114142",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1672/113545"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-20T22:00:00-03:00",
                     "contexto": "Conferencia Norte",
                     "local": "BARRIO JARDIN (T)",
                     "visitante": "INDEPENDIENTE (SDE)",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2501/114142",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1883/114369"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-24T21:30:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "JUJUY BASQUET",
+                    "visitante": "BARRIO JARDIN (T)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2501/114142",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1883/114369"
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2729/112674",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2501/114142"
                   },
                   "cambio_fuente": null,
                   "cambio": 0,
@@ -3047,26 +3047,26 @@
                   "pts": 5,
                   "pct": "25,0",
                   "ultimo": {
-                    "fecha": "2026-11-09T21:30:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "COMUNICACIONES",
-                    "visitante": "SP. SUARDI",
-                    "marcador_local": 90,
-                    "marcador_visitante": 101,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1435/112548",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1654/112679"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-20T21:30:00-03:00",
                     "contexto": "Conferencia Norte",
                     "local": "COMUNICACIONES",
                     "visitante": "SAN ISIDRO",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1435/112548",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-30T21:30:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "INDEPENDIENTE (SDE)",
+                    "visitante": "COMUNICACIONES",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1435/112548",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1883/114369",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1435/112548"
                   },
                   "cambio_fuente": null,
                   "cambio": 0,
@@ -3084,26 +3084,26 @@
                   "pts": 6,
                   "pct": "20,0",
                   "ultimo": {
-                    "fecha": "2026-11-14T21:30:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "INDEPENDIENTE (SDE)",
-                    "visitante": "MITRE (POSADAS)",
-                    "marcador_local": 69,
-                    "marcador_visitante": 76,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1883/114369",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1725/115054"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-20T22:00:00-03:00",
                     "contexto": "Conferencia Norte",
                     "local": "BARRIO JARDIN (T)",
                     "visitante": "INDEPENDIENTE (SDE)",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2501/114142",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1883/114369"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-28T21:30:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "INDEPENDIENTE (SDE)",
+                    "visitante": "AMANCAY (LR)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2501/114142",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1883/114369"
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1883/114369",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2168/112811"
                   },
                   "cambio_fuente": null,
                   "cambio": 0,
