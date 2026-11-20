@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-20T01:44:55.402Z",
-  "timestamp_epoch": 1795139095,
-  "total_noticias": 116,
+  "last_updated": "2026-11-20T04:01:03.206Z",
+  "timestamp_epoch": 1795147263,
+  "total_noticias": 119,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 61
+      "total": 64
     },
     {
       "id": "obras",
@@ -29,17 +29,17 @@
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 59
+      "total": 60
     },
     {
       "id": "santa_fe",
       "nombre": "SANTA FE",
-      "total": 9
+      "total": 11
     },
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 23
+      "total": 22
     },
     {
       "id": "corrientes",
@@ -49,7 +49,7 @@
     {
       "id": "misiones",
       "nombre": "MISIONES",
-      "total": 7
+      "total": 8
     },
     {
       "id": "chaco",
@@ -63,6 +63,58 @@
     }
   ],
   "noticias": [
+    {
+      "titulo": "Cambios, fallos y polémicas. El Senado aprobó la reforma del régimen de propiedad privada que restablece la Ley de Tierras",
+      "resumen": "Con 42 votos a favor y 26 en contra, el oficialismo consiguió la sanción definitiva de una iniciativa que afrontó modificaciones en ambas cámaras; el giro en la estrategia libertaria que destrabó el proyecto",
+      "titulo_info": "Senado aprobó reforma de propiedad privada que restablece Ley de Tierras con 42 votos a favor",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T15:00:00.000Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/el-senado-aprobo-la-reforma-del-regimen-de-propiedad-privada-que-restablece-la-ley-de-tierras-nid19112026/",
+      "fuente": "La Nación Política"
+    },
+    {
+      "titulo": "El Senado aprobó la adhesión al Tratado global de Patentes y blindó la ley de Tierras",
+      "resumen": "Después de meses de tratamiento, se sancionó la ley de \"Inviolabilidad de la propiedad Privada\". Hay consenso en la \"ley Joaquín\" para la seguridad de espacios recreativos. Polémica por el régimen de cabotaje y una designación en el Comité Nacional para la Prevención de la Tortura.",
+      "titulo_info": "Senado aprobó adhesión al Tratado global de Patentes y ley de Tierras con límites a extranjerización",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T03:56:32.481Z",
+      "jurisdiccion": "misiones",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.territoriodigital.com/noticias/2026/11/20/928353-el-senado-aprobo-la-adhesion-al-tratado-global-de-patentes-y-blindo-la-ley-de-tierras",
+      "fuente": "Territorio Digital"
+    },
+    {
+      "titulo": "La Ley de Tierras seguirá vigente: se mantienen los límites a la extranjerización de campos",
+      "resumen": "El proyecto se aprobó por 42 contra 26 votos que fueron aportados por el oficialismo y bloques aliados. Contempla los desalojos “expres” de los campos y viviendas usurpadas",
+      "titulo_info": "Ley de Tierras se mantiene vigente con límites a extranjerización y desalojos expres de campos usurpados",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T02:28:30.000Z",
+      "jurisdiccion": "santa_fe",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.ellitoral.com/politica/leydetierrasrurales-inviolabilidaddepropiedadprivada-senado-desalojoexpres-leydeexpropiaciones-extranjerizaciondecampos-leypierri-dnu7023-regularizaciondominial_0_SEicloBxAA.html",
+      "fuente": "El Litoral Política"
+    },
+    {
+      "titulo": "El Senado convirtió en ley la adhesión argentina al Tratado de Patentes",
+      "resumen": "El proyecto se había aprobado orginalmente en 1998. Casi tres décadas después, el Gobierno de Javier Milei reactivó el debate y la Cámara alta le le dio sanción definitiva.",
+      "titulo_info": "Senado convirtió en ley adhesión argentina al Tratado de Patentes reactivado por el Gobierno de Milei",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-20T01:47:47.000Z",
+      "jurisdiccion": "santa_fe",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.ellitoral.com/politica/senado-estadosunidos-tratadodepatentes-federicosturzenegger-javiermilei-cilfa-cooperala-medicamentos-franciscopaoltroni_0_R5DU7GkZFu.html",
+      "fuente": "El Litoral Política"
+    },
     {
       "titulo": "El Gobernador acompañó los festejos por los 294 años de Saladas con inauguraciones y nuevos anuncios de obras",
       "resumen": "Juan Pablo Valdés participó de las celebraciones por un nuevo aniversario de la localidad, que incluyeron la puesta en valor de la Sociedad Española, la habilitación de infraestructura deportiva y recreativa y el tradicional desfile cívico-militar. Además, anunció nuevas intervenciones para fortalecer el desarrollo urbano y productivo de la región.",
@@ -558,14 +610,14 @@
       "fuente": "Territorio Digital"
     },
     {
-      "titulo": "Por qué metieron a un cuatro de copas?\": la crisis que casi hizo caer el dictamen de las PASO",
+      "titulo": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
       "resumen": "",
-      "titulo_info": "Crisis en el oficialismo: un \"cuatro de copas\" casi frena el dictamen de las PASO",
+      "titulo_info": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "leyes"
+        "elecciones"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -623,14 +675,14 @@
       "fuente": "Territorio Digital"
     },
     {
-      "titulo": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
+      "titulo": "Un diputado libertario deja el bloque oficialista tras denunciar un pacto con el gobernador peronista Osvaldo Jaldo en Tucumán",
       "resumen": "",
-      "titulo_info": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
+      "titulo_info": "Diputado libertario deja bloque oficialista en Tucumán tras denunciar pacto con gobernador peronista",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "elecciones"
+        "gobierno"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -688,14 +740,14 @@
       "fuente": "Territorio Digital"
     },
     {
-      "titulo": "Un diputado libertario deja el bloque oficialista tras denunciar un pacto con el gobernador peronista Osvaldo Jaldo en Tucumán",
+      "titulo": "Qué cambia con la nueva Ley de Discapacidad y qué puede pasar con la venta de tierras a extranjeros",
       "resumen": "",
-      "titulo_info": "Diputado libertario deja bloque oficialista en Tucumán tras denunciar pacto con gobernador peronista",
+      "titulo_info": "Nueva Ley de Discapacidad y venta de tierras a extranjeros: cambios y posibles consecuencias en debate",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "gobierno"
+        "leyes"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -741,14 +793,14 @@
       "fuente": "Elonce Política"
     },
     {
-      "titulo": "Qué cambia con la nueva Ley de Discapacidad y qué puede pasar con la venta de tierras a extranjeros",
+      "titulo": "Mientras acelera la designación de jueces, Mahiques viajó a EE.UU. y se reunió con un alto funcionario del Departamento de Justicia",
       "resumen": "",
-      "titulo_info": "Nueva Ley de Discapacidad y venta de tierras a extranjeros: cambios y posibles consecuencias en debate",
+      "titulo_info": "Mahiques viajó a EE.UU. y se reunió con un funcionario del Departamento de Justicia mientras acelera designaciones de jueces",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "leyes"
+        "gobierno"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -780,14 +832,14 @@
       "fuente": "Elonce Política"
     },
     {
-      "titulo": "Mientras acelera la designación de jueces, Mahiques viajó a EE.UU. y se reunió con un alto funcionario del Departamento de Justicia",
+      "titulo": "Patricia Bullrich admitió que fue un “alivio” sacar las listas colectoras de la reforma electoral y respondió a la frase de Milei sobre “el plan platita”",
       "resumen": "",
-      "titulo_info": "Mahiques viajó a EE.UU. y se reunió con un funcionario del Departamento de Justicia mientras acelera designaciones de jueces",
+      "titulo_info": "Patricia Bullrich consideró un alivio la exclusión de listas colectoras de la reforma electoral y respondió a Milei sobre el plan platita",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "gobierno"
+        "elecciones"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -819,14 +871,14 @@
       "fuente": "Elonce Política"
     },
     {
-      "titulo": "Patricia Bullrich admitió que fue un “alivio” sacar las listas colectoras de la reforma electoral y respondió a la frase de Milei sobre “el plan platita”",
+      "titulo": "“¿Por qué metieron a un cuatro de copas?”: la crisis que casi hizo caer el dictamen de las PASO",
       "resumen": "",
-      "titulo_info": "Patricia Bullrich consideró un alivio la exclusión de listas colectoras de la reforma electoral y respondió a Milei sobre el plan platita",
-      "titulo_info_src": "llm",
+      "titulo_info": "“¿Por qué metieron a un cuatro de copas?”: la crisis que casi hizo caer el dictamen de las PASO",
+      "titulo_info_src": "heuristico",
       "fecha": "2026-11-19T20:25:36.634Z",
       "jurisdiccion": "nacional",
       "categorias": [
-        "elecciones"
+        "leyes"
       ],
       "url": "",
       "fuente": "Clarín Política"
@@ -1340,7 +1392,7 @@
     },
     {
       "titulo": "Reforma. Posadas eliminó la Ley de Lemas y el resultado podría condicionar la negociación de Santilli con un gobernador",
-      "resumen": "Con el impulso de La Libertad Avanza, se cayó un sistema electoral por el cual en la capital misionera hubo más de 40 candidatos a intendente; el resultado podría interferir en las negociaciones que tiene Passalacqua con la Nación por las PASO",
+      "resumen": "",
       "titulo_info": "Posadas eliminó Ley de Lemas y el resultado podría condicionar negociación de Santilli",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -1558,19 +1610,6 @@
         "elecciones"
       ],
       "url": "https://www.hcder.gov.ar/noticiasDetalles.php?id=2036",
-      "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "Dictamen para acuerdos de cooperación y control sobre los recursos naturales",
-      "resumen": "La Comisión de Recursos Naturales y Ambiente finalizó el tratamiento del Expediente Nº29.834, que propone la ratificación legislativa de dos convenios suscriptos por la Provincia con YPF SA y el Ministerio de Seguridad de la Nación. Además, Cultura y Turismo analizó una iniciativa para declarar patrimonio histórico al acceso del ex Grupo de Artillería 121 de La Paz, con la participación de vete…",
-      "titulo_info": "Comisión de Recursos Naturales y Ambiente dio dictamen para ratificar acuerdos de cooperación y control sobre recursos naturales con YPF y Ministerio de Seguridad",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-17T15:00:00.000Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.hcder.gov.ar/noticiasDetalles.php?id=2035",
       "fuente": "Diputados Entre Ríos"
     }
   ]
