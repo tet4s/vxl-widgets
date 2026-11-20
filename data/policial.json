@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-20T01:55:41.931Z",
-  "timestamp_epoch": 1795139741,
-  "total_noticias": 45,
+  "last_updated": "2026-11-20T09:48:30.502Z",
+  "timestamp_epoch": 1795168110,
+  "total_noticias": 49,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 5
+      "total": 6
     },
     {
       "id": "allanamientos",
@@ -17,7 +17,7 @@
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 16
+      "total": 17
     },
     {
       "id": "causas",
@@ -27,15 +27,48 @@
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 11
+      "total": 13
     }
   ],
   "noticias": [
     {
-      "titulo": "Detuvieron a un joven por robar vacunos en las islas de Victoria",
+      "titulo": "Allanaron la vivienda de un policía por su presunta vinculación con un siniestro vial y fuga en Villa Adela",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/policia-allanado-siniestro-vial-fuga-villa-adela-concordia.htm",
+      "fecha": "2026-11-20T09:47:27.582Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
+      "titulo": "Asaltaron a una pareja en un parque de Concepción del Uruguay: un joven fue herido con un arma blanca",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/asaltaron-a-una-pareja-en-un-parque-de-concepcion-del-uruguay-un-joven-fue-herido-con-un-arma-blanca.htm",
+      "fecha": "2026-11-20T09:47:27.582Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Estafa en Villaguay: recuperaron un elevador valuado en $8 millones en Gualeguay",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/estafa-villaguay-elevador-ocho-millones-gualeguay.htm",
+      "fecha": "2026-11-20T09:47:27.582Z",
+      "fuente": "Elonce",
+      "lugar": "Villaguay",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Detuvieron a un joven por abigeato tras un operativo en las islas de Victoria",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-a-un-joven-por-abigeato-tras-un-operativo-en-las-islas-de-victoria.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "Victoria",
       "categorias": [
@@ -43,10 +76,10 @@
       ]
     },
     {
-      "titulo": "Detuvieron a un ganadero por estafar a productores santafesinos",
+      "titulo": "Detuvieron a un ganadero acusado de estafar a productores santafesinos por 129 vacunos",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-a-un-ganadero-acusado-de-estafar-a-productores-santafesinos-por-129-vacunos.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -54,10 +87,10 @@
       ]
     },
     {
-      "titulo": "Un poste cayó sobre un motociclista en Santa Fe",
+      "titulo": "Un poste cayó sobre un motociclista mientras circulaba en Santa Fe y lo golpeó en la cabeza",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/un-poste-cayo-sobre-un-motociclista-mientras-circulaba-en-santa-fe-y-lo-golpeo-en-la-cabeza.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "Santa Fe",
       "categorias": [
@@ -65,10 +98,21 @@
       ]
     },
     {
+      "titulo": "Estafas con construcción de viviendas: aclaran que los acusados aún no están imputados, pero avanza la investigación",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/estafas-con-construccion-de-viviendas-aclaran-que-los-acusados-aun-no-estan-imputados-pero-avanza-la-investigacion.htm",
+      "fecha": "2026-11-20T09:47:27.582Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
       "titulo": "Grave accidente laboral en arenera del sur entrerriano: un joven operario cayó a una fosa de cuatro metros",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/grave-accidente-laboral-en-arenera-del-sur-entrerriano-un-joven-cayo-a-una-fosa-de-cuatro-metros.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -79,7 +123,7 @@
       "titulo": "Detuvieron al extitular del Copnaf de Concordia por una causa de violencia de género",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-al-extitular-del-copnaf-de-concordia-por-una-causa-de-violencia-de-genero.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "Concordia",
       "categorias": [
@@ -90,7 +134,7 @@
       "titulo": "Detuvieron al hombre que se atrincheró en su auto para evitar que se lo llevara la grúa en Paraná",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-al-hombre-que-se-atrinchero-en-su-auto-para-evitar-que-se-lo-llevara-la-grua.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -101,7 +145,7 @@
       "titulo": "Imputaron a un padre y su hijo por robar patos en Palermo: hallaron 60 animales hacinados en su casa",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/imputaron-a-un-padre-y-su-hijo-por-robar-patos-en-palermo-hallaron-60-animales-hacinados-en-su-casa.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -112,7 +156,7 @@
       "titulo": "Allanaron una vivienda por amenazas y encontraron 159 envoltorios de cocaína",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/allanamiento-por-amenazas-hallaron-cocaina-y-hubo-tres-detenidos.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -123,7 +167,7 @@
       "titulo": "Intentó robar una camioneta, escapó en moto y fue detenido tras una persecución",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/intento-robar-una-camioneta-escapo-en-moto-y-fue-detenido.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -134,7 +178,7 @@
       "titulo": "Crimen de peón rural en Diamante: la extorsión, el asesinato y el plan para ocultar el cuerpo",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/crimen-de-jorge-wolf-extorsion-asesinato-y-dos-detenidos.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "Diamante",
       "categorias": [
@@ -145,7 +189,7 @@
       "titulo": "Lo detectaron por las cámaras y le secuestraron éxtasis, anfetaminas y cocaína en Paraná",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/demoraron-a-un-hombre-con-extasis-y-otras-drogas-en-parana.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -156,7 +200,7 @@
       "titulo": "Atacó con un cuchillo a dos policías, hirió a uno en la pierna y terminó detenido",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/ataco-con-un-cuchillo-a-dos-policias-e-hirio-a-uno.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -167,7 +211,7 @@
       "titulo": "Secuestraron 62 envoltorios de droga tras la fuga de un sospechoso por los techos",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/escapo-por-los-techos-y-abandono-62-envoltorios-de-droga.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -178,7 +222,7 @@
       "titulo": "Detuvieron a “Chuky”, acusado de amenazar con incendiar la casa de su familia",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/detuvieron-a-chuky-acusado-de-amenazar-con-incendiar-la-casa-de-su-familia.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -189,7 +233,7 @@
       "titulo": "Detuvieron a un hombre por violencia de género en Piedras Blancas: tenía armas y había sido denunciado por su expareja",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/violencia-genero-piedras-blancas-detenido-activista-feminista.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
+      "fecha": "2026-11-20T09:47:27.582Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -329,7 +373,7 @@
       ]
     },
     {
-      "titulo": "Investigan a un policía por un choque y fuga en Villa Adela",
+      "titulo": "Investigan a un efectivo policial por un choque y fuga en Villa Adela",
       "descripcion": "Un policía fue allanado en la jornada de este jueves, luego de que su vehículo fuera identificado como el presunto rodado que habría protagonizado un siniestro vial y luego se diera a la fuga en la zona de Villa Adela.",
       "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/investigan-un-efectivo-policial-por-un-choque-y-fuga-en-villa-adela",
       "fecha": "2026-11-19T15:00:00.000Z",
@@ -340,23 +384,12 @@
       ]
     },
     {
-      "titulo": "Atacaron con un cuchillo a un policía en Villaguay",
+      "titulo": "En Villaguay atacaron con un cuchillo a un policía",
       "descripcion": "El atacante tiene 29 años y fue detenido. El agente sufrió un corte de carácter leve en la pierna derecha.",
       "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/en-villaguay-atacaron-con-un-cuchillo-un-policia",
       "fecha": "2026-11-19T15:00:00.000Z",
       "fuente": "Análisis Digital",
       "lugar": "Villaguay",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Caso Jorge Wolf: extorsión y asesinato en el campo",
-      "descripcion": "",
-      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/19/caso-jorge-wolf-extorsion-asesinato-en-la-oscuridad-del-campo-y-el-plan-para-descartar-el-cuerpo",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
       "categorias": [
         "hechos"
       ]
@@ -370,6 +403,17 @@
       "lugar": "Paraná",
       "categorias": [
         "detenciones"
+      ]
+    },
+    {
+      "titulo": "Caso Jorge Wolf: extorsión y asesinato en el campo",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/19/caso-jorge-wolf-extorsion-asesinato-en-la-oscuridad-del-campo-y-el-plan-para-descartar-el-cuerpo",
+      "fecha": "2026-11-19T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "hechos"
       ]
     },
     {
@@ -395,17 +439,6 @@
       ]
     },
     {
-      "titulo": "Hay muchas condenas cortas que no sirven para nada, advirtió la jueza de Ejecución, Cecilia Bértora",
-      "descripcion": "",
-      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/hay-muchas-condenas-cortas-que-no-sirven-para-nada-advirtio-la-jueza-de-ejecucion-cecilia-bertora",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "causas"
-      ]
-    },
-    {
       "titulo": "Salvada por sus vecinas: Santa Elena conmocionada por un grave hecho de violencia de género",
       "descripcion": "",
       "url": "https://www.apfdigital.com.ar/noticias/2026/11/18/479676-salvada-por-sus-vecinas-santa-elena-conmocionada-por-un-grave-hecho-de-violencia-de-genero",
@@ -422,6 +455,17 @@
       "url": "https://www.apfdigital.com.ar/noticias/2026/11/18/479592-investigan-la-muerte-de-una-mujer-que-llego-sin-vida-a-un-hospital-entrerriano",
       "fecha": "2026-11-18T15:00:00.000Z",
       "fuente": "APF Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Hay muchas condenas cortas que no sirven para nada, advirtió la jueza de Ejecución, Cecilia Bértora",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/hay-muchas-condenas-cortas-que-no-sirven-para-nada-advirtio-la-jueza-de-ejecucion-cecilia-bertora",
+      "fecha": "2026-11-18T15:00:00.000Z",
+      "fuente": "Análisis Digital",
       "lugar": "",
       "categorias": [
         "causas"
