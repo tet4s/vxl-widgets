@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-20T03:41:50.636Z",
-  "timestamp_epoch": 1795146110,
+  "last_updated": "2026-11-20T12:12:58.226Z",
+  "timestamp_epoch": 1795176778,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -11,7 +11,7 @@
       "nombre": "Oficial",
       "compra": 1535,
       "venta": 1585,
-      "fechaActualizacion": "2026-11-19T18:00:00.000Z",
+      "fechaActualizacion": "2026-11-19T18:55:00.000Z",
       "variacion": 0
     },
     {
@@ -20,7 +20,7 @@
       "nombre": "Blue",
       "compra": 1620,
       "venta": 1640,
-      "fechaActualizacion": "2026-11-19T20:59:00.000Z",
+      "fechaActualizacion": "2026-11-20T11:59:00.000Z",
       "variacion": 0
     },
     {
@@ -29,7 +29,7 @@
       "nombre": "Bolsa",
       "compra": 1631.9,
       "venta": 1649.8,
-      "fechaActualizacion": "2026-11-19T20:59:00.000Z",
+      "fechaActualizacion": "2026-11-20T11:59:00.000Z",
       "variacion": 0
     },
     {
@@ -38,7 +38,7 @@
       "nombre": "Contado con liquidación",
       "compra": 1739.8,
       "venta": 1748.2,
-      "fechaActualizacion": "2026-11-19T20:59:00.000Z",
+      "fechaActualizacion": "2026-11-20T11:59:00.000Z",
       "variacion": 0
     },
     {
@@ -54,10 +54,10 @@
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1730.43,
-      "venta": 1735,
-      "fechaActualizacion": "2026-11-19T20:59:00.000Z",
-      "variacion": 0
+      "compra": 1727.69,
+      "venta": 1737.83,
+      "fechaActualizacion": "2026-11-20T11:59:00.000Z",
+      "variacion": 0.16
     },
     {
       "moneda": "USD",
@@ -65,7 +65,7 @@
       "nombre": "Tarjeta",
       "compra": 1995.5,
       "venta": 2060.5,
-      "fechaActualizacion": "2026-11-19T18:00:00.000Z",
+      "fechaActualizacion": "2026-11-19T18:55:00.000Z",
       "variacion": 0
     }
   ],
@@ -77,7 +77,7 @@
       "bolsa": 1649.8,
       "contadoconliqui": 1748.2,
       "mayorista": 1565,
-      "cripto": 1735,
+      "cripto": 1737.83,
       "tarjeta": 2060.5
     },
     "fecha_cierre": "2026-11-19",
@@ -95,38 +95,38 @@
     {
       "label": "PAMPA ENERGÍA",
       "val": "$4.327,50",
-      "var": "▲ +0,70%",
-      "class": "up"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "YPF",
       "val": "$5.800,00",
-      "var": "▼ -3,97%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "GRP FIN GALICIA",
       "val": "$4.552,50",
-      "var": "▼ -4,61%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "AL30 (BONO)",
       "val": "$81.810,00",
-      "var": "▼ -2,72%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "CRESUD (AGRO)",
       "val": "$1.406,00",
-      "var": "▼ -3,03%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "MOLINOS AGRO",
       "val": "$1.940,00",
-      "var": "▼ -4,43%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     }
   ],
   "historial": {
