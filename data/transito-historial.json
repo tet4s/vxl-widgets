@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20T23:11:44.322Z",
+  "actualizado": "2026-11-21T00:08:48.706Z",
   "items": {
     "parana|25 de mayo~belgrano|obra en la via publica": {
       "item": {
@@ -47,7 +47,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "viernes 20 de noviembre de 2026 27ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
+            "ctx": "viernes 20 de noviembre de 2026 23.2ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
             "entre": "",
             "texto": "25 de Mayo"
           },
@@ -126,7 +126,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "viernes 20 de noviembre de 2026 27ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+            "ctx": "viernes 20 de noviembre de 2026 23.2ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
             "entre": "",
             "texto": "Paraguay"
           },
@@ -142,7 +142,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "viernes 20 de noviembre de 2026 27ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+            "ctx": "viernes 20 de noviembre de 2026 23.2ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
             "entre": "",
             "texto": "Montevideo"
           }
@@ -250,6 +250,44 @@
       "ultima_vez_vista": "2026-11-09T21:18:10.563Z",
       "recuperada": false
     },
+    "santa fe||": {
+      "item": {
+        "id": "ellitoral:Santa Fe:2026-11-20",
+        "titulo": "El tránsito en la provincia de Santa Fe; la información minuto a minuto",
+        "categoria": "cortes",
+        "tipo": "corte_total",
+        "fecha": "2026-11-20T11:23:00-03:00",
+        "fecha_raw": "2026-11-20T11:23:00-03:00",
+        "horario": null,
+        "motivo": "",
+        "franja": "",
+        "calles": [],
+        "resumen": "",
+        "descripcion": "",
+        "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-rutas-provinciadesantafe-autopistas-accesos-ciudaddesantafe_0_Rpac5rLFbF.html",
+        "lat": null,
+        "lon": null,
+        "sin_ubicacion": true,
+        "localidad": "Santa Fe",
+        "provincia": "Santa Fe",
+        "via": "Autopista Santa Fe -Rosario · Autopista Santa Fe - Rosario · Ruta 10-s · Ruta Provincial 1",
+        "km_desde": "65",
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-11-21T02:59:00.000Z",
+          "tipo": "diaria",
+          "detalle": "boletín del día"
+        },
+        "vigente_hasta": "2026-11-21T02:59:00.000Z",
+        "fuente_tipo": "estado",
+        "segmentos": [],
+        "puntos": null
+      },
+      "fuente_tipo": "estado",
+      "primera_vez": "2026-11-20T19:16:44.027Z",
+      "ultima_vez_vista": "2026-11-20T19:16:44.027Z",
+      "recuperada": false
+    },
     "parana|la picada|obra en la via publica": {
       "item": {
         "id": "elonce-obras:La Municipalidad realizó obras de mantenimiento y…",
@@ -310,45 +348,7 @@
       "fuente_tipo": "noticia",
       "primera_vez": "2026-11-20T11:26:27.887Z",
       "ultima_vez_vista": "2026-11-20T11:26:27.887Z",
-      "recuperada": false
-    },
-    "santa fe||": {
-      "item": {
-        "id": "ellitoral:Santa Fe:2026-11-20",
-        "titulo": "El tránsito en la provincia de Santa Fe; la información minuto a minuto",
-        "categoria": "cortes",
-        "tipo": "corte_total",
-        "fecha": "2026-11-20T11:23:00-03:00",
-        "fecha_raw": "2026-11-20T11:23:00-03:00",
-        "horario": null,
-        "motivo": "",
-        "franja": "",
-        "calles": [],
-        "resumen": "",
-        "descripcion": "",
-        "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-rutas-provinciadesantafe-autopistas-accesos-ciudaddesantafe_0_Rpac5rLFbF.html",
-        "lat": null,
-        "lon": null,
-        "sin_ubicacion": true,
-        "localidad": "Santa Fe",
-        "provincia": "Santa Fe",
-        "via": "Autopista Santa Fe -Rosario · Autopista Santa Fe - Rosario · Ruta 10-s · Ruta Provincial 1",
-        "km_desde": "65",
-        "km_hasta": null,
-        "vigencia": {
-          "hasta": "2026-11-21T02:59:00.000Z",
-          "tipo": "diaria",
-          "detalle": "boletín del día"
-        },
-        "vigente_hasta": "2026-11-21T02:59:00.000Z",
-        "fuente_tipo": "estado",
-        "segmentos": [],
-        "puntos": null
-      },
-      "fuente_tipo": "estado",
-      "primera_vez": "2026-11-20T19:16:44.027Z",
-      "ultima_vez_vista": "2026-11-20T19:16:44.027Z",
-      "recuperada": false
+      "recuperada": true
     },
     "parana|crisologo larralde entre avenida de las americas y division de los andes|obra en la via publica": {
       "item": {
