@@ -286,13 +286,16 @@ function aplicarGuardrail(rewrites, items) {
   return rewrites.map(function (r, i) {
     const item = items[i] || {};
     const ok = ia.validarTitular(r, { titulo: item.titulo, resumen: item.descripcion }, { max: 160, min: 35 });
-    return ok ? repararPorcentaje(ok, item.titulo) : null;
+    if (!ok) return null;
+    // Si el "reescrito" repite el titular de la fuente, no sirve: se descarta.
+    if (normalizarTexto(ok) === normalizarTexto(item.titulo || '')) return null;
+    return repararPorcentaje(ok, item.titulo);
   });
 }
 function delay(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
 async function reescribirLote(items) {
   if (!process.env.GEMINI_API_KEY) return items.map(i => tituloDescriptivo(i.titulo, i.descripcion));
-  const prompt = 'Reescribí los siguientes titulares en español rioplatense. Para CADA uno escribí un titular DESCRIPTIVO (máximo 2 líneas) que cuente la NOTICIA EN SÍ: un resumen del hecho, usando el titular original y el "resumen" (lead) del artículo como fuente. Tono VXL: informal, como hablás con un amigo al coffee, interés para una persona normal. Prioridad: el título debe ser un DATO económico concreto (precio, %, monto, medida). Conservá EXACTAMENTE los símbolos y unidades del dato tal como aparecen en el original (%, $, u$s, /Tn, puntos, millones): nunca los elimines ni reformatees los números. Si el titular lleva encuadre político-partidista o gancho metafórico (ej. triunfo de, tiene N años, minuto a minuto) y el lead tiene el dato, reescribilo priorizando el DATO económico y sacando el encuadre político. NO inventes, NO ganchos, NO clickbait, NO emojis, NO jergla policial/judicial. Si el resumen está vacío, devolvés el titular original limpio (no inventes). Devolvé SOLO JSON {"rewrites":["título 1","título 2",...]} con la misma cantidad de ítems y orden. Entradas: ' + JSON.stringify(items.map(i => ({ titulo: i.titulo, resumen: i.descripcion })));
+  const prompt = 'Reescribí los siguientes titulares en español rioplatense. Para CADA uno escribí un titular DESCRIPTIVO (máximo 2 líneas) que cuente la NOTICIA EN SÍ: un resumen del hecho, usando el titular original y el "resumen" (lead) del artículo como fuente. Tono VXL: informal, como hablás con un amigo al coffee, interés para una persona normal. Prioridad: el título debe ser un DATO económico concreto (precio, %, monto, medida). Conservá EXACTAMENTE los símbolos y unidades del dato tal como aparecen en el original (%, $, u$s, /Tn, puntos, millones): nunca los elimines ni reformatees los números. Si el titular lleva encuadre político-partidista o gancho metafórico (ej. triunfo de, tiene N años, minuto a minuto) y el lead tiene el dato, reescribilo priorizando el DATO económico y sacando el encuadre político. NO inventes, NO ganchos, NO clickbait, NO emojis, NO jergla policial/judicial. Si el resumen está vacío, escribí un titular informativo con lo que dice el titular de la fuente, sin repetirlo tal cual. Devolvé SOLO JSON {"rewrites":["título 1","título 2",...]} con la misma cantidad de ítems y orden. Entradas: ' + JSON.stringify(items.map(i => ({ titulo: i.titulo, resumen: i.descripcion })));
   var txt = await ia.pedir(prompt, { maxTokens: 200, temperature: 0.2, timeout: 20000 });
   if (txt) {
     var m = txt.match(/\{[\s\S]*\}/);

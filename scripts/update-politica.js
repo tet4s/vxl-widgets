@@ -588,7 +588,7 @@ const PROMPT_TITULARES = 'Sos editor de la sección Política de un portal del L
   'Nada de ganchos, preguntas, citas sueltas, "mirá", "así fue", "qué dijo", "video" ni suspenso: no hay link para hacer clic. ' +
   'Largo libre entre 70 y 220 caracteres; si el hecho se cuenta en 80, no lo estires. Una sola oración (o dos cortas), sin punto final, sin emojis. ' +
   'Usá SOLO el titular y el copete provistos: no inventes nombres, cifras, fechas ni estados que no estén ahí. ' +
-  'Si el copete está vacío, devolvé el titular original limpio, sin agregar nada. ' +
+  'Si el copete está vacío, escribí un titular informativo con lo que dice el titular de la fuente, sin repetirlo tal cual. ' +
   'Devolvé SOLO JSON {"titulares":["...","..."]} con la misma cantidad y orden. Entradas: ';
 
 function tokensSignificativos(t) {
@@ -596,24 +596,27 @@ function tokensSignificativos(t) {
 }
 
 function guardrailTitular(nuevo, item) {
-  return ia.validarTitular(nuevo, item, { max: 220, min: 45 });
+  const ok = ia.validarTitular(nuevo, item, { max: 220, min: 45 });
+  if (!ok) return null;
+  // Si el "reescrito" repite el titular de la fuente, no sirve: se descarta.
+  if (norm(ok) === norm(item.titulo || '')) return null;
+  return ok;
 }
 
+// Un solo intento por lote: si falla (429, cuota, JSON roto) no se reintenta.
+// Las noticias de ese lote se descartan y se reintentan en la próxima corrida.
 async function reescribirLote(items) {
+  if (ia.estado().abierto) return items.map(() => null);
   const prompt = PROMPT_TITULARES + JSON.stringify(items.map(i => ({ titular: i.titulo, copete: (i.resumen || '').slice(0, 400) })));
-  for (let attempt = 0; attempt < 3; attempt++) {
-    if (ia.estado().abierto) break;
-    const txt = await geminiTexto(prompt, 160 * items.length + 300);
-    if (txt) {
-      const m = txt.match(/\{[\s\S]*\}/);
-      if (m) {
-        try {
-          const parsed = JSON.parse(m[0]);
-          if (Array.isArray(parsed.titulares) && parsed.titulares.length === items.length) return parsed.titulares;
-        } catch (e) { /* sigue */ }
-      }
+  const txt = await geminiTexto(prompt, 160 * items.length + 300);
+  if (txt) {
+    const m = txt.match(/\{[\s\S]*\}/);
+    if (m) {
+      try {
+        const parsed = JSON.parse(m[0]);
+        if (Array.isArray(parsed.titulares) && parsed.titulares.length === items.length) return parsed.titulares;
+      } catch (e) { /* JSON roto: se descarta el lote */ }
     }
-    await delay(2500);
   }
   return items.map(() => null);
 }

@@ -360,24 +360,18 @@ function guardrail(rewrites, items) {
 
 async function reescribirLote(items) {
   if (!process.env.GEMINI_API_KEY) return items.map(() => null);
-  const prompt = 'Sos el editor de la sección Policiales de un portal del Litoral argentino. Reescribí cada titular en español rioplatense, claro y directo, como se lo contarías a un amigo: qué pasó, dónde y quién, sin sensacionalismo, sin jerga judicial innecesaria, sin adjetivos grandilocuentes y sin emojis. Usá el titular y el resumen (lead) como única fuente: NO inventes datos, nombres, edades ni cifras. Máximo 110 caracteres por titular, una sola línea, sin punto final. Si el resumen está vacío, devolvé el titular limpio. Devolvé SOLO JSON {"rewrites":["titular 1","titular 2",...]} con la misma cantidad y orden. Entradas: '
+  const prompt = 'Sos el editor de la sección Policiales de un portal del Litoral argentino. Reescribí cada titular en español rioplatense, claro y directo, como se lo contarías a un amigo: qué pasó, dónde y quién, sin sensacionalismo, sin jerga judicial innecesaria, sin adjetivos grandilocuentes y sin emojis. Usá el titular y el resumen (lead) como única fuente: NO inventes datos, nombres, edades ni cifras. Máximo 110 caracteres por titular, una sola línea, sin punto final. Si el copete está vacío, escribí un titular informativo con lo que dice el titular de la fuente (sin repetirlo tal cual). Devolvé SOLO JSON {"rewrites":["titular 1","titular 2",...]} con la misma cantidad y orden. Entradas: '
     + JSON.stringify(items.map(i => ({ titular: i.titulo, resumen: i.descripcion })));
-  for (let attempt = 0; attempt < 3; attempt++) {
-    if (ia.estado().abierto) break;
-    try {
-      await delay(4000);
-      // presupuesto: ~120 tokens por titular + margen para el JSON
-      const txt = await geminiTexto(prompt, 120 * items.length + 300);
-      const parsed = extraerJSON(txt);
-      if (parsed && Array.isArray(parsed.rewrites) && parsed.rewrites.length === items.length) {
-        return guardrail(parsed.rewrites, items);
-      }
-      if (txt && !parsed) console.log('[policial] LLM texto sin JSON: ' + txt.slice(0, 220));
-    } catch (e) {
-      if (attempt < 2) await delay(2000);
-    }
+  // Un solo intento por lote: si falla (429, cuota, JSON roto) no se reintenta.
+  // El lote se descarta y se reintenta en la próxima corrida.
+  if (ia.estado().abierto) return items.map(() => null);
+  const txt = await geminiTexto(prompt, 120 * items.length + 300);
+  const parsed = extraerJSON(txt);
+  if (parsed && Array.isArray(parsed.rewrites) && parsed.rewrites.length === items.length) {
+    return guardrail(parsed.rewrites, items);
   }
-  console.warn('[policial] LLM sin respuesta válida para un lote de ' + items.length + ' (queda el titular limpio)');
+  if (txt && !parsed) console.log('[policial] LLM texto sin JSON: ' + txt.slice(0, 220));
+  console.warn('[policial] LLM sin respuesta válida para un lote de ' + items.length + ' (se descarta)');
   return items.map(() => null);
 }
 
@@ -405,7 +399,8 @@ async function reescribirConLLM(items, conocidos) {
     for (let j = 0; j < chunk.length; j++) {
       const n = limpiarTitulo(rw[j] || '');
       const nn = normalizarTexto(n);
-      if (n && !esGancho(n) && !esPoliticaOEconomia(nn) && !esInstitucional(nn)) { chunk[j].titulo = n; aplicados++; }
+      const igualAlOriginal = nn === normalizarTexto(chunk[j].titulo);
+      if (n && !igualAlOriginal && !esGancho(n) && !esPoliticaOEconomia(nn) && !esInstitucional(nn)) { chunk[j].titulo = n; aplicados++; }
       else { rechazados++; descartar.add(chunk[j]); }
     }
   }
