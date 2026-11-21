@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-11-21T02:54:56.292Z",
-  "timestamp_epoch": 1795229696,
+  "timestamp": "2026-11-21T05:09:31.380Z",
+  "timestamp_epoch": 1795237771,
   "source": "vxl-transito-ar",
-  "cantidad": 9,
+  "cantidad": 7,
   "items": [
     {
       "id": "bing-apf-cortes:Con nuevos frentes continúa la obra de reconfigura…",
       "titulo": "Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-11-20T00:00:00-03:00",
-      "fecha_raw": "2026-11-20T00:00:00-03:00",
+      "fecha": "2026-11-21T00:00:00-03:00",
+      "fecha_raw": "2026-11-21T00:00:00-03:00",
       "horario": null,
       "motivo": "Obra en la vía pública",
       "franja": "",
@@ -49,7 +49,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "viernes 20 de noviembre de 2026 21.9ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
+          "ctx": "sábado 21 de noviembre de 2026 20.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
           "entre": "",
           "texto": "25 de Mayo"
         },
@@ -82,8 +82,8 @@
       "titulo": "Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-11-20T00:00:00-03:00",
-      "fecha_raw": "2026-11-20T00:00:00-03:00",
+      "fecha": "2026-11-21T00:00:00-03:00",
+      "fecha_raw": "2026-11-21T00:00:00-03:00",
       "horario": null,
       "motivo": "Obra en la vía pública",
       "franja": "",
@@ -103,11 +103,11 @@
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2026-12-20T03:00:00.000Z",
-        "tipo": "estimada",
-        "detalle": "estimado: obra (30 días)"
+        "hasta": "2026-11-22T02:59:00.000Z",
+        "tipo": "diaria",
+        "detalle": "solo ese día"
       },
-      "vigente_hasta": "2026-12-20T03:00:00.000Z",
+      "vigente_hasta": "2026-11-22T02:59:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
@@ -122,7 +122,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "viernes 20 de noviembre de 2026 23.2ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+          "ctx": "sábado 21 de noviembre de 2026 20.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
           "entre": "",
           "texto": "Paraguay"
         },
@@ -138,7 +138,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "viernes 20 de noviembre de 2026 23.2ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+          "ctx": "sábado 21 de noviembre de 2026 20.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
           "entre": "",
           "texto": "Montevideo"
         }
@@ -155,8 +155,8 @@
       "titulo": "El Municipio de Paraná realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-11-20T00:00:00-03:00",
-      "fecha_raw": "2026-11-20T00:00:00-03:00",
+      "fecha": "2026-11-21T00:00:00-03:00",
+      "fecha_raw": "2026-11-21T00:00:00-03:00",
       "horario": null,
       "motivo": "Mantenimiento de red de agua",
       "franja": "",
@@ -176,11 +176,11 @@
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2026-12-20T03:00:00.000Z",
-        "tipo": "estimada",
-        "detalle": "estimado: obra (30 días)"
+        "hasta": "2026-11-22T02:59:00.000Z",
+        "tipo": "diaria",
+        "detalle": "solo ese día"
       },
-      "vigente_hasta": "2026-12-20T03:00:00.000Z",
+      "vigente_hasta": "2026-11-22T02:59:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
@@ -429,79 +429,6 @@
       ]
     },
     {
-      "id": "bing-elonce-cortes:Por obras, estará cortado un tramo de calle 25 de…",
-      "titulo": "Por obras, estará cortado un tramo de calle 25 de Mayo de Paraná",
-      "categoria": "obras",
-      "tipo": "obra",
-      "fecha": "2026-11-17T00:00:00-03:00",
-      "fecha_raw": "2026-11-17T00:00:00-03:00",
-      "horario": null,
-      "motivo": "Obra en la vía pública",
-      "franja": "",
-      "calles": [
-        "25 de Mayo",
-        "25 de Mayo Seguí"
-      ],
-      "resumen": "25 de Mayo · 25 de Mayo Seguí",
-      "descripcion": "25 de Mayo · 25 de Mayo Seguí",
-      "enlace": "https://www.elonce.com/parana/corte-de-transito-en-el-centro-de-parana-hasta-el-viernes.htm",
-      "lat": -31.737032534185293,
-      "lon": -60.520768253695216,
-      "sin_ubicacion": false,
-      "localidad": "Paraná",
-      "provincia": "Entre Ríos",
-      "via": "Calle a",
-      "km_desde": null,
-      "km_hasta": null,
-      "vigencia": {
-        "hasta": "2026-11-21T02:59:00.000Z",
-        "tipo": "explicita",
-        "detalle": "hasta el 20/11 23:59"
-      },
-      "vigente_hasta": "2026-11-21T02:59:00.000Z",
-      "fuente_tipo": "noticia",
-      "segmentos": [
-        {
-          "puntos": [
-            [
-              -31.737032534185293,
-              -60.520768253695216
-            ]
-          ],
-          "calle": "25 de Mayo",
-          "desde": null,
-          "hasta": null,
-          "motivo": "Obra en la vía pública",
-          "franja": "",
-          "ctx": "Más tarde Aceptar {{dayName}} {{day}} de {{monthName}} de {{year}} En Vivo Últimas noticias Paraná Policiales Política Sociedad Internacionales Deportes Economía Espectáculos Registrarme Iniciar sesión Vivo Ingrese palabra o frase a buscar Hablar Últimas noticias Paraná Policiales Política Sociedad Internacionales Deportes Economía Espectáculos Haciendo Comunidad Impulso Empresarial La Cocina del ",
-          "entre": "",
-          "texto": "25 de Mayo"
-        },
-        {
-          "puntos": [
-            [
-              -31.771885353308384,
-              -60.50477271740066
-            ]
-          ],
-          "calle": "25 de Mayo Seguí",
-          "desde": null,
-          "hasta": null,
-          "motivo": "Obra en la vía pública",
-          "franja": "",
-          "ctx": "Paraná corte de tránsito Tránsito en Paraná calle 25 de Mayo Seguí las noticias de Elonce.com en Google News Más leidas de Paraná Creciente del río Paraná: cómo ingresar al Balneario Thompson y qué sectores siguen habilitados Paraná presentó una amplia agenda de actividades para disfrutar el fin de semana largo La Escuela Técnica de Puerto Nuevo exhibió canoas y piraguas que sus alumnos probarán e",
-          "entre": "",
-          "texto": "25 de Mayo Seguí"
-        }
-      ],
-      "puntos": [
-        [
-          -31.737032534185293,
-          -60.520768253695216
-        ]
-      ]
-    },
-    {
       "id": "elonce-obras:La Municipalidad realizó obras de mantenimiento y…",
       "titulo": "La Municipalidad realizó obras de mantenimiento y mejoras en la zona sur de Paraná",
       "categoria": "obras",
@@ -556,38 +483,6 @@
           -60.50489981348717
         ]
       ]
-    },
-    {
-      "id": "ellitoral:Santa Fe:2026-11-20",
-      "titulo": "El tránsito en la provincia de Santa Fe; la información minuto a minuto",
-      "categoria": "cortes",
-      "tipo": "corte_total",
-      "fecha": "2026-11-20T11:23:00-03:00",
-      "fecha_raw": "2026-11-20T11:23:00-03:00",
-      "horario": null,
-      "motivo": "",
-      "franja": "",
-      "calles": [],
-      "resumen": "",
-      "descripcion": "",
-      "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-areametropolitana-rutas-provinciadesantafe-autopistas-accesos-ciudaddesantafe_0_Rpac5rLFbF.html",
-      "lat": null,
-      "lon": null,
-      "sin_ubicacion": true,
-      "localidad": "Santa Fe",
-      "provincia": "Santa Fe",
-      "via": "Autopista Santa Fe -Rosario · Autopista Santa Fe - Rosario · Ruta 10-s · Ruta Provincial 1",
-      "km_desde": "65",
-      "km_hasta": null,
-      "vigencia": {
-        "hasta": "2026-11-21T02:59:00.000Z",
-        "tipo": "diaria",
-        "detalle": "boletín del día"
-      },
-      "vigente_hasta": "2026-11-21T02:59:00.000Z",
-      "fuente_tipo": "estado",
-      "segmentos": [],
-      "puntos": null
     }
   ]
 }
