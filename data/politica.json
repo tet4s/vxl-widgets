@@ -1,35 +1,35 @@
 {
-  "last_updated": "2026-11-21T00:12:08.807Z",
-  "timestamp_epoch": 1795219928,
-  "total_noticias": 120,
+  "last_updated": "2026-11-21T00:36:25.532Z",
+  "timestamp_epoch": 1795221385,
+  "total_noticias": 90,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 60
+      "total": 45
     },
     {
       "id": "obras",
       "nombre": "OBRAS",
-      "total": 9
+      "total": 7
     },
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 34
+      "total": 27
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 21
+      "total": 15
     }
   ],
   "jurisdicciones": [
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 50
+      "total": 32
     },
     {
       "id": "santa_fe",
@@ -39,7 +39,7 @@
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 32
+      "total": 23
     },
     {
       "id": "corrientes",
@@ -49,12 +49,12 @@
     {
       "id": "misiones",
       "nombre": "MISIONES",
-      "total": 11
+      "total": 9
     },
     {
       "id": "chaco",
       "nombre": "CHACO",
-      "total": 8
+      "total": 7
     },
     {
       "id": "formosa",
@@ -63,110 +63,6 @@
     }
   ],
   "noticias": [
-    {
-      "titulo": "PARQUE DE LA SALUD: MÁS DE 500 PACIENTES SE ANIMARON AL CONTROL Y LE GANARON LA PARTIDA AL SILENCIO DEL CÁNCER DE PRÓSTATA",
-      "resumen": "El Servicio de Urología del Hospital Escuela de Agudos “Dr. Ramón Madariaga” contabiliza más de 500 pacientes que ya se realizaron estudios en el marco del Mes del Hombre, una...",
-      "titulo_info": "PARQUE DE LA SALUD: MÁS DE 500 PACIENTES SE ANIMARON AL CONTROL Y LE GANARON LA PARTIDA AL SILENCIO DEL CÁNCER DE PRÓSTATA. El Servicio de Urología del Hospital Escuela de Agudos “Dr.",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-21T00:08:52.797Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://misiones.gob.ar/parque-de-la-salud-mas-de-500-pacientes-se-animaron-al-control-y-le-ganaron-la-partida-al-silencio-del-cancer-de-prostata/",
-      "fuente": "Gobierno de Misiones"
-    },
-    {
-      "titulo": "Mientras el Gobierno festeja la ley de patentes, los laboratorios alertan por una fuerte suba de medicamentos",
-      "resumen": "El Senado aprobó la adhesión argentina al acuerdo internacional y el oficialismo celebró la decisión. Los laboratorios nacionales advierten por el impacto sobre la producción local y el precio de los tratamientos.",
-      "titulo_info": "Mientras el Gobierno festeja la ley de patentes, los laboratorios alertan por una fuerte suba de medicamentos. El Senado aprobó la adhesión argentina al acuerdo internacional y el oficialismo celebró la decisión.",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-20T23:08:06.358Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/20/mientras-el-gobierno-festeja-la-ley-de-patentes-los-laboratorios-alertan-por-una-fuerte-suba-de-medicamentos/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "En jornada sobre la Ley de Mecenazgo Deportivo, Uranga afirmó: “Marcará un antes y un después”",
-      "resumen": "",
-      "titulo_info": "En jornada sobre la Ley de Mecenazgo Deportivo, Uranga afirmó: “Marcará un antes y un después”",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-20T23:08:05.980Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "/politica/en-jornada-sobre-la-ley-de-mecenazgo-deportivo-uranga-afirmo-marcara-un-antes-y-un-despues.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "Santo Tomé aprobó un presupuesto de más de $17.600 millones y renovó el reclamo por la ruta 14",
-      "resumen": "El Concejo Deliberante sancionó el cálculo de recursos para 2027 por mayoría, luego de un debate en el que se presentaron dos dictámenes con posiciones contrapuestas. Además, los ediles aprobaron por unanimidad un nuevo pedido de reparación integral de la ruta nacional 14, con especial atención al tramo del kilómetro 751.",
-      "titulo_info": "Santo Tomé aprobó un presupuesto de más de $17.600 millones y renovó el reclamo por la ruta 14. El Concejo Deliberante sancionó el cálculo de recursos para 2027 por mayoría",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-20T23:08:05.779Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/20/928464-santo-tome-aprobo-un-presupuesto-de-mas-de-17600-millones-y-renovo-el-reclamo-por-la-ruta-14",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "Con el insólito spot de un astronauta y un marciano, arrancó la campaña electoral en Neuquén",
-      "resumen": "",
-      "titulo_info": "Con el insólito spot de un astronauta y un marciano, arrancó la campaña electoral en Neuquén",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-20T23:08:05.908Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "Con la presencia de Filmus, Concepción del Uruguay será sede de la jornada por los 20 años de la Ley de Educación Nacional",
-      "resumen": "",
-      "titulo_info": "Con la presencia de Filmus, Concepción del Uruguay será sede de la jornada por los 20 años de la Ley de Educación Nacional",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-20T23:08:05.200Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "/noticias/2026/11/20/480150-con-la-presencia-de-filmus-concepcion-del-uruguay-sera-sede-de-la-jornada-por-los-20-anos-de-la-ley-de-educacion-nacional",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "Ley de Ludopatía: bajo presión, el oficialismo habilita el debate pero buscará imponer un proyecto propio",
-      "resumen": "",
-      "titulo_info": "Ley de Ludopatía: bajo presión, el oficialismo habilita el debate pero buscará imponer un proyecto propio",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-20T23:08:05.908Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "Chubut elegirá gobernador el 21 de marzo de 2027 con nuevas reglas electorales",
-      "resumen": "",
-      "titulo_info": "Chubut elegirá gobernador el 21 de marzo de 2027 con nuevas reglas electorales",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-20T23:08:05.200Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/noticias/2026/11/20/480171-chubut-elegira-gobernador-el-21-de-marzo-de-2027-con-nuevas-reglas-electorales",
-      "fuente": "APF Digital"
-    },
     {
       "titulo": "Pullaro inauguró el gasoducto Albarellos-Uranga: más de 850 familias accederán al servicio de gas natural",
       "resumen": "La obra en el departamento Rosario contempla 15 kilómetros de gasoducto principal, una estación reguladora y 2 kilómetros de red de distribución domiciliaria. El proyecto fue desarrollado de manera conjunta entre Litoral Gas y las comunas.",
@@ -339,19 +235,6 @@
       "fuente": "La Nación Política"
     },
     {
-      "titulo": "Por unanimidad. Aprueban la nueva ley de Discapacidad y reclaman que el Gobierno cumpla con su reglamentación",
-      "resumen": "Con 71 votos a favor y ninguno en contra, el proyecto, que ya había obtenido un respaldo casi unánime en Diputados, con 237 avales, fue aprobado el jueves por la tarde",
-      "titulo_info": "Por unanimidad. Aprueban la nueva ley de Discapacidad y reclaman que el Gobierno cumpla con su reglamentación. Con 71 votos a favor y ninguno en contra, el proyecto, que ya había obtenido un respaldo casi unánime en Diputados, con 237 avales",
-      "titulo_info_src": "heuristico",
-      "fecha": "2026-11-20T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/el-senado-sanciono-la-ley-de-discapacidad-y-la-oposicion-reclamo-al-gobierno-que-cumpla-con-su-nid19112026/",
-      "fuente": "La Nación Política"
-    },
-    {
       "titulo": "Cambios, fallos y polémicas. El Senado aprobó la reforma del régimen de propiedad privada que restablece la Ley de Tierras",
       "resumen": "Con 42 votos a favor y 26 en contra, el oficialismo consiguió la sanción definitiva de una iniciativa que afrontó modificaciones en ambas cámaras; el giro en la estrategia libertaria que destrabó el proyecto",
       "titulo_info": "Senado aprobó reforma de propiedad privada que restablece Ley de Tierras con 42 votos a favor",
@@ -415,71 +298,6 @@
       ],
       "url": "https://www.pagina12.com.ar/2026/11/20/lo-que-dejo-el-debate-entre-pedro-sanchez-y-feijoo-de-cara-a-las-elecciones-del-29n-en-espana/",
       "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "La capacitación sobre la Boleta Única de Papel llegó a Feliciano con más de 200 estudiantes",
-      "resumen": "",
-      "titulo_info": "La capacitación sobre la Boleta Única de Papel llegó a Feliciano con más de 200 estudiantes",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T12:43:39.115Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "/noticias/2026/11/20/480027-la-capacitacion-sobre-la-boleta-unica-de-papel-llego-a-feliciano-con-mas-de-200-estudiantes",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "El Senado nacional aprobó la reforma del régimen de propiedad privada que restablece la Ley de Tierras",
-      "resumen": "",
-      "titulo_info": "El Senado nacional aprobó la reforma del régimen de propiedad privada que restablece la Ley de Tierras",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T12:43:39.115Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "/noticias/2026/11/20/479991-el-senado-nacional-aprobo-la-reforma-del-regimen-de-propiedad-privada-que-restablece-la-ley-de-tierras",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "El Frente Entrerriano Federal repudió la agresión a la intendenta de Paraná",
-      "resumen": "",
-      "titulo_info": "El Frente Entrerriano Federal repudió la agresión a la intendenta de Paraná",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T12:43:39.115Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/noticias/2026/11/20/480015-el-frente-entrerriano-federal-repudio-la-agresion-a-la-intendenta-de-parana",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "Humanidades de Uader firmó convenio para difundir sus producciones musicales en plataformas digitales",
-      "resumen": "",
-      "titulo_info": "Humanidades de Uader firmó convenio para difundir sus producciones musicales en plataformas digitales",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T12:43:39.115Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/noticias/2026/11/20/480006-humanidades-de-uader-firmo-convenio-para-difundir-sus-producciones-musicales-en-plataformas-digitales",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "Bahillo estuvo con legisladores nacionales del PJ para analizar el impacto del Presupuesto 2027 en Entre Ríos",
-      "resumen": "",
-      "titulo_info": "Bahillo estuvo con legisladores nacionales del PJ para analizar el impacto del Presupuesto 2027 en Entre Ríos",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T12:43:39.046Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/provinciales/2026/11/20/bahillo-estuvo-con-legisladores-nacionales-del-pj-para-analizar-el-impacto-del-presupuesto-2027-en-entre-rios",
-      "fuente": "Análisis Digital"
     },
     {
       "titulo": "Ley Joaquín: qué medidas de seguridad deberán cumplir los clubes y las escuelas",
@@ -637,32 +455,6 @@
       ],
       "url": "/noticias/2026/11/19/479976-por-unanimidad-en-senado-el-fortalecimiento-del-sistema-de-discapacidad-se-transformo-en-ley",
       "fuente": "APF Digital"
-    },
-    {
-      "titulo": "Por qué las mujeres (jóvenes) son la mayor amenaza electoral para Javier Milei",
-      "resumen": "",
-      "titulo_info": "Por qué las mujeres (jóvenes) son la mayor amenaza electoral para Javier Milei",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T23:03:47.204Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "El Senado sancionó por unanimidad la nueva ley de Discapacidad",
-      "resumen": "",
-      "titulo_info": "El Senado sancionó por unanimidad la nueva ley de Discapacidad",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T23:03:47.204Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
     },
     {
       "titulo": "El Senado aprobó la Ley de Fortalecimiento del Sistema de Discapacidad",
@@ -1042,19 +834,6 @@
       "fuente": "Territorio Digital"
     },
     {
-      "titulo": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
-      "resumen": "",
-      "titulo_info": "Ni el Papa pudo frenar la crisis de Javier Milei y Victoria Villarruel: no se hablan y ella evalúa una candidatura",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.634Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
       "titulo": "La CAME pide que Diputados apruebe la nueva Ley de Biocombustibles",
       "resumen": "La entidad sostuvo que la iniciativa \"representa una oportunidad para fortalecer el desarrollo productivo, atraer inversiones y generar nuevas posibilidades\".",
       "titulo_info": "La CAME pide que Diputados apruebe la nueva Ley de Biocombustibles que busca fortalecer el desarrollo productivo y atraer inversiones",
@@ -1068,16 +847,16 @@
       "fuente": "DataChaco"
     },
     {
-      "titulo": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria",
-      "resumen": "El gobernador Juan Pablo Valdés confirmó que la Provincia avanzará en el prorrateo de las facturas de energía en seis meses, la ampliación del alcance de l",
-      "titulo_info": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria, incluyendo el prorrateo de facturas de energía",
+      "titulo": "Colonia Libertad acelera plan de obras en viviendas y la Ruta 25",
+      "resumen": "Los trabajos avanzaron por encima de las previsiones iniciales, con resultados visibles antes de cumplirse el primer año de gestión. La carretera es important",
+      "titulo_info": "Colonia Libertad acelera obras en viviendas y la Ruta 25, con trabajos que superan las previsiones iniciales",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.213Z",
       "jurisdiccion": "corrientes",
       "categorias": [
         "obras"
       ],
-      "url": "https://www.diarioepoca.com/1395592-valdes-anuncio-medidas-de-alivio-economico-y-nuevas-obras-en-paso-de-la-patria",
+      "url": "https://www.diarioepoca.com/1395330-colonia-libertad-acelera-plan-de-obras-en-viviendas-y-la-ruta-25",
       "fuente": "Diario Época"
     },
     {
@@ -1133,16 +912,16 @@
       "fuente": "Gobierno del Chaco"
     },
     {
-      "titulo": "Polich proyecta un presupuesto de $256.314 millones para 2027",
-      "resumen": "El proyecto que toma estado legislativo hoy en el Concejo prevé un aumento nominal en línea con la inflación proyectada respecto del cálculo de 2026. La ges",
-      "titulo_info": "El Concejo trata el presupuesto 2027 de Polich, proyectado en $256.314 millones, con un aumento nominal acorde a la inflación esperada respecto a 2026",
+      "titulo": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria",
+      "resumen": "El gobernador Juan Pablo Valdés confirmó que la Provincia avanzará en el prorrateo de las facturas de energía en seis meses, la ampliación del alcance de l",
+      "titulo_info": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria, incluyendo el prorrateo de facturas de energía",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.213Z",
       "jurisdiccion": "corrientes",
       "categorias": [
-        "gobierno"
+        "obras"
       ],
-      "url": "https://www.diarioepoca.com/1395552-polich-proyecta-un-presupuesto-de-256314-millones-para-2027",
+      "url": "https://www.diarioepoca.com/1395592-valdes-anuncio-medidas-de-alivio-economico-y-nuevas-obras-en-paso-de-la-patria",
       "fuente": "Diario Época"
     },
     {
@@ -1186,7 +965,7 @@
     },
     {
       "titulo": "Desde el paraje Pampa Cantón a la Legislatura: estudiantes conocieron de cerca el trabajo de los diputados",
-      "resumen": "Desde el paraje Pampa Cantón a la Legislatura: estudiantes conocieron de cerca el trabajo de los diputados",
+      "resumen": "",
       "titulo_info": "Estudiantes de Pampa Cantón conocieron de cerca el trabajo de los diputados en la Legislatura",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.395Z",
@@ -1198,16 +977,16 @@
       "fuente": "Legislatura Chaco"
     },
     {
-      "titulo": "Colonia Libertad acelera plan de obras en viviendas y la Ruta 25",
-      "resumen": "Los trabajos avanzaron por encima de las previsiones iniciales, con resultados visibles antes de cumplirse el primer año de gestión. La carretera es important",
-      "titulo_info": "Colonia Libertad acelera obras en viviendas y la Ruta 25, con trabajos que superan las previsiones iniciales",
+      "titulo": "Polich proyecta un presupuesto de $256.314 millones para 2027",
+      "resumen": "El proyecto que toma estado legislativo hoy en el Concejo prevé un aumento nominal en línea con la inflación proyectada respecto del cálculo de 2026. La ges",
+      "titulo_info": "El Concejo trata el presupuesto 2027 de Polich, proyectado en $256.314 millones, con un aumento nominal acorde a la inflación esperada respecto a 2026",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.213Z",
       "jurisdiccion": "corrientes",
       "categorias": [
-        "obras"
+        "gobierno"
       ],
-      "url": "https://www.diarioepoca.com/1395330-colonia-libertad-acelera-plan-de-obras-en-viviendas-y-la-ruta-25",
+      "url": "https://www.diarioepoca.com/1395552-polich-proyecta-un-presupuesto-de-256314-millones-para-2027",
       "fuente": "Diario Época"
     },
     {
@@ -1239,7 +1018,7 @@
     },
     {
       "titulo": "La Comisión de Legislación General concretó su 18ª reunión ordinaria",
-      "resumen": "Dirigida por la diputada Zulema Wannesson, se llevó a cabo la 18º reunión ordinaria de la Comisión de Legislación General, Justicia y Seguridad.",
+      "resumen": "",
       "titulo_info": "Comisión de Legislación General, Justicia y Seguridad realizó su 18ª reunión ordinaria",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.395Z",
@@ -1275,19 +1054,6 @@
       ],
       "url": "",
       "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "La Legislatura acompañó la entrega del Doctorado Honoris Causa de la UNNE al escultor Humberto Gómez Lollo",
-      "resumen": "La presidente de la Cámara de Diputados del Chaco, Carmen Delgado, participó del acto en el que la Universidad Nacional del Nordeste distinguió al reconocido artista chaqueño Humberto Gómez Lollo con el título de Doctor Honoris Causa, en reconocimiento a su excepcional trayectoria artística, docente y cultural. La ceremonia se realizó este martes 17 de noviembre, en el Salón de Usos Múltiples d…",
-      "titulo_info": "La Legislatura acompañó la entrega del Doctorado Honoris Causa de la UNNE al escultor Humberto Gómez Lollo",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.395Z",
-      "jurisdiccion": "chaco",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.legislaturachaco.gov.ar/noticia-la-legislatura-acompano-la-entrega-del-doctorado-honoris-causa-de-la-unne-al-escultor-humberto-gomez-lollo-2026-11-17-20-27",
-      "fuente": "Legislatura Chaco"
     },
     {
       "titulo": "Senadores sesionan este jueves para dar sanción definitiva a la Ley de Discapacidad",
@@ -1470,162 +1236,6 @@
       ],
       "url": "",
       "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "Aquí podrá acceder a los distintos documentos que se generan durante la actividad Legislativa de la Cámara de Diputados",
-      "resumen": "Transcripción de las notas taquigráficastomadas durante la Sesión",
-      "titulo_info": "Cámara de Diputados: Documentos de la actividad legislativa",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.126Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.hcder.gov.ar/archivosOrdenesDelDia.php",
-      "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "La Cámara de Diputados no reunió quórum para debatir la Ley Malvinas y la reforma del Banco Central",
-      "resumen": "",
-      "titulo_info": "Diputados no reunió quórum para debatir Ley Malvinas y reforma del Banco Central",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.588Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "/politica/la-camara-de-diputados-no-reunio-quorum-para-debatir-la-ley-malvinas-y-la-reforma-del-banco-central.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "Protocolo específico para la prevención e intervención en casos de violencia laboral y violencia de género en el ámbito de la Honorable Cámara de Diputados de la provi…",
-      "resumen": "",
-      "titulo_info": "Diputados de la provincia de Buenos Aires tendrá protocolo para violencia laboral y de género",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.126Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.hcder.gov.ar/archivosDownload/textos/E28105-28105-08042026C.pdf",
-      "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "Sesión en el Senado: LLA volvió a frenar el debate de la ley de Ludopatía",
-      "resumen": "",
-      "titulo_info": "El Senado postergó el debate de la ley de Ludopatía, con media sanción, hasta el 26 de noviembre",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.451Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/19/sesion-en-el-senado-lla-volvio-a-frenar-el-debate-de-la-ley-de-ludopatia/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "Aquí podrá acceder a los expedientes y normas legales que se generan durante la actividad Legislativa de la Cámara de Diputados",
-      "resumen": "",
-      "titulo_info": "Acceda a expedientes y normas legales de la actividad Legislativa de la Cámara de Diputados",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.126Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "",
-      "fuente": "Diputados Entre Ríos"
-    },
-    {
-      "titulo": "Reforma electoral: Cuando el poder del dinero vale más que el voto",
-      "resumen": "La nueva ley le pone fin a la jornada de reflexión, menos espacios cedidos y campaña paga en redes: las nuevas reglas favorecen a quien tiene más fondos. La suspensión de las PASO apunta a complicar la interna peronista. En la Cámara Electoral advierten por los avales truchos y piden el padrón biométrico.",
-      "titulo_info": "Reforma electoral: el poder del dinero y la campaña paga en redes favorecen a los que más fondos tienen",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.451Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/19/reforma-electoral-cuando-el-poder-del-dinero-vale-mas-que-el-voto/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "Una reforma electoral que al gobierno le costó unas colectoras",
-      "resumen": "El bloque libertario necesitó dos días de negociaciones para conseguir el texto que debatirán la próxima semana. La oposición consideró el proyecto como “un papelón”.",
-      "titulo_info": "El bloque libertario negoció dos días para conseguir el texto de la reforma electoral que debatirán la próxima semana",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.451Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/19/una-reforma-electoral-que-al-gobierno-le-costo-unas-colectoras/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "Axel Kicillof y Magdalena Sierra entregaron 55 viviendas en Avellaneda",
-      "resumen": "El Municipio de Avellaneda, en articulación con el Gobierno provincial, garantizó la continuidad de las obras y finalizó proyectos interrumpidos por falta de financiamiento del Gobierno nacional.",
-      "titulo_info": "Kicillof y Sierra entregaron 55 viviendas en Avellaneda, obras que estaban paralizadas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.451Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/19/axel-kicillof-y-magdalena-sierra-entregaron-55-viviendas-en-avellaneda/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "El Deutsche Bank informó sobre US$60 millones vinculados a Carlos Wagner, el empresario líder del Club de la obra pública",
-      "resumen": "El banco alemán rechazó al constructor y a Esuco como clientes tras el estallido del “caso Cuadernos”; la Justicia argentina ya embargó cuentas suizas del empresario y de su hermana por US$20 millones",
-      "titulo_info": "Deutsche Bank informó US$60 millones vinculados a empresario líder del Club de la obra pública",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.353Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/el-deutsche-bank-informo-sobre-us60-millones-vinculados-a-carlos-wagner-el-empresario-lider-del-club-nid18112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "El fiscal anticorrupción denunció a la secretaria de Energía: la acusó de favorecer a una empresa sancionada por operar en Malvinas",
-      "resumen": "El titular de la PIA denunció en Comodoro Py que Tettamanti y su antecesor, ambos funcionarios de Milei, autorizaron a actuar en el país, en negocios gigantescos, a una firma británica inhabilitada; la sugestiva “Condición del Perdón Argentino”",
-      "titulo_info": "Fiscal anticorrupción denunció a secretaria de Energía por favorecer empresa sancionada por operar en Malvinas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.353Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/un-fiscal-anticorrupcion-denuncio-a-la-secretaria-de-energia-la-acuso-de-favorecer-a-una-empresa-nid17112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "EL SUBSECRETARIO DE HIDROCARBUROS EXPUSO SOBRE EL PROYECTO DE LEY QUE REGULA LOS BIOCOMBUSTIBLES",
-      "resumen": "Un plenario de las Comisiones de Energía y Combustibles, Presupuesto y Hacienda, Agricultura y Ganadería de la Cámara de Diputados de la Nac...",
-      "titulo_info": "Subsecretario de Hidrocarburos expuso sobre proyecto de ley que regula biocombustibles, con dictamen de comisión",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.271Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.diputados.gob.ar/prensa/noticia/EL-SUBSECRETARIO-DE-HIDROCARBUROS-EXPUSO-SOBRE-EL-PROYECTO-DE-LEY-QUE-REGULA-LOS-BIOCOMBUSTIBLES/",
-      "fuente": "Diputados Nación"
-    },
-    {
-      "titulo": "LA COMISIÓN DE LEGISLACIÓN PENAL ABORDÓ LA IMPRESCRIPTIBILIDAD DE LOS DELITOS CONTRA LA INTEGRIDAD SEXUAL",
-      "resumen": "En ese marco, los diputados de distintos bloques parlamentarios presentaron sus respectivos proyectos sobre el tema. Además, durante la Comi...",
-      "titulo_info": "Comisión de Legislación Penal abordó imprescriptibilidad de delitos contra integridad sexual con proyectos presentados",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.271Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.diputados.gob.ar/prensa/noticia/LA-COMISION-DE-LEGISLACION-PENAL-ABORDO-LA-IMPRESCRIPTIBILIDAD-DE-LOS-DELITOS-CONTRA-LA-INTEGRIDAD-SEXUAL/",
-      "fuente": "Diputados Nación"
     }
   ]
 }

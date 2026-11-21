@@ -680,8 +680,9 @@ async function reescribirInformativos(noticias, previos) {
   const pendientes = [];
   for (const n of noticias) {
     const prev = previos.get(norm(n.titulo));
-    if (prev && prev.length > 55) { n.titulo_info = prev; n.titulo_info_src = 'llm'; reusados++; }
-    else if (n.titulo_info && n.titulo_info_src === 'llm' && n.titulo_info.length > 55) { reusados++; }
+    const sirve = t => t && t.length > 55 && norm(t) !== norm(n.titulo || '');
+    if (sirve(prev)) { n.titulo_info = prev; n.titulo_info_src = 'llm'; reusados++; }
+    else if (n.titulo_info_src === 'llm' && sirve(n.titulo_info)) { reusados++; }
     else pendientes.push(n);
   }
   console.log('[politica] titulares ya reescritos (reuso): ' + reusados + ' | pendientes: ' + pendientes.length);
@@ -701,7 +702,8 @@ async function reescribirInformativos(noticias, previos) {
     console.log('[politica] sin GEMINI_API_KEY: las noticias nuevas no se publican');
   }
 
-  const publicables = noticias.filter(n => n.titulo_info_src === 'llm' && n.titulo_info && n.titulo_info.length > 55);
+  const publicables = noticias.filter(n => n.titulo_info_src === 'llm' && n.titulo_info && n.titulo_info.length > 55
+    && norm(n.titulo_info) !== norm(n.titulo || ''));
   const descartadas = noticias.length - publicables.length;
   console.log('[politica] titulares: ' + publicables.length + ' con LLM (' + reusados + ' reusados) | descartadas sin reescritura: ' + descartadas);
   return publicables;
