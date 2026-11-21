@@ -1,6 +1,6 @@
 {
-  "generado": "2026-11-21T05:10:07.756Z",
-  "cantidad": 23,
+  "generado": "2026-11-21T23:10:07.733Z",
+  "cantidad": 22,
   "ventana_dias": 30,
   "fuentes": [
     {
@@ -11,7 +11,7 @@
     {
       "nombre": "Eventbrite",
       "ok": true,
-      "nota": "40 registros leídos, 6 con fecha y ciudad válida"
+      "nota": "40 registros leídos, 8 con fecha y ciudad válida"
     },
     {
       "nombre": "parana",
@@ -133,22 +133,6 @@
       "fuente_url": "https://www.eventbrite.com.ar/e/a-puro-toyi-tickets-2004101304952"
     },
     {
-      "id": "sf-feria-mujeres-emprendedoras-camees-15",
-      "titulo": "Feria Mujeres Emprendedoras CAMEES",
-      "descripcion": "",
-      "fecha": "2026-11-21",
-      "hora": "10:00",
-      "fin": "2026-11-21T20:00",
-      "lugar": "Plazoleta Fragata Sarmiento",
-      "ciudad": "Santa Fe",
-      "categoria": "ferias",
-      "gratis": true,
-      "precio": "",
-      "link": "",
-      "fuente": "Agenda Santa Fe Ciudad",
-      "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-mujeres-emprendedoras-camees-15/"
-    },
-    {
       "id": "sf-feria-del-sol-y-la-luna-11",
       "titulo": "Feria del Sol y la Luna",
       "descripcion": "",
@@ -163,22 +147,6 @@
       "link": "",
       "fuente": "Agenda Santa Fe Ciudad",
       "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-del-sol-y-la-luna-11/"
-    },
-    {
-      "id": "sf-feria-de-artesanos-paseo-constituyentes-10",
-      "titulo": "Feria de Artesanos Paseo Constituyentes",
-      "descripcion": "",
-      "fecha": "2026-11-21",
-      "hora": "15:00",
-      "fin": "2026-11-21T20:00",
-      "lugar": "Plaza Constituyentes",
-      "ciudad": "Santa Fe",
-      "categoria": "ferias",
-      "gratis": true,
-      "precio": "",
-      "link": "",
-      "fuente": "Agenda Santa Fe Ciudad",
-      "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-de-artesanos-paseo-constituyentes-10/"
     },
     {
       "id": "sf-feria-de-artesanos-encuentro-de-teatro-independiente",
@@ -339,6 +307,22 @@
       "link": "",
       "fuente": "Agenda Santa Fe Ciudad",
       "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-paseo-de-la-laguna-24/"
+    },
+    {
+      "id": "eb-ema-cabrera-soy-aqui-tickets-2004094878731",
+      "titulo": "Ema Cabrera: “Soy Aquí”",
+      "descripcion": "Ema Cabrera presenta Soy Aquí, un recorrido por la música popular y la canción de autor en un encuentro íntimo y lleno de sensibilidad.",
+      "fecha": "2026-11-28",
+      "hora": "",
+      "fin": "2026-11-28T23:59",
+      "lugar": "Subsuelo Galeria Flamingo",
+      "ciudad": "Paraná",
+      "categoria": "musica",
+      "gratis": false,
+      "precio": "",
+      "link": "",
+      "fuente": "Eventbrite",
+      "fuente_url": "https://www.eventbrite.com.ar/e/ema-cabrera-soy-aqui-tickets-2004094878731"
     },
     {
       "id": "eb-entre-el-aire-y-la-musica-tickets-2004954941201",
