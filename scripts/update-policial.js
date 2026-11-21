@@ -10,6 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const ia = require('./lib/gemini');
+function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
 const cheerio = require('cheerio');
 const Parser = require('rss-parser');
 
