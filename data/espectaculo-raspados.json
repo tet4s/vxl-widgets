@@ -1,17 +1,17 @@
 {
-  "generado": "2026-11-20T23:10:07.825Z",
-  "cantidad": 25,
+  "generado": "2026-11-21T05:10:07.756Z",
+  "cantidad": 23,
   "ventana_dias": 30,
   "fuentes": [
     {
       "nombre": "Agenda Santa Fe Ciudad",
       "ok": true,
-      "nota": "46 registros leídos, 23 con fecha y ciudad válida"
+      "nota": "40 registros leídos, 20 con fecha y ciudad válida"
     },
     {
       "nombre": "Eventbrite",
       "ok": true,
-      "nota": "40 registros leídos, 9 con fecha y ciudad válida"
+      "nota": "40 registros leídos, 6 con fecha y ciudad válida"
     },
     {
       "nombre": "parana",
@@ -115,86 +115,6 @@
       "link": "",
       "fuente": "Agenda Santa Fe Ciudad",
       "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/ii-jornadas-de-musica-y-braille-inscripciones-abiertas/"
-    },
-    {
-      "id": "eb-entre-tangos-y-milongas-tickets-2004268875159",
-      "titulo": "Entre tangos y milongas",
-      "descripcion": "Tangos y milongas en voz, guitarra y piano. Con Zuly Pianetti, Cristian Dappen y Mauro Sauthier.",
-      "fecha": "2026-11-20",
-      "hora": "",
-      "fin": "2026-11-20T23:59",
-      "lugar": "Subsuelo Galeria Flamingo",
-      "ciudad": "Paraná",
-      "categoria": "musica",
-      "gratis": false,
-      "precio": "",
-      "link": "",
-      "fuente": "Eventbrite",
-      "fuente_url": "https://www.eventbrite.com.ar/e/entre-tangos-y-milongas-tickets-2004268875159"
-    },
-    {
-      "id": "sf-feria-de-artesanos-paseo-del-vagon-4",
-      "titulo": "Feria de Artesanos Paseo del Vagón",
-      "descripcion": "",
-      "fecha": "2026-11-20",
-      "hora": "16:30",
-      "fin": "2026-11-20T21:00",
-      "lugar": "Paseo del Vagón",
-      "ciudad": "Santa Fe",
-      "categoria": "ferias",
-      "gratis": true,
-      "precio": "",
-      "link": "",
-      "fuente": "Agenda Santa Fe Ciudad",
-      "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-de-artesanos-paseo-del-vagon-4/"
-    },
-    {
-      "id": "sf-acerca-de-actores-y-vestimentas-en-el-sudor-milagroso",
-      "titulo": "Acerca de actores y vestimentas en El Sudor Milagroso",
-      "descripcion": "",
-      "fecha": "2026-11-20",
-      "hora": "17:00",
-      "fin": "2026-11-20T23:59",
-      "lugar": "Museo de la Inmaculada Concepción",
-      "ciudad": "Santa Fe",
-      "categoria": "charlas",
-      "gratis": true,
-      "precio": "",
-      "link": "",
-      "fuente": "Agenda Santa Fe Ciudad",
-      "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/acerca-de-actores-y-vestimentas-en-el-sudor-milagroso/"
-    },
-    {
-      "id": "sf-feria-eco-circular-14",
-      "titulo": "Feria Eco Circular",
-      "descripcion": "",
-      "fecha": "2026-11-20",
-      "hora": "17:00",
-      "fin": "2026-11-20T21:30",
-      "lugar": "Plaza 25 de Mayo",
-      "ciudad": "Santa Fe",
-      "categoria": "ferias",
-      "gratis": true,
-      "precio": "",
-      "link": "",
-      "fuente": "Agenda Santa Fe Ciudad",
-      "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-eco-circular-14/"
-    },
-    {
-      "id": "sf-caranchos-en-el-cuerpo",
-      "titulo": "Caranchos en el cuerpo",
-      "descripcion": "",
-      "fecha": "2026-11-20",
-      "hora": "19:00",
-      "fin": "2026-11-20T23:59",
-      "lugar": "Teatro Municipal 1° de Mayo",
-      "ciudad": "Santa Fe",
-      "categoria": "muestras",
-      "gratis": true,
-      "precio": "",
-      "link": "",
-      "fuente": "Agenda Santa Fe Ciudad",
-      "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/caranchos-en-el-cuerpo/"
     },
     {
       "id": "eb-a-puro-toyi-tickets-2004101304952",
@@ -341,6 +261,22 @@
       "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-de-artesanos-parque-federal-24/"
     },
     {
+      "id": "sf-feria-de-artesanos-paseo-costanera-oeste-10",
+      "titulo": "Feria de artesanos Paseo Costanera Oeste",
+      "descripcion": "",
+      "fecha": "2026-11-22",
+      "hora": "15:00",
+      "fin": "2026-11-22T20:00",
+      "lugar": "Av. Almte. Brown 5700-6200",
+      "ciudad": "Santa Fe",
+      "categoria": "ferias",
+      "gratis": true,
+      "precio": "",
+      "link": "",
+      "fuente": "Agenda Santa Fe Ciudad",
+      "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-de-artesanos-paseo-costanera-oeste-10/"
+    },
+    {
       "id": "sf-feria-paseo-de-las-tres-culturas-8",
       "titulo": "Feria Paseo de las Tres Culturas",
       "descripcion": "",
@@ -373,20 +309,36 @@
       "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-de-artesanos-plaza-scarafia/"
     },
     {
-      "id": "eb-ema-cabrera-soy-aqui-tickets-2004094878731",
-      "titulo": "Ema Cabrera: “Soy Aquí”",
-      "descripcion": "Ema Cabrera presenta Soy Aquí, un recorrido por la música popular y la canción de autor en un encuentro íntimo y lleno de sensibilidad.",
-      "fecha": "2026-11-28",
-      "hora": "",
-      "fin": "2026-11-28T23:59",
-      "lugar": "Subsuelo Galeria Flamingo",
-      "ciudad": "Paraná",
-      "categoria": "musica",
-      "gratis": false,
+      "id": "sf-feria-de-artesanos-sol-costero-23",
+      "titulo": "Feria de Artesanos Sol Costero",
+      "descripcion": "",
+      "fecha": "2026-11-23",
+      "hora": "15:00",
+      "fin": "2026-11-23T20:00",
+      "lugar": "Av. Almte. Brown y Pedro de Vega",
+      "ciudad": "Santa Fe",
+      "categoria": "ferias",
+      "gratis": true,
       "precio": "",
       "link": "",
-      "fuente": "Eventbrite",
-      "fuente_url": "https://www.eventbrite.com.ar/e/ema-cabrera-soy-aqui-tickets-2004094878731"
+      "fuente": "Agenda Santa Fe Ciudad",
+      "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-de-artesanos-sol-costero-23/"
+    },
+    {
+      "id": "sf-feria-paseo-de-la-laguna-24",
+      "titulo": "Feria Paseo de la Laguna",
+      "descripcion": "",
+      "fecha": "2026-11-23",
+      "hora": "15:30",
+      "fin": "2026-11-23T20:30",
+      "lugar": "Paseo de la Costanera Oeste",
+      "ciudad": "Santa Fe",
+      "categoria": "ferias",
+      "gratis": true,
+      "precio": "",
+      "link": "",
+      "fuente": "Agenda Santa Fe Ciudad",
+      "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-paseo-de-la-laguna-24/"
     },
     {
       "id": "eb-entre-el-aire-y-la-musica-tickets-2004954941201",
@@ -403,6 +355,22 @@
       "link": "",
       "fuente": "Eventbrite",
       "fuente_url": "https://www.eventbrite.com.ar/e/entre-el-aire-y-la-musica-tickets-2004954941201"
+    },
+    {
+      "id": "sf-feria-del-sol-y-la-luna-12",
+      "titulo": "Feria del Sol y la Luna",
+      "descripcion": "",
+      "fecha": "2026-11-29",
+      "hora": "14:00",
+      "fin": "2026-11-30T20:00",
+      "lugar": "Plaza Pueyrredón",
+      "ciudad": "Santa Fe",
+      "categoria": "ferias",
+      "gratis": true,
+      "precio": "",
+      "link": "",
+      "fuente": "Agenda Santa Fe Ciudad",
+      "fuente_url": "https://agenda.santafeciudad.gov.ar/evento/feria-del-sol-y-la-luna-12/"
     },
     {
       "id": "eb-acto-colacion-ieserh-santa-fe-2026-tickets-2005082958103",
