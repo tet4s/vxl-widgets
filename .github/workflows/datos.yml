@@ -5,11 +5,17 @@ name: Datos VXL
 # con siete workflows compitiendo, cada dato se refrescaba cada ~8 horas. Con uno
 # solo, cada corrida refresca lo que esté vencido y el resto lo saltea.
 #
-# Los workflows individuales siguen existiendo para el disparo por push.
+# Los workflows individuales quedaron solo para disparo manual.
 
 on:
+  # Único workflow automático del repo: push, cron y manual.
+  # Los workflows individuales quedaron solo para disparo manual.
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/**'
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:

@@ -1,15 +1,9 @@
 name: Actualizar Política del Litoral
 
 on:
-  # Respaldo principal: el repo recibe pushes de otros workflows cada pocos minutos
-  # (deportes, policial, tránsito), así que un push también refresca política.
-  # La guarda de frescura del primer step evita correr si los datos son recientes.
-  push:
-    branches: [main]
-    paths-ignore:
-      - 'data/politica.json'
+  # Solo manual. El disparo automático vive en datos.yml (un solo workflow
+  # por push/cron) para no lanzar 7 corridas a la vez en cada push.
   workflow_dispatch:
-
 # Evita que dos corridas se pisen escribiendo data/politica.json
 concurrency:
   # Los tres scrapers comparten grupo: nunca llaman a Gemini al mismo tiempo.

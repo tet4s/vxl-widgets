@@ -1,17 +1,9 @@
 name: Actualizar Alertas de Tránsito
 
 on:
-  # Respaldo: GitHub limita las corridas programadas de este repo (medido:
-  # 1-3 por día en TODOS los workflows). El repo recibe pushes de bots cada
-  # pocos minutos, así que un push también dispara esto. La guarda de frescura
-  # del primer step evita que corra si los datos tienen menos de 25 minutos.
-  push:
-    branches: [main]
-    paths-ignore:
-      - 'data/transito.json'
-      - 'data/transito-historial.json'
+  # Solo manual. El disparo automático vive en datos.yml (un solo workflow
+  # por push/cron) para no lanzar 7 corridas a la vez en cada push.
   workflow_dispatch:
-
 # Evita que dos corridas se pisen escribiendo data/transito.json
 concurrency:
   group: transito

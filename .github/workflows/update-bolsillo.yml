@@ -1,11 +1,8 @@
 name: Actualizador de Bolsillo VXL
 
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - 'data/bolsillo.json'
-      - 'data/rewrites-cache.json'
+  # Solo manual. El disparo automático vive en datos.yml (un solo workflow
+  # por push/cron) para no lanzar 7 corridas a la vez en cada push.
   workflow_dispatch:
 
 permissions:

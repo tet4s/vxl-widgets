@@ -1,11 +1,8 @@
 name: Actualizar Deportes del Litoral
 
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - 'data/deportes.json'
-      - 'data/deportes-historial.json'
+  # Solo manual. El disparo automático vive en datos.yml (un solo workflow
+  # por push/cron) para no lanzar 7 corridas a la vez en cada push.
   workflow_dispatch:
 
 concurrency:
