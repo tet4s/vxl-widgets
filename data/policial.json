@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-21T01:13:34.768Z",
-  "timestamp_epoch": 1795223614,
+  "last_updated": "2026-11-21T02:52:55.534Z",
+  "timestamp_epoch": 1795229575,
   "total_noticias": 60,
   "window_days": 5,
   "categorias": [
@@ -12,22 +12,22 @@
     {
       "id": "allanamientos",
       "nombre": "ALLANAMIENTOS",
-      "total": 7
+      "total": 6
     },
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 24
+      "total": 25
     },
     {
       "id": "causas",
       "nombre": "CAUSAS",
-      "total": 7
+      "total": 6
     },
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 14
+      "total": 15
     }
   ],
   "noticias": [
@@ -35,7 +35,7 @@
       "titulo": "Dictaron 60 días de prisión preventiva al acusado de intentar matar a su expareja en Santa Elena",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/dictaron-60-dias-de-prision-preventiva-al-acusado-de-intentar-matar-a-su-expareja-en-santa-elena.htm",
-      "fecha": "2026-11-21T01:13:34.475Z",
+      "fecha": "2026-11-21T02:52:19.267Z",
       "fuente": "Elonce",
       "lugar": "Santa Elena",
       "categorias": [
@@ -46,7 +46,7 @@
       "titulo": "Choque frontal entre un auto y un camión en Ruta 12 dejó al menos un muerto",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/choque-frontal-entre-un-auto-y-un-camion-en-ruta-12-dejo-al-menos-un-muerto.htm",
-      "fecha": "2026-11-21T01:13:34.475Z",
+      "fecha": "2026-11-21T02:52:19.267Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -57,7 +57,7 @@
       "titulo": "Dos camiones protagonizaron un siniestro en Ruta 14: uno chocó contra un guardarraíl y una columna",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/dos-camiones-protagonizaron-un-siniestro-en-ruta-14-uno-choco-contra-un-guardarrail-y-una-columna.htm",
-      "fecha": "2026-11-21T01:13:34.475Z",
+      "fecha": "2026-11-21T02:52:19.267Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -68,7 +68,7 @@
       "titulo": "Nuevo femicidio en Santa Fe: un policía mató a su pareja y luego se quitó la vida",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/dos-policias-muertos-investigan-un-femicidio-seguido-de-suicidio.htm",
-      "fecha": "2026-11-21T01:13:34.475Z",
+      "fecha": "2026-11-21T02:52:19.267Z",
       "fuente": "Elonce",
       "lugar": "Santa Fe",
       "categorias": [
@@ -79,7 +79,7 @@
       "titulo": "Robaron mercadería de un supermercado tras la detención del dueño por presunto abuso de un niño",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/robaron-mercaderia-de-un-supermercado-tras-la-detencion-del-dueno-por-presunto-abuso-de-un-nino.htm",
-      "fecha": "2026-11-21T01:13:34.475Z",
+      "fecha": "2026-11-21T02:52:19.267Z",
       "fuente": "Elonce",
       "lugar": "",
       "categorias": [
@@ -90,7 +90,7 @@
       "titulo": "Allanaron una vivienda por un violento hecho en Paraná y encontraron armas de fuego",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/allanamiento-en-parana-encontraron-armas-tras-una-agresion.htm",
-      "fecha": "2026-11-21T01:13:34.475Z",
+      "fecha": "2026-11-21T02:52:19.267Z",
       "fuente": "Elonce",
       "lugar": "Paraná",
       "categorias": [
@@ -101,7 +101,7 @@
       "titulo": "Voraz incendio destruyó un auto y el comedor de un club de Federación: un hombre fue hospitalizado",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/incendio-en-federacion-un-auto-destruido-y-un-hombre-internado.htm",
-      "fecha": "2026-11-21T01:13:34.475Z",
+      "fecha": "2026-11-21T02:52:19.267Z",
       "fuente": "Elonce",
       "lugar": "Federación",
       "categorias": [
@@ -263,7 +263,18 @@
       ]
     },
     {
-      "titulo": "ANÁLISIS La Mesa de Enlace de Entre Ríos impulsa la necesidad de crear Fiscalías especializadas contra el delito rural",
+      "titulo": "Policía mató a su pareja y se suicidó en barrio Alfonso",
+      "descripcion": "Ocurrió este viernes en el interior de una vivienda ubicada en Corrientes al 4100. La víctima también pertenecía a la fuerza policial.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/20/femicidio-en-santa-fe-un-policia-mato-su-pareja-y-luego-se-quito-la-vida-en-barrio-alfonso",
+      "fecha": "2026-11-20T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Santa Fe",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Piden fiscalías contra delitos rurales en Entre Ríos",
       "descripcion": "",
       "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/20/la-mesa-de-enlace-de-entre-rios-impulsa-la-necesidad-de-crear-fiscalias-especializadas-contra-el-delito-rural",
       "fecha": "2026-11-20T15:00:00.000Z",
@@ -648,6 +659,17 @@
       ]
     },
     {
+      "titulo": "Detienen a hombre que llevó a mujer muerta al hospital en Colón",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/17/479571-investigan-la-muerte-de-una-mujer-en-colon-detuvieron-al-hombre-que-la-llevo-sin-vida-al-hospital",
+      "fecha": "2026-11-17T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "Colón",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
       "titulo": "Detuvieron a tres personas en Chajarí con cocaína y secuestraron más de cuatro millones de pesos",
       "descripcion": "El procedimiento se desarrolló en un domicilio ubicado sobre calle Islas Malvinas al 1200, donde el personal policial logró el secuestro de cinco envoltorios de cocaína, además de una importante suma de dinero en efectivo que asciende a $4.110.500.",
       "url": "https://www.analisisdigital.com.ar/policiales/2026/11/17/detuvieron-tres-personas-en-chajari-con-cocaina-y-secuestraron-mas-de-cuatro-millones-de-pesos",
@@ -667,28 +689,6 @@
       "lugar": "San José",
       "categorias": [
         "detenciones"
-      ]
-    },
-    {
-      "titulo": "Investigan una tentativa de homicidio en Viale: un hombre sufrió varias puñaladas",
-      "descripcion": "",
-      "url": "https://www.apfdigital.com.ar/noticias/2026/11/16/479292-investigan-una-tentativa-de-homicidio-en-viale-un-hombre-sufrio-varias-punaladas",
-      "fecha": "2026-11-16T15:00:00.000Z",
-      "fuente": "APF Digital",
-      "lugar": "Viale",
-      "categorias": [
-        "causas"
-      ]
-    },
-    {
-      "titulo": "Detuvieron a un cuatrero y secuestraron ciervos, carpinchos y un jabalí en La Paz",
-      "descripcion": "Dos procedimientos policiales realizados durante la madrugada de este lunes en La Paz terminaron con un hombre detenido por presunto abigeato y la intervención de otros cuatro sujetos que transportaban animales silvestres sin vida, entre ellos dos ciervos axis, carpinchos y un j…",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/16/detuvieron-un-cuatrero-y-secuestraron-ciervos-carpinchos-y-un-jabali-en-la-paz",
-      "fecha": "2026-11-16T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "La Paz",
-      "categorias": [
-        "allanamientos"
       ]
     }
   ]
