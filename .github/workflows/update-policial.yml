@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   # Los tres scrapers comparten grupo: nunca llaman a Gemini al mismo tiempo.
-  # Cada request espera 60.000/GEMINI_RPM ms (8 RPM por defecto).
+  # Cada request espera 60.000/GEMINI_RPM ms (5 RPM por defecto).
   group: gemini
   cancel-in-progress: false
 
@@ -57,6 +57,7 @@ jobs:
         run: node ./scripts/update-policial.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_RPM: '5'
 
       - name: Commit y push
         if: steps.frescura.outputs.skip != 'true'

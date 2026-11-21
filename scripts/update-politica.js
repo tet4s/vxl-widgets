@@ -668,18 +668,24 @@ function dedupeTitulosInfo(noticias) {
   return out;
 }
 
+// Regla de publicación: una noticia sale SOLO con titular reescrito y validado
+// por el LLM. Si no hay reescritura (sin key, 429, cuota agotada, JSON roto o
+// rechazo del guardarraíl) la noticia se descarta. Nunca se publica el titular
+// original de la fuente: suele ser un gancho y no informa.
 async function reescribirInformativos(noticias, previos) {
   let reusados = 0;
   const pendientes = [];
   for (const n of noticias) {
     const prev = previos.get(norm(n.titulo));
     if (prev && prev.length > 55) { n.titulo_info = prev; n.titulo_info_src = 'llm'; reusados++; }
+    else if (n.titulo_info && n.titulo_info_src === 'llm' && n.titulo_info.length > 55) { reusados++; }
     else pendientes.push(n);
   }
   console.log('[politica] titulares ya reescritos (reuso): ' + reusados + ' | pendientes: ' + pendientes.length);
 
   if (pendientes.length && process.env.GEMINI_API_KEY) {
     for (let i = 0; i < pendientes.length; i += 8) {
+      if (ia.estado().abierto) break;
       const chunk = pendientes.slice(i, i + 8);
       const rw = await reescribirLote(chunk);
       for (let j = 0; j < chunk.length; j++) {
@@ -689,15 +695,13 @@ async function reescribirInformativos(noticias, previos) {
       await delay(1500);
     }
   } else if (pendientes.length) {
-    console.log('[politica] sin GEMINI_API_KEY: titulares armados con el copete');
+    console.log('[politica] sin GEMINI_API_KEY: las noticias nuevas no se publican');
   }
 
-  let heuristicos = 0;
-  for (const n of pendientes) {
-    if (!n.titulo_info) { n.titulo_info = titularHeuristico(n.titulo, n.resumen); n.titulo_info_src = 'heuristico'; heuristicos++; }
-  }
-  console.log('[politica] titulares: ' + (pendientes.length - heuristicos) + ' con LLM, ' + heuristicos + ' heuristicos, ' + reusados + ' reusados');
-  return noticias;
+  const publicables = noticias.filter(n => n.titulo_info_src === 'llm' && n.titulo_info && n.titulo_info.length > 55);
+  const descartadas = noticias.length - publicables.length;
+  console.log('[politica] titulares: ' + publicables.length + ' con LLM (' + reusados + ' reusados) | descartadas sin reescritura: ' + descartadas);
+  return publicables;
 }
 
 // ---------------------------------------------------------------- orden
@@ -829,8 +833,13 @@ async function main() {
       await enriquecerResumen(noticias);
       const previos = new Map();
       historico.forEach(h => { if (h.titulo && h.titulo_info && h.titulo_info_src === 'llm') previos.set(norm(h.titulo), h.titulo_info); });
-      await reescribirInformativos(noticias, previos);
-      const sinDuplicados = dedupeTitulosInfo(noticias);
+      const publicables = await reescribirInformativos(noticias, previos);
+      // Sin titulares reescritos no se publica nada: se conserva el JSON bueno.
+      if (!publicables.length) {
+        console.error('[politica] ninguna noticia con titular reescrito: se conserva el JSON anterior');
+        process.exit(0);
+      }
+      const sinDuplicados = dedupeTitulosInfo(publicables);
             noticias.length = 0;
             noticias.push(...sinDuplicados.map(n => ({ ...n })));
             // Saneo final: comillas desparejas en titulares que vienen de versiones viejas

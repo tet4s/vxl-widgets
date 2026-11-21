@@ -310,26 +310,39 @@ const CACHE_FILE = path.join(__dirname, '../data/rewrites-cache.json');
 function cargarCacheRewrites() {
   try { return JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8')) || {}; } catch (e) { return {}; }
 }
+// Regla de publicación: una noticia sale SOLO con titular reescrito y validado
+// (desde cache o por el LLM en esta corrida). Si no hay reescritura (sin key,
+// 429, cuota agotada o rechazo del guardarraíl) la noticia se descarta. Nunca
+// se publica el titular original de la fuente.
 async function reescribirConLLM(items) {
-  if (!process.env.GEMINI_API_KEY || !items.length) return;
+  if (!items.length) return items;
   var cache = cargarCacheRewrites();
   var usados = new Set();
+  var validos = new Set();
   var aplicados = 0, rechazados = 0, filtPost = 0, desdeCache = 0;
   var pendientes = [];
   for (var i = 0; i < items.length; i++) {
+    // Las que ya vienen del JSON previo con titular reescrito se conservan tal cual.
+    if (items[i].titulo_src === 'llm') { validos.add(items[i]); desdeCache++; continue; }
     var k = normalizarTexto(items[i].titulo);
-    if (cache[k] && typeof cache[k] === 'string') { items[i].titulo = cache[k]; usados.add(k); desdeCache++; }
+    if (cache[k] && typeof cache[k] === 'string') { items[i].titulo = cache[k]; items[i].titulo_src = 'llm'; usados.add(k); validos.add(items[i]); desdeCache++; }
     else pendientes.push(items[i]);
   }
-  for (var b = 0; b < pendientes.length; b += 25) {
+  if (pendientes.length && !process.env.GEMINI_API_KEY) {
+    console.log('[bolsillo] sin GEMINI_API_KEY: no se publican las ' + pendientes.length + ' noticias nuevas');
+  }
+  for (var b = 0; b < pendientes.length && process.env.GEMINI_API_KEY; b += 25) {
+    if (ia.estado().abierto) break;
     var chunk = pendientes.slice(b, b + 25);
     var claves = chunk.map(function (it) { return normalizarTexto(it.titulo); });
     var rw = await reescribirLote(chunk);   // chunk: {titulo, descripcion, ...} -> orig con lead
     for (var j = 0; j < chunk.length; j++) {
       if (rw[j] && typeof rw[j] === 'string' && rw[j].length && !esOffTopic(rw[j])) {
         chunk[j].titulo = rw[j];
+        chunk[j].titulo_src = 'llm';
         cache[claves[j]] = rw[j];
         usados.add(claves[j]);
+        validos.add(chunk[j]);
         aplicados++;
       } else if (rw[j] && esOffTopic(rw[j])) { filtPost++; }
       else { rechazados++; }
@@ -342,8 +355,10 @@ async function reescribirConLLM(items) {
     fs.mkdirSync(path.dirname(CACHE_FILE), { recursive: true });
     fs.writeFileSync(CACHE_FILE, JSON.stringify(podado, null, 2));
   } catch (e) { console.warn('[bolsillo] no se pudo guardar cache de rewrites:', e.message); }
-  console.log('[bolsillo] rewrites LLM nuevos:', aplicados, '| desde cache:', desdeCache, '| rechazados por invención:', rechazados, '| filtrados judiciales/post-LLM:', filtPost);
-  return items;
+  var publicables = items.filter(function (it) { return validos.has(it); });
+  console.log('[bolsillo] rewrites LLM nuevos:', aplicados, '| desde cache:', desdeCache, '| rechazados por invención:', rechazados,
+    '| filtrados judiciales/post-LLM:', filtPost, '| publicables:', publicables.length, '| total:', items.length);
+  return publicables;
 }
 
 async function main() {
@@ -383,9 +398,14 @@ async function main() {
   // --- merge + dedupe conservando la fecha más nueva ---
   const merged = {};
   let cntGancho = 0, cntOffTopic = 0, cntNoEcon = 0, cntDolar = 0;
+  // Lo ya publicado en el JSON anterior cuenta como titular validado, aunque
+  // hoy vuelva a aparecer en el feed con otro título o con la misma URL.
+  const yaPublicadasTit = new Set(historico.map(n => normalizarTexto(n.titulo)).filter(Boolean));
+  const yaPublicadasUrl = new Set(historico.map(n => n.url).filter(Boolean));
   const add = (n) => {
     n.titulo = tituloDescriptivo(n.titulo, n.descripcion);   // <-- usa lead si el headline es vago/gancho
     const k = normalizarTexto(n.titulo);
+    if (!n.titulo_src && ((n.url && yaPublicadasUrl.has(n.url)) || yaPublicadasTit.has(k))) n.titulo_src = 'llm';
     if (!k || !n.titulo) return;
     if (esGancho(n.titulo)) { cntGancho++; return; }
     if (esOffTopic(n.titulo)) { cntOffTopic++; return; }
@@ -396,7 +416,9 @@ async function main() {
     else { merged[k] = n; }
   };
   for (const n of nuevas) add(n);
-  for (const n of historico) add(n);
+  // Los ítems que ya estaban publicados se consideran titulares validados:
+  // no se reescriben de nuevo ni se descartan por no tener marca.
+  for (const n of historico) { if (!n.titulo_src) n.titulo_src = 'llm'; add(n); }
   console.log('[bolsillo] filtrados gancho:', cntGancho, '| off-topic (policiales/drogas/etc):', cntOffTopic, '| cotización dólar (widget aparte):', cntDolar, '| no-econ (sin término consumo-masiva):', cntNoEcon);
   const todas = Object.values(merged);
 
@@ -427,7 +449,11 @@ async function main() {
   recientes = recortadas;
   console.log('[bolsillo] tope por categoría (máx ' + MAX_POR_CATEGORIA + '): ' + recientes.length + ' noticias — ' + Object.keys(conteoCat).map(id => id + ':' + conteoCat[id]).join(', '));
 
-  await reescribirConLLM(recientes); /* a voz VXL vía Gemini (gratis); fallback al heurístico */
+  recientes = await reescribirConLLM(recientes); /* a voz VXL vía Gemini; sin reescritura no se publica */
+  if (!recientes.length) {
+    console.warn('[bolsillo] ninguna noticia con titular reescrito: se conserva el JSON anterior');
+    return;
+  }
 
   // --- dedupe post-LLM (misma noticia, distinto título/fuente → LLM la unifica → título idéntico → dup) ---
   const sinDup = [];

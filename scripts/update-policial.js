@@ -383,23 +383,36 @@ async function reescribirLote(items) {
 
 // Solo se reescriben titulares NUEVOS (los que ya están en el JSON previo conservan
 // su versión): así no se quema la cuota gratuita de Gemini en cada corrida de 10 min.
+// Regla de publicación: una noticia nueva sale SOLO si el LLM devolvió un
+// titular válido. Si no hay reescritura (sin key, 429, cuota agotada, JSON roto
+// o rechazo del guardarraíl) la noticia se descarta. Nunca se publica el
+// titular original de la fuente. Las noticias ya reescritas se conservan.
 async function reescribirConLLM(items, conocidos) {
-  if (!process.env.GEMINI_API_KEY || !items.length) return items;
-  const pendientes = items.filter(n => !conocidos.has(normalizarTexto(n.titulo)));
+  if (!items.length) return items;
+  const esConocida = n => conocidos.has(normalizarTexto(n.titulo));
+  const pendientes = items.filter(n => !esConocida(n));
   if (!pendientes.length) { console.log('[policial] LLM: sin titulares nuevos para reescribir'); return items; }
+  if (!process.env.GEMINI_API_KEY) {
+    console.log('[policial] sin GEMINI_API_KEY: no se publican las ' + pendientes.length + ' noticias nuevas');
+    return items.filter(esConocida);
+  }
+  const descartar = new Set();
   let aplicados = 0, rechazados = 0;
   for (let i = 0; i < pendientes.length; i += 10) {
+    if (ia.estado().abierto) break;
     const chunk = pendientes.slice(i, i + 10);
     const rw = await reescribirLote(chunk);
     for (let j = 0; j < chunk.length; j++) {
       const n = limpiarTitulo(rw[j] || '');
       const nn = normalizarTexto(n);
       if (n && !esGancho(n) && !esPoliticaOEconomia(nn) && !esInstitucional(nn)) { chunk[j].titulo = n; aplicados++; }
-      else rechazados++;
+      else { rechazados++; descartar.add(chunk[j]); }
     }
   }
-  console.log('[policial] titulares reescritos con LLM:', aplicados, '| rechazados:', rechazados, '| pendientes:', pendientes.length, '| total:', items.length);
-  return items;
+  const publicables = items.filter(n => !descartar.has(n));
+  console.log('[policial] titulares reescritos con LLM:', aplicados, '| rechazados:', rechazados,
+    '| pendientes:', pendientes.length, '| publicables:', publicables.length, '| total:', items.length);
+  return publicables;
 }
 
 // El modelo a veces envuelve el JSON en ```json ... ``` o agrega texto alrededor.
@@ -529,7 +542,11 @@ async function main() {
   items.sort((a, b) => parseIso(b.fecha) - parseIso(a.fecha));
 
   const conocidos = new Set(historico.map(n => normalizarTexto(n.titulo)));
-  await reescribirConLLM(items, conocidos);
+  items = await reescribirConLLM(items, conocidos);
+  if (!items.length) {
+    console.warn('[policial] ninguna noticia con titular reescrito: se conserva el JSON anterior');
+    return;
+  }
 
   // dedupe semántico vía LLM: si entraron titulares nuevos o una vez por hora
   // (para limpiar repetidos que hayan quedado de una corrida anterior). No se

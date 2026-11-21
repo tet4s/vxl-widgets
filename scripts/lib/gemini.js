@@ -4,9 +4,11 @@
  * (política, policiales y bolsillo).
  *
  * - Espacia las llamadas: 60.000 / GEMINI_RPM ms entre request y request.
- *   Por defecto 8 RPM, por debajo del límite gratuito de Flash (10 RPM).
+ *   Por defecto 5 RPM en total: los tres scrapers comparten el grupo de
+ *   concurrencia `gemini` de GitHub Actions, así que nunca suman requests.
  * - Cortacircuito: ante un 429 (o cuota agotada) deja de llamar por el resto
- *   de la corrida. Los scrapers publican el titular original.
+ *   de la corrida. Los scrapers DESCARTAN las noticias sin reescritura
+ *   validada: nunca se publica el titular original de la fuente.
  * - Validación anti-invención: números y nombres propios del titular reescrito
  *   tienen que existir en la fuente; se rechazan ganchos y clickbait.
  */
@@ -14,7 +16,7 @@
 const axios = require('axios');
 
 const MODELOS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite'];
-const RPM = Math.max(1, parseInt(process.env.GEMINI_RPM, 10) || 8);
+const RPM = Math.max(1, parseInt(process.env.GEMINI_RPM, 10) || 5);
 const MIN_MS = Math.ceil(60000 / RPM);
 
 let ultimaLlamada = 0;

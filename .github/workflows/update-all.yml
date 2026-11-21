@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: datos-todos
+  group: gemini
   cancel-in-progress: false
 
 jobs:
@@ -50,18 +50,21 @@ jobs:
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_RPM: '5'
         run: node ./scripts/update-bolsillo.js
 
       - name: Política
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_RPM: '5'
         run: node ./scripts/update-politica.js
 
       - name: Policiales
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_RPM: '5'
         run: node ./scripts/update-policial.js
 
       - name: Deportes

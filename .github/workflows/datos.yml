@@ -16,7 +16,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: datos
+  group: gemini
   cancel-in-progress: false
 
 jobs:
@@ -51,6 +51,7 @@ jobs:
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_RPM: '5'
         run: |
           if node scripts/frescura.js data/bolsillo.json 90; then node ./scripts/update-bolsillo.js; fi
 
@@ -58,6 +59,7 @@ jobs:
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_RPM: '5'
         run: |
           if node scripts/frescura.js data/politica.json 120; then node ./scripts/update-politica.js; fi
 
@@ -65,6 +67,7 @@ jobs:
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_RPM: '5'
         run: |
           if node scripts/frescura.js data/policial.json 90; then node ./scripts/update-policial.js; fi
 
