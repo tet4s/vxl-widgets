@@ -1,8 +1,8 @@
 name: Datos VXL
 
 # Un solo cron para todo el repositorio.
-# GitHub descarta buena parte de los cron de alta frecuencia. Con un solo
-# workflow, cada corrida refresca lo que esté vencido y saltea el resto.
+# Un solo workflow automático. Corre cada hora por cron y además en cada push.
+# Cada corrida refresca lo que esté vencido y saltea el resto.
 #
 # Los workflows individuales quedaron solo para disparo manual.
 
@@ -14,9 +14,9 @@ on:
     paths-ignore:
       - 'data/**'
   schedule:
-    # Cada 30 min: GitHub descarta los cron de alta frecuencia (*/5, */10).
-    # 30 min es el punto más frecuente que entrega de forma estable.
-    - cron: '7,37 * * * *'
+    # Cada hora en el minuto 7. GitHub entrega los cron horarios de forma
+    # estable en repos públicos; los de 5-15 min los descarta casi todos.
+    - cron: '7 * * * *'
   workflow_dispatch:
 
 permissions:
