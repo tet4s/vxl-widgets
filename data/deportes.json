@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-21T02:32:57.102Z",
+  "actualizado": "2026-11-21T04:33:14.043Z",
   "ciudades": [
     {
       "id": "parana",
@@ -2841,6 +2841,43 @@
                 },
                 {
                   "pos": 10,
+                  "equipo": "BARRIO JARDIN (T)",
+                  "logo": "https://www.laliganacional.com.ar/escudos/2501/114142",
+                  "pj": 6,
+                  "g": 3,
+                  "p": 3,
+                  "gf": 473,
+                  "gc": 462,
+                  "pts": 9,
+                  "pct": "50,0",
+                  "ultimo": {
+                    "fecha": "2026-11-20T22:00:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "BARRIO JARDIN (T)",
+                    "visitante": "INDEPENDIENTE (SDE)",
+                    "marcador_local": 79,
+                    "marcador_visitante": 74,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2501/114142",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1883/114369"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-24T21:30:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "JUJUY BASQUET",
+                    "visitante": "BARRIO JARDIN (T)",
+                    "marcador_local": null,
+                    "marcador_visitante": null,
+                    "estado": "programado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2729/112674",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2501/114142"
+                  },
+                  "cambio_fuente": null,
+                  "cambio": 1,
+                  "destacado": false
+                },
+                {
+                  "pos": 11,
                   "equipo": "MITRE (POSADAS)",
                   "logo": "https://www.laliganacional.com.ar/escudos/1725/115054",
                   "pj": 6,
@@ -2873,44 +2910,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
                   },
                   "cambio_fuente": null,
-                  "cambio": 0,
-                  "destacado": false
-                },
-                {
-                  "pos": 11,
-                  "equipo": "BARRIO JARDIN (T)",
-                  "logo": "https://www.laliganacional.com.ar/escudos/2501/114142",
-                  "pj": 5,
-                  "g": 2,
-                  "p": 3,
-                  "gf": 394,
-                  "gc": 388,
-                  "pts": 7,
-                  "pct": "40,0",
-                  "ultimo": {
-                    "fecha": "2026-11-20T22:00:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "BARRIO JARDIN (T)",
-                    "visitante": "INDEPENDIENTE (SDE)",
-                    "marcador_local": 70,
-                    "marcador_visitante": 68,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2501/114142",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1883/114369"
-                  },
-                  "proximo": {
-                    "fecha": "2026-11-24T21:30:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "JUJUY BASQUET",
-                    "visitante": "BARRIO JARDIN (T)",
-                    "marcador_local": null,
-                    "marcador_visitante": null,
-                    "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2729/112674",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2501/114142"
-                  },
-                  "cambio_fuente": null,
-                  "cambio": 0,
+                  "cambio": -1,
                   "destacado": false
                 },
                 {
@@ -3026,43 +3026,6 @@
                 },
                 {
                   "pos": 15,
-                  "equipo": "INDEPENDIENTE (SDE)",
-                  "logo": "https://www.laliganacional.com.ar/escudos/1883/114369",
-                  "pj": 5,
-                  "g": 1,
-                  "p": 4,
-                  "gf": 355,
-                  "gc": 414,
-                  "pts": 6,
-                  "pct": "20,0",
-                  "ultimo": {
-                    "fecha": "2026-11-20T22:00:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "BARRIO JARDIN (T)",
-                    "visitante": "INDEPENDIENTE (SDE)",
-                    "marcador_local": 70,
-                    "marcador_visitante": 68,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2501/114142",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1883/114369"
-                  },
-                  "proximo": {
-                    "fecha": "2026-11-28T21:30:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "INDEPENDIENTE (SDE)",
-                    "visitante": "AMANCAY (LR)",
-                    "marcador_local": null,
-                    "marcador_visitante": null,
-                    "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1883/114369",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2168/112811"
-                  },
-                  "cambio_fuente": null,
-                  "cambio": 1,
-                  "destacado": false
-                },
-                {
-                  "pos": 16,
                   "equipo": "COMUNICACIONES",
                   "logo": "https://www.laliganacional.com.ar/escudos/1435/112548",
                   "pj": 5,
@@ -3093,6 +3056,43 @@
                     "estado": "programado",
                     "logo_local": "https://www.laliganacional.com.ar/escudos/1883/114369",
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1435/112548"
+                  },
+                  "cambio_fuente": null,
+                  "cambio": 1,
+                  "destacado": false
+                },
+                {
+                  "pos": 16,
+                  "equipo": "INDEPENDIENTE (SDE)",
+                  "logo": "https://www.laliganacional.com.ar/escudos/1883/114369",
+                  "pj": 6,
+                  "g": 1,
+                  "p": 5,
+                  "gf": 429,
+                  "gc": 493,
+                  "pts": 7,
+                  "pct": "16,6",
+                  "ultimo": {
+                    "fecha": "2026-11-20T22:00:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "BARRIO JARDIN (T)",
+                    "visitante": "INDEPENDIENTE (SDE)",
+                    "marcador_local": 79,
+                    "marcador_visitante": 74,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2501/114142",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1883/114369"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-28T21:30:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "INDEPENDIENTE (SDE)",
+                    "visitante": "AMANCAY (LR)",
+                    "marcador_local": null,
+                    "marcador_visitante": null,
+                    "estado": "programado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1883/114369",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2168/112811"
                   },
                   "cambio_fuente": null,
                   "cambio": -1,

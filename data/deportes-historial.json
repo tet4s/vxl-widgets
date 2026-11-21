@@ -218,8 +218,8 @@
     }
   },
   "basquet:santa_fe:principal": {
-    "hash": "1:SALTA BASKET|2:SAN ISIDRO|3:BARRIO PARQUE|4:AMANCAY LR|5:UNION SF|6:SANTA PAULA G|7:HINDU C|8:EL CEIBO SF|9:SP SUARDI|10:MITRE POSADAS|11:BARRIO JARDIN T|12:JUJUY BASQUET|13:VILLA SAN MARTIN|14:RIACHUELO LR|15:INDEPENDIENTE SDE|16:COMUNICACIONES|17:BOCHAS CC",
-    "fecha": "2026-11-21T02:33:05.395Z",
+    "hash": "1:SALTA BASKET|2:SAN ISIDRO|3:BARRIO PARQUE|4:AMANCAY LR|5:UNION SF|6:SANTA PAULA G|7:HINDU C|8:EL CEIBO SF|9:SP SUARDI|10:BARRIO JARDIN T|11:MITRE POSADAS|12:JUJUY BASQUET|13:VILLA SAN MARTIN|14:RIACHUELO LR|15:COMUNICACIONES|16:INDEPENDIENTE SDE|17:BOCHAS CC",
+    "fecha": "2026-11-21T04:33:19.798Z",
     "posiciones": {
       "salta-basket": 1,
       "san-isidro": 2,
@@ -230,13 +230,13 @@
       "hindu-c": 7,
       "el-ceibo-sf": 8,
       "sp-suardi": 9,
-      "mitre-posadas": 10,
-      "barrio-jardin-t": 11,
+      "barrio-jardin-t": 10,
+      "mitre-posadas": 11,
       "jujuy-basquet": 12,
       "villa-san-martin": 13,
       "riachuelo-lr": 14,
-      "independiente-sde": 15,
-      "comunicaciones": 16,
+      "comunicaciones": 15,
+      "independiente-sde": 16,
       "bochas-cc": 17
     },
     "cambios": {
@@ -249,13 +249,13 @@
       "hindu-c": 0,
       "el-ceibo-sf": 0,
       "sp-suardi": 0,
-      "mitre-posadas": 0,
-      "barrio-jardin-t": 0,
+      "barrio-jardin-t": 1,
+      "mitre-posadas": -1,
       "jujuy-basquet": 0,
       "villa-san-martin": 0,
       "riachuelo-lr": 0,
-      "independiente-sde": 1,
-      "comunicaciones": -1,
+      "comunicaciones": 1,
+      "independiente-sde": -1,
       "bochas-cc": 0
     }
   },
