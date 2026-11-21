@@ -14,6 +14,7 @@
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
+const ia = require('./lib/gemini');
 const cheerio = require('cheerio');
 const Parser = require('rss-parser');
 const https = require('https');
@@ -575,27 +576,10 @@ async function enriquecerResumen(noticias) {
   return ok;
 }
 
-const GEMINI_MODELOS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite'];
+// La llamada a Gemini pasa por lib/gemini: espacia los requests (GEMINI_RPM) y
+// corta ante un 429. Si devuelve null, el titular sale del copete.
 async function geminiTexto(prompt, maxTokens) {
-  const key = process.env.GEMINI_API_KEY || '';
-  if (!key) return null;
-  for (const modelo of GEMINI_MODELOS) {
-    try {
-      const generationConfig = { temperature: 0.25, maxOutputTokens: maxTokens };
-      if (modelo.indexOf('2.5') === 0) generationConfig.thinkingConfig = { thinkingBudget: 0 };
-      const r = await axios.post(
-        'https://generativelanguage.googleapis.com/v1beta/models/' + modelo + ':generateContent?key=' + encodeURIComponent(key),
-        { contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig },
-        { timeout: 45000, headers: { 'Content-Type': 'application/json' } }
-      );
-      const cand = r.data && r.data.candidates && r.data.candidates[0];
-      const txt = cand && cand.content && cand.content.parts && cand.content.parts.map(p => p.text || '').join('') || '';
-      if (txt.trim()) return txt;
-    } catch (e) {
-      console.warn('[politica] gemini ' + modelo + ': ' + e.message);
-    }
-  }
-  return null;
+  return ia.pedir(prompt, { maxTokens: maxTokens, timeout: 45000 });
 }
 
 const PROMPT_TITULARES = 'Sos editor de la sección Política de un portal del Litoral argentino. ' +
@@ -612,24 +596,13 @@ function tokensSignificativos(t) {
 }
 
 function guardrailTitular(nuevo, item) {
-  let n = limpiar(String(nuevo || '').replace(/^["“”']|["“”']$/g, ''));
-  if ((n.match(/"/g) || []).length % 2 === 1) n = n.replace(/"/g, '').replace(/\s+/g, ' ').trim();
-  if (n.length < 45 || n.length > 260) return null;
-  if (/[!?¿¡]{1,}/.test(n)) return null;
-  if (/[\u{1F300}-\u{1FAFF}]/u.test(n)) return null;
-  if (/(mir[aá]|no te lo pierdas|no vas a creer|as[ií] fue|qu[eé] dijo|video|en vivo|minuto a minuto|imperdible)/i.test(n)) return null;
-  if (/\.\.\.|…$/.test(n)) return null;
-  // anti-invención: al menos 2 palabras "de contenido" en común con título o copete
-  const fuente = tokensSignificativos(item.titulo + ' ' + (item.resumen || ''));
-  const propios = Array.from(tokensSignificativos(n));
-  const comunes = propios.filter(w => fuente.has(w)).length;
-  if (!propios.length || comunes < Math.min(2, Math.max(1, Math.floor(propios.length * 0.2)))) return null;
-  return n;
+  return ia.validarTitular(nuevo, item, { max: 220, min: 45 });
 }
 
 async function reescribirLote(items) {
   const prompt = PROMPT_TITULARES + JSON.stringify(items.map(i => ({ titular: i.titulo, copete: (i.resumen || '').slice(0, 400) })));
   for (let attempt = 0; attempt < 3; attempt++) {
+    if (ia.estado().abierto) break;
     const txt = await geminiTexto(prompt, 160 * items.length + 300);
     if (txt) {
       const m = txt.match(/\{[\s\S]*\}/);

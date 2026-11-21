@@ -7,6 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
+const ia = require('./lib/gemini');
 const cheerio = require('cheerio');
 
 const CATEGORIAS = [
@@ -213,9 +214,6 @@ function parseFechaIso(f) {
   return isNaN(d) ? 0 : d;
 }
 
-// Modelo configurable por env (GEMINI_MODEL). Gemini 1.5 está retirado: usar 2.x.
-const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
-const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/' + GEMINI_MODEL + ':generateContent?key=' + encodeURIComponent(process.env.GEMINI_API_KEY || '');
 const OFF_TOPIC = ['policia','policial','droga','drogadicc','narc','narcotr','confisc','detenc','detenido','allanamiento','homicid','victim','victima','violencia','tiroteo','accidente','accidental','fallec','muerte','omicid','delito','delincuencia','cauta','inyectable','prisión','prision','incendio','incendiado','enriquecimien','patrimoni','acusacion','corrupcion','fiscalia','fiscales','elecc','reelecc','voto','macrista','kirchner','bullrich','candidat','ballotage','peronism','macrism','oposicion','campana electoral','formula 1','gran premio','colapinto','futbol','fútbol','jugadores','tenis','rugby','basquet','básquet','olimpic','deportiv','mundial','libertadores','espectaculo','farandula','famosos','television'];
 function esOffTopic(t) {
   var n = normalizarTexto(t);
@@ -286,40 +284,24 @@ function repararPorcentaje(rw, orig) {
 }
 function aplicarGuardrail(rewrites, items) {
   return rewrites.map(function (r, i) {
-    if (!r || typeof r !== 'string') return null;
-    const src = (items[i] && ((items[i].titulo || '') + ' ' + (items[i].descripcion || ''))) || '';
-    const base = new Set(simTokens(src));
-    let dif = 0;
-    const tl = simTokens(r);
-    for (let j = 0; j < tl.length; j++) { if (!base.has(tl[j])) dif++; }
-    return dif <= 1 ? repararPorcentaje(r, items[i] && items[i].titulo) : null; // <=1 content-word novedoso (sinónimo) ok; >1 = invención -> conserva heurístico
+    const item = items[i] || {};
+    const ok = ia.validarTitular(r, { titulo: item.titulo, resumen: item.descripcion }, { max: 160, min: 35 });
+    return ok ? repararPorcentaje(ok, item.titulo) : null;
   });
 }
 function delay(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
 async function reescribirLote(items) {
   if (!process.env.GEMINI_API_KEY) return items.map(i => tituloDescriptivo(i.titulo, i.descripcion));
   const prompt = 'Reescribí los siguientes titulares en español rioplatense. Para CADA uno escribí un titular DESCRIPTIVO (máximo 2 líneas) que cuente la NOTICIA EN SÍ: un resumen del hecho, usando el titular original y el "resumen" (lead) del artículo como fuente. Tono VXL: informal, como hablás con un amigo al coffee, interés para una persona normal. Prioridad: el título debe ser un DATO económico concreto (precio, %, monto, medida). Conservá EXACTAMENTE los símbolos y unidades del dato tal como aparecen en el original (%, $, u$s, /Tn, puntos, millones): nunca los elimines ni reformatees los números. Si el titular lleva encuadre político-partidista o gancho metafórico (ej. triunfo de, tiene N años, minuto a minuto) y el lead tiene el dato, reescribilo priorizando el DATO económico y sacando el encuadre político. NO inventes, NO ganchos, NO clickbait, NO emojis, NO jergla policial/judicial. Si el resumen está vacío, devolvés el titular original limpio (no inventes). Devolvé SOLO JSON {"rewrites":["título 1","título 2",...]} con la misma cantidad de ítems y orden. Entradas: ' + JSON.stringify(items.map(i => ({ titulo: i.titulo, resumen: i.descripcion })));
-  var body = { contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.2, maxOutputTokens: 200 } };
-  for (var attempt = 0; attempt < 3; attempt++) {
-    try {
-      await delay(4000);
-      var r = await axios.post(GEMINI_URL, body, { timeout: 20000, headers: { 'Content-Type': 'application/json' } });
-      var cand = (r.data && r.data.candidates && r.data.candidates[0]);
-      var txt = (cand && cand.content && cand.content.parts && cand.content.parts[0] && cand.content.parts[0].text) || '';
-      var m = txt.match(/\{[\s\S]*\}/);
-      if (m) {
-        try { var parsed = JSON.parse(m[0]); if (Array.isArray(parsed.rewrites) && parsed.rewrites.length === items.length) return aplicarGuardrail(parsed.rewrites, items); } catch (e) {}
-        try { var p2 = JSON.parse(txt.trim()); if (Array.isArray(p2.rewrites) && p2.rewrites.length === items.length) return aplicarGuardrail(p2.rewrites, items); } catch (e2) {}
-      }
-    } catch (e) {
-      var st = e.response && e.response.status;
-      var det = e.response && e.response.data && JSON.stringify(e.response.data).slice(0, 300);
-      console.warn('[bolsillo] LLM error intento ' + (attempt + 1) + '/' + 3 + ' — ' + (st || e.message) + (det ? ' — ' + det : ''));
-      if (st === 429) break; // cuota agotada: no reintentar (quema más cuota)
-      if (attempt < 2) await delay(2000);
+  var txt = await ia.pedir(prompt, { maxTokens: 200, temperature: 0.2, timeout: 20000 });
+  if (txt) {
+    var m = txt.match(/\{[\s\S]*\}/);
+    if (m) {
+      try { var parsed = JSON.parse(m[0]); if (Array.isArray(parsed.rewrites) && parsed.rewrites.length === items.length) return aplicarGuardrail(parsed.rewrites, items); } catch (e) {}
     }
+    try { var p2 = JSON.parse(txt.trim()); if (Array.isArray(p2.rewrites) && p2.rewrites.length === items.length) return aplicarGuardrail(p2.rewrites, items); } catch (e2) {}
   }
-  console.warn('[bolsillo] LLM parse no match (fallback): conserva heurístico para chunk de', items.length);
+  console.warn('[bolsillo] sin reescritura válida (cuota, error o parse): conserva el titular descriptivo');
   return items.map(function () { return null; });
 }
 // Cache de reescrituras: cada título se reescribe UNA sola vez y se reutiliza.

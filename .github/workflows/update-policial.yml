@@ -11,8 +11,10 @@ permissions:
   contents: write
 
 concurrency:
-  group: policial
-  cancel-in-progress: true
+  # Los tres scrapers comparten grupo: nunca llaman a Gemini al mismo tiempo.
+  # Cada request espera 60.000/GEMINI_RPM ms (8 RPM por defecto).
+  group: gemini
+  cancel-in-progress: false
 
 jobs:
   build:
