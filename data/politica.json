@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-20T23:11:41.883Z",
-  "timestamp_epoch": 1795216301,
+  "last_updated": "2026-11-21T00:12:08.807Z",
+  "timestamp_epoch": 1795219928,
   "total_noticias": 120,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 61
+      "total": 60
     },
     {
       "id": "obras",
@@ -17,7 +17,7 @@
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 33
+      "total": 34
     },
     {
       "id": "elecciones",
@@ -29,7 +29,7 @@
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 51
+      "total": 50
     },
     {
       "id": "santa_fe",
@@ -49,7 +49,7 @@
     {
       "id": "misiones",
       "nombre": "MISIONES",
-      "total": 10
+      "total": 11
     },
     {
       "id": "chaco",
@@ -63,6 +63,19 @@
     }
   ],
   "noticias": [
+    {
+      "titulo": "PARQUE DE LA SALUD: MÁS DE 500 PACIENTES SE ANIMARON AL CONTROL Y LE GANARON LA PARTIDA AL SILENCIO DEL CÁNCER DE PRÓSTATA",
+      "resumen": "El Servicio de Urología del Hospital Escuela de Agudos “Dr. Ramón Madariaga” contabiliza más de 500 pacientes que ya se realizaron estudios en el marco del Mes del Hombre, una...",
+      "titulo_info": "PARQUE DE LA SALUD: MÁS DE 500 PACIENTES SE ANIMARON AL CONTROL Y LE GANARON LA PARTIDA AL SILENCIO DEL CÁNCER DE PRÓSTATA. El Servicio de Urología del Hospital Escuela de Agudos “Dr.",
+      "titulo_info_src": "heuristico",
+      "fecha": "2026-11-21T00:08:52.797Z",
+      "jurisdiccion": "misiones",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://misiones.gob.ar/parque-de-la-salud-mas-de-500-pacientes-se-animaron-al-control-y-le-ganaron-la-partida-al-silencio-del-cancer-de-prostata/",
+      "fuente": "Gobierno de Misiones"
+    },
     {
       "titulo": "Mientras el Gobierno festeja la ley de patentes, los laboratorios alertan por una fuerte suba de medicamentos",
       "resumen": "El Senado aprobó la adhesión argentina al acuerdo internacional y el oficialismo celebró la decisión. Los laboratorios nacionales advierten por el impacto sobre la producción local y el precio de los tratamientos.",
@@ -1612,19 +1625,6 @@
         "leyes"
       ],
       "url": "https://www.diputados.gob.ar/prensa/noticia/LA-COMISION-DE-LEGISLACION-PENAL-ABORDO-LA-IMPRESCRIPTIBILIDAD-DE-LOS-DELITOS-CONTRA-LA-INTEGRIDAD-SEXUAL/",
-      "fuente": "Diputados Nación"
-    },
-    {
-      "titulo": "DICTAMEN AL PROYECTO DE LA REFORMA DE LA CARTA ORGÁNICA DEL BANCO CENTRAL",
-      "resumen": "Se dio en el marco del plenario de las comisiones de Finanzas y Presupuesto y Hacienda, donde el dictamen obtuvo 44 firmas de un total de 69...",
-      "titulo_info": "Dictamen por mayoría para proyecto de reforma de Carta Orgánica del Banco Central",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.271Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.diputados.gob.ar/prensa/noticia/DICTAMEN-AL-PROYECTO-DE-LA-REFORMA-DE-LA-CARTA-ORGANICA-DEL-BANCO-CENTRAL/",
       "fuente": "Diputados Nación"
     }
   ]
