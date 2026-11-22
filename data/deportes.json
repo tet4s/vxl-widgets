@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-22T09:44:42.780Z",
+  "actualizado": "2026-11-22T17:52:17.647Z",
   "ciudades": [
     {
       "id": "parana",
@@ -2488,6 +2488,43 @@
               "tabla": [
                 {
                   "pos": 1,
+                  "equipo": "SAN ISIDRO",
+                  "logo": "https://www.laliganacional.com.ar/escudos/2043/114446",
+                  "pj": 6,
+                  "g": 6,
+                  "p": 0,
+                  "gf": 460,
+                  "gc": 375,
+                  "pts": 12,
+                  "pct": "100,0",
+                  "ultimo": {
+                    "fecha": "2026-11-20T21:30:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "COMUNICACIONES",
+                    "visitante": "SAN ISIDRO",
+                    "marcador_local": 0,
+                    "marcador_visitante": 20,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1435/112548",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-22T21:00:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "MITRE (POSADAS)",
+                    "visitante": "SAN ISIDRO",
+                    "marcador_local": null,
+                    "marcador_visitante": null,
+                    "estado": "programado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1725/115054",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
+                  },
+                  "cambio_fuente": null,
+                  "cambio": 1,
+                  "destacado": false
+                },
+                {
+                  "pos": 2,
                   "equipo": "SALTA BASKET",
                   "logo": "https://www.laliganacional.com.ar/escudos/2641/112545",
                   "pj": 5,
@@ -2520,44 +2557,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2501/114142"
                   },
                   "cambio_fuente": null,
-                  "cambio": 0,
-                  "destacado": false
-                },
-                {
-                  "pos": 2,
-                  "equipo": "SAN ISIDRO",
-                  "logo": "https://www.laliganacional.com.ar/escudos/2043/114446",
-                  "pj": 6,
-                  "g": 5,
-                  "p": 0,
-                  "gf": 440,
-                  "gc": 375,
-                  "pts": 10,
-                  "pct": "83,3",
-                  "ultimo": {
-                    "fecha": "2026-11-20T21:30:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "COMUNICACIONES",
-                    "visitante": "SAN ISIDRO",
-                    "marcador_local": 0,
-                    "marcador_visitante": 0,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1435/112548",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
-                  },
-                  "proximo": {
-                    "fecha": "2026-11-22T21:00:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "MITRE (POSADAS)",
-                    "visitante": "SAN ISIDRO",
-                    "marcador_local": null,
-                    "marcador_visitante": null,
-                    "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1725/115054",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
-                  },
-                  "cambio_fuente": null,
-                  "cambio": 0,
+                  "cambio": -1,
                   "destacado": false
                 },
                 {
@@ -2853,7 +2853,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2501/114142"
                   },
                   "cambio_fuente": null,
-                  "cambio": 1,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -2890,7 +2890,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
                   },
                   "cambio_fuente": null,
-                  "cambio": -1,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -3010,10 +3010,10 @@
                   "logo": "https://www.laliganacional.com.ar/escudos/1435/112548",
                   "pj": 5,
                   "g": 1,
-                  "p": 3,
+                  "p": 4,
                   "gf": 351,
-                  "gc": 378,
-                  "pts": 5,
+                  "gc": 398,
+                  "pts": 6,
                   "pct": "20,0",
                   "ultimo": {
                     "fecha": "2026-11-20T21:30:00-03:00",
@@ -3021,7 +3021,7 @@
                     "local": "COMUNICACIONES",
                     "visitante": "SAN ISIDRO",
                     "marcador_local": 0,
-                    "marcador_visitante": 0,
+                    "marcador_visitante": 20,
                     "estado": "finalizado",
                     "logo_local": "https://www.laliganacional.com.ar/escudos/1435/112548",
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
@@ -3038,7 +3038,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1435/112548"
                   },
                   "cambio_fuente": null,
-                  "cambio": 1,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -3075,7 +3075,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2168/112811"
                   },
                   "cambio_fuente": null,
-                  "cambio": -1,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
