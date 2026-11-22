@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-21T20:52:39.932Z",
-  "timestamp_epoch": 1795294359,
+  "last_updated": "2026-11-22T01:10:16.792Z",
+  "timestamp_epoch": 1795309816,
   "total_noticias": 24,
   "window_days": 7,
   "categorias": [
@@ -9,18 +9,18 @@
       "nombre": "PODER ADQUISITIVO",
       "noticias": [
         {
+          "titulo": "600 mil cuentas sueldo destruidas",
+          "descripcion": "Nuevo indicador preocupante: desde diciembre de 2024 desaparecieron más de 600 mil cuentas sueldo de los bancos.",
+          "url": "https://www.pagina12.com.ar/2026/11/19/600-mil-cuentas-sueldo-destruidas/",
+          "fecha": "2026-11-22T01:10:14.187Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Página/12"
+        },
+        {
           "titulo": "¿Cómo bajar rápidamente la inflación y el riesgo país",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.060Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Jubilaciones: tres fallos judiciales abren la puerta a aumentos de hasta el 66% por pérdida frente a la inflación",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.059Z",
+          "fecha": "2026-11-22T01:10:13.737Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -28,7 +28,15 @@
           "titulo": "Crisis en la principal fábrica de tractores nacionales: Pauny ofreció un plan de pagos de salarios atrasados y reanudar la acti…",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.059Z",
+          "fecha": "2026-11-22T01:10:13.736Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Jubilaciones: tres fallos judiciales abren la puerta a aumentos de hasta el 66% por pérdida frente a la inflación",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-22T01:10:13.735Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -36,7 +44,7 @@
           "titulo": "Antes de la privatización, el Gobierno le aprueba a AySA aumentos de tarifas por encima de la inflación para 2027, pero les pon…",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.058Z",
+          "fecha": "2026-11-22T01:10:13.734Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -44,24 +52,16 @@
           "titulo": "“Propuesta vacía”: el sindicato rechazó la oferta de Pauny por pago de salarios para retomar la actividad y la fábrica seguirá …",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.056Z",
+          "fecha": "2026-11-22T01:10:13.729Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
-        },
-        {
-          "titulo": "600 mil cuentas sueldo destruidas",
-          "descripcion": "Nuevo indicador preocupante: desde diciembre de 2024 desaparecieron más de 600 mil cuentas sueldo de los bancos.",
-          "url": "https://www.pagina12.com.ar/2026/11/19/600-mil-cuentas-sueldo-destruidas/",
-          "fecha": "2026-11-21T20:52:37.386Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Página/12"
         },
         {
           "titulo": "Conflicto por descuentos: Femer y OSER llegaron a un acuerdo y descartaron suspensión de servicios médicos",
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-21T04:17:50.646Z",
-          "fechaFormateada": "Hace 16 hs",
+          "fechaFormateada": "Hace 20 hs",
           "fuente": "El Entre Ríos"
         },
         {
@@ -87,10 +87,26 @@
       "nombre": "SERVICIOS Y HOGAR",
       "noticias": [
         {
+          "titulo": "Casi el 60 por ciento de quienes utilizan el servicio pagarán en promedio 22,4 por ciento más. Los cambios rigen desde febrero.",
+          "descripcion": "Casi el 60 por ciento de quienes utilizan el servicio pagarán en promedio 22,4 por ciento más. Los cambios rigen desde febrero.",
+          "url": "https://www.pagina12.com.ar/2026/11/20/suba-de-tarifas-y-cortes-de-agua/",
+          "fecha": "2026-11-22T01:10:14.186Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Página/12"
+        },
+        {
+          "titulo": "Presión empresaria para que se sancione la nueva ley",
+          "descripcion": "Presión empresaria para que se sancione la nueva ley",
+          "url": "https://www.pagina12.com.ar/2026/11/19/lobby-en-favor-de-biocombustibles/",
+          "fecha": "2026-11-22T01:10:14.186Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Página/12"
+        },
+        {
           "titulo": "Antes de la privatización, el Gobierno le aprueba a AySA aumentos de tarifas por encima de la inflación para 2027, pero les pon…",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.058Z",
+          "fecha": "2026-11-22T01:10:13.734Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -98,7 +114,15 @@
           "titulo": "El Gobierno aprobó el RIGI de YPF para exportar gas licuado: con US$ 50.750 millones, será “la mayor inversión de la historia”",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.057Z",
+          "fecha": "2026-11-22T01:10:13.733Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Opinan 5 analistas sobre qué creen que hará el Gobierno para enfrentar la corrección en las Bolsas y el fortalecimiento del dól…",
+          "descripcion": "Opinan 5 analistas sobre qué creen que hará el Gobierno para enfrentar la corrección en las Bolsas y el fortalecimiento del dólar a nivel global.",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-22T01:10:13.728Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -107,23 +131,7 @@
           "descripcion": "Según un informe de Unicef Argentina, 2.700.000 hogares no llegan a garantizar una alimentación de calidad ni el pago de servicios, entre otros aspectos. En qué recortan las familias y cómo afectan las restricciones a las infancias.",
           "url": "https://www.pagina12.com.ar/2026/11/20/el-41-de-los-hogares-con-ninos-y-adolescentes-no-logra-cubrir-sus-gastos-corrientes/",
           "fecha": "2026-11-21T20:52:37.387Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "Casi el 60 por ciento de quienes utilizan el servicio pagarán en promedio 22,4 por ciento más. Los cambios rigen desde febrero.",
-          "descripcion": "Casi el 60 por ciento de quienes utilizan el servicio pagarán en promedio 22,4 por ciento más. Los cambios rigen desde febrero.",
-          "url": "https://www.pagina12.com.ar/2026/11/20/suba-de-tarifas-y-cortes-de-agua/",
-          "fecha": "2026-11-21T20:52:37.386Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Página/12"
-        },
-        {
-          "titulo": "Presión empresaria para que se sancione la nueva ley",
-          "descripcion": "Presión empresaria para que se sancione la nueva ley",
-          "url": "https://www.pagina12.com.ar/2026/11/19/lobby-en-favor-de-biocombustibles/",
-          "fecha": "2026-11-21T20:52:37.386Z",
-          "fechaFormateada": "Ahora",
+          "fechaFormateada": "Hace 4 hs",
           "fuente": "Página/12"
         },
         {
@@ -131,7 +139,7 @@
           "descripcion": "Según un informe de la UBA y el Conicet, la canasta de servicios públicos aumentó 66% en el último año, casi 40 puntos por encima de la inflación. El transporte concentra más de la mitad del gasto mensual",
           "url": "https://www.infobae.com/economia/2026/11/20/cuanto-necesita-una-familia-del-amba-para-pagar-los-servicios-de-luz-gas-agua-y-transporte-en-noviembre/",
           "fecha": "2026-11-21T04:17:50.556Z",
-          "fechaFormateada": "Hace 16 hs",
+          "fechaFormateada": "Hace 20 hs",
           "fuente": "Infobae"
         },
         {
@@ -139,7 +147,7 @@
           "descripcion": "La Sociedad Rural de Colón prepara una presentación judicial para cuestionar los fondos de la tasa vial y el Fondo Compensador en esa localidad bonaerense; según alertaron, entre 2023 y agosto de 2026 el mantenimiento de los caminos rurales solo representó apenas el 0,62% de los recursos que ingresaron",
           "url": "https://www.lanacion.com.ar/economia/campo/reclamar-toda-la-plata-un-municipio-recibio-mas-de-3000-millones-solo-gasto-187-millones-en-obras-nid20112026/",
           "fecha": "2026-11-21T04:17:49.852Z",
-          "fechaFormateada": "Hace 16 hs",
+          "fechaFormateada": "Hace 20 hs",
           "fuente": "La Nación"
         }
       ]
@@ -152,7 +160,7 @@
           "titulo": "Un hogar promedio del AMBA sin subsidios necesitó 291.247 pesos para pagar las facturas de electricidad, gas, agua y transporte.",
           "descripcion": "Un hogar promedio del AMBA sin subsidios necesitó 291.247 pesos para pagar las facturas de electricidad, gas, agua y transporte.",
           "url": "https://www.pagina12.com.ar/2026/11/20/la-canasta-de-servicios-sigue-en-alza/",
-          "fecha": "2026-11-21T20:52:37.385Z",
+          "fecha": "2026-11-22T01:10:14.185Z",
           "fechaFormateada": "Ahora",
           "fuente": "Página/12"
         },
@@ -160,16 +168,24 @@
           "titulo": "Amelia Saban, diseñadora de modas especialista en la importación de géneros, explica por qué la calidad de un diseño depende de…",
           "descripcion": "Amelia Saban, diseñadora de modas especialista en la importación de géneros, explica por qué la calidad de un diseño depende del género importado y qué exige coordinar cada envío desde la fábrica",
           "url": "https://www.infobae.com/movant/2026/11/20/moda-con-pasaporte-el-comercio-exterior-detras-de-cada-prenda-de-alto-nivel/",
-          "fecha": "2026-11-21T20:52:37.200Z",
+          "fecha": "2026-11-22T01:10:14.049Z",
           "fechaFormateada": "Ahora",
           "fuente": "Infobae"
+        },
+        {
+          "titulo": "El consumo masivo subió en octubre por primera vez en el año",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-22T01:10:13.728Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
         },
         {
           "titulo": "La US Chamber of Commerce, por medio de Argentina Business Council (USABC), destacó que la adhesión al PCT puede reducir costos…",
           "descripcion": "La US Chamber of Commerce, por medio de Argentina Business Council (USABC), destacó que la adhesión al PCT puede reducir costos y plazos para innovadores locales, además de atraer inversiones en investigación y desarrollo",
           "url": "https://www.infobae.com/economia/2026/11/20/la-camara-de-comercio-de-eeuu-celebro-la-adhesion-al-tratado-de-patentes-es-un-paso-trascendental-para-el-desarrollo-del-pais/",
           "fecha": "2026-11-21T20:52:37.198Z",
-          "fechaFormateada": "Ahora",
+          "fechaFormateada": "Hace 4 hs",
           "fuente": "Infobae"
         },
         {
@@ -177,7 +193,7 @@
           "descripcion": "La relación entre transporte y valor de la mercadería llegó a 64,2 dólares por cada 1.000 dólares, mientras la mejora de los términos del intercambio sumó 514 millones al saldo comercial",
           "url": "https://www.infobae.com/movant/2026/11/20/comercio-exterior-argentino-el-flete-representa-mas-del-6-del-valor-importado/",
           "fecha": "2026-11-21T14:33:51.513Z",
-          "fechaFormateada": "Hace 6 hs",
+          "fechaFormateada": "Hace 10 hs",
           "fuente": "Infobae"
         },
         {
@@ -185,16 +201,8 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-21T04:17:50.646Z",
-          "fechaFormateada": "Hace 16 hs",
+          "fechaFormateada": "Hace 20 hs",
           "fuente": "El Entre Ríos"
-        },
-        {
-          "titulo": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sent…",
-          "descripcion": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sentencia es solo para un caso, pero sienta un precedente y alienta la litigiosidad; expectativa por los pasos que seguiría el Gobierno",
-          "url": "https://www.lanacion.com.ar/economia/que-podria-pasar-tras-el-fallo-de-la-corte-sobre-las-cuotas-de-las-prepagas-y-como-reacciono-el-nid19112026/",
-          "fecha": "2026-11-21T04:17:49.848Z",
-          "fechaFormateada": "Hace 16 hs",
-          "fuente": "La Nación"
         }
       ]
     },
@@ -203,18 +211,18 @@
       "nombre": "GOBIERNO",
       "noticias": [
         {
-          "titulo": "Viernes negro en los mercados del mundo: el riesgo país superó los 1.000 puntos y el dólar se acercó a los $1.600",
+          "titulo": "“Oportunidad histórica”: el Senado dio media sanción a la modificación de la Ley de Cabotaje y la agroindustria pide un “pronto…",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.059Z",
+          "fecha": "2026-11-22T01:10:13.736Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
         {
-          "titulo": "“Oportunidad histórica”: el Senado dio media sanción a la modificación de la Ley de Cabotaje y la agroindustria pide un “pronto…",
+          "titulo": "Viernes negro en los mercados del mundo: el riesgo país superó los 1.000 puntos y el dólar se acercó a los $1.600",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.059Z",
+          "fecha": "2026-11-22T01:10:13.735Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -222,15 +230,7 @@
           "titulo": "Antes de la privatización, el Gobierno le aprueba a AySA aumentos de tarifas por encima de la inflación para 2027, pero les pon…",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.058Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Riesgo país: cuáles fueron los ocho eventos que dispararon el índice más sensible para el Gobierno y el mercado",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.057Z",
+          "fecha": "2026-11-22T01:10:13.734Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -238,52 +238,93 @@
           "titulo": "El Gobierno aprobó el RIGI de YPF para exportar gas licuado: con US$ 50.750 millones, será “la mayor inversión de la historia”",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-21T20:52:38.057Z",
+          "fecha": "2026-11-22T01:10:13.733Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
         {
-          "titulo": "A contramano del Gobierno. Los bancos públicos no esperan una recuperación del crédito en 2027",
-          "descripcion": "A contramano de las proyecciones oficiales, Abappra alertó sobre un escenario adverso por la caída de la actividad, la volatilidad financiera y nuevas señales de mora en el sector corporativo",
-          "url": "https://www.lanacion.com.ar/economia/los-bancos-publicos-no-esperan-una-recuperacion-del-credito-en-2027-nid20112026/",
-          "fecha": "2026-11-21T14:33:52.068Z",
-          "fechaFormateada": "Hace 6 hs",
-          "fuente": "La Nación"
+          "titulo": "Riesgo país: cuáles fueron los ocho eventos que dispararon el índice más sensible para el Gobierno y el mercado",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-22T01:10:13.731Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Opinan 5 analistas sobre qué creen que hará el Gobierno para enfrentar la corrección en las Bolsas y el fortalecimiento del dól…",
+          "descripcion": "Opinan 5 analistas sobre qué creen que hará el Gobierno para enfrentar la corrección en las Bolsas y el fortalecimiento del dólar a nivel global.",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-22T01:10:13.728Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
         }
       ]
     }
   ],
   "noticias": [
     {
+      "titulo": "600 mil cuentas sueldo destruidas",
+      "descripcion": "Nuevo indicador preocupante: desde diciembre de 2024 desaparecieron más de 600 mil cuentas sueldo de los bancos.",
+      "url": "https://www.pagina12.com.ar/2026/11/19/600-mil-cuentas-sueldo-destruidas/",
+      "fecha": "2026-11-22T01:10:14.187Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "poder_adquisitivo"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Casi el 60 por ciento de quienes utilizan el servicio pagarán en promedio 22,4 por ciento más. Los cambios rigen desde febrero.",
+      "descripcion": "Casi el 60 por ciento de quienes utilizan el servicio pagarán en promedio 22,4 por ciento más. Los cambios rigen desde febrero.",
+      "url": "https://www.pagina12.com.ar/2026/11/20/suba-de-tarifas-y-cortes-de-agua/",
+      "fecha": "2026-11-22T01:10:14.186Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "servicios_hogar"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Presión empresaria para que se sancione la nueva ley",
+      "descripcion": "Presión empresaria para que se sancione la nueva ley",
+      "url": "https://www.pagina12.com.ar/2026/11/19/lobby-en-favor-de-biocombustibles/",
+      "fecha": "2026-11-22T01:10:14.186Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "servicios_hogar"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Un hogar promedio del AMBA sin subsidios necesitó 291.247 pesos para pagar las facturas de electricidad, gas, agua y transporte.",
+      "descripcion": "Un hogar promedio del AMBA sin subsidios necesitó 291.247 pesos para pagar las facturas de electricidad, gas, agua y transporte.",
+      "url": "https://www.pagina12.com.ar/2026/11/20/la-canasta-de-servicios-sigue-en-alza/",
+      "fecha": "2026-11-22T01:10:14.185Z",
+      "fuente": "Página/12",
+      "categorias": [
+        "consumo_masivo"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Amelia Saban, diseñadora de modas especialista en la importación de géneros, explica por qué la calidad de un diseño depende de…",
+      "descripcion": "Amelia Saban, diseñadora de modas especialista en la importación de géneros, explica por qué la calidad de un diseño depende del género importado y qué exige coordinar cada envío desde la fábrica",
+      "url": "https://www.infobae.com/movant/2026/11/20/moda-con-pasaporte-el-comercio-exterior-detras-de-cada-prenda-de-alto-nivel/",
+      "fecha": "2026-11-22T01:10:14.049Z",
+      "fuente": "Infobae",
+      "categorias": [
+        "consumo_masivo"
+      ],
+      "titulo_src": "llm"
+    },
+    {
       "titulo": "¿Cómo bajar rápidamente la inflación y el riesgo país",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-21T20:52:38.060Z",
+      "fecha": "2026-11-22T01:10:13.737Z",
       "fuente": "Clarín",
       "categorias": [
         "poder_adquisitivo"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "Jubilaciones: tres fallos judiciales abren la puerta a aumentos de hasta el 66% por pérdida frente a la inflación",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-21T20:52:38.059Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "Viernes negro en los mercados del mundo: el riesgo país superó los 1.000 puntos y el dólar se acercó a los $1.600",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-21T20:52:38.059Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
       ],
       "titulo_src": "llm"
     },
@@ -291,7 +332,7 @@
       "titulo": "“Oportunidad histórica”: el Senado dio media sanción a la modificación de la Ley de Cabotaje y la agroindustria pide un “pronto…",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-21T20:52:38.059Z",
+      "fecha": "2026-11-22T01:10:13.736Z",
       "fuente": "Clarín",
       "categorias": [
         "gobierno"
@@ -302,7 +343,7 @@
       "titulo": "Crisis en la principal fábrica de tractores nacionales: Pauny ofreció un plan de pagos de salarios atrasados y reanudar la acti…",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-21T20:52:38.059Z",
+      "fecha": "2026-11-22T01:10:13.736Z",
       "fuente": "Clarín",
       "categorias": [
         "poder_adquisitivo"
@@ -310,10 +351,32 @@
       "titulo_src": "llm"
     },
     {
+      "titulo": "Jubilaciones: tres fallos judiciales abren la puerta a aumentos de hasta el 66% por pérdida frente a la inflación",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-22T01:10:13.735Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Viernes negro en los mercados del mundo: el riesgo país superó los 1.000 puntos y el dólar se acercó a los $1.600",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-22T01:10:13.735Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ],
+      "titulo_src": "llm"
+    },
+    {
       "titulo": "Antes de la privatización, el Gobierno le aprueba a AySA aumentos de tarifas por encima de la inflación para 2027, pero les pon…",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-21T20:52:38.058Z",
+      "fecha": "2026-11-22T01:10:13.734Z",
       "fuente": "Clarín",
       "categorias": [
         "poder_adquisitivo",
@@ -323,21 +386,10 @@
       "titulo_src": "llm"
     },
     {
-      "titulo": "Riesgo país: cuáles fueron los ocho eventos que dispararon el índice más sensible para el Gobierno y el mercado",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-21T20:52:38.057Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ],
-      "titulo_src": "llm"
-    },
-    {
       "titulo": "El Gobierno aprobó el RIGI de YPF para exportar gas licuado: con US$ 50.750 millones, será “la mayor inversión de la historia”",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-21T20:52:38.057Z",
+      "fecha": "2026-11-22T01:10:13.733Z",
       "fuente": "Clarín",
       "categorias": [
         "servicios_hogar",
@@ -346,13 +398,47 @@
       "titulo_src": "llm"
     },
     {
+      "titulo": "Riesgo país: cuáles fueron los ocho eventos que dispararon el índice más sensible para el Gobierno y el mercado",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-22T01:10:13.731Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ],
+      "titulo_src": "llm"
+    },
+    {
       "titulo": "“Propuesta vacía”: el sindicato rechazó la oferta de Pauny por pago de salarios para retomar la actividad y la fábrica seguirá …",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-21T20:52:38.056Z",
+      "fecha": "2026-11-22T01:10:13.729Z",
       "fuente": "Clarín",
       "categorias": [
         "poder_adquisitivo"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Opinan 5 analistas sobre qué creen que hará el Gobierno para enfrentar la corrección en las Bolsas y el fortalecimiento del dól…",
+      "descripcion": "Opinan 5 analistas sobre qué creen que hará el Gobierno para enfrentar la corrección en las Bolsas y el fortalecimiento del dólar a nivel global.",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-22T01:10:13.728Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "servicios_hogar",
+        "gobierno"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "El consumo masivo subió en octubre por primera vez en el año",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-22T01:10:13.728Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "consumo_masivo"
       ],
       "titulo_src": "llm"
     },
@@ -368,61 +454,6 @@
       "titulo_src": "llm"
     },
     {
-      "titulo": "Casi el 60 por ciento de quienes utilizan el servicio pagarán en promedio 22,4 por ciento más. Los cambios rigen desde febrero.",
-      "descripcion": "Casi el 60 por ciento de quienes utilizan el servicio pagarán en promedio 22,4 por ciento más. Los cambios rigen desde febrero.",
-      "url": "https://www.pagina12.com.ar/2026/11/20/suba-de-tarifas-y-cortes-de-agua/",
-      "fecha": "2026-11-21T20:52:37.386Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "servicios_hogar"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "Presión empresaria para que se sancione la nueva ley",
-      "descripcion": "Presión empresaria para que se sancione la nueva ley",
-      "url": "https://www.pagina12.com.ar/2026/11/19/lobby-en-favor-de-biocombustibles/",
-      "fecha": "2026-11-21T20:52:37.386Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "servicios_hogar"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "600 mil cuentas sueldo destruidas",
-      "descripcion": "Nuevo indicador preocupante: desde diciembre de 2024 desaparecieron más de 600 mil cuentas sueldo de los bancos.",
-      "url": "https://www.pagina12.com.ar/2026/11/19/600-mil-cuentas-sueldo-destruidas/",
-      "fecha": "2026-11-21T20:52:37.386Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "poder_adquisitivo"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "Un hogar promedio del AMBA sin subsidios necesitó 291.247 pesos para pagar las facturas de electricidad, gas, agua y transporte.",
-      "descripcion": "Un hogar promedio del AMBA sin subsidios necesitó 291.247 pesos para pagar las facturas de electricidad, gas, agua y transporte.",
-      "url": "https://www.pagina12.com.ar/2026/11/20/la-canasta-de-servicios-sigue-en-alza/",
-      "fecha": "2026-11-21T20:52:37.385Z",
-      "fuente": "Página/12",
-      "categorias": [
-        "consumo_masivo"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "Amelia Saban, diseñadora de modas especialista en la importación de géneros, explica por qué la calidad de un diseño depende de…",
-      "descripcion": "Amelia Saban, diseñadora de modas especialista en la importación de géneros, explica por qué la calidad de un diseño depende del género importado y qué exige coordinar cada envío desde la fábrica",
-      "url": "https://www.infobae.com/movant/2026/11/20/moda-con-pasaporte-el-comercio-exterior-detras-de-cada-prenda-de-alto-nivel/",
-      "fecha": "2026-11-21T20:52:37.200Z",
-      "fuente": "Infobae",
-      "categorias": [
-        "consumo_masivo"
-      ],
-      "titulo_src": "llm"
-    },
-    {
       "titulo": "La US Chamber of Commerce, por medio de Argentina Business Council (USABC), destacó que la adhesión al PCT puede reducir costos…",
       "descripcion": "La US Chamber of Commerce, por medio de Argentina Business Council (USABC), destacó que la adhesión al PCT puede reducir costos y plazos para innovadores locales, además de atraer inversiones en investigación y desarrollo",
       "url": "https://www.infobae.com/economia/2026/11/20/la-camara-de-comercio-de-eeuu-celebro-la-adhesion-al-tratado-de-patentes-es-un-paso-trascendental-para-el-desarrollo-del-pais/",
@@ -430,17 +461,6 @@
       "fuente": "Infobae",
       "categorias": [
         "consumo_masivo"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "A contramano del Gobierno. Los bancos públicos no esperan una recuperación del crédito en 2027",
-      "descripcion": "A contramano de las proyecciones oficiales, Abappra alertó sobre un escenario adverso por la caída de la actividad, la volatilidad financiera y nuevas señales de mora en el sector corporativo",
-      "url": "https://www.lanacion.com.ar/economia/los-bancos-publicos-no-esperan-una-recuperacion-del-credito-en-2027-nid20112026/",
-      "fecha": "2026-11-21T14:33:52.068Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "gobierno"
       ],
       "titulo_src": "llm"
     },
@@ -490,17 +510,6 @@
       "titulo_src": "llm"
     },
     {
-      "titulo": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sent…",
-      "descripcion": "Las entidades de salud manifestaron su preocupación y afirmaron que sus precios siguen retrasados; el efecto directo de la sentencia es solo para un caso, pero sienta un precedente y alienta la litigiosidad; expectativa por los pasos que seguiría el Gobierno",
-      "url": "https://www.lanacion.com.ar/economia/que-podria-pasar-tras-el-fallo-de-la-corte-sobre-las-cuotas-de-las-prepagas-y-como-reacciono-el-nid19112026/",
-      "fecha": "2026-11-21T04:17:49.848Z",
-      "fuente": "La Nación",
-      "categorias": [
-        "consumo_masivo"
-      ],
-      "titulo_src": "llm"
-    },
-    {
       "titulo": "UPCN rechazó la versión de ATE sobre la paritaria estatal y aseguró que la negociación no está caída",
       "descripcion": "",
       "url": "https://www.elentrerios.com/",
@@ -525,16 +534,16 @@
   ],
   "alertas": [
     {
-      "titulo": "¿Cómo bajar rápidamente la inflación y el riesgo país",
+      "titulo": "600 mil cuentas sueldo destruidas",
       "impacto": "PODER ADQUISITIVO",
       "tiempo": "Ahora",
-      "fuente": "Clarín"
+      "fuente": "Página/12"
     },
     {
-      "titulo": "Antes de la privatización, el Gobierno le aprueba a AySA aumentos de tarifas por encima de la inflación para 2027, pero les pon…",
+      "titulo": "Casi el 60 por ciento de quienes utilizan el servicio pagarán en promedio 22,4 por ciento más. Los cambios rigen desde febrero.",
       "impacto": "SERVICIOS Y HOGAR",
       "tiempo": "Ahora",
-      "fuente": "Clarín"
+      "fuente": "Página/12"
     },
     {
       "titulo": "Un hogar promedio del AMBA sin subsidios necesitó 291.247 pesos para pagar las facturas de electricidad, gas, agua y transporte.",
@@ -543,7 +552,7 @@
       "fuente": "Página/12"
     },
     {
-      "titulo": "Viernes negro en los mercados del mundo: el riesgo país superó los 1.000 puntos y el dólar se acercó a los $1.600",
+      "titulo": "“Oportunidad histórica”: el Senado dio media sanción a la modificación de la Ley de Cabotaje y la agroindustria pide un “pronto…",
       "impacto": "GOBIERNO",
       "tiempo": "Ahora",
       "fuente": "Clarín"

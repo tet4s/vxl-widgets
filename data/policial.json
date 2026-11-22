@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-21T20:57:42.404Z",
-  "timestamp_epoch": 1795294662,
-  "total_noticias": 59,
+  "last_updated": "2026-11-22T01:15:48.988Z",
+  "timestamp_epoch": 1795310148,
+  "total_noticias": 60,
   "window_days": 5,
   "categorias": [
     {
@@ -27,7 +27,7 @@
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 15
+      "total": 16
     }
   ],
   "noticias": [
@@ -84,6 +84,28 @@
       "lugar": "",
       "categorias": [
         "detenciones"
+      ]
+    },
+    {
+      "titulo": "Drogas y peleas: liberaron al novio por crimen de Yazmina Cañón",
+      "descripcion": "Liberaron al novio y sólo quedan dos detenidos por el caso. Se trata de un hombre y una mujer que son pareja. Serán imputados el próximo martes por la mañana.",
+      "url": "https://www.ellitoral.com/sucesos/drogas-peleas-mujeres-crimen-barrio-alvear-santafe_0_ez0mxhlINE.html",
+      "fecha": "2026-11-21T13:31:32.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Mataron a un hombre de un tiro en la cabeza en Rosario",
+      "descripcion": "El hecho ocurrió durante una discusión en una calle de barrio Triángulo, al oeste de la ciudad. La víctima tenía 46 años. Es el sexto crimen que se registra en el mes de noviembre.",
+      "url": "https://www.ellitoral.com/sucesos/rosario-hospitalclementealvarez-homicidio-crimen-bulevarsegui-armadefuego_0_OSVwplzoic.html",
+      "fecha": "2026-11-21T12:45:05.000Z",
+      "fuente": "El Litoral",
+      "lugar": "Rosario",
+      "categorias": [
+        "hechos"
       ]
     },
     {
@@ -263,6 +285,17 @@
       ]
     },
     {
+      "titulo": "Piden fiscalías contra el delito rural en Entre Ríos",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/20/la-mesa-de-enlace-de-entre-rios-impulsa-la-necesidad-de-crear-fiscalias-especializadas-contra-el-delito-rural",
+      "fecha": "2026-11-20T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
       "titulo": "Policía mató a su pareja y se suicidó en barrio Alfonso",
       "descripcion": "Ocurrió este viernes en el interior de una vivienda ubicada en Corrientes al 4100. La víctima también pertenecía a la fuerza policial.",
       "url": "https://www.analisisdigital.com.ar/policiales/2026/11/20/femicidio-en-santa-fe-un-policia-mato-su-pareja-y-luego-se-quito-la-vida-en-barrio-alfonso",
@@ -271,17 +304,6 @@
       "lugar": "",
       "categorias": [
         "hechos"
-      ]
-    },
-    {
-      "titulo": "Piden fiscalías contra delitos rurales en Entre Ríos",
-      "descripcion": "",
-      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/20/la-mesa-de-enlace-de-entre-rios-impulsa-la-necesidad-de-crear-fiscalias-especializadas-contra-el-delito-rural",
-      "fecha": "2026-11-20T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "causas"
       ]
     },
     {
@@ -659,23 +681,12 @@
       ]
     },
     {
-      "titulo": "Detuvieron a tres personas en Chajarí con cocaína y secuestraron más de cuatro millones de pesos",
-      "descripcion": "El procedimiento se desarrolló en un domicilio ubicado sobre calle Islas Malvinas al 1200, donde el personal policial logró el secuestro de cinco envoltorios de cocaína, además de una importante suma de dinero en efectivo que asciende a $4.110.500.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/17/detuvieron-tres-personas-en-chajari-con-cocaina-y-secuestraron-mas-de-cuatro-millones-de-pesos",
+      "titulo": "Detienen a hombre que llevó a mujer muerta al hospital en Colón",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/17/479571-investigan-la-muerte-de-una-mujer-en-colon-detuvieron-al-hombre-que-la-llevo-sin-vida-al-hospital",
       "fecha": "2026-11-17T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Chajarí",
-      "categorias": [
-        "allanamientos"
-      ]
-    },
-    {
-      "titulo": "Mataron a una mujer en San José, detuvieron al que la llevó al hospital",
-      "descripcion": "Una mujer de 41 años murió durante la madrugada de este martes en el hospital de San José, en el departamento Colón, y la Justicia inició una investigación para determinar las circunstancias del fallecimiento. La víctima había sido trasladada al establecimiento por un hombre que…",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/17/investigan-la-muerte-de-una-mujer-en-san-jose-detuvieron-al-hombre-que-la-llevo-sin-vida-al-hospital",
-      "fecha": "2026-11-17T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "San José",
+      "fuente": "APF Digital",
+      "lugar": "Colón",
       "categorias": [
         "detenciones"
       ]
