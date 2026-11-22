@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-22T01:15:49.201Z",
+  "actualizado": "2026-11-22T09:44:42.780Z",
   "ciudades": [
     {
       "id": "parana",
@@ -141,11 +141,11 @@
                   "pts": 58,
                   "cambio_fuente": 0,
                   "ultimo": {
-                    "fecha": "2026-11-14T23:00Z",
-                    "contexto": "Reducido · Primera fase",
+                    "fecha": "2026-11-22T00:30Z",
+                    "contexto": "Reducido · Cuartos de Final",
                     "local": "Gimnasia y Esgrima (Jujuy)",
-                    "visitante": "Almirante Brown",
-                    "marcador_local": 2,
+                    "visitante": "Deportivo Madryn",
+                    "marcador_local": 1,
                     "marcador_visitante": 0,
                     "estado": "finalizado",
                     "logo_local": "https://a.espncdn.com/i/teamlogos/soccer/500/5263.png",
@@ -1826,7 +1826,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2420/113230"
                   },
                   "cambio_fuente": null,
-                  "cambio": 1,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -1863,7 +1863,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2420/113230"
                   },
                   "cambio_fuente": null,
-                  "cambio": -1,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -1979,6 +1979,43 @@
                 },
                 {
                   "pos": 7,
+                  "equipo": "PICO FC",
+                  "logo": "https://www.laliganacional.com.ar/escudos/1503/114919",
+                  "pj": 7,
+                  "g": 4,
+                  "p": 3,
+                  "gf": 508,
+                  "gc": 485,
+                  "pts": 11,
+                  "pct": "57,1",
+                  "ultimo": {
+                    "fecha": "2026-11-21T21:30:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "PICO FC",
+                    "visitante": "UNIÓN (MDP)",
+                    "marcador_local": 83,
+                    "marcador_visitante": 68,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1503/114919",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2378/115029"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-23T21:30:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "PICO FC",
+                    "visitante": "LA UNIÓN (C)",
+                    "marcador_local": null,
+                    "marcador_visitante": null,
+                    "estado": "programado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1503/114919",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1420/113925"
+                  },
+                  "cambio_fuente": null,
+                  "cambio": 2,
+                  "destacado": false
+                },
+                {
+                  "pos": 8,
                   "equipo": "RIVER",
                   "logo": "https://www.laliganacional.com.ar/escudos/85/114766",
                   "pj": 8,
@@ -2011,11 +2048,11 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
                   },
                   "cambio_fuente": null,
-                  "cambio": 0,
+                  "cambio": -1,
                   "destacado": false
                 },
                 {
-                  "pos": 8,
+                  "pos": 9,
                   "equipo": "RACING (A)",
                   "logo": "https://www.laliganacional.com.ar/escudos/83/113741",
                   "pj": 6,
@@ -2048,44 +2085,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
                   },
                   "cambio_fuente": null,
-                  "cambio": 1,
-                  "destacado": false
-                },
-                {
-                  "pos": 9,
-                  "equipo": "PICO FC",
-                  "logo": "https://www.laliganacional.com.ar/escudos/1503/114919",
-                  "pj": 6,
-                  "g": 3,
-                  "p": 3,
-                  "gf": 425,
-                  "gc": 417,
-                  "pts": 9,
-                  "pct": "50,0",
-                  "ultimo": {
-                    "fecha": "2026-11-21T21:30:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "PICO FC",
-                    "visitante": "UNIÓN (MDP)",
-                    "marcador_local": 40,
-                    "marcador_visitante": 31,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1503/114919",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2378/115029"
-                  },
-                  "proximo": {
-                    "fecha": "2026-11-23T21:30:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "PICO FC",
-                    "visitante": "LA UNIÓN (C)",
-                    "marcador_local": null,
-                    "marcador_visitante": null,
-                    "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1503/114919",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1420/113925"
-                  },
-                  "cambio_fuente": null,
-                  "cambio": 1,
+                  "cambio": -1,
                   "destacado": false
                 },
                 {
@@ -2122,7 +2122,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
                   },
                   "cambio_fuente": null,
-                  "cambio": -2,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -2159,7 +2159,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2173/114689"
                   },
                   "cambio_fuente": null,
-                  "cambio": 1,
+                  "cambio": 0,
                   "destacado": true
                 },
                 {
@@ -2196,7 +2196,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1761/114897"
                   },
                   "cambio_fuente": null,
-                  "cambio": 1,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -2233,7 +2233,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
                   },
                   "cambio_fuente": null,
-                  "cambio": -2,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -2275,43 +2275,6 @@
                 },
                 {
                   "pos": 15,
-                  "equipo": "UNIÓN (MDP)",
-                  "logo": "https://www.laliganacional.com.ar/escudos/2378/115029",
-                  "pj": 6,
-                  "g": 2,
-                  "p": 4,
-                  "gf": 446,
-                  "gc": 474,
-                  "pts": 8,
-                  "pct": "33,3",
-                  "ultimo": {
-                    "fecha": "2026-11-21T21:30:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "PICO FC",
-                    "visitante": "UNIÓN (MDP)",
-                    "marcador_local": 40,
-                    "marcador_visitante": 31,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1503/114919",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2378/115029"
-                  },
-                  "proximo": {
-                    "fecha": "2026-11-23T21:30:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "PERGAMINO BASQUET",
-                    "visitante": "UNIÓN (MDP)",
-                    "marcador_local": null,
-                    "marcador_visitante": null,
-                    "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2254/114918",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2378/115029"
-                  },
-                  "cambio_fuente": null,
-                  "cambio": 0,
-                  "destacado": false
-                },
-                {
-                  "pos": 16,
                   "equipo": "LA UNIÓN (C)",
                   "logo": "https://www.laliganacional.com.ar/escudos/1420/113925",
                   "pj": 7,
@@ -2344,7 +2307,44 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1420/113925"
                   },
                   "cambio_fuente": null,
-                  "cambio": 0,
+                  "cambio": 1,
+                  "destacado": false
+                },
+                {
+                  "pos": 16,
+                  "equipo": "UNIÓN (MDP)",
+                  "logo": "https://www.laliganacional.com.ar/escudos/2378/115029",
+                  "pj": 7,
+                  "g": 2,
+                  "p": 5,
+                  "gf": 514,
+                  "gc": 557,
+                  "pts": 9,
+                  "pct": "28,5",
+                  "ultimo": {
+                    "fecha": "2026-11-21T21:30:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "PICO FC",
+                    "visitante": "UNIÓN (MDP)",
+                    "marcador_local": 83,
+                    "marcador_visitante": 68,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1503/114919",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2378/115029"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-23T21:30:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "PERGAMINO BASQUET",
+                    "visitante": "UNIÓN (MDP)",
+                    "marcador_local": null,
+                    "marcador_visitante": null,
+                    "estado": "programado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2254/114918",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2378/115029"
+                  },
+                  "cambio_fuente": null,
+                  "cambio": -1,
                   "destacado": false
                 },
                 {

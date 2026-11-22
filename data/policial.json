@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-22T01:15:48.988Z",
-  "timestamp_epoch": 1795310148,
-  "total_noticias": 60,
+  "last_updated": "2026-11-22T09:44:42.542Z",
+  "timestamp_epoch": 1795340682,
+  "total_noticias": 58,
   "window_days": 5,
   "categorias": [
     {
@@ -17,7 +17,7 @@
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 24
+      "total": 23
     },
     {
       "id": "causas",
@@ -27,7 +27,7 @@
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 16
+      "total": 15
     }
   ],
   "noticias": [
@@ -95,17 +95,6 @@
       "lugar": "",
       "categorias": [
         "allanamientos"
-      ]
-    },
-    {
-      "titulo": "Mataron a un hombre de un tiro en la cabeza en Rosario",
-      "descripcion": "El hecho ocurrió durante una discusión en una calle de barrio Triángulo, al oeste de la ciudad. La víctima tenía 46 años. Es el sexto crimen que se registra en el mes de noviembre.",
-      "url": "https://www.ellitoral.com/sucesos/rosario-hospitalclementealvarez-homicidio-crimen-bulevarsegui-armadefuego_0_OSVwplzoic.html",
-      "fecha": "2026-11-21T12:45:05.000Z",
-      "fuente": "El Litoral",
-      "lugar": "Rosario",
-      "categorias": [
-        "hechos"
       ]
     },
     {
@@ -678,17 +667,6 @@
       "lugar": "",
       "categorias": [
         "causas"
-      ]
-    },
-    {
-      "titulo": "Detienen a hombre que llevó a mujer muerta al hospital en Colón",
-      "descripcion": "",
-      "url": "https://www.apfdigital.com.ar/noticias/2026/11/17/479571-investigan-la-muerte-de-una-mujer-en-colon-detuvieron-al-hombre-que-la-llevo-sin-vida-al-hospital",
-      "fecha": "2026-11-17T15:00:00.000Z",
-      "fuente": "APF Digital",
-      "lugar": "Colón",
-      "categorias": [
-        "detenciones"
       ]
     }
   ]

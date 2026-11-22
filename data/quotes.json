@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-22T01:10:08.091Z",
-  "timestamp_epoch": 1795309808,
+  "last_updated": "2026-11-22T09:40:33.363Z",
+  "timestamp_epoch": 1795340433,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -57,7 +57,7 @@
       "compra": 1761.25,
       "venta": 1768.62,
       "fechaActualizacion": "2026-11-21T20:59:00.000Z",
-      "variacion": -1.27
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -70,7 +70,7 @@
     }
   ],
   "dolares_cierre": {
-    "fecha_ultimo": "2026-11-21",
+    "fecha_ultimo": "2026-11-22",
     "ultimo_del_dia": {
       "oficial": 1600,
       "blue": 1675,
@@ -80,14 +80,14 @@
       "cripto": 1768.62,
       "tarjeta": 2080
     },
-    "fecha_cierre": "2026-11-20",
+    "fecha_cierre": "2026-11-21",
     "cierre_anterior": {
       "oficial": 1600,
       "blue": 1675,
       "bolsa": 1743.1,
       "contadoconliqui": 1806.2,
       "mayorista": 1580,
-      "cripto": 1791.29,
+      "cripto": 1768.62,
       "tarjeta": 2080
     }
   },
