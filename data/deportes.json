@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-22T17:52:17.647Z",
+  "actualizado": "2026-11-22T23:38:03.683Z",
   "ciudades": [
     {
       "id": "parana",
@@ -1073,15 +1073,15 @@
                   "pts": 22,
                   "cambio_fuente": 0,
                   "ultimo": {
-                    "fecha": "2026-11-07T18:00Z",
-                    "contexto": "Torneo Clausura",
-                    "local": "Gimnasia (Mendoza)",
-                    "visitante": "Independiente Rivadavia",
-                    "marcador_local": 1,
+                    "fecha": "2026-11-22T19:00Z",
+                    "contexto": "Clausura · Round of 16",
+                    "local": "Rosario Central",
+                    "visitante": "Gimnasia (Mendoza)",
+                    "marcador_local": 3,
                     "marcador_visitante": 1,
                     "estado": "finalizado",
-                    "logo_local": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
-                    "logo_visitante": null
+                    "logo_local": null,
+                    "logo_visitante": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png"
                   },
                   "proximo": null,
                   "cambio": 0,
@@ -1915,26 +1915,26 @@
                   "pts": 13,
                   "pct": "62,5",
                   "ultimo": {
-                    "fecha": "2026-11-19T21:00:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "RIVER",
-                    "visitante": "REGATAS (SN)",
-                    "marcador_local": 86,
-                    "marcador_visitante": 68,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/85/114766",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2149/114733"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-22T20:30:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "REGATAS (SN)",
                     "visitante": "PROVINCIAL (R)",
+                    "marcador_local": 9,
+                    "marcador_visitante": 6,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2149/114733",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1761/114897"
+                  },
+                  "proximo": {
+                    "fecha": "2026-12-06T00:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "REGATAS (SN)",
+                    "visitante": "PERGAMINO BASQUET",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
                     "logo_local": "https://www.laliganacional.com.ar/escudos/2149/114733",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1761/114897"
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2254/114918"
                   },
                   "cambio_fuente": null,
                   "cambio": 0,
@@ -1952,26 +1952,26 @@
                   "pts": 13,
                   "pct": "62,5",
                   "ultimo": {
-                    "fecha": "2026-11-17T21:00:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "DEP. NORTE",
-                    "visitante": "CENTENARIO (VT)",
-                    "marcador_local": 58,
-                    "marcador_visitante": 71,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1640/114179",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1926/112888"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-22T21:00:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "CENTENARIO (VT)",
                     "visitante": "CENTRAL ENTRERRIANO",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1926/112888",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-25T21:30:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "CENTENARIO (VT)",
+                    "visitante": "LA UNIÓN (C)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
                     "logo_local": "https://www.laliganacional.com.ar/escudos/1926/112888",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1420/113925"
                   },
                   "cambio_fuente": null,
                   "cambio": 0,
@@ -2063,26 +2063,26 @@
                   "pts": 9,
                   "pct": "50,0",
                   "ultimo": {
-                    "fecha": "2026-11-19T21:30:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "QUILMES (MDP)",
-                    "visitante": "RACING (A)",
-                    "marcador_local": 72,
-                    "marcador_visitante": 81,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2377/112559",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/83/113741"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-22T20:00:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "RACING (A)",
                     "visitante": "DEP. NORTE",
+                    "marcador_local": 27,
+                    "marcador_visitante": 35,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/83/113741",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
+                  },
+                  "proximo": {
+                    "fecha": "2026-12-02T00:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "CENTRAL ENTRERRIANO",
+                    "visitante": "RACING (A)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/83/113741",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1458/113317",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/83/113741"
                   },
                   "cambio_fuente": null,
                   "cambio": -1,
@@ -2100,25 +2100,25 @@
                   "pts": 13,
                   "pct": "44,4",
                   "ultimo": {
-                    "fecha": "2026-11-20T20:30:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "GIMNASIA (LP)",
-                    "visitante": "DEP. NORTE",
-                    "marcador_local": 86,
-                    "marcador_visitante": 81,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2420/113230",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-22T20:00:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "RACING (A)",
                     "visitante": "DEP. NORTE",
+                    "marcador_local": 27,
+                    "marcador_visitante": 35,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/83/113741",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-24T21:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "RIVER",
+                    "visitante": "DEP. NORTE",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/83/113741",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/85/114766",
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1640/114179"
                   },
                   "cambio_fuente": null,
@@ -2174,26 +2174,26 @@
                   "pts": 10,
                   "pct": "42,8",
                   "ultimo": {
-                    "fecha": "2026-11-16T21:00:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "PROVINCIAL (R)",
-                    "visitante": "QUILMES (MDP)",
-                    "marcador_local": 79,
-                    "marcador_visitante": 84,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1761/114897",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2377/112559"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-22T20:30:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "REGATAS (SN)",
                     "visitante": "PROVINCIAL (R)",
+                    "marcador_local": 9,
+                    "marcador_visitante": 6,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2149/114733",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1761/114897"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-30T21:30:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "PROVINCIAL (R)",
+                    "visitante": "VILLA MITRE (BB)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2149/114733",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1761/114897"
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1761/114897",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2371/112530"
                   },
                   "cambio_fuente": null,
                   "cambio": 0,
@@ -2211,26 +2211,26 @@
                   "pts": 14,
                   "pct": "40,0",
                   "ultimo": {
-                    "fecha": "2026-11-20T21:00:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "CICLISTA (J)",
-                    "visitante": "CENTRAL ENTRERRIANO",
-                    "marcador_local": 83,
-                    "marcador_visitante": 78,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1937/115445",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-22T21:00:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "CENTENARIO (VT)",
                     "visitante": "CENTRAL ENTRERRIANO",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1926/112888",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
+                  },
+                  "proximo": {
+                    "fecha": "2026-12-02T00:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "CENTRAL ENTRERRIANO",
+                    "visitante": "RACING (A)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1926/112888",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1458/113317"
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1458/113317",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/83/113741"
                   },
                   "cambio_fuente": null,
                   "cambio": 0,
@@ -2498,26 +2498,26 @@
                   "pts": 12,
                   "pct": "100,0",
                   "ultimo": {
-                    "fecha": "2026-11-20T21:30:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "COMUNICACIONES",
-                    "visitante": "SAN ISIDRO",
-                    "marcador_local": 0,
-                    "marcador_visitante": 20,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1435/112548",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-22T21:00:00-03:00",
                     "contexto": "Conferencia Norte",
                     "local": "MITRE (POSADAS)",
                     "visitante": "SAN ISIDRO",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1725/115054",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
+                  },
+                  "proximo": {
+                    "fecha": "2026-12-06T00:00:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "SAN ISIDRO",
+                    "visitante": "UNION (SF)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1725/115054",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2043/114446",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1913/115314"
                   },
                   "cambio_fuente": null,
                   "cambio": 1,
@@ -2868,26 +2868,26 @@
                   "pts": 9,
                   "pct": "50,0",
                   "ultimo": {
-                    "fecha": "2026-11-17T21:30:00-03:00",
-                    "contexto": "Conferencia Norte",
-                    "local": "AMANCAY (LR)",
-                    "visitante": "MITRE (POSADAS)",
-                    "marcador_local": 85,
-                    "marcador_visitante": 64,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2168/112811",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1725/115054"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-22T21:00:00-03:00",
                     "contexto": "Conferencia Norte",
                     "local": "MITRE (POSADAS)",
                     "visitante": "SAN ISIDRO",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1725/115054",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
+                  },
+                  "proximo": {
+                    "fecha": "2026-12-08T00:00:00-03:00",
+                    "contexto": "Conferencia Norte",
+                    "local": "COMUNICACIONES",
+                    "visitante": "MITRE (POSADAS)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1725/115054",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2043/114446"
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1435/112548",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1725/115054"
                   },
                   "cambio_fuente": null,
                   "cambio": 0,
