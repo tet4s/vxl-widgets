@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-23T07:28:53.212Z",
-  "timestamp_epoch": 1795418933,
-  "total_noticias": 58,
+  "last_updated": "2026-11-23T20:11:25.351Z",
+  "timestamp_epoch": 1795464685,
+  "total_noticias": 53,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 8
+      "total": 7
     },
     {
       "id": "allanamientos",
@@ -22,12 +22,12 @@
     {
       "id": "causas",
       "nombre": "CAUSAS",
-      "total": 6
+      "total": 3
     },
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 15
+      "total": 14
     }
   ],
   "noticias": [
@@ -612,61 +612,6 @@
       "lugar": "",
       "categorias": [
         "detenciones"
-      ]
-    },
-    {
-      "titulo": "Salvada por sus vecinas: Santa Elena conmocionada por un grave hecho de violencia de género",
-      "descripcion": "",
-      "url": "https://www.apfdigital.com.ar/noticias/2026/11/18/479676-salvada-por-sus-vecinas-santa-elena-conmocionada-por-un-grave-hecho-de-violencia-de-genero",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "fuente": "APF Digital",
-      "lugar": "Santa Elena",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Investigan la muerte de una mujer que llegó sin vida a un hospital entrerriano",
-      "descripcion": "",
-      "url": "https://www.apfdigital.com.ar/noticias/2026/11/18/479592-investigan-la-muerte-de-una-mujer-que-llego-sin-vida-a-un-hospital-entrerriano",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "fuente": "APF Digital",
-      "lugar": "",
-      "categorias": [
-        "causas"
-      ]
-    },
-    {
-      "titulo": "Falleció una mujer tras colisionar su moto con un semirremolque estacionado en Concordia",
-      "descripcion": "Murió una mujer de 46 años tras chocar con un semirremolque estacionado en Concordia.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/18/fallecio-una-mujer-tras-colisionar-su-moto-con-un-semirremolque-estacionado-en-concordia",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Concordia",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "Hay muchas condenas cortas que no sirven para nada, advirtió la jueza de Ejecución, Cecilia Bértora",
-      "descripcion": "",
-      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/hay-muchas-condenas-cortas-que-no-sirven-para-nada-advirtio-la-jueza-de-ejecucion-cecilia-bertora",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "causas"
-      ]
-    },
-    {
-      "titulo": "Causa por adicionales: sobreseyeron a una funcionaria policial y los otros nueve policías irán a juicio",
-      "descripcion": "",
-      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/18/causa-por-adicionales-sobreseyeron-una-funcionaria-policial-y-los-otros-nueve-policias-iran-juicio",
-      "fecha": "2026-11-18T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "causas"
       ]
     }
   ]

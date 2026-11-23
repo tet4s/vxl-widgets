@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-23T07:28:28.278Z",
-  "timestamp_epoch": 1795418908,
-  "total_noticias": 90,
+  "last_updated": "2026-11-23T20:10:44.513Z",
+  "timestamp_epoch": 1795464644,
+  "total_noticias": 91,
   "window_days": 7,
   "categorias": [
     {
@@ -17,7 +17,7 @@
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 27
+      "total": 28
     },
     {
       "id": "elecciones",
@@ -29,7 +29,7 @@
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 32
+      "total": 33
     },
     {
       "id": "santa_fe",
@@ -63,6 +63,19 @@
     }
   ],
   "noticias": [
+    {
+      "titulo": "Agenda en tensión. La puja entre Pro y los gobernadores aliados complica los acuerdos de Menem para aprobar el presupuesto 2027",
+      "resumen": "Llaryora y Pullaro disputan con el macrismo una banca en el Consejo de la Magistratura y el régimen de biocombustibles; el presidente de Diputados busca evitar que el enfrentamiento vuelva a poner en riesgo la agenda oficialista",
+      "titulo_info": "Menem negocia presupuesto 2027 entre tensiones de Pro y gobernadores por Magistratura y biocombustibles",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-22T15:00:00.000Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.lanacion.com.ar/politica/la-puja-entre-pro-y-los-gobernadores-aliados-complica-los-acuerdos-de-menem-para-aprobar-el-nid22112026/",
+      "fuente": "La Nación Política"
+    },
     {
       "titulo": "Pullaro inauguró el gasoducto Albarellos-Uranga: más de 850 familias accederán al servicio de gas natural",
       "resumen": "La obra en el departamento Rosario contempla 15 kilómetros de gasoducto principal, una estación reguladora y 2 kilómetros de red de distribución domiciliaria. El proyecto fue desarrollado de manera conjunta entre Litoral Gas y las comunas.",
