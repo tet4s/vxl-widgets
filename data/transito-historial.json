@@ -1,76 +1,14 @@
 {
-  "actualizado": "2026-11-22T23:40:19.941Z",
+  "actualizado": "2026-11-23T07:30:48.161Z",
   "items": {
-    "parana|sarmiento|": {
-      "item": {
-        "id": "elonce:Dos ñandúes sueltos aparecieron en las calles de C…",
-        "titulo": "Dos ñandúes sueltos aparecieron en las calles de Concepción del Uruguay y sorprendieron a vecinos",
-        "categoria": "cortes",
-        "tipo": "corte_total",
-        "fecha": "2026-11-22T00:00:00-03:00",
-        "fecha_raw": "2026-11-22T00:00:00-03:00",
-        "horario": null,
-        "motivo": "",
-        "franja": "",
-        "calles": [
-          "Sarmiento"
-        ],
-        "resumen": "Sarmiento",
-        "descripcion": "Sarmiento",
-        "enlace": "https://www.elonce.com/sociedad/dos-nandues-aparecieron-por-las-calles-de-concepcion-del-uruguay-y-sorprendieron-a-los-vecinos.htm",
-        "lat": -31.72604821848282,
-        "lon": -60.54229202284464,
-        "sin_ubicacion": false,
-        "localidad": "Paraná",
-        "provincia": "Entre Ríos",
-        "via": "",
-        "km_desde": null,
-        "km_hasta": null,
-        "vigencia": {
-          "hasta": "2026-11-23T02:59:00.000Z",
-          "tipo": "diaria",
-          "detalle": "solo ese día"
-        },
-        "vigente_hasta": "2026-11-23T02:59:00.000Z",
-        "fuente_tipo": "noticia",
-        "segmentos": [
-          {
-            "puntos": [
-              [
-                -31.72604821848282,
-                -60.54229202284464
-              ]
-            ],
-            "calle": "Sarmiento",
-            "desde": null,
-            "hasta": null,
-            "motivo": "",
-            "franja": "",
-            "ctx": "Capturaron una serpiente de 1,70 metros que se refugió en un árbol de la Costanera de Santa Fe El episodio ocurrió sobre calle Sarmiento, en inmediaciones del barrio 150 Viviendas.",
-            "entre": "",
-            "texto": "Sarmiento"
-          }
-        ],
-        "puntos": [
-          [
-            -31.72604821848282,
-            -60.54229202284464
-          ]
-        ]
-      },
-      "fuente_tipo": "noticia",
-      "primera_vez": "2026-11-22T23:40:19.941Z",
-      "ultima_vez_vista": "2026-11-22T23:40:19.941Z",
-      "recuperada": false
-    },
     "parana|25 de mayo~belgrano|obra en la via publica": {
       "item": {
         "id": "bing-apf-cortes:Con nuevos frentes continúa la obra de reconfigura…",
         "titulo": "Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná",
         "categoria": "cortes",
         "tipo": "corte_total",
-        "fecha": "2026-11-22T00:00:00-03:00",
-        "fecha_raw": "2026-11-22T00:00:00-03:00",
+        "fecha": "2026-11-23T00:00:00-03:00",
+        "fecha_raw": "2026-11-23T00:00:00-03:00",
         "horario": null,
         "motivo": "Obra en la vía pública",
         "franja": "",
@@ -109,7 +47,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "domingo 22 de noviembre de 2026 24.4ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
+            "ctx": "lunes 23 de noviembre de 2026 17.2ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
             "entre": "",
             "texto": "25 de Mayo"
           },
@@ -148,8 +86,8 @@
         "titulo": "Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná",
         "categoria": "cortes",
         "tipo": "corte_total",
-        "fecha": "2026-11-22T00:00:00-03:00",
-        "fecha_raw": "2026-11-22T00:00:00-03:00",
+        "fecha": "2026-11-23T00:00:00-03:00",
+        "fecha_raw": "2026-11-23T00:00:00-03:00",
         "horario": null,
         "motivo": "Obra en la vía pública",
         "franja": "",
@@ -169,11 +107,11 @@
         "km_desde": null,
         "km_hasta": null,
         "vigencia": {
-          "hasta": "2026-11-23T03:00:00.000Z",
+          "hasta": "2026-11-24T03:00:00.000Z",
           "tipo": "estimada",
           "detalle": "estimado: ruta (24 h)"
         },
-        "vigente_hasta": "2026-11-23T03:00:00.000Z",
+        "vigente_hasta": "2026-11-24T03:00:00.000Z",
         "fuente_tipo": "noticia",
         "segmentos": [
           {
@@ -188,7 +126,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "domingo 22 de noviembre de 2026 24.4ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+            "ctx": "lunes 23 de noviembre de 2026 17.2ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
             "entre": "",
             "texto": "Paraguay"
           },
@@ -204,7 +142,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "domingo 22 de noviembre de 2026 24.4ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+            "ctx": "lunes 23 de noviembre de 2026 17.2ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
             "entre": "",
             "texto": "Montevideo"
           }
@@ -227,8 +165,8 @@
         "titulo": "El Municipio de Paraná realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca",
         "categoria": "cortes",
         "tipo": "corte_total",
-        "fecha": "2026-11-22T00:00:00-03:00",
-        "fecha_raw": "2026-11-22T00:00:00-03:00",
+        "fecha": "2026-11-23T00:00:00-03:00",
+        "fecha_raw": "2026-11-23T00:00:00-03:00",
         "horario": null,
         "motivo": "Mantenimiento de red de agua",
         "franja": "",
@@ -248,11 +186,11 @@
         "km_desde": null,
         "km_hasta": null,
         "vigencia": {
-          "hasta": "2026-11-23T03:00:00.000Z",
+          "hasta": "2026-11-24T03:00:00.000Z",
           "tipo": "estimada",
           "detalle": "estimado: ruta (24 h)"
         },
-        "vigente_hasta": "2026-11-23T03:00:00.000Z",
+        "vigente_hasta": "2026-11-24T03:00:00.000Z",
         "fuente_tipo": "noticia",
         "segmentos": [
           {
