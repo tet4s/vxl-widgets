@@ -1,6 +1,373 @@
 {
-  "actualizado": "2026-11-24T04:51:50.449Z",
+  "actualizado": "2026-11-24T15:51:42.116Z",
   "items": {
+    "santa fe|4 de enero~9 de julio y hernandarias~asua entre jose babini y leloir~guemes y ruperto godoy~juan de garay~mayo y 4 de enero~mayo y hernandarias~obispo principe entre defensa y riobamba~santiago del estero y 4 de enero|obra en la via publica": {
+      "item": {
+        "id": "ellitoral:Santa Fe:2026-11-24",
+        "titulo": "El tránsito en la provincia de Santa Fe; la información minuto a minuto",
+        "categoria": "cortes",
+        "tipo": "corte_total",
+        "fecha": "2026-11-24T11:09:00-03:00",
+        "fecha_raw": "2026-11-24T11:09:00-03:00",
+        "horario": "de 7:30 a 12",
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "4 de Enero",
+          "Juan de Garay",
+          "Obispo Príncipe entre Defensa y Riobamba",
+          "Asua entre José Babini y Leloir",
+          "Mayo y 4 de Enero",
+          "Güemes y Ruperto Godoy",
+          "Mayo y Hernandarias",
+          "9 de Julio y Hernandarias",
+          "Santiago del Estero y 4 de Enero"
+        ],
+        "resumen": "4 de Enero · Juan de Garay · Obispo Príncipe entre Defensa y Riobamba · Asua entre José Babini y Leloir · Mayo y 4 de Enero · Güemes y Ruper…",
+        "descripcion": "4 de Enero · Juan de Garay · Obispo Príncipe entre Defensa y Riobamba · Asua entre José Babini y Leloir · Mayo y 4 de Enero · Güemes y Ruperto Godoy · Mayo y He…",
+        "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-estado-autos-rutas-martes24denoviembre-region-cortes-desvios_0_FmuItiVlC4.html",
+        "lat": -31.614346583645574,
+        "lon": -60.70271524376588,
+        "sin_ubicacion": false,
+        "localidad": "Santa Fe",
+        "provincia": "Santa Fe",
+        "via": "Ruta Nacional 34 · Autopista Santa Fe-Rosario · calle Juan · bulevar Pellegrini · autopist",
+        "km_desde": "312",
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-11-25T02:59:00.000Z",
+          "tipo": "diaria",
+          "detalle": "boletín del día"
+        },
+        "vigente_hasta": "2026-11-25T02:59:00.000Z",
+        "fuente_tipo": "estado",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.614346583645574,
+                -60.70271524376588
+              ]
+            ],
+            "calle": "4 de Enero",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Línea 3 (vuelta): de recorrido habitual por calle 4 de Enero – Juan de Garay – 9 de Julio –Primera Junta a recorrido.",
+            "entre": "",
+            "texto": "4 de Enero"
+          },
+          {
+            "puntos": [
+              [
+                -31.648894554202048,
+                -60.72807623511812
+              ]
+            ],
+            "calle": "Juan de Garay",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Línea 9 (Ida) de recorrido habitual por calle Juan de Garay – 9 de Julio – Mendoza a recorrido.",
+            "entre": "",
+            "texto": "Juan de Garay"
+          },
+          {
+            "puntos": [
+              [
+                -31.6079554,
+                -60.668872
+              ],
+              [
+                -31.6081662,
+                -60.6678027
+              ]
+            ],
+            "calle": "Obispo Príncipe",
+            "desde": "Defensa",
+            "hasta": "Riobamba",
+            "motivo": "Bacheo",
+            "franja": "",
+            "ctx": "Obispo Príncipe, entre Defensa y Riobamba: reducción durante las 24h por tareas de bacheo municipal.",
+            "entre": "Defensa y Riobamba",
+            "texto": "Obispo Príncipe entre Defensa y Riobamba"
+          },
+          {
+            "puntos": [
+              [
+                -31.6385537,
+                -60.6612111
+              ],
+              [
+                -31.6385008,
+                -60.6612137
+              ],
+              [
+                -31.6380596,
+                -60.661235
+              ],
+              [
+                -31.6377118,
+                -60.6612529
+              ],
+              [
+                -31.63757,
+                -60.6612602
+              ]
+            ],
+            "calle": "Asua",
+            "desde": "José Babini",
+            "hasta": "Leloir",
+            "motivo": "Obra en la vía pública",
+            "franja": "desde 16:30",
+            "ctx": "Asua, entre José Babini y Leloir (Barrio El Pozo): reducción de calzada a partir de las 16:30h por trabajos de ASSA.",
+            "entre": "José Babini y Leloir",
+            "texto": "Asua entre José Babini y Leloir"
+          },
+          {
+            "puntos": [
+              [
+                -31.6655718,
+                -60.7155068
+              ]
+            ],
+            "calle": "Mayo",
+            "desde": "4 de Enero",
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Entre Ríos, entre 1º de Mayo y 4 de Enero: reducción durante las 24h por trabajos de ASSA.",
+            "entre": "4 de Enero",
+            "texto": "Mayo y 4 de Enero"
+          },
+          {
+            "puntos": [
+              [
+                -31.6185317,
+                -60.6832434
+              ]
+            ],
+            "calle": "Güemes",
+            "desde": "Ruperto Godoy",
+            "hasta": null,
+            "motivo": "Bacheo",
+            "franja": "Todo el día",
+            "ctx": "Güemes, entre Ruperto Godoy y Santiago Derqui: corte permanente durante las 24 horas por trabajos de bacheo municipal.",
+            "entre": "Ruperto Godoy",
+            "texto": "Güemes y Ruperto Godoy"
+          },
+          {
+            "puntos": [
+              [
+                -31.6064732,
+                -60.6987615
+              ]
+            ],
+            "calle": "Mayo",
+            "desde": "Hernandarias",
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "1º de Mayo, entre Hernandarias y J. P. López: corte durante las 24h por trabajos de la EPE en Estación Mayoraz.",
+            "entre": "Hernandarias",
+            "texto": "Mayo y Hernandarias"
+          },
+          {
+            "puntos": [
+              [
+                -31.6067309,
+                -60.69758
+              ]
+            ],
+            "calle": "9 de Julio",
+            "desde": "Hernandarias",
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "9 de Julio, entre Hernandarias y J. P. López: corte durante las 24h por trabajos de la EPE en Estación Mayoraz.",
+            "entre": "Hernandarias",
+            "texto": "9 de Julio y Hernandarias"
+          },
+          {
+            "puntos": [
+              [
+                -31.6367091,
+                -60.7091819
+              ]
+            ],
+            "calle": "Santiago del Estero",
+            "desde": "4 de Enero",
+            "hasta": null,
+            "motivo": "Semáforo fuera de servicio",
+            "franja": "",
+            "ctx": "Santiago del Estero y 4 de Enero: corte desde las 15h (duración aproximada de 1h) por trabajos de reparación de semáforo.",
+            "entre": "4 de Enero",
+            "texto": "Santiago del Estero y 4 de Enero"
+          }
+        ],
+        "puntos": [
+          [
+            -31.614346583645574,
+            -60.70271524376588
+          ]
+        ]
+      },
+      "fuente_tipo": "estado",
+      "primera_vez": "2026-11-24T15:51:42.116Z",
+      "ultima_vez_vista": "2026-11-24T15:51:42.116Z",
+      "recuperada": false
+    },
+    "parana|corrientes~urquiza|obra en la via publica": {
+      "item": {
+        "id": "elonce-obras:Modifican temporalmente el acceso al Palacio Munic…",
+        "titulo": "Modifican temporalmente el acceso al Palacio Municipal de Paraná por obras en la fachada",
+        "categoria": "cortes",
+        "tipo": "corte_total",
+        "fecha": "2026-11-24T13:26:15.000Z",
+        "fecha_raw": "2026-11-24T13:26:15.000Z",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "Corrientes",
+          "Urquiza"
+        ],
+        "resumen": "Corrientes · Urquiza",
+        "descripcion": "Corrientes · Urquiza",
+        "enlace": "https://www.elonce.com/parana/modifican-temporalmente-el-acceso-al-palacio-municipal-de-parana-por-obras-en-la-fachada.htm",
+        "lat": -31.725549985907072,
+        "lon": -60.525251049610766,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "calle Corrientes",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-12-24T13:26:15.000Z",
+          "tipo": "estimada",
+          "detalle": "estimado: obra (30 días)"
+        },
+        "vigente_hasta": "2026-12-24T13:26:15.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.725549985907072,
+                -60.525251049610766
+              ]
+            ],
+            "calle": "Corrientes",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Durante varias jornadas, el acceso estará habilitado por el sector del estacionamiento, sobre calle Corrientes.",
+            "entre": "",
+            "texto": "Corrientes"
+          },
+          {
+            "puntos": [
+              [
+                -31.734644892353597,
+                -60.522868344539724
+              ]
+            ],
+            "calle": "Urquiza",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "El acceso al Palacio Municipal de Paraná será modificado temporalmente debido a los trabajos de restauración y puesta en valor de la fachada del edificio ubicado en la intersección de calles Urquiza y Corrientes.",
+            "entre": "",
+            "texto": "Urquiza"
+          }
+        ],
+        "puntos": [
+          [
+            -31.725549985907072,
+            -60.525251049610766
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-24T15:51:42.116Z",
+      "ultima_vez_vista": "2026-11-24T15:51:42.116Z",
+      "recuperada": false
+    },
+    "parana|andres pazos entre santa cruz y piedrabuena|mantenimiento de red cloacal": {
+      "item": {
+        "id": "elonce:Dispusieron un corte total de tránsito en calle An…",
+        "titulo": "Dispusieron un corte total de tránsito en calle Andrés Pazos por trabajos en la red cloacal",
+        "categoria": "cortes",
+        "tipo": "corte_total",
+        "fecha": "2026-11-24T00:00:00-03:00",
+        "fecha_raw": "2026-11-24T00:00:00-03:00",
+        "horario": null,
+        "motivo": "Mantenimiento de red cloacal",
+        "franja": "",
+        "calles": [
+          "Andrés Pazos entre Santa Cruz y Piedrabuena"
+        ],
+        "resumen": "Andrés Pazos entre Santa Cruz y Piedrabuena",
+        "descripcion": "Andrés Pazos entre Santa Cruz y Piedrabuena",
+        "enlace": "https://www.elonce.com/parana/corte-de-transito-en-calle-andres-pazos-por-trabajos-cloacales.htm",
+        "lat": -31.7349354,
+        "lon": -60.5191,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "calle Andrés",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-11-25T02:59:00.000Z",
+          "tipo": "diaria",
+          "detalle": "solo ese día"
+        },
+        "vigente_hasta": "2026-11-25T02:59:00.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.7349354,
+                -60.5191
+              ],
+              [
+                -31.7354043,
+                -60.5173825
+              ]
+            ],
+            "calle": "Andrés Pazos",
+            "desde": "Santa Cruz",
+            "hasta": "Piedrabuena",
+            "motivo": "Mantenimiento de red cloacal",
+            "franja": "",
+            "ctx": "Más tarde Aceptar {{dayName}} {{day}} de {{monthName}} de {{year}} En Vivo Últimas noticias Paraná Policiales Política Sociedad Internacionales Deportes Economía Espectáculos Registrarme Iniciar sesión Vivo Ingrese palabra o frase a buscar Hablar Últimas noticias Paraná Policiales Política Sociedad Internacionales Deportes Economía Espectáculos Haciendo Comunidad Impulso Empresarial La Cocina del ",
+            "entre": "Santa Cruz y Piedrabuena",
+            "texto": "Andrés Pazos entre Santa Cruz y Piedrabuena"
+          }
+        ],
+        "puntos": [
+          [
+            -31.7349354,
+            -60.5191
+          ],
+          [
+            -31.7354043,
+            -60.5173825
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-24T15:51:42.116Z",
+      "ultima_vez_vista": "2026-11-24T15:51:42.116Z",
+      "recuperada": false
+    },
     "parana|25 de mayo~belgrano|obra en la via publica": {
       "item": {
         "id": "bing-apf-cortes:Con nuevos frentes continúa la obra de reconfigura…",
@@ -47,7 +414,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "martes 24 de noviembre de 2026 18.9ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
+            "ctx": "martes 24 de noviembre de 2026 22.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
             "entre": "",
             "texto": "25 de Mayo"
           },
@@ -109,11 +476,11 @@
         "km_desde": null,
         "km_hasta": null,
         "vigencia": {
-          "hasta": "2026-11-25T02:59:00.000Z",
-          "tipo": "diaria",
-          "detalle": "solo ese día"
+          "hasta": "2026-12-24T03:00:00.000Z",
+          "tipo": "estimada",
+          "detalle": "estimado: obra (30 días)"
         },
-        "vigente_hasta": "2026-11-25T02:59:00.000Z",
+        "vigente_hasta": "2026-12-24T03:00:00.000Z",
         "fuente_tipo": "noticia",
         "segmentos": [
           {
@@ -128,7 +495,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "martes 24 de noviembre de 2026 18.9ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+            "ctx": "martes 24 de noviembre de 2026 22.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
             "entre": "",
             "texto": "Paraguay"
           },
@@ -144,7 +511,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "martes 24 de noviembre de 2026 18.9ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+            "ctx": "martes 24 de noviembre de 2026 22.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
             "entre": "",
             "texto": "Montevideo"
           }
@@ -188,11 +555,11 @@
         "km_desde": null,
         "km_hasta": null,
         "vigencia": {
-          "hasta": "2026-11-25T02:59:00.000Z",
-          "tipo": "diaria",
-          "detalle": "solo ese día"
+          "hasta": "2026-12-24T03:00:00.000Z",
+          "tipo": "estimada",
+          "detalle": "estimado: obra (30 días)"
         },
-        "vigente_hasta": "2026-11-25T02:59:00.000Z",
+        "vigente_hasta": "2026-12-24T03:00:00.000Z",
         "fuente_tipo": "noticia",
         "segmentos": [
           {
@@ -256,8 +623,8 @@
       "item": {
         "id": "elonce-obras:La Municipalidad realizó obras de mantenimiento y…",
         "titulo": "La Municipalidad realizó obras de mantenimiento y mejoras en la zona sur de Paraná",
-        "categoria": "obras",
-        "tipo": "obra",
+        "categoria": "cortes",
+        "tipo": "corte_total",
         "fecha": "2026-11-13T16:06:13.000Z",
         "fecha_raw": "2026-11-13T16:06:13.000Z",
         "horario": null,

@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-24T04:49:54.512Z",
-  "timestamp_epoch": 1795495794,
-  "total_noticias": 53,
+  "last_updated": "2026-11-24T15:48:52.516Z",
+  "timestamp_epoch": 1795535332,
+  "total_noticias": 46,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 7
+      "total": 6
     },
     {
       "id": "allanamientos",
@@ -17,7 +17,7 @@
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 23
+      "total": 19
     },
     {
       "id": "causas",
@@ -27,7 +27,7 @@
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 14
+      "total": 12
     }
   ],
   "noticias": [
@@ -535,83 +535,6 @@
       "lugar": "",
       "categorias": [
         "hechos"
-      ]
-    },
-    {
-      "titulo": "Detuvieron a un hombre investigado por amenazas y delitos sexuales contra tres menores",
-      "descripcion": "La Policía de Investigaciones realizó una requisa domiciliaria en una vivienda de calle 25 de Mayo al 1100 y secuestró una computadora y dos teléfonos celulares. El procedimiento se enmarca en una causa que también contempla presuntas amenazas y coacción. La medida fue ordenada …",
-      "url": "https://www.ellitoral.com/sucesos/detuvieron-hombre-investigado-amenazas-delitos-sexuales-menores_0_BndmbxueWZ.html",
-      "fecha": "2026-11-19T15:37:05.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Paraná: Detuvieron a un joven acusado de disparar a un hombre",
-      "descripcion": "",
-      "url": "https://www.apfdigital.com.ar/noticias/2026/11/19/479784-parana-detuvieron-a-un-joven-acusado-de-disparar-a-un-hombre",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "fuente": "APF Digital",
-      "lugar": "Paraná",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Detuvieron a un joven acusado de faenar un novillo de 300 kilos en las islas de Victoria",
-      "descripcion": "Un joven de 24 años fue detenido este jueves en flagrancia, acusado de cometer un hecho de abigeato en la zona de islas de Victoria. Durante un operativo policial, los efectivos interceptaron una embarcación en la que transportaba cuatro bolsas con cortes de carne y restos de un…",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/detuvieron-un-joven-acusado-de-faenar-un-novillo-de-300-kilos-en-las-islas-de-victoria",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Victoria",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Investigan a un efectivo policial por un choque y fuga en Villa Adela",
-      "descripcion": "Un policía fue allanado en la jornada de este jueves, luego de que su vehículo fuera identificado como el presunto rodado que habría protagonizado un siniestro vial y luego se diera a la fuga en la zona de Villa Adela.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/investigan-un-efectivo-policial-por-un-choque-y-fuga-en-villa-adela",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "En Villaguay atacaron con un cuchillo a un policía",
-      "descripcion": "El atacante tiene 29 años y fue detenido. El agente sufrió un corte de carácter leve en la pierna derecha.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/19/en-villaguay-atacaron-con-un-cuchillo-un-policia",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Villaguay",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Caso Jorge Wolf: extorsión y asesinato en el campo",
-      "descripcion": "",
-      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/19/caso-jorge-wolf-extorsion-asesinato-en-la-oscuridad-del-campo-y-el-plan-para-descartar-el-cuerpo",
-      "fecha": "2026-11-19T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Atacaron a un niño trans de 12 años durante un encuentro cosplay y el agresor será imputado",
-      "descripcion": "El episodio ocurrió el domingo 8 de noviembre durante la convención Santa Freak, en la costanera santafesina. La víctima fue arrojada al suelo mediante una maniobra de inmovilización y debió recibir asistencia médica. La Fiscalía investiga el hecho como \"Lesiones leves calificad…",
-      "url": "https://www.ellitoral.com/sucesos/atacaron-nino-trans-12-anos-encuentro-cosplay-agresor-imputado_0_p22HUeekon.html",
-      "fecha": "2026-11-19T13:36:56.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
       ]
     }
   ]
