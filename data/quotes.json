@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-23T20:05:28.846Z",
-  "timestamp_epoch": 1795464328,
+  "last_updated": "2026-11-24T04:44:09.906Z",
+  "timestamp_epoch": 1795495449,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -20,7 +20,7 @@
       "nombre": "Blue",
       "compra": 1655,
       "venta": 1675,
-      "fechaActualizacion": "2026-11-23T19:58:00.000Z",
+      "fechaActualizacion": "2026-11-23T21:03:00.000Z",
       "variacion": 0
     },
     {
@@ -29,7 +29,7 @@
       "nombre": "Bolsa",
       "compra": 1682.6,
       "venta": 1743.1,
-      "fechaActualizacion": "2026-11-23T19:58:00.000Z",
+      "fechaActualizacion": "2026-11-23T21:03:00.000Z",
       "variacion": 0
     },
     {
@@ -38,7 +38,7 @@
       "nombre": "Contado con liquidación",
       "compra": 1801.4,
       "venta": 1806.2,
-      "fechaActualizacion": "2026-11-23T19:58:00.000Z",
+      "fechaActualizacion": "2026-11-23T21:03:00.000Z",
       "variacion": 0
     },
     {
@@ -54,10 +54,10 @@
       "moneda": "USD",
       "casa": "cripto",
       "nombre": "Cripto",
-      "compra": 1750.1,
-      "venta": 1760.77,
-      "fechaActualizacion": "2026-11-23T19:58:00.000Z",
-      "variacion": -0.5
+      "compra": 1759.98,
+      "venta": 1769.79,
+      "fechaActualizacion": "2026-11-23T21:03:00.000Z",
+      "variacion": 0.51
     },
     {
       "moneda": "USD",
@@ -70,24 +70,24 @@
     }
   ],
   "dolares_cierre": {
-    "fecha_ultimo": "2026-11-23",
+    "fecha_ultimo": "2026-11-24",
     "ultimo_del_dia": {
       "oficial": 1600,
       "blue": 1675,
       "bolsa": 1743.1,
       "contadoconliqui": 1806.2,
       "mayorista": 1580,
-      "cripto": 1760.77,
+      "cripto": 1769.79,
       "tarjeta": 2080
     },
-    "fecha_cierre": "2026-11-22",
+    "fecha_cierre": "2026-11-23",
     "cierre_anterior": {
       "oficial": 1600,
       "blue": 1675,
       "bolsa": 1743.1,
       "contadoconliqui": 1806.2,
       "mayorista": 1580,
-      "cripto": 1769.64,
+      "cripto": 1760.77,
       "tarjeta": 2080
     }
   },
@@ -131,7 +131,6 @@
   ],
   "historial": {
     "PAMPA ENERGÍA": [
-      5165,
       5080,
       5100,
       5085,
@@ -156,7 +155,6 @@
       4360
     ],
     "YPF": [
-      8235,
       8220,
       8240,
       8040,
@@ -181,7 +179,6 @@
       5835
     ],
     "GRP FIN GALICIA": [
-      5690,
       5765,
       6015,
       5900,
@@ -232,7 +229,6 @@
       85350
     ],
     "CRESUD (AGRO)": [
-      1842,
       1811,
       1818,
       1784,
@@ -257,7 +253,6 @@
       1413
     ],
     "MOLINOS AGRO": [
-      2245,
       2270,
       2215,
       2235,
