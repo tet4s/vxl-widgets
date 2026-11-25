@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-25T09:48:57.477Z",
-  "timestamp_epoch": 1795600137,
-  "total_noticias": 40,
+  "last_updated": "2026-11-25T19:57:15.243Z",
+  "timestamp_epoch": 1795636635,
+  "total_noticias": 33,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 9
+      "total": 8
     },
     {
       "id": "allanamientos",
@@ -17,17 +17,17 @@
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 10
+      "total": 8
     },
     {
       "id": "causas",
       "nombre": "CAUSAS",
-      "total": 6
+      "total": 5
     },
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 11
+      "total": 8
     }
   ],
   "noticias": [
@@ -164,17 +164,6 @@
       ]
     },
     {
-      "titulo": "Condenan a un militar por violencia de género y ordenan una reparación millonaria",
-      "descripcion": "",
-      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/21/condenan-un-militar-por-violencia-de-genero-y-ordenan-una-reparacion-millonaria",
-      "fecha": "2026-11-21T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "causas"
-      ]
-    },
-    {
       "titulo": "Femicidio seguido de suicidio en Paraná: asesinó a su pareja policía con el arma reglamentaria de ella",
       "descripcion": "",
       "url": "https://www.apfdigital.com.ar/noticias/2026/11/21/480210-femicidio-seguido-de-suicidio-en-parana-asesino-a-su-pareja-policia-con-el-arma-reglamentaria-de-ella",
@@ -194,6 +183,17 @@
       "lugar": "Concordia",
       "categorias": [
         "accidentes"
+      ]
+    },
+    {
+      "titulo": "Condenan a un militar por violencia de género y ordenan una reparación millonaria",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/21/condenan-un-militar-por-violencia-de-genero-y-ordenan-una-reparacion-millonaria",
+      "fecha": "2026-11-21T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
       ]
     },
     {
@@ -392,83 +392,6 @@
       "lugar": "Santa Fe",
       "categorias": [
         "detenciones"
-      ]
-    },
-    {
-      "titulo": "Grave accidente laboral en arenera del sur entrerriano: un joven operario cayó a una fosa de cuatro metros",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/grave-accidente-laboral-en-arenera-del-sur-entrerriano-un-joven-cayo-a-una-fosa-de-cuatro-metros.htm",
-      "fecha": "2026-11-20T18:03:49.551Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "ANÁLISIS La Mesa de Enlace de Entre Ríos impulsa la necesidad de crear Fiscalías especializadas contra el delito rural",
-      "descripcion": "",
-      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/20/la-mesa-de-enlace-de-entre-rios-impulsa-la-necesidad-de-crear-fiscalias-especializadas-contra-el-delito-rural",
-      "fecha": "2026-11-20T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "causas"
-      ]
-    },
-    {
-      "titulo": "Detuvieron en Entre Ríos a un prófugo buscado por la Justicia bonaerense",
-      "descripcion": "Tiene 40 años y fue localizado mientras trabajaba en una vivienda. Quedó alojado a la espera de las diligencias para su traslado.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/20/detuvieron-en-entre-rios-un-profugo-buscado-por-la-justicia-bonaerense",
-      "fecha": "2026-11-20T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Policía mató a su pareja y se suicidó en barrio Alfonso",
-      "descripcion": "Ocurrió este viernes en el interior de una vivienda ubicada en Corrientes al 4100. La víctima también pertenecía a la fuerza policial.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/20/femicidio-en-santa-fe-un-policia-mato-su-pareja-y-luego-se-quito-la-vida-en-barrio-alfonso",
-      "fecha": "2026-11-20T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Rescataron una cría de chajá que apareció entre camalotes en la Costanera Este",
-      "descripcion": "El pequeño ejemplar fue encontrado por guardavidas mientras permanecía entre vegetación flotante que se desplazaba a la deriva. Los trabajadores lo pusieron a resguardo y dieron aviso a la Policía Ecológica, cuyos efectivos lo trasladaron a una jaula de protección y dieron inter…",
-      "url": "https://www.ellitoral.com/sucesos/rescataron-cria-chaja-camalotes-costanera_0_9aFimKnZHg.html",
-      "fecha": "2026-11-20T12:08:45.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Córdoba: dos detenidos por el crimen del hombre hallado calcinado en una camioneta",
-      "descripcion": "La Fiscalía investiga los vínculos de los sospechosos con la víctima y analiza si un conflicto por un inmueble y una denuncia por presunto abuso pudieron estar relacionados con el homicidio.",
-      "url": "https://www.ellitoral.com/sucesos/cordoba-homicidio-lacumbre-calcinado-detenidos-allanamientos-cosquin_0_hTsDCG8TWh.html",
-      "fecha": "2026-11-20T11:48:11.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Caso Loan: un testigo denunció que falsificaron su firma en las actas policiales",
-      "descripcion": "Durante la audiencia, un albañil de 56 años afirmó que sus datos aparecen en documentos vinculados con tres detenciones, pese a que sostuvo que nunca participó de esos procedimientos ni suscribió esas constancias.",
-      "url": "https://www.ellitoral.com/sucesos/loandanilopena-corrientes-waltermaciel-denuncia-irregularidades-firma-falsa-testigo-actas_0_MCUk3YCRDd.html",
-      "fecha": "2026-11-20T10:43:47.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "hechos"
       ]
     }
   ]

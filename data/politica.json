@@ -1,35 +1,35 @@
 {
-  "last_updated": "2026-11-25T09:48:28.874Z",
-  "timestamp_epoch": 1795600108,
-  "total_noticias": 79,
+  "last_updated": "2026-11-25T19:56:46.668Z",
+  "timestamp_epoch": 1795636606,
+  "total_noticias": 70,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 39
+      "total": 33
     },
     {
       "id": "obras",
       "nombre": "OBRAS",
-      "total": 7
+      "total": 6
     },
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 25
+      "total": 24
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 12
+      "total": 10
     }
   ],
   "jurisdicciones": [
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 27
+      "total": 24
     },
     {
       "id": "santa_fe",
@@ -39,12 +39,12 @@
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 17
+      "total": 14
     },
     {
       "id": "corrientes",
       "nombre": "CORRIENTES",
-      "total": 7
+      "total": 5
     },
     {
       "id": "misiones",
@@ -54,7 +54,7 @@
     {
       "id": "chaco",
       "nombre": "CHACO",
-      "total": 7
+      "total": 6
     },
     {
       "id": "formosa",
@@ -63,6 +63,97 @@
     }
   ],
   "noticias": [
+    {
+      "titulo": "Yerba mate en San Pedro, productores buscan que el aporte al Convenio de Corresponsabilidad Gremial sea optativo",
+      "resumen": "El Concejo Deliberante declaró de interés municipal el reclamo del sector yerbatero para modificar el régimen vigente. Mientras los productores cuestionan el impacto económico del aporte obligatorio, desde el sindicato de tareferos proponen que los $37.000 millones recaudados en Misiones permanezcan en la provincia y se destinen a los trabajadores rurales.",
+      "titulo_info": "Productores de yerba mate en San Pedro piden que el aporte al Convenio de Corresponsabilidad Gremial sea optativo, con reclamo declarado de interés municipal",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-25T19:53:16.719Z",
+      "jurisdiccion": "misiones",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.territoriodigital.com/noticias/2026/11/25/929331-yerba-mate-en-san-pedro-productores-buscan-que-el-aporte-al-convenio-de-corresponsabilidad-gremial-sea-optativo",
+      "fuente": "Territorio Digital"
+    },
+    {
+      "titulo": "LA CLOTILDE: ZDERO DECIDIÓ NO PRESENTAR CANDIDATOS Y PRIORIZAR LA INSTITUCIONALIDAD TRAS EL FALLECIMIENTO DEL INTENDENTE",
+      "resumen": "",
+      "titulo_info": "La Clotilde: Zdero no presentará candidatos y prioriza la institucionalidad tras fallecimiento del intendente",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-25T19:53:17.847Z",
+      "jurisdiccion": "chaco",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.chaco.gob.ar/noticia-la-clotilde-zdero-decidio-no-presentar-candidatos-y-priorizar-la-institucionalidad-tras-el-fallecimiento-del-intendente-2026-11-24-17-12",
+      "fuente": "Gobierno del Chaco"
+    },
+    {
+      "titulo": "La fiscalía dictaminó que la suspensión de la ley de Financiamiento Universitario es inconstitucional",
+      "resumen": "Para el fiscal Rodrigo Cuesta, la suspensión de la norma vulnera la división de poderes y desconoce las fuentes de financiamiento aprobadas por el Congreso.",
+      "titulo_info": "Fiscalía dictaminó que la suspensión de la ley de Financiamiento Universitario es inconstitucional por vulnerar división de poderes",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-25T19:53:17.573Z",
+      "jurisdiccion": "nacional",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.pagina12.com.ar/2026/11/25/la-fiscalia-dictamino-que-el-decreto-del-gobierno-que-suspendio-la-ley-es-inconstitucional/",
+      "fuente": "Página/12 El País"
+    },
+    {
+      "titulo": "El Senado avanzó en el análisis del Presupuesto 2027: expusieron tres ministros",
+      "resumen": "",
+      "titulo_info": "Senado avanzó en el análisis del Presupuesto 2027 con exposición de tres ministros",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-25T19:53:16.950Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "/politica/el-senado-avanzo-en-el-analisis-del-presupuesto-2027-expusieron-tres-ministros.htm",
+      "fuente": "Elonce Política"
+    },
+    {
+      "titulo": "Murió en el hospital un motociclista que despistó 10 días atrás en El Soberbio",
+      "resumen": "Victor Pedro (28) estuvo internado desde el 15 de noviembre, tras despistar sobre la ruta provincial 13 a la altura de El Soberbio. Murió por un traumatismo de cráneo grave.",
+      "titulo_info": "Motociclista de 28 años murió en El Soberbio tras despiste ocurrido hace 10 días",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-25T19:53:16.719Z",
+      "jurisdiccion": "misiones",
+      "categorias": [
+        "obras"
+      ],
+      "url": "https://www.territoriodigital.com/noticias/2026/11/25/929298-murio-en-el-hospital-un-motociclista-que-despisto-10-dias-atras-en-el-soberbio",
+      "fuente": "Territorio Digital"
+    },
+    {
+      "titulo": "PRIMER ACUEDUCTO: SAMEEP FINALIZÓ LAS REPARACIONES Y COMIENZA A NORMALIZARSE EL SERVICIO DE AGUA POTABLE",
+      "resumen": "",
+      "titulo_info": "Sameep finalizó reparaciones del primer acueducto y normaliza el servicio de agua potable",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-25T19:53:17.847Z",
+      "jurisdiccion": "chaco",
+      "categorias": [
+        "obras"
+      ],
+      "url": "https://www.chaco.gob.ar/noticia-primer-acueducto-sameep-finalizo-las-reparaciones-y-comienza-a-normalizarse-el-servicio-de-agua-potable-2026-11-24-13-20",
+      "fuente": "Gobierno del Chaco"
+    },
+    {
+      "titulo": "Reforma electoral: Dal Molín respaldó la suspensión de las PASO porque representan “el doble del gasto”",
+      "resumen": "",
+      "titulo_info": "Reforma electoral: Dal Molín respaldó suspensión de PASO por representar el doble del gasto",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-25T19:53:16.950Z",
+      "jurisdiccion": "entre_rios",
+      "categorias": [
+        "elecciones"
+      ],
+      "url": "/politica/reforma-electoral-en-entre-rios-cuando-suspenderian-las-paso.htm",
+      "fuente": "Elonce Política"
+    },
     {
       "titulo": "Agenda en tensión. La puja entre Pro y los gobernadores aliados complica los acuerdos de Menem para aprobar el presupuesto 2027",
       "resumen": "Llaryora y Pullaro disputan con el macrismo una banca en el Consejo de la Magistratura y el régimen de biocombustibles; el presidente de Diputados busca evitar que el enfrentamiento vuelva a poner en riesgo la agenda oficialista",
@@ -718,7 +809,7 @@
     },
     {
       "titulo": "Sesión 19: Es Ley la Declaración de Emergencia Climática e Hídrica en la provincia",
-      "resumen": "La Cámara de Diputados de la provincia de Corrientes, en su sesión 19 presida por Eduardo Tassano, sancionó con fuerza de ley la Declaración de Estado de Emergencia Climática e Hídrica en todo el territorio de la provincia por el término de 180 días, prorrogable por igual período, de mantenerse los eventos críticos climáticos e hídricos derivados de la “Corriente del Niño” que de manera actual …",
+      "resumen": "",
       "titulo_info": "Diputados de Corrientes sancionaron ley de Emergencia Climática e Hídrica por 180 días",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.701Z",
@@ -796,7 +887,7 @@
     },
     {
       "titulo": "Sesión 18: Media Sanción para el Plan de Prevención de la Ludopatía Online",
-      "resumen": "La Cámara de Diputados de Corrientes, presidida por Eduardo Tassano, en su sesión 18 otorgó media sanción al proyecto de ley que crea el Plan Provincial de Prevención de la Ludopatía online en el ámbito educativo, destinado a estudiantes de los niveles obligatorios del sistema educativo, de gestión pública y privada, en el ámbito de la Provincia.",
+      "resumen": "",
       "titulo_info": "Diputados de Corrientes dio media sanción al Plan Provincial de Prevención de la Ludopatía Online en el ámbito educativo",
       "titulo_info_src": "llm",
       "fecha": "2026-11-19T20:25:36.701Z",
@@ -884,215 +975,6 @@
       ],
       "url": "https://www.diarioepoca.com/1395330-colonia-libertad-acelera-plan-de-obras-en-viviendas-y-la-ruta-25",
       "fuente": "Diario Época"
-    },
-    {
-      "titulo": "CAME pidió aprobar la nueva ley de biocombustibles para impulsar inversiones y empleo",
-      "resumen": "",
-      "titulo_info": "CAME pide aprobar la nueva ley de biocombustibles para impulsar inversiones y empleo",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.588Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "/politica/came-pidio-aprobar-la-nueva-ley-de-biocombustibles.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "Una nueva perforación garantiza agua potable a 15 familias de una zona rural de Wanda",
-      "resumen": "El IMAS puso en funcionamiento un pozo de 100 metros de profundidad en el paraje Sarandy, que también abastecerá al aula satélite de la escuela 899. La obra incluye un tanque elevado de 5.000 litros y una red de distribución para asegurar el suministro.",
-      "titulo_info": "Una nueva perforación de 100 metros garantiza agua potable a 15 familias y al aula satélite de la escuela 899 en Wanda",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.736Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928122-una-nueva-perforacion-garantiza-agua-potable-a-15-familias-de-una-zona-rural-de-wanda",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "Qué cambia con la nueva Ley de Discapacidad y qué puede pasar con la venta de tierras a extranjeros",
-      "resumen": "",
-      "titulo_info": "Nueva Ley de Discapacidad y venta de tierras a extranjeros: cambios y posibles consecuencias en debate",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.634Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "MÁS GRANDE, TECHADA Y RENOVADA: LA HISTÓRICA PEÑA MARTÍN FIERRO ENTRA EN LA RECTA FINAL DE OBRAS",
-      "resumen": "",
-      "titulo_info": "La histórica Peña Martín Fierro entra en la recta final de obras para quedar más grande, techada y renovada",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.505Z",
-      "jurisdiccion": "chaco",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.chaco.gob.ar/noticia-mas-grande-techada-y-renovada-la-historica-pena-martin-fierro-entra-en-la-recta-final-de-obras-2026-11-19-12-01",
-      "fuente": "Gobierno del Chaco"
-    },
-    {
-      "titulo": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria",
-      "resumen": "El gobernador Juan Pablo Valdés confirmó que la Provincia avanzará en el prorrateo de las facturas de energía en seis meses, la ampliación del alcance de l",
-      "titulo_info": "Valdés anunció medidas de alivio económico y nuevas obras en Paso de la Patria, incluyendo el prorrateo de facturas de energía",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.213Z",
-      "jurisdiccion": "corrientes",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.diarioepoca.com/1395592-valdes-anuncio-medidas-de-alivio-economico-y-nuevas-obras-en-paso-de-la-patria",
-      "fuente": "Diario Época"
-    },
-    {
-      "titulo": "Comenzó la sesión del Senado: se debate discapacidad, patentes y ley de Tierras",
-      "resumen": "",
-      "titulo_info": "Senado debate discapacidad, patentes y ley de Tierras en sesión que ya comenzó",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.588Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "/politica/comenzo-la-sesion-del-senado-se-debate-discapacidad-patentes-y-ley-de-tierras.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "Posadas debate este jueves una reforma al sistema electoral municipal",
-      "resumen": "El proyecto obtuvo dictamen de mayoría en comisión legislativa el último lunes y será tratado esta mañana en el recinto. Entre los cambios propuestos se encuentra la limitación de candidaturas, con un máximo de dos postulantes por partido y tres por frente electoral.",
-      "titulo_info": "Posadas debate reforma electoral municipal con dictamen de mayoría, limita candidaturas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.736Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928086-posadas-debate-este-jueves-una-reforma-al-sistema-electoral-municipal",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "Mientras acelera la designación de jueces, Mahiques viajó a EE.UU. y se reunió con un alto funcionario del Departamento de Justicia",
-      "resumen": "",
-      "titulo_info": "Mahiques viajó a EE.UU. y se reunió con un funcionario del Departamento de Justicia mientras acelera designaciones de jueces",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.634Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "Desde el paraje Pampa Cantón a la Legislatura: estudiantes conocieron de cerca el trabajo de los diputados",
-      "resumen": "",
-      "titulo_info": "Estudiantes de Pampa Cantón conocieron de cerca el trabajo de los diputados en la Legislatura",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.395Z",
-      "jurisdiccion": "chaco",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.legislaturachaco.gov.ar/noticia-desde-el-paraje-pampa-canton-a-la-legislatura-estudiantes-conocieron-de-cerca-el-trabajo-de-los-diputados-2026-11-19-09-49",
-      "fuente": "Legislatura Chaco"
-    },
-    {
-      "titulo": "Polich proyecta un presupuesto de $256.314 millones para 2027",
-      "resumen": "El proyecto que toma estado legislativo hoy en el Concejo prevé un aumento nominal en línea con la inflación proyectada respecto del cálculo de 2026. La ges",
-      "titulo_info": "El Concejo trata el presupuesto 2027 de Polich, proyectado en $256.314 millones, con un aumento nominal acorde a la inflación esperada respecto a 2026",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.213Z",
-      "jurisdiccion": "corrientes",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.diarioepoca.com/1395552-polich-proyecta-un-presupuesto-de-256314-millones-para-2027",
-      "fuente": "Diario Época"
-    },
-    {
-      "titulo": "La reforma electoral obtuvo dictamen: qué cambiaría para los votantes y los partidos",
-      "resumen": "",
-      "titulo_info": "La reforma electoral obtuvo dictamen y se esperan cambios para votantes y partidos",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.588Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes",
-        "elecciones"
-      ],
-      "url": "/politica/la-reforma-electoral-obtuvo-dictamen-que-cambiaria-para-los-votantes-y-los-partidos.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "Patricia Bullrich admitió que fue un “alivio” sacar las listas colectoras de la reforma electoral y respondió a la frase de Milei sobre “el plan platita”",
-      "resumen": "",
-      "titulo_info": "Patricia Bullrich consideró un alivio la exclusión de listas colectoras de la reforma electoral y respondió a Milei sobre el plan platita",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.634Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "La Comisión de Legislación General concretó su 18ª reunión ordinaria",
-      "resumen": "",
-      "titulo_info": "Comisión de Legislación General, Justicia y Seguridad realizó su 18ª reunión ordinaria",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.395Z",
-      "jurisdiccion": "chaco",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.legislaturachaco.gov.ar/noticia-la-comision-de-legislacion-general-concreto-su-18a-reunion-ordinaria-2026-11-18-12-34",
-      "fuente": "Legislatura Chaco"
-    },
-    {
-      "titulo": "Paritaria estatal: Gobierno y gremios vuelven a negociar tras la suspensión de la audiencia",
-      "resumen": "",
-      "titulo_info": "Gobierno y gremios retoman negociaciones paritarias estatales tras la suspensión de la audiencia",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.588Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/politica/paritaria-estatal-ate-rechaza-el-4-y-reclama-mejoras.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "“¿Por qué metieron a un cuatro de copas?”: la crisis que casi hizo caer el dictamen de las PASO",
-      "resumen": "",
-      "titulo_info": "Crisis interna casi tumba dictamen de PASO por cuestionamientos a un legislador",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.634Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "Senadores sesionan este jueves para dar sanción definitiva a la Ley de Discapacidad",
-      "resumen": "",
-      "titulo_info": "Los senadores sesionarán este jueves para dar sanción definitiva a la Ley de Discapacidad",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.588Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "/politica/senadores-sesionan-para-dar-sancion-a-la-ley-de-discapacidad.htm",
-      "fuente": "Elonce Política"
     }
   ]
 }
