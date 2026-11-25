@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-25T00:35:00.147Z",
-  "timestamp_epoch": 1795566900,
+  "last_updated": "2026-11-25T09:45:24.289Z",
+  "timestamp_epoch": 1795599924,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -12,7 +12,7 @@
       "compra": 1565,
       "venta": 1615,
       "fechaActualizacion": "2026-11-24T18:00:00.000Z",
-      "variacion": 0.94
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -21,7 +21,7 @@
       "compra": 1680,
       "venta": 1700,
       "fechaActualizacion": "2026-11-24T21:02:00.000Z",
-      "variacion": 1.49
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -30,7 +30,7 @@
       "compra": 1677.6,
       "venta": 1695.1,
       "fechaActualizacion": "2026-11-24T21:02:00.000Z",
-      "variacion": -2.75
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -39,7 +39,7 @@
       "compra": 1793.4,
       "venta": 1797.1,
       "fechaActualizacion": "2026-11-24T21:02:00.000Z",
-      "variacion": -0.5
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -48,7 +48,7 @@
       "compra": 1584,
       "venta": 1593,
       "fechaActualizacion": "2026-11-24T17:17:00.000Z",
-      "variacion": 0.82
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -57,7 +57,7 @@
       "compra": 1749.06,
       "venta": 1777.74,
       "fechaActualizacion": "2026-11-24T21:02:00.000Z",
-      "variacion": 0.96
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -66,11 +66,11 @@
       "compra": 2034.5,
       "venta": 2099.5,
       "fechaActualizacion": "2026-11-24T18:00:00.000Z",
-      "variacion": 0.94
+      "variacion": 0
     }
   ],
   "dolares_cierre": {
-    "fecha_ultimo": "2026-11-24",
+    "fecha_ultimo": "2026-11-25",
     "ultimo_del_dia": {
       "oficial": 1615,
       "blue": 1700,
@@ -80,58 +80,57 @@
       "cripto": 1777.74,
       "tarjeta": 2099.5
     },
-    "fecha_cierre": "2026-11-23",
+    "fecha_cierre": "2026-11-24",
     "cierre_anterior": {
-      "oficial": 1600,
-      "blue": 1675,
-      "bolsa": 1743.1,
-      "contadoconliqui": 1806.2,
-      "mayorista": 1580,
-      "cripto": 1760.77,
-      "tarjeta": 2080
+      "oficial": 1615,
+      "blue": 1700,
+      "bolsa": 1695.1,
+      "contadoconliqui": 1797.1,
+      "mayorista": 1593,
+      "cripto": 1777.74,
+      "tarjeta": 2099.5
     }
   },
   "bursatil": [
     {
       "label": "PAMPA ENERGÍA",
       "val": "$4.397,50",
-      "var": "▲ +0,86%",
-      "class": "up"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "YPF",
       "val": "$5.735,00",
-      "var": "▼ -1,71%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "GRP FIN GALICIA",
       "val": "$4.610,00",
-      "var": "▲ +1,15%",
-      "class": "up"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "AL30 (BONO)",
       "val": "$80.390,00",
-      "var": "▼ -0,51%",
-      "class": "down"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "CRESUD (AGRO)",
       "val": "$1.430,00",
-      "var": "▲ +1,20%",
-      "class": "up"
+      "var": "= 0,00%",
+      "class": "neutral"
     },
     {
       "label": "MOLINOS AGRO",
       "val": "$1.955,00",
-      "var": "▲ +2,36%",
-      "class": "up"
+      "var": "= 0,00%",
+      "class": "neutral"
     }
   ],
   "historial": {
     "PAMPA ENERGÍA": [
-      5080,
       5100,
       5085,
       5260,
@@ -152,10 +151,10 @@
       4235,
       4297.5,
       4327.5,
-      4360
+      4360,
+      4397.5
     ],
     "YPF": [
-      8220,
       8240,
       8040,
       8350,
@@ -176,10 +175,10 @@
       6165,
       6040,
       5800,
-      5835
+      5835,
+      5735
     ],
     "GRP FIN GALICIA": [
-      5765,
       6015,
       5900,
       6235,
@@ -200,7 +199,8 @@
       4857.5,
       4772.5,
       4552.5,
-      4557.5
+      4557.5,
+      4610
     ],
     "AL30 (BONO)": [
       85250,
@@ -229,7 +229,6 @@
       85350
     ],
     "CRESUD (AGRO)": [
-      1811,
       1818,
       1784,
       1879,
@@ -250,10 +249,10 @@
       1528,
       1450,
       1406,
-      1413
+      1413,
+      1430
     ],
     "MOLINOS AGRO": [
-      2270,
       2215,
       2235,
       2215,
@@ -274,7 +273,8 @@
       2060,
       2030,
       1940,
-      1910
+      1910,
+      1955
     ]
   }
 }

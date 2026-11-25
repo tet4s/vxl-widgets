@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-25T00:38:26.733Z",
-  "timestamp_epoch": 1795567106,
-  "total_noticias": 49,
+  "last_updated": "2026-11-25T09:48:57.477Z",
+  "timestamp_epoch": 1795600137,
+  "total_noticias": 40,
   "window_days": 5,
   "categorias": [
     {
@@ -12,12 +12,12 @@
     {
       "id": "allanamientos",
       "nombre": "ALLANAMIENTOS",
-      "total": 5
+      "total": 4
     },
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 16
+      "total": 10
     },
     {
       "id": "causas",
@@ -27,7 +27,7 @@
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 13
+      "total": 11
     }
   ],
   "noticias": [
@@ -467,105 +467,6 @@
       "fecha": "2026-11-20T10:43:47.000Z",
       "fuente": "El Litoral",
       "lugar": "",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Detuvieron al hombre que se atrincheró en su auto para evitar que se lo llevara la grúa en Paraná",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/detuvieron-al-hombre-que-se-atrinchero-en-su-auto-para-evitar-que-se-lo-llevara-la-grua.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "Paraná",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Imputaron a un padre y su hijo por robar patos en Palermo: hallaron 60 animales hacinados en su casa",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/imputaron-a-un-padre-y-su-hijo-por-robar-patos-en-palermo-hallaron-60-animales-hacinados-en-su-casa.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Intentó robar una camioneta, escapó en moto y fue detenido tras una persecución",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/intento-robar-una-camioneta-escapo-en-moto-y-fue-detenido.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Crimen de peón rural en Diamante: la extorsión, el asesinato y el plan para ocultar el cuerpo",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/crimen-de-jorge-wolf-extorsion-asesinato-y-dos-detenidos.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "Diamante",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Lo detectaron por las cámaras y le secuestraron éxtasis, anfetaminas y cocaína en Paraná",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/demoraron-a-un-hombre-con-extasis-y-otras-drogas-en-parana.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "Paraná",
-      "categorias": [
-        "allanamientos"
-      ]
-    },
-    {
-      "titulo": "Atacó con un cuchillo a dos policías, hirió a uno en la pierna y terminó detenido",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/ataco-con-un-cuchillo-a-dos-policias-e-hirio-a-uno.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Detuvieron a “Chuky”, acusado de amenazar con incendiar la casa de su familia",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/detuvieron-a-chuky-acusado-de-amenazar-con-incendiar-la-casa-de-su-familia.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Detuvieron a un hombre por violencia de género en Piedras Blancas: tenía armas y había sido denunciado por su expareja",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/violencia-genero-piedras-blancas-detenido-activista-feminista.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Robó una moto en Urdinarrain, intentó escapar de la Policía y aseguró que iba a devolverla",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/robo-moto-urdinarrain-menor-intento-escapar-policia.htm",
-      "fecha": "2026-11-20T01:54:56.440Z",
-      "fuente": "Elonce",
-      "lugar": "Urdinarrain",
       "categorias": [
         "hechos"
       ]
