@@ -1,36 +1,146 @@
 {
-  "last_updated": "2026-11-24T15:48:52.516Z",
-  "timestamp_epoch": 1795535332,
-  "total_noticias": 46,
+  "last_updated": "2026-11-25T00:38:26.733Z",
+  "timestamp_epoch": 1795567106,
+  "total_noticias": 49,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 6
+      "total": 9
     },
     {
       "id": "allanamientos",
       "nombre": "ALLANAMIENTOS",
-      "total": 6
+      "total": 5
     },
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 19
+      "total": 16
     },
     {
       "id": "causas",
       "nombre": "CAUSAS",
-      "total": 3
+      "total": 6
     },
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 12
+      "total": 13
     }
   ],
   "noticias": [
+    {
+      "titulo": "Investigan el origen de fentanilo, ketamina y otros medicamentos incautados en el sur de Entre Ríos",
+      "descripcion": "El procedimiento se realizó hace tres días sobre la Ruta Provincial 16 y terminó con el secuestro de 50 frascos y ampollas, además de instrumental sanitario, cuyo origen se desconoce.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/24/investigan-el-origen-de-fentanilo-ketamina-y-otros-medicamentos-incautados-en-el-sur-de-entre-rios",
+      "fecha": "2026-11-24T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Choque frontal entre dos camiones en la Ruta 34: una persona quedó atrapada y hay corte total de tránsito",
+      "descripcion": "El accidente ocurrió este martes por la mañana a la altura del kilómetro 312, cerca de Monigotes, entre Curupaity y Las Palmeras. Dotaciones de bomberos trabajan en el lugar para rescatar a una víctima del interior de uno de los vehículos.",
+      "url": "https://www.ellitoral.com/sucesos/choque-frontal-camiones-ruta34-persona-atrapada-corte-transito-sancristobal_0_JrCD6y4gX0.html",
+      "fecha": "2026-11-24T14:30:37.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
+      "titulo": "Atacaron a la madre de Ángel López: varias presas la golpearon por la muerte del nene",
+      "descripcion": "El episodio ocurrió en el Instituto Penitenciario de Trelew y obligó a desplegar un operativo para controlar los disturbios. Otras dos detenidas también resultaron heridas durante el enfrentamiento.",
+      "url": "https://www.ellitoral.com/sucesos/marielaaltamirano-comodororivadavia-angellopez-trelew-institutopenitenciarioprovincial-homicidioagravado-crimen-menor_0_rvh9XqurfE.html",
+      "fecha": "2026-11-24T13:22:25.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Secuestraron un arma de fuego y plantas de marihuana en cuatro allanamientos en La Paz",
+      "descripcion": "Dos sujetos quedaron bajo investigación por tenencia ilegal de arma de fuego y cultivo de plantas para la producción de estupefacientes. Los procedimientos se realizaron en el barrio Feria.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/23/secuestraron-un-arma-de-fuego-y-plantas-de-marihuana-en-cuatro-allanamientos-en-la-paz",
+      "fecha": "2026-11-23T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "La Paz",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Víctima de violencia de género denunció a su pareja por golpes, amenzas y secuestro en Concordia",
+      "descripcion": "La encontraron con golpes, cuando iba por la calle. Estaba amenazada y hacía meses sufría ataques del agresor.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/23/victima-de-violencia-de-genero-denuncio-su-pareja-por-golpes-amenzas-y-secuestro-en-concordia",
+      "fecha": "2026-11-23T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Concordia",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Yuyo\" García: \"Creemos que hay suficientes pruebas para condenarlo a Pavón por violación y femicidio",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/23/yuyo-garcia-creemos-que-hay-suficientes-pruebas-para-condenarlo-pavon-por-violacion-y-femicidio",
+      "fecha": "2026-11-23T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Segundo juicio contra Urribarri: se conoció el listado de los casi 80 testigos",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/23/segundo-juicio-contra-urribarri-se-conocio-el-listado-de-los-casi-80-testigos",
+      "fecha": "2026-11-23T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Un camión volcó en la Ruta 6 y el tránsito estuvo interrumpido por más de cuatro horas",
+      "descripcion": "En horas de la madrugada de este domingo, aproximadamente a las 4.30 horas, se registró un siniestro vial a la altura del kilómetro 121 de la Ruta Provincial Nº 6, jurisdicción de Comisaría General Urquiza, a 5 km sobre el límite con el Departamento de Rosario del Tala.Un camión…",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/22/un-camion-volco-en-la-ruta-6-y-el-transito-estuvo-interrumpido-por-mas-de-cuatro-horas",
+      "fecha": "2026-11-22T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
+      "titulo": "Grave accidente en Crespo: un motociclista murió tras chocar con un automóvil",
+      "descripcion": "La fiscalía ordenó numerosas diligencias para establecer las circunstancias del deceso del motociclista; instruyendo actuaciones por el supuesto delito de Homicidio Imprudente.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/22/grave-accidente-en-crespo-un-motociclista-murio-tras-chocar-con-un-automovil",
+      "fecha": "2026-11-22T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Crespo",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
+      "titulo": "Cuatro homicidios en cinco días en Santa Fe: un doble crimen y dos mujeres asesinadas",
+      "descripcion": "La ciudad de Santa Fe registró cuatro homicidios entre el lunes 16 y el viernes 20 de noviembre, en tres episodios ocurridos en distintos barrios. Los casos tuvieron características diferentes: una mujer asesinada en barrio Alvear, un padre y su hijo baleados en barrio Guadalupe…",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/22/cuatro-homicidios-en-cinco-dias-en-santa-fe-un-doble-crimen-y-dos-mujeres-asesinadas",
+      "fecha": "2026-11-22T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Santa Fe",
+      "categorias": [
+        "hechos"
+      ]
+    },
     {
       "titulo": "Dictaron 60 días de prisión preventiva al acusado de intentar matar a su expareja en Santa Elena",
       "descripcion": "",
@@ -49,6 +159,39 @@
       "fecha": "2026-11-21T20:57:13.664Z",
       "fuente": "Elonce",
       "lugar": "",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
+      "titulo": "Condenan a un militar por violencia de género y ordenan una reparación millonaria",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/21/condenan-un-militar-por-violencia-de-genero-y-ordenan-una-reparacion-millonaria",
+      "fecha": "2026-11-21T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Femicidio seguido de suicidio en Paraná: asesinó a su pareja policía con el arma reglamentaria de ella",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/21/480210-femicidio-seguido-de-suicidio-en-parana-asesino-a-su-pareja-policia-con-el-arma-reglamentaria-de-ella",
+      "fecha": "2026-11-21T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "Paraná",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Concordia: hombre de 73 años atropelló a un menor, se fugó y volvió a chocar en otras zonas",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/21/480207-concordia-hombre-de-73-anos-atropello-a-un-menor-se-fugo-y-volvio-a-chocar-en-otras-zonas",
+      "fecha": "2026-11-21T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "Concordia",
       "categorias": [
         "accidentes"
       ]
@@ -340,17 +483,6 @@
       ]
     },
     {
-      "titulo": "Detuvieron al extitular del Copnaf de Concordia por una causa de violencia de género",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/detuvieron-al-extitular-del-copnaf-de-concordia-por-una-causa-de-violencia-de-genero.htm",
-      "fecha": "2026-11-20T09:47:27.582Z",
-      "fuente": "Elonce",
-      "lugar": "Concordia",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
       "titulo": "Imputaron a un padre y su hijo por robar patos en Palermo: hallaron 60 animales hacinados en su casa",
       "descripcion": "",
       "url": "https://www.elonce.com/policiales/imputaron-a-un-padre-y-su-hijo-por-robar-patos-en-palermo-hallaron-60-animales-hacinados-en-su-casa.htm",
@@ -434,105 +566,6 @@
       "fecha": "2026-11-20T01:54:56.440Z",
       "fuente": "Elonce",
       "lugar": "Urdinarrain",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Laboratorio de drogas sintéticas en San Benito: la joven seguirá con prisión domiciliaria",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/laboratorio-de-drogas-sinteticas-en-san-benito-la-joven-seguira-con-prision-domiciliaria.htm",
-      "fecha": "2026-11-19T23:29:59.518Z",
-      "fuente": "Elonce",
-      "lugar": "San Benito",
-      "categorias": [
-        "allanamientos"
-      ]
-    },
-    {
-      "titulo": "Cuatro aprehendidos por robar placas en el Cementerio Municipal de Nelson",
-      "descripcion": "Personal de la Comisaría 15ª recuperó elementos vinculados al hecho, luego de realizar una requisa voluntaria en una vivienda de Llambi Campbell.",
-      "url": "https://www.ellitoral.com/sucesos/aprehendidos-robar-placas-cementerio-municipal-nelson_0_OjOs5NxsCy.html",
-      "fecha": "2026-11-19T21:45:52.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Bomberos rescataron a una mujer que quedó atrapada en su auto tras un choque",
-      "descripcion": "El siniestro ocurrió sobre la ruta provincial 2, a la altura de barrio Paprosky. La víctima fue trasladada al Hospital Cullen de la ciudad de Santa Fe. Su nieto, de 6 años, también fue llevado a un centro de salud.",
-      "url": "https://www.ellitoral.com/sucesos/bomberos-rescataron-mujer-quedo-atrapada-auto-choque_0_8IRH8mOSOE.html",
-      "fecha": "2026-11-19T21:26:35.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "Secuestraron 900 kilos de surubíes y aplicaron una multa millonaria a un frigorífico entrerriano",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/secuestraron-900-kilos-de-surubies-y-aplicaron-una-multa-millonaria-a-un-frigorifico-entrerriano.htm",
-      "fecha": "2026-11-19T21:04:48.055Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "allanamientos"
-      ]
-    },
-    {
-      "titulo": "El MPA explicó cómo funcionarán los controles de IMEI y por qué es clave denunciar el robo del celular",
-      "descripcion": "En diálogo con CyD Litoral, Marina Pieretti detalló las tres vías del mercado ilegal de teléfonos en Santa Fe y estimó que la implementación llevará dos o tres meses.",
-      "url": "https://www.ellitoral.com/sucesos/imei-santa-fe-marina-pieretti-robo-celulares-ley-celulares-mpa-denuncia_0_25MnTQfTuu.html",
-      "fecha": "2026-11-19T20:02:16.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Robaron más de mil metros de cable del aeropuerto de Concordia",
-      "descripcion": "La sustracción se habría llevado a cabo durante dos noches. El lugar dejó de tener vuelos nocturnos. Desde el ente que maneja el lugar aseguran que están llevando a cabo acciones para volver a la operatividad.",
-      "url": "https://www.ellitoral.com/sucesos/aeropuertocomodoropierrestegui-concordia-balizamiento-vuelosnocturnos-justiciafederal-psa-cable-edaac-balizado_0_kAB6JZNGIM.html",
-      "fecha": "2026-11-19T19:31:56.000Z",
-      "fuente": "El Litoral",
-      "lugar": "Concordia",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Investigan transferencias entre la dueña de geriátricos ilegales y tres asistentes sociales en Santa Fe",
-      "descripcion": "Lo reveló el fiscal del caso, en una audiencia en la que solicitó la continuidad de la prisión preventiva para María Laura MIlia. La defensa había pedido la libertad bajo alternativas, pero fue rechazada.",
-      "url": "https://www.ellitoral.com/sucesos/investigan-transferencias-duena-geriatricos-ilegales-asistentes-sociales-santafe-abandono-personas_0_SvAWAKUpxc.html",
-      "fecha": "2026-11-19T17:55:16.000Z",
-      "fuente": "El Litoral",
-      "lugar": "Santa Fe",
-      "categorias": [
-        "causas"
-      ]
-    },
-    {
-      "titulo": "Ordenaron la prisión preventiva para el muralista Cobre condenado por abuso sexual",
-      "descripcion": "Así lo dispuso la jueza Susana Luna este jueves al mediodía. Andrés Iglesias había llegado libre y fue detenido de inmediato.",
-      "url": "https://www.ellitoral.com/sucesos/andresiglesias-cobre-prisionpreventiva-santafe-muralista-susanaluna-mpa-jorgelinamoserferro-tribunales-robertoprieumantaras-oscarburtnik-sebastiancreus-quedo-detenido_0_4m1KY3bERH.html",
-      "fecha": "2026-11-19T16:47:19.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Se disfrazó de mujer para robar una joyería, forcejeó con una empleada y huyó",
-      "descripcion": "El episodio ocurrió en un comercio céntrico y quedó registrado por las cámaras de seguridad. El sospechoso escapó en una camioneta con pedido de secuestro activo, que fue encontrada abandonada horas después.",
-      "url": "https://www.ellitoral.com/sucesos/villagesell-joyeria-asalto-empleada-vestido-mujer-camioneta-robada-mardelplata_0_9WzNTdsDX6.html",
-      "fecha": "2026-11-19T15:57:37.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
       "categorias": [
         "hechos"
       ]

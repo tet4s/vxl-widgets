@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-24T15:51:42.117Z",
-  "timestamp_epoch": 1795535502,
+  "timestamp": "2026-11-25T00:40:53.769Z",
+  "timestamp_epoch": 1795567253,
   "source": "vxl-transito-ar",
   "cantidad": 10,
   "items": [
@@ -9,10 +9,10 @@
       "titulo": "El tránsito en la provincia de Santa Fe; la información minuto a minuto",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-11-24T11:09:00-03:00",
-      "fecha_raw": "2026-11-24T11:09:00-03:00",
+      "fecha": "2026-11-24T16:03:00-03:00",
+      "fecha_raw": "2026-11-24T16:03:00-03:00",
       "horario": "de 7:30 a 12",
-      "motivo": "Obra en la vía pública",
+      "motivo": "Choque",
       "franja": "",
       "calles": [
         "4 de Enero",
@@ -33,8 +33,8 @@
       "sin_ubicacion": false,
       "localidad": "Santa Fe",
       "provincia": "Santa Fe",
-      "via": "Ruta Nacional 34 · Autopista Santa Fe-Rosario · calle Juan · bulevar Pellegrini · autopist",
-      "km_desde": "312",
+      "via": "avenida Blas · Autopista Rosario-Santa · Ruta Nacional 34 · Autopista Santa Fe-Rosario · c",
+      "km_desde": "00",
       "km_hasta": null,
       "vigencia": {
         "hasta": "2026-11-25T02:59:00.000Z",
@@ -54,7 +54,7 @@
           "calle": "4 de Enero",
           "desde": null,
           "hasta": null,
-          "motivo": "Obra en la vía pública",
+          "motivo": "Choque",
           "franja": "",
           "ctx": "Línea 3 (vuelta): de recorrido habitual por calle 4 de Enero – Juan de Garay – 9 de Julio –Primera Junta a recorrido.",
           "entre": "",
@@ -70,7 +70,7 @@
           "calle": "Juan de Garay",
           "desde": null,
           "hasta": null,
-          "motivo": "Obra en la vía pública",
+          "motivo": "Choque",
           "franja": "",
           "ctx": "Línea 9 (Ida) de recorrido habitual por calle Juan de Garay – 9 de Julio – Mendoza a recorrido.",
           "entre": "",
@@ -122,7 +122,7 @@
           "calle": "Asua",
           "desde": "José Babini",
           "hasta": "Leloir",
-          "motivo": "Obra en la vía pública",
+          "motivo": "Choque",
           "franja": "desde 16:30",
           "ctx": "Asua, entre José Babini y Leloir (Barrio El Pozo): reducción de calzada a partir de las 16:30h por trabajos de ASSA.",
           "entre": "José Babini y Leloir",
@@ -138,7 +138,7 @@
           "calle": "Mayo",
           "desde": "4 de Enero",
           "hasta": null,
-          "motivo": "Obra en la vía pública",
+          "motivo": "Choque",
           "franja": "",
           "ctx": "Entre Ríos, entre 1º de Mayo y 4 de Enero: reducción durante las 24h por trabajos de ASSA.",
           "entre": "4 de Enero",
@@ -170,7 +170,7 @@
           "calle": "Mayo",
           "desde": "Hernandarias",
           "hasta": null,
-          "motivo": "Obra en la vía pública",
+          "motivo": "Choque",
           "franja": "",
           "ctx": "1º de Mayo, entre Hernandarias y J. P. López: corte durante las 24h por trabajos de la EPE en Estación Mayoraz.",
           "entre": "Hernandarias",
@@ -186,7 +186,7 @@
           "calle": "9 de Julio",
           "desde": "Hernandarias",
           "hasta": null,
-          "motivo": "Obra en la vía pública",
+          "motivo": "Choque",
           "franja": "",
           "ctx": "9 de Julio, entre Hernandarias y J. P. López: corte durante las 24h por trabajos de la EPE en Estación Mayoraz.",
           "entre": "Hernandarias",
@@ -219,8 +219,8 @@
     {
       "id": "elonce-obras:Modifican temporalmente el acceso al Palacio Munic…",
       "titulo": "Modifican temporalmente el acceso al Palacio Municipal de Paraná por obras en la fachada",
-      "categoria": "cortes",
-      "tipo": "corte_total",
+      "categoria": "obras",
+      "tipo": "obra",
       "fecha": "2026-11-24T13:26:15.000Z",
       "fecha_raw": "2026-11-24T13:26:15.000Z",
       "horario": null,
@@ -398,7 +398,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "martes 24 de noviembre de 2026 22.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
+          "ctx": "martes 24 de noviembre de 2026 26.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
           "entre": "",
           "texto": "25 de Mayo"
         },
@@ -425,6 +425,70 @@
         [
           -31.737032534185293,
           -60.520768253695216
+        ]
+      ]
+    },
+    {
+      "id": "bing-apf-obras:El Municipio de Paraná adjudicó dos importantes ob…",
+      "titulo": "El Municipio de Paraná adjudicó dos importantes obras de agua y cloaca por 14 millones de pesos",
+      "categoria": "obras",
+      "tipo": "obra",
+      "fecha": "2026-11-24T00:00:00-03:00",
+      "fecha_raw": "2026-11-24T00:00:00-03:00",
+      "horario": null,
+      "motivo": "Obra en la vía pública",
+      "franja": "",
+      "calles": [
+        "Crisólogo Larralde entre Avenida de las Américas y División de los Andes"
+      ],
+      "resumen": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes",
+      "descripcion": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes",
+      "enlace": "https://www.apfdigital.com.ar/noticias/2018/08/13/329736-el-municipio-de-parana-adjudico-dos-importantes-obras-de-agua-y-cloaca-por-14-millones-de-pesos",
+      "lat": -31.7769427,
+      "lon": -60.5200978,
+      "sin_ubicacion": false,
+      "localidad": "Paraná",
+      "provincia": "Entre Ríos",
+      "via": "",
+      "km_desde": null,
+      "km_hasta": null,
+      "vigencia": {
+        "hasta": "2027-03-24T03:00:00.000Z",
+        "tipo": "explicita",
+        "detalle": "120 días desde el 24/11 03:00"
+      },
+      "vigente_hasta": "2027-03-24T03:00:00.000Z",
+      "fuente_tipo": "noticia",
+      "segmentos": [
+        {
+          "puntos": [
+            [
+              -31.7769427,
+              -60.5200978
+            ],
+            [
+              -31.7770183,
+              -60.5195376
+            ]
+          ],
+          "calle": "Crisólogo Larralde",
+          "desde": "Avenida de las Américas",
+          "hasta": "División de los Andes",
+          "motivo": "Obra en la vía pública",
+          "franja": "",
+          "ctx": "Crisólogo Larralde, entre Avenida de las Américas y División de los Andes; y Vecinal Parque Mayor, más precisamente en calles Estación Sosa, Las Garzas, La Picada, Aldea Santa María, Juan Garrigó, Aldea María Luisa y Villa Tabossi.",
+          "entre": "Avenida de las Américas y División de los Andes",
+          "texto": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes"
+        }
+      ],
+      "puntos": [
+        [
+          -31.7769427,
+          -60.5200978
+        ],
+        [
+          -31.7770183,
+          -60.5195376
         ]
       ]
     },
@@ -473,7 +537,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "martes 24 de noviembre de 2026 22.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+          "ctx": "martes 24 de noviembre de 2026 26.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
           "entre": "",
           "texto": "Paraguay"
         },
@@ -489,7 +553,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "martes 24 de noviembre de 2026 22.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+          "ctx": "martes 24 de noviembre de 2026 26.1ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
           "entre": "",
           "texto": "Montevideo"
         }
@@ -587,76 +651,12 @@
       ]
     },
     {
-      "id": "bing-apf-obras:El Municipio de Paraná adjudicó dos importantes ob…",
-      "titulo": "El Municipio de Paraná adjudicó dos importantes obras de agua y cloaca por 14 millones de pesos",
-      "categoria": "obras",
-      "tipo": "obra",
-      "fecha": "2026-11-20T00:00:00-03:00",
-      "fecha_raw": "2026-11-20T00:00:00-03:00",
-      "horario": null,
-      "motivo": "Obra en la vía pública",
-      "franja": "",
-      "calles": [
-        "Crisólogo Larralde entre Avenida de las Américas y División de los Andes"
-      ],
-      "resumen": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes",
-      "descripcion": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes",
-      "enlace": "https://www.apfdigital.com.ar/noticias/2018/08/13/329736-el-municipio-de-parana-adjudico-dos-importantes-obras-de-agua-y-cloaca-por-14-millones-de-pesos",
-      "lat": -31.7769427,
-      "lon": -60.5200978,
-      "sin_ubicacion": false,
-      "localidad": "Paraná",
-      "provincia": "Entre Ríos",
-      "via": "",
-      "km_desde": null,
-      "km_hasta": null,
-      "vigencia": {
-        "hasta": "2027-03-20T03:00:00.000Z",
-        "tipo": "explicita",
-        "detalle": "120 días desde el 20/11 03:00"
-      },
-      "vigente_hasta": "2027-03-20T03:00:00.000Z",
-      "fuente_tipo": "noticia",
-      "segmentos": [
-        {
-          "puntos": [
-            [
-              -31.7769427,
-              -60.5200978
-            ],
-            [
-              -31.7770183,
-              -60.5195376
-            ]
-          ],
-          "calle": "Crisólogo Larralde",
-          "desde": "Avenida de las Américas",
-          "hasta": "División de los Andes",
-          "motivo": "Obra en la vía pública",
-          "franja": "",
-          "ctx": "Crisólogo Larralde, entre Avenida de las Américas y División de los Andes; y Vecinal Parque Mayor, más precisamente en calles Estación Sosa, Las Garzas, La Picada, Aldea Santa María, Juan Garrigó, Aldea María Luisa y Villa Tabossi.",
-          "entre": "Avenida de las Américas y División de los Andes",
-          "texto": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes"
-        }
-      ],
-      "puntos": [
-        [
-          -31.7769427,
-          -60.5200978
-        ],
-        [
-          -31.7770183,
-          -60.5195376
-        ]
-      ]
-    },
-    {
       "id": "bing-apf-corrientes:Paraná: Modifican los recorridos del transporte ur…",
       "titulo": "Paraná: Modifican los recorridos del transporte urbano y metropolitano por trabajos en calles La Paz y Corrientes",
       "categoria": "obras",
       "tipo": "obra",
-      "fecha": "2026-11-20T00:00:00-03:00",
-      "fecha_raw": "2026-11-20T00:00:00-03:00",
+      "fecha": "2026-11-24T00:00:00-03:00",
+      "fecha_raw": "2026-11-24T00:00:00-03:00",
       "horario": null,
       "motivo": "Obra en la vía pública",
       "franja": "",
@@ -675,11 +675,11 @@
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2027-05-19T03:00:00.000Z",
-        "tipo": "explicita",
-        "detalle": "180 días desde el 20/11 03:00"
+        "hasta": "2026-12-24T03:00:00.000Z",
+        "tipo": "estimada",
+        "detalle": "estimado: obra (30 días)"
       },
-      "vigente_hasta": "2027-05-19T03:00:00.000Z",
+      "vigente_hasta": "2026-12-24T03:00:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
@@ -782,8 +782,8 @@
     {
       "id": "elonce-obras:La Municipalidad realizó obras de mantenimiento y…",
       "titulo": "La Municipalidad realizó obras de mantenimiento y mejoras en la zona sur de Paraná",
-      "categoria": "cortes",
-      "tipo": "corte_total",
+      "categoria": "obras",
+      "tipo": "obra",
       "fecha": "2026-11-13T16:06:13.000Z",
       "fecha_raw": "2026-11-13T16:06:13.000Z",
       "horario": null,

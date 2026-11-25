@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-24T15:45:10.341Z",
-  "timestamp_epoch": 1795535110,
-  "total_noticias": 16,
+  "last_updated": "2026-11-25T00:35:15.923Z",
+  "timestamp_epoch": 1795566915,
+  "total_noticias": 23,
   "window_days": 7,
   "categorias": [
     {
@@ -9,11 +9,19 @@
       "nombre": "PODER ADQUISITIVO",
       "noticias": [
         {
+          "titulo": "Un funcionario de Caputo dijo que la suba del riesgo país y del dólar “no le pegan” a la economía y la inflación",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-25T00:35:13.138Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
           "titulo": "“Propuesta vacía”: el sindicato rechazó la oferta de Pauny por pago de salarios para retomar la actividad y la fábrica seguirá …",
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-24T15:45:06.161Z",
-          "fechaFormateada": "Ahora",
+          "fechaFormateada": "Hace 8 hs",
           "fuente": "Clarín"
         },
         {
@@ -21,15 +29,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-24T15:45:06.160Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Un funcionario de Caputo dijo que la suba del riesgo país y del dólar “no le pegan” a la economía y la inflación",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-24T15:45:06.157Z",
-          "fechaFormateada": "Ahora",
+          "fechaFormateada": "Hace 8 hs",
           "fuente": "Clarín"
         },
         {
@@ -53,7 +53,7 @@
           "descripcion": "Nuevo indicador preocupante: desde diciembre de 2024 desaparecieron más de 600 mil cuentas sueldo de los bancos.",
           "url": "https://www.pagina12.com.ar/2026/11/19/600-mil-cuentas-sueldo-destruidas/",
           "fecha": "2026-11-22T17:46:46.898Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Página/12"
         },
         {
@@ -61,7 +61,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-22T17:46:45.737Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         }
       ]
@@ -71,11 +71,27 @@
       "nombre": "SERVICIOS Y HOGAR",
       "noticias": [
         {
+          "titulo": "Las petroleras cuestionan un proyecto que las obligaría a informar los aumentos de la nafta y el gasoil",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-25T00:35:13.135Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Por trabajos en caños, barrios de Concordia sufrirán cortes en el servicio de agua potable",
+          "descripcion": "",
+          "url": "https://www.elentrerios.com/",
+          "fecha": "2026-11-24T19:06:52.000Z",
+          "fechaFormateada": "Hace 5 hs",
+          "fuente": "El Entre Ríos"
+        },
+        {
           "titulo": "Mercados alterados: los economistas ven más presión sobre el dólar y a Milei, que lo aguanta",
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-24T15:45:06.160Z",
-          "fechaFormateada": "Ahora",
+          "fechaFormateada": "Hace 8 hs",
           "fuente": "Clarín"
         },
         {
@@ -83,7 +99,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-24T12:19:56.000Z",
-          "fechaFormateada": "Hace 3 hs",
+          "fechaFormateada": "Hace 12 hs",
           "fuente": "El Entre Ríos"
         },
         {
@@ -91,7 +107,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-24T04:44:15.909Z",
-          "fechaFormateada": "Hace 11 hs",
+          "fechaFormateada": "Hace 19 hs",
           "fuente": "El Entre Ríos"
         },
         {
@@ -99,7 +115,7 @@
           "descripcion": "Casi el 60 por ciento de quienes utilizan el servicio pagarán en promedio 22,4 por ciento más. Los cambios rigen desde febrero.",
           "url": "https://www.pagina12.com.ar/2026/11/20/suba-de-tarifas-y-cortes-de-agua/",
           "fecha": "2026-11-23T20:05:35.289Z",
-          "fechaFormateada": "Hace 19 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Página/12"
         },
         {
@@ -107,14 +123,6 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-23T07:23:46.066Z",
-          "fechaFormateada": "Hace 1 día",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "El Gobierno aprobó el RIGI de YPF para exportar gas licuado: con US$ 50.750 millones, será “la mayor inversión de la historia”",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-23T07:23:46.065Z",
           "fechaFormateada": "Hace 1 día",
           "fuente": "Clarín"
         }
@@ -125,19 +133,27 @@
       "nombre": "CONSUMO MASIVO",
       "noticias": [
         {
-          "titulo": "El consumo masivo subió en octubre por primera vez en el año y hay un rubro que creció hasta 22% en los supermercados",
+          "titulo": "La soda regresa a la mesa argentina: en sifón o botella, volvió a ponerse de moda y creció 11% el consumo",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-24T15:45:06.160Z",
+          "fecha": "2026-11-25T00:35:13.138Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
         {
-          "titulo": "La soda regresa a la mesa argentina: en sifón o botella, volvió a ponerse de moda y creció 11% el consumo",
+          "titulo": "Black Friday: Banco Entre Ríos ofrece 18 cuotas sin interés y beneficios exclusivos para ahorrar hasta $500.000 por mes",
+          "descripcion": "",
+          "url": "https://www.elentrerios.com/",
+          "fecha": "2026-11-24T20:40:36.000Z",
+          "fechaFormateada": "Hace 3 hs",
+          "fuente": "El Entre Ríos"
+        },
+        {
+          "titulo": "El consumo masivo subió en octubre por primera vez en el año y hay un rubro que creció hasta 22% en los supermercados",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-24T15:45:06.158Z",
-          "fechaFormateada": "Ahora",
+          "fecha": "2026-11-24T15:45:06.160Z",
+          "fechaFormateada": "Hace 8 hs",
           "fuente": "Clarín"
         },
         {
@@ -145,7 +161,7 @@
           "descripcion": "Un hogar promedio del AMBA sin subsidios necesitó 291.247 pesos para pagar las facturas de electricidad, gas, agua y transporte.",
           "url": "https://www.pagina12.com.ar/2026/11/20/la-canasta-de-servicios-sigue-en-alza/",
           "fecha": "2026-11-23T20:05:35.289Z",
-          "fechaFormateada": "Hace 19 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Página/12"
         },
         {
@@ -163,10 +179,50 @@
       "nombre": "GOBIERNO",
       "noticias": [
         {
-          "titulo": "Subsidios e inflación: el plan al que apuesta el Gobierno para contener las subas y que le cuesta billones al Estado",
+          "titulo": "¿Está atrasado el dólar? Un viejo debate en un escenario nuevo",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-24T15:45:06.160Z",
+          "fecha": "2026-11-25T00:35:13.139Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Por la suba del riesgo país, el Gobierno reforzó con US$ 700 millones la garantía de un préstamo con bancos",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-25T00:35:13.138Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Un funcionario de Caputo dijo que la suba del riesgo país y del dólar “no le pegan” a la economía y la inflación",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-25T00:35:13.138Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "Alivio en los mercados: subieron los bonos y acciones pero el riesgo país se mantuvo por encima de los 1.000 puntos",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-25T00:35:13.138Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "¿Fin del “carry trade”?: la suba del dólar borra ganancias y obliga a inversores a revisar estrategias",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-25T00:35:13.137Z",
+          "fechaFormateada": "Ahora",
+          "fuente": "Clarín"
+        },
+        {
+          "titulo": "¿Riesgo de suba de precios? La escalada del dólar encendió algunas luces de alerta entre las alimenticias",
+          "descripcion": "",
+          "url": "https://www.clarin.com/",
+          "fecha": "2026-11-25T00:35:13.136Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         }
@@ -174,6 +230,117 @@
     }
   ],
   "noticias": [
+    {
+      "titulo": "¿Está atrasado el dólar? Un viejo debate en un escenario nuevo",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-25T00:35:13.139Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Por la suba del riesgo país, el Gobierno reforzó con US$ 700 millones la garantía de un préstamo con bancos",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-25T00:35:13.138Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Un funcionario de Caputo dijo que la suba del riesgo país y del dólar “no le pegan” a la economía y la inflación",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-25T00:35:13.138Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "poder_adquisitivo",
+        "gobierno"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Alivio en los mercados: subieron los bonos y acciones pero el riesgo país se mantuvo por encima de los 1.000 puntos",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-25T00:35:13.138Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "La soda regresa a la mesa argentina: en sifón o botella, volvió a ponerse de moda y creció 11% el consumo",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-25T00:35:13.138Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "consumo_masivo"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "¿Fin del “carry trade”?: la suba del dólar borra ganancias y obliga a inversores a revisar estrategias",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-25T00:35:13.137Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "¿Riesgo de suba de precios? La escalada del dólar encendió algunas luces de alerta entre las alimenticias",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-25T00:35:13.136Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "gobierno"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Las petroleras cuestionan un proyecto que las obligaría a informar los aumentos de la nafta y el gasoil",
+      "descripcion": "",
+      "url": "https://www.clarin.com/",
+      "fecha": "2026-11-25T00:35:13.135Z",
+      "fuente": "Clarín",
+      "categorias": [
+        "servicios_hogar"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Black Friday: Banco Entre Ríos ofrece 18 cuotas sin interés y beneficios exclusivos para ahorrar hasta $500.000 por mes",
+      "descripcion": "",
+      "url": "https://www.elentrerios.com/",
+      "fecha": "2026-11-24T20:40:36.000Z",
+      "fuente": "El Entre Ríos",
+      "categorias": [
+        "consumo_masivo"
+      ],
+      "titulo_src": "llm"
+    },
+    {
+      "titulo": "Por trabajos en caños, barrios de Concordia sufrirán cortes en el servicio de agua potable",
+      "descripcion": "",
+      "url": "https://www.elentrerios.com/",
+      "fecha": "2026-11-24T19:06:52.000Z",
+      "fuente": "El Entre Ríos",
+      "categorias": [
+        "servicios_hogar"
+      ],
+      "titulo_src": "llm"
+    },
     {
       "titulo": "“Propuesta vacía”: el sindicato rechazó la oferta de Pauny por pago de salarios para retomar la actividad y la fábrica seguirá …",
       "descripcion": "",
@@ -192,8 +359,7 @@
       "fecha": "2026-11-24T15:45:06.160Z",
       "fuente": "Clarín",
       "categorias": [
-        "poder_adquisitivo",
-        "gobierno"
+        "poder_adquisitivo"
       ],
       "titulo_src": "llm"
     },
@@ -216,28 +382,6 @@
       "fuente": "Clarín",
       "categorias": [
         "consumo_masivo"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "La soda regresa a la mesa argentina: en sifón o botella, volvió a ponerse de moda y creció 11% el consumo",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-24T15:45:06.158Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "consumo_masivo"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "Un funcionario de Caputo dijo que la suba del riesgo país y del dólar “no le pegan” a la economía y la inflación",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-24T15:45:06.157Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo"
       ],
       "titulo_src": "llm"
     },
@@ -309,17 +453,6 @@
       "titulo_src": "llm"
     },
     {
-      "titulo": "El Gobierno aprobó el RIGI de YPF para exportar gas licuado: con US$ 50.750 millones, será “la mayor inversión de la historia”",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-23T07:23:46.065Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "servicios_hogar"
-      ],
-      "titulo_src": "llm"
-    },
-    {
       "titulo": "600 mil cuentas sueldo destruidas",
       "descripcion": "Nuevo indicador preocupante: desde diciembre de 2024 desaparecieron más de 600 mil cuentas sueldo de los bancos.",
       "url": "https://www.pagina12.com.ar/2026/11/19/600-mil-cuentas-sueldo-destruidas/",
@@ -355,25 +488,25 @@
   ],
   "alertas": [
     {
-      "titulo": "“Propuesta vacía”: el sindicato rechazó la oferta de Pauny por pago de salarios para retomar la actividad y la fábrica seguirá …",
+      "titulo": "Un funcionario de Caputo dijo que la suba del riesgo país y del dólar “no le pegan” a la economía y la inflación",
       "impacto": "PODER ADQUISITIVO",
       "tiempo": "Ahora",
       "fuente": "Clarín"
     },
     {
-      "titulo": "Mercados alterados: los economistas ven más presión sobre el dólar y a Milei, que lo aguanta",
+      "titulo": "Las petroleras cuestionan un proyecto que las obligaría a informar los aumentos de la nafta y el gasoil",
       "impacto": "SERVICIOS Y HOGAR",
       "tiempo": "Ahora",
       "fuente": "Clarín"
     },
     {
-      "titulo": "El consumo masivo subió en octubre por primera vez en el año y hay un rubro que creció hasta 22% en los supermercados",
+      "titulo": "La soda regresa a la mesa argentina: en sifón o botella, volvió a ponerse de moda y creció 11% el consumo",
       "impacto": "CONSUMO MASIVO",
       "tiempo": "Ahora",
       "fuente": "Clarín"
     },
     {
-      "titulo": "Subsidios e inflación: el plan al que apuesta el Gobierno para contener las subas y que le cuesta billones al Estado",
+      "titulo": "¿Está atrasado el dólar? Un viejo debate en un escenario nuevo",
       "impacto": "GOBIERNO",
       "tiempo": "Ahora",
       "fuente": "Clarín"
