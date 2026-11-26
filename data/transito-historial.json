@@ -1,6 +1,68 @@
 {
-  "actualizado": "2026-11-25T19:59:16.452Z",
+  "actualizado": "2026-11-26T02:50:00.400Z",
   "items": {
+    "parana|lopez jordan|obra en la via publica": {
+      "item": {
+        "id": "elonce:El Comedor Los Conejitos entregó 200 viandas y pel…",
+        "titulo": "El Comedor Los Conejitos entregó 200 viandas y peluqueros realizaron cortes de cabello gratuitos",
+        "categoria": "obras",
+        "tipo": "obra",
+        "fecha": "2026-11-25T00:00:00-03:00",
+        "fecha_raw": "2026-11-25T00:00:00-03:00",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "López Jordán"
+        ],
+        "resumen": "López Jordán",
+        "descripcion": "López Jordán",
+        "enlace": "https://www.elonce.com/haciendo-comunidad/el-comedor-los-conejitos-entrego-200-viandas-y-peluqueros-realizaron-cortes-de-cabello-gratuitos.htm",
+        "lat": -31.747475909050234,
+        "lon": -60.48350850360021,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-11-26T02:59:00.000Z",
+          "tipo": "diaria",
+          "detalle": "solo ese día"
+        },
+        "vigente_hasta": "2026-11-26T02:59:00.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.747475909050234,
+                -60.48350850360021
+              ]
+            ],
+            "calle": "López Jordán",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Una historia de solidaridad que comenzó hace 31 años El Comedor Los Conejitos funciona en barrio Paraná XX, en inmediaciones de las calles Garcilazo y López Jordán.",
+            "entre": "",
+            "texto": "López Jordán"
+          }
+        ],
+        "puntos": [
+          [
+            -31.747475909050234,
+            -60.48350850360021
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-26T02:50:00.400Z",
+      "ultima_vez_vista": "2026-11-26T02:50:00.400Z",
+      "recuperada": false
+    },
     "parana|25 de mayo~belgrano|obra en la via publica": {
       "item": {
         "id": "bing-apf-cortes:Con nuevos frentes continúa la obra de reconfigura…",
@@ -47,7 +109,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "miércoles 25 de noviembre de 2026 29ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
+            "ctx": "miércoles 25 de noviembre de 2026 21.6ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
             "entre": "",
             "texto": "25 de Mayo"
           },
@@ -126,7 +188,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "miércoles 25 de noviembre de 2026 29ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+            "ctx": "miércoles 25 de noviembre de 2026 21.6ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
             "entre": "",
             "texto": "Paraguay"
           },
@@ -142,7 +204,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "miércoles 25 de noviembre de 2026 29ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+            "ctx": "miércoles 25 de noviembre de 2026 21.6ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
             "entre": "",
             "texto": "Montevideo"
           }
@@ -248,6 +310,147 @@
       "fuente_tipo": "noticia",
       "primera_vez": "2026-10-28T00:00:00-03:00",
       "ultima_vez_vista": "2026-11-09T21:18:10.563Z",
+      "recuperada": false
+    },
+    "parana|corrientes~urquiza|obra en la via publica": {
+      "item": {
+        "id": "elonce-obras:Modifican temporalmente el acceso al Palacio Munic…",
+        "titulo": "Modifican temporalmente el acceso al Palacio Municipal de Paraná por obras en la fachada",
+        "categoria": "obras",
+        "tipo": "obra",
+        "fecha": "2026-11-24T13:26:15.000Z",
+        "fecha_raw": "2026-11-24T13:26:15.000Z",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "Corrientes",
+          "Urquiza"
+        ],
+        "resumen": "Corrientes · Urquiza",
+        "descripcion": "Corrientes · Urquiza",
+        "enlace": "https://www.elonce.com/parana/modifican-temporalmente-el-acceso-al-palacio-municipal-de-parana-por-obras-en-la-fachada.htm",
+        "lat": -31.725549985907072,
+        "lon": -60.525251049610766,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "calle Corrientes",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-12-24T13:26:15.000Z",
+          "tipo": "estimada",
+          "detalle": "estimado: obra (30 días)"
+        },
+        "vigente_hasta": "2026-12-24T13:26:15.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.725549985907072,
+                -60.525251049610766
+              ]
+            ],
+            "calle": "Corrientes",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Durante varias jornadas, el acceso estará habilitado por el sector del estacionamiento, sobre calle Corrientes.",
+            "entre": "",
+            "texto": "Corrientes"
+          },
+          {
+            "puntos": [
+              [
+                -31.734644892353597,
+                -60.522868344539724
+              ]
+            ],
+            "calle": "Urquiza",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "El acceso al Palacio Municipal de Paraná será modificado temporalmente debido a los trabajos de restauración y puesta en valor de la fachada del edificio ubicado en la intersección de calles Urquiza y Corrientes.",
+            "entre": "",
+            "texto": "Urquiza"
+          }
+        ],
+        "puntos": [
+          [
+            -31.725549985907072,
+            -60.525251049610766
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-24T15:51:42.116Z",
+      "ultima_vez_vista": "2026-11-24T15:51:42.116Z",
+      "recuperada": false
+    },
+    "parana|la picada|obra en la via publica": {
+      "item": {
+        "id": "elonce-obras:La Municipalidad realizó obras de mantenimiento y…",
+        "titulo": "La Municipalidad realizó obras de mantenimiento y mejoras en la zona sur de Paraná",
+        "categoria": "obras",
+        "tipo": "obra",
+        "fecha": "2026-11-13T16:06:13.000Z",
+        "fecha_raw": "2026-11-13T16:06:13.000Z",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "La Picada"
+        ],
+        "resumen": "La Picada",
+        "descripcion": "La Picada",
+        "enlace": "https://www.elonce.com/parana/la-municipalidad-realizo-obras-de-mantenimiento-y-mejoras-en-la-zona-sur-de-parana.htm",
+        "lat": -31.77132465006583,
+        "lon": -60.50489981348717,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "avenida Jorge",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-12-13T16:06:13.000Z",
+          "tipo": "estimada",
+          "detalle": "estimado: obra (30 días)"
+        },
+        "vigente_hasta": "2026-12-13T16:06:13.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.77132465006583,
+                -60.50489981348717
+              ]
+            ],
+            "calle": "La Picada",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "También se realizaron tareas de poda correctiva en plaza Jardines del Sur, desmalezado y poda en las vecinales 170 Viviendas y Parque Mayor, y corte de pasto en plaza El Progreso, ubicada en el sector de calles Ciudad de Viale y La Picada.",
+            "entre": "",
+            "texto": "La Picada"
+          }
+        ],
+        "puntos": [
+          [
+            -31.77132465006583,
+            -60.50489981348717
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-20T11:26:27.887Z",
+      "ultima_vez_vista": "2026-11-20T11:26:27.887Z",
       "recuperada": false
     },
     "parana|crisologo larralde entre avenida de las americas y division de los andes|obra en la via publica": {
@@ -380,147 +583,6 @@
       "fuente_tipo": "noticia",
       "primera_vez": "2026-11-20T01:44:05.549Z",
       "ultima_vez_vista": "2026-11-20T01:44:05.549Z",
-      "recuperada": true
-    },
-    "parana|corrientes~urquiza|obra en la via publica": {
-      "item": {
-        "id": "elonce-obras:Modifican temporalmente el acceso al Palacio Munic…",
-        "titulo": "Modifican temporalmente el acceso al Palacio Municipal de Paraná por obras en la fachada",
-        "categoria": "obras",
-        "tipo": "obra",
-        "fecha": "2026-11-24T13:26:15.000Z",
-        "fecha_raw": "2026-11-24T13:26:15.000Z",
-        "horario": null,
-        "motivo": "Obra en la vía pública",
-        "franja": "",
-        "calles": [
-          "Corrientes",
-          "Urquiza"
-        ],
-        "resumen": "Corrientes · Urquiza",
-        "descripcion": "Corrientes · Urquiza",
-        "enlace": "https://www.elonce.com/parana/modifican-temporalmente-el-acceso-al-palacio-municipal-de-parana-por-obras-en-la-fachada.htm",
-        "lat": -31.725549985907072,
-        "lon": -60.525251049610766,
-        "sin_ubicacion": false,
-        "localidad": "Paraná",
-        "provincia": "Entre Ríos",
-        "via": "calle Corrientes",
-        "km_desde": null,
-        "km_hasta": null,
-        "vigencia": {
-          "hasta": "2026-12-24T13:26:15.000Z",
-          "tipo": "estimada",
-          "detalle": "estimado: obra (30 días)"
-        },
-        "vigente_hasta": "2026-12-24T13:26:15.000Z",
-        "fuente_tipo": "noticia",
-        "segmentos": [
-          {
-            "puntos": [
-              [
-                -31.725549985907072,
-                -60.525251049610766
-              ]
-            ],
-            "calle": "Corrientes",
-            "desde": null,
-            "hasta": null,
-            "motivo": "Obra en la vía pública",
-            "franja": "",
-            "ctx": "Durante varias jornadas, el acceso estará habilitado por el sector del estacionamiento, sobre calle Corrientes.",
-            "entre": "",
-            "texto": "Corrientes"
-          },
-          {
-            "puntos": [
-              [
-                -31.734644892353597,
-                -60.522868344539724
-              ]
-            ],
-            "calle": "Urquiza",
-            "desde": null,
-            "hasta": null,
-            "motivo": "Obra en la vía pública",
-            "franja": "",
-            "ctx": "El acceso al Palacio Municipal de Paraná será modificado temporalmente debido a los trabajos de restauración y puesta en valor de la fachada del edificio ubicado en la intersección de calles Urquiza y Corrientes.",
-            "entre": "",
-            "texto": "Urquiza"
-          }
-        ],
-        "puntos": [
-          [
-            -31.725549985907072,
-            -60.525251049610766
-          ]
-        ]
-      },
-      "fuente_tipo": "noticia",
-      "primera_vez": "2026-11-24T15:51:42.116Z",
-      "ultima_vez_vista": "2026-11-24T15:51:42.116Z",
-      "recuperada": true
-    },
-    "parana|la picada|obra en la via publica": {
-      "item": {
-        "id": "elonce-obras:La Municipalidad realizó obras de mantenimiento y…",
-        "titulo": "La Municipalidad realizó obras de mantenimiento y mejoras en la zona sur de Paraná",
-        "categoria": "obras",
-        "tipo": "obra",
-        "fecha": "2026-11-13T16:06:13.000Z",
-        "fecha_raw": "2026-11-13T16:06:13.000Z",
-        "horario": null,
-        "motivo": "Obra en la vía pública",
-        "franja": "",
-        "calles": [
-          "La Picada"
-        ],
-        "resumen": "La Picada",
-        "descripcion": "La Picada",
-        "enlace": "https://www.elonce.com/parana/la-municipalidad-realizo-obras-de-mantenimiento-y-mejoras-en-la-zona-sur-de-parana.htm",
-        "lat": -31.77132465006583,
-        "lon": -60.50489981348717,
-        "sin_ubicacion": false,
-        "localidad": "Paraná",
-        "provincia": "Entre Ríos",
-        "via": "avenida Jorge",
-        "km_desde": null,
-        "km_hasta": null,
-        "vigencia": {
-          "hasta": "2026-12-13T16:06:13.000Z",
-          "tipo": "estimada",
-          "detalle": "estimado: obra (30 días)"
-        },
-        "vigente_hasta": "2026-12-13T16:06:13.000Z",
-        "fuente_tipo": "noticia",
-        "segmentos": [
-          {
-            "puntos": [
-              [
-                -31.77132465006583,
-                -60.50489981348717
-              ]
-            ],
-            "calle": "La Picada",
-            "desde": null,
-            "hasta": null,
-            "motivo": "Obra en la vía pública",
-            "franja": "",
-            "ctx": "También se realizaron tareas de poda correctiva en plaza Jardines del Sur, desmalezado y poda en las vecinales 170 Viviendas y Parque Mayor, y corte de pasto en plaza El Progreso, ubicada en el sector de calles Ciudad de Viale y La Picada.",
-            "entre": "",
-            "texto": "La Picada"
-          }
-        ],
-        "puntos": [
-          [
-            -31.77132465006583,
-            -60.50489981348717
-          ]
-        ]
-      },
-      "fuente_tipo": "noticia",
-      "primera_vez": "2026-11-20T11:26:27.887Z",
-      "ultima_vez_vista": "2026-11-20T11:26:27.887Z",
       "recuperada": true
     },
     "parana|hernandarias~valentin torra|mantenimiento de red de agua": {

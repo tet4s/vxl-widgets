@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-25T19:56:46.668Z",
-  "timestamp_epoch": 1795636606,
+  "last_updated": "2026-11-26T02:47:36.301Z",
+  "timestamp_epoch": 1795661256,
   "total_noticias": 70,
   "window_days": 7,
   "categorias": [
@@ -63,19 +63,6 @@
     }
   ],
   "noticias": [
-    {
-      "titulo": "Yerba mate en San Pedro, productores buscan que el aporte al Convenio de Corresponsabilidad Gremial sea optativo",
-      "resumen": "El Concejo Deliberante declaró de interés municipal el reclamo del sector yerbatero para modificar el régimen vigente. Mientras los productores cuestionan el impacto económico del aporte obligatorio, desde el sindicato de tareferos proponen que los $37.000 millones recaudados en Misiones permanezcan en la provincia y se destinen a los trabajadores rurales.",
-      "titulo_info": "Productores de yerba mate en San Pedro piden que el aporte al Convenio de Corresponsabilidad Gremial sea optativo, con reclamo declarado de interés municipal",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-25T19:53:16.719Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/25/929331-yerba-mate-en-san-pedro-productores-buscan-que-el-aporte-al-convenio-de-corresponsabilidad-gremial-sea-optativo",
-      "fuente": "Territorio Digital"
-    },
     {
       "titulo": "LA CLOTILDE: ZDERO DECIDIÓ NO PRESENTAR CANDIDATOS Y PRIORIZAR LA INSTITUCIONALIDAD TRAS EL FALLECIMIENTO DEL INTENDENTE",
       "resumen": "",
@@ -153,6 +140,19 @@
       ],
       "url": "/politica/reforma-electoral-en-entre-rios-cuando-suspenderian-las-paso.htm",
       "fuente": "Elonce Política"
+    },
+    {
+      "titulo": "Yerba mate en San Pedro, productores buscan que el aporte al Convenio de Corresponsabilidad Gremial sea optativo",
+      "resumen": "El Concejo Deliberante declaró de interés municipal el reclamo del sector yerbatero para modificar el régimen vigente. Mientras los productores cuestionan el impacto económico del aporte obligatorio, desde el sindicato de tareferos proponen que los $37.000 millones recaudados en Misiones permanezcan en la provincia y se destinen a los trabajadores rurales.",
+      "titulo_info": "Productores de yerba mate en San Pedro piden que el aporte al Convenio de Corresponsabilidad Gremial sea optativo, con reclamo declarado de interés municipal",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-25T19:53:16.719Z",
+      "jurisdiccion": "misiones",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.territoriodigital.com/noticias/2026/11/25/929331-yerba-mate-en-san-pedro-productores-buscan-que-el-aporte-al-convenio-de-corresponsabilidad-gremial-sea-optativo",
+      "fuente": "Territorio Digital"
     },
     {
       "titulo": "Agenda en tensión. La puja entre Pro y los gobernadores aliados complica los acuerdos de Menem para aprobar el presupuesto 2027",

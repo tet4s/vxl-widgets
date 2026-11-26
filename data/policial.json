@@ -1,33 +1,33 @@
 {
-  "last_updated": "2026-11-25T19:57:15.243Z",
-  "timestamp_epoch": 1795636635,
-  "total_noticias": 33,
+  "last_updated": "2026-11-26T02:48:04.642Z",
+  "timestamp_epoch": 1795661284,
+  "total_noticias": 21,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 8
+      "total": 6
     },
     {
       "id": "allanamientos",
       "nombre": "ALLANAMIENTOS",
-      "total": 4
+      "total": 3
     },
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 8
+      "total": 2
     },
     {
       "id": "causas",
       "nombre": "CAUSAS",
-      "total": 5
+      "total": 4
     },
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 8
+      "total": 6
     }
   ],
   "noticias": [
@@ -260,138 +260,6 @@
       "lugar": "Federación",
       "categorias": [
         "hechos"
-      ]
-    },
-    {
-      "titulo": "Secuestraron más de $1,6 millones y celulares en tres allanamientos por narcomenudeo",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/narcomenudeo-secuestraron-1-6-millones-en-tres-allanamientos.htm",
-      "fecha": "2026-11-21T01:13:34.475Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "allanamientos"
-      ]
-    },
-    {
-      "titulo": "Abigeato en las islas de Victoria: detuvieron a un segundo sospechoso y sería el padre del primer arrestado",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/abigeato-en-victoria-detuvieron-a-un-segundo-sospechoso.htm",
-      "fecha": "2026-11-21T00:36:47.240Z",
-      "fuente": "Elonce",
-      "lugar": "Victoria",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Allanaron la vivienda de un policía por su presunta vinculación con un siniestro vial y fuga en Villa Adela",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/policia-allanado-siniestro-vial-fuga-villa-adela-concordia.htm",
-      "fecha": "2026-11-21T00:33:13.249Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "Asaltaron a una pareja en un parque de Concepción del Uruguay: un joven fue herido con un arma blanca",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/asaltaron-a-una-pareja-en-un-parque-de-concepcion-del-uruguay-un-joven-fue-herido-con-un-arma-blanca.htm",
-      "fecha": "2026-11-21T00:12:24.975Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Estafa en Villaguay: recuperaron un elevador valuado en $8 millones en Gualeguay",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/estafa-villaguay-elevador-ocho-millones-gualeguay.htm",
-      "fecha": "2026-11-21T00:12:24.975Z",
-      "fuente": "Elonce",
-      "lugar": "Villaguay",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "La defensa de Pity Álvarez apelará la condena, pero destacó el beneficio de la prisión domiciliaria",
-      "descripcion": "El abogado Javier Baños calificó como \"salomónico\" el fallo del Tribunal Oral N° 29 que impuso 12 años de pena al músico por el crimen de Cristian Díaz. Señaló que aguardan conocer los fundamentos para recurrir la resolución mientras el artista cumple la medida en su vivienda.",
-      "url": "https://www.ellitoral.com/sucesos/defensa-pity-alvarez-apelara-condena-destaco-beneficio-prision-domiciliaria_0_hum0MUC4Mg.html",
-      "fecha": "2026-11-20T23:48:14.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "causas"
-      ]
-    },
-    {
-      "titulo": "Detuvieron a un ganadero acusado de estafar a productores santafesinos por 129 vacunos",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/detuvieron-a-un-ganadero-acusado-de-estafar-a-productores-santafesinos-por-129-vacunos.htm",
-      "fecha": "2026-11-20T23:08:07.623Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Un poste cayó sobre un motociclista mientras circulaba en Santa Fe y lo golpeó en la cabeza",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/un-poste-cayo-sobre-un-motociclista-mientras-circulaba-en-santa-fe-y-lo-golpeo-en-la-cabeza.htm",
-      "fecha": "2026-11-20T23:08:07.623Z",
-      "fuente": "Elonce",
-      "lugar": "Santa Fe",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "Relato salvaje: detuvieron a un hombre por el carnicero asesinado en Villa Guillermina",
-      "descripcion": "La víctima habría sido ejecutada a balazos luego de una discusión entre vecinos por el alto volumen de la música. La PDI secuestró armas de fuego y una camioneta.",
-      "url": "https://www.ellitoral.com/sucesos/relato-salvaje-detuvieron-hombre-carnicero-asesinado-villa-guillermina_0_gNCKkYa57a.html",
-      "fecha": "2026-11-20T22:54:03.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Rosario: detuvieron a dos sospechosos por un violento robo gracias al sistema de inteligencia artificial Lince",
-      "descripcion": "El dramático asalto al anciano derivó en dos allanamientos con secuestro de armas y drogas, luego de rastrear el vehículo utilizado durante el violento golpe.",
-      "url": "https://www.ellitoral.com/sucesos/rosario-inteligenciaartificial-lince-pdi-robo-policiadeinvestigaciones-allanamientos-santafe-noelianavone_0_Coaf05Wdfr.html",
-      "fecha": "2026-11-20T22:29:58.000Z",
-      "fuente": "El Litoral",
-      "lugar": "Rosario",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Estafas con construcción de viviendas: aclaran que los acusados aún no están imputados, pero avanza la investigación",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/estafas-con-construccion-de-viviendas-aclaran-que-los-acusados-aun-no-estan-imputados-pero-avanza-la-investigacion.htm",
-      "fecha": "2026-11-20T20:37:41.091Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Detuvieron a un ladrón serial de picaportes en el macrocentro de Santa Fe",
-      "descripcion": "El procedimiento fue realizado por la policía este viernes en inmediaciones de Junín y San Jerónimo, luego de que testigos alertaran sobre el robo de piezas metálicas las cercanías.",
-      "url": "https://www.ellitoral.com/sucesos/detuvieron-ladron-serial-picaportes-macrocentro-santafe-bronce_0_U35AcH9QGr.html",
-      "fecha": "2026-11-20T20:06:06.000Z",
-      "fuente": "El Litoral",
-      "lugar": "Santa Fe",
-      "categorias": [
-        "detenciones"
       ]
     }
   ]
