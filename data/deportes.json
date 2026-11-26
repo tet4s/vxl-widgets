@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-26T12:19:10.512Z",
+  "actualizado": "2026-11-26T22:19:26.501Z",
   "ciudades": [
     {
       "id": "parana",
@@ -1767,25 +1767,25 @@
                   "pts": 11,
                   "pct": "83,3",
                   "ultimo": {
-                    "fecha": "2026-11-23T21:00:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "DEP. VIEDMA",
-                    "visitante": "GIMNASIA (LP)",
-                    "marcador_local": 86,
-                    "marcador_visitante": 70,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2173/114689",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2420/113230"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-26T21:00:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "QUILMES (MDP)",
                     "visitante": "DEP. VIEDMA",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2377/112559",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2173/114689"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-28T21:30:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "UNIÓN (MDP)",
+                    "visitante": "DEP. VIEDMA",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2377/112559",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2378/115029",
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2173/114689"
                   },
                   "cambio_fuente": null,
@@ -2211,26 +2211,26 @@
                   "pts": 11,
                   "pct": "37,5",
                   "ultimo": {
-                    "fecha": "2026-11-19T21:30:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "QUILMES (MDP)",
-                    "visitante": "RACING (A)",
-                    "marcador_local": 72,
-                    "marcador_visitante": 81,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2377/112559",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/83/113741"
-                  },
-                  "proximo": {
                     "fecha": "2026-11-26T21:00:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "QUILMES (MDP)",
                     "visitante": "DEP. VIEDMA",
+                    "marcador_local": 0,
+                    "marcador_visitante": 0,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2377/112559",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2173/114689"
+                  },
+                  "proximo": {
+                    "fecha": "2026-12-09T00:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "PERGAMINO BASQUET",
+                    "visitante": "QUILMES (MDP)",
                     "marcador_local": null,
                     "marcador_visitante": null,
                     "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2377/112559",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2173/114689"
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2254/114918",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/2377/112559"
                   },
                   "cambio_fuente": null,
                   "cambio": 0,

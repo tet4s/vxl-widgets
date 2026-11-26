@@ -1,33 +1,28 @@
 {
-  "last_updated": "2026-11-26T12:19:10.324Z",
-  "timestamp_epoch": 1795695550,
-  "total_noticias": 19,
+  "last_updated": "2026-11-26T22:19:26.261Z",
+  "timestamp_epoch": 1795731566,
+  "total_noticias": 10,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 6
+      "total": 3
     },
     {
       "id": "allanamientos",
       "nombre": "ALLANAMIENTOS",
-      "total": 2
-    },
-    {
-      "id": "detenciones",
-      "nombre": "DETENCIONES",
-      "total": 2
+      "total": 1
     },
     {
       "id": "causas",
       "nombre": "CAUSAS",
-      "total": 4
+      "total": 3
     },
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 5
+      "total": 3
     }
   ],
   "noticias": [
@@ -139,105 +134,6 @@
       "lugar": "Santa Fe",
       "categorias": [
         "hechos"
-      ]
-    },
-    {
-      "titulo": "Dictaron 60 días de prisión preventiva al acusado de intentar matar a su expareja en Santa Elena",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/dictaron-60-dias-de-prision-preventiva-al-acusado-de-intentar-matar-a-su-expareja-en-santa-elena.htm",
-      "fecha": "2026-11-21T20:57:13.664Z",
-      "fuente": "Elonce",
-      "lugar": "Santa Elena",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Choque frontal entre un auto y un camión en Ruta 12 dejó al menos un muerto",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/choque-frontal-entre-un-auto-y-un-camion-en-ruta-12-dejo-al-menos-un-muerto.htm",
-      "fecha": "2026-11-21T20:57:13.664Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "Femicidio seguido de suicidio en Paraná: asesinó a su pareja policía con el arma reglamentaria de ella",
-      "descripcion": "",
-      "url": "https://www.apfdigital.com.ar/noticias/2026/11/21/480210-femicidio-seguido-de-suicidio-en-parana-asesino-a-su-pareja-policia-con-el-arma-reglamentaria-de-ella",
-      "fecha": "2026-11-21T15:00:00.000Z",
-      "fuente": "APF Digital",
-      "lugar": "Paraná",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Concordia: hombre de 73 años atropelló a un menor, se fugó y volvió a chocar en otras zonas",
-      "descripcion": "",
-      "url": "https://www.apfdigital.com.ar/noticias/2026/11/21/480207-concordia-hombre-de-73-anos-atropello-a-un-menor-se-fugo-y-volvio-a-chocar-en-otras-zonas",
-      "fecha": "2026-11-21T15:00:00.000Z",
-      "fuente": "APF Digital",
-      "lugar": "Concordia",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "Condenan a un militar por violencia de género y ordenan una reparación millonaria",
-      "descripcion": "",
-      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/21/condenan-un-militar-por-violencia-de-genero-y-ordenan-una-reparacion-millonaria",
-      "fecha": "2026-11-21T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "causas"
-      ]
-    },
-    {
-      "titulo": "Dos camiones protagonizaron un siniestro en Ruta 14: uno chocó contra un guardarraíl y una columna",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/dos-camiones-protagonizaron-un-siniestro-en-ruta-14-uno-choco-contra-un-guardarrail-y-una-columna.htm",
-      "fecha": "2026-11-21T14:38:34.954Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "Nuevo femicidio en Santa Fe: un policía mató a su pareja y luego se quitó la vida",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/dos-policias-muertos-investigan-un-femicidio-seguido-de-suicidio.htm",
-      "fecha": "2026-11-21T14:38:34.954Z",
-      "fuente": "Elonce",
-      "lugar": "Santa Fe",
-      "categorias": [
-        "hechos"
-      ]
-    },
-    {
-      "titulo": "Robaron mercadería de un supermercado tras la detención del dueño por presunto abuso de un niño",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/robaron-mercaderia-de-un-supermercado-tras-la-detencion-del-dueno-por-presunto-abuso-de-un-nino.htm",
-      "fecha": "2026-11-21T14:38:34.954Z",
-      "fuente": "Elonce",
-      "lugar": "",
-      "categorias": [
-        "detenciones"
-      ]
-    },
-    {
-      "titulo": "Drogas y peleas: liberaron al novio por crimen de Yazmina Cañón",
-      "descripcion": "Liberaron al novio y sólo quedan dos detenidos por el caso. Se trata de un hombre y una mujer que son pareja. Serán imputados el próximo martes por la mañana.",
-      "url": "https://www.ellitoral.com/sucesos/drogas-peleas-mujeres-crimen-barrio-alvear-santafe_0_ez0mxhlINE.html",
-      "fecha": "2026-11-21T13:31:32.000Z",
-      "fuente": "El Litoral",
-      "lugar": "",
-      "categorias": [
-        "allanamientos"
       ]
     }
   ]

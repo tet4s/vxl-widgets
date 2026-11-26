@@ -1,60 +1,60 @@
 {
-  "last_updated": "2026-11-26T12:18:41.582Z",
-  "timestamp_epoch": 1795695521,
-  "total_noticias": 68,
+  "last_updated": "2026-11-26T22:19:01.317Z",
+  "timestamp_epoch": 1795731541,
+  "total_noticias": 45,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 32
+      "total": 21
     },
     {
       "id": "obras",
       "nombre": "OBRAS",
-      "total": 5
+      "total": 3
     },
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 24
+      "total": 17
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 10
+      "total": 7
     }
   ],
   "jurisdicciones": [
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 24
+      "total": 14
     },
     {
       "id": "santa_fe",
       "nombre": "SANTA FE",
-      "total": 8
+      "total": 6
     },
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 14
+      "total": 11
     },
     {
       "id": "corrientes",
       "nombre": "CORRIENTES",
-      "total": 4
+      "total": 3
     },
     {
       "id": "misiones",
       "nombre": "MISIONES",
-      "total": 9
+      "total": 5
     },
     {
       "id": "chaco",
       "nombre": "CHACO",
-      "total": 5
+      "total": 2
     },
     {
       "id": "formosa",
@@ -63,6 +63,71 @@
     }
   ],
   "noticias": [
+    {
+      "titulo": "Sesión 19: Es Ley la Declaración de Emergencia Climática e Hídrica en la provincia",
+      "resumen": "La Cámara de Diputados de la provincia de Corrientes, en su sesión 19 presida por Eduardo Tassano, sancionó con fuerza de ley la Declaración de Estado de Emergencia Climática e Hídrica en todo el territorio de la provincia por el término de 180 días, prorrogable por igual período, de mantenerse los eventos críticos climáticos e hídricos derivados de la “Corriente del Niño” que de manera actual …",
+      "titulo_info": "Diputados de Corrientes sancionaron ley de Emergencia Climática e Hídrica por 180 días",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-26T22:15:55.479Z",
+      "jurisdiccion": "corrientes",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://hcdcorrientes.gov.ar/sesion-19-es-ley-la-declaracion-de-emergencia-climatica-e-hidrica-en-la-provincia/",
+      "fuente": "Diputados Corrientes"
+    },
+    {
+      "titulo": "En un emotivo acto encabezado por el Gobernador Insfrán y el Vicegobernador Solís, 21 empleados y empleadas legislativas celebraron la finalización del secundario",
+      "resumen": "",
+      "titulo_info": "21 empleados legislativos terminaron el secundario en acto con Insfrán y Solís",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-26T22:15:55.017Z",
+      "jurisdiccion": "formosa",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.legislaturaformosa.gob.ar/notas/285/en-un-emotivo-acto-encabezado-por-el-gobernador-insfrn-y-el-vicegobernador-sols-21-empleados-y-empleadas-legislativas-celebraron-la-finalizacin-del-secundario",
+      "fuente": "Legislatura Formosa"
+    },
+    {
+      "titulo": "Sesión 18: Media Sanción para el Plan de Prevención de la Ludopatía Online",
+      "resumen": "La Cámara de Diputados de Corrientes, presidida por Eduardo Tassano, en su sesión 18 otorgó media sanción al proyecto de ley que crea el Plan Provincial de Prevención de la Ludopatía online en el ámbito educativo, destinado a estudiantes de los niveles obligatorios del sistema educativo, de gestión pública y privada, en el ámbito de la Provincia.",
+      "titulo_info": "Diputados de Corrientes dio media sanción al Plan Provincial de Prevención de la Ludopatía Online en el ámbito educativo",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-26T22:15:55.479Z",
+      "jurisdiccion": "corrientes",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://hcdcorrientes.gov.ar/sesion-18-media-sancion-para-el-plan-de-prevencion-de-la-ludopatia-online/",
+      "fuente": "Diputados Corrientes"
+    },
+    {
+      "titulo": "El Vicegobernador el Dr. Eber Solís, recibió a estudiantes de Laguna Blanca en la última visita del año",
+      "resumen": "",
+      "titulo_info": "Vicegobernador Eber Solís recibió a estudiantes de Laguna Blanca en última visita del año",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-26T22:15:55.017Z",
+      "jurisdiccion": "formosa",
+      "categorias": [
+        "gobierno"
+      ],
+      "url": "https://www.legislaturaformosa.gob.ar/notas/284/el-vicegobernador-el-dr-eber-sols-recibi-a-estudiantes-de-laguna-blanca-en-la-ltima-visita-del-ao",
+      "fuente": "Legislatura Formosa"
+    },
+    {
+      "titulo": "Día Histórico: se sancionó la ley que declara la necesidad de reforma de la Constitución Provincial",
+      "resumen": "",
+      "titulo_info": "Se sancionó la ley que declara la necesidad de reforma de la Constitución Provincial",
+      "titulo_info_src": "llm",
+      "fecha": "2026-11-26T22:15:55.017Z",
+      "jurisdiccion": "formosa",
+      "categorias": [
+        "leyes"
+      ],
+      "url": "https://www.legislaturaformosa.gob.ar/notas/279/da-histrico-se-sancion-la-ley-que-declara-la-necesidad-de-reforma-de-la-constitucin-provincial",
+      "fuente": "Legislatura Formosa"
+    },
     {
       "titulo": "LA CLOTILDE: ZDERO DECIDIÓ NO PRESENTAR CANDIDATOS Y PRIORIZAR LA INSTITUCIONALIDAD TRAS EL FALLECIMIENTO DEL INTENDENTE",
       "resumen": "",
@@ -584,370 +649,6 @@
         "leyes"
       ],
       "url": "https://www.clarin.com/videos/patricia-bullrich-votando-simplemente-ley-acuerdo-social-politico_3_TPeXrOB0Pa.html",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "Senado sancionó la ley de Herramientas para el Fortalecimiento de la Seguridad en Santa Fe",
-      "resumen": "Sobre tablas, se aceptaron los cambios de fondo que el otro cuerpo había hecho al mensaje del Poder Ejecutivo Provincial. Ahora solo resta la promulgación para una iniciativa muy discutida dentro de Unidos, que se había iniciado en mayo.",
-      "titulo_info": "El Senado santafesino sancionó la ley de Fortalecimiento de la Seguridad tras aceptar cambios del Ejecutivo Provincial, a la espera de promulgación",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T22:12:05.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.ellitoral.com/politica/maximilianopullaro-camaradesenadores-santafe-seguridadpublica-felipemichlig-rodrigoborla-unioncivicaradical-partidosocialista-codigoprocesalpenal_0_YY3Yy7hfU5.html",
-      "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "Marcelo Lewandowski: “Esta ley no es buena pero es la mejor ley que podemos sancionar hoy”",
-      "resumen": "“Lo vamos a acompañar pero vamos a tener siempre la sensación de que no van a querer aplicarla, de que van a encontrar siempre un pero, una cuestión presupuestaria”, señaló el senador santafecino.",
-      "titulo_info": "Lewandowski: Acompañamos ley de presupuesto santafesino, pero tememos que no la apliquen",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T21:22:35.642Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.clarin.com/videos/marcelo-lewandowski-ley-buena-mejor-ley-podemos-sancionar-hoy_3_BSC8SoMt9i.html",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "Mauricio González confirmó la fecha para las elecciones en Sarmiento",
-      "resumen": "A través de un video publicado en sus redes sociales, el presidente de Sarmiento anunció la presentación del balance y la renovación total de autoridades.",
-      "titulo_info": "Sarmiento: González confirmó fecha de elecciones y renovación de autoridades",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T21:22:35.465Z",
-      "jurisdiccion": "chaco",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.datachaco.com/654809-mauricio-gonzalez-confirmo-la-fecha-para-las-elecciones-en-sarmiento",
-      "fuente": "DataChaco"
-    },
-    {
-      "titulo": "Aún sin las PASO, el calendario electoral habilitaría a la oposición a hacer internas partidarias",
-      "resumen": "Si el Gobierno logra su objetivo de cambiar las reglas para 2027, los partidos tendrían hasta agosto para inscribir alianzas y candidatos. Eso estiraría el período de “rosca”, pero también el plazo para una eventual interna con los afiliados propios y los independientes.",
-      "titulo_info": "Oposición podría hacer internas partidarias sin PASO si el Gobierno cambia calendario electoral",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T21:22:35.534Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/19/aun-sin-las-paso-el-calendario-electoral-habilitaria-a-la-oposicion-a-hacer-internas-partidarias/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "El Tribunal Superior de Justicia porteño limitó la actualización de intereses por despido a la nueva ley de Modernización Laboral",
-      "resumen": "Revocó un fallo de la Cámara Nacional de Apelaciones del Trabajo y dispuso que se aplique el artículo 55 de la nueva norma, que establece un piso y un techo",
-      "titulo_info": "TSJ porteño limita actualización de intereses por despido a ley de Modernización Laboral",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T21:22:35.168Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/el-tribunal-superior-de-justicia-porteno-limito-la-actualizacion-de-intereses-por-despido-a-la-nueva-nid18112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "“El espíritu del gobernador es que no se muera una cooperativa” dijo el ministro Vilchez",
-      "resumen": "El titular de Acción Cooperativa habló de la situación en general de más de 500 entidades que funcionan en Misiones. Algunas están en delicada situación financiera. Sobre la Ceel Eldorado indicó que no habrá elecciones este año y hay una investigación en curso",
-      "titulo_info": "Misiones: ministro Vilchez defendió cooperativas en riesgo y apuntó a investigación en Ceel Eldorado",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:59:16.457Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928233-el-espiritu-del-gobernador-es-que-no-se-muera-una-cooperativa-dijo-el-ministro-vilchez",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "“Fue un viento fuerte”, lo que dejó la visita del Papa en la lucha por la ley de Discapacidad",
-      "resumen": "El sacerdote y coordinador del Foro Permanente para la Promoción y la Defensa de los Derechos de las Personas con Discapacidad, Pablo Molero, aseguró que la visita de León XIV a Argentina, y sobre todo su paso por el Cottolengo Don Orione de Claypole, ayudó a terminar de sellar un tema que venía en agenda desde hacía meses.",
-      "titulo_info": "Visita del Papa impulsó la ley de Discapacidad, según coordinador del Foro Permanente",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:48:05.482Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/19/fue-un-viento-fuerte-lo-que-dejo-la-visita-del-papa-en-la-lucha-por-la-ley-de-discapacidad/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "Primer freno de la Corte a un DNU de Milei: declaró inconstitucional la liberación de los precios de las prepagas",
-      "resumen": "El máximo tribunal confirmó una sentencia de la Cámara Federal de La Plata contra dos artículos del DNU 70/23, que eliminaron los límites a los aumentos de la medicina privada, y reafirmó los límites a los decretos de necesidad y urgencia",
-      "titulo_info": "Corte Suprema declaró inconstitucional DNU de Milei que liberaba precios de prepagas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/la-corte-declaro-inconstitucional-la-decision-de-milei-de-permitir-que-las-prepagas-fijen-libremente-nid19112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "El Senado se encamina a sancionar una nueva ley de discapacidad pese a las resistencias del Gobierno",
-      "resumen": "También se discute una serie de proyectos que incluyen la adhesión al tratado internacional de patentes y la reforma del régimen de propiedad privada; se acordó que la semana que viene abordará la iniciativa sobre ludopatía y la prórroga del Estatuto del Periodista",
-      "titulo_info": "El Senado avanza en ley de discapacidad pese a resistencias del Gobierno; trata patentes, propiedad privada, ludopatía y Estatuto del Periodista",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/el-senado-se-encamina-a-sancionar-una-nueva-ley-de-discapacidad-pese-a-las-resistencias-del-gobierno-nid19112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Acusan a la secretaria de Energía de favorecer a una empresa sancionada por operar en Malvinas",
-      "resumen": "",
-      "titulo_info": "Acusan a secretaria de Energía de favorecer a empresa sancionada por operar en Malvinas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:47:46.184Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/resizer/v2/una-de-las-operaciones-de-harbour-energy-en-DTXCRQADB5EK7FOCTMATZVGU4Y.JPG?auth=63877536892e8da9985adfb3495ef40ce9ca0ba9d0b5153fc98d139f9664e34a&width=300&height=130&quality=70&smart=true",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Gobernador Virasoro lanzó la Fiesta Nacional del Mate y la Amistad",
-      "resumen": "Tras la declaración de su principal evento turístico y cultural con carácter de fiesta nacional, autoridades de Gobernador Virasoro presentaron en la capital correntina los detalles de la celebración que será el fin de semana próximo, y que incluirá festivales así como charlas técnicas y recorridos turísticos por la localidad.",
-      "titulo_info": "Gobernador Virasoro lanzó la Fiesta Nacional del Mate y la Amistad en Corrientes",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:41.101Z",
-      "jurisdiccion": "corrientes",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.corrientes.gob.ar/29189/gobernador-virasoro-lanzo-la-fiesta-nacional-del-mate-y-la-amistad",
-      "fuente": "Gobierno de Corrientes"
-    },
-    {
-      "titulo": "En un emotivo acto encabezado por el Gobernador Insfrán y el Vicegobernador Solís, 21 empleados y empleadas legislativas celebraron la finalización del secundario",
-      "resumen": "",
-      "titulo_info": "21 empleados legislativos terminaron el secundario en acto con Insfrán y Solís",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:37.250Z",
-      "jurisdiccion": "formosa",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.legislaturaformosa.gob.ar/notas/285/en-un-emotivo-acto-encabezado-por-el-gobernador-insfrn-y-el-vicegobernador-sols-21-empleados-y-empleadas-legislativas-celebraron-la-finalizacin-del-secundario",
-      "fuente": "Legislatura Formosa"
-    },
-    {
-      "titulo": "El Gobierno y los gremios vuelven a reunirse este jueves en el marco de la paritaria estatal",
-      "resumen": "",
-      "titulo_info": "Gobierno y gremios estatales vuelven a negociar paritarias este jueves",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.810Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/provinciales/2026/11/19/el-gobierno-y-los-gremios-vuelven-reunirse-este-jueves-en-el-marco-de-la-paritaria-estatal",
-      "fuente": "Análisis Digital"
-    },
-    {
-      "titulo": "El Senado debate la nueva ley de Discapacidad y la restitución de la Ley de Tierras",
-      "resumen": "La Cámara alta sesionará este jueves desde las 11 con una agenda que incluye iniciativas sobre propiedad privada, patentes y derechos de niños, niñas y adolescentes. También se prevé la designación de representantes para el Comité Nacional para la Prevención de la Tortura.",
-      "titulo_info": "Senado debate ley de Discapacidad y restitución de Ley de Tierras, con otras iniciativas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.736Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928083-el-senado-debate-la-nueva-ley-de-discapacidad-y-la-restitucion-de-la-ley-de-tierras",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "Por falta de quorum, se cayó la sesión en Diputados que iba a tratar la ley de Malvinas y la reforma del Banco Central",
-      "resumen": "El oficialismo reunió 126 de los 129 legisladores necesarios para habilitar el debate y no pudo avanzar con dos proyectos impulsados por el Gobierno nacional. Las diferencias con bloques aliados por la integración del Consejo de la Magistratura y la ley de biocombustibles incidieron en las ausencias.",
-      "titulo_info": "Sesión en Diputados se cayó por falta de quorum y no trató ley de Malvinas ni reforma del Banco Central",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.736Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928062-por-falta-de-quorum-se-cayo-la-sesion-en-diputados-que-iba-a-tratar-la-ley-de-malvinas-y-la-reforma-del-banco-central",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "Villa Suramericana: hay 8.654 personas habilitadas para el sorteo de 104 viviendas construidas por el Gobierno provincial",
-      "resumen": "El Gobierno de Santa Fe publicó el padrón provisorio del complejo que se construyó para los Juegos Suramericanos, que registró 24.406 inscriptos para esta instancia. Quienes no resultaron podrán apelar los días 20 y 24 de noviembre.",
-      "titulo_info": "8.654 personas habilitadas para sorteo de 104 viviendas de Villa Suramericana en Santa Fe",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.552Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.santafe.gob.ar/noticias/noticia/287942/",
-      "fuente": "Gobierno de Santa Fe"
-    },
-    {
-      "titulo": "Santiago Ojeda será candidato a presidente de For Ever, con Héctor Gómez como vicepresidente",
-      "resumen": "La agrupación \"Volveremos\" difundió cómo se conformará la cúpula de la lista.",
-      "titulo_info": "Santiago Ojeda será candidato a presidente de For Ever con Héctor Gómez de vice",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.533Z",
-      "jurisdiccion": "chaco",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.datachaco.com/654759-santiago-ojeda-sera-candidato-a-presidente-de-for-ever-con-hector-gomez-como-vicepresidente",
-      "fuente": "DataChaco"
-    },
-    {
-      "titulo": "Sesión 19: Es Ley la Declaración de Emergencia Climática e Hídrica en la provincia",
-      "resumen": "",
-      "titulo_info": "Diputados de Corrientes sancionaron ley de Emergencia Climática e Hídrica por 180 días",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.701Z",
-      "jurisdiccion": "corrientes",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://hcdcorrientes.gov.ar/sesion-19-es-ley-la-declaracion-de-emergencia-climatica-e-hidrica-en-la-provincia/",
-      "fuente": "Diputados Corrientes"
-    },
-    {
-      "titulo": "El Vicegobernador el Dr. Eber Solís, recibió a estudiantes de Laguna Blanca en la última visita del año",
-      "resumen": "",
-      "titulo_info": "Vicegobernador Eber Solís recibió a estudiantes de Laguna Blanca en última visita del año",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:37.250Z",
-      "jurisdiccion": "formosa",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.legislaturaformosa.gob.ar/notas/284/el-vicegobernador-el-dr-eber-sols-recibi-a-estudiantes-de-laguna-blanca-en-la-ltima-visita-del-ao",
-      "fuente": "Legislatura Formosa"
-    },
-    {
-      "titulo": "Paritaria estatal: ATE cuestionó la suspensión de la audiencia y reclamó \"recuperar salarios",
-      "resumen": "",
-      "titulo_info": "ATE cuestionó suspensión de audiencia paritaria estatal y reclamó recuperar salarios",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.588Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/politica/la-paritaria-estatal-paso-a-cuarto-intermedio-ate-cuestiono-reclamo-recuperar-salarios.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "La Legislatura acompañó el desarrollo de un sistema de alertas ante incendios",
-      "resumen": "Estudiantes de quinto año de la Escuela Secundaria de Innovación desarrollaron Prisma Ignis, una herramienta tecnológica para mejorar la comunicación interna de la Cámara de Representantes ante situaciones de emergencia.",
-      "titulo_info": "Legislatura de Entre Ríos acompañó desarrollo de sistema de alertas ante incendios creado por estudiantes",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.736Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928176-la-legislatura-acompano-el-desarrollo-de-un-sistema-de-alertas-ante-incendios",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "Diputados debate la ley de soberanía sobre Malvinas y la reforma del Banco Central",
-      "resumen": "La Cámara baja sesionará este miércoles desde el mediodía con una agenda que incluye proyectos vinculados con la exploración de recursos en las islas, acuerdos comerciales internacionales y el traspaso de competencias judiciales. Será la primera de cinco sesiones previstas en el Congreso durante las próximas dos semanas.",
-      "titulo_info": "Diputados debaten ley de soberanía sobre Malvinas y reforma del Banco Central",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.736Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/18/927792-diputados-debate-la-ley-de-soberania-sobre-malvinas-y-la-reforma-del-banco-central",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "Suspensión de las PASO: el oficialismo logró dictamen en el Senado",
-      "resumen": "El proyecto contó con el apoyo de la UCR, y será tratado el próximo jueves 26.",
-      "titulo_info": "Oficialismo logró dictamen en el Senado para suspender las PASO",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.533Z",
-      "jurisdiccion": "chaco",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.datachaco.com/654767-suspension-de-las-paso-el-oficialismo-logro-dictamen-en-el-senado",
-      "fuente": "DataChaco"
-    },
-    {
-      "titulo": "Sesión 18: Media Sanción para el Plan de Prevención de la Ludopatía Online",
-      "resumen": "",
-      "titulo_info": "Diputados de Corrientes dio media sanción al Plan Provincial de Prevención de la Ludopatía Online en el ámbito educativo",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.701Z",
-      "jurisdiccion": "corrientes",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://hcdcorrientes.gov.ar/sesion-18-media-sancion-para-el-plan-de-prevencion-de-la-ludopatia-online/",
-      "fuente": "Diputados Corrientes"
-    },
-    {
-      "titulo": "Día Histórico: se sancionó la ley que declara la necesidad de reforma de la Constitución Provincial",
-      "resumen": "",
-      "titulo_info": "Se sancionó la ley que declara la necesidad de reforma de la Constitución Provincial",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:37.250Z",
-      "jurisdiccion": "formosa",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.legislaturaformosa.gob.ar/notas/279/da-histrico-se-sancion-la-ley-que-declara-la-necesidad-de-reforma-de-la-constitucin-provincial",
-      "fuente": "Legislatura Formosa"
-    },
-    {
-      "titulo": "Paritaria estatal en Entre Ríos: el Gobierno explicó por qué \"no pudo realizarse la audiencia",
-      "resumen": "",
-      "titulo_info": "El Gobierno de Entre Ríos explicó por qué no pudo realizarse la audiencia de paritaria estatal",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.588Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/politica/paritaria-estatal-en-entre-rios-el-gobierno-explico-por-que-no-pudo-realizarse-la-audiencia.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "Misiones invertirá más de $31.000 millones para ampliar y repavimentar la ruta nacional 14",
-      "resumen": "La obra abarcará unos 48 kilómetros entre Alem y Campo Viera e incluirá terceras trochas y carriles de adelantamiento. El presidente de Vialidad Provincial, Nicolás Mazal, confirmó que las ofertas están en etapa de análisis y que buscan iniciar los trabajos durante los primeros meses de 2027. También anticipó proyectos sobre las rutas provinciales 17 y 205 y la construcción de nuevos puentes.",
-      "titulo_info": "Misiones invertirá $31.000 millones para ampliar y repavimentar 48 km de la ruta nacional 14",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.736Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928113-misiones-invertira-mas-de-31000-millones-para-ampliar-y-repavimentar-la-ruta-nacional-14",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "Un diputado libertario deja el bloque oficialista tras denunciar un pacto con el gobernador peronista Osvaldo Jaldo en Tucumán",
-      "resumen": "",
-      "titulo_info": "Diputado libertario deja bloque oficialista en Tucumán tras denunciar pacto con gobernador peronista",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.634Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "",
       "fuente": "Clarín Política"
     }
   ]
