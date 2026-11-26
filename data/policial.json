@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-26T02:48:04.642Z",
-  "timestamp_epoch": 1795661284,
-  "total_noticias": 21,
+  "last_updated": "2026-11-26T12:19:10.324Z",
+  "timestamp_epoch": 1795695550,
+  "total_noticias": 19,
   "window_days": 5,
   "categorias": [
     {
@@ -12,7 +12,7 @@
     {
       "id": "allanamientos",
       "nombre": "ALLANAMIENTOS",
-      "total": 3
+      "total": 2
     },
     {
       "id": "detenciones",
@@ -27,7 +27,7 @@
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 6
+      "total": 5
     }
   ],
   "noticias": [
@@ -238,28 +238,6 @@
       "lugar": "",
       "categorias": [
         "allanamientos"
-      ]
-    },
-    {
-      "titulo": "Allanaron una vivienda por un violento hecho en Paraná y encontraron armas de fuego",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/allanamiento-en-parana-encontraron-armas-tras-una-agresion.htm",
-      "fecha": "2026-11-21T04:32:53.217Z",
-      "fuente": "Elonce",
-      "lugar": "Paraná",
-      "categorias": [
-        "allanamientos"
-      ]
-    },
-    {
-      "titulo": "Voraz incendio destruyó un auto y el comedor de un club de Federación: un hombre fue hospitalizado",
-      "descripcion": "",
-      "url": "https://www.elonce.com/policiales/incendio-en-federacion-un-auto-destruido-y-un-hombre-internado.htm",
-      "fecha": "2026-11-21T04:32:53.217Z",
-      "fuente": "Elonce",
-      "lugar": "Federación",
-      "categorias": [
-        "hechos"
       ]
     }
   ]

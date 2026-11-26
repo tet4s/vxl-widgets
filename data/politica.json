@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-11-26T02:47:36.301Z",
-  "timestamp_epoch": 1795661256,
-  "total_noticias": 70,
+  "last_updated": "2026-11-26T12:18:41.582Z",
+  "timestamp_epoch": 1795695521,
+  "total_noticias": 68,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 33
+      "total": 32
     },
     {
       "id": "obras",
       "nombre": "OBRAS",
-      "total": 6
+      "total": 5
     },
     {
       "id": "gobierno",
@@ -44,7 +44,7 @@
     {
       "id": "corrientes",
       "nombre": "CORRIENTES",
-      "total": 5
+      "total": 4
     },
     {
       "id": "misiones",
@@ -54,7 +54,7 @@
     {
       "id": "chaco",
       "nombre": "CHACO",
-      "total": 6
+      "total": 5
     },
     {
       "id": "formosa",
@@ -949,32 +949,6 @@
       ],
       "url": "",
       "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "La CAME pide que Diputados apruebe la nueva Ley de Biocombustibles",
-      "resumen": "La entidad sostuvo que la iniciativa \"representa una oportunidad para fortalecer el desarrollo productivo, atraer inversiones y generar nuevas posibilidades\".",
-      "titulo_info": "La CAME pide que Diputados apruebe la nueva Ley de Biocombustibles que busca fortalecer el desarrollo productivo y atraer inversiones",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.533Z",
-      "jurisdiccion": "chaco",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.datachaco.com/654762-la-came-pide-que-diputados-apruebe-la-nueva-ley-de-biocombustibles",
-      "fuente": "DataChaco"
-    },
-    {
-      "titulo": "Colonia Libertad acelera plan de obras en viviendas y la Ruta 25",
-      "resumen": "Los trabajos avanzaron por encima de las previsiones iniciales, con resultados visibles antes de cumplirse el primer año de gestión. La carretera es important",
-      "titulo_info": "Colonia Libertad acelera obras en viviendas y la Ruta 25, con trabajos que superan las previsiones iniciales",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T20:25:36.213Z",
-      "jurisdiccion": "corrientes",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.diarioepoca.com/1395330-colonia-libertad-acelera-plan-de-obras-en-viviendas-y-la-ruta-25",
-      "fuente": "Diario Época"
     }
   ]
 }
