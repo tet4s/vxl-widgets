@@ -1,6 +1,85 @@
 {
-  "actualizado": "2026-11-27T05:00:20.844Z",
+  "actualizado": "2026-11-27T15:03:01.719Z",
   "items": {
+    "santa fe|iturraspe~san jeronimo y salta|choque": {
+      "item": {
+        "id": "ellitoral:Santa Fe:2026-11-27",
+        "titulo": "El tránsito en la provincia de Santa Fe; la información minuto a minuto",
+        "categoria": "cortes",
+        "tipo": "corte_total",
+        "fecha": "2026-11-27T09:57:00-03:00",
+        "fecha_raw": "2026-11-27T09:57:00-03:00",
+        "horario": "de 14:30 a 15:30",
+        "motivo": "Choque",
+        "franja": "14:30 a 15:30",
+        "calles": [
+          "Iturraspe",
+          "San Jerónimo y Salta"
+        ],
+        "resumen": "Iturraspe · San Jerónimo y Salta",
+        "descripcion": "Iturraspe · San Jerónimo y Salta",
+        "enlace": "https://www.ellitoral.com/area-metropolitana/transito-santafe-rutas-autopistas-accesos-ciudaddesantafe-provincia-minuto-minuto_0_53iTyyYAeo.html",
+        "lat": -31.62541939504187,
+        "lon": -60.72092475848274,
+        "sin_ubicacion": false,
+        "localidad": "Santa Fe",
+        "provincia": "Santa Fe",
+        "via": "calle Iturraspe · ruta 9",
+        "km_desde": "8",
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-11-28T02:59:00.000Z",
+          "tipo": "diaria",
+          "detalle": "boletín del día"
+        },
+        "vigente_hasta": "2026-11-28T02:59:00.000Z",
+        "fuente_tipo": "estado",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.62541939504187,
+                -60.72092475848274
+              ]
+            ],
+            "calle": "Iturraspe",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Choque",
+            "franja": "",
+            "ctx": "Circunvalación altura calle Iturraspe.",
+            "entre": "",
+            "texto": "Iturraspe"
+          },
+          {
+            "puntos": [
+              [
+                -31.649928,
+                -60.7090169
+              ]
+            ],
+            "calle": "San Jerónimo",
+            "desde": "Salta",
+            "hasta": null,
+            "motivo": "Choque",
+            "franja": "14:30 a 15:30",
+            "ctx": "San Jerónimo y Salta (de 14:30 a 15:30 h). * Líneas 4, 5, 13, 14 y 18:",
+            "entre": "Salta",
+            "texto": "San Jerónimo y Salta"
+          }
+        ],
+        "puntos": [
+          [
+            -31.62541939504187,
+            -60.72092475848274
+          ]
+        ]
+      },
+      "fuente_tipo": "estado",
+      "primera_vez": "2026-11-27T15:03:01.719Z",
+      "ultima_vez_vista": "2026-11-27T15:03:01.719Z",
+      "recuperada": false
+    },
     "parana|25 de mayo~belgrano|obra en la via publica": {
       "item": {
         "id": "bing-apf-cortes:Con nuevos frentes continúa la obra de reconfigura…",
@@ -47,7 +126,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "viernes 27 de noviembre de 2026 23ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
+            "ctx": "viernes 27 de noviembre de 2026 25.5ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
             "entre": "",
             "texto": "25 de Mayo"
           },
@@ -78,6 +157,217 @@
       "fuente_tipo": "noticia",
       "primera_vez": "2026-11-19T21:15:35.976Z",
       "ultima_vez_vista": "2026-11-19T21:15:35.976Z",
+      "recuperada": false
+    },
+    "parana|diego mackinnon entre garrigo y las garzas~garrigo entre newbery y larralde|obra en la via publica": {
+      "item": {
+        "id": "bing-apf-cortes:Paraná: Tras dos años, se rehabilitó el tránsito e…",
+        "titulo": "Paraná: Tras dos años, se rehabilitó el tránsito en calle Garrigó, entre Newbery y Larralde",
+        "categoria": "obras",
+        "tipo": "obra",
+        "fecha": "2026-11-27T00:00:00-03:00",
+        "fecha_raw": "2026-11-27T00:00:00-03:00",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "Garrigó entre Newbery y Larralde",
+          "Diego Mackinnon entre Garrigó y Las Garzas"
+        ],
+        "resumen": "Garrigó entre Newbery y Larralde · Diego Mackinnon entre Garrigó y Las Garzas",
+        "descripcion": "Garrigó entre Newbery y Larralde · Diego Mackinnon entre Garrigó y Las Garzas",
+        "enlace": "https://www.apfdigital.com.ar/noticias/2020/02/01/352628-parana-tras-dos-anos-se-rehabilito-el-transito-en-calle-garrigo-entre-newbery-y-larralde",
+        "lat": -31.7740216,
+        "lon": -60.5070301,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "calle Garrigó",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-11-28T02:59:00.000Z",
+          "tipo": "diaria",
+          "detalle": "solo ese día"
+        },
+        "vigente_hasta": "2026-11-28T02:59:00.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.7740216,
+                -60.5070301
+              ],
+              [
+                -31.7752159,
+                -60.5072961
+              ],
+              [
+                -31.775272,
+                -60.5073086
+              ],
+              [
+                -31.7756704,
+                -60.5073882
+              ],
+              [
+                -31.7762202,
+                -60.5075164
+              ],
+              [
+                -31.7774278,
+                -60.5077642
+              ],
+              [
+                -31.778904,
+                -60.5080671
+              ]
+            ],
+            "calle": "Garrigó",
+            "desde": "Newbery",
+            "hasta": "Larralde",
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Tras dos años, se rehabilitó el tránsito en calle Garrigó, entre Newbery y Larralde – El intendente de la capital provincia, Adán Bahl, recorrió este viernes y supervisó los trabajos de mejoramiento de calles que se vienen realizando en distintas zonas de la ciudad • En este marco, estuvo en calle Garrigó, arteria que estaba cortada e intransitable en el tramo entre Newbery y Larralde • “Poco a po",
+            "vence": "2026-11-28T02:59:00.000Z",
+            "vigencia": "diaria",
+            "entre": "Newbery y Larralde",
+            "texto": "Garrigó entre Newbery y Larralde"
+          },
+          {
+            "puntos": [
+              [
+                -31.775272,
+                -60.5073086
+              ],
+              [
+                -31.7755064,
+                -60.5059017
+              ],
+              [
+                -31.7756412,
+                -60.5051631
+              ],
+              [
+                -31.7757732,
+                -60.5043265
+              ]
+            ],
+            "calle": "Diego Mackinnon",
+            "desde": "Garrigó",
+            "hasta": "Las Garzas",
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "En esa vecinal también se realizó el mejoramiento de calle Diego Mackinnon, entre Garrigó y Las Garzas.",
+            "entre": "Garrigó y Las Garzas",
+            "texto": "Diego Mackinnon entre Garrigó y Las Garzas"
+          }
+        ],
+        "puntos": [
+          [
+            -31.7740216,
+            -60.5070301
+          ],
+          [
+            -31.7752159,
+            -60.5072961
+          ],
+          [
+            -31.775272,
+            -60.5073086
+          ],
+          [
+            -31.7756704,
+            -60.5073882
+          ],
+          [
+            -31.7762202,
+            -60.5075164
+          ],
+          [
+            -31.7774278,
+            -60.5077642
+          ],
+          [
+            -31.778904,
+            -60.5080671
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-27T15:03:01.719Z",
+      "ultima_vez_vista": "2026-11-27T15:03:01.719Z",
+      "recuperada": false
+    },
+    "parana|crisologo larralde entre avenida de las americas y division de los andes|obra en la via publica": {
+      "item": {
+        "id": "bing-apf-obras:El Municipio de Paraná adjudicó dos importantes ob…",
+        "titulo": "El Municipio de Paraná adjudicó dos importantes obras de agua y cloaca por 14 millones de pesos",
+        "categoria": "obras",
+        "tipo": "obra",
+        "fecha": "2026-11-27T00:00:00-03:00",
+        "fecha_raw": "2026-11-27T00:00:00-03:00",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "Crisólogo Larralde entre Avenida de las Américas y División de los Andes"
+        ],
+        "resumen": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes",
+        "descripcion": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes",
+        "enlace": "https://www.apfdigital.com.ar/noticias/2018/08/13/329736-el-municipio-de-parana-adjudico-dos-importantes-obras-de-agua-y-cloaca-por-14-millones-de-pesos",
+        "lat": -31.7769427,
+        "lon": -60.5200978,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2027-03-27T03:00:00.000Z",
+          "tipo": "explicita",
+          "detalle": "120 días desde el 27/11 03:00"
+        },
+        "vigente_hasta": "2027-03-27T03:00:00.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.7769427,
+                -60.5200978
+              ],
+              [
+                -31.7770183,
+                -60.5195376
+              ]
+            ],
+            "calle": "Crisólogo Larralde",
+            "desde": "Avenida de las Américas",
+            "hasta": "División de los Andes",
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Crisólogo Larralde, entre Avenida de las Américas y División de los Andes; y Vecinal Parque Mayor, más precisamente en calles Estación Sosa, Las Garzas, La Picada, Aldea Santa María, Juan Garrigó, Aldea María Luisa y Villa Tabossi.",
+            "entre": "Avenida de las Américas y División de los Andes",
+            "texto": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes"
+          }
+        ],
+        "puntos": [
+          [
+            -31.7769427,
+            -60.5200978
+          ],
+          [
+            -31.7770183,
+            -60.5195376
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-20T01:44:05.549Z",
+      "ultima_vez_vista": "2026-11-20T01:44:05.549Z",
       "recuperada": false
     },
     "parana|montevideo~paraguay|obra en la via publica": {
@@ -126,7 +416,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "viernes 27 de noviembre de 2026 23ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+            "ctx": "viernes 27 de noviembre de 2026 25.5ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
             "entre": "",
             "texto": "Paraguay"
           },
@@ -142,7 +432,7 @@
             "hasta": null,
             "motivo": "Obra en la vía pública",
             "franja": "",
-            "ctx": "viernes 27 de noviembre de 2026 23ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+            "ctx": "viernes 27 de noviembre de 2026 25.5ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
             "entre": "",
             "texto": "Montevideo"
           }
@@ -250,6 +540,68 @@
       "ultima_vez_vista": "2026-11-09T21:18:10.563Z",
       "recuperada": false
     },
+    "parana|la paz|obra en la via publica": {
+      "item": {
+        "id": "bing-apf-corrientes:Paraná: Modifican los recorridos del transporte ur…",
+        "titulo": "Paraná: Modifican los recorridos del transporte urbano y metropolitano por trabajos en calles La Paz y Corrientes",
+        "categoria": "obras",
+        "tipo": "obra",
+        "fecha": "2026-11-27T00:00:00-03:00",
+        "fecha_raw": "2026-11-27T00:00:00-03:00",
+        "horario": null,
+        "motivo": "Obra en la vía pública",
+        "franja": "",
+        "calles": [
+          "La Paz"
+        ],
+        "resumen": "La Paz",
+        "descripcion": "La Paz",
+        "enlace": "https://www.apfdigital.com.ar/noticias/2026/10/19/475379-parana-modifican-los-recorridos-del-transporte-urbano-y-metropolitano-por-trabajos-en-calles-la-paz-y-corrientes",
+        "lat": -31.729742474037238,
+        "lon": -60.524545354427055,
+        "sin_ubicacion": false,
+        "localidad": "Paraná",
+        "provincia": "Entre Ríos",
+        "via": "",
+        "km_desde": null,
+        "km_hasta": null,
+        "vigencia": {
+          "hasta": "2026-12-27T03:00:00.000Z",
+          "tipo": "estimada",
+          "detalle": "estimado: obra (30 días)"
+        },
+        "vigente_hasta": "2026-12-27T03:00:00.000Z",
+        "fuente_tipo": "noticia",
+        "segmentos": [
+          {
+            "puntos": [
+              [
+                -31.729742474037238,
+                -60.524545354427055
+              ]
+            ],
+            "calle": "La Paz",
+            "desde": null,
+            "hasta": null,
+            "motivo": "Obra en la vía pública",
+            "franja": "",
+            "ctx": "Modifican los recorridos del transporte urbano y metropolitano por trabajos en calles La Paz y Corrientes La medida rige desde este lunes 19 de octubre, de manera temporal, e incluye modificaciones en ocho líneas del servicio público.",
+            "entre": "",
+            "texto": "La Paz"
+          }
+        ],
+        "puntos": [
+          [
+            -31.729742474037238,
+            -60.524545354427055
+          ]
+        ]
+      },
+      "fuente_tipo": "noticia",
+      "primera_vez": "2026-11-20T01:44:05.549Z",
+      "ultima_vez_vista": "2026-11-20T01:44:05.549Z",
+      "recuperada": false
+    },
     "parana|corrientes~urquiza|obra en la via publica": {
       "item": {
         "id": "elonce-obras:Modifican temporalmente el acceso al Palacio Munic…",
@@ -327,7 +679,7 @@
       "fuente_tipo": "noticia",
       "primera_vez": "2026-11-24T15:51:42.116Z",
       "ultima_vez_vista": "2026-11-24T15:51:42.116Z",
-      "recuperada": false
+      "recuperada": true
     },
     "parana|la picada|obra en la via publica": {
       "item": {
@@ -389,138 +741,6 @@
       "fuente_tipo": "noticia",
       "primera_vez": "2026-11-20T11:26:27.887Z",
       "ultima_vez_vista": "2026-11-20T11:26:27.887Z",
-      "recuperada": false
-    },
-    "parana|crisologo larralde entre avenida de las americas y division de los andes|obra en la via publica": {
-      "item": {
-        "id": "bing-apf-obras:El Municipio de Paraná adjudicó dos importantes ob…",
-        "titulo": "El Municipio de Paraná adjudicó dos importantes obras de agua y cloaca por 14 millones de pesos",
-        "categoria": "obras",
-        "tipo": "obra",
-        "fecha": "2026-11-25T00:00:00-03:00",
-        "fecha_raw": "2026-11-25T00:00:00-03:00",
-        "horario": null,
-        "motivo": "Obra en la vía pública",
-        "franja": "",
-        "calles": [
-          "Crisólogo Larralde entre Avenida de las Américas y División de los Andes"
-        ],
-        "resumen": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes",
-        "descripcion": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes",
-        "enlace": "https://www.apfdigital.com.ar/noticias/2018/08/13/329736-el-municipio-de-parana-adjudico-dos-importantes-obras-de-agua-y-cloaca-por-14-millones-de-pesos",
-        "lat": -31.7769427,
-        "lon": -60.5200978,
-        "sin_ubicacion": false,
-        "localidad": "Paraná",
-        "provincia": "Entre Ríos",
-        "via": "",
-        "km_desde": null,
-        "km_hasta": null,
-        "vigencia": {
-          "hasta": "2027-03-25T03:00:00.000Z",
-          "tipo": "explicita",
-          "detalle": "120 días desde el 25/11 03:00"
-        },
-        "vigente_hasta": "2027-03-25T03:00:00.000Z",
-        "fuente_tipo": "noticia",
-        "segmentos": [
-          {
-            "puntos": [
-              [
-                -31.7769427,
-                -60.5200978
-              ],
-              [
-                -31.7770183,
-                -60.5195376
-              ]
-            ],
-            "calle": "Crisólogo Larralde",
-            "desde": "Avenida de las Américas",
-            "hasta": "División de los Andes",
-            "motivo": "Obra en la vía pública",
-            "franja": "",
-            "ctx": "Crisólogo Larralde, entre Avenida de las Américas y División de los Andes; y Vecinal Parque Mayor, más precisamente en calles Estación Sosa, Las Garzas, La Picada, Aldea Santa María, Juan Garrigó, Aldea María Luisa y Villa Tabossi.",
-            "entre": "Avenida de las Américas y División de los Andes",
-            "texto": "Crisólogo Larralde entre Avenida de las Américas y División de los Andes"
-          }
-        ],
-        "puntos": [
-          [
-            -31.7769427,
-            -60.5200978
-          ],
-          [
-            -31.7770183,
-            -60.5195376
-          ]
-        ]
-      },
-      "fuente_tipo": "noticia",
-      "primera_vez": "2026-11-20T01:44:05.549Z",
-      "ultima_vez_vista": "2026-11-20T01:44:05.549Z",
-      "recuperada": true
-    },
-    "parana|la paz|obra en la via publica": {
-      "item": {
-        "id": "bing-apf-corrientes:Paraná: Modifican los recorridos del transporte ur…",
-        "titulo": "Paraná: Modifican los recorridos del transporte urbano y metropolitano por trabajos en calles La Paz y Corrientes",
-        "categoria": "obras",
-        "tipo": "obra",
-        "fecha": "2026-11-25T00:00:00-03:00",
-        "fecha_raw": "2026-11-25T00:00:00-03:00",
-        "horario": null,
-        "motivo": "Obra en la vía pública",
-        "franja": "",
-        "calles": [
-          "La Paz"
-        ],
-        "resumen": "La Paz",
-        "descripcion": "La Paz",
-        "enlace": "https://www.apfdigital.com.ar/noticias/2026/10/19/475379-parana-modifican-los-recorridos-del-transporte-urbano-y-metropolitano-por-trabajos-en-calles-la-paz-y-corrientes",
-        "lat": -31.729742474037238,
-        "lon": -60.524545354427055,
-        "sin_ubicacion": false,
-        "localidad": "Paraná",
-        "provincia": "Entre Ríos",
-        "via": "",
-        "km_desde": null,
-        "km_hasta": null,
-        "vigencia": {
-          "hasta": "2026-12-25T03:00:00.000Z",
-          "tipo": "estimada",
-          "detalle": "estimado: obra (30 días)"
-        },
-        "vigente_hasta": "2026-12-25T03:00:00.000Z",
-        "fuente_tipo": "noticia",
-        "segmentos": [
-          {
-            "puntos": [
-              [
-                -31.729742474037238,
-                -60.524545354427055
-              ]
-            ],
-            "calle": "La Paz",
-            "desde": null,
-            "hasta": null,
-            "motivo": "Obra en la vía pública",
-            "franja": "",
-            "ctx": "Modifican los recorridos del transporte urbano y metropolitano por trabajos en calles La Paz y Corrientes La medida rige desde este lunes 19 de octubre, de manera temporal, e incluye modificaciones en ocho líneas del servicio público.",
-            "entre": "",
-            "texto": "La Paz"
-          }
-        ],
-        "puntos": [
-          [
-            -31.729742474037238,
-            -60.524545354427055
-          ]
-        ]
-      },
-      "fuente_tipo": "noticia",
-      "primera_vez": "2026-11-20T01:44:05.549Z",
-      "ultima_vez_vista": "2026-11-20T01:44:05.549Z",
       "recuperada": true
     },
     "parana|hernandarias~valentin torra|mantenimiento de red de agua": {

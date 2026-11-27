@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-27T04:56:28.832Z",
-  "timestamp_epoch": 1795755388,
-  "total_noticias": 28,
+  "last_updated": "2026-11-27T14:56:15.328Z",
+  "timestamp_epoch": 1795791375,
+  "total_noticias": 19,
   "window_days": 7,
   "categorias": [
     {
@@ -12,7 +12,7 @@
           "titulo": "La mitad de los gimnasios perdió socios y el 43% no aumentó sus precios pese a la inflación",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.545Z",
+          "fecha": "2026-11-27T14:56:11.886Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -20,7 +20,7 @@
           "titulo": "“Definitivamente, no”: Luis Caputo negó que la suba del dólar vaya a impactar en la inflación",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.544Z",
+          "fecha": "2026-11-27T14:56:11.885Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -28,7 +28,7 @@
           "titulo": "Jubilaciones bajo presión: en tres años, el sistema perdió más de 500.000 aportantes a la seguridad social",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.542Z",
+          "fecha": "2026-11-27T14:56:11.883Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -37,7 +37,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-27T04:56:26.269Z",
-          "fechaFormateada": "Ahora",
+          "fechaFormateada": "Hace 9 hs",
           "fuente": "El Entre Ríos"
         },
         {
@@ -53,7 +53,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-25T09:45:34.677Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -61,14 +61,6 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-24T15:45:06.161Z",
-          "fechaFormateada": "Hace 2 días",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Subsidios e inflación: el plan al que apuesta el Gobierno para contener las subas y que le cuesta billones al Estado",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-24T15:45:06.160Z",
           "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         }
@@ -83,7 +75,7 @@
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-26T12:15:27.937Z",
-          "fechaFormateada": "Hace 16 hs",
+          "fechaFormateada": "Hace 1 día",
           "fuente": "Clarín"
         },
         {
@@ -91,7 +83,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-25T13:47:00.000Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "El Entre Ríos"
         },
         {
@@ -115,7 +107,7 @@
           "descripcion": "",
           "url": "https://www.elentrerios.com/",
           "fecha": "2026-11-24T12:19:56.000Z",
-          "fechaFormateada": "Hace 2 días",
+          "fechaFormateada": "Hace 3 días",
           "fuente": "El Entre Ríos"
         },
         {
@@ -144,7 +136,7 @@
           "titulo": "Black Friday: 75 shoppings se suman por primera vez con tres días de descuentos para empujar las ventas antes de las Fiestas",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.542Z",
+          "fecha": "2026-11-27T14:56:11.884Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
         },
@@ -152,16 +144,24 @@
           "titulo": "Consumo en rojo: las ventas en supermercados cayeron 3% en septiembre y acumulan nueve meses en baja",
           "descripcion": "",
           "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.542Z",
+          "fecha": "2026-11-27T14:56:11.884Z",
           "fechaFormateada": "Ahora",
           "fuente": "Clarín"
+        },
+        {
+          "titulo": "Las ventas en supermercados entrerrianos se derrumbaron 7,4% en septiembre más del doble que a nivel nacional",
+          "descripcion": "",
+          "url": "https://www.elentrerios.com/",
+          "fecha": "2026-11-27T08:53:29.000Z",
+          "fechaFormateada": "Hace 6 hs",
+          "fuente": "El Entre Ríos"
         },
         {
           "titulo": "La soda regresa a la mesa argentina: en sifón o botella, volvió a ponerse de moda y creció 11% el consumo",
           "descripcion": "",
           "url": "https://www.clarin.com/",
           "fecha": "2026-11-25T09:45:34.678Z",
-          "fechaFormateada": "Hace 1 día",
+          "fechaFormateada": "Hace 2 días",
           "fuente": "Clarín"
         },
         {
@@ -173,111 +173,14 @@
           "fuente": "El Entre Ríos"
         }
       ]
-    },
-    {
-      "id": "gobierno",
-      "nombre": "GOBIERNO",
-      "noticias": [
-        {
-          "titulo": "El dólar trepó a $ 1.630 y el riesgo país se dio vuelta: cedió a 1.067 puntos",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.545Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "“Definitivamente, no”: Luis Caputo negó que la suba del dólar vaya a impactar en la inflación",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.544Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "El Gobierno quiere dar “mayor certidumbre” y Caputo reveló que pidió a China usar parte del swap para pagar la deuda",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.543Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Los Grobo vende un molino harinero y una planta de acopio por US$ 5,5 millones para pagar una deuda a los bancos",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.543Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Bajó el dólar: el mercado cree que el Gobierno salió a intervenir y Caputo le da más “poder de fuego” al BCRA para controlarlo",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.541Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "El español Pablo Hernández de Cos sucederá a Christine Lagarde como presidente del Banco Central Europeo",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.541Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "Reforma del Banco Central: cuáles son las claves de la nueva Carta Orgánica y cómo cambiarán las funciones de la entidad",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.540Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "En una semana de tensión financiera, Caputo consiguió renovar más del 104% en el mercado de deuda",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.539Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "El destino del oro del Banco Central: según una auditoría, 1.000 lingotes fueron trasladados a Inglaterra en 2024",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.539Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        },
-        {
-          "titulo": "“Estamos saliendo del estancamiento”: la cosecha de granos récord trae un aluvión de dólares a la Argentina",
-          "descripcion": "",
-          "url": "https://www.clarin.com/",
-          "fecha": "2026-11-27T04:56:26.539Z",
-          "fechaFormateada": "Ahora",
-          "fuente": "Clarín"
-        }
-      ]
     }
   ],
   "noticias": [
     {
-      "titulo": "El dólar trepó a $ 1.630 y el riesgo país se dio vuelta: cedió a 1.067 puntos",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.545Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ],
-      "titulo_src": "llm"
-    },
-    {
       "titulo": "La mitad de los gimnasios perdió socios y el 43% no aumentó sus precios pese a la inflación",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.545Z",
+      "fecha": "2026-11-27T14:56:11.886Z",
       "fuente": "Clarín",
       "categorias": [
         "poder_adquisitivo"
@@ -288,41 +191,7 @@
       "titulo": "“Definitivamente, no”: Luis Caputo negó que la suba del dólar vaya a impactar en la inflación",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.544Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo",
-        "gobierno"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "El Gobierno quiere dar “mayor certidumbre” y Caputo reveló que pidió a China usar parte del swap para pagar la deuda",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.543Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "Los Grobo vende un molino harinero y una planta de acopio por US$ 5,5 millones para pagar una deuda a los bancos",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.543Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "Jubilaciones bajo presión: en tres años, el sistema perdió más de 500.000 aportantes a la seguridad social",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.542Z",
+      "fecha": "2026-11-27T14:56:11.885Z",
       "fuente": "Clarín",
       "categorias": [
         "poder_adquisitivo"
@@ -333,7 +202,7 @@
       "titulo": "Black Friday: 75 shoppings se suman por primera vez con tres días de descuentos para empujar las ventas antes de las Fiestas",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.542Z",
+      "fecha": "2026-11-27T14:56:11.884Z",
       "fuente": "Clarín",
       "categorias": [
         "consumo_masivo"
@@ -344,7 +213,7 @@
       "titulo": "Consumo en rojo: las ventas en supermercados cayeron 3% en septiembre y acumulan nueve meses en baja",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.542Z",
+      "fecha": "2026-11-27T14:56:11.884Z",
       "fuente": "Clarín",
       "categorias": [
         "consumo_masivo"
@@ -352,68 +221,24 @@
       "titulo_src": "llm"
     },
     {
-      "titulo": "Bajó el dólar: el mercado cree que el Gobierno salió a intervenir y Caputo le da más “poder de fuego” al BCRA para controlarlo",
+      "titulo": "Jubilaciones bajo presión: en tres años, el sistema perdió más de 500.000 aportantes a la seguridad social",
       "descripcion": "",
       "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.541Z",
+      "fecha": "2026-11-27T14:56:11.883Z",
       "fuente": "Clarín",
       "categorias": [
-        "gobierno"
+        "poder_adquisitivo"
       ],
       "titulo_src": "llm"
     },
     {
-      "titulo": "El español Pablo Hernández de Cos sucederá a Christine Lagarde como presidente del Banco Central Europeo",
+      "titulo": "Las ventas en supermercados entrerrianos se derrumbaron 7,4% en septiembre más del doble que a nivel nacional",
       "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.541Z",
-      "fuente": "Clarín",
+      "url": "https://www.elentrerios.com/",
+      "fecha": "2026-11-27T08:53:29.000Z",
+      "fuente": "El Entre Ríos",
       "categorias": [
-        "gobierno"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "Reforma del Banco Central: cuáles son las claves de la nueva Carta Orgánica y cómo cambiarán las funciones de la entidad",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.540Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "En una semana de tensión financiera, Caputo consiguió renovar más del 104% en el mercado de deuda",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.539Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "El destino del oro del Banco Central: según una auditoría, 1.000 lingotes fueron trasladados a Inglaterra en 2024",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.539Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
-      ],
-      "titulo_src": "llm"
-    },
-    {
-      "titulo": "“Estamos saliendo del estancamiento”: la cosecha de granos récord trae un aluvión de dólares a la Argentina",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-27T04:56:26.539Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "gobierno"
+        "consumo_masivo"
       ],
       "titulo_src": "llm"
     },
@@ -517,17 +342,6 @@
       "titulo_src": "llm"
     },
     {
-      "titulo": "Subsidios e inflación: el plan al que apuesta el Gobierno para contener las subas y que le cuesta billones al Estado",
-      "descripcion": "",
-      "url": "https://www.clarin.com/",
-      "fecha": "2026-11-24T15:45:06.160Z",
-      "fuente": "Clarín",
-      "categorias": [
-        "poder_adquisitivo"
-      ],
-      "titulo_src": "llm"
-    },
-    {
       "titulo": "Mercados alterados: los economistas ven más presión sobre el dólar y a Milei, que lo aguanta",
       "descripcion": "",
       "url": "https://www.clarin.com/",
@@ -582,18 +396,12 @@
     {
       "titulo": "Las petroleras cuestionan un proyecto que las obligaría a informar los aumentos de la nafta y el gasoil",
       "impacto": "SERVICIOS Y HOGAR",
-      "tiempo": "Hace 16 hs",
+      "tiempo": "Hace 1 día",
       "fuente": "Clarín"
     },
     {
       "titulo": "Black Friday: 75 shoppings se suman por primera vez con tres días de descuentos para empujar las ventas antes de las Fiestas",
       "impacto": "CONSUMO MASIVO",
-      "tiempo": "Ahora",
-      "fuente": "Clarín"
-    },
-    {
-      "titulo": "El dólar trepó a $ 1.630 y el riesgo país se dio vuelta: cedió a 1.067 puntos",
-      "impacto": "GOBIERNO",
       "tiempo": "Ahora",
       "fuente": "Clarín"
     }

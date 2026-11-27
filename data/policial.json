@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-27T04:58:22.385Z",
-  "timestamp_epoch": 1795755502,
-  "total_noticias": 25,
+  "last_updated": "2026-11-27T15:00:25.812Z",
+  "timestamp_epoch": 1795791625,
+  "total_noticias": 24,
   "window_days": 5,
   "categorias": [
     {
@@ -22,7 +22,7 @@
     {
       "id": "causas",
       "nombre": "CAUSAS",
-      "total": 8
+      "total": 7
     },
     {
       "id": "hechos",
@@ -148,17 +148,6 @@
       "fecha": "2026-11-26T15:00:00.000Z",
       "fuente": "Análisis Digital",
       "lugar": "Rosario",
-      "categorias": [
-        "causas"
-      ]
-    },
-    {
-      "titulo": "Intenso operativo en Concepción del Uruguay tras la fuga de un condenado",
-      "descripcion": "",
-      "url": "https://www.apfdigital.com.ar/noticias/2026/11/26/480675-intenso-operativo-en-concepcion-del-uruguay-tras-la-fuga-de-un-condenado",
-      "fecha": "2026-11-26T15:00:00.000Z",
-      "fuente": "APF Digital",
-      "lugar": "",
       "categorias": [
         "causas"
       ]
