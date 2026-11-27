@@ -1,45 +1,45 @@
 {
-  "last_updated": "2026-11-27T14:59:48.464Z",
-  "timestamp_epoch": 1795791588,
-  "total_noticias": 27,
+  "last_updated": "2026-11-27T23:27:07.624Z",
+  "timestamp_epoch": 1795822027,
+  "total_noticias": 13,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 6
+      "total": 4
     },
     {
       "id": "obras",
       "nombre": "OBRAS",
-      "total": 3
+      "total": 2
     },
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 14
+      "total": 6
     },
     {
       "id": "elecciones",
       "nombre": "ELECCIONES",
-      "total": 6
+      "total": 1
     }
   ],
   "jurisdicciones": [
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 7
+      "total": 2
     },
     {
       "id": "santa_fe",
       "nombre": "SANTA FE",
-      "total": 2
+      "total": 0
     },
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 8
+      "total": 2
     },
     {
       "id": "corrientes",
@@ -59,7 +59,7 @@
     {
       "id": "formosa",
       "nombre": "FORMOSA",
-      "total": 4
+      "total": 3
     }
   ],
   "noticias": [
@@ -230,190 +230,6 @@
         "gobierno"
       ],
       "url": "https://www.lanacion.com.ar/politica/la-puja-entre-pro-y-los-gobernadores-aliados-complica-los-acuerdos-de-menem-para-aprobar-el-nid22112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Pullaro inauguró el gasoducto Albarellos-Uranga: más de 850 familias accederán al servicio de gas natural",
-      "resumen": "La obra en el departamento Rosario contempla 15 kilómetros de gasoducto principal, una estación reguladora y 2 kilómetros de red de distribución domiciliaria. El proyecto fue desarrollado de manera conjunta entre Litoral Gas y las comunas.",
-      "titulo_info": "Pullaro inauguró el gasoducto Albarellos-Uranga para más de 850 familias",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T20:46:24.745Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "obras"
-      ],
-      "url": "https://www.santafe.gob.ar/noticias/noticia/287956/",
-      "fuente": "Gobierno de Santa Fe"
-    },
-    {
-      "titulo": "Estudiantes universitarios y de nivel superior ya pueden inscribirse para capacitarse sobre Boleta Única de Papel",
-      "resumen": "",
-      "titulo_info": "Estudiantes universitarios y de nivel superior se pueden capacitar sobre Boleta Única de Papel",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T20:45:13.049Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "/noticias/2026/11/20/480135-estudiantes-universitarios-y-de-nivel-superior-ya-pueden-inscribirse-para-capacitarse-sobre-boleta-unica-de-papel",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "“La transformación de Frigerio tiene que llegar a Paraná”: Renoldi lanzó su precandidatura a Intendenta",
-      "resumen": "",
-      "titulo_info": "Renoldi lanzó su precandidatura a Intendenta y pidió que la transformación de Frigerio llegue a Paraná",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T20:45:13.049Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/noticias/2026/11/20/480120-la-transformacion-de-frigerio-tiene-que-llegar-a-parana-renoldi-lanzo-su-precandidatura-a-intendenta",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "Agmer convocó a un paro de 48 horas para la semana que viene tras el cierre de la paritaria docente",
-      "resumen": "",
-      "titulo_info": "Agmer convocó a un paro de 48 horas tras el cierre de la paritaria docente",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T20:45:13.049Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/noticias/2026/11/20/480048-agmer-convoco-a-un-paro-de-48-horas-para-la-semana-que-viene-tras-el-cierre-de-la-paritaria-docente",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "Torres se adelanta a Milei, desdobla las elecciones y abre la pelea por Chubut",
-      "resumen": "El gobernador buscará un nuevo mandato y decidió que la provincia vote antes de las presidenciales. La movida anticipa una disputa con La Libertad Avanza y obliga al PJ a acelerar la definición de su candidato.",
-      "titulo_info": "Torres desdobla elecciones en Chubut y se adelanta a Milei para buscar reelección",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T20:37:39.926Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/20/torres-se-adelanta-a-milei-desdobla-las-elecciones-y-abre-la-pelea-por-chubut/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "Inscriben a la capacitación sobre Boleta Única de Papel para estudiantes universitarios y de nivel superior",
-      "resumen": "",
-      "titulo_info": "Capacitación sobre Boleta Única de Papel para estudiantes universitarios",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T20:37:39.473Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "/politica/inscriben-a-la-capacitacion-sobre-boleta-unica-de-papel-para-estudiantes-universitarios-y-de-nivel-superior.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "UPCN cuestionó al Gobierno por la suspensión de la reunión: \"La paritaria no está caída",
-      "resumen": "",
-      "titulo_info": "UPCN cuestiona al Gobierno por suspender reunión y afirma que paritaria no está caída",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T20:37:39.473Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/politica/upcn-aseguro-que-la-paritaria-estatal-sigue-vigente-y-cuestiono-al-gobierno-por-la-suspension.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "Fracaso de la paritaria: Agmer anunció 48 horas de paro",
-      "resumen": "",
-      "titulo_info": "Agmer anunció 48 horas de paro por fracaso de la paritaria",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T20:37:37.952Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "/provinciales/2026/11/20/fracaso-de-la-paritaria-agmer-anuncio-48-horas-de-paro",
-      "fuente": "Análisis Digital"
-    },
-    {
-      "titulo": "Los números de la Caja fueron parte del debate sobre el Presupuesto",
-      "resumen": "Antes de la sesión de este jueves 19, el tema fue parte de las conversaciones con el ministro de Economía. Y hubo números: el déficit proyectado sin la ley de reforma hubiera causado un rojo de 800 millones de pesos. Hoy es de 400 millones.",
-      "titulo_info": "Números de la Caja fueron parte del debate del Presupuesto provincial",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T19:27:51.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.ellitoral.com/politica/deficit-previsional-provincia-caja-jubilaciones-ley-emergencia-2024-debate-resultado_0_sKIJ2vzO1Q.html",
-      "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "Tras el fallo de la Corte. Rafecas asumió el caso AFA y se lo quedaría varios meses, pese a que su ascenso avanza en el Senado",
-      "resumen": "Ya recibió el expediente digital y si bien su pliego para camarista tomó estado parlamentario ayer, tanto en el Congreso como en Comodoro Py estiman que la Cámara alta recién estaría en condiciones de darle acuerdo en marzo o abril",
-      "titulo_info": "Rafecas asume caso AFA tras fallo de la Corte y podría retenerlo meses",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/rafecas-reasumio-el-caso-afa-y-se-lo-quedaria-varios-meses-pese-a-que-su-ascenso-avanza-en-el-senado-nid20112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Sobre tablas. Una sobrina del gobernador Gildo Insfrán fue designada en el Superior Tribunal de Formosa",
-      "resumen": "La Legislatura aprobó la designación de Grisel Mabel Insfrán, que era la secretaria Legal y Técnica de la gobernación desde 2019, cuando su tío inició su quinto mandato",
-      "titulo_info": "Sobrina de Insfrán, Grisel Mabel, designada en Superior Tribunal de Formosa",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T15:00:00.000Z",
-      "jurisdiccion": "formosa",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/una-sobrina-del-gobernador-gildo-insfran-fue-designada-en-el-superior-tribunal-de-formosa-nid20112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "El calendario electoral 2027. Torres confirmó que adelanta los comicios en Chubut y se extiende la ola de desdoblamientos",
-      "resumen": "El gobernador Ignacio Torres dispuso que los comicios provinciales se realizarán el 21 de marzo próximo; Neuquén, Tucumán, Santa Fe y Salta también separarán la competencia local de la nacional",
-      "titulo_info": "Torres adelantó los comicios en Chubut para el 21 de marzo, sumándose a la ola de desdoblamientos",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "elecciones"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/ignacio-torres-confirmo-que-adelanta-las-elecciones-en-chubut-y-se-extiende-la-ola-de-nid20112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Neuquén. Nadia Márquez busca ser la candidata a gobernadora de Milei, pero la ley de ficha limpia le impediría competir",
-      "resumen": "La senadora, quien reconoció que le gustaría acompañar en la fórmula al Presidente en 2027, podría ser ungida tras un congreso partidario de LLA; el obstáculo legal que podría marginarla de la carrera",
-      "titulo_info": "Nadia Márquez busca ser candidata a gobernadora de Milei en Neuquén pero la ley de ficha limpia podría impedirle competir",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes",
-        "gobierno",
-        "elecciones"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/nadia-marquez-busca-ser-la-candidata-a-gobernadora-de-milei-en-neuquen-pero-la-ley-de-ficha-limpia-nid20112026/",
-      "fuente": "La Nación Política"
-    },
-    {
-      "titulo": "Cambios, fallos y polémicas. El Senado aprobó la reforma del régimen de propiedad privada que restablece la Ley de Tierras",
-      "resumen": "Con 42 votos a favor y 26 en contra, el oficialismo consiguió la sanción definitiva de una iniciativa que afrontó modificaciones en ambas cámaras; el giro en la estrategia libertaria que destrabó el proyecto",
-      "titulo_info": "Senado aprobó reforma de propiedad privada que restablece Ley de Tierras con 42 votos a favor",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T15:00:00.000Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.lanacion.com.ar/politica/el-senado-aprobo-la-reforma-del-regimen-de-propiedad-privada-que-restablece-la-ley-de-tierras-nid19112026/",
       "fuente": "La Nación Política"
     }
   ]

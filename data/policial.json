@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-27T15:00:25.812Z",
-  "timestamp_epoch": 1795791625,
-  "total_noticias": 24,
+  "last_updated": "2026-11-27T23:27:36.786Z",
+  "timestamp_epoch": 1795822056,
+  "total_noticias": 21,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 3
+      "total": 1
     },
     {
       "id": "allanamientos",
@@ -27,7 +27,7 @@
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 8
+      "total": 7
     }
   ],
   "noticias": [
@@ -260,39 +260,6 @@
       "lugar": "",
       "categorias": [
         "causas"
-      ]
-    },
-    {
-      "titulo": "Un motociclista murió tras chocar contra un automóvil en el acceso a Crespo",
-      "descripcion": "",
-      "url": "https://www.apfdigital.com.ar/noticias/2026/11/22/480264-un-motociclista-murio-tras-chocar-contra-un-automovil-en-el-acceso-a-crespo",
-      "fecha": "2026-11-22T15:00:00.000Z",
-      "fuente": "APF Digital",
-      "lugar": "Crespo",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "Un camión volcó en la Ruta 6 y el tránsito estuvo interrumpido por más de cuatro horas",
-      "descripcion": "En horas de la madrugada de este domingo, aproximadamente a las 4.30 horas, se registró un siniestro vial a la altura del kilómetro 121 de la Ruta Provincial Nº 6, jurisdicción de Comisaría General Urquiza, a 5 km sobre el límite con el Departamento de Rosario del Tala.Un camión…",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/22/un-camion-volco-en-la-ruta-6-y-el-transito-estuvo-interrumpido-por-mas-de-cuatro-horas",
-      "fecha": "2026-11-22T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "Cuatro homicidios en cinco días en Santa Fe: un doble crimen y dos mujeres asesinadas",
-      "descripcion": "La ciudad de Santa Fe registró cuatro homicidios entre el lunes 16 y el viernes 20 de noviembre, en tres episodios ocurridos en distintos barrios. Los casos tuvieron características diferentes: una mujer asesinada en barrio Alvear, un padre y su hijo baleados en barrio Guadalupe…",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/22/cuatro-homicidios-en-cinco-dias-en-santa-fe-un-doble-crimen-y-dos-mujeres-asesinadas",
-      "fecha": "2026-11-22T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Santa Fe",
-      "categorias": [
-        "hechos"
       ]
     }
   ]
