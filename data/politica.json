@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-26T22:19:01.317Z",
-  "timestamp_epoch": 1795731541,
-  "total_noticias": 45,
+  "last_updated": "2026-11-27T04:58:21.625Z",
+  "timestamp_epoch": 1795755501,
+  "total_noticias": 33,
   "window_days": 7,
   "categorias": [
     {
       "id": "leyes",
       "nombre": "LEYES",
-      "total": 21
+      "total": 11
     },
     {
       "id": "obras",
@@ -17,7 +17,7 @@
     {
       "id": "gobierno",
       "nombre": "GOBIERNO",
-      "total": 17
+      "total": 15
     },
     {
       "id": "elecciones",
@@ -29,27 +29,27 @@
     {
       "id": "nacional",
       "nombre": "NACIONAL",
-      "total": 14
+      "total": 9
     },
     {
       "id": "santa_fe",
       "nombre": "SANTA FE",
-      "total": 6
+      "total": 4
     },
     {
       "id": "entre_rios",
       "nombre": "ENTRE RÍOS",
-      "total": 11
+      "total": 9
     },
     {
       "id": "corrientes",
       "nombre": "CORRIENTES",
-      "total": 3
+      "total": 2
     },
     {
       "id": "misiones",
       "nombre": "MISIONES",
-      "total": 5
+      "total": 3
     },
     {
       "id": "chaco",
@@ -494,162 +494,6 @@
       ],
       "url": "https://www.ellitoral.com/politica/legislatura-educacionfinanciera-ley-provincial-escuelassantafesinas_0_ZbTQ5ntJmQ.html",
       "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "El Senado aprobó la adhesión al Tratado global de Patentes y blindó la ley de Tierras",
-      "resumen": "Después de meses de tratamiento, se sancionó la ley de \"Inviolabilidad de la propiedad Privada\". Hay consenso en la \"ley Joaquín\" para la seguridad de espacios recreativos. Polémica por el régimen de cabotaje y una designación en el Comité Nacional para la Prevención de la Tortura.",
-      "titulo_info": "Senado aprobó adhesión al Tratado global de Patentes y ley de Tierras con límites a extranjerización",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T03:56:32.481Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/20/928353-el-senado-aprobo-la-adhesion-al-tratado-global-de-patentes-y-blindo-la-ley-de-tierras",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "La Ley de Tierras seguirá vigente: se mantienen los límites a la extranjerización de campos",
-      "resumen": "El proyecto se aprobó por 42 contra 26 votos que fueron aportados por el oficialismo y bloques aliados. Contempla los desalojos “expres” de los campos y viviendas usurpadas",
-      "titulo_info": "Ley de Tierras se mantiene vigente con límites a extranjerización y desalojos expres de campos usurpados",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T02:28:30.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.ellitoral.com/politica/leydetierrasrurales-inviolabilidaddepropiedadprivada-senado-desalojoexpres-leydeexpropiaciones-extranjerizaciondecampos-leypierri-dnu7023-regularizaciondominial_0_SEicloBxAA.html",
-      "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "El Senado convirtió en ley la adhesión argentina al Tratado de Patentes",
-      "resumen": "El proyecto se había aprobado orginalmente en 1998. Casi tres décadas después, el Gobierno de Javier Milei reactivó el debate y la Cámara alta le le dio sanción definitiva.",
-      "titulo_info": "Senado convirtió en ley adhesión argentina al Tratado de Patentes reactivado por el Gobierno de Milei",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T01:47:47.000Z",
-      "jurisdiccion": "santa_fe",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.ellitoral.com/politica/senado-estadosunidos-tratadodepatentes-federicosturzenegger-javiermilei-cilfa-cooperala-medicamentos-franciscopaoltroni_0_R5DU7GkZFu.html",
-      "fuente": "El Litoral Política"
-    },
-    {
-      "titulo": "El Gobernador acompañó los festejos por los 294 años de Saladas con inauguraciones y nuevos anuncios de obras",
-      "resumen": "Juan Pablo Valdés participó de las celebraciones por un nuevo aniversario de la localidad, que incluyeron la puesta en valor de la Sociedad Española, la habilitación de infraestructura deportiva y recreativa y el tradicional desfile cívico-militar. Además, anunció nuevas intervenciones para fortalecer el desarrollo urbano y productivo de la región.",
-      "titulo_info": "El Gobernador inauguró obras y anunció nuevas intervenciones en Saladas por su 294 aniversario",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T01:41:45.582Z",
-      "jurisdiccion": "corrientes",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.corrientes.gob.ar/29192/el-gobernador-acompano-los-festejos-por-los-294-anos-de-saladas-con-inauguraciones-y-nuevos-anuncios-de-obras",
-      "fuente": "Gobierno de Corrientes"
-    },
-    {
-      "titulo": "Ley de Discapacidad: las organizaciones acompañaron el tratamiento y celebraron la sanción",
-      "resumen": "Familias, personas con discapacidad y prestadores de salud se movilizaron para exigir el cumplimiento efectivo de la nueva norma.",
-      "titulo_info": "Organizaciones celebraron la sanción de la Ley de Discapacidad tras acompañar su tratamiento",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T01:41:40.292Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/20/ley-de-discapacidad-las-organizaciones-acompanaron-el-tratamiento-y-celebraron-la-sancion/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "Triunfo de Fredomis, la lista docente que de manera abierta respaldó el gobernador de Misiones",
-      "resumen": "Los datos preliminares, son favorables al Frente de Docentes Misioneros, en las dos ramas educativas. Recuerdan que recibió pleno acompañamiento del Movimiento por lo que Viene",
-      "titulo_info": "Fredomis, lista docente con respaldo del gobernador de Misiones, se perfila como ganadora en elecciones educativas",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T01:41:39.592Z",
-      "jurisdiccion": "misiones",
-      "categorias": [
-        "gobierno"
-      ],
-      "url": "https://www.territoriodigital.com/noticias/2026/11/19/928332-triunfo-de-fredomis-la-lista-docente-que-de-manera-abierta-respaldo-el-gobernador-de-misiones",
-      "fuente": "Territorio Digital"
-    },
-    {
-      "titulo": "El Senado sancionó la Ley de Inviolabilidad de la Propiedad, que ratifica la Ley de Tierras",
-      "resumen": "",
-      "titulo_info": "El Senado sancionó la Ley de Inviolabilidad de la Propiedad, ratificando la Ley de Tierras",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-20T01:41:39.949Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "El Senado aprobó por unanimidad una ley permanente de discapacidad: cuáles son los beneficios",
-      "resumen": "",
-      "titulo_info": "El Senado aprobó por unanimidad ley permanente de discapacidad con beneficios",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T23:58:53.130Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "/politica/el-senado-aprobo-por-unanimidad-una-ley-permanente-de-discapacidad-cuales-son-los-beneficios.htm",
-      "fuente": "Elonce Política"
-    },
-    {
-      "titulo": "El Senado aprobó por unanimidad la nueva Ley de Discapacidad",
-      "resumen": "El proyecto de Ley de Fortalecimiento, Sostenibilidad y Eficiencia Permanente del Sistema de Discapacidad contaba con media sanción de Diputados. La iniciativa replica prácticamente todo el esquema de beneficios establecido en la Ley 27.793, pero elimina su carácter de emergencia y transitoriedad.",
-      "titulo_info": "El Senado aprobó por unanimidad la nueva Ley de Discapacidad, que elimina el carácter de emergencia y transitoriedad de la ley anterior",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T23:03:47.945Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.pagina12.com.ar/2026/11/19/el-senado-aprobo-por-unanimidad-la-nueva-ley-de-discapacidad/",
-      "fuente": "Página/12 El País"
-    },
-    {
-      "titulo": "Por unanimidad en Senado, el fortalecimiento del sistema de discapacidad se transformó en ley",
-      "resumen": "",
-      "titulo_info": "El Senado aprobó por unanimidad el fortalecimiento del sistema de discapacidad, transformándolo en ley",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T23:03:45.742Z",
-      "jurisdiccion": "entre_rios",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "/noticias/2026/11/19/479976-por-unanimidad-en-senado-el-fortalecimiento-del-sistema-de-discapacidad-se-transformo-en-ley",
-      "fuente": "APF Digital"
-    },
-    {
-      "titulo": "El Senado aprobó la Ley de Fortalecimiento del Sistema de Discapacidad",
-      "resumen": "Con 71 votos a favor, la Cámara alta sancionó el proyecto de Fortalecimiento, Sostenibilidad y Eficacia Permanente del Sistema de Discapacidad.",
-      "titulo_info": "El Senado aprobó la Ley de Fortalecimiento del Sistema de Discapacidad con 71 votos a favor",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T23:03:47.204Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.clarin.com/videos/senado-aprobo-ley-fortalecimiento-sistema-discapacidad_3_SGyTVhKkuY.html",
-      "fuente": "Clarín Política"
-    },
-    {
-      "titulo": "Patricia Bullrich: “No estamos votando simplemente una ley, es un acuerdo social y político”",
-      "resumen": "“Lo vamos a votar todos porque detrás de esta ley hay familias, personas, discapacitados que han tenido situaciones difíciles, pero también se reconoce que ha habido emergencias, situaciones de falsedad, auditorías que dieron una cantidad de discapacitados que no tenían sentido y otros que vieron llegar una auditoria que no era correcta porque tuvieron que comprobar muchas veces su discapacidad…",
-      "titulo_info": "Patricia Bullrich: “No estamos votando simplemente una ley, es un acuerdo social y político",
-      "titulo_info_src": "llm",
-      "fecha": "2026-11-19T23:03:47.204Z",
-      "jurisdiccion": "nacional",
-      "categorias": [
-        "leyes"
-      ],
-      "url": "https://www.clarin.com/videos/patricia-bullrich-votando-simplemente-ley-acuerdo-social-politico_3_TPeXrOB0Pa.html",
-      "fuente": "Clarín Política"
     }
   ]
 }

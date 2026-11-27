@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-26T22:15:41.108Z",
-  "timestamp_epoch": 1795731341,
+  "last_updated": "2026-11-27T04:56:23.713Z",
+  "timestamp_epoch": 1795755383,
   "timeframe": "1d",
   "status": "ok",
   "source": "IOL API + DolarAPI + ArgentinaDatos",
@@ -12,7 +12,7 @@
       "compra": 1575,
       "venta": 1625,
       "fechaActualizacion": "2026-11-26T18:00:00.000Z",
-      "variacion": -0.31
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -30,7 +30,7 @@
       "compra": 1657.2,
       "venta": 1666.4,
       "fechaActualizacion": "2026-11-26T20:56:00.000Z",
-      "variacion": -1.32
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -48,7 +48,7 @@
       "compra": 1592.5,
       "venta": 1601.5,
       "fechaActualizacion": "2026-11-26T16:13:00.000Z",
-      "variacion": -0.16
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -57,7 +57,7 @@
       "compra": 1747.94,
       "venta": 1752.96,
       "fechaActualizacion": "2026-11-26T20:56:00.000Z",
-      "variacion": -0.54
+      "variacion": 0
     },
     {
       "moneda": "USD",
@@ -66,11 +66,11 @@
       "compra": 2047.5,
       "venta": 2112.5,
       "fechaActualizacion": "2026-11-26T18:00:00.000Z",
-      "variacion": -0.31
+      "variacion": 0
     }
   ],
   "dolares_cierre": {
-    "fecha_ultimo": "2026-11-26",
+    "fecha_ultimo": "2026-11-27",
     "ultimo_del_dia": {
       "oficial": 1625,
       "blue": 1710,
@@ -80,15 +80,15 @@
       "cripto": 1752.96,
       "tarjeta": 2112.5
     },
-    "fecha_cierre": "2026-11-25",
+    "fecha_cierre": "2026-11-26",
     "cierre_anterior": {
-      "oficial": 1630,
+      "oficial": 1625,
       "blue": 1710,
-      "bolsa": 1688.7,
+      "bolsa": 1666.4,
       "contadoconliqui": 1767.9,
-      "mayorista": 1604,
-      "cripto": 1762.53,
-      "tarjeta": 2119
+      "mayorista": 1601.5,
+      "cripto": 1752.96,
+      "tarjeta": 2112.5
     }
   },
   "bursatil": [
@@ -131,7 +131,6 @@
   ],
   "historial": {
     "PAMPA ENERGÍA": [
-      5085,
       5260,
       5150,
       5020,
@@ -152,10 +151,10 @@
       4327.5,
       4360,
       4397.5,
-      4440
+      4440,
+      4585
     ],
     "YPF": [
-      8040,
       8350,
       8260,
       8045,
@@ -176,10 +175,10 @@
       5800,
       5835,
       5735,
-      5620
+      5620,
+      5945
     ],
     "GRP FIN GALICIA": [
-      5900,
       6235,
       5955,
       5835,
@@ -200,7 +199,8 @@
       4552.5,
       4557.5,
       4610,
-      4755
+      4755,
+      4910
     ],
     "AL30 (BONO)": [
       85250,
@@ -229,7 +229,6 @@
       85350
     ],
     "CRESUD (AGRO)": [
-      1784,
       1879,
       1815,
       1662,
@@ -250,10 +249,10 @@
       1406,
       1413,
       1430,
-      1466
+      1466,
+      1553
     ],
     "MOLINOS AGRO": [
-      2235,
       2215,
       2200,
       2140,
@@ -274,7 +273,8 @@
       1940,
       1910,
       1955,
-      1925
+      1925,
+      1950
     ]
   }
 }

@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-26T22:19:26.261Z",
-  "timestamp_epoch": 1795731566,
-  "total_noticias": 10,
+  "last_updated": "2026-11-27T04:58:22.385Z",
+  "timestamp_epoch": 1795755502,
+  "total_noticias": 25,
   "window_days": 5,
   "categorias": [
     {
@@ -12,20 +12,190 @@
     {
       "id": "allanamientos",
       "nombre": "ALLANAMIENTOS",
+      "total": 5
+    },
+    {
+      "id": "detenciones",
+      "nombre": "DETENCIONES",
       "total": 1
     },
     {
       "id": "causas",
       "nombre": "CAUSAS",
-      "total": 3
+      "total": 8
     },
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 3
+      "total": 8
     }
   ],
   "noticias": [
+    {
+      "titulo": "Balearon a un joven en Paraná y detuvieron al presunto agresor tras allanamiento",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/un-joven-resulto-herido-de-bala-en-parana-ordenaron-una-detencion.htm",
+      "fecha": "2026-11-27T04:58:22.147Z",
+      "fuente": "Elonce",
+      "lugar": "Paraná",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Secuestraron carne vacuna durante un allanamiento en localidad entrerriana y un hombre quedó detenido",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/abigeato-en-bovril-un-detenido-y-secuestro-de-carne-vacuna.htm",
+      "fecha": "2026-11-27T04:58:22.147Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Tres detenidos y 45 envoltorios de cocaína secuestrados en distintos operativos en Concordia",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/concordia-tres-detenidos-y-45-envoltorios-de-cocaina-secuestrados.htm",
+      "fecha": "2026-11-27T04:58:22.147Z",
+      "fuente": "Elonce",
+      "lugar": "Concordia",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Comenzó el juicio contra una presa que cambió de género y abusó de siete presas en el penal de Bouwer",
+      "descripcion": "La implicada, Gabriela Nahir Fernández, que anteriormente se llamaba Gabriel Fernández, fue detenida por ejercer violencia contra su ex pareja y en ese caso aseguró que se autopercibía mujer.",
+      "url": "https://www.ellitoral.com/sucesos/gabrielanahirfernandez-penaldebouwer-juicio-abusosexual-camaracuartadelcrimendecordoba-carceldebouwer-decreto612025-sifilis_0_ltANJ86maT.html",
+      "fecha": "2026-11-26T21:33:22.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Pornografía infantil: reimputaron y agravaron la situación de dos hombres",
+      "descripcion": "Ambos estaban acusados inicialmente de tenencia de fotos y videos de situaciones de abuso sexual de menores de edad, pero todo se habría complicado para ellos con los resultados de nuevos peritajes.",
+      "url": "https://www.ellitoral.com/sucesos/pornografia-infantil-reimputaron-agravaron-situacion-hombres-videos-fotos-abuso-sexual-infantil_0_ni5dbmtgNy.html",
+      "fecha": "2026-11-26T20:35:34.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Demoras en la autopista Santa Fe - Rosario por el incendio de un colectivo",
+      "descripcion": "Los socorristas debieron sortear extensas filas de camiones y circular en contramano por los guardarraíles para combatir el siniestro sobre el corredor vial. El chofer pudo escapar ileso de la unidad antes de que el fuego la destruyera por completo, mientras varias dotaciones de…",
+      "url": "https://www.ellitoral.com/sucesos/incendio-micro-colectivo-autopista-santa-fe-rosario_0_8vbPGMvfIO.html",
+      "fecha": "2026-11-26T19:45:26.000Z",
+      "fuente": "El Litoral",
+      "lugar": "Santa Fe",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Incineraron en Rafaela más de 450 kilos de droga secuestrados en la Ruta 34",
+      "descripcion": "El fiscal federal Jorge Gustavo Onel encabezó un nuevo procedimiento de destrucción de estupefacientes en el crematorio de Rafaela. La droga fue secuestrada en operativos realizados por Gendarmería Nacional, principalmente en Susana y Ceres",
+      "url": "https://www.ellitoral.com/sucesos/rafaela-ruta34-quema-cocaina-narcotrafico-gendarmerianacional_0_W6JYqGqfcA.html",
+      "fecha": "2026-11-26T18:47:37.000Z",
+      "fuente": "El Litoral",
+      "lugar": "Rafaela",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Prefectura rescató a un ciervo que era arrastrado por la crecida del río Paraná",
+      "descripcion": "En medio de la intensa corriente, el animal intentaba llegar a tierra firme sin conseguir avanzar. Los efectivos lograron ponerlo a salvo y trasladarlo hasta la costa, donde quedó bajo resguardo de las autoridades ambientales.",
+      "url": "https://www.ellitoral.com/sucesos/prefecturanavalargentina-ciervo-rioparana-crecida-corrientes-pasodelapatria-video_0_jqMYkRq5A8.html",
+      "fecha": "2026-11-26T15:51:02.000Z",
+      "fuente": "El Litoral",
+      "lugar": "Paraná",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Seguridad pasó a disponibilidad a cinco agentes tras la fuga de un condenado por homicidio",
+      "descripcion": "El Ministerio de Seguridad y Justicia dispuso el pase a situación de revista en disponibilidad e inició un sumario administrativo contra cinco funcionarios penitenciarios involucrados en el traslado en el que se produjo la fuga del interno Claudio Matías González.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/26/seguridad-paso-disponibilidad-cinco-agentes-tras-la-fuga-de-un-condenado-por-homicidio",
+      "fecha": "2026-11-26T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "José Amado Las nuevas áreas y los fiscales designados por el procurador Casal para el Distrito Entre Ríos del MPF",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/26/las-nuevas-areas-y-los-fiscales-designados-por-el-procurador-casal-para-el-distrito-entre-rios-del-mpf",
+      "fecha": "2026-11-26T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Rosario del Tala: condenaron a un hombre a tres años de prisión condicional por una estafa agravada en Maciá",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/26/rosario-del-tala-condenaron-un-hombre-tres-anos-de-prision-condicional-por-una-estafa-agravada-en-macia",
+      "fecha": "2026-11-26T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Rosario",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Intenso operativo en Concepción del Uruguay tras la fuga de un condenado",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/26/480675-intenso-operativo-en-concepcion-del-uruguay-tras-la-fuga-de-un-condenado",
+      "fecha": "2026-11-26T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Evacuaron a 219 pasajeros del tren Mitre tras un principio de incendio en Palermo",
+      "descripcion": "El desperfecto eléctrico se habría originado cuando una chapa quedó enganchada debajo de la formación. Los peritos investigan cómo llegó el objeto a las vías y si fue colocado intencionalmente o se desprendió por los fuertes vientos.",
+      "url": "https://www.ellitoral.com/sucesos/trenmitre-same-palermo-evacuacion-trenesargentinos-chapa-incendio-rescate_0_9QdXhsHHAy.html",
+      "fecha": "2026-11-26T13:46:32.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Pedirán 18 años de cárcel para el joven acusado del homicidio de Jazmín González en Paraná",
+      "descripcion": "La jueza de Garantías, Marina Barbagelata, remitió a juicio por jurados la causa iniciada contra Yamil Alexander José Cabrera, el joven de 20 años imputado por el asesinato de Jazmín González ocurrido en octubre del año pasado en Bajada Grande.",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/24/pediran-18-anos-de-carcel-para-el-joven-acusado-del-homicidio-de-jazmin-gonzalez-en-parana",
+      "fecha": "2026-11-24T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Paraná",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Fijaron prisión efectiva para dos delincuentes que cometieron tres robos en menos de media hora en Colón",
+      "descripcion": "Dos hombres identificados como Luis Oscar Vargas y Giancarlo Daniel Silva, fueron condenados a la pena de un año de prisión de cumplimiento efectivo, en el marco de un procedimiento de juicio abreviado llevado a cabo en Colón por delitos cometidos en distintos comercios de esa c…",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/24/fijaron-prision-efectiva-para-dos-delincuentes-que-cometieron-tres-robos-en-menos-de-media-hora-en-colon",
+      "fecha": "2026-11-24T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Colón",
+      "categorias": [
+        "hechos"
+      ]
+    },
     {
       "titulo": "Investigan el origen de fentanilo, ketamina y otros medicamentos incautados en el sur de Entre Ríos",
       "descripcion": "El procedimiento se realizó hace tres días sobre la Ruta Provincial 16 y terminó con el secuestro de 50 frascos y ampollas, además de instrumental sanitario, cuyo origen se desconoce.",
@@ -60,6 +230,17 @@
       ]
     },
     {
+      "titulo": "Concordia: Hallaron a joven golpeada que denunció a su pareja por violencia de género",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/23/480291-concordia-hallaron-a-joven-golpeada-que-denuncio-a-su-pareja-por-violencia-de-genero",
+      "fecha": "2026-11-23T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "Concordia",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
       "titulo": "Secuestraron un arma de fuego y plantas de marihuana en cuatro allanamientos en La Paz",
       "descripcion": "Dos sujetos quedaron bajo investigación por tenencia ilegal de arma de fuego y cultivo de plantas para la producción de estupefacientes. Los procedimientos se realizaron en el barrio Feria.",
       "url": "https://www.analisisdigital.com.ar/policiales/2026/11/23/secuestraron-un-arma-de-fuego-y-plantas-de-marihuana-en-cuatro-allanamientos-en-la-paz",
@@ -68,17 +249,6 @@
       "lugar": "La Paz",
       "categorias": [
         "allanamientos"
-      ]
-    },
-    {
-      "titulo": "Víctima de violencia de género denunció a su pareja por golpes, amenzas y secuestro en Concordia",
-      "descripcion": "La encontraron con golpes, cuando iba por la calle. Estaba amenazada y hacía meses sufría ataques del agresor.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/23/victima-de-violencia-de-genero-denuncio-su-pareja-por-golpes-amenzas-y-secuestro-en-concordia",
-      "fecha": "2026-11-23T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Concordia",
-      "categorias": [
-        "hechos"
       ]
     },
     {
@@ -104,23 +274,23 @@
       ]
     },
     {
+      "titulo": "Un motociclista murió tras chocar contra un automóvil en el acceso a Crespo",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/22/480264-un-motociclista-murio-tras-chocar-contra-un-automovil-en-el-acceso-a-crespo",
+      "fecha": "2026-11-22T15:00:00.000Z",
+      "fuente": "APF Digital",
+      "lugar": "Crespo",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
       "titulo": "Un camión volcó en la Ruta 6 y el tránsito estuvo interrumpido por más de cuatro horas",
       "descripcion": "En horas de la madrugada de este domingo, aproximadamente a las 4.30 horas, se registró un siniestro vial a la altura del kilómetro 121 de la Ruta Provincial Nº 6, jurisdicción de Comisaría General Urquiza, a 5 km sobre el límite con el Departamento de Rosario del Tala.Un camión…",
       "url": "https://www.analisisdigital.com.ar/policiales/2026/11/22/un-camion-volco-en-la-ruta-6-y-el-transito-estuvo-interrumpido-por-mas-de-cuatro-horas",
       "fecha": "2026-11-22T15:00:00.000Z",
       "fuente": "Análisis Digital",
       "lugar": "",
-      "categorias": [
-        "accidentes"
-      ]
-    },
-    {
-      "titulo": "Grave accidente en Crespo: un motociclista murió tras chocar con un automóvil",
-      "descripcion": "La fiscalía ordenó numerosas diligencias para establecer las circunstancias del deceso del motociclista; instruyendo actuaciones por el supuesto delito de Homicidio Imprudente.",
-      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/22/grave-accidente-en-crespo-un-motociclista-murio-tras-chocar-con-un-automovil",
-      "fecha": "2026-11-22T15:00:00.000Z",
-      "fuente": "Análisis Digital",
-      "lugar": "Crespo",
       "categorias": [
         "accidentes"
       ]
