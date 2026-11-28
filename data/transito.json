@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-27T23:29:32.154Z",
-  "timestamp_epoch": 1795822172,
+  "timestamp": "2026-11-28T07:40:53.660Z",
+  "timestamp_epoch": 1795851653,
   "source": "vxl-transito-ar",
   "cantidad": 10,
   "items": [
@@ -9,8 +9,8 @@
       "titulo": "Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-11-27T00:00:00-03:00",
-      "fecha_raw": "2026-11-27T00:00:00-03:00",
+      "fecha": "2026-11-28T00:00:00-03:00",
+      "fecha_raw": "2026-11-28T00:00:00-03:00",
       "horario": null,
       "motivo": "Obra en la vía pública",
       "franja": "",
@@ -49,7 +49,7 @@
           "hasta": null,
           "motivo": "Obra en la vía pública",
           "franja": "",
-          "ctx": "viernes 27 de noviembre de 2026 28.5ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
+          "ctx": "sábado 28 de noviembre de 2026 17.5ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Con nuevos frentes continúa la obra de reconfiguración de calle 25 de Mayo de Paraná Avanza la intervención sobre esta arteria del área central.",
           "entre": "",
           "texto": "25 de Mayo"
         },
@@ -78,170 +78,12 @@
       ]
     },
     {
-      "id": "bing-apf-obras:Realizan obras en las redes de agua y cloaca sobre…",
-      "titulo": "Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná",
-      "categoria": "cortes",
-      "tipo": "corte_total",
-      "fecha": "2026-11-27T00:00:00-03:00",
-      "fecha_raw": "2026-11-27T00:00:00-03:00",
-      "horario": null,
-      "motivo": "Obra en la vía pública",
-      "franja": "",
-      "calles": [
-        "Paraguay",
-        "Montevideo"
-      ],
-      "resumen": "Paraguay · Montevideo",
-      "descripcion": "Paraguay · Montevideo",
-      "enlace": "https://www.apfdigital.com.ar/noticias/2024/11/22/426912-realizan-obras-en-las-redes-de-agua-y-cloaca-sobre-calle-pellegrini-de-parana",
-      "lat": -31.733901575748387,
-      "lon": -60.53809628939044,
-      "sin_ubicacion": false,
-      "localidad": "Paraná",
-      "provincia": "Entre Ríos",
-      "via": "calle Pellegrini",
-      "km_desde": null,
-      "km_hasta": null,
-      "vigencia": {
-        "hasta": "2026-11-28T03:00:00.000Z",
-        "tipo": "estimada",
-        "detalle": "estimado: ruta (24 h)"
-      },
-      "vigente_hasta": "2026-11-28T03:00:00.000Z",
-      "fuente_tipo": "noticia",
-      "segmentos": [
-        {
-          "puntos": [
-            [
-              -31.733901575748387,
-              -60.53809628939044
-            ]
-          ],
-          "calle": "Paraguay",
-          "desde": null,
-          "hasta": null,
-          "motivo": "Obra en la vía pública",
-          "franja": "",
-          "ctx": "viernes 27 de noviembre de 2026 28.5ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
-          "entre": "",
-          "texto": "Paraguay"
-        },
-        {
-          "puntos": [
-            [
-              -31.735974343618533,
-              -60.53661560393757
-            ]
-          ],
-          "calle": "Montevideo",
-          "desde": null,
-          "hasta": null,
-          "motivo": "Obra en la vía pública",
-          "franja": "",
-          "ctx": "viernes 27 de noviembre de 2026 28.5ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
-          "entre": "",
-          "texto": "Montevideo"
-        }
-      ],
-      "puntos": [
-        [
-          -31.733901575748387,
-          -60.53809628939044
-        ]
-      ]
-    },
-    {
-      "id": "bing-apf-obras:El Municipio de Paraná realiza trabajos de manteni…",
-      "titulo": "El Municipio de Paraná realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca",
-      "categoria": "cortes",
-      "tipo": "corte_total",
-      "fecha": "2026-11-27T00:00:00-03:00",
-      "fecha_raw": "2026-11-27T00:00:00-03:00",
-      "horario": null,
-      "motivo": "Mantenimiento de red de agua",
-      "franja": "",
-      "calles": [
-        "Corrientes entre La Paz y Colón",
-        "Villaguay entre Alsina y Cura Álvarez"
-      ],
-      "resumen": "Corrientes entre La Paz y Colón · Villaguay entre Alsina y Cura Álvarez",
-      "descripcion": "Corrientes entre La Paz y Colón · Villaguay entre Alsina y Cura Álvarez",
-      "enlace": "https://www.apfdigital.com.ar/noticias/2026/10/28/476715-el-municipio-de-parana-realiza-trabajos-de-mantenimiento-y-reparacion-en-las-redes-de-agua-y-cloaca",
-      "lat": -31.7290563,
-      "lon": -60.5270386,
-      "sin_ubicacion": false,
-      "localidad": "Paraná",
-      "provincia": "Entre Ríos",
-      "via": "calle Corrientes",
-      "km_desde": null,
-      "km_hasta": null,
-      "vigencia": {
-        "hasta": "2026-11-28T03:00:00.000Z",
-        "tipo": "estimada",
-        "detalle": "estimado: ruta (24 h)"
-      },
-      "vigente_hasta": "2026-11-28T03:00:00.000Z",
-      "fuente_tipo": "noticia",
-      "segmentos": [
-        {
-          "puntos": [
-            [
-              -31.7290563,
-              -60.5270386
-            ],
-            [
-              -31.7278727,
-              -60.5264172
-            ]
-          ],
-          "calle": "Corrientes",
-          "desde": "La Paz",
-          "hasta": "Colón",
-          "motivo": "Desvío de tránsito",
-          "franja": "",
-          "ctx": "En calle Corrientes, en el tramo entre calles La Paz y Colón, se relocalizará mediante un desvío, una cañería distribuidora de agua potable de 100 milímetros, debido a la construcción de un nuevo sistema de desagües pluviales de gran diámetro –en el marco del avance de la obra de sistematización del arroyo La Santiagueña–, para reconducir los excedentes pluviales hacia el río Paraná.",
-          "entre": "La Paz y Colón",
-          "texto": "Corrientes entre La Paz y Colón"
-        },
-        {
-          "puntos": [
-            [
-              -31.7438224,
-              -60.5216426
-            ],
-            [
-              -31.7432956,
-              -60.5227917
-            ]
-          ],
-          "calle": "Villaguay",
-          "desde": "Alsina",
-          "hasta": "Cura Álvarez",
-          "motivo": "Mantenimiento de red cloacal",
-          "franja": "",
-          "ctx": "Solo pueden registrarse casos de baja presión en los hogares frentistas o aledaños al epicentro de esos trabajos.Mientras que para optimizar el funcionamiento de la red cloacal se desarrollará un operativo sobre calle Villaguay, en el tramo entre calles Alsina y Cura Álvarez.",
-          "entre": "Alsina y Cura Álvarez",
-          "texto": "Villaguay entre Alsina y Cura Álvarez"
-        }
-      ],
-      "puntos": [
-        [
-          -31.7290563,
-          -60.5270386
-        ],
-        [
-          -31.7278727,
-          -60.5264172
-        ]
-      ]
-    },
-    {
       "id": "bing-apf-cortes:Paraná: Tras dos años, se rehabilitó el tránsito e…",
       "titulo": "Paraná: Tras dos años, se rehabilitó el tránsito en calle Garrigó, entre Newbery y Larralde",
       "categoria": "obras",
       "tipo": "obra",
-      "fecha": "2026-11-27T00:00:00-03:00",
-      "fecha_raw": "2026-11-27T00:00:00-03:00",
+      "fecha": "2026-11-28T00:00:00-03:00",
+      "fecha_raw": "2026-11-28T00:00:00-03:00",
       "horario": null,
       "motivo": "Obra en la vía pública",
       "franja": "",
@@ -261,11 +103,11 @@
       "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2026-11-28T02:59:00.000Z",
-        "tipo": "diaria",
-        "detalle": "solo ese día"
+        "hasta": "2026-11-29T03:00:00.000Z",
+        "tipo": "estimada",
+        "detalle": "estimado: ruta (24 h)"
       },
-      "vigente_hasta": "2026-11-28T02:59:00.000Z",
+      "vigente_hasta": "2026-11-29T03:00:00.000Z",
       "fuente_tipo": "noticia",
       "segmentos": [
         {
@@ -305,8 +147,6 @@
           "motivo": "Obra en la vía pública",
           "franja": "",
           "ctx": "Tras dos años, se rehabilitó el tránsito en calle Garrigó, entre Newbery y Larralde – El intendente de la capital provincia, Adán Bahl, recorrió este viernes y supervisó los trabajos de mejoramiento de calles que se vienen realizando en distintas zonas de la ciudad • En este marco, estuvo en calle Garrigó, arteria que estaba cortada e intransitable en el tramo entre Newbery y Larralde • “Poco a po",
-          "vence": "2026-11-28T02:59:00.000Z",
-          "vigencia": "diaria",
           "entre": "Newbery y Larralde",
           "texto": "Garrigó entre Newbery y Larralde"
         },
@@ -367,6 +207,164 @@
         [
           -31.778904,
           -60.5080671
+        ]
+      ]
+    },
+    {
+      "id": "bing-apf-obras:Realizan obras en las redes de agua y cloaca sobre…",
+      "titulo": "Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná",
+      "categoria": "cortes",
+      "tipo": "corte_total",
+      "fecha": "2026-11-28T00:00:00-03:00",
+      "fecha_raw": "2026-11-28T00:00:00-03:00",
+      "horario": null,
+      "motivo": "Obra en la vía pública",
+      "franja": "",
+      "calles": [
+        "Paraguay",
+        "Montevideo"
+      ],
+      "resumen": "Paraguay · Montevideo",
+      "descripcion": "Paraguay · Montevideo",
+      "enlace": "https://www.apfdigital.com.ar/noticias/2024/11/22/426912-realizan-obras-en-las-redes-de-agua-y-cloaca-sobre-calle-pellegrini-de-parana",
+      "lat": -31.733901575748387,
+      "lon": -60.53809628939044,
+      "sin_ubicacion": false,
+      "localidad": "Paraná",
+      "provincia": "Entre Ríos",
+      "via": "calle Pellegrini",
+      "km_desde": null,
+      "km_hasta": null,
+      "vigencia": {
+        "hasta": "2026-11-29T03:00:00.000Z",
+        "tipo": "estimada",
+        "detalle": "estimado: ruta (24 h)"
+      },
+      "vigente_hasta": "2026-11-29T03:00:00.000Z",
+      "fuente_tipo": "noticia",
+      "segmentos": [
+        {
+          "puntos": [
+            [
+              -31.733901575748387,
+              -60.53809628939044
+            ]
+          ],
+          "calle": "Paraguay",
+          "desde": null,
+          "hasta": null,
+          "motivo": "Obra en la vía pública",
+          "franja": "",
+          "ctx": "sábado 28 de noviembre de 2026 17.5ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+          "entre": "",
+          "texto": "Paraguay"
+        },
+        {
+          "puntos": [
+            [
+              -31.735974343618533,
+              -60.53661560393757
+            ]
+          ],
+          "calle": "Montevideo",
+          "desde": null,
+          "hasta": null,
+          "motivo": "Obra en la vía pública",
+          "franja": "",
+          "ctx": "sábado 28 de noviembre de 2026 17.5ºc | Paraná Menu Primera Plana Provinciales Políticas Municipales Policiales Judiciales Nacionales Interés General Internacionales Buscar Buscar X Municipales Realizan obras en las redes de agua y cloaca sobre calle Pellegrini de Paraná Personal municipal trabaja en el tramo comprendido entre calles Paraguay y Montevideo.",
+          "entre": "",
+          "texto": "Montevideo"
+        }
+      ],
+      "puntos": [
+        [
+          -31.733901575748387,
+          -60.53809628939044
+        ]
+      ]
+    },
+    {
+      "id": "bing-apf-obras:El Municipio de Paraná realiza trabajos de manteni…",
+      "titulo": "El Municipio de Paraná realiza trabajos de mantenimiento y reparación en las redes de agua y cloaca",
+      "categoria": "cortes",
+      "tipo": "corte_total",
+      "fecha": "2026-11-28T00:00:00-03:00",
+      "fecha_raw": "2026-11-28T00:00:00-03:00",
+      "horario": null,
+      "motivo": "Mantenimiento de red de agua",
+      "franja": "",
+      "calles": [
+        "Corrientes entre La Paz y Colón",
+        "Villaguay entre Alsina y Cura Álvarez"
+      ],
+      "resumen": "Corrientes entre La Paz y Colón · Villaguay entre Alsina y Cura Álvarez",
+      "descripcion": "Corrientes entre La Paz y Colón · Villaguay entre Alsina y Cura Álvarez",
+      "enlace": "https://www.apfdigital.com.ar/noticias/2026/10/28/476715-el-municipio-de-parana-realiza-trabajos-de-mantenimiento-y-reparacion-en-las-redes-de-agua-y-cloaca",
+      "lat": -31.7290563,
+      "lon": -60.5270386,
+      "sin_ubicacion": false,
+      "localidad": "Paraná",
+      "provincia": "Entre Ríos",
+      "via": "calle Corrientes",
+      "km_desde": null,
+      "km_hasta": null,
+      "vigencia": {
+        "hasta": "2026-11-29T03:00:00.000Z",
+        "tipo": "estimada",
+        "detalle": "estimado: ruta (24 h)"
+      },
+      "vigente_hasta": "2026-11-29T03:00:00.000Z",
+      "fuente_tipo": "noticia",
+      "segmentos": [
+        {
+          "puntos": [
+            [
+              -31.7290563,
+              -60.5270386
+            ],
+            [
+              -31.7278727,
+              -60.5264172
+            ]
+          ],
+          "calle": "Corrientes",
+          "desde": "La Paz",
+          "hasta": "Colón",
+          "motivo": "Desvío de tránsito",
+          "franja": "",
+          "ctx": "En calle Corrientes, en el tramo entre calles La Paz y Colón, se relocalizará mediante un desvío, una cañería distribuidora de agua potable de 100 milímetros, debido a la construcción de un nuevo sistema de desagües pluviales de gran diámetro –en el marco del avance de la obra de sistematización del arroyo La Santiagueña–, para reconducir los excedentes pluviales hacia el río Paraná.",
+          "entre": "La Paz y Colón",
+          "texto": "Corrientes entre La Paz y Colón"
+        },
+        {
+          "puntos": [
+            [
+              -31.7438224,
+              -60.5216426
+            ],
+            [
+              -31.7432956,
+              -60.5227917
+            ]
+          ],
+          "calle": "Villaguay",
+          "desde": "Alsina",
+          "hasta": "Cura Álvarez",
+          "motivo": "Mantenimiento de red cloacal",
+          "franja": "",
+          "ctx": "Solo pueden registrarse casos de baja presión en los hogares frentistas o aledaños al epicentro de esos trabajos.Mientras que para optimizar el funcionamiento de la red cloacal se desarrollará un operativo sobre calle Villaguay, en el tramo entre calles Alsina y Cura Álvarez.",
+          "entre": "Alsina y Cura Álvarez",
+          "texto": "Villaguay entre Alsina y Cura Álvarez"
+        }
+      ],
+      "puntos": [
+        [
+          -31.7290563,
+          -60.5270386
+        ],
+        [
+          -31.7278727,
+          -60.5264172
         ]
       ]
     },
@@ -693,14 +691,14 @@
       ]
     },
     {
-      "id": "ellitoral:Rosario:2026-11-27",
+      "id": "ellitoral:Venado Tuerto:",
       "titulo": "El tránsito en la provincia de Santa Fe; la información minuto a minuto",
       "categoria": "cortes",
       "tipo": "corte_total",
-      "fecha": "2026-11-27T13:28:00-03:00",
-      "fecha_raw": "2026-11-27T13:28:00-03:00",
-      "horario": "de 14:30 a 15:30",
-      "motivo": "",
+      "fecha": "",
+      "fecha_raw": "",
+      "horario": null,
+      "motivo": "Desvío de tránsito",
       "franja": "",
       "calles": [],
       "resumen": "",
@@ -709,17 +707,17 @@
       "lat": null,
       "lon": null,
       "sin_ubicacion": true,
-      "localidad": "Rosario",
+      "localidad": "Venado Tuerto",
       "provincia": "Santa Fe",
-      "via": "RUTA 10",
-      "km_desde": "00",
+      "via": "RUTA 10-s",
+      "km_desde": null,
       "km_hasta": null,
       "vigencia": {
-        "hasta": "2026-11-28T02:59:00.000Z",
+        "hasta": "2026-11-29T02:59:00.000Z",
         "tipo": "diaria",
         "detalle": "boletín del día"
       },
-      "vigente_hasta": "2026-11-28T02:59:00.000Z",
+      "vigente_hasta": "2026-11-29T02:59:00.000Z",
       "fuente_tipo": "estado",
       "segmentos": [],
       "puntos": null

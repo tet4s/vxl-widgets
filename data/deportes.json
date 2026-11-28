@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-27T23:27:37.024Z",
+  "actualizado": "2026-11-28T07:38:48.509Z",
   "ciudades": [
     {
       "id": "parana",
@@ -54,15 +54,15 @@
                   "pts": 64,
                   "cambio_fuente": 0,
                   "ultimo": {
-                    "fecha": "2026-11-23T00:00Z",
+                    "fecha": "2026-11-28T00:00Z",
                     "contexto": "Reducido · Cuartos de Final",
-                    "local": "Gimnasia y Tiro (Salta)",
-                    "visitante": "Tristán Suárez",
-                    "marcador_local": 0,
-                    "marcador_visitante": 0,
+                    "local": "Tristán Suárez",
+                    "visitante": "Gimnasia y Tiro (Salta)",
+                    "marcador_local": 1,
+                    "marcador_visitante": 1,
                     "estado": "finalizado",
-                    "logo_local": "https://a.espncdn.com/i/teamlogos/soccer/500/10743.png",
-                    "logo_visitante": "https://a.espncdn.com/i/teamlogos/soccer/500/10163.png"
+                    "logo_local": "https://a.espncdn.com/i/teamlogos/soccer/500/10163.png",
+                    "logo_visitante": "https://a.espncdn.com/i/teamlogos/soccer/500/10743.png"
                   },
                   "proximo": null,
                   "cambio": 0,
@@ -83,15 +83,15 @@
                   "pts": 62,
                   "cambio_fuente": 0,
                   "ultimo": {
-                    "fecha": "2026-11-21T20:00Z",
+                    "fecha": "2026-11-27T22:00Z",
                     "contexto": "Reducido · Cuartos de Final",
-                    "local": "Ciudad de Bolívar",
-                    "visitante": "Atlanta",
+                    "local": "Atlanta",
+                    "visitante": "Ciudad de Bolívar",
                     "marcador_local": 0,
                     "marcador_visitante": 1,
                     "estado": "finalizado",
-                    "logo_local": null,
-                    "logo_visitante": "https://a.espncdn.com/i/teamlogos/soccer/500/10146.png"
+                    "logo_local": "https://a.espncdn.com/i/teamlogos/soccer/500/10146.png",
+                    "logo_visitante": null
                   },
                   "proximo": null,
                   "cambio": 0,
@@ -257,15 +257,15 @@
                   "pts": 52,
                   "cambio_fuente": 0,
                   "ultimo": {
-                    "fecha": "2026-11-23T00:00Z",
+                    "fecha": "2026-11-28T00:00Z",
                     "contexto": "Reducido · Cuartos de Final",
-                    "local": "Gimnasia y Tiro (Salta)",
-                    "visitante": "Tristán Suárez",
-                    "marcador_local": 0,
-                    "marcador_visitante": 0,
+                    "local": "Tristán Suárez",
+                    "visitante": "Gimnasia y Tiro (Salta)",
+                    "marcador_local": 1,
+                    "marcador_visitante": 1,
                     "estado": "finalizado",
-                    "logo_local": "https://a.espncdn.com/i/teamlogos/soccer/500/10743.png",
-                    "logo_visitante": "https://a.espncdn.com/i/teamlogos/soccer/500/10163.png"
+                    "logo_local": "https://a.espncdn.com/i/teamlogos/soccer/500/10163.png",
+                    "logo_visitante": "https://a.espncdn.com/i/teamlogos/soccer/500/10743.png"
                   },
                   "proximo": null,
                   "cambio": 0,
@@ -1789,27 +1789,27 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2371/112530"
                   },
                   "cambio_fuente": null,
-                  "cambio": 1,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
                   "pos": 2,
                   "equipo": "CICLISTA (J)",
                   "logo": "https://www.laliganacional.com.ar/escudos/1937/115445",
-                  "pj": 8,
-                  "g": 6,
+                  "pj": 9,
+                  "g": 7,
                   "p": 2,
-                  "gf": 664,
-                  "gc": 650,
-                  "pts": 14,
-                  "pct": "75,0",
+                  "gf": 744,
+                  "gc": 718,
+                  "pts": 16,
+                  "pct": "77,7",
                   "ultimo": {
                     "fecha": "2026-11-27T21:00:00-03:00",
                     "contexto": "Conferencia Sur",
                     "local": "CICLISTA (J)",
                     "visitante": "PICO FC",
-                    "marcador_local": 0,
-                    "marcador_visitante": 0,
+                    "marcador_local": 80,
+                    "marcador_visitante": 68,
                     "estado": "finalizado",
                     "logo_local": "https://www.laliganacional.com.ar/escudos/1937/115445",
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1503/114919"
@@ -1826,7 +1826,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1937/115445"
                   },
                   "cambio_fuente": null,
-                  "cambio": 1,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -1863,7 +1863,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2173/114689"
                   },
                   "cambio_fuente": null,
-                  "cambio": -2,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -1905,43 +1905,6 @@
                 },
                 {
                   "pos": 5,
-                  "equipo": "PICO FC",
-                  "logo": "https://www.laliganacional.com.ar/escudos/1503/114919",
-                  "pj": 8,
-                  "g": 5,
-                  "p": 3,
-                  "gf": 595,
-                  "gc": 557,
-                  "pts": 13,
-                  "pct": "62,5",
-                  "ultimo": {
-                    "fecha": "2026-11-27T21:00:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "CICLISTA (J)",
-                    "visitante": "PICO FC",
-                    "marcador_local": 0,
-                    "marcador_visitante": 0,
-                    "estado": "finalizado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/1937/115445",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1503/114919"
-                  },
-                  "proximo": {
-                    "fecha": "2026-11-29T20:00:00-03:00",
-                    "contexto": "Conferencia Sur",
-                    "local": "GIMNASIA (LP)",
-                    "visitante": "PICO FC",
-                    "marcador_local": null,
-                    "marcador_visitante": null,
-                    "estado": "programado",
-                    "logo_local": "https://www.laliganacional.com.ar/escudos/2420/113230",
-                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1503/114919"
-                  },
-                  "cambio_fuente": null,
-                  "cambio": 0,
-                  "destacado": false
-                },
-                {
-                  "pos": 6,
                   "equipo": "GIMNASIA (LP)",
                   "logo": "https://www.laliganacional.com.ar/escudos/2420/113230",
                   "pj": 10,
@@ -1974,11 +1937,11 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/1503/114919"
                   },
                   "cambio_fuente": null,
-                  "cambio": 0,
+                  "cambio": 1,
                   "destacado": false
                 },
                 {
-                  "pos": 7,
+                  "pos": 6,
                   "equipo": "CENTENARIO (VT)",
                   "logo": "https://www.laliganacional.com.ar/escudos/1926/112888",
                   "pj": 10,
@@ -2011,7 +1974,44 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2371/112530"
                   },
                   "cambio_fuente": null,
-                  "cambio": 0,
+                  "cambio": 1,
+                  "destacado": false
+                },
+                {
+                  "pos": 7,
+                  "equipo": "PICO FC",
+                  "logo": "https://www.laliganacional.com.ar/escudos/1503/114919",
+                  "pj": 9,
+                  "g": 5,
+                  "p": 4,
+                  "gf": 663,
+                  "gc": 637,
+                  "pts": 14,
+                  "pct": "55,5",
+                  "ultimo": {
+                    "fecha": "2026-11-27T21:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "CICLISTA (J)",
+                    "visitante": "PICO FC",
+                    "marcador_local": 80,
+                    "marcador_visitante": 68,
+                    "estado": "finalizado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/1937/115445",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1503/114919"
+                  },
+                  "proximo": {
+                    "fecha": "2026-11-29T20:00:00-03:00",
+                    "contexto": "Conferencia Sur",
+                    "local": "GIMNASIA (LP)",
+                    "visitante": "PICO FC",
+                    "marcador_local": null,
+                    "marcador_visitante": null,
+                    "estado": "programado",
+                    "logo_local": "https://www.laliganacional.com.ar/escudos/2420/113230",
+                    "logo_visitante": "https://www.laliganacional.com.ar/escudos/1503/114919"
+                  },
+                  "cambio_fuente": null,
+                  "cambio": -2,
                   "destacado": false
                 },
                 {
@@ -2159,7 +2159,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2377/112559"
                   },
                   "cambio_fuente": null,
-                  "cambio": 2,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -2196,7 +2196,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/83/113741"
                   },
                   "cambio_fuente": null,
-                  "cambio": -1,
+                  "cambio": 0,
                   "destacado": false
                 },
                 {
@@ -2233,7 +2233,7 @@
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2173/114689"
                   },
                   "cambio_fuente": null,
-                  "cambio": -1,
+                  "cambio": 0,
                   "destacado": true
                 },
                 {
@@ -2601,20 +2601,20 @@
                   "pos": 4,
                   "equipo": "AMANCAY (LR)",
                   "logo": "https://www.laliganacional.com.ar/escudos/2168/112811",
-                  "pj": 7,
-                  "g": 5,
+                  "pj": 8,
+                  "g": 6,
                   "p": 2,
-                  "gf": 598,
-                  "gc": 565,
-                  "pts": 12,
-                  "pct": "71,4",
+                  "gf": 691,
+                  "gc": 634,
+                  "pts": 14,
+                  "pct": "75,0",
                   "ultimo": {
                     "fecha": "2026-11-27T21:30:00-03:00",
                     "contexto": "Conferencia Norte",
                     "local": "INDEPENDIENTE (SDE)",
                     "visitante": "AMANCAY (LR)",
-                    "marcador_local": 0,
-                    "marcador_visitante": 0,
+                    "marcador_local": 69,
+                    "marcador_visitante": 93,
                     "estado": "finalizado",
                     "logo_local": "https://www.laliganacional.com.ar/escudos/1883/114369",
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2168/112811"
@@ -3045,20 +3045,20 @@
                   "pos": 16,
                   "equipo": "INDEPENDIENTE (SDE)",
                   "logo": "https://www.laliganacional.com.ar/escudos/1883/114369",
-                  "pj": 6,
+                  "pj": 7,
                   "g": 1,
-                  "p": 5,
-                  "gf": 429,
-                  "gc": 493,
-                  "pts": 7,
-                  "pct": "16,6",
+                  "p": 6,
+                  "gf": 498,
+                  "gc": 586,
+                  "pts": 8,
+                  "pct": "14,2",
                   "ultimo": {
                     "fecha": "2026-11-27T21:30:00-03:00",
                     "contexto": "Conferencia Norte",
                     "local": "INDEPENDIENTE (SDE)",
                     "visitante": "AMANCAY (LR)",
-                    "marcador_local": 0,
-                    "marcador_visitante": 0,
+                    "marcador_local": 69,
+                    "marcador_visitante": 93,
                     "estado": "finalizado",
                     "logo_local": "https://www.laliganacional.com.ar/escudos/1883/114369",
                     "logo_visitante": "https://www.laliganacional.com.ar/escudos/2168/112811"

@@ -1,36 +1,157 @@
 {
-  "last_updated": "2026-11-27T23:27:36.786Z",
-  "timestamp_epoch": 1795822056,
-  "total_noticias": 21,
+  "last_updated": "2026-11-28T07:38:48.301Z",
+  "timestamp_epoch": 1795851528,
+  "total_noticias": 33,
   "window_days": 5,
   "categorias": [
     {
       "id": "accidentes",
       "nombre": "ACCIDENTES",
-      "total": 1
+      "total": 5
     },
     {
       "id": "allanamientos",
       "nombre": "ALLANAMIENTOS",
-      "total": 5
+      "total": 7
     },
     {
       "id": "detenciones",
       "nombre": "DETENCIONES",
-      "total": 1
+      "total": 3
     },
     {
       "id": "causas",
       "nombre": "CAUSAS",
-      "total": 7
+      "total": 8
     },
     {
       "id": "hechos",
       "nombre": "HECHOS",
-      "total": 7
+      "total": 10
     }
   ],
   "noticias": [
+    {
+      "titulo": "Desbarataron una banda narco internacional e incautaron más de 80 kilos de cocaína",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/cayo-una-banda-narco-internacional-e-incautaron-80-kilos-de-cocaina.htm",
+      "fecha": "2026-11-28T07:38:48.073Z",
+      "fuente": "Elonce",
+      "lugar": "",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Nuevo tiroteo en Paraná: buscan a un joven de 19 años con extensos antecedentes policiales",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/nuevo-tiroteo-en-parana-buscan-a-un-joven-de-19-anos.htm",
+      "fecha": "2026-11-28T07:38:48.073Z",
+      "fuente": "Elonce",
+      "lugar": "Paraná",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Los fundamentos de la sentencia a condenado por la muerte de motociclista en Concordia",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/muerte-de-inaki-medice-los-fundamentos-de-la-condena-a-rolon.htm",
+      "fecha": "2026-11-28T07:38:48.073Z",
+      "fuente": "Elonce",
+      "lugar": "Concordia",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
+      "titulo": "Robos en Bajo Termas de Colón: recuperaron los elementos sustraídos y aprehendieron a una mujer",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/robos-bajo-termas-colon-mujer-aprehendida.htm",
+      "fecha": "2026-11-28T07:38:48.073Z",
+      "fuente": "Elonce",
+      "lugar": "Colón",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Accidente entre dos motos en Paraná: una niña resultó lesionada",
+      "descripcion": "",
+      "url": "https://www.elonce.com/policiales/accidente-dos-motos-parana-nina-lesionada.htm",
+      "fecha": "2026-11-28T07:38:48.073Z",
+      "fuente": "Elonce",
+      "lugar": "Paraná",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
+      "titulo": "Pidieron la detención de una mujer que se llevó ilegalmente a su hija desde Santa Fe a Venezuela",
+      "descripcion": "La medida fue solicitada por la Unidad Fiscal de Santa Fe. La madre y la pequeña estuvieron “desaparecidas” por meses hasta que Interpol las halló. La pequeña tenía sólo dos años cuando la mujer la sacó del país sin consentimiento del padre. Hoy tiene 5.",
+      "url": "https://www.ellitoral.com/sucesos/pidieron-detencion-mujer-llevo-ilegalmente-hija-venezuela-santafe_0_pvfpEuIl88.html",
+      "fecha": "2026-11-27T22:21:39.000Z",
+      "fuente": "El Litoral",
+      "lugar": "Santa Fe",
+      "categorias": [
+        "detenciones"
+      ]
+    },
+    {
+      "titulo": "Robaron papas y calabazas de una verdulería pero la policía los atrapó",
+      "descripcion": "Ocurrió durante la madrugada de este viernes. Los ladrones tienen26 y 17 años. La mercadería fue restituida a la víctima, de barrio Los Hornos.",
+      "url": "https://www.ellitoral.com/sucesos/robaron-papas-calabazas-verduleria-policia-atrapo_0_HHWbEubwCy.html",
+      "fecha": "2026-11-27T21:27:48.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Causa Oldani: cuatro declaraciones de alto impacto político cierran el juicio por la fuga de dólares",
+      "descripcion": "El exministro de Seguridad Marcelo Sain y tres fiscales del MPA serán los últimos testigos del debate contra la fiscal Cristina Ferraro y el policía retirado Julián Nizzo. Antes, entre martes y miércoles, desfilará una docena de integrantes de la fuerza provincial.",
+      "url": "https://www.ellitoral.com/sucesos/causa-oldani-declaraciones-alto-impacto-politico-cierran-juicio-fuga-dolares-tribunal-oral-federal-santafe_0_W1tSYpkX3v.html",
+      "fecha": "2026-11-27T17:27:18.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "accidentes"
+      ]
+    },
+    {
+      "titulo": "Santa Fe: clausuraron siete chatarrerías e incautaron elementos presuntamente robados",
+      "descripcion": "La Secretaría Gestión de Registros, dependiente del Ministerio de Gobierno e Innovación, inspeccionó siete chatarrerías de Santa Fe junto con la Policía y la Municipalidad. Durante los procedimientos, de los que participó la Policía de Investigaciones (PDI), se incautaron elemen…",
+      "url": "https://www.analisisdigital.com.ar/policiales/2026/11/27/santa-fe-clausuraron-siete-chatarrerias-e-incautaron-elementos-presuntamente-robados",
+      "fecha": "2026-11-27T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "Santa Fe",
+      "categorias": [
+        "allanamientos"
+      ]
+    },
+    {
+      "titulo": "Femicidio de Daiana Mendieta: Casación rechazó la domiciliaria a Brondino",
+      "descripcion": "",
+      "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/27/femicidio-de-daiana-mendieta-casacion-rechazo-la-domiciliaria-brondino",
+      "fecha": "2026-11-27T15:00:00.000Z",
+      "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "hechos"
+      ]
+    },
+    {
+      "titulo": "Fatal accidente en Manucho: una mujer murió en un choque entre un camión y dos autos",
+      "descripcion": "El hecho ocurrió cerca de las 8.55, en el cruce de las rutas provinciales 4 y 6. La víctima viajaba en un vehículo de Play Televisión; varias personas sufrieron lesiones.",
+      "url": "https://www.ellitoral.com/sucesos/accidentedetransito-manucho-esperanza-lagunapaiva-playtelevision-lacapital-ruta6-ruta4-choque-bomberos-siniestro_0_n91oL7ky5B.html",
+      "fecha": "2026-11-27T14:37:48.000Z",
+      "fuente": "El Litoral",
+      "lugar": "",
+      "categorias": [
+        "accidentes"
+      ]
+    },
     {
       "titulo": "Balearon a un joven en Paraná y detuvieron al presunto agresor tras allanamiento",
       "descripcion": "",
@@ -136,6 +257,17 @@
       "url": "https://www.analisisdigital.com.ar/judiciales/2026/11/26/las-nuevas-areas-y-los-fiscales-designados-por-el-procurador-casal-para-el-distrito-entre-rios-del-mpf",
       "fecha": "2026-11-26T15:00:00.000Z",
       "fuente": "Análisis Digital",
+      "lugar": "",
+      "categorias": [
+        "causas"
+      ]
+    },
+    {
+      "titulo": "Intenso operativo en Concepción del Uruguay tras la fuga de un condenado",
+      "descripcion": "",
+      "url": "https://www.apfdigital.com.ar/noticias/2026/11/26/480675-intenso-operativo-en-concepcion-del-uruguay-tras-la-fuga-de-un-condenado",
+      "fecha": "2026-11-26T15:00:00.000Z",
+      "fuente": "APF Digital",
       "lugar": "",
       "categorias": [
         "causas"
